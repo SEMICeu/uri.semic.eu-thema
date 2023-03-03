@@ -5,7 +5,7 @@
   "eap": "CoreVocabularies.EAP",
   "diagram": "Core_Location",
   "title": "Core Location Vocabulary",
-  "publication-state": "Semic Recommendation",
+  "publication-state": "REC",
   "publication-date": "2022-12-05",
   "license": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic",
   "contributors-file": "stakeholders.csv",
