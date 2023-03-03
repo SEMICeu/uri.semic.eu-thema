@@ -4,7 +4,6 @@
   "type": "ap",
   "eap": "CoreVocabularies.EAP",
   "diagram": "Core_Location",
-  "template": "core-location-ap_en.j2",
   "title": "Core Location Vocabulary",
   "publication-state": "Semic Recommendation",
   "publication-date": "2022-12-05",
@@ -22,7 +21,7 @@
     "translation": [
       {
         "language":"en",
-        "template":"core-location-ap_en.j2",
+        "template":"semic-ap_en.j2",
         "title": "Core Location Vocabulary",
         "translationjson":"core-location-ap_en.json",
         "mergefile":"core-location-ap_en_merged.jsonld"

@@ -1,0 +1,26 @@
+[
+{
+  "name": "dcat-ap",
+  "type": "ap",
+  "eap": "DCAT-AP.eap",
+  "diagram": "DCAT-AP",
+  "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+  "publication-date": "2023-02-22",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "contributors-file": "stakeholders.csv",
+  "contributors-column": "DCAT-AP",
+  "site": "site-skeleton/dcat-ap",
+  "feedbackurl": "https://github.com/SEMICeu/DCAT-AP/issues",
+  "standaardregisterurl": "https://github.com/SEMICeu/DCAT-AP",
+  "translation": [
+    {
+      "language":"en",
+      "template":"dcat-ap.j2",
+      "title": "DCAT-AP",
+      "translationjson":"dcat-ap_en.json",
+      "mergefile":"dcat-ap_en_merged.jsonld"
+    }
+  ],
+  "toolchainversion" : "3"
+}
+]
