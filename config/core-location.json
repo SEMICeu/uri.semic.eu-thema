@@ -7,7 +7,7 @@
   "template": "core-location-ap_en.j2",
   "title": "Core Location Vocabulary",
   "publication-state": "Semic Recommendation",
-  "publication-date": "2022-12-05",
+  "publication-date": "2023-05-15",
   "license": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "CoreVoc",
