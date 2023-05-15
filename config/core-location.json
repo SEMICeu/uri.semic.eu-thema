@@ -12,11 +12,11 @@
   "contributors-file": "stakeholders.csv",
   "contributors-column": "CoreVoc",
   "site": "site-skeleton/core-location",
-  "repourl": "https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.0.1",
-  "versionurl": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.1",
+  "repourl": "https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.0.2",
+  "versionurl": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.2",
   "feedbackurl": "https://github.com/SEMICeu/Core-Location-Vocabulary/issues",
   "documentconfig" : {
-    "changelog" : "https://github.com/SEMICeu/Core-Location-Vocabulary/blob/master/releases/2.0.1/Changelog.md"
+    "changelog" : "https://github.com/SEMICeu/Core-Location-Vocabulary/blob/master/releases/2.0.2/Changelog.md"
   },
   "standaardregisterurl": "Core-Location-Vocabulary",
     "translation": [
