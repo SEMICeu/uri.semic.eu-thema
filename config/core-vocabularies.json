@@ -4,7 +4,7 @@
   "type": "voc",
   "eap": "CoreVocabularies.EAP",
   "diagram": "ISA_Core_Vocabularies_consolidated",
-  "template": "core-vocabularies_en.j2",
+  "template": "m8g.j2",
   "title": "Core Vocabularies",
   "publication-state": "Semic Recommendation",
   "publication-date": "2023-03-27",
