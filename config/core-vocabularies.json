@@ -3,7 +3,7 @@
   "name": "core-vocabularies",
   "type": "voc",
   "eap": "CoreVocabularies.EAP",
-  "diagram": "ISA_Core_Vocabularies_consolidated",
+  "diagram": "Core_Vocabularies",
   "title": "Core Vocabularies",
   "publication-state": "Semic Recommendation",
   "publication-date": "2023-03-27",
