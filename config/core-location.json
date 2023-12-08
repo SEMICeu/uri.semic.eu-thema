@@ -7,18 +7,15 @@
   "template": "core-location-ap_en.j2",
   "title": "Core Location Vocabulary",
   "publication-state": "Semic Recommendation",
-  "publication-date": "2023-05-15",
-  "license": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic",
+  "publication-date": "2023-12-08",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "CoreVoc",
   "site": "site-skeleton/core-location",
   "repourl": "https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.0.2",
   "versionurl": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.2",
   "feedbackurl": "https://github.com/SEMICeu/Core-Location-Vocabulary/issues",
-  "documentconfig" : {
-    "changelog" : "https://github.com/SEMICeu/Core-Location-Vocabulary/blob/master/releases/2.0.2/Changelog.md"
-  },
-  "standaardregisterurl": "Core-Location-Vocabulary",
+  "standaardregisterurl" :"https://github.com/SEMICeu/Core-Location-Vocabulary/blob/master/releases/2.0.2/Changelog.md",
     "translation": [
       {
         "language":"en",
@@ -27,6 +24,10 @@
         "translationjson":"core-location-ap_en.json",
         "mergefile":"core-location-ap_en_merged.jsonld"
       }
-    ]
+    ],
+    "toolchainversion" : "3",
+    "documentconfig": {
+          "statuslabel" : "SEMIC Candidate Recommendation"
+    }
 }
 ]
