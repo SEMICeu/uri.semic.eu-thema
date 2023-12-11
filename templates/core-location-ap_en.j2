@@ -1,7 +1,78 @@
 {% extends "semic-ap_en.j2" %}
 
-{% block summary %}
-<p>
+{% block respecconfig %}
+
+    var respecConfig = {
+      postProcess: [quickreference],
+      edDraftURI: "{{metadata.navigation.self}}",
+      latestVersion: "{{metadata.navigation.prev}}",
+      specStatus: "LD",
+      publishDate: "{{ metadata.issued }}",
+      editors: myeditors,
+      authors: myauthors,
+      github: "SEMICeu/Core-Location-Vocabulary",
+      shortName: "{{metadata.title}}",
+      xref: "web-platform",
+      doJsonLd: true,
+      logos: [{
+        src: "https://semiceu.github.io/CPOV/releases/2.1.0/html/semic-icon.png",
+        url: "https://semic.eu",
+        alt: "SEMIC",
+        width: 154,
+        height: 140,
+        id: "semic-logo",
+      },],
+      generatedSubtitle: "",
+      additionalCopyrightHolders: "",
+      localBiblio: {
+        "DXWG": {
+          "href" : "https://www.w3.org/2017/dxwg/wiki/Main_Page",
+          "title" : "Dataset Exchange Working Group",
+          "publisher" : "W3C"
+          },
+        "ISA":{
+           "href":"https://ec.europa.eu/isa/",
+           "title":"Interoperability Solutions for European Public Administrations (ISA)",
+           "publisher":"European Commission"
+          },
+        "ISA2":{
+          "href":"https://ec.europa.eu/isa2/",
+          "title":"Interoperability solutions for public administrations, businesses and citizens (ISA²)",
+          "publisher":"European Commission"
+        },
+        "SEMIC":{
+          "href":"https://joinup.ec.europa.eu/",
+          "title":"JoinUp welcomes Interoperable Europe",
+          "publisher":"European Commission"
+         },
+        "DEU" : {
+          "href":"https://data.europa.eu",
+          "title":"The official portal for European data",
+          "publisher":"European Commission"
+        },
+		"HVD" : {
+		  "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138",
+		  "title":"Implementing Regulation for High Value Datasets",
+		  "publisher":"European Union"
+		},
+		"DCAT-AP-HVD" : {
+		  "href":"https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/",
+		  "title":"Usage Guidelines of DCAT-AP for High-Value Datasets",
+		  "publisher":"European Commission"
+		},
+                "PSI" : {
+                  "href": "https://eur-lex.europa.eu/eli/dir/2019/1024/oj",
+                  "title" :  "Directive on open data and the re-use of public sector information (recast)",
+                  "publisher" : "European Union"
+                }
+      }
+    };
+
+{% endblock %}
+
+
+{% block introduction %}
+    <h2>Abstract</h2>
 	Locations can be described in three principal ways: by using a place name, a geometry or an
     address. The specific context will determine which method of describing a location is most
     appropriate. The Core Location Vocabulary provides structure for all three.
@@ -27,6 +98,13 @@
 </p>
 {% endblock %}
 
+{% block summary %}
+<section id="abstract">
+    <h2>Abstract</h2>
+The Core Location Vocabulary is a simplified, reusable and extensible data model that captures the fundamental characteristics of a location, represented as an address, a geographic name, or a geometry.
+{% endblock %}
+
+{#
 {% block version %} 
 <a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.2">https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.2</a>
 {% endblock %}
@@ -38,11 +116,16 @@
 {% block source %} 
 <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.0.2">https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.0.2</a>
 {% endblock %}
+#}
 
+
+{#
 {% block license %}
 <p>This specification of <a href=”https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic”>SEMIC</a> is published under “<a href=”https://joinup.ec.europa.eu/licence/isa-open-metadata-licence-v11">ISA Open Metadata Licence 1.1</a>”.</p>
 {% endblock %}
+#}
 
+{#
 {% block examples %}
 <h3 class="h3" id="example-rdf_wkt">Example 1 - RDF+WKT (GeoSPARQL)</h3>
 <h3 class="h3" id="example-rdf_gml">Example 2 - RDF+GML (GeoSPARQL))</h3>
@@ -62,3 +145,4 @@ A changelog describing the (major) changes to the previous version (2.0.1) of th
 A mapping towards Schema.org can be found <a href="https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Location">here</a>
 <p>
 {% endblock %}
+#}
