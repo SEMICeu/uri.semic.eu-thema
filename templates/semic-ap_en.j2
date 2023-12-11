@@ -251,7 +251,7 @@
     </h2>
     {% block introduction %}
         <p>
-            This document describes an <strong>application profile</strong>, in this case <strong>{{ metadata.title }}</strong>. The application profile specifies a semantic data model covering a set of usecases. The specification consists of terms with their constraints (cardinalities, codelists, usage guidelines).
+            This document describes an <strong>Core Vocabulary</strong>, in this case <strong>{{ metadata.title }}</strong>. The Core Vocabulary specifies a semantic data model covering a set of usecases. The specification consists of terms with their constraints (cardinalities, codelists, usage guidelines).
         </p>
     {% endblock %}
 </section>
@@ -262,7 +262,7 @@
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This application profile has the status <a href="{{ metadata.status }}">{{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }}</a> published at {{ metadata.issued }}.
+            This Core Vocabulary has the status <a href="{{ metadata.status }}">{{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }}</a> published at {{ metadata.issued }}.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="{{ metadata.standaardregisterurl }}">Changelog</a>.
@@ -291,17 +291,20 @@
     {% endblock %}
 </section>
 
+{#
 {% block conformance %}
 <section>
     <h2>
         Conformance
     </h2>
         <p>
-            An implementation is conformant with this application profile if it satisfies <a href="/doc/conformance">these rules</a>.
+            An implementation is conformant with this Core Vocabulary if it satisfies <a href="/doc/conformance">these rules</a>.
         </p>
 </section>
 {% endblock %}
+#}
 
+{#
 {% block terminology %}
 <section id="specterminology">
     <h2>
@@ -312,6 +315,8 @@
         </p>
 </section>
 {% endblock %}
+#}
+
 
 <section id="specoverview">
     <h2>Overview</h2>
@@ -320,7 +325,7 @@
     <div id="overview">
                 {% if ( ( classes | length > 0)   ) %}
                         <p>
-                            This document describes the usage of the following main entities for a correct usage of the Application Profile:
+                            This document describes the usage of the following main entities for a correct usage of the Core Vocabulary:
                             <br />
                             | {%- for class in classes |sort(attribute=sortattr) %} 
 			      {%- if class.rawTags['class-usage-scope'] == "main" %}
@@ -512,7 +517,7 @@
 <h2>
    Main Entities
 </h2>
-The main entities are those that form the core of the Application Profile.
+The main entities are those that form the core of the Core Vocabulary.
 
 {% for entity in classes | sort(attribute=sortattr) %}
 {% if entity.rawTags['class-usage-scope'] == "main"   %}
@@ -525,8 +530,8 @@ The main entities are those that form the core of the Application Profile.
 <h2>
    Supportive Entities
 </h2>
-The supportive entities are supporting the main entities in the Application Profile. 
-They are included in the Application Profile because they form the range of properties.
+The supportive entities are supporting the main entities in the Core Vocabulary. 
+They are included in the Core Vocabulary because they form the range of properties.
 
 
 {% for entity in classes | sort(attribute=sortattr) %}
@@ -602,7 +607,7 @@ They are included in the Application Profile because they form the range of prop
         #} (non normative)
         {% block jsonld %}
             <p>
-                A reusable JSON-LD context definition for this application profile is retrievable at: <a href="{{ documentroot }}/context/{{ metadata.filename }}.jsonld"
+                A reusable JSON-LD context definition for this Core Vocabulary is retrievable at: <a href="{{ documentroot }}/context/{{ metadata.filename }}.jsonld"
     target="_blank">{{ documentroot }}/context/{{ metadata.filename }}.jsonld</a>
             </p>
         {% endblock %}
@@ -620,7 +625,7 @@ They are included in the Application Profile because they form the range of prop
         #} (non normative)
         {% block shacl %}
             <p>
-                A reusable SHACL template for this application profile is retrievable at: <a href="{{ documentroot }}/shacl/{{ metadata.filename }}-SHACL.ttl"
+                A reusable SHACL template for this Core Vocabulary is retrievable at: <a href="{{ documentroot }}/shacl/{{ metadata.filename }}-SHACL.ttl"
     target="_blank">{{ documentroot }}/shacl/{{ metadata.filename }}-SHACL.ttl</a>
             </p>
         {% endblock %}
@@ -638,12 +643,13 @@ They are included in the Application Profile because they form the range of prop
 </section>
 
 -->
-
+{#
 {% block usages %}
 <section class="informative">
 	<h2>Usage Guidelines</h2>
 </section>
 {% endblock %} 
+#}
 
 <section id="quick-reference" class="appendix">
 
@@ -715,7 +721,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
    {% block deprecation %}
    {% endblock %}
 
-
+{#
 </section>
 
 <section class="appendix">
@@ -743,7 +749,7 @@ Past and current contributors are :
 </section>
 <!-- End page content -->
 </body>
-
+#}
 <!-- This must be at the end of the template, to ensure that the iterator properly works -->
     <script defer>
 
