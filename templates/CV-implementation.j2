@@ -1,28 +1,26 @@
 <section class="informative">
   <h2>Support for implementation</h2>
-
+<p>
 Implementing the {{metadata.title}} also raises technical questions.
-<p/>
+</p><p>
 
 <h3>JSON-LD context file</h3>
-
+</p><p>
 One common technical question is the format in which the data is being exchanged. 
 For conformance with the {{metadata.title}}, it is not mandatory that this happens in a RDF serialisation, but the exhanged format SHOULD be unambiguously be transformable into RDF.
 For the format JSON, a popular format to exchange data between systems, SEMIC provides a <a href={{"./context/"~{{metadate.name}}~".jsonld"}}>JSON-LD context file</a>. 
 JSON-LD is a W3C Recommendation [[[json-ld11]]] that provided a standard approach to interpret JSON structures as RDF.
 The provided JSON-LD context file can be used by implementers.
 This JSON-LD context is not normative, i.e. other JSON-LD contexts are allowed.
-<p/>
+</p><p>
 The JSON-LD context file downloadable {{metadata.name}}
+</p><p>
 
-<p/>
 <h3>Validation</h3>
-
+</p><p>
 To verify if the data is (technically) conformant to the {{metadata.title}}, the exchanged data can be validated using the provided SHACL shapes. 
 SHACL is a W3C Recommendation to express constraints on a RDF knowledge graph. 
-<p/>
-
-<p>
+</p><p>
 To support the check whether or not a catalogue satisfies the expressed constraints in this Core Vocabulary, the constraints in this specification are expressed using SHACL [[shacl]].
 Each constraint in this specification that could be converted into a SHACL expression has been included.
 As such this collection of SHACL expressions that can be used to build a validation check for data. 
