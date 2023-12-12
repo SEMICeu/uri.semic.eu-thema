@@ -103,27 +103,6 @@
 The Core Location Vocabulary is a simplified, reusable and extensible data model that captures the fundamental characteristics of a location, represented as an address, a geographic name, or a geometry.
 {% endblock %}
 
-{#
-{% block version %} 
-<a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.2">https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.2</a>
-{% endblock %}
-
-{% block previousversion %} 
-<a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.1">https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.1</a>
-{% endblock %}
-
-{% block source %} 
-<a href="https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.0.2">https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.0.2</a>
-{% endblock %}
-#}
-
-
-{#
-{% block license %}
-<p>This specification of <a href=”https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic”>SEMIC</a> is published under “<a href=”https://joinup.ec.europa.eu/licence/isa-open-metadata-licence-v11">ISA Open Metadata Licence 1.1</a>”.</p>
-{% endblock %}
-#}
-
 
 {% block examples %}
 <div class="h3 examples" id="example-rdf_wkt">Example 1 - RDF+WKT (GeoSPARQL)</div>
@@ -133,13 +112,6 @@ The Core Location Vocabulary is a simplified, reusable and extensible data model
 <div class="h3 examples" id="example-rdf_geohash">Example 5 - URI reference (GeoHash)</div>
 {% endblock %}
 
-{#
-{% block changelog %}
-<p>
-A changelog describing the (major) changes to the previous version (2.0.2) of the Core Location Vocabulary and the new version that is being proposed in this specification (2.1.0), can be found <a href="{{ metadata.documentconfig.changelog }}">here</a>.
-<p>
-{% endblock %}
-#}
 
 {% block mappings %}
 <p>
@@ -149,5 +121,6 @@ A mapping towards Schema.org can be found <a href="https://github.com/SEMICeu/Se
 
 
 {% block usages %} 
-  {% include "CV-implementation.j2" ignore missing %}
+  {% include "CV-implementation.j2" %}
+  {% include "CV-governance.j2" %}
 {% endblock %}
