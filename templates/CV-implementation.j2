@@ -4,7 +4,6 @@
 Implementing the {{metadata.title}} also raises technical questions.
 <p/>
 
-<h4>JSON-LD context file</h4>
 
 One common technical question is the format in which the data is being exchanged. 
 For conformance with the {{metadata.title}}, it is not mandatory that this happens in a RDF serialisation, but the exhanged format SHOULD be unambiguously be transformable into RDF.
@@ -13,10 +12,9 @@ JSON-LD is a W3C Recommendation [[[json-ld11]]] that provided a standard approac
 The provided JSON-LD context file can be used by implementers.
 This JSON-LD context is not normative, i.e. other JSON-LD contexts are allowed.
 <p/>
-The JSON-LD context file downloadable {{metadata.name}}
+The JSON-LD context file downloadable 
 <p/>
 
-<h4>Validation</h4>
 
 To verify if the data is (technically) conformant to the {{metadata.title}}, the exchanged data can be validated using the provided SHACL shapes. 
 SHACL is a W3C Recommendation to express constraints on a RDF knowledge graph. 
