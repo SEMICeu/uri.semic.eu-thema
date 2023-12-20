@@ -1,18 +1,19 @@
 Voornaam;Naam;Affiliatie;E-mail;Website;CCCEV;CoreVoc;CPSV-AP;SDG;ICEG-PO;ADMS;MLDCAT-AP;AF-AP;EV-AP
-Core Vocabularies Working Group;;;;;A;A;;;;;;;;
-Core Public Service Vocabulary Working Group;;;;;;;A;;;;;;;
-Pavlina;Fragkou;European Commission;;;E;E;;;;;;;;
-Seth;van Hooland;European Commission;;;C;C;;;;;;;;
-Bert;Van Nuffelen;TenForce;;;E;E;;;;;;E;;
+Core Vocabularies Working Group;;;;;A;A;;;;;;;
+Core Public Service Vocabulary Working Group;;;;;;;A;;;;;;
+Pavlina;Fragkou;European Commission;;;E;E;;;;;;;
+Seth;van Hooland;European Commission;;;C;C;;;;;;;
+Bert;Van Nuffelen;TenForce;;;E;E;;;;;;E;
 Emidio;Stani;PwC EU Services;;;E;E;E;;;E;E;E;
-Dimitri;Schepers;PwC EU Services;;;E;E;E;;;;;;;
-Miguel;Alvarez Rodriguez;European Commission;;;;;C;E;;;;;;
-Michiel;De Keyzer;PwC EU Services;;;E;E;E;E;;;;;;
-Florian;Barthelemy;PwC EU Services;;;E;E;E;E;E;;;;;
-Maxime;Pittomvils;PwC EU Services;;;;;;E;;;;;;
-Alexandre;Beaufays;PwC EU Services;;;;E;E;;;;;;;
-Christophe;Bahim;PwC EU Services;;;;;;;E;;;;;
-Louis;Matha;PwC EU Services;;;;;;;E;;;;;
-Nathan;Ghesquière;PwC EU Services;;;;;E;;;;;;;
+Dimitri;Schepers;PwC EU Services;;;E;E;E;;;;;;
+Miguel;Alvarez Rodriguez;European Commission;;;;;C;E;;;;;
+Michiel;De Keyzer;PwC EU Services;;;E;E;E;E;;;;;
+Florian;Barthelemy;PwC EU Services;;;E;E;E;E;E;;;;
+Maxime;Pittomvils;PwC EU Services;;;;;;E;;;;;
+Alexandre;Beaufays;PwC EU Services;;;;E;E;;;;;;
+Christophe;Bahim;PwC EU Services;;;;;;;E;;;;
+Louis;Matha;PwC EU Services;;;;;;;E;;;;
+Nathan;Ghesquière;PwC EU Services;;;;;E;;;;;;
 Makx;Dekkers;AMI Consult;;;;;;;;E;;;
 Emiel Dhondt;PwC EU Services;;;;;;;;;;;;E
+Arthur;Schiltz;PwC EU Services;;;;E;;;;;;;
