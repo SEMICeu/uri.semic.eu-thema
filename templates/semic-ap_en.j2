@@ -139,7 +139,7 @@
        Copyright must be specified otherwise Respec generates a value
      #} 
     <p class="copyright">
-        Copyright © 2022
+        Copyright © 2024
     </p>
     {# <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">SEMIC Editor's Draft</a><time class="dt-published" datetime="2022-11-07">07 November 2022</time></p> #}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -305,8 +305,11 @@
         Terminology
     </h2>
         <p>
-            section on terminology usage
+            A Core Vocabulary (CV) is a basic, reusable and extensible data specification that captures the fundamental characteristics of an entity in a context-neutral fashion. Its main objective is to provide terms to be reused in the broadest possible context.
+            More information can be found on the <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification">SEMIC Style Guide</a>.
         </p>
+        {% block terminologyPrefixes %}
+    {% endblock %}
 </section>
 {% endblock %}
 
@@ -638,7 +641,8 @@ They are included in the Core Vocabulary because they form the range of properti
 {% block usages %}
 <section class="informative">
 	<h2>Usage Guidelines</h2>
-    failed to load
+    {% include "CV-implementation.j2" ignore missing %}
+    {% include "CV-governance.j2" ignore missing %}
 </section>
 {% endblock %} 
 
