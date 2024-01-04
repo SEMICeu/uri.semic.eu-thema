@@ -1,4 +1,7 @@
-@prefix locn: <http://w3.org/ns/locn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
 
-<ex:a> a locn:Location ;
-  locn:geometry <http://geohash.org/gcpuzgnzvxkp> .
+<ex:a> a dcterms:Location, rdfs:Resource ;
+	locn:geometry <http://geohash.org/gcpuzgnzvxkp> .

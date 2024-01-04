@@ -1,11 +1,10 @@
 {
-  "@context": {
-    "locn": "http://www.w3.org/ns/locn#",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  },
-  "@id": "ex:a",
-  "@type": "locn:Location",
-  "locn:geometry": {
-    "@id": "http://geohash.org/gcpuzgnzvxkp"
-  }
+  "@context": "https://semiceu.github.io/uri.semic.eu-generated/Core-Location-Vocabulary/releases/2.1.0/context/core-location-ap.jsonld",
+  "@graph": [
+    {
+      "@id": "ex:a",
+      "@type": ["Location", "Resource"],
+      "geometry": "http://geohash.org/gcpuzgnzvxkp"
+    }
+  ]
 }
