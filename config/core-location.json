@@ -28,7 +28,7 @@
     "toolchainversion" : "3",
     "documentconfig": {
           "statuslabel" : "SEMIC Candidate Recommendation",
-          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/doc/core-vocabulary/core-location"
+          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/Core-Location-Vocabulary"
     }
 }
 ]
