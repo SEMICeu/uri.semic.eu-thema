@@ -12,10 +12,10 @@
   "contributors-file": "stakeholders.csv",
   "contributors-column": "CoreVoc",
   "site": "site-skeleton/core-business",
-  "repourl": "https://github.com/SEMICeu/Core-Business-Vocabulary/tree/master/releases/2.1.0",
-  "versionurl": "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0",
+  "repourl": "https://github.com/SEMICeu/Core-Business-Vocabulary/tree/master/releases/2.2.0",
+  "versionurl": "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0",
   "feedbackurl": "https://github.com/SEMICeu/Core-Business-Vocabulary/issues",
-  "standaardregisterurl" :"https://github.com/SEMICeu/Core-Business-Vocabulary/blob/master/releases/2.1.0/Changelog.md",
+  "standaardregisterurl" :"https://github.com/SEMICeu/Core-Business-Vocabulary/blob/master/releases/2.2.0/Changelog.md",
     "translation": [
       {
         "language":"en",
@@ -28,7 +28,7 @@
     "toolchainversion" : "3",
     "documentconfig": {
           "statuslabel" : "SEMIC Candidate Recommendation",
-          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/Core-Business-Vocabulary/releases/2.1.0"
+          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/Core-Business-Vocabulary/releases/2.2.0"
     }
 }
 ]
