@@ -19,7 +19,7 @@
     "translation": [
       {
         "language":"en",
-        "template":"core-Business-ap_en.j2",
+        "template":"core-business-ap_en.j2",
         "title": "Core Business Vocabulary",
         "translationjson":"core-Business-ap_en.json",
         "mergefile":"core-Business-ap_en_merged.jsonld"
