@@ -7,18 +7,15 @@
   "template": "core-person-ap_en.j2",
   "title": "Core Person Vocabulary",
   "publication-state": "Semic Recommendation",
-  "publication-date": "2023-05-15",
+  "publication-date": "2024-01-15",
   "license": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "CoreVoc",
   "site": "site-skeleton/core-person",
-  "repourl": "https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.1.0",
-  "versionurl": "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0",
+  "repourl": "https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.1.1",
+  "versionurl": "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1",
   "feedbackurl": "https://github.com/SEMICeu/Core-Person-Vocabulary/issues",
-  "documentconfig" : {
-	  "changelog" : "https://github.com/SEMICeu/Core-Person-Vocabulary/blob/master/releases/2.1.0/Changelog.md"
-  },
-  "standaardregisterurl": "Core-Person-Vocabulary",
+  "standaardregisterurl" : "https://github.com/SEMICeu/Core-Person-Vocabulary/blob/master/releases/2.1.1/Changelog.md",
     "translation": [
       {
         "language":"en",
@@ -27,7 +24,12 @@
         "translationjson":"core-person-ap_en.json",
         "mergefile":"core-person-ap_en_merged.jsonld"
       }
-    ]
+    ],
+    "toolchainversion" : "3",
+    "documentconfig": {
+          "statuslabel" : "SEMIC Candidate Recommendation",
+          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/Core-Person-Vocabulary/releases/2.1.1"
+    }
 },
 {
   "name": "core-person-voc",
