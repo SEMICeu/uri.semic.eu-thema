@@ -1,15 +1,19 @@
 {
   "@context": [
     "https://semiceu.github.io/uri.semic.eu-generated/Core-Location-Vocabulary/releases/2.1.0/context/core-location-ap.jsonld",
-    {"sf": "http://www.opengis.net/ont/sf#",
-    "geosparql": "http://www.opengis.net/ont/geosparql#"
+    {"ex": "http://example.com/" ,
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "sf": "http://www.opengis.net/ont/sf#"
     }
   ],
   "@graph": [
     {
       "@id": "ex:a",
       "@type": ["Location", "Resource"],
-      "geometry": "ex:b"
+      "locn:geometry": {
+        "@id": "ex:b"
+      }
     },
     {
       "@id": "ex:b",
