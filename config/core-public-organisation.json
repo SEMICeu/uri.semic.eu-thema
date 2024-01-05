@@ -20,7 +20,7 @@
         {
           "language":"en",
           "template":"core-public-organisation-ap_en.j2",
-          "title": "Core Public-Organisation Vocabulary",
+          "title": "Core Public Organisation Vocabulary",
           "translationjson":"core-public-organisation-ap_en.json",
           "mergefile":"core-public-organisation-ap_en_merged.jsonld"
         }
