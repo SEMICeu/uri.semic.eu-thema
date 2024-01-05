@@ -1,24 +1,19 @@
 {
-  "@context": {
-    "locn": "http://www.w3.org/ns/locn#",
-    "sf": "http://www.opengis.net/ont/sf#",
-    "geosparql": "http://www.opengis.net/ont/geosparql#",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  },
+  "@context": [
+    "https://semiceu.github.io/uri.semic.eu-generated/Core-Location-Vocabulary/releases/2.1.0/context/core-location-ap.jsonld",
+    {"ex": "http://example.com/" ,
+     "geosparql": "http://www.opengis.net/ont/geosparql#",
+     "locn": "http://www.w3.org/ns/locn#",
+     "sf": "http://www.opengis.net/ont/sf#"
+    }
+  ],
   "@graph": [
     {
-      "@id": "_:g0",
-      "@type": "sf:Point",
-      "geosparql:asWKT": {
-        "@type": "geosparql:wktLiteral",
-        "@value": "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> Point(-0.001475 51.477811)"
-      }
-    },
-    {
       "@id": "ex:a",
-      "@type": "locn:Location",
+      "@type": "Location",
       "locn:geometry": {
-        "@id": "_:g0"
+        "@type": "geosparql:wktLiteral",
+        "@value": "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> Point(-0.00147551.477811)"
       }
     }
   ]
