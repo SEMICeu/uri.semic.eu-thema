@@ -9,7 +9,7 @@
   "@graph": [
     {
       "@id": "ex:a",
-      "@type": ["Location", "Resource"],
+      "@type": "Location",
       "locn:geometry": {
         "@id": "ex:b"
       }

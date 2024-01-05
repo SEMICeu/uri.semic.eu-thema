@@ -3,7 +3,7 @@
 @prefix locn: <http://w3.org/ns/locn#> .
 @prefix schema: <https://schema.org/> .
 
-ex:a a dcterms:Location, rdfs:Resource ;
+ex:a a dcterms:Location ;
   locn:geometry ex:b . 
 ex:b a schema:GeoCoordinates ;
   schema:latitude "51.477811" ;

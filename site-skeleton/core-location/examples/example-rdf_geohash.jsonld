@@ -8,7 +8,7 @@
   "@graph": [
     {
       "@id": "ex:a",
-      "@type": ["Location", "Resource"],
+      "@type": "Location",
       "locn:geometry": {
         "@id": "http://geohash.org/gcpuzgnzvxkp"
       }
