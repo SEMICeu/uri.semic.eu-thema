@@ -7,18 +7,15 @@
   "template": "core-public-event-ap_en.j2",
   "title": "Core Public Event Vocabulary",
   "publication-state": "Semic Recommendation",
-  "publication-date": "2023-05-15",
-  "license": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic",
+  "publication-date": "2024-01-15",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "CoreVoc",
   "site": "site-skeleton/core-public-event",
-  "repourl": "https://github.com/SEMICeu/Core-Public-Event-Vocabulary/tree/master/releases/1.0.0",
-  "versionurl": "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0",
+  "repourl": "https://github.com/SEMICeu/Core-Public-Event-Vocabulary/tree/master/releases/1.1.0",
+  "versionurl": "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.1.0",
   "feedbackurl": "https://github.com/SEMICeu/Core-Public-Event-Vocabulary/issues",
-  "documentconfig" : {
-    "changelog" : "https://github.com/SEMICeu/Core-Public-Event-Vocabulary/blob/master/releases/1.00/Changelog.md"
-  },
-  "standaardregisterurl": "Core-Public-Event-Vocabulary",
+  "standaardregisterurl" : "https://github.com/SEMICeu/Core-Public-Event-Vocabulary/blob/master/releases/1.1.0/Changelog.md",
     "translation": [
       {
         "language":"en",
@@ -27,6 +24,11 @@
         "translationjson":"core-public-event-ap_en.json",
         "mergefile":"core-public-event-ap_en_merged.jsonld"
       }
-    ]
+    ],
+    "toolchainversion" : "3",
+    "documentconfig": {
+          "statuslabel" : "SEMIC Candidate Recommendation",
+          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/Core-Location-Vocabulary/releases/2.1.0"
+    }
 }
 ]
