@@ -17,8 +17,8 @@
     {
       "@id": "ex:b",
       "@type": "schema:GeoCoordinates",
-      "schema:latitude": "51.477811",
-      "schema:longitude": "-0.001475"
+      "schema:latitude": "50.84365",
+      "schema:longitude": "4.38031"
     }
   ]
 }
