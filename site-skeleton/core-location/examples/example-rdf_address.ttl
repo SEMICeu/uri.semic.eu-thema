@@ -1,0 +1,12 @@
+@prefix ex: <http://example.com/> .
+@prefix locn: <http://w3.org/ns/locn#> .
+
+ex:a a locn:Address ;
+  locn:addressArea "Quartier Européen"@fr ;
+  locn:adminUnitL1 "Belgique"@fr ;
+  locn:adminUnitL2 "Région de Bruxelles-Capitale"@fr ;
+  locn:fullAddress "Rue de la Loi 170, 1049 Bruxelles, Belgique"@fr ;
+  locn:locatorDesignator "170" ;
+  locn:postCode "1040" ;
+  locn:postName "Bruxelles"@fr ;
+  locn:thoroughfare "Rue de la Loi" .
