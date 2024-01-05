@@ -1,32 +1,34 @@
 [
-{
-  "name": "core-public-organisation-ap",
-  "type": "ap",
-  "eap": "CoreVocabularies.EAP",
-  "diagram": "Core_Public_Organisation",
-  "template": "core-public-organisation-ap_en.j2",
-  "title": "Core Public Organisation Vocabulary",
-  "publication-state": "Semic Recommendation",
-  "publication-date": "2023-05-15",
-  "license": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic",
-  "contributors-file": "stakeholders.csv",
-  "contributors-column": "CoreVoc",
-  "site": "site-skeleton/core-public-organisation",
-  "repourl": "https://github.com/SEMICeu/CPOV/tree/master/releases/2.1.0",
-  "versionurl": "https://semiceu.github.io/CPOV/releases/2.1.0",
-  "feedbackurl": "https://github.com/SEMICeu/CPOV/issues",
-  "documentconfig" : {
-    "changelog" : "https://github.com/SEMICeu/CPOV/blob/master/releases/2.1.0/Changelog.md"
-  },
-  "standaardregisterurl": "CPOV",
-    "translation": [
-      {
-        "language":"en",
-        "template":"core-public-organisation-ap_en.j2",
-        "title": "Core Public Organisation Vocabulary",
-        "translationjson":"core-public-organisation-ap_en.json",
-        "mergefile":"core-public-organisation-ap_en_merged.jsonld"
+  {
+    "name": "core-public-organisation-ap",
+    "type": "ap",
+    "eap": "CoreVocabularies.EAP",
+    "diagram": "Core_Public_Organisation",
+    "template": "core-public-organisation-ap_en.j2",
+    "title": "Core Public Organisation Vocabulary",
+    "publication-state": "Semic Recommendation",
+    "publication-date": "2024-01-15",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "contributors-file": "stakeholders.csv",
+    "contributors-column": "CoreVoc",
+    "site": "site-skeleton/core-public-organisation",
+    "repourl": "https://github.com/SEMICeu/CPOV/tree/master/releases/2.1.1",
+    "versionurl": "https://semiceu.github.io/CPOV/releases/2.1.1",
+    "feedbackurl": "https://github.com/SEMICeu/CPOV/issues",
+    "standaardregisterurl" :"https://github.com/SEMICeu/CPOV/blob/master/releases/2.1.1/Changelog.md",
+      "translation": [
+        {
+          "language":"en",
+          "template":"core-public-organisation-ap_en.j2",
+          "title": "Core Public-Organisation Vocabulary",
+          "translationjson":"core-public-organisation-ap_en.json",
+          "mergefile":"core-public-organisation-ap_en_merged.jsonld"
+        }
+      ],
+      "toolchainversion" : "3",
+      "documentconfig": {
+            "statuslabel" : "SEMIC Candidate Recommendation",
+            "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/CPOV/releases/2.1.0"
       }
-    ]
-}
-]
+  }
+  ]
