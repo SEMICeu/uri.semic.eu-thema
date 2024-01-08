@@ -10,7 +10,8 @@
     "org": "http://www.w3.org/ns/org#",
     "org-type": "http://publications.europa.eu/resource/authority/organization-type/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "time": "http://www.w3.org/2006/time#"
+    "time": "http://www.w3.org/2006/time#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
    }
   ],
   "@graph": [
