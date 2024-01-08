@@ -10,7 +10,7 @@
       "@id": "ex:a",
       "@type": "Address",
       "locn:addressArea" : {
-       "@value": "Quartier Européen",
+       "@value": "Quartier Nord",
        "@language": "fr"
       },
       "locn:adminUnitL1" : {
@@ -22,17 +22,17 @@
        "@language": "fr"
       },
       "locn:fullAddress" : {
-       "@value": "Rue de la Loi 170, 1049 Bruxelles, Belgique",
+       "@value": "Boulevard du Roi Albert II 33 1030 Bruxelles, Belgique",
        "@language": "fr"
       },
-      "locn:locatorDesignator" : "170",
-      "locn:postCode" : "1040",
+      "locn:locatorDesignator" : "33",
+      "locn:postCode" : "1030",
       "locn:postName" : {
        "@value": "Bruxelles",
        "@language": "fr"
       },
       "locn:thoroughfare" : {
-       "@value": "Rue de la Loi",
+       "@value": "Boulevard du Roi Albert II",
        "@language": "fr"
       }
     }

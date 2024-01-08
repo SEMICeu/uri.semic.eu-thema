@@ -20,7 +20,7 @@
       "@type": "sf:Point",
       "geosparql:asGML" : {
         "@type": "geosparql:gmlLiteral",
-        "@value": "<gml:Point srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:coordinates>4.38031, 50.84365</gml:coordinates></gml:Point>"
+        "@value": "<gml:Point srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:coordinates>4.359191, 50.8614075</gml:coordinates></gml:Point>"
       }
     }
   ]
