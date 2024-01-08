@@ -1,6 +1,76 @@
-{% extends "semic_cccev.j2" %}
+{% extends" semic-ap_en.j2" %}
 
-{% block summary %}
+{% block respecconfig %}
+
+    var respecConfig = {
+      postProcess: [quickreference],
+      edDraftURI: "{{metadata.navigation.self}}",
+      latestVersion: "{{metadata.navigation.prev}}",
+      specStatus: "LD",
+      publishDate: "{{ metadata.issued }}",
+      editors: myeditors,
+      authors: myauthors,
+      github: "SEMICeu/Core-Location-Vocabulary",
+      shortName: "{{metadata.title}}",
+      xref: "web-platform",
+      doJsonLd: true,
+      logos: [{
+        src: "https://semiceu.github.io/CPOV/releases/2.1.0/html/semic-icon.png",
+        url: "https://semic.eu",
+        alt: "SEMIC",
+        width: 154,
+        height: 140,
+        id: "semic-logo",
+      },],
+      generatedSubtitle: "",
+      additionalCopyrightHolders: "",
+      localBiblio: {
+        "DXWG": {
+          "href" : "https://www.w3.org/2017/dxwg/wiki/Main_Page",
+          "title" : "Dataset Exchange Working Group",
+          "publisher" : "W3C"
+          },
+        "ISA":{
+           "href":"https://ec.europa.eu/isa/",
+           "title":"Interoperability Solutions for European Public Administrations (ISA)",
+           "publisher":"European Commission"
+          },
+        "ISA2":{
+          "href":"https://ec.europa.eu/isa2/",
+          "title":"Interoperability solutions for public administrations, businesses and citizens (ISA²)",
+          "publisher":"European Commission"
+        },
+        "SEMIC":{
+          "href":"https://joinup.ec.europa.eu/",
+          "title":"JoinUp welcomes Interoperable Europe",
+          "publisher":"European Commission"
+         },
+        "DEU" : {
+          "href":"https://data.europa.eu",
+          "title":"The official portal for European data",
+          "publisher":"European Commission"
+        },
+		"HVD" : {
+		  "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138",
+		  "title":"Implementing Regulation for High Value Datasets",
+		  "publisher":"European Union"
+		},
+		"DCAT-AP-HVD" : {
+		  "href":"https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/",
+		  "title":"Usage Guidelines of DCAT-AP for High-Value Datasets",
+		  "publisher":"European Commission"
+		},
+                "PSI" : {
+                  "href": "https://eur-lex.europa.eu/eli/dir/2019/1024/oj",
+                  "title" :  "Directive on open data and the re-use of public sector information (recast)",
+                  "publisher" : "European Union"
+                }
+      }
+    };
+
+{% endblock %}
+
+{% block introduction %}
 <p>
   This document describes the <strong>Core Criterion and Core Evidence Vocabulary (CCCEV)</strong>.
   Similarly to all the Core Vocabularies, CCCEV is "<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/ISA%20Handbook%20for%20using%20Core%20Vocabularies.pdf">a context-neutral data model that captures the fundamental characteristics of an entity</a>".
@@ -30,28 +100,33 @@
 </p>
 {% endblock %}
 
-{% block license %}
-<p>This specification of <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic">SEMIC</a> is published under "<a href="https://joinup.ec.europa.eu/licence/isa-open-metadata-licence-v11">ISA Open Metadata Licence 1.1</a>".</p>
+{% block summary %}
+<section id="abstract">
+    <h2>Abstract</h2>
+The Core Criterion an Core Evidence Vocabulary is a simplified, reusable and extensible data model that captures the fundamental characteristics of criterion and Evidence.
 {% endblock %}
 
-{% block changelog %}
-</br>
-</br>
-A changelog describing the (major) changes to the previous version (1.0.0) of the Core Criterion and Core Evidence Vocabulary (released in December 2016) and the new version that is here being proposed (2.0.0), can be found <a href="https://github.com/SEMICeu/CCCEV/blob/master/releases/2.00/Changelog.md">here</a>.
+{% block mappings %}
+<section class="informative">
+	<h2>Mappings</h2>
+    A mapping towards Schema.org can be found <a href="https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Location">here</a>
+</section>
 {% endblock %}
 
-{% block implementationNote %}
-</br>
-</br>
-<p>
-  CCCEV as a Core Vocabulary is implementation-neutral. CCCEV does not impose any choices regarding <i>how</i> the data is being exchanged. Furthermore, CCCEV does not enforce the information carried in an Evidence to be directly accessible i.e. contained within the payload of the response. However, CCCEV does offer several ways to implement these aspects: (1) via subclassing of the Evidence class, (2) via sharing it as a dcat:Distribution or (3) via the class Supported Value. These are three distinguishable approaches, which can be used independently from each other, or in combination.
-</p>
-</br>
-<p>
-  CCCEV provides a framework for the implementers to define the actual information models and metadata models an Evidence should comply to. For example, a Birth Certificate model could be defined as a particular Evidence Type to which the Evidence shared by the competent authority should conform to. This information model would make use of existing metadata models. The implementer can define one or several domain specific models for defining the information acceptable or required within an Evidence.
-</p>
-</br>
-<p>
-  In practice, an Evidence (from the perspective of being a document) often provides more information than is required for the decision making process. Despite that it might be possible to express all these information pieces as Information Concepts, this remains a choice for the implementer. It is not the intent of CCCEV to provide a full-fledged data modeling framework with the notion of Information Concept and Supported Value. Usages such as creating Information Concepts independent from Requirements or providing Values for Information Concepts that are not requested by a Requirement should be considered as unintended usages, beyond the scope of CCCEV.
-</p>
+{% block terminologyPrefixes %}
+This specification uses the following prefixes to shorten the URIs for readibility.
+
+        <table id="table-namespaces" class="simple">
+            <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+            <tbody>
+            <tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>           
+            <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
+            <tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
+            <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
+            <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
+            <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+            <tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
+            </tbody>
+        </table>
+
 {% endblock %}
