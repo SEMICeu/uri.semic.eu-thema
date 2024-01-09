@@ -153,7 +153,7 @@ $(document).ready(function () {
 		var indexValues = $examples.map(function() { return this.id; }) ;
 		var index = myIndexOf(indexValues, exampleid);
 
-		newUrl = "https://json-ld.org/playground/#startTab=tab-expand&json-ld=" + encodeURIComponent(editors[index].CM1.getValue()); 
+		newUrl = "https://json-ld.org/playground/#startTab=tab-expand&json-ld=" + encodeURIComponent(editors[index].CM0.getValue()); 
 		window.open(newUrl, '_blank');
 		return false;
 	});
