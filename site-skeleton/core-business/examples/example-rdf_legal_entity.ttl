@@ -17,7 +17,6 @@ ex:a a legal:LegalEntity ;
   legal:legalName "Belgisch Comite voor UNICEF"@nl ;
   cv:registeredAddress ex:address ;
   cv:registrationDate "1952-09-27"^^xsd:date .
-  
 
 ex:id a adms:Identifier ;
   skos:notation "0407.562.029" .
