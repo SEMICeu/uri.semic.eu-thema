@@ -74,7 +74,10 @@
         "@language": "fr",
         "@value": "Bruxelles"
       },
-      "locn:thoroughfare": "Rue Esseghem"
+      "locn:thoroughfare": {
+        "@language": "fr",
+        "@value": "Rue Esseghem"
+      }
     },
     {
       "@id": "ex:location1",

@@ -28,7 +28,7 @@ ex:address a locn:Address ;
   locn:locatorDesignator "135" ;
   locn:postCode "1090" ;
   locn:postName "Bruxelles"@fr ;
-  locn:thoroughfare "Rue Esseghem" .
+  locn:thoroughfare "Rue Esseghem"@fr .
 
 ex:location1 a dct:Location ;
   rdfs:seeAlso <https://www.geonames.org/2792567> ;
