@@ -8,6 +8,7 @@ function example_structure(exampleid){
 		<div id="` + exampleid + `-tabs-1">
 			<textarea class="validationquery" id="` + exampleid + `-tab1validationquery" name="query" cols="80" rows="16"></textarea>
 			<button class="buttonsample copyturtletoclipboard" id="` + exampleid + `-tabs-1-button-1">Copy</button>
+			<button class="buttonsample openinconverter" id="` + exampleid + `-tabs-1-button-2">Open in Converter</button>
 		</div>
 		<div id="` + exampleid + `-tabs-2">
 			<textarea class="validationquery" id="` + exampleid + `-tab2validationquery" name="query" cols="80" rows="16"></textarea>
@@ -156,7 +157,15 @@ $(document).ready(function () {
 		window.open(newUrl, '_blank');
 		return false;
 	});
-	
+	$("button.openinconverter").on('click', function(e) {
+		var exampleid = $(this).parent().parent().attr("exampleid");
+		var indexValues = $examples.map(function() { return this.id; }) ;
+		var index = myIndexOf(indexValues, exampleid);
+
+		newUrl = "https://converter.zazuko.com/#value=" + encodeURIComponent(editors[index].CM1.getValue()) + "&format=text%2Fturtle"; 
+		window.open(newUrl, '_blank');
+		return false;
+	});
 	$("div.CodeMirror pre").on('click', function(e) {
 		var et = $(e.target);
 		if(et.hasClass('cm-url'))  {
