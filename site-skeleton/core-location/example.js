@@ -79,7 +79,7 @@ function myIndexOf(list, val) {
         if (xmlhttp.readyState === 4 && xmlhttp.status !== 200) {
             alert('Error when opening the file: ' + file + ' - ' + xmlhttp.status + ' ' + xmlhttp.statusText);
         } else if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-			newUrl = "https://shacl-playground.zazuko.com/#page=0&shapesGraph=" + encodeURIComponent(shapes) + "&shapesGraphFormat=text%2Fturtle&dataGraph=" + encodeURIComponent(editors[index].CM0.getValue()) + "&dataGraphFormat=text%2Fturtle";console.log(newUrl);
+			newUrl = "https://shacl-playground.zazuko.com/#page=0&shapesGraph=" + encodeURIComponent(xmlhttp.responseText) + "&shapesGraphFormat=text%2Fturtle&dataGraph=" + encodeURIComponent(editors[index].CM0.getValue()) + "&dataGraphFormat=text%2Fturtle";console.log(newUrl);
             window.open(newUrl, '_blank');
         }
     };
