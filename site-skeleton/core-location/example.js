@@ -68,7 +68,7 @@ function myIndexOf(list, val) {
     return xmlhttp.responseText;
 }
 
- function loadShape(file) {
+ function loadShape(file, dataGraph) {
     var xmlhttp;
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
@@ -79,7 +79,7 @@ function myIndexOf(list, val) {
         if (xmlhttp.readyState === 4 && xmlhttp.status !== 200) {
             alert('Error when opening the file: ' + file + ' - ' + xmlhttp.status + ' ' + xmlhttp.statusText);
         } else if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-			newUrl = "https://shacl-playground.zazuko.com/#page=0&shapesGraph=" + encodeURIComponent(xmlhttp.responseText) + "&shapesGraphFormat=text%2Fturtle&dataGraph=" + encodeURIComponent(editors[index].CM0.getValue()) + "&dataGraphFormat=text%2Fturtle";console.log(newUrl);
+			newUrl = "https://shacl-playground.zazuko.com/#page=0&shapesGraph=" + encodeURIComponent(xmlhttp.responseText) + "&shapesGraphFormat=text%2Fturtle&dataGraph=" + encodeURIComponent(dataGraph) + "&dataGraphFormat=text%2Fturtle";console.log(newUrl);
             window.open(newUrl, '_blank');
         }
     };
@@ -202,7 +202,7 @@ $(document).ready(function () {
 		var exampleid = $(this).parent().parent().attr("exampleid");
 		var indexValues = $examples.map(function() { return this.id; }) ;
 		var index = myIndexOf(indexValues, exampleid);
-		var shapes = loadShape("https://semiceu.github.io/uri.semic.eu-generated/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl");
+		var shapes = loadShape("https://semiceu.github.io/uri.semic.eu-generated/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl", editors[index].CM0.getValue());
 		return false;
 	});
 	$("div.CodeMirror pre").on('click', function(e) {
