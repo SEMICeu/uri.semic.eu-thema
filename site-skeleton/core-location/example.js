@@ -16,6 +16,7 @@ function example_structure(exampleid){
 			<button class="buttonsample copyjsonldtoclipboard" id="` + exampleid + `-tabs-2-button-1">Copy</button>
 			<button class="buttonsample openinplayground" id="` + exampleid + `-tabs-2-button-2">Open in Playground</button>
 			<button class="buttonsample openJsonldInConverter" id="` + exampleid + `-tabs-2-button-3">Open in Converter</button>
+	        <button class="buttonsample openJsonldInSHACLPlayground" id="` + exampleid + `-tabs-2-button-4">Open in SHACL Playground</button>
 
 		</div>
 	</div>`;
@@ -68,7 +69,7 @@ function myIndexOf(list, val) {
     return xmlhttp.responseText;
 }
 
- function loadShape(file, dataGraph) {
+ function loadShape(file, dataGraph, format) {
     var xmlhttp;
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
@@ -79,7 +80,8 @@ function myIndexOf(list, val) {
         if (xmlhttp.readyState === 4 && xmlhttp.status !== 200) {
             alert('Error when opening the file: ' + file + ' - ' + xmlhttp.status + ' ' + xmlhttp.statusText);
         } else if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-			newUrl = "https://shacl-playground.zazuko.com/#page=0&shapesGraph=" + encodeURIComponent(xmlhttp.responseText) + "&shapesGraphFormat=text%2Fturtle&dataGraph=" + encodeURIComponent(dataGraph) + "&dataGraphFormat=text%2Fturtle";console.log(newUrl);
+			newUrl = "https://shacl-playground.zazuko.com/#page=0&shapesGraph=" + encodeURIComponent(xmlhttp.responseText) + "&shapesGraphFormat=text%2Fturtle&dataGraph=" + encodeURIComponent(dataGraph) + "&dataGraphFormat=" + format + "\"";
+			console.log(newUrl);
             window.open(newUrl, '_blank');
         }
     };
@@ -202,7 +204,14 @@ $(document).ready(function () {
 		var exampleid = $(this).parent().parent().attr("exampleid");
 		var indexValues = $examples.map(function() { return this.id; }) ;
 		var index = myIndexOf(indexValues, exampleid);
-		var shapes = loadShape(shaclfilepath, editors[index].CM0.getValue());
+		var shapes = loadShape(shaclfilepath, editors[index].CM0.getValue(), "text%2Fturtle");
+		return false;
+	});
+	$("button.openTurtleInSHACLPlayground").on('click', function(e) {
+		var exampleid = $(this).parent().parent().attr("exampleid");
+		var indexValues = $examples.map(function() { return this.id; }) ;
+		var index = myIndexOf(indexValues, exampleid);
+		var shapes = loadShape(shaclfilepath, editors[index].CM1.getValue(), "application%2Fld%2Bjson");
 		return false;
 	});
 	$("div.CodeMirror pre").on('click', function(e) {
