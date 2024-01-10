@@ -8,11 +8,14 @@ function example_structure(exampleid){
 		<div id="` + exampleid + `-tabs-1">
 			<textarea class="validationquery" id="` + exampleid + `-tab1validationquery" name="query" cols="80" rows="16"></textarea>
 			<button class="buttonsample copyturtletoclipboard" id="` + exampleid + `-tabs-1-button-1">Copy</button>
+			<button class="buttonsample openTurtleInConverter" id="` + exampleid + `-tabs-1-button-2">Open in Converter</button>
 		</div>
 		<div id="` + exampleid + `-tabs-2">
 			<textarea class="validationquery" id="` + exampleid + `-tab2validationquery" name="query" cols="80" rows="16"></textarea>
 			<button class="buttonsample copyjsonldtoclipboard" id="` + exampleid + `-tabs-2-button-1">Copy</button>
 			<button class="buttonsample openinplayground" id="` + exampleid + `-tabs-2-button-2">Open in Playground</button>
+			<button class="buttonsample openJsonldInConverter" id="` + exampleid + `-tabs-2-button-3">Open in Converter</button>
+
 		</div>
 	</div>`;
 	return structure;
@@ -156,7 +159,24 @@ $(document).ready(function () {
 		window.open(newUrl, '_blank');
 		return false;
 	});
-	
+	$("button.openTurtleInConverter").on('click', function(e) {
+		var exampleid = $(this).parent().parent().attr("exampleid");
+		var indexValues = $examples.map(function() { return this.id; }) ;
+		var index = myIndexOf(indexValues, exampleid);
+
+		newUrl = "https://converter.zazuko.com/#value=" + encodeURIComponent(editors[index].CM0.getValue()) + "&format=text%2Fturtle"; 
+		window.open(newUrl, '_blank');
+		return false;
+	});
+	$("button.openJsonldInConverter").on('click', function(e) {
+		var exampleid = $(this).parent().parent().attr("exampleid");
+		var indexValues = $examples.map(function() { return this.id; }) ;
+		var index = myIndexOf(indexValues, exampleid);
+
+		newUrl = "https://converter.zazuko.com/#value=" + encodeURIComponent(editors[index].CM1.getValue()) + "&format=application%2Fld%2Bjson";
+		window.open(newUrl, '_blank');
+		return false;
+	});
 	$("div.CodeMirror pre").on('click', function(e) {
 		var et = $(e.target);
 		if(et.hasClass('cm-url'))  {
