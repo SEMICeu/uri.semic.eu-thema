@@ -9,6 +9,7 @@ function example_structure(exampleid){
 			<textarea class="validationquery" id="` + exampleid + `-tab1validationquery" name="query" cols="80" rows="16"></textarea>
 			<button class="buttonsample copyturtletoclipboard" id="` + exampleid + `-tabs-1-button-1">Copy</button>
 			<button class="buttonsample openTurtleInConverter" id="` + exampleid + `-tabs-1-button-2">Open in Converter</button>
+	        <button class="buttonsample openTurtleInSHACLPlayground" id="` + exampleid + `-tabs-1-button-3">Validate</button>
 		</div>
 		<div id="` + exampleid + `-tabs-2">
 			<textarea class="validationquery" id="` + exampleid + `-tab2validationquery" name="query" cols="80" rows="16"></textarea>
@@ -60,6 +61,25 @@ function myIndexOf(list, val) {
             alert('Error when opening the file: ' + file + ' - ' + xmlhttp.status + ' ' + xmlhttp.statusText);
         } else if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
             editorinstance.setValue(xmlhttp.responseText);
+        }
+    };
+    xmlhttp.open("GET", file, true);
+    xmlhttp.send();
+    return xmlhttp.responseText;
+}
+
+ function loadShape(file) {
+    var xmlhttp;
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState === 4 && xmlhttp.status !== 200) {
+            alert('Error when opening the file: ' + file + ' - ' + xmlhttp.status + ' ' + xmlhttp.statusText);
+        } else if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+            console.log(xmlhttp.responseText);
         }
     };
     xmlhttp.open("GET", file, true);
@@ -174,6 +194,15 @@ $(document).ready(function () {
 		var index = myIndexOf(indexValues, exampleid);
 
 		newUrl = "https://converter.zazuko.com/#value=" + encodeURIComponent(editors[index].CM1.getValue()) + "&format=application%2Fld%2Bjson";
+		window.open(newUrl, '_blank');
+		return false;
+	});
+	$("button.openTurtleInSHACLPlayground").on('click', function(e) {
+		var exampleid = $(this).parent().parent().attr("exampleid");
+		var indexValues = $examples.map(function() { return this.id; }) ;
+		var index = myIndexOf(indexValues, exampleid);
+		var shapes = loadShape("https://semiceu.github.io/uri.semic.eu-generated/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl");
+		newUrl = "https://shacl-playground.zazuko.com/#page=0&shapesGraph=" + encodeURIComponent(shapes) + "&shapesGraphFormat=text%2Fturtle&dataGraph=" + encodeURIComponent(editors[index].CM0.getValue()) + "&dataGraphFormat=text%2Fturtle";
 		window.open(newUrl, '_blank');
 		return false;
 	});
