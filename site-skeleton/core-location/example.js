@@ -207,7 +207,7 @@ $(document).ready(function () {
 		var shapes = loadShape(shaclfilepath, editors[index].CM0.getValue(), "text%2Fturtle");
 		return false;
 	});
-	$("button.openTurtleInSHACLPlayground").on('click', function(e) {
+	$("button.openJsonldInSHACLPlayground").on('click', function(e) {
 		var exampleid = $(this).parent().parent().attr("exampleid");
 		var indexValues = $examples.map(function() { return this.id; }) ;
 		var index = myIndexOf(indexValues, exampleid);
