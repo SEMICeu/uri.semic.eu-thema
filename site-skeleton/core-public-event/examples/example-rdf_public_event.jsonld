@@ -136,7 +136,7 @@
         "@value": "2019-10-11"
       }
     },
-{
+    {
       "@id": "_:g1",
       "@type": "time:Instant",
       "time:inXSDDate": {
