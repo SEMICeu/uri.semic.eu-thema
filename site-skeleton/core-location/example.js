@@ -9,7 +9,7 @@ function example_structure(exampleid){
 			<textarea class="validationquery" id="` + exampleid + `-tab1validationquery" name="query" cols="80" rows="16"></textarea>
 			<button class="buttonsample copyturtletoclipboard" id="` + exampleid + `-tabs-1-button-1">Copy</button>
 			<button class="buttonsample openTurtleInConverter" id="` + exampleid + `-tabs-1-button-2">Open in Converter</button>
-	        <button class="buttonsample openTurtleInSHACLPlayground" id="` + exampleid + `-tabs-1-button-3">Validate</button>
+	        <button class="buttonsample openTurtleInSHACLPlayground" id="` + exampleid + `-tabs-1-button-3">Open in SHACL Playground</button>
 		</div>
 		<div id="` + exampleid + `-tabs-2">
 			<textarea class="validationquery" id="` + exampleid + `-tab2validationquery" name="query" cols="80" rows="16"></textarea>
