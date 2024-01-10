@@ -79,7 +79,8 @@ function myIndexOf(list, val) {
         if (xmlhttp.readyState === 4 && xmlhttp.status !== 200) {
             alert('Error when opening the file: ' + file + ' - ' + xmlhttp.status + ' ' + xmlhttp.statusText);
         } else if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-            console.log(xmlhttp.responseText);
+			newUrl = "https://shacl-playground.zazuko.com/#page=0&shapesGraph=" + encodeURIComponent(shapes) + "&shapesGraphFormat=text%2Fturtle&dataGraph=" + encodeURIComponent(editors[index].CM0.getValue()) + "&dataGraphFormat=text%2Fturtle";console.log(newUrl);
+            window.open(newUrl, '_blank');
         }
     };
     xmlhttp.open("GET", file, true);
@@ -202,8 +203,6 @@ $(document).ready(function () {
 		var indexValues = $examples.map(function() { return this.id; }) ;
 		var index = myIndexOf(indexValues, exampleid);
 		var shapes = loadShape("https://semiceu.github.io/uri.semic.eu-generated/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl");
-		newUrl = "https://shacl-playground.zazuko.com/#page=0&shapesGraph=" + encodeURIComponent(shapes) + "&shapesGraphFormat=text%2Fturtle&dataGraph=" + encodeURIComponent(editors[index].CM0.getValue()) + "&dataGraphFormat=text%2Fturtle";
-		window.open(newUrl, '_blank');
 		return false;
 	});
 	$("div.CodeMirror pre").on('click', function(e) {
