@@ -202,7 +202,7 @@ $(document).ready(function () {
 		var exampleid = $(this).parent().parent().attr("exampleid");
 		var indexValues = $examples.map(function() { return this.id; }) ;
 		var index = myIndexOf(indexValues, exampleid);
-		var shapes = loadShape("https://semiceu.github.io/uri.semic.eu-generated/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl", editors[index].CM0.getValue());
+		var shapes = loadShape(shaclfilepath, editors[index].CM0.getValue());
 		return false;
 	});
 	$("div.CodeMirror pre").on('click', function(e) {
