@@ -8,7 +8,7 @@
   "title": "Core Public Service Vocabulary Application Profile (CPSV-AP)",
   "publication-state": "SEMIC Recommendation",
   "publication-date": "2023-05-31",
-  "license": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "CPSV-AP",
   "site": "site-skeleton/cpsv-ap",
