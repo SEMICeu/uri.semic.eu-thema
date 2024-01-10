@@ -93,7 +93,10 @@
         "@language": "fr",
         "@value": "Bruxelles"
       },
-      "locn:thoroughfare": "Boulevard du Roi Albert II"
+      "locn:thoroughfare": {
+        "@language": "fr",
+        "@value": "Boulevard du Roi Albert II"
+      }
     },
     {
       "@id": "ex:cp",
