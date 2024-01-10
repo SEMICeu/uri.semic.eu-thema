@@ -6,6 +6,7 @@
 
 ex:a a dct:Location ;
   locn:geometry ex:b .
+
 ex:b a sf:Point;
   wgs:lat "50.8614075" ;
   wgs:long "4.359191" . 

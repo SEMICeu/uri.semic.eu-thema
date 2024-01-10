@@ -4,7 +4,8 @@
 @prefix schema: <https://schema.org/> .
 
 ex:a a dct:Location ;
-  locn:geometry ex:b . 
+  locn:geometry ex:b .
+
 ex:b a schema:GeoCoordinates ;
   schema:latitude "50.8614075" ;
   schema:longitude "4.359191" .
