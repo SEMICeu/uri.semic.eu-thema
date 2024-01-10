@@ -19,6 +19,9 @@
      "locn:address" : {
        "@id": "ex:address"
      },
+     "cv:contactPoint" : {
+       "@id": "ex:contactpoint"
+     },
      "dct:description" : {
        "@language": "fr",
        "@value": "Les Musées royaux des Beaux-Arts de Belgique consacrent une exposition exceptionnelle à Salvador Dalí et René Magritte."
@@ -28,6 +31,9 @@
      },
      "dct:type" : {
        "@id" : "http://publications.europa.eu/resource/authority/public-event-type/EXHIBITION"
+     },
+     "cv:hasParticipation" : {
+       "@id" : "ex:participation"
      },
      "time:hasTime" : {
        "@id" : "ex:oh"
@@ -71,6 +77,42 @@
       "@type": "ContactPoint",
       "cv:email" : "info@fine-arts-museum.be", 
       "cv:telephone" : "+32 0(2) 508 32 11"
+    },
+    {
+      "@id": "ex:participation",
+      "@type": "Participation",
+      "cv:role" : {
+        "@id" : "ex:illustrator"
+      },
+      "cv:hasParticipant" : [
+        { "@id" : "ex:agent1"},
+        { "@id" : "ex:agent2"},
+        { "@id" : "ex:agent3"}
+      ]
+    },
+    {
+      "@id": "ex:agent1",
+      "@type": "Agent",
+      "foaf:name" : {
+        "@language": "fr",
+        "@value": "Fabrice Lavollay"
+      }
+    },
+    {
+      "@id": "ex:agent2",
+      "@type": "Agent",
+      "foaf:name" : {
+        "@language": "nl",
+        "@value": "Piotr W. Osburne"
+      }
+    },
+    {
+      "@id": "ex:agent3",
+      "@type": "Agent",
+      "foaf:name" : {
+        "@language": "nl",
+        "@value": "David Peeters"
+      }
     },
     {
       "@id": "ex:oh",
