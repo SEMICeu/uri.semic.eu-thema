@@ -56,14 +56,14 @@ ex:oh a time:TemporalEntity ;
   ] .
 
 ex:sohs a time:TemporalEntity ;
-   dct:description "closed on weekend"@en;
-   time:hasBeginning [ a time:Instant;
-     time:inDateTime [ a time:DateTimeDescription;
-         time:dayOfWeek time:Saturday;
-     ];
-   ];
-   time:hasEnd [ a time:Instant;
-     time:inDateTime [ a time:DateTimeDescription;
-       time:dayOfWeek time:Sunday;
-     ];
-   ] .
+  dct:description "closed on weekend"@en;
+  time:hasBeginning [ a time:Instant;
+    time:inDateTime [ a time:DateTimeDescription;
+      time:dayOfWeek time:Saturday;
+    ];
+  ];
+  time:hasEnd [ a time:Instant;
+    time:inDateTime [ a time:DateTimeDescription;
+      time:dayOfWeek time:Sunday;
+    ];
+  ] .
