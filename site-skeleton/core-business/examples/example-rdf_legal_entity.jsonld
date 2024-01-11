@@ -69,7 +69,10 @@
         "@language": "fr",
         "@value": "Bruxelles"
       },
-      "locn:thoroughfare": "Rue Picard"
+      "locn:thoroughfare": {
+        "@language": "fr",
+        "@value": "Rue Picard"
+      }
     },
     {
       "@id": "ex:contact",

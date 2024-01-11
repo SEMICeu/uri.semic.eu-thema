@@ -28,7 +28,7 @@ ex:address a locn:Address ;
   locn:locatorDesignator "7/306" ;
   locn:postCode "1000" ;
   locn:postName "Bruxelles"@fr ;
-  locn:thoroughfare "Rue Picard" .
+  locn:thoroughfare "Rue Picard"@fr .
 
 ex:contact a cv:ContactPoint ;
   cv:telephone "+32 2 230 59 70" ;
