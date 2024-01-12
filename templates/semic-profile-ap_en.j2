@@ -253,7 +253,7 @@
     </h2>
     {% block introduction %}
         <p>
-            This document describes an <strong>Core Vocabulary</strong>, in this case <strong>{{ metadata.title }}</strong>. The Core Vocabulary specifies a semantic data model covering a set of usecases. The specification consists of terms with their constraints (cardinalities, codelists, usage guidelines).
+            This document describes an <strong>Application Profile</strong>, in this case <strong>{{ metadata.title }}</strong>. The Application Profile specifies a semantic data model covering a set of usecases. The specification consists of terms with their constraints (cardinalities, codelists, usage guidelines).
         </p>
     {% endblock %}
 </section>
@@ -264,7 +264,7 @@
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Core Vocabulary has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }} published at {{ metadata.issued }}.
+            This Application Profile has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }} published at {{ metadata.issued }}.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="{{ metadata.standaardregisterurl }}">Changelog</a>.
@@ -306,6 +306,10 @@
         Terminology
     </h2>
         <p>
+           An Application Profile (AP) is a specification that reuses terms from one or more base standards, adding more specificity by identifying mandatory,
+           recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used. 
+        </p>
+        <p>
             A Core Vocabulary (CV) is a basic, reusable and extensible data specification that captures the fundamental characteristics of an entity in a context-neutral fashion. Its main objective is to provide terms to be reused in the broadest possible context.
             More information can be found on the <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification">SEMIC Style Guide</a>.
         </p>
@@ -322,7 +326,7 @@
     <div id="overview">
                 {% if ( ( classes | length > 0)   ) %}
                         <p>
-                            This document describes the usage of the following main entities for a correct usage of the Core Vocabulary:
+                            This document describes the usage of the following main entities for a correct usage of the Application Profile:
                             <br />
                             | {%- for class in classes |sort(attribute=sortattr) %} 
 			      {%- if class.rawTags['class-usage-scope'] == "main" %}
@@ -514,7 +518,7 @@
 <h2>
    Main Entities
 </h2>
-The main entities are those that form the core of the Core Vocabulary.
+The main entities are those that form the core of the Application Profile.
 
 {% for entity in classes | sort(attribute=sortattr) %}
 {% if entity.rawTags['class-usage-scope'] == "main"   %}
@@ -527,8 +531,8 @@ The main entities are those that form the core of the Core Vocabulary.
 <h2>
    Supportive Entities
 </h2>
-The supportive entities are supporting the main entities in the Core Vocabulary. 
-They are included in the Core Vocabulary because they form the range of properties.
+The supportive entities are supporting the main entities in the Application Profile. 
+They are included in the Application Profile because they form the range of properties.
 
 
 {% for entity in classes | sort(attribute=sortattr) %}
@@ -629,20 +633,20 @@ They are included in the Core Vocabulary because they form the range of properti
     </div>
 </section>
 -->
-
+<!--
 <section class="informative">
     <h2> Examples </h2>
         {% block examples %}
 	<p> No examples defined </p>
         {% endblock %}
 </section>
-
+-->
 
 
 {% block usages %}
 <section class="informative">
 	<h2>Usage Guidelines</h2>
-    {% include "CV-implementation.j2" ignore missing %}
+    {% include "AP-implementation.j2" ignore missing %}
     {% include "CV-governance.j2" ignore missing %}
 </section>
 {% endblock %} 
