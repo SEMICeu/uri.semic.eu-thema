@@ -91,7 +91,7 @@ function myIndexOf(list, val) {
 }
 
 function validate(version, content, format) {
-	data = {
+	request = {
 	"contentToValidate": content,
     "contentSyntax": format,
    "embeddingMethod": "BASE64",
@@ -101,12 +101,12 @@ function validate(version, content, format) {
 	$.ajax({
 		type: "POST",
 		url: "https://www.itb.ec.europa.eu/shacl/dcat-ap/api/validate",
-		data: JSON.stringify(data),// now data come in this function
+		data: JSON.stringify(request),// now data come in this function
 		contentType: "application/json; charset=utf-8",
 		crossDomain: true,
 		dataType: "json",
-		success: function (data, status, jqXHR) {
-		  $("dialog").text(data);
+		success: function (response, status, jqXHR) {
+		  $("dialog").text(response);
 		  $("dialog").dialog();
 		
 		//alert(data);// write success in " "
