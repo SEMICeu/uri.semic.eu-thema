@@ -90,6 +90,16 @@ function myIndexOf(list, val) {
     return xmlhttp.responseText;
 }
 
+var dialog = $("<div>", {
+    id: "dialog-form",
+    title: "Validation Result"
+  }).dialog({
+    autoOpen: false,
+    height: 400,
+    width: 350,
+    modal: true
+  });
+
 function validate(version, content, format) {
 	request = {
 	"contentToValidate": content,
@@ -104,10 +114,10 @@ function validate(version, content, format) {
 		data: JSON.stringify(request),// now data come in this function
 		contentType: "application/json; charset=utf-8",
 		crossDomain: true,
-		dataType: "json",
+		dataType: "text",
 		success: function (response, status, jqXHR) {
-		  $("dialog").text(response);
-		  $("dialog").dialog();
+		  $("dialog").html(response);
+		  $("dialog").dialog("open");
 		
 		//alert(data);// write success in " "
 		},
