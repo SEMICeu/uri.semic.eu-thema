@@ -9,14 +9,14 @@ function example_structure(exampleid){
 			<textarea class="validationquery" id="` + exampleid + `-tab1validationquery" name="query" cols="80" rows="16"></textarea>
 			<button class="buttonsample copyturtletoclipboard" id="` + exampleid + `-tabs-1-button-1">Copy</button>
 			<button class="buttonsample openTurtleInConverter" id="` + exampleid + `-tabs-1-button-2">Open in Converter</button>
-	        <button class="buttonsample openTurtleInSHACLPlayground" id="` + exampleid + `-tabs-1-button-3">Open in SHACL Playground</button>
+	        <button class="buttonsample openTurtleInSHACLPlayground" id="` + exampleid + `-tabs-1-button-3">Validate</button>
 		</div>
 		<div id="` + exampleid + `-tabs-2">
 			<textarea class="validationquery" id="` + exampleid + `-tab2validationquery" name="query" cols="80" rows="16"></textarea>
 			<button class="buttonsample copyjsonldtoclipboard" id="` + exampleid + `-tabs-2-button-1">Copy</button>
 			<button class="buttonsample openinplayground" id="` + exampleid + `-tabs-2-button-2">Open in Playground</button>
 			<button class="buttonsample openJsonldInConverter" id="` + exampleid + `-tabs-2-button-3">Open in Converter</button>
-	        <button class="buttonsample openJsonldInSHACLPlayground" id="` + exampleid + `-tabs-2-button-4">Open in SHACL Playground</button>
+	        <button class="buttonsample openJsonldInSHACLPlayground" id="` + exampleid + `-tabs-2-button-4">Validate</button>
 
 		</div>
 	</div>`;
