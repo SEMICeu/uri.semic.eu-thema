@@ -95,7 +95,8 @@ function validate(version, content, format) {
 	"contentToValidate": content,
     "contentSyntax": format,
    "embeddingMethod": "BASE64",
-   "validationType": version
+   "validationType": version,
+   "reportSyntax": "text/turtle"
 	};
 	$.ajax({
 		type: "POST",
@@ -105,8 +106,9 @@ function validate(version, content, format) {
 		crossDomain: true,
 		dataType: "json",
 		success: function (data, status, jqXHR) {
-
-		 alert(data);// write success in " "
+		  $("dialog").text(data);
+		  $("dialog").dialog();
+		//alert(data);// write success in " "
 		},
 
 		error: function (jqXHR, status) {
