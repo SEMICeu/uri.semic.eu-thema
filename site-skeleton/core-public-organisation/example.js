@@ -108,6 +108,7 @@ function validate(version, content, format) {
 		success: function (data, status, jqXHR) {
 		  $("dialog").text(data);
 		  $("dialog").dialog();
+		
 		//alert(data);// write success in " "
 		},
 
