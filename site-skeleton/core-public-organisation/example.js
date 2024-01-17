@@ -90,6 +90,33 @@ function myIndexOf(list, val) {
     return xmlhttp.responseText;
 }
 
+function validate(version, content, format) {
+	data = {
+	"contentToValidate": content,
+    "contentSyntax": format,
+   "embeddingMethod": "BASE64",
+   "validationType": version
+	};
+	$.ajax({
+		type: "POST",
+		url: "https://www.itb.ec.europa.eu/shacl/dcat-ap/api/validate",
+		data: JSON.stringify(data),// now data come in this function
+		contentType: "application/json; charset=utf-8",
+		crossDomain: true,
+		dataType: "json",
+		success: function (data, status, jqXHR) {
+
+		 alert(data);// write success in " "
+		},
+
+		error: function (jqXHR, status) {
+		 // error handler
+		 console.log(jqXHR);
+		 alert('fail' + status.code);
+		}
+		});
+}
+
 function createTurtleEditorFrom(selector) {
   return CodeMirror.fromTextArea(selector, {
     mode: "turtle",
@@ -204,7 +231,8 @@ $(document).ready(function () {
 		var exampleid = $(this).parent().parent().attr("exampleid");
 		var indexValues = $examples.map(function() { return this.id; }) ;
 		var index = myIndexOf(indexValues, exampleid);
-		var shapes = loadShape(shaclfilepath, editors[index].CM0.getValue(), "text%2Fturtle");
+		//var shapes = loadShape(shaclfilepath, editors[index].CM0.getValue(), "text%2Fturtle");
+		var shapes = validate("v2.0", btoa(editors[index].CM0.getValue()), "text/turtle");
 		return false;
 	});
 	$("button.openJsonldInSHACLPlayground").on('click', function(e) {
