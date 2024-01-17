@@ -31,9 +31,9 @@ ex:address a locn:Address ;
   locn:thoroughfare "Rue Esseghem"@fr .
 
 ex:location1 a dct:Location ;
-  rdfs:seeAlso <https://www.geonames.org/2792567> ;
+  rdfs:seeAlso "https://www.geonames.org/2792567"^^xsd:anyURI ;
   locn:geographicName "Lessines"@fr .
 
 ex:location2 a dct:Location ;
-  rdfs:seeAlso <https://www.geonames.org/2800866> ;
+  rdfs:seeAlso "https://www.geonames.org/2800866"^^xsd:anyURI ;
   locn:geographicName "Bruxelles"@fr .

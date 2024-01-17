@@ -83,7 +83,8 @@
       "@id": "ex:location1",
       "@type": "Location",
       "rdfs:seeAlso" : {
-       "@id" : "https://www.geonames.org/2792567"
+       "@type": "xsd:anyURI",
+       "@value": "https://www.geonames.org/2792567"
       },
       "locn:geographicName" : {
         "@language": "fr",
@@ -94,7 +95,8 @@
       "@id": "ex:location2",
       "@type": "Location",
       "rdfs:seeAlso" : {
-       "@id" : "https://www.geonames.org/2800866"
+       "@type": "xsd:anyURI",
+       "@value": "https://www.geonames.org/2800866"
       },
       "locn:geographicName" : {
         "@language": "fr",
