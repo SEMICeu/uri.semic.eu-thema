@@ -23,7 +23,6 @@ function example_structure(exampleid){
 	return structure;
 }
 
-
 /**
  * auxiliary function to get around the issue that indexOf() is not working with jquery.
  */

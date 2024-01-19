@@ -90,7 +90,7 @@
       "@type": "Evidence",
       "dct:description" : {
         "@language": "fr",
-        "@value": "Attestation en matière de frais de garde d'enfancts"
+        "@value": "Attestation en matière de frais de garde d'enfants"
       },
       "dct:creator" : {
         "@id" : "ex:creche"
