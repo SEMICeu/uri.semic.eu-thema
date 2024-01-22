@@ -10,16 +10,16 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:criterion a cv:Criterion ;
-	dcterms:description "Entitlement to marry." ;
+	dct:description "Entitlement to marry." ;
 	cv:hasRequirement ex:informationRequirement ;
 	cv:isDerivedFrom ejustice:Art.144 ;
-	dcterms:publisher ex:organisation .
+	dct:publisher ex:organisation .
 
 ex:informationRequirement a cv:InformationRequirement ;
-	dcterms:description "The age of the applicant." ;
+	dct:description "The age of the applicant." ;
 	cv:hasRequirement ex:constraint ;
 	cv:isDerivedFrom ejustice:Art.144 ;
-	dcterms:publisher ex:organisation ;
+	dct:publisher ex:organisation ;
 	cv:hasEvidenceTypeList ex:evidenceTypeList1, ex:evidenceTypeList2 ;
 	cv:hasConcept ex:informationConcept .
 
@@ -29,9 +29,9 @@ ex:organisation a foaf:Agent, org:Organization ;
 ejustice:Art.144 a cv:ReferenceFramework .
 
 ex:constraint a cv:Constraint ;
-	dcterms:description "The applicant must be at least 18 years of age." ;
+	dct:description "The applicant must be at least 18 years of age." ;
 	cv:isDerivedFrom ejustice:Art.144 ;
-	dcterms:publisher ex:organisation ;
+	dct:publisher ex:organisation ;
 	cv:constrains ex:informationConcept .
 
 ex:evidenceTypeList1 a cv:EvidenceTypeList ;
@@ -50,14 +50,14 @@ ex:informationConcept a cv:InformationConcept ;
 	skos:prefLabel "age" .
 
 ex:evidence a cv:Evidence ;
-	dcterms:conformsTo ex:evidenceType2 ;
+	dct:conformsTo ex:evidenceType2 ;
 	cv:supportsRequirement ex:informationRequirement, ex:constraint ;
 	cv:supportsValue ex:supportedValue ;
-	dcterms:subject ex:person ;
-	dcterms:issued "2018-09-07"^^xsd:date ;
-	dcterms:type ex:idcard ;
-	dcterms:identifier "592-1983273-93" ;
-	dcterms:title "ID card of John Doe" .
+	dct:subject ex:person ;
+	dct:issued "2018-09-07"^^xsd:date ;
+	dct:type ex:idcard ;
+	dct:identifier "592-1983273-93" ;
+	dct:title "ID card of John Doe" .
 
 ex:supportedValue a cv:SupportedValue ;
 	cv:value 25 ;
