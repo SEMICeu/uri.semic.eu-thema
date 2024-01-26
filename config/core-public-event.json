@@ -28,7 +28,7 @@
     "toolchainversion" : "3",
     "documentconfig": {
           "statuslabel" : "SEMIC Candidate Recommendation",
-          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/Core-Public-Event-Vocabulary/releases/1.1.0"
+          "editorDocumentroot" : "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.1.0"
     }
 }
 ]

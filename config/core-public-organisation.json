@@ -28,7 +28,7 @@
       "toolchainversion" : "3",
       "documentconfig": {
             "statuslabel" : "SEMIC Candidate Recommendation",
-            "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/CPOV/releases/2.1.1"
+            "editorDocumentroot" : "https://semiceu.github.io/CPOV/releases/2.1.1"
       }
   }
   ]

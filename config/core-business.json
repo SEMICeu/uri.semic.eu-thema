@@ -28,7 +28,7 @@
     "toolchainversion" : "3",
     "documentconfig": {
           "statuslabel" : "SEMIC Candidate Recommendation",
-          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/Core-Business-Vocabulary/releases/2.2.0"
+          "editorDocumentroot" : "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0"
     }
 }
 ]
