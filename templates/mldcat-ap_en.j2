@@ -1,13 +1,106 @@
-{% extends "mldcat-ap.j2" %}
+{% extends "semic-ap_en.j2" %}
 
-{% block summary %}
-<p>
-	This is an application profile, aimed to extend the use of DCAT-AP, originally envisaged for the description of a machine learning process, developed in collaboration with <a href="https://www.openml.org/">OpenML</a>.
+{% block respecconfig %}
+
+    var respecConfig = {
+      postProcess: [quickreference],
+      edDraftURI: "{{metadata.navigation.self}}",
+      latestVersion: "{{metadata.navigation.prev}}",
+      specStatus: "LD",
+      publishDate: "{{ metadata.issued }}",
+      editors: myeditors,
+      authors: myauthors,
+      github: "SEMICeu/MLDCAT-AP",
+      shortName: "{{metadata.title}}",
+      xref: "web-platform",
+      doJsonLd: true,
+      logos: [{
+        src: "https://semiceu.github.io/CPOV/releases/2.1.0/html/semic-icon.png",
+        url: "https://semic.eu",
+        alt: "SEMIC",
+        width: 154,
+        height: 140,
+        id: "semic-logo",
+      },],
+      generatedSubtitle: "",
+      additionalCopyrightHolders: "",
+      localBiblio: {
+        "DXWG": {
+          "href" : "https://www.w3.org/2017/dxwg/wiki/Main_Page",
+          "title" : "Dataset Exchange Working Group",
+          "publisher" : "W3C"
+          },
+        "ISA":{
+           "href":"https://ec.europa.eu/isa/",
+           "title":"Interoperability Solutions for European Public Administrations (ISA)",
+           "publisher":"European Commission"
+          },
+        "ISA2":{
+          "href":"https://ec.europa.eu/isa2/",
+          "title":"Interoperability solutions for public administrations, businesses and citizens (ISA²)",
+          "publisher":"European Commission"
+        },
+        "SEMIC":{
+          "href":"https://joinup.ec.europa.eu/",
+          "title":"JoinUp welcomes Interoperable Europe",
+          "publisher":"European Commission"
+         },
+        "DEU" : {
+          "href":"https://data.europa.eu",
+          "title":"The official portal for European data",
+          "publisher":"European Commission"
+        }
+      }
+    };
+
+{% endblock %}
+
+
+{% block introduction %}
+	<p>
+This is an application profile, aimed to extend the use of DCAT-AP, originally envisaged for the description of a machine learning process, originally developed in collaboration with <a href="https://www.openml.org/">OpenML</a>.
 </p>
 {% endblock %}
 
-{% block changelog %}
-<p>
-This is the first release of the MLDCAT-AP.
-<p>
+{% block summary %}
+<section id="abstract">
+    <h2>Abstract</h2>
+MLDCAT-AP aims to describe machine learning models, together with their datasets and quality and citing papers.
+</section>
+{% endblock %}
+
+{% block examples %}
+<div class="h3 examples" id="example-dataset">Example Dataset</div>
+{% endblock %}
+
+{#
+{% block mappings %}
+<section class="informative">
+	<h2>Mappings</h2>
+    A mapping towards Schema.org can be found <a href="https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Person">here</a>
+</section>
+{% endblock %}
+#}
+
+{% block terminologyPrefixes %}
+This specification uses the following prefixes to shorten the URIs for readibility.
+
+        <table id="table-namespaces" class="simple">
+            <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+            <tbody>
+            <tr><td><code>adms</code></td><td><code>http://www.w3.org/ns/adms#</code></td></tr>
+            <tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>           
+            <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
+            <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
+            <tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
+            <tr><td><code>person</code></td><td><code>http://www.w3.org/ns/person#</code></td></tr>
+            <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
+            <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
+            <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+            <tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
+            
+
+            </tbody>
+        </table>
+
 {% endblock %}
