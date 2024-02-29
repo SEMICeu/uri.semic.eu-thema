@@ -76,19 +76,27 @@
 
 {% block introduction %}
 
-This vocabularium is <strong>supporting</strong> <a href="https://joinup.ec.europa.eu/collection/semic-support-centre/solution/e-government-core-vocabularies">the Core Vocabularies</a>. 
-The terms defined in this namespace are defined as broad as possible for wider reuse but are scoped to the needs of Core Vocabularies. 
-All terms in this vocabularium therefore a strong connection with one or more Core Vocabularies.
+This vocabularium is supports <a href="https://joinup.ec.europa.eu/collection/semic-support-centre/solution/e-government-core-vocabularies">the SEMIC Core Vocabularies</a>. 
+The terms defined in this namespace are defined as broad as possible for wider reuse but are scoped to the needs of the SEMIC Core Vocabularies. 
+All terms in this vocabularium are terms used in the SEMIC Core Vocabularies and defined under the <code>http://data.europa.eu/m8g/</code> namespace.
+This release of the vocabularium corresponds to the follwing releases of the SEMIC Core Vocabularies.
 
+<ul>
+    <li> <a href="https://semiceu.github.io/CCCEV/releases/2.1.0/">CCCEV v2.1.0</a></li>
+    <li> <a href="https://semiceu.github.io/CPOV/releases/2.1.1/">Core Public Organisation Vocabulary v2.1.1</a></li>
+    <li> <a href="https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0/">Core Business Vocabulary v2.2.0</a></li>
+    <li> <a href="https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/">Core Person Vocabulary v2.1.1</a></li>
+    <li> <a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/">Core Location Vocabulary v2.1.0</a></li>
+    <li> <a href="https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.1.0/">Core Public Event Vocabulary v1.1.0</a></li>
+</ul>
 {% endblock %}
 
 
 {% block summary %}
 <section id="abstract">
     <h2>Abstract</h2>
-The m8g vocabularium supports the Core Vocabularies. 
-The namespace for this vocabulary is <code>http://data.europa.eu/m8g/</code> . 
-It is under maintenance by the SEMIC action, Interoperable Europe.
+This vocabularium supports the Core Vocabularies. This vocabularium is hosted under the <code>http://data.europa.eu/m8g/</code> namespace. 
+It is maintained by the SEMIC action, Interoperable Europe.
 </section>
 {% endblock %}
 
@@ -113,28 +121,6 @@ It is under maintenance by the SEMIC action, Interoperable Europe.
 {% endblock %}
 
 {% block terminology %}
-<section id="specterminology">
-    <h2>Terminology</h2>
-
-The namespace for this vocabulary is <code>http://data.europa.eu/m8g/</code> . 
-<p>
-<h3>Used Prefixes</h3>
-
-
-        <table id="table-namespaces" class="simple">
-            <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
-            <tbody>
-            <tr><td><code>dcat</code></td><td><code>http://www.w3.org/ns/dcat#</code></td></tr>
-            <tr><td><code>dcatap</code></td><td><code>http://data.europa.eu/r5r/</code></td></tr>
-            <tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>
-            <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
-            <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
-            <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
-            <tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
-            </tbody>
-        </table>
-
-</section>
 {% endblock %}
 
 {% block conformance %}
