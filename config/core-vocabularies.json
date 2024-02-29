@@ -4,26 +4,27 @@
   "type": "voc",
   "eap": "CoreVocabularies.EAP",
   "diagram": "ISA_Core_Vocabularies_consolidated",
-  "template": "core-vocabularies_en.j2",
-  "title": "Core Vocabularies",
   "publication-state": "Semic Recommendation",
-  "publication-date": "2023-03-27",
-  "license": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic",
+  "publication-date": "2024-02-29",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "CoreVoc",
   "site": "site-skeleton/core-vocabularies",
-  "repourl": "https://github.com/SEMICeu/Core-Business-Vocabulary/tree/master/releases/2.00",
-  "versionurl": "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00",
-  "feedbackurl": "https://github.com/SEMICeu/Core-Business-Vocabulary/issues",
-  "standaardregisterurl": "core-vocabularies",
-    "translation": [
-      {
-        "language":"en",
-        "template":"core-vocabularies_en.j2",
-        "title": "Core Vocabularies",
-        "translationjson":"core-vocabularies_en.json",
-        "mergefile":"ccore-vocabularies_en_merged.jsonld"
-      }
-    ]
+  "feedbackurl": "https://github.com/SEMICeu/Consolidated-Core-Vocabularies/issues",
+  "standaardregisterurl": "https://github.com/SEMICeu/Consolidated-Core-Vocabularies/blob/main/releases/2.00/CHANGELOG.md",
+  "translation": [
+    {
+      "language":"en",
+      "template":"m8g.j2",
+      "title": "Core Vocabularies",
+      "translationjson":"core-vocabularies_en.json",
+      "mergefile":"core-vocabularies_en_merged.jsonld"
+    }
+  ],
+  "toolchainversion" : "3",
+  "documentconfig": {
+        "statuslabel" : "SEMIC Recommendation"
+  }
+  
 }
 ]
