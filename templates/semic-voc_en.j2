@@ -649,25 +649,15 @@
     <div>
     <p>The diagram below displays the consolidated Core Vocabularies diagram.</p>
     
-        <a href="{{ metadata.documentconfig.editorDocumentroot if metadata.documentconfig.editorDocumentroot else documentroot }}/html/consolidated_diagram.jpg"
+        <a href="html/overview.jpg"
            target="_blank">
-            <img src="{{ metadata.documentconfig.editorDocumentroot if metadata.documentconfig.editorDocumentroot else documentroot }}/html/consolidated_diagram.jpg"/>
+            <img src="html/overview.jpg"/>
         </a>
     </div>
-    <div>
-    <p>The diagram below displays the simplified consolidated Core Vocabularies diagram.</p>
-    
-        <a href="{{ metadata.documentconfig.editorDocumentroot if metadata.documentconfig.editorDocumentroot else documentroot }}/html/consolidated_diagram_simple.jpg"
-           target="_blank">
-            <img src="{{ metadata.documentconfig.editorDocumentroot if metadata.documentconfig.editorDocumentroot else documentroot }}/html/consolidated_diagram_simple.jpg"/>
-        </a>
-    </div>
-
-
 <h2>
    Classes
 </h2>
-This section lists the classes matching the base namespace of this vocabulary.
+This section lists the classes matching the base namespace of this vocabularium.
 
 {% for entity in classes | sort(attribute=sortattr) %}
    {{ renderclass(entity) }}
@@ -676,7 +666,7 @@ This section lists the classes matching the base namespace of this vocabulary.
 <h2>
    Properties
 </h2>
-This section lists the properties matching the base namespace of this vocabulary.
+This section lists the properties matching the base namespace of this vocabularium.
 
 
 {% for entity in properties | sort(attribute=sortattr) %}
