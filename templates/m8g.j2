@@ -75,27 +75,10 @@
 {% endblock %}
 
 {% block introduction %}
-<h3>Context</h3>
 
-This vocabulary is <strong>supporting</strong> the Core Vocabularies [[CORE-VOCS]]. 
+This vocabularium is <strong>supporting</strong> <a href="https://joinup.ec.europa.eu/collection/semic-support-centre/solution/e-government-core-vocabularies">the Core Vocabularies</a>. 
 The terms defined in this namespace are defined as broad as possible for wider reuse but are scoped to the needs of Core Vocabularies. 
-All terms in this vocabulary have therefore a strong connection with one or more Core Vocabularies.
-<p/>
-
-
-<h3>Revision history</h3>
-
-
-<h3>Meeting minutes</h3>
-The following webinars have been held for the creation of this release
-    <ul>
-       <li>Webinar 2 February 2023 (<a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/20230202%20Webinar%20DCAT-AP.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=teUeMLwv4Ks">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/webinar_2_feb_2022_DCAT-AP_v.0.3.pdf">slides</a>) </li>
-   </ul>
-
-
-</p>
-
-
+All terms in this vocabularium therefore a strong connection with one or more Core Vocabularies.
 
 {% endblock %}
 
@@ -103,9 +86,29 @@ The following webinars have been held for the creation of this release
 {% block summary %}
 <section id="abstract">
     <h2>Abstract</h2>
-The m8g vocabulary supports the Core Vocabularies. 
+The m8g vocabularium supports the Core Vocabularies. 
 The namespace for this vocabulary is <code>http://data.europa.eu/m8g/</code> . 
 It is under maintenance by the SEMIC action, Interoperable Europe.
+</section>
+{% endblock %}
+
+{% block status %}
+<section id="specstatus">
+    <h2>Status</h2>
+        <p>
+            This vocabulary has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }}</a> published at {{ metadata.issued }}.
+        </p>
+        <p>
+            Information about the process and the decisions involved in the creation of this vocabularium are consultable on the respective Core Vocabulary pages.
+            <ul>
+                <li> <a href="https://github.com/SEMICeu/CCCEV">CCCEV</a></li>
+                <li> <a href="https://github.com/SEMICeu/CPOV">Core Public Organisation Vocabulary</a></li>
+                <li> <a href="https://github.com/SEMICeu/Core-Business-Vocabulary">Core Business Vocabulary</a></li>
+                <li> <a href="https://github.com/SEMICeu/Core-Person-Vocabulary">Core Person Vocabulary</a></li>
+                <li> <a href="https://github.com/SEMICeu/Core-Location-Vocabulary">Core Location Vocabulary</a></li>
+                <li> <a href="https://github.com/SEMICeu/Core-Public-Event-Vocabulary">Core Public Event Vocabulary</a></li>
+            </ul>
+        </p>
 </section>
 {% endblock %}
 
