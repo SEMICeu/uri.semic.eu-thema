@@ -7,7 +7,7 @@
   "template": "core-location-ap_en.j2",
   "title": "Core Location Vocabulary",
   "publication-state": "Semic Recommendation",
-  "publication-date": "2024-01-31",
+  "publication-date": "2024-05-06",
   "license": "https://creativecommons.org/licenses/by/4.0",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "CoreVoc",
