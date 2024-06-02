@@ -22,10 +22,10 @@
     "translation": [
       {
         "language":"en",
-        "template":"adms_en.j2",
-        "title": "ADMS",
-        "translationjson":"adms_en.json",
-        "mergefile":"adms_en_merged.jsonld"
+        "template":"rrvm_en.j2",
+        "title": "RRVM",
+        "translationjson":"rrvm_en.json",
+        "mergefile":"rrvm_en_merged.jsonld"
       }
     ]
 }
