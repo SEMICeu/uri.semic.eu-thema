@@ -1,0 +1,1093 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://gitlab.com/palmirani/rrvm/-/raw/main/docs/current/rrmv-v2.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://gitlab.com/palmirani/rrvm/-/raw/main/docs/current/rrmv-v2.owl">
+    <Prefix name="" IRI="https://gitlab.com/palmirani/rrvm/-/raw/main/docs/current/rrmv-v2.owl"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="eli" IRI="http://data.europa.eu/eli/ontology#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#."/>
+    <Prefix name="cccev" IRI="https://semiceu.github.io/CCCEV#"/>
+    <Prefix name="dcterm" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="frbroo" IRI="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+    <Import>http://data.europa.eu/eli/ontology#</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <IRI>https://gitlab.com/palmirani/rrvm/-/raw/main/docs/current/rrmv-v2.png</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal xml:lang="en">This ontology is part of the project SORTIS developed for the JRC EU Commission and evaluated with SEMIC team. The European Publication Office cooperates in this project.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
+        <Literal xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterm:contributor"/>
+        <Literal>Andrea Giovanni Nuzzolese, CNR</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterm:creator"/>
+        <Literal>Monica Palmirani, University of Bologna</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterm:description"/>
+        <Literal>Description</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterm:title"/>
+        <Literal>RRMV - Regulatory Reporting Metadata Vocabulary</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>An ontology to describe REQUEST present inside of the legislation with the aim to track these peculiar normative prescriptions. A REQUEST is an obligation-to-do something, defined by AGENT, playing a given ROLE in a specific interval of TIME. The REQUEST produces ACTION, in a given period of TIME. ACTION has RESULT (e.g., report, plan, ripetitive event, etc.).</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>ver.0.1.beta</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="eli:Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="eli:Expression"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="eli:Manifestation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="eli:Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="eli:Person"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="eli:Work"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdf:List"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActionResult"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AgentRole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AgentType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Function"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Request"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ResultType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoleType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Frequency"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cccev:PeriodOfTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="eli:changes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="eli:cites"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="eli:is_embodied_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="eli:is_realized_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="eli:related_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dcterm:isPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTopic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isClassifiedAs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/atTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/forAgent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasAgentRole"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasDocument"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasResult"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasUnit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isRelatedTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/produces"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/withRole"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="rdf:type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isIncomplete"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasAnnotation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasTitile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasUri"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="cccev:duration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="cccev:endtime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="cccev:stattime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#action"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#actived"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#addressee"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#addresser"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bearer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#completed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#deadline"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#deleted"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#framework"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#implemented"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#implementor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#meeting"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#partiallyAchived"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#plan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#postponed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proposer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#reiterated"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#report"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#standard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#suspended"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#validity"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterm:contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterm:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterm:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterm:title"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:gYear"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:gYearMonth"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="eli:Organization"/>
+        <Class abbreviatedIRI="eli:Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="eli:Person"/>
+        <Class abbreviatedIRI="eli:Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AgentType"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Function"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResultType"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoleType"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Status"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#ResultType"/>
+        <NamedIndividual IRI="#action"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Status"/>
+        <NamedIndividual IRI="#actived"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RoleType"/>
+        <NamedIndividual IRI="#addressee"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RoleType"/>
+        <NamedIndividual IRI="#addresser"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RoleType"/>
+        <NamedIndividual IRI="#bearer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Status"/>
+        <NamedIndividual IRI="#completed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Function"/>
+        <NamedIndividual IRI="#deadline"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Status"/>
+        <NamedIndividual IRI="#deleted"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ResultType"/>
+        <NamedIndividual IRI="#framework"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Status"/>
+        <NamedIndividual IRI="#implemented"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RoleType"/>
+        <NamedIndividual IRI="#implementor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ResultType"/>
+        <NamedIndividual IRI="#meeting"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Status"/>
+        <NamedIndividual IRI="#partiallyAchived"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ResultType"/>
+        <NamedIndividual IRI="#plan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Status"/>
+        <NamedIndividual IRI="#postponed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RoleType"/>
+        <NamedIndividual IRI="#proposer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Status"/>
+        <NamedIndividual IRI="#reiterated"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ResultType"/>
+        <NamedIndividual IRI="#report"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ResultType"/>
+        <NamedIndividual IRI="#standard"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Status"/>
+        <NamedIndividual IRI="#suspended"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Function"/>
+        <NamedIndividual IRI="#validity"/>
+    </ClassAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="eli:changes"/>
+        <Class IRI="#Request"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="eli:cites"/>
+        <Class IRI="#Request"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="eli:is_embodied_by"/>
+        <Class abbreviatedIRI="eli:Manifestation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="eli:is_realized_by"/>
+        <Class abbreviatedIRI="eli:Expression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="eli:related_to"/>
+        <Class IRI="#Request"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="dcterm:isPartOf"/>
+        <Class IRI="#Request"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFunction"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNext"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStatus"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTopic"/>
+        <Class IRI="#Request"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasType"/>
+        <Class abbreviatedIRI="eli:Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasType"/>
+        <Class IRI="#ActionResult"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasType"/>
+        <Class IRI="#Role"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isClassifiedAs"/>
+        <Class abbreviatedIRI="eli:Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/atTime"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/atTime"/>
+        <Class IRI="#AgentRole"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/forAgent"/>
+        <Class IRI="#AgentRole"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasAgentRole"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasDocument"/>
+        <Class IRI="#ActionResult"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasResult"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasUnit"/>
+        <Class IRI="#Request"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasValue"/>
+        <Class IRI="#Request"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isRelatedTo"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/produces"/>
+        <Class IRI="#Request"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/withRole"/>
+        <Class IRI="#AgentRole"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="eli:changes"/>
+        <Class IRI="#Request"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="eli:cites"/>
+        <Class abbreviatedIRI="eli:Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="eli:cites"/>
+        <Class IRI="#Request"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="eli:is_embodied_by"/>
+        <Class abbreviatedIRI="eli:Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="eli:is_realized_by"/>
+        <Class abbreviatedIRI="eli:Work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="eli:related_to"/>
+        <Class IRI="#Request"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="dcterm:isPartOf"/>
+        <Class abbreviatedIRI="eli:Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFunction"/>
+        <Class abbreviatedIRI="cccev:PeriodOfTime"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNext"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasStatus"/>
+        <Class IRI="#Status"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTopic"/>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasType"/>
+        <Class IRI="#AgentType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasType"/>
+        <Class IRI="#ResultType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isClassifiedAs"/>
+        <Class IRI="#AgentType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/atTime"/>
+        <Class abbreviatedIRI="cccev:PeriodOfTime"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/forAgent"/>
+        <Class abbreviatedIRI="eli:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasAgentRole"/>
+        <Class IRI="#AgentRole"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasDocument"/>
+        <Class abbreviatedIRI="eli:Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasResult"/>
+        <Class IRI="#ActionResult"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasUnit"/>
+        <Class IRI="/Frequency"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasValue"/>
+        <Class IRI="/Frequency"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isRelatedTo"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/produces"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/withRole"/>
+        <Class IRI="#Role"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="rdf:type"/>
+        <Class IRI="#ActionResult"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isIncomplete"/>
+        <Class abbreviatedIRI="cccev:PeriodOfTime"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasAnnotation"/>
+        <Class IRI="#Action"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasAnnotation"/>
+        <Class IRI="#Request"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasTitile"/>
+        <Class IRI="#ActionResult"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasUri"/>
+        <Class abbreviatedIRI="eli:Expression"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasUri"/>
+        <Class IRI="#Request"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="cccev:endtime"/>
+        <Class abbreviatedIRI="cccev:PeriodOfTime"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="cccev:stattime"/>
+        <Class abbreviatedIRI="cccev:PeriodOfTime"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="rdf:type"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isIncomplete"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasAnnotation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasTitile"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasUri"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="cccev:endtime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="cccev:endtime"/>
+        <Datatype abbreviatedIRI="xsd:gYear"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="cccev:endtime"/>
+        <Datatype abbreviatedIRI="xsd:gYearMonth"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="cccev:stattime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="cccev:stattime"/>
+        <Datatype abbreviatedIRI="xsd:gYear"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="cccev:stattime"/>
+        <Datatype abbreviatedIRI="xsd:gYearMonth"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>frbroo:F10_Person</AbbreviatedIRI>
+        <Literal xml:lang="en">F10 FRBROO Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>frbroo:F11_Corporate_Body</AbbreviatedIRI>
+        <Literal xml:lang="en">F11 FRBROO Corporate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>frbroo:F1_Work</AbbreviatedIRI>
+        <Literal xml:lang="en">F1 - FRBROO Work</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>frbroo:F22_Self-Contained_Expression</AbbreviatedIRI>
+        <Literal xml:lang="en">F22 - FRBROO - Expression</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>frbroo:F3_Manifestation_Product_Type</AbbreviatedIRI>
+        <Literal xml:lang="en">F3 - FRBROO- Manifestation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.cidoc-crm.org/cidoc-crm/E39_Actor</IRI>
+        <Literal xml:lang="en">E39 FRBROO - Actor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Action</IRI>
+        <Literal xml:lang="en">An event with at least one agent that is participant in it in a given time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Action</IRI>
+        <Literal xml:lang="en">Action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ActionResult</IRI>
+        <Literal xml:lang="en">Result of Action. It could be an activity (e.g., to do something) or an output (e.g., report).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ActionResult</IRI>
+        <Literal xml:lang="en">ActionResults</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AgentRole</IRI>
+        <Literal xml:lang="en">A role played by an agent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AgentRole</IRI>
+        <Literal xml:lang="en">AgentRole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Function</IRI>
+        <Literal xml:lang="en">Function of the temporal parameter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Function</IRI>
+        <Literal xml:lang="en">TemporalFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Request</IRI>
+        <Literal xml:lang="en">A portion of legal source expression including a mandate that produces at least one Action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Request</IRI>
+        <Literal xml:lang="en">Request</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ResultType</IRI>
+        <Literal xml:lang="en">Result Type. SKOS Concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ResultType</IRI>
+        <Literal xml:lang="en">ResultType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Role</IRI>
+        <Literal xml:lang="en">Role is played by and Agent involved in the Request.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Role</IRI>
+        <Literal xml:lang="en">Role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RoleType</IRI>
+        <Literal xml:lang="en">Role Type. SKOS Concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RoleType</IRI>
+        <Literal xml:lang="en">RoleType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Status</IRI>
+        <Literal xml:lang="en">Status of Action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Status</IRI>
+        <Literal xml:lang="en">Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#addressee</IRI>
+        <Literal xml:lang="en">Role played by an agent that is the desintation of an action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#addressee</IRI>
+        <Literal xml:lang="en">addressee</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#addresser</IRI>
+        <Literal xml:lang="en">Role played by an agent that is producing an action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#addresser</IRI>
+        <Literal xml:lang="en">addresser</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#bearer</IRI>
+        <Literal xml:lang="en">Role played by an agent that commands an action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bearer</IRI>
+        <Literal xml:lang="en">bearer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasFunction</IRI>
+        <Literal xml:lang="en">A property that links one Period of Time with its Function inside of the Request (e.g., deadeline, term, enter into force).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFunction</IRI>
+        <Literal xml:lang="en">hasFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasNext</IRI>
+        <Literal xml:lang="en">A property linking an Action with the succeeding Action in a repetitive sequence of actions generated by a Request.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasNext</IRI>
+        <Literal xml:lang="en">hasNext</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasStatus</IRI>
+        <Literal xml:lang="en">A property that links an Action with the Status of this action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasTopic</IRI>
+        <Literal xml:lang="en">The topic of the Request.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTopic</IRI>
+        <Literal xml:lang="en">hasTopic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasType</IRI>
+        <Literal xml:lang="en">Assign the type to SKOS controlled vocabulary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasType</IRI>
+        <Literal xml:lang="en">hasType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#implementor</IRI>
+        <Literal xml:lang="en">Role played by an agent that implements an action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#implementor</IRI>
+        <Literal xml:lang="en">implementor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isClassifiedAs</IRI>
+        <Literal xml:lang="en">A property that links one Agent  with a classification closed list of values. This is necessary for representing abstract Agent as usually included in the normative provision (e.g., a company, an institution).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isClassifiedAs</IRI>
+        <Literal xml:lang="en">isClassifiedAs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isIncomplete</IRI>
+        <Literal xml:lang="en">Data property that track the incompleteness of the temporal parameters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isIncomplete</IRI>
+        <Literal xml:lang="en">isIncomplete</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#proposer</IRI>
+        <Literal xml:lang="en">Role played by an agent that proposes an action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#proposer</IRI>
+        <Literal xml:lang="en">proposer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Frequency</IRI>
+        <Literal xml:lang="en">Frequency of an Request over time (e.g., every 6 months, each quarter).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Frequency</IRI>
+        <Literal xml:lang="en">Frequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/atTime</IRI>
+        <Literal xml:lang="en">An Action or a Role is valid within a time interval.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/atTime</IRI>
+        <Literal xml:lang="en">atTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/forAgent</IRI>
+        <Literal xml:lang="en">The property linking a particular Role to Agent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/forAgent</IRI>
+        <Literal xml:lang="en">forAgent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasAgentRole</IRI>
+        <Literal xml:lang="en">The property linking an Action to Role involved in the Action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasAgentRole</IRI>
+        <Literal xml:lang="en">hasAgentRole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasAnnotation</IRI>
+        <Literal xml:lang="en">Annotation related to the Action or Request made by the domain expert.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasAnnotation</IRI>
+        <Literal xml:lang="en">hasAnnotation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasDocument</IRI>
+        <Literal xml:lang="en">A property that links a Result of an Action with an Expression, usually wen the result is a document.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasDocument</IRI>
+        <Literal xml:lang="en">hasDocument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasResult</IRI>
+        <Literal xml:lang="en">A property that links an Action with the Result of this action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasResult</IRI>
+        <Literal xml:lang="en">hasResult</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasTitile</IRI>
+        <Literal xml:lang="en">Title of the Action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasTitile</IRI>
+        <Literal xml:lang="en">hasTitle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasUnit</IRI>
+        <Literal xml:lang="en">The property linking a Request with the Frequency and expressing the unit of this frequency.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasUnit</IRI>
+        <Literal xml:lang="en">hasUnit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasUri</IRI>
+        <Literal xml:lang="en">URI of the Legal Source Expression where the Request is expressed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasUri</IRI>
+        <Literal xml:lang="en">hasUri</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasValue</IRI>
+        <Literal xml:lang="en">The property linking a Request a Frequency expressing the value of the unit of the frequency (e.g., 2 is the value, quarter is the unit).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasValue</IRI>
+        <Literal xml:lang="en">hasValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isRelatedTo</IRI>
+        <Literal xml:lang="en">A property that links one Action with another Action related by a semantic connection.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isRelatedTo</IRI>
+        <Literal xml:lang="en">isRelatedTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/produces</IRI>
+        <Literal xml:lang="en">A Request produce one or many Action.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/produces</IRI>
+        <Literal xml:lang="en">produces</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/withRole</IRI>
+        <Literal xml:lang="en">The property linking a Agent to Role.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/withRole</IRI>
+        <Literal xml:lang="en">withRole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cccev:PeriodOfTime</AbbreviatedIRI>
+        <Literal xml:lang="en">A temporal entity with non-zero extent or duration.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cccev:PeriodOfTime</AbbreviatedIRI>
+        <Literal xml:lang="en">PeriodOfTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cccev:duration</AbbreviatedIRI>
+        <Literal xml:lang="en">Extent of the Period of Time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cccev:endtime</AbbreviatedIRI>
+        <Literal xml:lang="en">Time instant at which the Period was terminated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cccev:stattime</AbbreviatedIRI>
+        <Literal xml:lang="en">Time instant at which the Period was initiated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cccev:stattime</AbbreviatedIRI>
+        <Literal xml:lang="en">starttime</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

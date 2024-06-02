@@ -1,0 +1,839 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://gitlab.com/palmirani/rrvm/-/raw/main/docs/current/rrmv-v2.rdf"
+     xml:base="https://gitlab.com/palmirani/rrvm/-/raw/main/docs/current/rrmv-v2.rdf"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:eli="http://data.europa.eu/eli/ontology#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:cccev="https://semiceu.github.io/CCCEV#"
+     xmlns:dcterm="http://purl.org/dc/terms/"
+     xmlns:frbroo="http://iflastandards.info/ns/fr/frbr/frbroo/">
+    <owl:Ontology rdf:about="https://gitlab.com/palmirani/rrvm/-/raw/main/docs/current/rrmv-v2.rdf">
+        <owl:imports rdf:resource="http://data.europa.eu/eli/ontology#"/>
+        <dc:description rdf:resource="https://gitlab.com/palmirani/rrvm/-/raw/main/docs/current/rrmv-v2.png"/>
+        <dc:description xml:lang="en">This ontology is part of the project SORTIS developed for the JRC EU Commission and evaluated with SEMIC team. The European Publication Office cooperates in this project.</dc:description>
+        <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).</dc:rights>
+        <dcterm:contributor>Andrea Giovanni Nuzzolese, CNR</dcterm:contributor>
+        <dcterm:creator>Monica Palmirani, University of Bologna</dcterm:creator>
+        <dcterm:description>Description</dcterm:description>
+        <dcterm:title>RRMV - Regulatory Reporting Metadata Vocabulary</dcterm:title>
+        <rdfs:comment>An ontology to describe REQUEST present inside of the legislation with the aim to track these peculiar normative prescriptions. A REQUEST is an obligation-to-do something, defined by AGENT, playing a given ROLE in a specific interval of TIME. The REQUEST produces ACTION, in a given period of TIME. ACTION has RESULT (e.g., report, plan, ripetitive event, etc.).</rdfs:comment>
+        <owl:versionInfo>ver.0.1.beta</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYearMonth -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.europa.eu/eli/ontology#changes -->
+
+    <owl:ObjectProperty rdf:about="http://data.europa.eu/eli/ontology#changes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Request"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Request"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europa.eu/eli/ontology#cites -->
+
+    <owl:ObjectProperty rdf:about="http://data.europa.eu/eli/ontology#cites">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Request"/>
+        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#Expression"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Request"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europa.eu/eli/ontology#is_embodied_by -->
+
+    <owl:ObjectProperty rdf:about="http://data.europa.eu/eli/ontology#is_embodied_by">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#Manifestation"/>
+        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europa.eu/eli/ontology#is_realized_by -->
+
+    <owl:ObjectProperty rdf:about="http://data.europa.eu/eli/ontology#is_realized_by">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#Expression"/>
+        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#Work"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.europa.eu/eli/ontology#related_to -->
+
+    <owl:ObjectProperty rdf:about="http://data.europa.eu/eli/ontology#related_to">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Request"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Request"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isPartOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Request"/>
+        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#hasFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#hasFunction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Action"/>
+        <rdfs:range rdf:resource="https://semiceu.github.io/CCCEV#PeriodOfTime"/>
+        <rdfs:comment xml:lang="en">A property that links one Period of Time with its Function inside of the Request (e.g., deadeline, term, enter into force).</rdfs:comment>
+        <rdfs:label xml:lang="en">hasFunction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#hasNext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#hasNext">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Action"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Action"/>
+        <rdfs:comment xml:lang="en">A property linking an Action with the succeeding Action in a repetitive sequence of actions generated by a Request.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasNext</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#hasStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#hasStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Action"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Status"/>
+        <rdfs:comment xml:lang="en">A property that links an Action with the Status of this action.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#hasTopic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#hasTopic">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Request"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">The topic of the Request.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasTopic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#hasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#hasType">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#Agent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ActionResult"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Role"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#AgentType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ResultType"/>
+        <rdfs:comment xml:lang="en">Assign the type to SKOS controlled vocabulary.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#isClassifiedAs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#isClassifiedAs">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#Agent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#AgentType"/>
+        <rdfs:comment xml:lang="en">A property that links one Agent  with a classification closed list of values. This is necessary for representing abstract Agent as usually included in the normative provision (e.g., a company, an institution).</rdfs:comment>
+        <rdfs:label xml:lang="en">isClassifiedAs</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/atTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/atTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Action"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#AgentRole"/>
+        <rdfs:range rdf:resource="https://semiceu.github.io/CCCEV#PeriodOfTime"/>
+        <rdfs:comment xml:lang="en">An Action or a Role is valid within a time interval.</rdfs:comment>
+        <rdfs:label xml:lang="en">atTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/forAgent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/forAgent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#AgentRole"/>
+        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#Agent"/>
+        <rdfs:comment xml:lang="en">The property linking a particular Role to Agent.</rdfs:comment>
+        <rdfs:label xml:lang="en">forAgent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasAgentRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasAgentRole">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Action"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#AgentRole"/>
+        <rdfs:comment xml:lang="en">The property linking an Action to Role involved in the Action.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasAgentRole</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasDocument -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasDocument">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ActionResult"/>
+        <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#Expression"/>
+        <rdfs:comment xml:lang="en">A property that links a Result of an Action with an Expression, usually wen the result is a document.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasDocument</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasResult">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Action"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ActionResult"/>
+        <rdfs:comment xml:lang="en">A property that links an Action with the Result of this action.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasResult</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasUnit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Request"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/Frequency"/>
+        <rdfs:comment xml:lang="en">The property linking a Request with the Frequency and expressing the unit of this frequency.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasUnit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Request"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/Frequency"/>
+        <rdfs:comment xml:lang="en">The property linking a Request a Frequency expressing the value of the unit of the frequency (e.g., 2 is the value, quarter is the unit).</rdfs:comment>
+        <rdfs:comment xml:lang="en">hasValue</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/isRelatedTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Action"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Action"/>
+        <rdfs:comment xml:lang="en">A property that links one Action with another Action related by a semantic connection.</rdfs:comment>
+        <rdfs:label xml:lang="en">isRelatedTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/produces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/produces">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Request"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Action"/>
+        <rdfs:comment xml:lang="en">A Request produce one or many Action.</rdfs:comment>
+        <rdfs:label xml:lang="en">produces</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/withRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/withRole">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#AgentRole"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Role"/>
+        <rdfs:comment xml:lang="en">The property linking a Agent to Role.</rdfs:comment>
+        <rdfs:label xml:lang="en">withRole</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#isIncomplete -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#isIncomplete">
+        <rdfs:domain rdf:resource="https://semiceu.github.io/CCCEV#PeriodOfTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Data property that track the incompleteness of the temporal parameters.</rdfs:comment>
+        <rdfs:label xml:lang="en">isIncomplete</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasAnnotation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasAnnotation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Action"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Request"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Annotation related to the Action or Request made by the domain expert.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasAnnotation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasTitile -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasTitile">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ActionResult"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Title of the Action.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasUri -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/hasUri">
+        <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#Expression"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Request"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">URI of the Legal Source Expression where the Request is expressed.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasUri</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ActionResult"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://semiceu.github.io/CCCEV#duration -->
+
+    <owl:DatatypeProperty rdf:about="https://semiceu.github.io/CCCEV#duration">
+        <rdfs:comment xml:lang="en">Extent of the Period of Time.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://semiceu.github.io/CCCEV#endtime -->
+
+    <owl:DatatypeProperty rdf:about="https://semiceu.github.io/CCCEV#endtime">
+        <rdfs:domain rdf:resource="https://semiceu.github.io/CCCEV#PeriodOfTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
+        <rdfs:comment xml:lang="en">Time instant at which the Period was terminated.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://semiceu.github.io/CCCEV#stattime -->
+
+    <owl:DatatypeProperty rdf:about="https://semiceu.github.io/CCCEV#stattime">
+        <rdfs:domain rdf:resource="https://semiceu.github.io/CCCEV#PeriodOfTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
+        <rdfs:comment xml:lang="en">Time instant at which the Period was initiated.</rdfs:comment>
+        <rdfs:label xml:lang="en">starttime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.europa.eu/eli/ontology#Agent -->
+
+    <owl:Class rdf:about="http://data.europa.eu/eli/ontology#Agent"/>
+    
+
+
+    <!-- http://data.europa.eu/eli/ontology#Expression -->
+
+    <owl:Class rdf:about="http://data.europa.eu/eli/ontology#Expression"/>
+    
+
+
+    <!-- http://data.europa.eu/eli/ontology#Manifestation -->
+
+    <owl:Class rdf:about="http://data.europa.eu/eli/ontology#Manifestation"/>
+    
+
+
+    <!-- http://data.europa.eu/eli/ontology#Organization -->
+
+    <owl:Class rdf:about="http://data.europa.eu/eli/ontology#Organization">
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europa.eu/eli/ontology#Person -->
+
+    <owl:Class rdf:about="http://data.europa.eu/eli/ontology#Person">
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europa.eu/eli/ontology#Work -->
+
+    <owl:Class rdf:about="http://data.europa.eu/eli/ontology#Work"/>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Action">
+        <rdfs:comment xml:lang="en">An event with at least one agent that is participant in it in a given time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ActionResult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ActionResult">
+        <rdfs:comment xml:lang="en">Result of Action. It could be an activity (e.g., to do something) or an output (e.g., report).</rdfs:comment>
+        <rdfs:label xml:lang="en">ActionResults</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#AgentRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#AgentRole">
+        <rdfs:comment xml:lang="en">A role played by an agent.</rdfs:comment>
+        <rdfs:label xml:lang="en">AgentRole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#AgentType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#AgentType">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Function -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Function">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">Function of the temporal parameter.</rdfs:comment>
+        <rdfs:label xml:lang="en">TemporalFunction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Request -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Request">
+        <rdfs:comment xml:lang="en">A portion of legal source expression including a mandate that produces at least one Action.</rdfs:comment>
+        <rdfs:label xml:lang="en">Request</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ResultType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ResultType">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">Result Type. SKOS Concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">ResultType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Role">
+        <rdfs:comment xml:lang="en">Role is played by and Agent involved in the Request.</rdfs:comment>
+        <rdfs:label xml:lang="en">Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#RoleType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#RoleType">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">Role Type. SKOS Concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">RoleType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Status -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Status">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">Status of Action.</rdfs:comment>
+        <rdfs:label xml:lang="en">Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/Frequency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv/Frequency">
+        <rdfs:comment xml:lang="en">Frequency of an Request over time (e.g., every 6 months, each quarter).</rdfs:comment>
+        <rdfs:label xml:lang="en">Frequency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#List -->
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- https://semiceu.github.io/CCCEV#PeriodOfTime -->
+
+    <owl:Class rdf:about="https://semiceu.github.io/CCCEV#PeriodOfTime">
+        <rdfs:comment xml:lang="en">A temporal entity with non-zero extent or duration.</rdfs:comment>
+        <rdfs:label xml:lang="en">PeriodOfTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#action -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#action">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ResultType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#actived -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#actived">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#addressee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#addressee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#RoleType"/>
+        <rdfs:comment xml:lang="en">Role played by an agent that is the desintation of an action.</rdfs:comment>
+        <rdfs:label xml:lang="en">addressee</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#addresser -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#addresser">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#RoleType"/>
+        <rdfs:comment xml:lang="en">Role played by an agent that is producing an action.</rdfs:comment>
+        <rdfs:label xml:lang="en">addresser</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#bearer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#bearer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#RoleType"/>
+        <rdfs:comment xml:lang="en">Role played by an agent that commands an action.</rdfs:comment>
+        <rdfs:label xml:lang="en">bearer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#completed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#completed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#deadline -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#deadline">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#deleted -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#deleted">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#framework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#framework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ResultType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#implemented -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#implemented">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#implementor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#implementor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#RoleType"/>
+        <rdfs:comment xml:lang="en">Role played by an agent that implements an action.</rdfs:comment>
+        <rdfs:label xml:lang="en">implementor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#meeting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#meeting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ResultType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#partiallyAchived -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#partiallyAchived">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#plan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#plan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ResultType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#postponed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#postponed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#proposer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#proposer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#RoleType"/>
+        <rdfs:comment xml:lang="en">Role played by an agent that proposes an action.</rdfs:comment>
+        <rdfs:label xml:lang="en">proposer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#reiterated -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#reiterated">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#report -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#report">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ResultType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#standard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#standard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#ResultType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#suspended -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#suspended">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#validity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#validity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/monica.palmirani/ontologies/2024/rrmv#Function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F10_Person">
+        <rdfs:comment xml:lang="en">F10 FRBROO Person</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F11_Corporate_Body">
+        <rdfs:comment xml:lang="en">F11 FRBROO Corporate</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work">
+        <rdfs:comment xml:lang="en">F1 - FRBROO Work</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F22_Self-Contained_Expression">
+        <rdfs:comment xml:lang="en">F22 - FRBROO - Expression</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation_Product_Type">
+        <rdfs:comment xml:lang="en">F3 - FRBROO- Manifestation</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E39_Actor">
+        <rdfs:comment xml:lang="en">E39 FRBROO - Actor</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

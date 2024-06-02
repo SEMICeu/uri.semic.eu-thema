@@ -1,0 +1,32 @@
+[
+{
+  "name": "rrvm",
+  "type": "ap",
+  "eap": "rrvm.eap",
+  "diagram": "SortisVocabulary",
+  "template": "rrvm_en.j2",
+  "title": "RRVM",
+  "publication-state": "Working Draft",
+  "publication-date": "2024-05-31",
+  "license": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic",
+  "contributors-file": "stakeholders.csv",
+  "contributors-column": "RRVM",
+  "site": "site-skeleton/rrvm",
+  "repourl": "https://github.com/SEMICeu/ADMS/tree/master/releases/1.01",
+  "versionurl": "https://semiceu.github.io/ADMS/releases/1.01",
+  "feedbackurl": "https://github.com/SEMICeu/ADMS/issues",
+  "documentconfig" : {
+    "changelog" : "https://github.com/SEMICeu/ADMS/master/releases/1.01/Changelog.md"
+  },
+  "standaardregisterurl": "RRVM",
+    "translation": [
+      {
+        "language":"en",
+        "template":"adms_en.j2",
+        "title": "ADMS",
+        "translationjson":"adms_en.json",
+        "mergefile":"adms_en_merged.jsonld"
+      }
+    ]
+}
+]
