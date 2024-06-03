@@ -1,31 +1,31 @@
 [
 {
-  "name": "rrvm",
+  "name": "rrmv",
   "type": "ap",
-  "eap": "rrvm.eap",
-  "diagram": "SortisVocabulary",
-  "template": "rrvm_en.j2",
-  "title": "RRVM",
+  "eap": "rrmv.eap",
+  "diagram": "RRMV",
+  "template": "rrmv_en.j2",
+  "title": "RRMV",
   "publication-state": "Working Draft",
   "publication-date": "2024-05-31",
   "license": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic",
   "contributors-file": "stakeholders.csv",
-  "contributors-column": "RRVM",
-  "site": "site-skeleton/rrvm",
+  "contributors-column": "RRMV",
+  "site": "site-skeleton/rrmv",
   "repourl": "https://github.com/SEMICeu/ADMS/tree/master/releases/1.01",
   "versionurl": "https://semiceu.github.io/ADMS/releases/1.01",
   "feedbackurl": "https://github.com/SEMICeu/ADMS/issues",
   "documentconfig" : {
     "changelog" : "https://github.com/SEMICeu/ADMS/master/releases/1.01/Changelog.md"
   },
-  "standaardregisterurl": "RRVM",
+  "standaardregisterurl": "RRMV",
     "translation": [
       {
         "language":"en",
-        "template":"rrvm_en.j2",
-        "title": "RRVM",
-        "translationjson":"rrvm_en.json",
-        "mergefile":"rrvm_en_merged.jsonld"
+        "template":"rrmv_en.j2",
+        "title": "RRMV",
+        "translationjson":"rrmv_en.json",
+        "mergefile":"rrmv_en_merged.jsonld"
       }
     ]
 }
