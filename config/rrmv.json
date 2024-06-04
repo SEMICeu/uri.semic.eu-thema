@@ -12,11 +12,11 @@
   "contributors-file": "stakeholders.csv",
   "contributors-column": "RRMV",
   "site": "site-skeleton/rrmv",
-  "repourl": "https://github.com/SEMICeu/ADMS/tree/master/releases/1.01",
-  "versionurl": "https://semiceu.github.io/ADMS/releases/1.01",
-  "feedbackurl": "https://github.com/SEMICeu/ADMS/issues",
+  "repourl": "https://github.com/SEMICeu/rrmv/tree/master/releases/O.0.1",
+  "versionurl": "https://semiceu.github.io/rrmv/releases/0.0.1",
+  "feedbackurl": "https://github.com/SEMICeu/rrmv/issues",
   "documentconfig" : {
-    "changelog" : "https://github.com/SEMICeu/ADMS/master/releases/1.01/Changelog.md"
+    "changelog" : "https://github.com/SEMICeu/rrmv/master/releases/0.0.1/Changelog.md"
   },
   "standaardregisterurl": "RRMV",
     "translation": [
