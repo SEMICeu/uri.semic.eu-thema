@@ -2,36 +2,19 @@
 
 {% block summary %}
 <p>
-	Locations can be described in three principal ways: by using a place name, a geometry or an
-    address. The specific context will determine which method of describing a location is most
-    appropriate. The Core Location Vocabulary provides structure for all three.
+	This document describes the Regulatory Reporting Metadata Vocabulary that was developed in the context of the SORTIS initiative. The purpose of this
+    vocabulary is to provide the minimum necessary concepts to describe a request, originating from a legal resource, the resulting action and several key concepts
+    related to its execution.
 </p>
-<p>
-    ISO 19112 defines a location as "an identifiable geographic place." With this in mind, "Eiffel
-    Tower", "Madrid" and "California" are all locations and this is a common way of representing
-    locations in public sector data, i.e. simply by using a recognised name. Such identifiers are
-    common although they can be highly ambiguous as many places share the same or similar names.
-</p>
-<p>
-    In addition to a simple (string) label or name for a Location, this vocabulary defines a property
-    that allows a Location to be defined by a URI, such as a GeoNames or DBpedia URI.
-</p>
-<p>
-    No cardinality constraints are placed on any property of the Location, Address or Geometry
-    classes in order to maximise flexibility. A single address may be defined in different ways, a
-    geometry may be defined using different coordinate reference systems and a single place may
-    have no recognised name or multiple names. The Core Location Vocabulary makes a minimum
-    number of assumptions about what data will be encoded. However, it clearly makes no sense to
-    define any of the location classes without any properties or to provide multiple instances of the
-    same property with conflicting values.
+
 </p>
 {% endblock %}
 
 {% block license %}
-<p>This specification of <a href=”https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic”>SEMIC</a> is published under “<a href=”https://joinup.ec.europa.eu/licence/isa-open-metadata-licence-v11”ISA Open Metadata Licence 1.1</a>”.</p>
+<p>This specification of <a href=”https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic”>SEMIC</a> is published under “<a href=”https://creativecommons.org/licenses/by/4.0/”>Creative Commons BY 4.O Licence</a>”.</p>
 {% endblock %}
 
-{% block examples %}
+{#{% block examples %}
 <h2 class="h2" id="examples">Examples</h2>
 
 <h3 class="h3">Geometry RDF examples</h3>
@@ -85,3 +68,4 @@
 A changelog describing the (major) changes to the previous version (1.0.0) of the Core Location Vocabulary and the new version that is being proposed in this specification (2.0.0), can be found <a href="{{ metadata.documentconfig.changelog }}">here</a>.
 <p>
 {% endblock %}
+#}
