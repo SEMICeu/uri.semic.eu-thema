@@ -72,6 +72,12 @@
         {% endif %}
 	{% endfor %}
 		]
+    var myowners = [
+            {
+                value: "SEMIC",
+                href: "https://joinup.ec.europa.eu/collection/semic-support-centre",
+            }
+		]
 
 
    {% block respecconfig %}
@@ -703,10 +709,6 @@ Either these are reused as-is, i.e. with no formal additional constraints compar
 <p>
 The editors gratefully acknowledge the contributions made to this document by all members of the working group.
 </p><p>
-This work was elaborated by a Working Group under SEMIC by Interoperable Europe.
-Interoperable Europe of the European Commission was represented by Pavlina Fragkou and Seth Van Hooland.
-Bert Van Nuffelen was the editor of this specification.
-</p><p>
 
 Past and current contributors are :
 {% for role, contributors in contributors | groupby("role") %}
@@ -721,9 +723,6 @@ Past and current contributors are :
 {% endif %}
 {% endfor %}.
 
-</p><p>
-Special thanks goes to the former editors Phil Archer, Gofran Shukair and Makx Dekkers, for their contributions to the former versions of ADMS.
-Additionally the editors and authors like to thank the assistence of W3C, especially Pierre-Antoine Champin, to make this version possible.
 </p>
 
 </section>
@@ -738,8 +737,9 @@ Additionally the editors and authors like to thank the assistence of W3C, especi
 {'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
 {'pref':'dcat:', 'ns': 'http://www.w3.org/ns/dcat#'},
 {'pref':'dcatap:', 'ns': 'http://data.europa.eu/r5r/'},
-{'pref':'dcterms:', 'ns': 'http://purl.org/dc/terms/'},
+{'pref':'dct:', 'ns': 'http://purl.org/dc/terms/'},
 {'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
+{'pref':'cpsv:', 'ns': 'http://purl.org/vocab/cpsv#'},
 {'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
 {'pref':'locn:', 'ns': 'http://www.w3.org/ns/locn#'},
 {'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},

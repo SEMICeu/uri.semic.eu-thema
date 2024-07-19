@@ -1,19 +1,19 @@
-Voornaam;Naam;Affiliatie;E-mail;Website;CCCEV;CoreVoc;CPSV-AP;SDG;ICEG-PO;ADMS;MLDCAT-AP;AF-AP;EV-AP
-Core Vocabularies Working Group;;;;;A;A;;;;;;;
-Core Public Service Vocabulary Working Group;;;;;;;A;;;;;;
-Pavlina;Fragkou;European Commission;;;E;E;E;;;;;;
-Seth;van Hooland;European Commission;;;;;;;;;;;
-Anastasia;Sofou;Trasys International;;;E;E;E;;;;;;
-Bert;Van Nuffelen;;;;E;E;;;;;;E;
-Emidio;Stani;PwC EU Services;;;E;E;E;;;E;E;E;
-Dimitri;Schepers;PwC EU Services;;;;;;;;;;;
-Miguel;Alvarez Rodriguez;European Commission;;;;;;E;;;;;
-Florian;Barthelemy;PwC EU Services;;;E;E;E;E;E;;;;
-Maxime;Pittomvils;PwC EU Services;;;;;;E;;;;;
-Christophe;Bahim;PwC EU Services;;;;;;;E;;;;
-Louis;Matha;PwC EU Services;;;;;;;E;;;;
-Nathan;Ghesquière;PwC EU Services;;;;;E;;;;;;
-Makx;Dekkers;AMI Consult;;;;;;;;E;;;
-Jitse;De Cock;PwC EU Services;;;E;E;E;;;;;;
-Emiel;Dhondt;PwC EU Services;;;E;E;E;;;;;;E
-Arthur;Schiltz;PwC EU Services;;;E;E;;;;;E;;
+Voornaam;Naam;Affiliatie;E-mail;Website;CCCEV;CoreVoc;CPSV-AP;SDG;ICEG-PO;ADMS;MLDCAT-AP;AF-AP;EV-AP;CPSV
+Core Vocabularies Working Group;;;;;A;A;;;;;;;;A
+Core Public Service Vocabulary Working Group;;;;;;;A;;;;;;;A
+Pavlina;Fragkou;European Commission;;;E;E;E;;;;;;;
+Seth;van Hooland;European Commission;;;;;;;;;;;;
+Anastasia;Sofou;Trasys International;;;E;E;E;;;;;;;
+Bert;Van Nuffelen;;;;E;E;;;;;;E;;
+Emidio;Stani;PwC EU Services;;;E;E;E;;;E;E;E;;
+Dimitri;Schepers;PwC EU Services;;;;;;;;;;;;
+Miguel;Alvarez Rodriguez;European Commission;;;;;;E;;;;;;
+Florian;Barthelemy;PwC EU Services;;;E;E;E;E;E;;;;;
+Maxime;Pittomvils;PwC EU Services;;;;;;E;;;;;;
+Christophe;Bahim;PwC EU Services;;;;;;;E;;;;;
+Louis;Matha;PwC EU Services;;;;;;;E;;;;;
+Nathan;Ghesquière;PwC EU Services;;;;;E;;;;;;;
+Makx;Dekkers;AMI Consult;;;;;;;;E;;;;
+Jitse;De Cock;PwC EU Services;;;E;E;E;;;;;;;
+Emiel;Dhondt;PwC EU Services;;;E;E;E;;;;;;E;E
+Arthur;Schiltz;PwC EU Services;;;E;E;;;;;E;;;
