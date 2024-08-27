@@ -3,7 +3,7 @@
   "name": "oots",
   "type": "ap",
   "eap": "OOTS.eap",
-  "diagram": "CPSV-AP",
+  "diagram": "ProofOfBirth",
   "template": "oots_en.j2",
   "title": "Core Public Service Vocabulary Application Profile (CPSV-AP)",
   "publication-state": "SEMIC Recommendation",
