@@ -13,6 +13,7 @@
   "contributors-column": "OOTS",
   "site": "site-skeleton/oots",
   "repourl": "https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfBirth/tree/master/releases/0.0.1",
+  "feedbackurl": "https://ec.europa.eu/digital-building-blocks/wikis/display/SDGOO/Discussion+Items+-+EM?src=contextnavpagetreemode",
   "versionurl": "https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfBirth/tree/master/releases/0.0.1",
   "standaardregisterurl" :"https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfBirth/tree/master/releases/0.0.1/Changelog.md",
     "translation": [
@@ -27,7 +28,7 @@
     "toolchainversion" : "3",
     "documentconfig": {
           "statuslabel" : "Draft",
-          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/CPSV-AP/releases/3.2.0"
+          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/OOTS/ProofOfBirth/releases/0.0.1"
     }
 }
 ]
