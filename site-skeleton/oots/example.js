@@ -4,6 +4,7 @@ function example_structure(exampleid){
 		<ul>
 			<li><a href="#` + exampleid + `-tabs-1">Turtle</a></li>
 			<li><a href="#` + exampleid + `-tabs-2">JSON-LD</a></li>
+			<li><a href="#` + exampleid + `-tabs-3">XML</a></li>
 		</ul>
 		<div id="` + exampleid + `-tabs-1">
 			<textarea class="validationquery" id="` + exampleid + `-tab1validationquery" name="query" cols="80" rows="16"></textarea>
@@ -18,6 +19,11 @@ function example_structure(exampleid){
 			<button class="buttonsample openJsonldInConverter" id="` + exampleid + `-tabs-2-button-3">Open in Converter</button>
 	        <button class="buttonsample openJsonldInSHACLPlayground" id="` + exampleid + `-tabs-2-button-4">Validate</button>
 
+		</div>
+		<div id="` + exampleid + `-tabs-3">
+			<textarea class="validationquery" id="` + exampleid + `-tab3validationquery" name="query" cols="80" rows="16"></textarea>
+			<button class="buttonsample copyXMLtoclipboard" id="` + exampleid + `-tabs-3-button-1">Copy</button>
+			
 		</div>
 	</div>`;
 	return structure;
@@ -104,6 +110,13 @@ function createJSONLDEditorFrom(selector) {
   });
 }
 
+function createXMLEditorFrom(selector) {
+	return CodeMirror.fromTextArea(selector, {
+	  mode: "application/xml",
+	  lineNumbers: true
+	});
+  }
+
 
 $(document).ready(function () {
 
@@ -124,7 +137,9 @@ $(document).ready(function () {
 		var text = example_structure(exampleid);
 		$(this).after(text);
 
-		var obj = {CM0: createTurtleEditorFrom(document.getElementById(exampleid + "-tab1validationquery")), CM1: createJSONLDEditorFrom(document.getElementById(exampleid + "-tab2validationquery"))};
+		var obj = {CM0: createTurtleEditorFrom(document.getElementById(exampleid + "-tab1validationquery")), 
+			       CM1: createJSONLDEditorFrom(document.getElementById(exampleid + "-tab2validationquery")), 
+				   CM2: createXMLEditorFrom(document.getElementById(exampleid + "-tab3validationquery"))};
 		editors[index] = obj;
 		//editors[index].push({CM: createTurtleEditorFrom(document.getElementById(exampleid + "-tab1validationquery")}, CM2: createJSONLDEditorFrom(document.getElementById(exampleid + "-tab2validationquery")});
 		//editors[index].push({CM: createJSONLDEditorFrom(document.getElementById(exampleid + "-tab2validationquery")});
@@ -142,6 +157,7 @@ $(document).ready(function () {
                 path_to_file = folder + exampleid;
 		loadFile(editors[index].CM0, path_to_file + ".ttl");
 		loadFile(editors[index].CM1, path_to_file + ".jsonld");
+		loadFile(editors[index].CM2, path_to_file + ".xml");
 		
 	});
 
@@ -165,6 +181,20 @@ $(document).ready(function () {
 			var indexValues = $examples.map(function() { return this.id; }) ;
 			var index = myIndexOf(indexValues, exampleid);
 			texttocopy = editors[index].CM1.getValue();
+			navigator.clipboard.writeText(texttocopy);
+			$(this).tooltip({ items: "#" + this.id, content: "Copied !"});
+			$(this).tooltip("open");
+		},
+		"mouseout": function() {
+			$(this).tooltip("disable");
+		}
+	});
+	$("button.copyXMLtoclipboard").on({
+		"click": function() {
+			var exampleid = $(this).parent().parent().attr("exampleid");
+			var indexValues = $examples.map(function() { return this.id; }) ;
+			var index = myIndexOf(indexValues, exampleid);
+			texttocopy = editors[index].CM2.getValue();
 			navigator.clipboard.writeText(texttocopy);
 			$(this).tooltip({ items: "#" + this.id, content: "Copied !"});
 			$(this).tooltip("open");
