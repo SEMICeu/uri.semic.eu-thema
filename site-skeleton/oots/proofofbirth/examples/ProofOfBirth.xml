@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sdg:ProofOfBirth xmlns:sdg="http://data.europa.eu/p4s" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://data.europa.eu/p4s ProofOfBirth.xsd ">
-  <sdg:BirthPerson>
-    <sdg:GivenName xml:lang="fr">René François Ghislain</sdg:GivenName>
-    <sdg:FamilyName xml:lang="fr">Magritte</sdg:FamilyName>
-    <sdg:DateOfBirth>1898-11-21</sdg:DateOfBirth>
-    <sdg:PlaceOfBirth>
-      <sdg:GeographicName xml:lang="fr">Lessines</sdg:GeographicName>
-    </sdg:PlaceOfBirth>
-    <sdg:CountryOfBirth>
-      <sdg:GeographicName xml:lang="fr">Belgique</sdg:GeographicName>
-    </sdg:CountryOfBirth>
-    <sdg:Sex>Male</sdg:Sex>
-  </sdg:BirthPerson>
+<sdg:ProofOfBirth xmlns:cv="http://data.europa.eu/m8g/" xmlns:sdg="http://data.europa.eu/p4s" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://data.europa.eu/p4s ProofOfBirth.xsd ">
+  <cv:Person>
+    <cv:CountryOfBirth>
+    	<cv:GeographicName xml:lang="fr">Belgique</cv:GeographicName>
+    </cv:CountryOfBirth>
+    <cv:DateOfBirth>1898-11-21</cv:DateOfBirth>
+    <cv:FamilyName xml:lang="fr">Magritte</cv:FamilyName>
+    <cv:GivenName xml:lang="fr">René François Ghislain</cv:GivenName>
+    <cv:PlaceOfBirth>
+    	<cv:GeographicName xml:lang="fr">Lessines</cv:GeographicName>
+    </cv:PlaceOfBirth>
+    <cv:Sex>Male</cv:Sex>
+  </cv:Person>
 </sdg:ProofOfBirth>
