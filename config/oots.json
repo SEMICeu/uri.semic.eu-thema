@@ -2,7 +2,7 @@
 {
   "name": "proofofbirth",
   "type": "ap",
-  "eap": "OOTS.eap",
+  "eap": "OOTS_ProofOfBirth.eap",
   "diagram": "ProofOfBirth",
   "template": "ProofOfBirth_en.j2",
   "title": "Proof of birth",
@@ -34,7 +34,7 @@
 {
   "name": "proofofdomicile",
   "type": "ap",
-  "eap": "OOTS.eap",
+  "eap": "OOTS_ProofOfDomicile.eap",
   "diagram": "ProofOfDomicile",
   "template": "ProofOfDomicile_en.j2",
   "title": "Proof of domicile",
