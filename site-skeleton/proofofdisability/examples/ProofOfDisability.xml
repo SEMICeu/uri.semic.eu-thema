@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sdg:ProofOfBirth xmlns:cv="http://data.europa.eu/m8g/" xmlns:sdg="http://data.europa.eu/p4s/" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://data.europa.eu/p4s/ ProofOfBirth.xsd ">
-  <cv:isAbout>
-    <cv:Agent xsi:type="cv:PersonType">
-      <cv:CountryOfBirth>
-        <cv:Location>
-          <cv:GeographicName xml:lang="fr">Belgique</cv:GeographicName>
-        </cv:Location>
-      </cv:CountryOfBirth>
-      <cv:DateOfBirth>1898-11-21</cv:DateOfBirth>
+<sdg:ProofOfDisability xmlns:cv="http://data.europa.eu/m8g/" xmlns:sdg="http://data.europa.eu/p4s/" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://data.europa.eu/p4s/ ProofOfDisability.xsd ">
+  <cv:IsAbout>
+    <cv:Person>
       <cv:FamilyName xml:lang="fr">Magritte</cv:FamilyName>
-      <cv:GivenName xml:lang="fr">René François Ghislain</cv:GivenName>
-      <cv:PlaceOfBirth>
-        <cv:Location>
-          <cv:GeographicName xml:lang="fr">Lessines</cv:GeographicName>
-        </cv:Location>
-      </cv:PlaceOfBirth>
-      <cv:Sex>MALE</cv:Sex>
-    </cv:Agent>
-  </cv:isAbout>
-</sdg:ProofOfBirth>
+      <cv:GivenName>René François Ghislain Magritte</cv:GivenName>
+    </cv:Person>
+  </cv:IsAbout>
+  <sdg:States>
+    <sdg:Disability>
+        <sdg:DateOfExpiryOfDisabilityStatus>1900-11-10</sdg:DateOfExpiryOfDisabilityStatus>
+        <sdg:DateOfIssueOfDisabilityStatus>1899-10-10</sdg:DateOfIssueOfDisabilityStatus>  
+        <sdg:DisabilityDegree xml:lang="fr">50%</sdg:DisabilityDegree>
+        <sdg:TypeOfDisability xml:lang="fr">Blindness</sdg:TypeOfDisability>
+    </sdg:Disability>
+  </sdg:States>
+</sdg:ProofOfDisability>

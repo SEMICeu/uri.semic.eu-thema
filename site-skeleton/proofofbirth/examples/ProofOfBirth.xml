@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sdg:ProofOfBirth xmlns:cv="http://data.europa.eu/m8g/" xmlns:sdg="http://data.europa.eu/p4s/" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://data.europa.eu/p4s/ ProofOfBirth.xsd ">
-  <cv:isAbout>
-    <cv:Agent xsi:type="cv:PersonType">
+<sdg:ProofOfBirth xmlns:cv="http://data.europa.eu/m8g/" xmlns:sdg="http://data.europa.eu/p4s/" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://data.europa.eu/p4s/ ProofOfBirth.xsd ">
+  <cv:IsAbout>
+    <cv:Person>
       <cv:CountryOfBirth>
         <cv:Location>
           <cv:GeographicName xml:lang="fr">Belgique</cv:GeographicName>
@@ -16,6 +16,6 @@
         </cv:Location>
       </cv:PlaceOfBirth>
       <cv:Sex>MALE</cv:Sex>
-    </cv:Agent>
-  </cv:isAbout>
+    </cv:Person>
+  </cv:IsAbout>
 </sdg:ProofOfBirth>

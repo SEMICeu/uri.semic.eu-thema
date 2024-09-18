@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sdg:ProofOfDomicile xmlns:cv="http://data.europa.eu/m8g/" xmlns:lcn="http://www.w3.org/ns/locn#" xmlns:sdg="http://data.europa.eu/p4s/" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://data.europa.eu/p4s/ ProofOfDomicile.xsd ">
-  <cv:isAbout>
-    <cv:Agent xsi:type="cv:PersonType">
+<sdg:ProofOfDomicile xmlns:cv="http://data.europa.eu/m8g/" xmlns:sdg="http://data.europa.eu/p4s/" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://data.europa.eu/p4s/ ProofOfDomicile.xsd ">
+  <cv:IsAbout>
+    <cv:Person>
       <cv:CountryOfBirth>
         <cv:Location>
           <cv:GeographicName xml:lang="fr">Belgique</cv:GeographicName>
@@ -17,14 +17,14 @@
       </cv:PlaceOfBirth>
       <cv:Sex>MALE</cv:Sex>
       <cv:DomicileAddress>
-        <lcn:StreetName xml:lang="fr">Rue Esseghem</lcn:StreetName>
-        <lcn:StreetNumber>135</lcn:StreetNumber>
-        <lcn:CityOrTown xml:lang="fr">Bruxelles</lcn:CityOrTown>
-        <lcn:VillageOrHamlet xml:lang="fr"></lcn:VillageOrHamlet>
-        <lcn:ProvinceCountyRegion xml:lang="fr"></lcn:ProvinceCountyRegion>
-        <lcn:PostalCode>1090</lcn:PostalCode>
-        <lcn:Country xml:lang="fr">Belgique</lcn:Country>
-    </cv:DomicileAddress>
-  </cv:Agent>
-  </cv:isAbout>
+        <cv:StreetName xml:lang="fr">Rue Esseghem</cv:StreetName>
+        <cv:StreetNumber>135</cv:StreetNumber>
+        <cv:CityOrTown xml:lang="fr">Bruxelles</cv:CityOrTown>
+        <cv:VillageOrHamlet xml:lang="fr"></cv:VillageOrHamlet>
+        <cv:ProvinceCountyRegion xml:lang="fr"></cv:ProvinceCountyRegion>
+        <cv:PostalCode>1090</cv:PostalCode>
+        <cv:Country xml:lang="fr">Belgique</cv:Country>
+      </cv:DomicileAddress>
+    </cv:Person>
+  </cv:IsAbout>
 </sdg:ProofOfDomicile>
