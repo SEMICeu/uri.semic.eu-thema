@@ -1,6 +1,6 @@
 {
   "@context": [
-  "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/ProofOfBirth/releases/0.0.1/context/proofofbirth.jsonld",
+  "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/ProofOfDomicile/releases/0.0.1/context/proofofdomicile.jsonld",
   {
     "cv": "http://data.europa.eu/m8g/",
     "dct": "http://purl.org/dc/terms/",
@@ -11,8 +11,8 @@
   }],
   "@graph": [
     {
-     "@id": "ex:proofofbirth1",
-     "@type" : "ProofOfBirth",
+     "@id": "ex:proofofdomicile1",
+     "@type" : "ProofOfDomicile",
      "dct:subject" : {
 	   "@id": "ex:person1"
 	 }
@@ -40,7 +40,10 @@
      },
      "cv:sex" : {
        "@id" : "http://publications.europa.eu/resource/authority/human-sex/MALE"
-     }
+     },
+     "cv:domicile" : {
+       "@id": "ex:address1"
+     },
    },
    {
     "@id": "ex:location1",
@@ -57,6 +60,32 @@
       "@language": "fr",
       "@value": "Belgique"
     }
+   },
+   {
+    "@id": "ex:address1",
+    "@type": "Address",
+    "locn:addressArea" : {
+       "@value": "Quartier Nord",
+       "@language": "fr"
+      },
+      "locn:adminUnitL1" : {
+       "@value": "Belgique",
+       "@language": "fr"
+      },
+      "locn:adminUnitL2" : {
+       "@value": "Région de Bruxelles-Capitale",
+       "@language": "fr"
+      },
+      "locn:locatorDesignator" : "135",
+      "locn:postCode" : "1090",
+      "locn:postName" : {
+       "@value": "Jette",
+       "@language": "fr"
+      },
+      "locn:thoroughfare" : {
+       "@value": "Rue Esseghem",
+       "@language": "fr"
+      }
    }
  ]
 }

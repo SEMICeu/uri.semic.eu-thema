@@ -6,8 +6,8 @@
 @prefix ex: <http://example.com/> .
 @prefix person: <http://www.w3.org/ns/person#> .
 
-ex:proofofbirth1 dcterms:subject ex:person1 ;
-	a <http://data.europa.eu/p4s/ProofOfBirth> .
+ex:proofofdomicile1 dcterms:subject ex:person1 ;
+	a <http://data.europa.eu/p4s/ProofOfDomicile> .
 
 ex:person1 foaf:givenName "René François Ghislain"@fr ;
 	foaf:familyName "Magritte"@fr ;
@@ -15,6 +15,7 @@ ex:person1 foaf:givenName "René François Ghislain"@fr ;
 	person:placeOfBirth ex:location1 ;
 	person:countryOfBirth ex:location2 ;
 	cv:sex <http://publications.europa.eu/resource/authority/human-sex/MALE> ;
+	cv:domicile ex:address1 ;
 	a person:Person .
 
 ex:location1 locn:geographicName "Lessines"@fr ;
@@ -22,3 +23,13 @@ ex:location1 locn:geographicName "Lessines"@fr ;
 
 ex:location2 locn:geographicName "Belgique"@fr ;
 	a dcterms:Location .
+
+ex:address1 locn:addressArea "Quartier Nord"@fr ;
+	locn:adminUnitL1 "Belgique"@fr ;
+	locn:adminUnitL2 "Région de Bruxelles-Capitale"@fr ;
+	locn:locatorDesignator "135" ;
+	locn:postCode "1090" ;
+	locn:postName "Jette"@fr ;
+	locn:thoroughfare "Rue Esseghem"@fr ;
+	a locn:Address .
+
