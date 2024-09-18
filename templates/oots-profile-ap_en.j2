@@ -636,9 +636,9 @@ They are included in the Application Profile because they form the range of prop
 
 <section class="informative">
     <h2> Examples </h2>
-        {% block examples %}
+     <!--   {% block examples %} #} -->
 	<p> No examples defined </p>
-        {% endblock %}
+    <!--     {% endblock %} -->
 </section>
 
 
@@ -684,9 +684,9 @@ They are included in the Application Profile because they form the range of prop
 			<p> No UML representation defined </p>
 		{% endblock %} 
 
-		{% block xmlschema %}
+		<!-- {% block xmlschema %}  -->
 			<p> No XML schema defined </p>
-		{% endblock %} 
+		<!-- {% endblock %} -->
 		<!--
 		<h3>Mapping</h3>
 		A mapping towards Schema.org can be found <a href="https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Location">here</a>
@@ -790,10 +790,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 <h2>Acknowledgments</h2>
 
 The editors gratefully acknowledge the contributions made to this document by all members of the working group.
-
-This work was elaborated by a Working Group under SEMIC by Interoperable Europe.
-Interoperable Europe of the European Commission was represented by Pavlina Fragkou and Seth Van Hooland.
-Natasa Sofou, Makx Dekkers and Bert Van Nuffelen were the editors of the specification.
 
 Past and current contributors are :
 {% for role, contributors in contributors | groupby("role") %}
