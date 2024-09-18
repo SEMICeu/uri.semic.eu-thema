@@ -101,6 +101,11 @@ This specification uses the following prefixes to shorten the URIs for readibili
 
 {% endblock %}
 
+{% block umlrepresentation %}		
+		<h3>UML representation</h3>
+		The UML representation from which the {{metadata.title}} has been build is available <a href="./UML/OOTS_ProofOfDomicile.eap">here</a>.
+{% endblock %} 
+
 {% block xmlschema %}
 		<h3>XML schema representation</h3>
 		The XML schema representation from which the {{metadata.title}} has been build is available <a href="https://code.europa.eu/oots/tdd/data_models/-/tree/main/Evidence/ProofOfDomicile/releases/0.0.1/xsd?ref_type=heads">here</a>
