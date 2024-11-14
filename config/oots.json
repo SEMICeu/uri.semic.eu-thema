@@ -96,35 +96,35 @@
     }
 },
 {
-  "name": "proofofallresidence",
+  "name": "proofofcertificatesecondaryadmission",
   "type": "ap",
-  "eap": "OOTS_ProofOfAllResidence.eap",
-  "diagram": "ProofOfAllResidence",
-  "template": "ProofOfAllResience_en.j2",
-  "title": "Proof of residence (all registered addresses)",
+  "eap": "OOTS_ProofOfCertificateSecondaryAdmission.eap",
+  "diagram": "ProofOfCertificateSecondaryAdmission",
+  "template": "ProofOfCertificateSecondaryAdmission_en.j2",
+  "title": "Proof of certificate of admission to secondary education institution",
   "publication-state": "Draft",
   "publication-date": "2024-10-29",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "OOTS",
-  "site": "site-skeleton/proofofallresidence",
-  "repourl": "https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfAllResidence/tree/master/releases/0.0.1",
+  "site": "site-skeleton/proofofcertificatesecondaryadmission",
+  "repourl": "https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfCertificateSecondaryAdmission/tree/master/releases/0.0.1",
   "feedbackurl": "https://ec.europa.eu/digital-building-blocks/wikis/display/SDGOO/Discussion+Items+-+EM?src=contextnavpagetreemode",
-  "versionurl": "https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfAllResidence/tree/master/releases/0.0.1",
-  "standaardregisterurl" :"https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfAllResidence/tree/master/releases/0.0.1/Changelog.md",
+  "versionurl": "https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfCertificateSecondaryAdmission/tree/master/releases/0.0.1",
+  "standaardregisterurl" :"https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfCertificateSecondaryAdmission/tree/master/releases/0.0.1/Changelog.md",
     "translation": [
       {
         "language":"en",
-        "template":"ProofOfAllResidence_en.j2",
-        "title": "Proof of residence (all registered addresses)",
-        "translationjson":"ProofOfAllResidence_en.json",
-        "mergefile":"ProofOfAllResidence_en_merged.jsonld"
+        "template":"ProofOfCertificateSecondaryAdmission_en.j2",
+        "title": "Proof of certificate of admission to secondary education institution",
+        "translationjson":"ProofOfCertificateSecondaryAdmission_en.json",
+        "mergefile":"ProofOfCertificateSecondaryAdmission_en_merged.jsonld"
       }
     ],
     "toolchainversion" : "3",
     "documentconfig": {
           "statuslabel" : "Draft",
-          "editorDocumentroot" : "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/ProofOfAllResidence/releases/0.0.1"
+          "editorDocumentroot" : "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/ProofOfCertificateSecondaryAdmission/releases/0.0.1"
     }
 }
 ]
