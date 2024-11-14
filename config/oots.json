@@ -99,7 +99,7 @@
   "name": "proofofcertificatesecondaryadmission",
   "type": "ap",
   "eap": "OOTS_ProofOfCertificateSecondaryAdmission.eap",
-  "diagram": "ProofOfCertificateSecondaryAdmission",
+  "diagram": "ProofOfCertificateOfSecondaryAdmission",
   "template": "ProofOfCertificateSecondaryAdmission_en.j2",
   "title": "Proof of certificate of admission to secondary education institution",
   "publication-state": "Draft",
