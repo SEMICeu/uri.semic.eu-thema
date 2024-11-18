@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdg:ProofOfDomicile xmlns:cv="http://data.europa.eu/m8g/" xmlns:sdg="http://data.europa.eu/p4s/" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://data.europa.eu/p4s/ ProofOfDomicile.xsd ">
+  <cv:IsAbout>
+    <cv:Person>
+      <cv:CountryOfBirth>
+        <cv:Location>
+          <cv:GeographicName xml:lang="fr">Belgique</cv:GeographicName>
+        </cv:Location>
+      </cv:CountryOfBirth>
+      <cv:DateOfBirth>1898-11-21</cv:DateOfBirth>
+      <cv:FamilyName xml:lang="fr">Magritte</cv:FamilyName>
+      <cv:GivenName xml:lang="fr">René François Ghislain Magritte</cv:GivenName>
+      <cv:PlaceOfBirth>
+        <cv:Location>
+          <cv:GeographicName xml:lang="fr">Lessines</cv:GeographicName>
+        </cv:Location>
+      </cv:PlaceOfBirth>
+      <cv:Sex>MALE</cv:Sex>
+      <cv:DomicileAddress>
+        <cv:StreetName xml:lang="fr">Rue Esseghem</cv:StreetName>
+        <cv:StreetNumber>135</cv:StreetNumber>
+        <cv:CityOrTown xml:lang="fr">Bruxelles</cv:CityOrTown>
+        <cv:VillageOrHamlet xml:lang="fr"></cv:VillageOrHamlet>
+        <cv:ProvinceCountyRegion xml:lang="fr"></cv:ProvinceCountyRegion>
+        <cv:PostalCode>1090</cv:PostalCode>
+        <cv:Country xml:lang="fr">Belgique</cv:Country>
+      </cv:DomicileAddress>
+    </cv:Person>
+  </cv:IsAbout>
+</sdg:ProofOfDomicile>
