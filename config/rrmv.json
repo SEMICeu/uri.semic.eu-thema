@@ -4,7 +4,7 @@
   "type": "ap",
   "eap": "rrmv.eap",
   "diagram": "RRMV",
-  "template": "rrmv_en.j2",
+  "template": "rrmv.j2",
   "title": "Regulatory Reporting Metadata Vocabulary",
   "publication-state": "Working Draft",
   "publication-date": "2024-11-21",
