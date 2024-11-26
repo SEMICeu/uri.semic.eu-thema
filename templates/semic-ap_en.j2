@@ -570,6 +570,12 @@
 The main entities are those that form the core of the Application Profile. 
 The properties and their associated constraints that apply in the context of this profile are listed in a tabular form.
 Each row corresponds to one property. 
+</p><p>
+As this is the toplevel application profile for this usage context the reuse of the terms is indicated by their URIs.
+If an URI is used from another vocabulary than the namespace <code>2qy</code> it means that the information is inherited as expressed in 
+the data specification in which that URI is defined.
+</p>
+<!--
 In addition to the constraints also cross-references are provided to DCAT and DCAT-AP. For the last, to save space, the following abbreviations are used:
 <ul>
 	<li>A: reused as-is defined and expressed in DCAT-AP</li>
@@ -578,6 +584,7 @@ In addition to the constraints also cross-references are provided to DCAT and DC
 </ul>
 This reuse qualification assessement is w.r.t. a specific version of DCAT-AP. 
 Therefore it may vary over time when new versions of DCAT-AP are created.
+-->
 
 
 {% for entity in classes | sort(attribute=sortattr) %}
