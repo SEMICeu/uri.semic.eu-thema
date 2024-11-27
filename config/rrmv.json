@@ -22,7 +22,7 @@
     "translation": [
       {
         "language":"en",
-        "template":"rrmv_en.j2",
+        "template":"rrmv.j2",
         "title": "RRMV",
         "translationjson":"rrmv_en.json",
         "mergefile":"rrmv_en_merged.jsonld"
