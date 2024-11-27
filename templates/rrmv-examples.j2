@@ -1,0 +1,40 @@
+<section class="informative">
+<h2>Example</h2>
+In this section we illustrate the usage of the RRMV with examples.
+The examples in this section are fictitious; their sole purpose is to illustrate the use of the application profile 
+to ensure a clear understanding of the model.
+
+
+<h3>A Request expressed in a legislation</h3>
+
+
+<div class="h3 examples" id="example-request">Example 1 - Relating a Request with legislation</div>
+
+
+<p class="ednote" title="Multiple identifiers for legislation">
+The example uses the ELI as unique reference for the legal document: 
+<code>http://data.europa.eu/eli/reg/2016/1011/oj</<code>.
+Question to be raised is whether implementations should always use this one? Or other like the CELEX are allowed?
+The fact that a legal document has many identifiers may raise implementation questions.
+It is unclear if this needs to be discussed in the context of RRMV.
+</p>
+
+<p class="ednote" title="lifecycle of Requests">
+A Request is an interpretation of the legislation with the objective to track reporting obligations.
+As such it has a strong connection with the legislation, but it is not the THE legislation. 
+If it would be the same then one should reflect on why the existing ELI machine readible annotations are not sufficient to track and followup reporting obligations.
+In the following we assume that this reflection has happened and that the conclusion was they are different entities with a different lifecylce, yet strongly connected.
+</p>
+
+<p class="ednote" title="Identity of Requests">
+Given the above context, it is assumed that requests are managed in systems outside the legislation. 
+It is not needed to annotate the legation with a RRMV interpretation to be formally adopted. 
+Therefore the structure of the identifier of Request is not determined by RRMV.  
+For the sake of readibility the examples assume that the URI is the identifier of the Request (a Linked Data implementation). 
+</p>
+
+
+
+
+
+</section>
