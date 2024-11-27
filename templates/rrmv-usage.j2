@@ -1,0 +1,32 @@
+<section class="informative">
+<h2>Usage considerations</h2>
+
+The RRMV offers an interpretation of the legislative text. 
+Creating such an interpretation is heavily depinding on the methodology and tools being used.
+<p/>
+For instance, text analysis tools may detect sections that represent temporal or agent information.
+Turning that identified information is formal represenation is a separate, yet connected task.
+<p/>
+Therefore the RRMV has to define the expectations of its use and the provide a semantical formalisation that is adequate for that use.
+For instance, detecting temporal information is probaly a feasible task. 
+Yet any formal representation will of the temporal information will restrict the possible captured information.
+<p/> 
+For instance, the sentence "every 2 years after the adoption of the directive" is a temporal expression. 
+Yet it does not adhere to any formal representation of time (e.g. [[owl-time]]). 
+This circumscription of temporal information however is easily interpret by humans. 
+Given the presence of such circumscriptions in the legislation, formalising the temporal information of a RRMV request as to owl-time would 
+assume the existance of a temporal interpretation engine.
+It must be considered whether such engine exists, and if it would what would be the input and the output of that system.
+It is recommended not to perform an independent temporal modeling without taking this into account.
+<p/>
+The case of temporal information also applies to other information that one expects to derive from the legislation in order to drive the followup 
+of reporting obligations.
+<p/>
+
+Another reflection to be aligned is if RRMV is to be used only by official legal advisers that annotate legislation. 
+In this case the RRMV is an expression of a legal interpretation and it should only be used by the maintainers of legislation.
+If the purpose is also that RRMV is used by agencies to setup reporting monitoring systems then the RRMV must be more disconnected from the legislation.
+The legislation is then only a reference, and not the target artefacts to work with.
+
+
+</section>
