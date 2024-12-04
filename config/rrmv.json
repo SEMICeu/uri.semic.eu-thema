@@ -11,9 +11,9 @@
   "contributors-file": "stakeholders.csv",
   "contributors-column": "RRMV",
   "site": "site-skeleton/rrmv",
-  "repourl": "https://github.com/SEMICeu/rrmv/tree/master/releases/O.0.1",
-  "versionurl": "https://semiceu.github.io/rrmv/releases/0.0.1",
-  "feedbackurl": "https://github.com/SEMICeu/rrmv/issues",
+  "repourl": "https://github.com/SEMICeu/Reporting-Requirements-Metadata-Vocabulary",
+  "versionurl": "https://github.com/SEMICeu/Reporting-Requirements-Metadata-Vocabulary/tree/main/releases/0.0.1",
+  "feedbackurl": "https://github.com/SEMICeu/Reporting-Requirements-Metadata-Vocabulary/issues",
   "documentconfig" : {
     "changelog" : "https://github.com/SEMICeu/rrmv/master/releases/0.0.1/Changelog.md",
     "editorDocumentroot-old" : "https://semiceu.github.io/uri.semic.eu-generated/Reporting-Requirements-Metadata-Vocabulary/releases/0.0.1",
