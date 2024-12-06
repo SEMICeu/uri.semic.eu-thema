@@ -180,7 +180,7 @@
       {
         "language":"en",
         "template":"ProofOfCitizenship_en.j2",
-        "title": "ProofOfCitizenship",
+        "title": "Proof Of Citizenship",
         "translationjson":"ProofOfCitizenship_en.json",
         "mergefile":"ProofOfCitizenship_en_merged.jsonld"
       }
