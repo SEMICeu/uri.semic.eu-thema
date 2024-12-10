@@ -813,8 +813,7 @@ Past and current contributors are :
      {% set pure_contributors = contributors|sort(attribute='last_name') %}
      {% if pure_contributors %}
           {% for contributor in pure_contributors %} 
-	 	{{ contributor.first_name }} {{ contributor.last_name }}
-		{% if not loop.last %}, {% endif %}
+	 	{{ contributor.first_name }} {{ contributor.last_name }}{% if not loop.last %}, {% endif %}
           {% endfor %}
      {% endif %}
 {% endif %}
