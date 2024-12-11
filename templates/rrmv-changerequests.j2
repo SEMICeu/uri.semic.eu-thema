@@ -69,6 +69,8 @@ The following properties are changed
  <li> replace range xsd:string with a language aware string literal as range. </li>
  <li> replace rrmv:hasTemporalEntity with rrmv:hasUnit </li>
  <li> the property rrmv:hasTemporalEntity and class TemporalEntity are replaced with rrmv:hasUnit refering to a to be determined codelist</li>
+ <li> the class PeriodOfTime is aligned with the SEMIC Core Vocs decision to follow the W3C vocabulary [[owl-time]] for temporal information.</li>
+ <li> any ELI class has a URI according to the ELI usage conventions. Therefore the property rrmv:hasURI is removed from these classes.</li>
 </ul>
 </p>
 
@@ -135,6 +137,21 @@ Proposal 2: replace rrmv:hasType with 3 subproperties of dct:type.
 As long no additional constraints like additional usage constraints, such as <i> in case X, then Y must be provided</i> or cardinality constraints with a qualified usage for a specific codelist, proposal 1 is fine. However for implementers of an editorial interface Proposal 2 may be more stable and attractive.
 </p>
 
+
+<h4 id="cr9e">property hasURI to be replaced with adms:identifier</h4>
+The property rrmv:hasURI is introduced problably with the intension to ensure the instance has a public ID.
+However as pointed out by the review of Jaroslaw, ELI has its onw rules for the URIs [[ELI-IMPL]]. 
+Moreover in the ELI context it is mandatory that each leglistaltion has a PURI assigned. 
+At least top level, article and paragraph level are optional. But the structure of the ELI URI is fixed by the ELI community.
+It hence has no added value to add rrmv:hasURI to an ELI class. 
+<p>
+In addition the property hasURI raises questions about its intention and use. Can it have a different value than the URI of the instance?
+If so what is the distinction. If not, what is the added value of this property?
+<p>
+Proposal: To replace it with the generic adms:identifier property that allows to support multiple contextualized identifiers for the same entity.
+
+
+<h4 id="cr9f">harmonising eli:Agent and foaf:Agent (Core Vocabularies)</a>
 
 
 
