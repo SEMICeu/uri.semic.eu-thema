@@ -67,19 +67,35 @@ In case this information has to be recorded as the identified annotations prior 
 
 <h3 id="cr7">Reduce the number of connectors and associated classes by using attributes</h3>
 
-<p class="ednote">
+<div class="ednote">
 The following properties are changed
 
 <ul>
  <li> rrmv:hasTitle becomes dct:title </li>
  <li> replace range xsd:string with a language aware string literal as range. </li>
  <li> replace rrmv:hasTemporalEntity with rrmv:hasUnit </li>
+ <li> replace range xsd:float for property rrmv:hasUnit with rdfs:Literal to enable more representations.</li>
  <li> the property rrmv:hasTemporalEntity and class TemporalEntity are replaced with rrmv:hasUnit refering to a to be determined codelist</li>
  <li> the class PeriodOfTime is aligned with the SEMIC Core Vocs decision to follow the W3C vocabulary [[owl-time]] for temporal information.</li>
  <li> any ELI class has a URI according to the ELI usage conventions. Therefore the property rrmv:hasURI is removed from these classes.</li>
 </ul>
-</p>
 
+</div>
+
+
+<div class="ednote">
+The following changes in the OWL file were also performed.
+
+<ul>
+  <li> replace the incorrect use of rdf:type as Datatypeproperty by reusing the rrmv property rrmv:hasType.  </li>
+  <li> change label ActionResult to singular</li>
+  <li> turn multiple rdf:domain statements for a property into an union, because multiple rdfs:domain statements mean the intersection</li>
+  <li> turn multiple rdf:range statements for a property into an union, because multiple rdfs:range statements mean the intersection</li>
+  <li> change the labels for properties and classes to the natural language representation and not the technical identifier. </li>
+  <li>
+/ul>
+
+</div>
 
 
 <h3 id="cr8">Consider “Request” as a separate entity from eli:LegalExpression</h3>
