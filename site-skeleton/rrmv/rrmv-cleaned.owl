@@ -42,17 +42,15 @@ dc:description a owl:AnnotationProperty .
 rdf:List a owl:Class .
 
 <http://data.europa.eu/2qy/rrmv> a owl:Ontology;
-  dc:description "This portal presents  RRMV ontology (Regulatory Reporting Metadata Vocabulary) for modelling and representing the Requests inside of the European Legislation.This ontology is developed inside of the project SORTIS (Study On Regulatory reporTIng Standards) coordinated by the Digital-ready Policymaking and SEMIC teams of the DIGIT.B2 Interoperability and Digital Government Unit of the European Commission. The initial version of the ontology was developed within an expert contract with the JRC-funded expert, Monica Palmirani, from the University of Bologna."@en,
-    <https://code.europa.eu/regulatory-reporting/rrmv/-/raw/main/docs/current/rrmv-v2.png>;
+  dc:description "This portal presents  RRMV ontology (Regulatory Reporting Metadata Vocabulary) for modelling and representing the Requests inside of the European Legislation.This ontology is developed inside of the project SORTIS (Study On Regulatory reporTIng Standards) coordinated by the Digital-ready Policymaking and SEMIC teams of the DIGIT.B2 Interoperability and Digital Government Unit of the European Commission. The initial version of the ontology was developed within an expert contract with the JRC-funded expert, Monica Palmirani, from the University of Bologna."@en;
   rdfs:comment "An ontology to describe REQUEST present inside of the legislation with the aim to track these peculiar normative prescriptions. A REQUEST is an obligation-to-do something, defined by AGENT, playing a given ROLE in a specific interval of TIME. The REQUEST produces ACTION, in a given period of TIME. ACTION has RESULT (e.g., report, plan, ripetitive event, etc.).";
-  owl:versionInfo "0.0.1";
+  owl:versionInfo "0.1.0";
   dc:rights "This work is distributed under a EUPL 1.2 License (https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2020-03/EUPL-1.2%20EN.txt)."@en;
   dcterms:contributor "Andrea Giovanni Nuzzolese, CNR", "Alessio Nardin, DIGIT.B2"@en,
-    "Cecile Guasch, DIGIT.B2"@en, "Davide Audrito, DIGIT.B2"@en;
+    "Cecile Guasch, DIGIT.B2"@en, "Davide Audrito, DIGIT.B2"@en, "Bert Van Nuffelen, SEMIC"@en;
   dcterms:creator "Monica Palmirani, University of Bologna";
-  dcterms:description "Description";
   dcterms:title "Reporting Requirements Metadata Vocabulary";
-  dcterms:modified "2024-11-28T11:44:22"^^xsd:dateTime .
+  dcterms:modified "2024-12-19T11:44:25"^^xsd:dateTime .
 
 dcterms:isPartOf a owl:ObjectProperty;
   rdfs:domain :Request;
@@ -61,8 +59,9 @@ dcterms:isPartOf a owl:ObjectProperty;
   dcterms:modified "2024-12-11T12:07:07"^^xsd:dateTime .
 
 eli:Agent a owl:Class;
+  rdfs:label "Agent"@en;
   rdfs:comment "Individual people or groups of people, like an institution with a legal recognition, who have the potential to perform intentional actions for which they can be held responsible. "@en;
-  dcterms:modified "2024-12-11T12:09:26"^^xsd:dateTime .
+  dcterms:modified "2024-12-19T11:32:42"^^xsd:dateTime .
 
 time:ProperInterval a owl:Class;
   rdfs:label "Period Of Time"@en;
@@ -86,8 +85,9 @@ eli:cites a owl:ObjectProperty;
   dcterms:modified "2024-12-11T12:11:42"^^xsd:dateTime .
 
 eli:Expression a owl:Class;
+  rdfs:label "Expression"@en;
   rdfs:comment "The intellectual realisation of a Work in the form of identifiable immaterial objects, such as, but not limited to, text. "@en;
-  dcterms:modified "2024-12-11T12:10:44"^^xsd:dateTime .
+  dcterms:modified "2024-12-19T11:32:23"^^xsd:dateTime .
 
 eli:is_embodied_by a owl:ObjectProperty;
   rdfs:domain eli:Manifestation;
@@ -95,21 +95,27 @@ eli:is_embodied_by a owl:ObjectProperty;
   rdfs:comment " Relates an expression to a manifestation of that expression."@en;
   dcterms:modified "2024-12-11T12:14:07"^^xsd:dateTime .
 
-eli:Manifestation a owl:Class .
+eli:Manifestation a owl:Class;
+  rdfs:label "Manifestation"@en;
+  rdfs:comment "The physical embodiment of an Expression, either on paper or in any electronic format."@en;
+  dcterms:modified "2024-12-19T11:32:04"^^xsd:dateTime .
 
 eli:is_realized_by a owl:ObjectProperty;
   rdfs:domain eli:Expression;
-  rdfs:range eli:Work .
+  rdfs:range eli:Work;
+  rdfs:comment "Relates a work to an expression of this work in the form of a \"sequence of signs\" (typically alpha-numeric characters in a legal context)."@en;
+  dcterms:modified "2024-12-19T11:29:42"^^xsd:dateTime .
 
 eli:Work a owl:Class;
+  rdfs:label "Work"@en;
   rdfs:comment "Any distinct intellectual creation (i.e., the intellectual content), in the context of ELI. "@en;
-  dcterms:modified "2024-12-11T12:17:43"^^xsd:dateTime .
+  dcterms:modified "2024-12-19T11:31:34"^^xsd:dateTime .
 
 eli:related_to a owl:ObjectProperty;
   rdfs:domain :Request;
   rdfs:range :Request;
   rdfs:comment "Indicates a somehow related other document, not necessarily a legal resource. "@en;
-  dcterms:modified "2024-12-11T12:08:04"^^xsd:dateTime .
+  dcterms:modified "2024-12-18T17:46:54"^^xsd:dateTime .
 
 :hasFunction a owl:ObjectProperty;
   rdfs:domain :Action;
@@ -148,7 +154,10 @@ eli:related_to a owl:ObjectProperty;
   rdfs:comment "The topic of the Request."@en;
   dcterms:modified "2024-12-18T09:53:31"^^xsd:dateTime .
 
-skos:Concept a owl:Class .
+skos:Concept a owl:Class;
+  rdfs:label "Concept"@en;
+  rdfs:comment "An idea or notion; a unit of thought. "@en;
+  dcterms:modified "2024-12-19T11:31:19"^^xsd:dateTime .
 
 :hasType a owl:ObjectProperty;
   rdfs:domain _:ed84c1a1c506469cb9bb3830ae1fc3812200;
@@ -164,7 +173,8 @@ skos:Concept a owl:Class .
 
 :Role a owl:Class;
   rdfs:label "Role"@en;
-  rdfs:comment "Role played by an Agent involved in a Request."@en .
+  rdfs:comment "Function played by an Agent involved in a Request."@en;
+  dcterms:modified "2024-12-19T11:21:54"^^xsd:dateTime .
 
 :AgentType a owl:Class;
   rdfs:subClassOf skos:Concept;
@@ -175,7 +185,8 @@ skos:Concept a owl:Class .
 :ResultType a owl:Class;
   rdfs:subClassOf skos:Concept;
   rdfs:label "Result Type"@en;
-  rdfs:comment "A kind of Result"@en .
+  rdfs:comment "A kind of Result"@en;
+  dcterms:modified "2024-12-19T11:23:40"^^xsd:dateTime .
 
 :AgentRole a owl:Class;
   rdfs:label "Agent Role"@en;
@@ -241,14 +252,6 @@ eli:Person a owl:Class;
   rdfs:label "has frequency"@en;
   rdfs:comment "The frequency in which the request is to be executed in case of repetitive mandate. "@en;
   dcterms:modified "2024-12-18T09:51:06"^^xsd:dateTime .
-
-:hasTemporalEntity a owl:ObjectProperty;
-  rdfs:domain :Frequency;
-  rdfs:range :TemporalEntity;
-  rdfs:label "has temporal entity"@en;
-  rdfs:comment "The property linking  Frequency and  TemporalEntity with individuals Year, Month, Week, Day.";
-  dcterms:modified "2024-12-18T09:52:27"^^xsd:dateTime .
-
 
 :value a owl:DatatypeProperty;
   rdfs:domain :Frequency;
