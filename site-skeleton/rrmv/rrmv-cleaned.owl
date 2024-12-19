@@ -167,12 +167,15 @@ skos:Concept a owl:Class .
   rdfs:comment "Role played by an Agent involved in a Request."@en .
 
 :AgentType a owl:Class;
-  rdfs:subClassOf skos:Concept .
+  rdfs:subClassOf skos:Concept;
+  rdfs:label "Agent Type"@en;
+  rdfs:comment "Kind of Agent."@en;
+  dcterms:modified "2024-12-18T17:55:17"^^xsd:dateTime .
 
 :ResultType a owl:Class;
   rdfs:subClassOf skos:Concept;
   rdfs:label "Result Type"@en;
-  rdfs:comment "Result Type. SKOS Concept."@en .
+  rdfs:comment "A kind of Result"@en .
 
 :AgentRole a owl:Class;
   rdfs:label "Agent Role"@en;
@@ -224,12 +227,13 @@ eli:Person a owl:Class;
   rdfs:subClassOf skos:Concept;
   rdfs:label "Temporal Function"@en;
   rdfs:comment "Function of the temporal infomation in legislation. "@en;
-  dcterms:modified "2024-12-11T12:17:20"^^xsd:dateTime .
+  dcterms:modified "2024-12-19T09:05:18"^^xsd:dateTime .
 
 :RoleType a owl:Class;
   rdfs:subClassOf skos:Concept;
   rdfs:label "Role Type"@en;
-  rdfs:comment "The kind of role of the agent as is described in the legal resource."@en .
+  rdfs:comment "The kind of role of the agent as is described in the legal resource."@en;
+  dcterms:modified "2024-12-19T09:06:40"^^xsd:dateTime .
 
 :hasFrequency a owl:ObjectProperty;
   rdfs:domain :Request;
@@ -258,17 +262,18 @@ eli:Person a owl:Class;
   rdfs:comment "Frequency of an Request over time (e.g., every 6 months, each quarter)."@en .
 
 :atTime a owl:ObjectProperty;
-  rdfs:domain :Action, :AgentRole;
+  rdfs:domain _:ed84c1a1c506469cb9bb3830ae1fc3812924;
   rdfs:domain time:ProperInterval;
   rdfs:label "at time"@en;
   rdfs:comment "An Action or a Role is valid within a time interval."@en;
-  dcterms:modified "2024-12-18T09:35:41"^^xsd:dateTime .
+  dcterms:modified "2024-12-19T09:55:58"^^xsd:dateTime .
 
 :forAgent a owl:ObjectProperty;
   rdfs:domain :AgentRole;
   rdfs:range eli:Agent;
-  rdfs:label "forAgent"@en;
-  rdfs:comment "The property linking a particular Role to Agent."@en .
+  rdfs:label "for Agent"@en;
+  rdfs:comment "The property linking a particular Role to Agent."@en;
+  dcterms:modified "2024-12-19T09:19:54"^^xsd:dateTime .
 
 :hasAgentRole a owl:ObjectProperty;
   rdfs:domain :Action;
@@ -375,3 +380,13 @@ _:ed84c1a1c506469cb9bb3830ae1fc3812232 a rdf:List;
   rdf:first :RoleType;
   rdf:rest rdf:nil .
 
+_:ed84c1a1c506469cb9bb3830ae1fc3812924 a owl:Class;
+  owl:unionOf _:ed84c1a1c506469cb9bb3830ae1fc3812925 .
+
+_:ed84c1a1c506469cb9bb3830ae1fc3812925 a rdf:List;
+  rdf:first :Action;
+  rdf:rest _:ed84c1a1c506469cb9bb3830ae1fc3812926 .
+
+_:ed84c1a1c506469cb9bb3830ae1fc3812926 a rdf:List;
+  rdf:first :AgentRole;
+  rdf:rest rdf:nil .
