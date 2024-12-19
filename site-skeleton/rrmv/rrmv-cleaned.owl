@@ -257,7 +257,7 @@ eli:Person a owl:Class;
   rdfs:domain :Frequency;
   rdfs:range rdf:PlainLiteral;
   rdfs:label "value"@en;
-  skos:topConceptOf "Value of the Frequency of Request.";
+  rdfs:comment "Value of the Frequency of Request.";
   dcterms:modified "2024-12-18T13:45:45"^^xsd:dateTime .
 
 :Frequency a owl:Class;
