@@ -309,6 +309,7 @@
             A Core Vocabulary (CV) is a basic, reusable and extensible data specification that captures the fundamental characteristics of an entity in a context-neutral fashion. Its main objective is to provide terms to be reused in the broadest possible context.
             More information can be found on the <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification">SEMIC Style Guide</a>.
         </p>
+    <h3>Used Prefixes</h3>
         {% block terminologyPrefixes %}
     {% endblock %}
 </section>
@@ -874,6 +875,29 @@ Past and current contributors are :
 		background-color:dodgerblue;
 		color:white;
 	}
+    table.simple {                                                                      
+                  font-size: small;                                                           
+                          border-spacing:0;                                                   
+                          border-collapse:collapse;                                           
+                          border-bottom:3px solid #005a9c                                     
+        }                                                                                   
+        .simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}           
+        .simple th a{color:#fff;padding:3px 5px;text-align:left}                            
+        .simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}   
+        .simple td{padding:3px 10px;border-top:1px solid #ddd}                              
+        .simple tr:nth-child(even){background:#f0f6ff}
+    body.darkmode .simple th{background:#005a9c94;color:#ddd}
+    body.darkmode .simple th a{color:#ddd}
+    body.darkmode .simple tr:nth-child(even){background:#f0f6ff26}
+    body.darkmode :is(h4,h5,h6)+a.self-link::before {
+        color: var(--heading-text);
+    }
+    body.darkmode img {
+        background: none;
+    }
+    body.darkmode section#references :target {
+        background: #04162d;
+    }
   </style>
 
     	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
