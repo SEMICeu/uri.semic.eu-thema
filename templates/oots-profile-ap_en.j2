@@ -772,9 +772,11 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 
 <section id="feedback">
     <h2>Feedback</h2>
-        <p>
-            Please provide feedback on the <a href="https://ec.europa.eu/digital-building-blocks/wikis/pages/viewpage.action?spaceKey=SDGOO&title=Discussion+forum+and+feedback+-+SDM">discussion forum</a>
+	{% block feedback %}
+	    <p>
+            Please provide feedback on the general <a href="https://ec.europa.eu/digital-building-blocks/wikis/pages/viewpage.action?spaceKey=SDGOO&title=Discussion+forum+and+feedback+-+SDM">discussion forum</a>
         </p>
+    {% endblock %}
 </section>
 
    {% block deprecation %}
