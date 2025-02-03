@@ -27,7 +27,8 @@
             "MachineLearningModel.name": "Thermal Bridges on Building Rooftops Detection (TBBRDet)",
             "MachineLearningModel.trainedOn" : "https://zenodo.org/records/6517768",
             "MachineLearningModel.version" : "1.0.0",
-            "MachineLearningModel.keyword" : ["deep learning","object detection","instance segmentation","multispectral data"]
+            "MachineLearningModel.keyword" : ["deep learning","object detection","instance segmentation","multispectral data"],
+            "MachineLearningModel.hasOutputFilePrediction" : "http://example.com/File/1"
         },
         {
             "@id": "https://github.com/ai4os-hub/thermal-bridges-rooftops-detector",
@@ -74,9 +75,12 @@
             "Paper.title" : "Thermal Bridges on Building Rooftops"
         },
         {
-            "@id" : "https://huggingface.co/Muennighoff",
-            "@type": "Agent",
-            "Agent.name": "Niklas Muennighoff"
-        }
+            "@id" : "http://example.com/File/1",
+            "@type": "OutputFilePrediction",
+            "OutputFilePrediction.format": "http://example.com/format/pytorch",
+            "OutputFilePrediction.id" : "TBBRDet pytorch",
+            "OutputFilePrediction.title" : "TBBRDet pytorch format",
+            "OutputFilePrediction.url" : "https://github.com/ai4os-hub/thermal-bridges-rooftops-detector",
+        },
     ]
 }
