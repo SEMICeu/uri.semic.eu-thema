@@ -11,75 +11,67 @@
     ],
       "@graph": [
         {
-            "@id": "https://huggingface.co/bigscience/bloomz-7b1",
+            "@id": "https://dashboard.cloud.ai4eosc.eu/marketplace/modules/thermal-bridges-rooftops-detector",
             "@type": "MachineLearningModel",
             "MachineLearningModel.created" : {
-                "@value": "2024-02-22T09:05:04",
+                "@value": "2024-07-18T00:00:00",
                 "@type": "xsd:dateTime"
             },
-            "MachineLearningModel.hasOutputFilePrediction" : ["https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors","https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin"],
-            "MachineLearningModel.hasRepository" : "https://huggingface.co/bigscience/bloomz-7b1/tree/main",
-            "MachineLearningModel.hasBibliographicReference" : "http://example.com/BibliographicReference/1",
-            "MachineLearningModel.hasUploader" : "https://huggingface.co/Muennighoff", 
-            "MachineLearningModel.intendedUse" : "We recommend using the model to perform tasks expressed in natural language. For example, given the prompt \"Translate to English: Je t’aime.\", the model will most likely answer \"I love you.\". Some prompt ideas from our paper:\n一个传奇的开端，一个不灭的神话，这不仅仅是一部电影，而是作为一个走进新时代的标签，永远彪炳史册。你认为这句话的立场是赞扬、中立还是批评?\nSuggest at least five related search terms to \"Mạng neural nhân tạo\".\nWrite a fairy tale about a troll saving a princess from a dangerous dragon. The fairy tale is a masterpiece that has achieved praise worldwide and its moral is \"Heroes Come in All Shapes and Sizes\". Story (in Spanish):\nExplain in a sentence in Telugu what is backpropagation in neural networks.\nFeel free to share your generations in the Community tab!",
-            "MachineLearningModel.licence" : "https://huggingface.co/spaces/bigscience/license",
-            "MachineLearningModel.limitations" : "Prompt Engineering: The performance may vary depending on the prompt. For BLOOMZ models, we recommend making it very clear when the input stops to avoid the model trying to continue it. For example, the prompt \"Translate to English: Je t'aime\" without the full stop (.) at the end, may result in the model trying to continue the French sentence. Better prompts are e.g. \"Translate to English: Je t'aime.\", \"Translate to English: Je t'aime. Translation:\" \"What is \"Je t'aime.\" in English?\", where it is clear for the model when it should answer. Further, we recommend providing the model as much context as possible. For example, if you want it to answer in Telugu, then tell the model, e.g. \"Explain in a sentence in Telugu what is backpropagation in neural networks.\".",
-            "MachineLearningModel.name": "bloomz-7b1",
-            "MachineLearningModel.trainedOn" : ["https://huggingface.co/datasets/bigscience/xP3","https://huggingface.co/datasets/bigscience/xP3all"],
-            "MachineLearningModel.version": "1.0.0"
+            "MachineLearningModel.modified" : {
+                "@value": "2024-12-05T00:00:00",
+                "@type": "xsd:dateTime"
+            },
+            "MachineLearningModel.hasRepository" : ["https://github.com/ai4os-hub/thermal-bridges-rooftops-detector", "https://hub.docker.com/r/ai4oshub/thermal-bridges-rooftops-detector" , "https://github.com/open-mmlab/mmdetection/tree/v2.21.0"] ,
+            "MachineLearningModel.hasBibliographicReference" : ["http://example.com/BibliographicReference/1", "http://example.com/BibliographicReference/2" ] ,
+            "MachineLearningModel.licence" : "https://github.com/open-mmlab/mmdetection/blob/v2.21.0/LICENSE",
+            "MachineLearningModel.name": "Thermal Bridges on Building Rooftops Detection (TBBRDet)",
+            "MachineLearningModel.trainedOn" : "https://zenodo.org/records/6517768",
+            "MachineLearningModel.version" : "1.0.0",
+            "MachineLearningModel.keyword" : ["deep learning","object detection","instance segmentation","multispectral data"]
         },
         {
-            "@id" : "https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors",
-            "@type": "OutputFilePrediction",
-            "OutputFilePrediction.format": "http://example.com/format/safetensors",
-            "OutputFilePrediction.id" : "bloomz-7b1.safetensors",
-            "OutputFilePrediction.title" : "bloomz-7b1 safetensors format",
-            "OutputFilePrediction.url" : "https://huggingface.co/bigscience/bloomz-7b1/resolve/main/model.safetensors",
-            "OutputFilePrediction.checksum" : "http://example.com/Checksum/1"
-        },
-        {
-            "@id": "http://example.com/Checksum/1",
-            "@type": "Checksum",
-            "Checksum.checksumValue" : "4e1e2bdcc97ec356cc92130d3802c81a324e9840b0ed417a9342ea728aa1d369",
-            "Checksum.algorithm" : "http://spdx.org/rdf/terms#checksumAlgorithm_sha256"
-        },
-        {
-            "@id" : "https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin",
-            "@type": "OutputFilePrediction",
-            "OutputFilePrediction.format": "http://example.com/format/pytorch",
-            "OutputFilePrediction.id" : "bloomz-7b1-pytorch",
-            "OutputFilePrediction.title" : "bloomz-7b1 pytorch format",
-            "OutputFilePrediction.url" : "https://huggingface.co/bigscience/bloomz-7b1/resolve/main/pytorch_model.bin",
-            "OutputFilePrediction.checksum" : "http://example.com/Checksum/2"
-        },
-        {
-            "@id": "http://example.com/Checksum/2",
-            "@type": "Checksum",
-            "Checksum.checksumValue" : "d1f5d9fc449dd5fbe045f62c609e2b70f63d2e63faf74d7e0adb895dc294f28e",
-            "Checksum.algorithm" : "http://spdx.org/rdf/terms#checksumAlgorithm_sha256"
-        },
-        {
-            "@id": "https://huggingface.co/bigscience/bloomz-7b1/tree/main",
+            "@id": "https://github.com/ai4os-hub/thermal-bridges-rooftops-detector",
             "@type": "Repository",
-            "Repository.hasFile" : ["https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors","https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin"],
-			"Repository.name" : "Files"
+			"Repository.name" : "GitHub"
+        },
+        {
+            "@id": "https://hub.docker.com/r/ai4oshub/thermal-bridges-rooftops-detector",
+            "@type": "Repository",
+			"Repository.name" : "Docker"
         },
         {
             "@id": "http://example.com/BibliographicReference/1",
             "@type": "BibliographicReference",
-            "BibliographicReference.bibliographicCitation" : "@article{muennighoff2022crosslingual,\ntitle={Crosslingual generalization through multitask finetuning},\nauthor={Muennighoff, Niklas and Wang, Thomas and Sutawika, Lintang and Roberts, Adam and Biderman, Stella and Scao, Teven Le and Bari, M Saiful and Shen, Sheng and Yong, Zheng-Xin and Schoelkopf, Hailey and others},\njournal={arXiv preprint arXiv:2211.01786},\nyear={2022}}",
+            "BibliographicReference.bibliographicCitation" : "@article{MAYER2023104690,title = {Deep learning approaches to building rooftop thermal bridge detection from aerial images},journal = {Automation in Construction},volume = {146},pages = {104690},year = {2023},issn = {0926-5805},doi = {https://doi.org/10.1016/j.autcon.2022.104690},url = {https://www.sciencedirect.com/science/article/pii/S092658052200560X},author = {Zoe Mayer and James Kahn and Yu Hou and Markus Götz and Rebekka Volk and Frank Schultmann},keywords = {Building analysis, Thermal bridges, Drones, Deep learning, Computer vision, Object detection},abstract = {Thermal bridges are weak points of building envelopes that can lead to energy losses, collection of moisture, and formation of mould in the building fabric. To detect thermal bridges of large building stocks, drones with thermographic cameras can be used. As the manual analysis of comprehensive image datasets is very time-consuming, we investigate deep learning approaches for its automation. For this, we focus on thermal bridges on building rooftops recorded in panorama drone images from our updated dataset of Thermal Bridges on Building Rooftops (TBBRv2), containing 926 images with 6,927 annotations. The images include RGB, thermal, and height information. We compare state-of-the-art models with and without pretraining from five different neural network architectures: MaskRCNN R50, Swin-T transformer, TridentNet, FSAF, and a MaskRCNN R18 baseline. We find promising results, especially for pretrained models, scoring an Average Recall above 50% for detecting large thermal bridges with a pretrained Swin-T Transformer model.}}",
             "BibliographicReference.format" : "http://example.com/format/BibTeX",
-            "BibliographicReference.references" : "https://arxiv.org/abs/2211.01786"
+            "BibliographicReference.references" : "https://doi.org/10.1016/j.autcon.2022.104690"
         },
         {
-            "@id": "https://arxiv.org/abs/2211.01786",
+            "@id": "https://doi.org/10.1016/j.autcon.2022.104690",
             "@type": "Paper",
             "Paper.date" : {
-                "@value": "2023-05-29",
+                "@value": "2022-11-26",
                 "@type": "xsd:date"
             },
-            "Paper.hasDocument" : "https://arxiv.org/pdf/2211.01786",
-            "Paper.title" : "Crosslingual Generalization through Multitask Finetuning"
+            "Paper.hasDocument" : "https://www.sciencedirect.com/science/article/pii/S092658052200560X/pdfft?md5=9569ab0974f5a79ab7c99831f3f09ff6&pid=1-s2.0-S092658052200560X-main.pdf",
+            "Paper.title" : "Deep learning approaches to building rooftop thermal bridge detection from aerial images"
+        },
+        {
+            "@id": "http://example.com/BibliographicReference/2",
+            "@type": "BibliographicReference",
+            "BibliographicReference.bibliographicCitation" : "TY  - JOUR\nAU  - Mayer, Zoe\nAU  - Kahn, James\nAU  - Götz, Markus\nAU  - Hou, Yu\nAU  - Beiersdörfer, Tobias\nAU  - Blumenröhr, Nicolas\nAU  - Volk, Rebekka\nAU  - Streit, Achim\nAU  - Schultmann, Frank\nPY  - 2023\nDA  - 2023/05/10\nTI  - Thermal Bridges on Building Rooftops\nJO  - Scientific Data\nSP  - 268\nVL  - 10\nIS  - 1\nAB  - Thermal Bridges on Building Rooftops (TBBR) is a multi-channel remote sensing dataset. It was recorded during six separate UAV fly-overs of the city center of Karlsruhe, Germany, and comprises a total of 926 high-resolution images with 6927 manually-provided thermal bridge annotations. Each image provides five channels: three color, one thermographic, and one computationally derived height map channel. The data is pre-split into training and test data subsets suitable for object detection and instance segmentation tasks. All data is organized and structured to comply with FAIR principles, i.e. being findable, accessible, interoperable, and reusable. It is publicly available and can be downloaded from the Zenodo data repository. This work provides a comprehensive data descriptor for the TBBR dataset to facilitate broad community uptake.\nSN  - 2052-4463\nUR  - https://doi.org/10.1038/s41597-023-02140-z\nDO  - 10.1038/s41597-023-02140-z\nID  - Mayer2023\nER  - \n",
+            "BibliographicReference.format" : "http://example.com/format/Ris",
+            "BibliographicReference.references" : "https://doi.org/10.1038/s41597-023-02140-z"
+        },
+        {
+            "@id": "https://doi.org/10.1038/s41597-023-02140-z",
+            "@type": "Paper",
+            "Paper.date" : {
+                "@value": "2023-05-10",
+                "@type": "xsd:date"
+            },
+            "Paper.hasDocument" : "https://www.nature.com/articles/s41597-023-02140-z.pdf",
+            "Paper.title" : "Thermal Bridges on Building Rooftops"
         },
         {
             "@id" : "https://huggingface.co/Muennighoff",

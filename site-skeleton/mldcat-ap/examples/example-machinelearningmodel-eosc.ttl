@@ -1,68 +1,71 @@
-@prefix biro: <http://purl.org/spar/biro/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix biro: <http://purl.org/spar/biro/> .
 @prefix it6: <http://data.europa.eu/it6/> .
 @prefix lpwc: <https://linkedpaperswithcode.com/class/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix spdx: <http://spdx.org/rdf/terms#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://huggingface.co/bigscience/bloomz-7b1> dct:created "2024-02-22T09:05:04"^^xsd:dateTime ;
-	it6:hasOutputFilePrediction <https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors>, <https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin> ;
-	it6:hasRepository <https://huggingface.co/bigscience/bloomz-7b1/tree/main> ;
-	it6:hasBibliographicReference <http://example.com/BibliographicReference/1> ;
-	it6:hasUploader <https://huggingface.co/Muennighoff> ;
-	it6:intendedUse """We recommend using the model to perform tasks expressed in natural language. For example, given the prompt "Translate to English: Je t’aime.", the model will most likely answer "I love you.". Some prompt ideas from our paper:
-一个传奇的开端，一个不灭的神话，这不仅仅是一部电影，而是作为一个走进新时代的标签，永远彪炳史册。你认为这句话的立场是赞扬、中立还是批评?
-Suggest at least five related search terms to "Mạng neural nhân tạo".
-Write a fairy tale about a troll saving a princess from a dangerous dragon. The fairy tale is a masterpiece that has achieved praise worldwide and its moral is "Heroes Come in All Shapes and Sizes". Story (in Spanish):
-Explain in a sentence in Telugu what is backpropagation in neural networks.
-Feel free to share your generations in the Community tab!""" ;
-	dct:license <https://huggingface.co/spaces/bigscience/license> ;
-	it6:limitations "Prompt Engineering: The performance may vary depending on the prompt. For BLOOMZ models, we recommend making it very clear when the input stops to avoid the model trying to continue it. For example, the prompt \"Translate to English: Je t'aime\" without the full stop (.) at the end, may result in the model trying to continue the French sentence. Better prompts are e.g. \"Translate to English: Je t'aime.\", \"Translate to English: Je t'aime. Translation:\" \"What is \"Je t'aime.\" in English?\", where it is clear for the model when it should answer. Further, we recommend providing the model as much context as possible. For example, if you want it to answer in Telugu, then tell the model, e.g. \"Explain in a sentence in Telugu what is backpropagation in neural networks.\"." ;
-	dct:title "bloomz-7b1" ;
-	it6:trainedOn <https://huggingface.co/datasets/bigscience/xP3>, <https://huggingface.co/datasets/bigscience/xP3all> ;
+<https://dashboard.cloud.ai4eosc.eu/marketplace/modules/thermal-bridges-rooftops-detector> dct:created "2024-07-18T00:00:00"^^xsd:dateTime ;
+	it6:modified "2024-12-05T00:00:00"^^xsd:dateTime ;
+	it6:hasRepository <https://github.com/ai4os-hub/thermal-bridges-rooftops-detector>, <https://hub.docker.com/r/ai4oshub/thermal-bridges-rooftops-detector>, <https://github.com/open-mmlab/mmdetection/tree/v2.21.0> ;
+	it6:hasBibliographicReference <http://example.com/BibliographicReference/1>, <http://example.com/BibliographicReference/2> ;
+	dct:license <https://github.com/open-mmlab/mmdetection/blob/v2.21.0/LICENSE> ;
+	dct:title "Thermal Bridges on Building Rooftops Detection (TBBRDet)" ;
+	it6:trainedOn <https://zenodo.org/records/6517768> ;
 	it6:version "1.0.0" ;
+	dcat:keyword "deep learning", "object detection", "instance segmentation", "multispectral data" ;
 	a it6:MachineLearningModel .
 
-<https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors> dct:format <http://example.com/format/safetensors> ;
-	dct:identifier "bloomz-7b1.safetensors" ;
-	dct:title "bloomz-7b1 safetensors format" ;
-	it6:url <https://huggingface.co/bigscience/bloomz-7b1/resolve/main/model.safetensors> ;
-	spdx:checksum <http://example.com/Checksum/1> ;
-	a it6:OutputFilePrediction .
-
-<http://example.com/Checksum/1> spdx:checksumValue "4e1e2bdcc97ec356cc92130d3802c81a324e9840b0ed417a9342ea728aa1d369"^^xsd:hexBinary ;
-	spdx:algorithm spdx:checksumAlgorithm_sha256 ;
-	a spdx:Checksum .
-
-<https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin> dct:format <http://example.com/format/pytorch> ;
-	dct:identifier "bloomz-7b1-pytorch" ;
-	dct:title "bloomz-7b1 pytorch format" ;
-	it6:url <https://huggingface.co/bigscience/bloomz-7b1/resolve/main/pytorch_model.bin> ;
-	spdx:checksum <http://example.com/Checksum/2> ;
-	a it6:OutputFilePrediction .
-
-<http://example.com/Checksum/2> spdx:checksumValue "d1f5d9fc449dd5fbe045f62c609e2b70f63d2e63faf74d7e0adb895dc294f28e"^^xsd:hexBinary ;
-	spdx:algorithm spdx:checksumAlgorithm_sha256 ;
-	a spdx:Checksum .
-
-<https://huggingface.co/bigscience/bloomz-7b1/tree/main> dct:title "Files" ;
-	it6:hasFile <https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors>, <https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin> ;
+<https://github.com/ai4os-hub/thermal-bridges-rooftops-detector> dct:title "GitHub" ;
 	a lpwc:repository .
 
-<http://example.com/BibliographicReference/1> dct:bibliographicCitation """@article{muennighoff2022crosslingual,
-title={Crosslingual generalization through multitask finetuning},
-author={Muennighoff, Niklas and Wang, Thomas and Sutawika, Lintang and Roberts, Adam and Biderman, Stella and Scao, Teven Le and Bari, M Saiful and Shen, Sheng and Yong, Zheng-Xin and Schoelkopf, Hailey and others},
-journal={arXiv preprint arXiv:2211.01786},
-year={2022}}""" ;
+<https://hub.docker.com/r/ai4oshub/thermal-bridges-rooftops-detector> dct:title "Docker" ;
+	a lpwc:repository .
+
+<http://example.com/BibliographicReference/1> dct:bibliographicCitation "@article{MAYER2023104690,title = {Deep learning approaches to building rooftop thermal bridge detection from aerial images},journal = {Automation in Construction},volume = {146},pages = {104690},year = {2023},issn = {0926-5805},doi = {https://doi.org/10.1016/j.autcon.2022.104690},url = {https://www.sciencedirect.com/science/article/pii/S092658052200560X},author = {Zoe Mayer and James Kahn and Yu Hou and Markus Götz and Rebekka Volk and Frank Schultmann},keywords = {Building analysis, Thermal bridges, Drones, Deep learning, Computer vision, Object detection},abstract = {Thermal bridges are weak points of building envelopes that can lead to energy losses, collection of moisture, and formation of mould in the building fabric. To detect thermal bridges of large building stocks, drones with thermographic cameras can be used. As the manual analysis of comprehensive image datasets is very time-consuming, we investigate deep learning approaches for its automation. For this, we focus on thermal bridges on building rooftops recorded in panorama drone images from our updated dataset of Thermal Bridges on Building Rooftops (TBBRv2), containing 926 images with 6,927 annotations. The images include RGB, thermal, and height information. We compare state-of-the-art models with and without pretraining from five different neural network architectures: MaskRCNN R50, Swin-T transformer, TridentNet, FSAF, and a MaskRCNN R18 baseline. We find promising results, especially for pretrained models, scoring an Average Recall above 50% for detecting large thermal bridges with a pretrained Swin-T Transformer model.}}" ;
 	dct:format "http://example.com/format/BibTeX" ;
-	dct:references <https://arxiv.org/abs/2211.01786> ;
+	dct:references <https://doi.org/10.1016/j.autcon.2022.104690> ;
 	a biro:BibliographicReference .
 
-<https://arxiv.org/abs/2211.01786> dct:date "2023-05-29"^^xsd:date ;
-	it6:hasDocument <https://arxiv.org/pdf/2211.01786> ;
-	dct:title "Crosslingual Generalization through Multitask Finetuning" ;
+<https://doi.org/10.1016/j.autcon.2022.104690> dct:date "2022-11-26"^^xsd:date ;
+	it6:hasDocument <https://www.sciencedirect.com/science/article/pii/S092658052200560X/pdfft?md5=9569ab0974f5a79ab7c99831f3f09ff6&pid=1-s2.0-S092658052200560X-main.pdf> ;
+	dct:title "Deep learning approaches to building rooftop thermal bridge detection from aerial images" ;
+	a lpwc:paper .
+
+<http://example.com/BibliographicReference/2> dct:bibliographicCitation """TY  - JOUR
+AU  - Mayer, Zoe
+AU  - Kahn, James
+AU  - Götz, Markus
+AU  - Hou, Yu
+AU  - Beiersdörfer, Tobias
+AU  - Blumenröhr, Nicolas
+AU  - Volk, Rebekka
+AU  - Streit, Achim
+AU  - Schultmann, Frank
+PY  - 2023
+DA  - 2023/05/10
+TI  - Thermal Bridges on Building Rooftops
+JO  - Scientific Data
+SP  - 268
+VL  - 10
+IS  - 1
+AB  - Thermal Bridges on Building Rooftops (TBBR) is a multi-channel remote sensing dataset. It was recorded during six separate UAV fly-overs of the city center of Karlsruhe, Germany, and comprises a total of 926 high-resolution images with 6927 manually-provided thermal bridge annotations. Each image provides five channels: three color, one thermographic, and one computationally derived height map channel. The data is pre-split into training and test data subsets suitable for object detection and instance segmentation tasks. All data is organized and structured to comply with FAIR principles, i.e. being findable, accessible, interoperable, and reusable. It is publicly available and can be downloaded from the Zenodo data repository. This work provides a comprehensive data descriptor for the TBBR dataset to facilitate broad community uptake.
+SN  - 2052-4463
+UR  - https://doi.org/10.1038/s41597-023-02140-z
+DO  - 10.1038/s41597-023-02140-z
+ID  - Mayer2023
+ER  - 
+""" ;
+	dct:format "http://example.com/format/Ris" ;
+	dct:references <https://doi.org/10.1038/s41597-023-02140-z> ;
+	a biro:BibliographicReference .
+
+<https://doi.org/10.1038/s41597-023-02140-z> dct:date "2023-05-10"^^xsd:date ;
+	it6:hasDocument <https://www.nature.com/articles/s41597-023-02140-z.pdf> ;
+	dct:title "Thermal Bridges on Building Rooftops" ;
 	a lpwc:paper .
 
 <https://huggingface.co/Muennighoff> foaf:name "Niklas Muennighoff" ;
