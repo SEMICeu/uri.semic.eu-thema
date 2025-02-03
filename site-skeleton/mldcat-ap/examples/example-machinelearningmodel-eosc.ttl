@@ -1,5 +1,5 @@
 @prefix biro: <http://purl.org/spar/biro/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix it6: <http://data.europa.eu/it6/> .
 @prefix lpwc: <https://linkedpaperswithcode.com/class/> .
@@ -7,7 +7,7 @@
 @prefix spdx: <http://spdx.org/rdf/terms#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://huggingface.co/bigscience/bloomz-7b1> dcterms:created "2024-02-22T09:05:04"^^xsd:dateTime ;
+<https://huggingface.co/bigscience/bloomz-7b1> dct:created "2024-02-22T09:05:04"^^xsd:dateTime ;
 	it6:hasOutputFilePrediction <https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors>, <https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin> ;
 	it6:hasRepository <https://huggingface.co/bigscience/bloomz-7b1/tree/main> ;
 	it6:hasBibliographicReference <http://example.com/BibliographicReference/1> ;
@@ -18,16 +18,16 @@ Suggest at least five related search terms to "Mạng neural nhân tạo".
 Write a fairy tale about a troll saving a princess from a dangerous dragon. The fairy tale is a masterpiece that has achieved praise worldwide and its moral is "Heroes Come in All Shapes and Sizes". Story (in Spanish):
 Explain in a sentence in Telugu what is backpropagation in neural networks.
 Feel free to share your generations in the Community tab!""" ;
-	dcterms:license <https://huggingface.co/spaces/bigscience/license> ;
+	dct:license <https://huggingface.co/spaces/bigscience/license> ;
 	it6:limitations "Prompt Engineering: The performance may vary depending on the prompt. For BLOOMZ models, we recommend making it very clear when the input stops to avoid the model trying to continue it. For example, the prompt \"Translate to English: Je t'aime\" without the full stop (.) at the end, may result in the model trying to continue the French sentence. Better prompts are e.g. \"Translate to English: Je t'aime.\", \"Translate to English: Je t'aime. Translation:\" \"What is \"Je t'aime.\" in English?\", where it is clear for the model when it should answer. Further, we recommend providing the model as much context as possible. For example, if you want it to answer in Telugu, then tell the model, e.g. \"Explain in a sentence in Telugu what is backpropagation in neural networks.\"." ;
-	dcterms:title "bloomz-7b1" ;
+	dct:title "bloomz-7b1" ;
 	it6:trainedOn <https://huggingface.co/datasets/bigscience/xP3>, <https://huggingface.co/datasets/bigscience/xP3all> ;
 	it6:version "1.0.0" ;
 	a it6:MachineLearningModel .
 
-<https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors> dcterms:format <http://example.com/format/safetensors> ;
-	dcterms:identifier "bloomz-7b1.safetensors" ;
-	dcterms:title "bloomz-7b1 safetensors format" ;
+<https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors> dct:format <http://example.com/format/safetensors> ;
+	dct:identifier "bloomz-7b1.safetensors" ;
+	dct:title "bloomz-7b1 safetensors format" ;
 	it6:url <https://huggingface.co/bigscience/bloomz-7b1/resolve/main/model.safetensors> ;
 	spdx:checksum <http://example.com/Checksum/1> ;
 	a it6:OutputFilePrediction .
@@ -36,9 +36,9 @@ Feel free to share your generations in the Community tab!""" ;
 	spdx:algorithm spdx:checksumAlgorithm_sha256 ;
 	a spdx:Checksum .
 
-<https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin> dcterms:format <http://example.com/format/pytorch> ;
-	dcterms:identifier "bloomz-7b1-pytorch" ;
-	dcterms:title "bloomz-7b1 pytorch format" ;
+<https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin> dct:format <http://example.com/format/pytorch> ;
+	dct:identifier "bloomz-7b1-pytorch" ;
+	dct:title "bloomz-7b1 pytorch format" ;
 	it6:url <https://huggingface.co/bigscience/bloomz-7b1/resolve/main/pytorch_model.bin> ;
 	spdx:checksum <http://example.com/Checksum/2> ;
 	a it6:OutputFilePrediction .
@@ -47,21 +47,22 @@ Feel free to share your generations in the Community tab!""" ;
 	spdx:algorithm spdx:checksumAlgorithm_sha256 ;
 	a spdx:Checksum .
 
-<https://huggingface.co/bigscience/bloomz-7b1/tree/main> it6:hasFile <https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors>, <https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin> ;
+<https://huggingface.co/bigscience/bloomz-7b1/tree/main> dct:title "Files" ;
+	it6:hasFile <https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors>, <https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin> ;
 	a lpwc:repository .
 
-<http://example.com/BibliographicReference/1> dcterms:bibliographicCitation """@article{muennighoff2022crosslingual,
+<http://example.com/BibliographicReference/1> dct:bibliographicCitation """@article{muennighoff2022crosslingual,
 title={Crosslingual generalization through multitask finetuning},
 author={Muennighoff, Niklas and Wang, Thomas and Sutawika, Lintang and Roberts, Adam and Biderman, Stella and Scao, Teven Le and Bari, M Saiful and Shen, Sheng and Yong, Zheng-Xin and Schoelkopf, Hailey and others},
 journal={arXiv preprint arXiv:2211.01786},
 year={2022}}""" ;
-	dcterms:format "http://example.com/format/BibTeX" ;
-	dcterms:references <https://arxiv.org/abs/2211.01786> ;
+	dct:format "http://example.com/format/BibTeX" ;
+	dct:references <https://arxiv.org/abs/2211.01786> ;
 	a biro:BibliographicReference .
 
-<https://arxiv.org/abs/2211.01786> dcterms:date "2023-05-29"^^xsd:date ;
+<https://arxiv.org/abs/2211.01786> dct:date "2023-05-29"^^xsd:date ;
 	it6:hasDocument <https://arxiv.org/pdf/2211.01786> ;
-	dcterms:title "Crosslingual Generalization through Multitask Finetuning" ;
+	dct:title "Crosslingual Generalization through Multitask Finetuning" ;
 	a lpwc:paper .
 
 <https://huggingface.co/Muennighoff> foaf:name "Niklas Muennighoff" ;

@@ -1,6 +1,6 @@
 {
     "@context": [
-     "https://semiceu.github.io/uri.semic.eu-generated/MLDCAT-AP/releases/2.0.0/context/mldcat-ap.jsonld",
+     "https://semiceu.github.io/uri.semic.eu-generated/MLDCAT-AP/releases/2.1.0/context/mldcat-ap.jsonld",
       {
         "biro" : "http://purl.org/spar/biro/",
         "it6" : "http://data.europa.eu/it6/",
@@ -61,7 +61,8 @@
         {
             "@id": "https://huggingface.co/bigscience/bloomz-7b1/tree/main",
             "@type": "Repository",
-            "Repository.hasFile" : ["https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors","https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin"]
+            "Repository.hasFile" : ["https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors","https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin"],
+			"Repository.name" : "Files"
         },
         {
             "@id": "http://example.com/BibliographicReference/1",
