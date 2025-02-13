@@ -4,7 +4,7 @@
 
     var respecConfig = {
       postProcess: [quickreference],
-      edDraftURI: "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/ProofOfDomicile/releases/0.0.1",
+      edDraftURI: "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/ProofOfBirthOfSibling/releases/0.0.1",
       latestVersion: "{{metadata.navigation.prev}}",
       specStatus: "LD",
       editors: myeditors,
@@ -71,7 +71,7 @@
 
 {% block introduction %}
 <p>
-  The Proof of domicile data model provides a minimum set of classes and properties for describing a proof of domicile evidence. This data model has been designed to support the different requirements of the OOTS action. The different classes and properties defined in this document are based on the <a href="https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/data_dictionary.html">OOTS data dictionary</a>.
+  The Proof of birth of sibling data model provides a minimum set of classes and properties for describing a proof of birth of sibling evidence. This data model has been designed to support the different requirements of the OOTS action. The different classes and properties defined in this document are based on the <a href="https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/data_dictionary.html">OOTS data dictionary</a>.
 </p>
 {% endblock %}
 
@@ -79,7 +79,7 @@
 {% block summary %}
 <section id="abstract">
     <h2>Abstract</h2>
-Proof of domicle is a simplified data model describing a request for evidence regarding the birth of a person (evidence subject). This data model draws upon the domicile public document description of <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R1191&from=EN#d1e41-20-1">REGULATION (EU) 2016/119</a>.
+Proof of birth of sibling is a simplified data model describing a request for evidence regarding the birth of a person (evidence subject). This data model draws upon the birth public document description of REGULATION (EU) 2016/119<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R1191&from=EN#d1e41-20-1">Annex II</a>.
 </section>
 {% endblock %}
 
@@ -93,6 +93,8 @@ This specification uses the following prefixes to shorten the URIs for readibili
             <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
             <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
             <tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
+            <tr><td><code>oots</code></td><td><code>http://data.europa.eu/p4s/</code></td></tr>
+            <tr><td><code>person</code></td><td><code>http://www.w3.org/ns/person#/</code></td></tr>
             <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
             <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
             <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
@@ -103,12 +105,12 @@ This specification uses the following prefixes to shorten the URIs for readibili
 
 {% block umlrepresentation %}		
 		<h3>UML representation</h3>
-		The UML representation from which the {{metadata.title}} has been build is available <a href="./UML/OOTS_ProofOfDomicile.eap">here</a>.
+		The UML representation from which the {{metadata.title}} has been build is available <a href="./UML/OOTS_ProofOfBirthOfSibling.eap">here</a>.
 {% endblock %} 
 
 {% block xmlschema %}
 		<h3>XML schema representation</h3>
-		The XML schema representation from which the {{metadata.title}} has been build is available <a href="https://code.europa.eu/oots/tdd/data_models/-/tree/main/Evidence/ProofOfDomicile/releases/0.0.1/xsd?ref_type=heads">here</a>
+		The XML schema representation from which the {{metadata.title}} has been build is available <a href="https://code.europa.eu/oots/tdd/data_models/-/tree/main/Evidence/ProofOfBirthOfSibling/releases/0.0.1/xsd?ref_type=heads">here</a>
 {% endblock %}
 
 {% block examples %}
@@ -117,6 +119,6 @@ This specification uses the following prefixes to shorten the URIs for readibili
 
 {% block feedback %}
 	<p>
-		Please provide feedback on the <a href="https://ec.europa.eu/digital-building-blocks/wikis/display/SDGOO/Proof+of+citizenship+-+SDM">discussion forum</a>
+		Please provide feedback on the <a href="https://ec.europa.eu/digital-building-blocks/wikis/display/SDGOO/Proof+of+birth+of+sibling+-+SDM">discussion forum</a>
 	</p>
 {% endblock %}
