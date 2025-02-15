@@ -7,7 +7,7 @@
   "template": "srm_en.j2",
   "title": "Semantic Repository Model",
   "publication-state": "SEMIC Recommendation",
-  "publication-date": "2025-02-07",
+  "publication-date": "2025-02-15",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "SRM",
@@ -27,7 +27,7 @@
     ],
     "toolchainversion" : "3",
     "documentconfig": {
-          "statuslabel" : "Semantic Repository Model",
+          "statuslabel" : "Draft",
           "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/SRM/releases/1.0.0"
     }
 }
