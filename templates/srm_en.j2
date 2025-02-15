@@ -10,7 +10,7 @@
       publishDate: "{{ metadata.issued }}",
       editors: myeditors,
       authors: myauthors,
-      github: "SEMICeu/CPSV-AP",
+      github: "SEMICeu/SRM",
       shortName: "{{metadata.title}}",
       xref: "web-platform",
       doJsonLd: true,
@@ -73,30 +73,23 @@
 
 {% block introduction %}
 <p>
-  The original Core Public Service Vocabulary Application Profile (CPSV-AP) was prepared in the context of Action 2016.29 – Accessing Member State
-  information resources at European level – Catalogue of Services of the European Commission’s Interoperability for European Public Administrations (ISA) programme.
-  The CPSV-AP has been seen as a first step for creating a model for describing public services related to business and life events,
-  to facilitate the set-up of catalogues of services oriented to businesses and citizens.
+  SRM has been conceived to find and search semantic models withing the Semantic Registry.
 </p>
 <p>
-  CPSV-AP is designed to meet the following use cases:
+  SRM is designed to meet the following use cases:
   <ul>
-    <li>facilitating the access to public service information;</li>
-    <li>building user-centric catalogues of public services at all levels from regional to a European federated catalogue;</li>
-    <li>managing portfolios of public services;</li>
-    <li>finding information of generic and specialised public services; and</li>
-    <li>the execution of a public service, i.e.; when a public service is performed and produces a physical object.</li>
+    <li>facilitating the access to semantic models;</li>
+    <li>building user-centric registry of semantic models so end users are able to find them quickly; and</li>
+	<li>incentive communities to collaborate on semantic models.</li>
   </ul>
 </p>
 <p>
-  The specification of the Core Public Service Vocabulary Application Profile is represented in a UML class diagram.
+  The specification of the SRM is represented in a UML class diagram.
   The figure here beneath shows the full profile which includes:
   <ul>
-    <li>The classes and properties that define the service itself: the necessary inputs, possible outputs,
-    the responsible public authority and the events that trigger service use;</li>
-    <li>The classes and properties that describe the context in which the service is offered.
-    This includes relevant legislation and rules of operation for the service; and </li>
-    <li>The interface between the service and its users: how and when it can be accessed.</li> 
+    <li>The class that define the semantic models;</li>
+    <li>The classes and properties that describe the Organization behind the specification and ContactPoint; and </li>
+    <li>The different ways a sematic model is provided .</li> 
 </p>
 {% endblock %}
 
@@ -104,28 +97,30 @@
 {% block summary %}
 <section id="abstract">
     <h2>Abstract</h2>
-CPSV-AP provides a minimal common basis within Europe to describe public services.
+SRM (Semantic Registry Model) is designed to accomodate metadata to be used by the Semantic Registry.
 </section>
 {% endblock %}
 
 {% block terminologyPrefixes %}
 This specification uses the following prefixes to shorten the URIs for readibility.
 
-        <table id="table-namespaces" class="simple">
-            <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
-            <tbody>
-            <tr><td><code>adms</code></td><td><code>http://www.w3.org/ns/adms#</code></td></tr>
-            <tr><td><code>dcat</code></td><td><code>http://www.w3.org/ns/dcat#</code></td></tr>
-            <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
-            <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
-            <tr><td><code>prof</code></td><td><code>http://www.w3.org/ns/dx/prof/</code></td></tr>
-            <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
-            <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
-            <tr><td><code>time</code></td><td><code>http://www.w3.org/2006/time#</code></td></tr>
-            <tr><td><code>vcard</code></td><td><code>http://www.w3.org/2006/vcard/ns#</code></td></tr>
-            <tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
-            </tbody>
-        </table>
+<table id="table-namespaces" class="simple">
+	<thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+	<tbody>
+		<tr><td><code>adms</code></td><td><code>http://www.w3.org/ns/adms#</code></td></tr>
+		<tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>
+		<tr><td><code>dcat</code></td><td><code>http://www.w3.org/ns/dcat#</code></td></tr>
+		<tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
+		<tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
+		<tr><td><code>owl</code></td><td><code>http://www.w3.org/2002/07/owl#</code></td></tr>
+		<tr><td><code>prof</code></td><td><code>http://www.w3.org/ns/dx/prof/</code></td></tr>
+		<tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
+		<tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
+		<tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#Concept</code></td></tr>
+		<tr><td><code>vcard</code></td><td><code>http://www.w3.org/2006/vcard/ns#</code></td></tr>
+		<tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
+	</tbody>
+</table>
 
 {% endblock %}
 
