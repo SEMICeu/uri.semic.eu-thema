@@ -14,3 +14,5 @@
 	
 <http://data.europa.eu/2sa/cssv/rsc/8a01e22a41614a4a1b2a17aac3b6e9aa70f174640ac80ea8510d7b45772e121f> a foaf:Agent ;
 	dct:title "EC"@en .
+
+<https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-person-vocabulary/release/200> a foaf:Document .
