@@ -20,7 +20,7 @@
       {
         "language":"en",
         "template":"srm_en.j2",
-        "title": "Semantic Repository Model",
+        "title": "Semantic Registry Model",
         "translationjson":"srm_en.json",
         "mergefile":"srm_en_merged.jsonld"
       }
