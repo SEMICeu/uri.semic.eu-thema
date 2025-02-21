@@ -4,18 +4,16 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/italia/data/public-organization/ISTAT> dct:title "Italian National Institute of Statistics"@en, 
-                                                                   "Italian National Institute of Statistics - ISTAT"@en, 
-                                                                   "Istituto Nazionale di Statistica - ISTAT"@it, 
-                                                                   "Istituto Nazionale di Statistica"@it ;
+<https://w3id.org/italia/data/public-organization/ISTAT> dct:title  "Italian National Institute of Statistics - ISTAT"@en, 
+           "Istituto Nazionale di Statistica - ISTAT"@it;
     a foaf:Agent .
 
 <https://w3id.org/italia/data/public-organization/agid> dct:title "Italian Digital Agency"@en, 
-                                                                  "Agenzia per l'Italia Digitale"@it ;
+          "Agenzia per l'Italia Digitale"@it ;
     a foaf:Agent .
 
 <https://w3id.org/italia/onto/CPV> dct:creator <https://w3id.org/italia/data/public-organization/ISTAT>, 
-                                                   <https://w3id.org/italia/data/public-organization/agid> ;
+    <https://w3id.org/italia/data/public-organization/agid> ;
     dct:description "This is the ontology of the Italian application profile on persons. The ontology models general information on natural persons such as first name, surname, date of birth, place of birth, tax code, residence, citizenship and relations between persons both generic of knowledge and generic of kinship relations but not as registered with the civil registry."@en, 
                     "Questa è l'ontologia del profilo applicativo italiano sulle persone. L'ontologia modella informazioni generali sulle persone fisiche come per esempio il nome, cognome, data di nascita, luogo di nascita, codice fiscale, residenza, cittadinanza e relazioni tra persone sia generiche di conoscenza sia di generiche relazioni di parentela ma non come registrate presso l'anagrafe."@it ;
     dct:identifier "https://w3id.org/italia/onto/CPV" ;

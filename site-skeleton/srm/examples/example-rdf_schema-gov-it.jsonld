@@ -16,19 +16,11 @@
       "dct:title": [
         {
           "@language": "en",
-          "@value": "Italian National Institute of Statistics"
-        },
-        {
-          "@language": "en",
           "@value": "Italian National Institute of Statistics - ISTAT"
         },
         {
           "@language": "it",
           "@value": "Istituto Nazionale di Statistica - ISTAT"
-        },
-        {
-          "@language": "it",
-          "@value": "Istituto Nazionale di Statistica"
         }
       ]
     },
