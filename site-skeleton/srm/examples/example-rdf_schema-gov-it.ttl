@@ -1,10 +1,11 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
 
 <https://w3id.org/italia/data/public-organization/ISTAT> dct:title "Italian National Institute of Statistics - ISTAT"@en, "Istituto Nazionale di Statistica - ISTAT"@it ;
 	a foaf:Agent .
@@ -12,7 +13,11 @@
 <https://w3id.org/italia/data/public-organization/agid> dct:title "Italian Digital Agency"@en, "Agenzia per l'Italia Digitale"@it ;
 	a foaf:Agent .
 
+<https://w3id.org/italia/data/public-organization/PCM-1RSIZZ> dct:title "Digital Transformation Department of the Presidency of the Council of Ministers"@en, "Dipartimento per la Trasformazione Digitale della Presidenza del Consiglio dei Ministri "@it ;
+	a foaf:Agent .
+
 <https://w3id.org/italia/onto/CPV> dct:creator <https://w3id.org/italia/data/public-organization/ISTAT>, <https://w3id.org/italia/data/public-organization/agid> ;
+	dct:publisher <https://w3id.org/italia/data/public-organization/PCM-1RSIZZ> ;
 	dct:description "This is the ontology of the Italian application profile on persons. The ontology models general information on natural persons such as first name, surname, date of birth, place of birth, tax code, residence, citizenship and relations between persons both generic of knowledge and generic of kinship relations but not as registered with the civil registry."@en, "Questa è l'ontologia del profilo applicativo italiano sulle persone. L'ontologia modella informazioni generali sulle persone fisiche come per esempio il nome, cognome, data di nascita, luogo di nascita, codice fiscale, residenza, cittadinanza e relazioni tra persone sia generiche di conoscenza sia di generiche relazioni di parentela ma non come registrate presso l'anagrafe."@it ;
 	dct:identifier "https://w3id.org/italia/onto/CPV" ;
 	dct:title "CPV-AP_IT - Core Person Vocabulary Italian Application Profile - Person Ontology"@en, "CPV-AP_IT: Core Person Vocabulary - profilo applicativo italiano - Ontologia delle persone"@it ;
@@ -21,10 +26,15 @@
 	dct:modified "2023-03-15T00:00:00"^^xsd:dateTime ;
 	dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG> ;
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+	cv:contactPoint <https://w3id.org/italia/data/contact-point/ISTAT-NDC> ;
 	a dct:Standard .
+
+<https://w3id.org/italia/data/contact-point/ISTAT-NDC> cv:email "ndc-segr-tec@istat.it" ;
+	a cv:ContactPoint .
 
 <http://publications.europa.eu/resource/authority/language/ITA> a skos:Concept .
 
 <http://publications.europa.eu/resource/authority/language/ENG> a skos:Concept .
 
 <http://publications.europa.eu/resource/authority/data-theme/SOCI> a skos:Concept .
+
