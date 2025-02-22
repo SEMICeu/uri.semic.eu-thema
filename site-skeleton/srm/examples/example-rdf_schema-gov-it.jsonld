@@ -2,6 +2,8 @@
   "@context": [
   "https://semiceu.github.io/uri.semic.eu-generated/SRM/releases/1.0.0/context/srm.jsonld",
    {
+    "cv" : "http://data.europa.eu/m8g/",
+    "dcat" : "http://www.w3.org/ns/dcat#",
     "dct": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "owl": "http://www.w3.org/2002/07/owl#",
@@ -39,6 +41,20 @@
       ]
     },
     {
+      "@id": "https://w3id.org/italia/data/public-organization/PCM-1RSIZZ",
+      "@type": "Agent",
+      "dct:title": [
+        {
+          "@language": "en",
+          "@value": "Digital Transformation Department of the Presidency of the Council of Ministers"
+        },
+        {
+          "@language": "it",
+          "@value": "Dipartimento per la Trasformazione Digitale della Presidenza del Consiglio dei Ministri "
+        }
+      ]
+    },
+    {
       "@id": "https://w3id.org/italia/onto/CPV",
       "@type": "Standard",
       "dct:creator": [
@@ -49,6 +65,9 @@
           "@id": "https://w3id.org/italia/data/public-organization/agid"
         }
       ],
+      "dct:publisher": {
+          "@id": "https://w3id.org/italia/data/public-organization/PCM-1RSIZZ"
+      },
       "dct:description": [
         {
           "@language": "en",
@@ -79,7 +98,46 @@
           "@language": "it",
           "@value": "Versione 0.8 - aggiornata il 15 marzo 2023 - Eliminata la famiglia anagrafica e tutto ciò che riguarda le informazioni anagrafiche delle persone (ad esempio, la relazione parentale memorizzata nell'anagrafe nazionale della popolazione residente, l'intestatario del foglio di famiglia). Eliminata la classe BornDead e introdotto il concetto di Gender da distinguere dal concetto di Sex. Semplificata la modellazione della residenza, lasciando nell'ontologia solo due elementi principali: la proprietà generale residentIn per una Persona e la reificazione ResidenceInTime per modellare questo tipo di informazioni generali sulla residenza di una persona che possono cambiare nel tempo. Modificato il dominio della proprietà hasLevelOfEducation per essere utilizzata per ogni tipo di persona e modificati i metadati dell'ontologia."
         }
-      ]
+      ],
+      "dct:issued": {
+          "@value": "2017-07-19T00:00:00",
+          "@type": "xsd:dateTime"
+      },
+      "dct:modified": {
+          "@value": "2023-03-15T00:00:00",
+          "@type": "xsd:dateTime"
+      },
+      "dct:language": [
+        {
+          "@id": "http://publications.europa.eu/resource/authority/language/ITA"
+        },
+        {
+          "@id": "http://publications.europa.eu/resource/authority/language/ENG"
+        }
+      ],
+      "dcat:theme": {
+          "@id": "http://publications.europa.eu/resource/authority/data-theme/SOCI"
+      },
+      "cv:contactPoint": {
+          "@id": "https://w3id.org/italia/data/contact-point/ISTAT-NDC"
+      }
+    },
+    {
+      "@id": "https://w3id.org/italia/data/contact-point/ISTAT-NDC",
+      "@type" : "ContactPoint",
+      "cv:email" : "ndc-segr-tec@istat.it"
+    },
+    {
+      "@id": "http://publications.europa.eu/resource/authority/language/ITA",
+      "@type": "Code"
+    },
+    {
+      "@id": "http://publications.europa.eu/resource/authority/language/ENG",
+      "@type": "Code"
+    },
+    {
+      "@id": "http://publications.europa.eu/resource/authority/data-theme/SOCI",
+      "@type": "Code"
     }
   ]
 }
