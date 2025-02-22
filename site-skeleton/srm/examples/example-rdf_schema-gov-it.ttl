@@ -1,3 +1,4 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix cv: <http://data.europa.eu/m8g/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -26,6 +27,7 @@
 	dct:modified "2023-03-15T00:00:00"^^xsd:dateTime ;
 	dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG> ;
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+	adms:status <http://purl.org/adms/status/completed> ;
 	cv:contactPoint <https://w3id.org/italia/data/contact-point/ISTAT-NDC> ;
 	a dct:Standard .
 
@@ -37,4 +39,6 @@
 <http://publications.europa.eu/resource/authority/language/ENG> a skos:Concept .
 
 <http://publications.europa.eu/resource/authority/data-theme/SOCI> a skos:Concept .
+
+<http://purl.org/adms/status/completed> a skos:Concept .
 

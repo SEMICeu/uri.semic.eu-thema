@@ -2,6 +2,7 @@
   "@context": [
   "https://semiceu.github.io/uri.semic.eu-generated/SRM/releases/1.0.0/context/srm.jsonld",
    {
+    "adms": "http://www.w3.org/ns/adms#",
     "cv" : "http://data.europa.eu/m8g/",
     "dcat" : "http://www.w3.org/ns/dcat#",
     "dct": "http://purl.org/dc/terms/",
@@ -118,6 +119,9 @@
       "dcat:theme": {
           "@id": "http://publications.europa.eu/resource/authority/data-theme/SOCI"
       },
+      "adms:status": {
+          "@id": "http://purl.org/adms/status/completed"
+      }, 
       "cv:contactPoint": {
           "@id": "https://w3id.org/italia/data/contact-point/ISTAT-NDC"
       }
@@ -137,6 +141,10 @@
     },
     {
       "@id": "http://publications.europa.eu/resource/authority/data-theme/SOCI",
+      "@type": "Code"
+    },
+    {
+      "@id": "http://purl.org/adms/status/completed",
       "@type": "Code"
     }
   ]
