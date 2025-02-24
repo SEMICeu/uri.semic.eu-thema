@@ -10,6 +10,7 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "prof": "http://www.w3.org/ns/dx/prof/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
    }
   ],
@@ -198,7 +199,21 @@
       ],
       "prof:hasRole" : {
         "@id": "http://www.w3.org/ns/dx/prof/roles/vocabulary"
-      }
+      },
+      "dct:hasPart" : [
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/EducationLevel"
+       },
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/Person"
+       },
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/Sex"
+       },
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/ResidenceInTime"
+       }
+      ]
     },
     {
       "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE",
@@ -218,7 +233,21 @@
       ],
       "prof:hasRole" : {
         "@id": "http://www.w3.org/ns/dx/prof/roles/vocabulary"
-      }
+      },
+      "dct:hasPart" : [
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/EducationLevel"
+       },
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/Person"
+       },
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/Sex"
+       },
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/ResidenceInTime"
+       }
+      ]
     },
     {
       "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML",
@@ -238,7 +267,21 @@
       ],
       "prof:hasRole" : {
         "@id": "http://www.w3.org/ns/dx/prof/roles/vocabulary"
-      }
+      },
+      "dct:hasPart" : [
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/EducationLevel"
+       },
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/Person"
+       },
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/Sex"
+       },
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/ResidenceInTime"
+       }
+      ]
     },
     {
       "@id": "http://www.w3.org/ns/dx/prof/roles/vocabulary",
@@ -306,6 +349,62 @@
           "@value": "Address(Location) Ontology"
         },
       "dct:identifier": "https://w3id.org/italia/onto/CLV"
+    },
+    {
+      "@id": "https://w3id.org/italia/onto/CPV/EducationLevel",
+      "@type": "Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Education Level"
+        },
+        {
+          "@language": "it",
+          "@value": "Grado di Istruzione"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/italia/onto/CPV/Person",
+      "@type": "Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Person"
+        },
+        {
+          "@language": "it",
+          "@value": "Persona fisica"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/italia/onto/CPV/Sex",
+      "@type": "Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Sex"
+        },
+        {
+          "@language": "it",
+          "@value": "Sesso"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/italia/onto/CPV/ResidenceInTime",
+      "@type": "Class",
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Residence in Time"
+        },
+        {
+          "@language": "it",
+          "@value": "Residenza nel tempo (storica)"
+        }
+      ]
     }
   ]
 }
