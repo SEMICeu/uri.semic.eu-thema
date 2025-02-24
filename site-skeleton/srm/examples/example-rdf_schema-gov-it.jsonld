@@ -8,6 +8,7 @@
     "dct": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "owl": "http://www.w3.org/2002/07/owl#",
+    "prof": "http://www.w3.org/ns/dx/prof/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
    }
@@ -51,7 +52,7 @@
         },
         {
           "@language": "it",
-          "@value": "Dipartimento per la Trasformazione Digitale della Presidenza del Consiglio dei Ministri "
+          "@value": "Dipartimento per la Trasformazione Digitale della Presidenza del Consiglio dei Ministri"
         }
       ]
     },
@@ -124,7 +125,28 @@
       }, 
       "cv:contactPoint": {
           "@id": "https://w3id.org/italia/data/contact-point/ISTAT-NDC"
-      }
+      },
+      "cv:isReusedBy": [
+        {
+          "@value": "https://w3id.org/italia/data/project/NDC",
+          "@type": "xsd:anyURI"
+        },
+        {
+          "@value": "https://w3id.org/italia/data/project/OntoPiA",
+          "@type": "xsd:anyURI"
+        }
+      ],
+      "prof:hasResource": [
+       {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD"
+       },
+       {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE"
+       },
+       {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML"
+       }
+       ]
     },
     {
       "@id": "https://w3id.org/italia/data/contact-point/ISTAT-NDC",
@@ -145,6 +167,78 @@
     },
     {
       "@id": "http://purl.org/adms/status/completed",
+      "@type": "Code"
+    },
+    {
+      "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD",
+      "@type": "ResourceDescriptor",
+      "dct:format" : {
+         "@id": "http://publications.europa.eu/resource/authority/file-type/JSON_LD"
+      },
+      "dct:title": [
+        {
+          "@language": "en",
+          "@value": "JSON-LD distribution of CPV-AP_IT Ontology"
+        },
+        {
+          "@language": "it",
+          "@value": "Distribuzione JSON-LD ontologia CPV-AP_IT"
+        }
+      ],
+      "prof:hasRole" : {
+        "@id": "http://www.w3.org/ns/dx/prof/roles/vocabulary"
+      }
+    },
+    {
+      "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE",
+      "@type": "ResourceDescriptor",
+      "dct:format" : {
+         "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"
+      },
+      "dct:title": [
+        {
+          "@language": "en",
+          "@value": "RDF/Turtle distribution of CPV-AP_IT Ontology"
+        },
+        {
+          "@language": "it",
+          "@value": "Distribuzione RDF/Turtle ontologia CPV-AP_IT"
+        }
+      ],
+      "prof:hasRole" : {
+        "@id": "http://www.w3.org/ns/dx/prof/roles/vocabulary"
+      }
+    },
+    {
+      "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML",
+      "@type": "ResourceDescriptor",
+      "dct:format" : {
+         "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_XML"
+      },
+      "dct:title": [
+        {
+          "@language": "en",
+          "@value": "RDF/XML distribution of CPV-AP_IT Ontology"
+        },
+        {
+          "@language": "it",
+          "@value": "Distribuzione RDF/XML ontologia CPV-AP_IT"
+        }
+      ],
+      "prof:hasRole" : {
+        "@id": "http://www.w3.org/ns/dx/prof/roles/vocabulary"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/ns/dx/prof/roles/vocabulary",
+      "@type": "Code"
+    },
+    {
+      "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE",
+      "@type": "Code"
+    },
+    {
+      "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_XML",
       "@type": "Code"
     }
   ]
