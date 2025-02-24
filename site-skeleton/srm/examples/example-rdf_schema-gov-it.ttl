@@ -9,30 +9,31 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/italia/data/public-organization/ISTAT> dct:title "Italian National Institute of Statistics - ISTAT"@en, "Istituto Nazionale di Statistica - ISTAT"@it ;
+<https://w3id.org/italia/data/public-organization/ISTAT> dcterms:title "Italian National Institute of Statistics - ISTAT"@en, "Istituto Nazionale di Statistica - ISTAT"@it ;
 	a foaf:Agent .
 
-<https://w3id.org/italia/data/public-organization/agid> dct:title "Italian Digital Agency"@en, "Agenzia per l'Italia Digitale"@it ;
+<https://w3id.org/italia/data/public-organization/agid> dcterms:title "Italian Digital Agency"@en, "Agenzia per l'Italia Digitale"@it ;
 	a foaf:Agent .
 
-<https://w3id.org/italia/data/public-organization/PCM-1RSIZZ> dct:title "Digital Transformation Department of the Presidency of the Council of Ministers"@en, "Dipartimento per la Trasformazione Digitale della Presidenza del Consiglio dei Ministri"@it ;
+<https://w3id.org/italia/data/public-organization/PCM-1RSIZZ> dcterms:title "Digital Transformation Department of the Presidency of the Council of Ministers"@en, "Dipartimento per la Trasformazione Digitale della Presidenza del Consiglio dei Ministri"@it ;
 	a foaf:Agent .
 
-<https://w3id.org/italia/onto/CPV> dct:creator <https://w3id.org/italia/data/public-organization/ISTAT>, <https://w3id.org/italia/data/public-organization/agid> ;
-	dct:publisher <https://w3id.org/italia/data/public-organization/PCM-1RSIZZ> ;
-	dct:description "This is the ontology of the Italian application profile on persons. The ontology models general information on natural persons such as first name, surname, date of birth, place of birth, tax code, residence, citizenship and relations between persons both generic of knowledge and generic of kinship relations but not as registered with the civil registry."@en, "Questa è l'ontologia del profilo applicativo italiano sulle persone. L'ontologia modella informazioni generali sulle persone fisiche come per esempio il nome, cognome, data di nascita, luogo di nascita, codice fiscale, residenza, cittadinanza e relazioni tra persone sia generiche di conoscenza sia di generiche relazioni di parentela ma non come registrate presso l'anagrafe."@it ;
-	dct:identifier "https://w3id.org/italia/onto/CPV" ;
-	dct:title "CPV-AP_IT - Core Person Vocabulary Italian Application Profile - Person Ontology"@en, "CPV-AP_IT: Core Person Vocabulary - profilo applicativo italiano - Ontologia delle persone"@it ;
+<https://w3id.org/italia/onto/CPV> dcterms:creator <https://w3id.org/italia/data/public-organization/ISTAT>, <https://w3id.org/italia/data/public-organization/agid> ;
+	dcterms:publisher <https://w3id.org/italia/data/public-organization/PCM-1RSIZZ> ;
+	dcterms:description "This is the ontology of the Italian application profile on persons. The ontology models general information on natural persons such as first name, surname, date of birth, place of birth, tax code, residence, citizenship and relations between persons both generic of knowledge and generic of kinship relations but not as registered with the civil registry."@en, "Questa è l'ontologia del profilo applicativo italiano sulle persone. L'ontologia modella informazioni generali sulle persone fisiche come per esempio il nome, cognome, data di nascita, luogo di nascita, codice fiscale, residenza, cittadinanza e relazioni tra persone sia generiche di conoscenza sia di generiche relazioni di parentela ma non come registrate presso l'anagrafe."@it ;
+	dcterms:identifier "https://w3id.org/italia/onto/CPV" ;
+	dcterms:title "CPV-AP_IT - Core Person Vocabulary Italian Application Profile - Person Ontology"@en, "CPV-AP_IT: Core Person Vocabulary - profilo applicativo italiano - Ontologia delle persone"@it ;
 	owl:versionInfo "Version 0.8 - updated on 15th of March 2023 - Deleted Registered Family and everything related to civil registration information of persons (e.g., parental relationship as store in the national civil registry, family sheet holder). Deleted BornDead class and introduced the Gender concept to be distinguished from the Sex Concept. Simplified the residence modelling leaving in the ontology only two main elaments: a general residentIn property for a Person and the ResidenceInTime reification to model this type of general information on the residence of a person that may change over time. Changed the domain of the property hasLevelOfEducation to be used for every type of person and changed the metadata of the ontology."@en, "Versione 0.8 - aggiornata il 15 marzo 2023 - Eliminata la famiglia anagrafica e tutto ciò che riguarda le informazioni anagrafiche delle persone (ad esempio, la relazione parentale memorizzata nell'anagrafe nazionale della popolazione residente, l'intestatario del foglio di famiglia). Eliminata la classe BornDead e introdotto il concetto di Gender da distinguere dal concetto di Sex. Semplificata la modellazione della residenza, lasciando nell'ontologia solo due elementi principali: la proprietà generale residentIn per una Persona e la reificazione ResidenceInTime per modellare questo tipo di informazioni generali sulla residenza di una persona che possono cambiare nel tempo. Modificato il dominio della proprietà hasLevelOfEducation per essere utilizzata per ogni tipo di persona e modificati i metadati dell'ontologia."@it ;
-	dct:issued "2017-07-19T00:00:00"^^xsd:dateTime ;
-	dct:modified "2023-03-15T00:00:00"^^xsd:dateTime ;
-	dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG> ;
+	dcterms:issued "2017-07-19T00:00:00"^^xsd:dateTime ;
+	dcterms:modified "2023-03-15T00:00:00"^^xsd:dateTime ;
+	dcterms:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG> ;
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
 	adms:status <http://purl.org/adms/status/completed> ;
 	cv:contactPoint <https://w3id.org/italia/data/contact-point/ISTAT-NDC> ;
 	cv:isReusedBy "https://w3id.org/italia/data/project/NDC"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI ;
 	prof:hasResource <https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD>, <https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE>, <https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML> ;
-	a dct:Standard .
+	dcterms:requires <https://w3id.org/italia/onto/TI>, <https://w3id.org/italia/onto/l0>, <https://w3id.org/italia/onto/CLV> ;
+	a dcterms:Standard .
 
 <https://w3id.org/italia/data/contact-point/ISTAT-NDC> cv:email "ndc-segr-tec@istat.it" ;
 	a cv:ContactPoint .
@@ -45,18 +46,18 @@
 
 <http://purl.org/adms/status/completed> a skos:Concept .
 
-<https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD> dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
-	dct:title "JSON-LD distribution of CPV-AP_IT Ontology"@en, "Distribuzione JSON-LD ontologia CPV-AP_IT"@it ;
+<https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD> dcterms:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+	dcterms:title "JSON-LD distribution of CPV-AP_IT Ontology"@en, "Distribuzione JSON-LD ontologia CPV-AP_IT"@it ;
 	prof:hasRole <http://www.w3.org/ns/dx/prof/roles/vocabulary> ;
 	a prof:ResourceDescriptor .
 
-<https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE> dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
-	dct:title "RDF/Turtle distribution of CPV-AP_IT Ontology"@en, "Distribuzione RDF/Turtle ontologia CPV-AP_IT"@it ;
+<https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE> dcterms:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+	dcterms:title "RDF/Turtle distribution of CPV-AP_IT Ontology"@en, "Distribuzione RDF/Turtle ontologia CPV-AP_IT"@it ;
 	prof:hasRole <http://www.w3.org/ns/dx/prof/roles/vocabulary> ;
 	a prof:ResourceDescriptor .
 
-<https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML> dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
-	dct:title "RDF/XML distribution of CPV-AP_IT Ontology"@en, "Distribuzione RDF/XML ontologia CPV-AP_IT"@it ;
+<https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML> dcterms:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+	dcterms:title "RDF/XML distribution of CPV-AP_IT Ontology"@en, "Distribuzione RDF/XML ontologia CPV-AP_IT"@it ;
 	prof:hasRole <http://www.w3.org/ns/dx/prof/roles/vocabulary> ;
 	a prof:ResourceDescriptor .
 
@@ -67,3 +68,18 @@
 <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> a skos:Concept .
 
 <http://publications.europa.eu/resource/authority/file-type/RDF_XML> a skos:Concept .
+
+<https://w3id.org/italia/onto/TI> dcterms:creator <https://w3id.org/italia/data/public-organization/ISTAT>, <https://w3id.org/italia/data/public-organization/agid> ;
+	dcterms:title "Italian Time ontology"@en ;
+	dcterms:identifier "https://w3id.org/italia/onto/TI" ;
+	a dcterms:Standard .
+
+<https://w3id.org/italia/onto/l0> dcterms:creator <https://w3id.org/italia/data/public-organization/ISTAT>, <https://w3id.org/italia/data/public-organization/agid> ;
+	dcterms:title "Top level ontology L0 - Level-0"@en ;
+	dcterms:identifier "https://w3id.org/italia/onto/l0" ;
+	a dcterms:Standard .
+
+<https://w3id.org/italia/onto/CLV> dcterms:creator <https://w3id.org/italia/data/public-organization/ISTAT>, <https://w3id.org/italia/data/public-organization/agid> ;
+	dcterms:title "Address(Location) Ontology"@en ;
+	dcterms:identifier "https://w3id.org/italia/onto/CLV" ;
+	a dcterms:Standard .

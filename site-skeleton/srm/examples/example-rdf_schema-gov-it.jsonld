@@ -137,16 +137,27 @@
         }
       ],
       "prof:hasResource": [
-       {
+        {
           "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD"
-       },
-       {
+        },
+        {
           "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE"
+        },
+        {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML"
+        }
+      ],
+      "dct:requires": [
+       {
+          "@id": "https://w3id.org/italia/onto/TI"
        },
        {
-          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML"
+          "@id": "https://w3id.org/italia/onto/l0"
+       },
+       {
+          "@id": "https://w3id.org/italia/onto/CLV"
        }
-       ]
+      ]
     },
     {
       "@id": "https://w3id.org/italia/data/contact-point/ISTAT-NDC",
@@ -244,6 +255,57 @@
     {
       "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_XML",
       "@type": "Code"
+    },
+    {
+      "@id": "https://w3id.org/italia/onto/TI",
+      "@type": "Standard",
+      "dct:creator": [
+        {
+          "@id": "https://w3id.org/italia/data/public-organization/ISTAT"
+        },
+        {
+          "@id": "https://w3id.org/italia/data/public-organization/agid"
+        }
+      ],
+      "dct:title": {
+          "@language": "en",
+          "@value": "Italian Time ontology"
+        },
+      "dct:identifier": "https://w3id.org/italia/onto/TI",
+    },
+    {
+      "@id": "https://w3id.org/italia/onto/l0",
+      "@type": "Standard",
+      "dct:creator": [
+        {
+          "@id": "https://w3id.org/italia/data/public-organization/ISTAT"
+        },
+        {
+          "@id": "https://w3id.org/italia/data/public-organization/agid"
+        }
+      ],
+      "dct:title": {
+          "@language": "en",
+          "@value": "Top level ontology L0 - Level-0"
+        },
+      "dct:identifier": "https://w3id.org/italia/onto/l0"
+    },
+    {
+      "@id": "https://w3id.org/italia/onto/CLV",
+      "@type": "Standard",
+      "dct:creator": [
+        {
+          "@id": "https://w3id.org/italia/data/public-organization/ISTAT"
+        },
+        {
+          "@id": "https://w3id.org/italia/data/public-organization/agid"
+        }
+      ],
+      "dct:title": {
+          "@language": "en",
+          "@value": "Address(Location) Ontology"
+        },
+      "dct:identifier": "https://w3id.org/italia/onto/CLV"
     }
   ]
 }
