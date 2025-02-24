@@ -234,6 +234,10 @@
       "@type": "Code"
     },
     {
+      "@id": "http://publications.europa.eu/resource/authority/file-type/JSON_LD",
+      "@type": "Code"
+    },
+    {
       "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE",
       "@type": "Code"
     },
