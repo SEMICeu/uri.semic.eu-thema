@@ -158,6 +158,20 @@
        {
           "@id": "https://w3id.org/italia/onto/CLV"
        }
+      ],
+      "dct:hasPart" : [
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/EducationLevel"
+       },
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/Person"
+       },
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/Sex"
+       },
+       {
+        "@id": "https://w3id.org/italia/onto/CPV/ResidenceInTime"
+       }
       ]
     },
     {
@@ -200,20 +214,10 @@
       "prof:hasRole" : {
         "@id": "http://www.w3.org/ns/dx/prof/roles/vocabulary"
       },
-      "dct:hasPart" : [
-       {
-        "@id": "https://w3id.org/italia/onto/CPV/EducationLevel"
-       },
-       {
-        "@id": "https://w3id.org/italia/onto/CPV/Person"
-       },
-       {
-        "@id": "https://w3id.org/italia/onto/CPV/Sex"
-       },
-       {
-        "@id": "https://w3id.org/italia/onto/CPV/ResidenceInTime"
-       }
-      ]
+      "dcat:downloadURL" : {
+          "@value": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/CPV/latest/CPV-AP_IT.jsonld",
+          "@type": "xsd:anyURI"
+      }
     },
     {
       "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE",
@@ -234,20 +238,10 @@
       "prof:hasRole" : {
         "@id": "http://www.w3.org/ns/dx/prof/roles/vocabulary"
       },
-      "dct:hasPart" : [
-       {
-        "@id": "https://w3id.org/italia/onto/CPV/EducationLevel"
-       },
-       {
-        "@id": "https://w3id.org/italia/onto/CPV/Person"
-       },
-       {
-        "@id": "https://w3id.org/italia/onto/CPV/Sex"
-       },
-       {
-        "@id": "https://w3id.org/italia/onto/CPV/ResidenceInTime"
-       }
-      ]
+      "dcat:downloadURL" : {
+          "@value": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/CPV/latest/CPV-AP_IT.ttl",
+          "@type": "xsd:anyURI"
+      }
     },
     {
       "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML",
@@ -268,20 +262,10 @@
       "prof:hasRole" : {
         "@id": "http://www.w3.org/ns/dx/prof/roles/vocabulary"
       },
-      "dct:hasPart" : [
-       {
-        "@id": "https://w3id.org/italia/onto/CPV/EducationLevel"
-       },
-       {
-        "@id": "https://w3id.org/italia/onto/CPV/Person"
-       },
-       {
-        "@id": "https://w3id.org/italia/onto/CPV/Sex"
-       },
-       {
-        "@id": "https://w3id.org/italia/onto/CPV/ResidenceInTime"
-       }
-      ]
+      "dcat:downloadURL" : {
+          "@value": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/CPV/latest/CPV-AP_IT.rdf",
+          "@type": "xsd:anyURI"
+      }
     },
     {
       "@id": "http://www.w3.org/ns/dx/prof/roles/vocabulary",
