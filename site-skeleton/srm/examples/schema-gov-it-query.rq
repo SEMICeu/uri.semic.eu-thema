@@ -16,7 +16,7 @@ PREFIX admsapit: <https://w3id.org/italia/onto/ADMS/>
 construct {
     ?s rdf:type dct:Standard .
     ?s dct:description ?description .
-    ?s dct:identifier ?identifierSTR .
+    ?s dct:identifier ?identifierSTR2 .
     ?s dct:title ?title . 
     ?s owl:versionInfo ?versionInfo2 .
     ?s dct:issued ?issuedDT .
@@ -56,8 +56,11 @@ where {
     ?s dct:description ?description .
     FILTER(LANG(?description) = "it" || LANG(?description) = "en") .
     
-    ?s admsapit:officialURI ?identifier .
-    BIND(str(?identifier) as ?identifierSTR)
+    OPTIONAL{
+   		?s admsapit:officialURI ?identifier .
+    	BIND(str(?identifier) as ?identifierSTR) .
+    }
+    BIND(if(bound(?identifierSTR), ?identifierSTR, STR(?s)) AS ?identifierSTR2) .
     
     ?s rdfs:label ?title .
     

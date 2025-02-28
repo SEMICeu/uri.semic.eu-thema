@@ -347,7 +347,7 @@
   rdfs:label "Public Organization"@en, "organizzazione pubblica"@it .
 
 <https://w3id.org/italia/onto/COV/SupportUnit> a rdfs:Class;
-  rdfs:label "Department"@en, "Dipartimento"@it .
+  rdfs:label "Support Unit (Department)"@en, "Unità di supporto"@it .
 
 <https://w3id.org/italia/data/distribution/COV-RDF-TURTLE> a prof:ResourceDescriptor;
   dct:title "Distribuzione RDF/Turtle ontologia COV-AP_IT"@it, "RDF/Turtle distribution of COV-AP_IT Ontology"@en;
