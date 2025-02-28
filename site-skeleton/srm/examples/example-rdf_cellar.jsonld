@@ -33,10 +33,7 @@
         "@language": "en",
         "@value": "Core Person Vocabulary"
       },
-      "owl:versionInfo": {
-        "@language": "en",
-        "@value": "2.0.0"
-      },
+      "owl:versionInfo": "2.0.0",
       "foaf:homepage": {
         "@id": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-person-vocabulary/release/200"
       }
