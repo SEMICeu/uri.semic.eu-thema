@@ -1,0 +1,39 @@
+https://publications.europa.eu/webapi/rdf/sparql?default-graph-uri=&query=PREFIX+cssv%3A+%3Chttp%3A%2F%2Fdata.europa.eu%2F2sa%2Fcssv%23%3E%0D%0APREFIX+dct%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0A%0D%0ACONSTRUCT+%7B%0D%0A+++%3Fs+rdf%3Atype+dct%3AStandard+.%0D%0A+++%3Fs+dct%3Atitle+%3Ftitle+.%0D%0A+++%3Fs+dct%3Adescription+%3Fdescription+.%0D%0A+++%3Fs+owl%3AversionInfo+%3FversionInfo+.%0D%0A+++%3Fs+dct%3Aidentifier+%3Fidentifier+.%0D%0A+++%3Fs+foaf%3Ahomepage+%3Fhomepage+.%0D%0A+++%3Fhomepage+rdf%3Atype+foaf%3ADocument+.%0D%0A+++%3Fs+dct%3Acreator+%3Fowner+.%0D%0A+++%3Fowner+rdf%3Atype+foaf%3AAgent+.%0D%0A+++%3Fowner+dct%3Atitle+%3Ftitleowner+.%0D%0A%0D%0A%7D%0D%0AWHERE+%7B%0D%0A+++%3Fs+rdf%3Atype+%3Chttp%3A%2F%2Fdata.europa.eu%2F2sa%2Fcssv%23Specification%3E+.%0D%0A+++%3Fs+dct%3Atitle+%3Ftitle+.%0D%0A+++%3Fs+dct%3Adescription+%3Fdescription+.%0D%0A+++%3Fs+%3Chttp%3A%2F%2Fpurl.org%2Fpav%2Fversion%3E+%3FversionInfo+.%0D%0A+++%3Fs+cssv%3Aacronym+%3FidentifierLang+.%0D%0A+++BIND+%28STR%28%3FidentifierLang%29++AS+%3Fidentifier%29+.%0D%0A+++%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Fdcat%23distribution%3E+%3Fcssvhomepage+.%0D%0A+++%3Fcssvhomepage+%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Fdcat%23accessURL%3E+%3Fcssvhomepage2+.%0D%0A+++BIND+%28URI%28STR%28%3Fcssvhomepage2%29%29+as+%3Fhomepage%29+.%0D%0A+++%3Fs+cssv%3AisMaintainedBy+%3Fowner+.%0D%0A+++%3Fowner+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23altLabel%3E+%3Ftitleowner+.+%0D%0A+++%3Fs+dct%3Arelation+%3Frelation+.%0D%0A+++%3Frelation+dct%3Arelation+%3Frelated+.%0D%0A+++FILTER+%28%3Frelated+%3D+%3Chttp%3A%2F%2Fdata.europa.eu%2Fdr8%2FOntologyDataObject%3E+%7C%7C+%3Frelated+%3D+%3Chttp%3A%2F%2Fdata.europa.eu%2Fdr8%2FLinkedOpenDataRepresentation%3E%29%0D%0A%7D%0D%0A%0D%0A&format=application%2Fx-nice-turtle&timeout=0&debug=on&run=+Run+Query+
+
+PREFIX cssv: <http://data.europa.eu/2sa/cssv#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+CONSTRUCT {
+   ?s rdf:type dct:Standard .
+   ?s dct:title ?title .
+   ?s dct:description ?description .
+   ?s owl:versionInfo ?versionInfo .
+   ?s dct:identifier ?identifier .
+   ?s foaf:homepage ?homepage .
+   ?homepage rdf:type foaf:Document .
+   ?s dct:creator ?owner .
+   ?owner rdf:type foaf:Agent .
+   ?owner dct:title ?titleowner .
+
+}
+WHERE {
+   ?s rdf:type <http://data.europa.eu/2sa/cssv#Specification> .
+   ?s dct:title ?title .
+   ?s dct:description ?description .
+   ?s <http://purl.org/pav/version> ?versionInfo .
+   ?s cssv:acronym ?identifierLang .
+   BIND (STR(?identifierLang)  AS ?identifier) .
+   ?s <http://www.w3.org/ns/dcat#distribution> ?cssvhomepage .
+   ?cssvhomepage <http://www.w3.org/ns/dcat#accessURL> ?cssvhomepage2 .
+   BIND (URI(STR(?cssvhomepage2)) as ?homepage) .
+   ?s cssv:isMaintainedBy ?owner .
+   ?owner <http://www.w3.org/2004/02/skos/core#altLabel> ?titleowner . 
+   ?s dct:relation ?relation .
+   ?relation dct:relation ?related .
+   FILTER (?related = <http://data.europa.eu/dr8/OntologyDataObject> || ?related = <http://data.europa.eu/dr8/LinkedOpenDataRepresentation>)
+}
+
