@@ -372,7 +372,7 @@
       {
         "language":"en",
         "template":"ProofOfDeathOfParent_en.j2",
-        "title": "ProofOfDeathOfParent",
+        "title": "Proof Of Death Of Parent",
         "translationjson":"ProofOfDeathOfParent_en.json",
         "mergefile":"ProofOfDeathOfParent_en_merged.jsonld"
       }
