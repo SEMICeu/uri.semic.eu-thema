@@ -404,7 +404,7 @@
       {
         "language":"en",
         "template":"ProofOfDisabilityOfSibling_en.j2",
-        "title": "ProofOfDisabilityOfSibling",
+        "title": "Proof Of Disability Of Sibling",
         "translationjson":"ProofOfDisabilityOfSibling_en.json",
         "mergefile":"ProofOfDisabilityOfSibling_en_merged.jsonld"
       }
