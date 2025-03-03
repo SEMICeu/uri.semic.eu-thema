@@ -1,0 +1,24 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix ex: <http://example.com/> .
+@prefix person: <http://www.w3.org/ns/person#> .
+
+ex:proofofbirth1 dcterms:subject ex:person1 ;
+	a <http://data.europa.eu/p4s/ProofOfBirth> .
+
+ex:person1 foaf:givenName "René François Ghislain"@fr ;
+	foaf:familyName "Magritte"@fr ;
+	cv:birthDate "1898-11-21"^^cv:genericDate ;
+	person:placeOfBirth ex:location1 ;
+	person:countryOfBirth ex:location2 ;
+	cv:sex <http://publications.europa.eu/resource/authority/human-sex/MALE> ;
+	a person:Person .
+
+ex:location1 locn:geographicName "Lessines"@fr ;
+	a dcterms:Location .
+
+ex:location2 locn:geographicName "Belgique"@fr ;
+	a dcterms:Location .
