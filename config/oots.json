@@ -414,5 +414,37 @@
           "statuslabel" : "Draft",
           "editorDocumentroot" : "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/ProofOfDisabilityOfSibling/releases/0.0.1"
     }
+},
+{
+  "name": "proofofdisabilityofparent",
+  "type": "ap",
+  "eap": "OOTS_ProofOfDisabilityOfParent.eap",
+  "diagram": "ProofOfDisabilityOfParent",
+  "template": "ProofOfDisabilityOfParent_en.j2",
+  "title": "Proof Of Disability Of Parent",
+  "publication-state": "Draft",
+  "publication-date": "2024-11-18",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "contributors-file": "stakeholders.csv",
+  "contributors-column": "OOTS",
+  "site": "site-skeleton/proofofdisabilityofparent",
+  "repourl": "https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfDisabilityOfParent/tree/master/releases/0.0.1",
+  "feedbackurl": "https://ec.europa.eu/digital-building-blocks/wikis/display/SDGOO/Discussion+Items+-+EM?src=contextnavpagetreemode",
+  "versionurl": "https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfDisabilityOfParent/tree/master/releases/0.0.1",
+  "standaardregisterurl" :"https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfDisabilityOfParent/tree/master/releases/0.0.1/Changelog.md",
+    "translation": [
+      {
+        "language":"en",
+        "template":"ProofOfDisabilityOfParent_en.j2",
+        "title": "Proof Of Disability Of Parent",
+        "translationjson":"ProofOfDisabilityOfParent_en.json",
+        "mergefile":"ProofOfDisabilityOfParent_en_merged.jsonld"
+      }
+    ],
+    "toolchainversion" : "3",
+    "documentconfig": {
+          "statuslabel" : "Draft",
+          "editorDocumentroot" : "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/ProofOfDisabilityOfParent/releases/0.0.1"
+    }
 }
 ]
