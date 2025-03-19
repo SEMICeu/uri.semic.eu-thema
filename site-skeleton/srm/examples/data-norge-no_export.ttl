@@ -18,15 +18,6 @@
 	owl:versionInfo "2.0" ;
 	a dcterms:Standard .
 
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Punkt> rdfs:label "Punkt"@nb ;
-	a rdfs:Class .
-
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Periode> rdfs:label "Periode"@nb ;
-	a rdfs:Class .
-
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Landkode> rdfs:label "Landkode"@nb ;
-	a rdfs:Class .
-
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Matrikkeladresse> rdfs:label "Matrikkeladresse"@nb ;
 	a rdfs:Class .
 
@@ -42,22 +33,10 @@
 	owl:versionInfo "1" ;
 	a dcterms:Standard .
 
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#DatoKlokkeslett> rdfs:label "DatoKlokkeslett"@nb ;
-	a rdfs:Class .
-
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#KontaktOss> <http://data.europa.eu/m8g/email> "informasjonsforvaltning@digdir.no" ;
 	a <http://data.europa.eu/m8g/ContactPoint> .
 
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Personnavn> rdfs:label "Personnavn"@nb ;
-	a rdfs:Class .
-
 <http://publications.europa.eu/resource/authority/data-theme/GOVE> a skos:Concept .
-
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Adressenummer> rdfs:label "Adressenummer"@nb ;
-	a rdfs:Class .
-
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Poststed> rdfs:label "Poststed"@nb ;
-	a rdfs:Class .
 
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#skos-ap-no-begrep-model> dcterms:title "Simplified model for SKOS-AP-NO-Begrep"@en, "Forenklet modell for SKOS-AP-NO-Begrep"@nb ;
 	dcterms:description "Forenklet informasjonsmodell for \"Forvaltningsstandard for begrepsbeskrivelser (SKOS-AP-NO-Begrep)\"."@nb, "Simplified information model for \"Standard for concept descriptions (SKOS-AP-NO-Begrep)\"."@en ;
@@ -134,9 +113,6 @@
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#digdir-contact-point> <http://data.europa.eu/m8g/email> "informasjonsforvaltning@digdir.no" ;
 	a <http://data.europa.eu/m8g/ContactPoint> .
 
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Kommunenummer> rdfs:label "Kommunenummer"@nb ;
-	a rdfs:Class .
-
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#skos-ap-no-begrep-only-relations-model> dcterms:title "Forenklet modell for SKOS-AP-NO-Begrep, med kun begrepsrelasjoner"@nb, "Simplified model for SKOS-AP-NO-Begrep, with only concept relations"@en ;
 	dcterms:description "Forenklet informasjonsmodell for \"Forvaltningsstandard for begrepsbeskrivelser (SKOS-AP-NO-Begrep)\", med kun begrepsrelasjoner."@nb, "Simplified information model for \"Standard for concept descriptions (SKOS-AP-NO-Begrep)\", only with concept relations."@en ;
 	<http://data.europa.eu/m8g/contactPoint> <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#digdir-contact-point> ;
@@ -150,9 +126,6 @@
 	a dcterms:Standard .
 
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Adresse> rdfs:label "Adresse"@nb ;
-	a rdfs:Class .
-
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Sivilstand> rdfs:label "Sivilstand"@nb ;
 	a rdfs:Class .
 
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#GeografiskAdresse> rdfs:label "GeografiskAdresse"@nb ;
@@ -170,9 +143,6 @@
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Postboksadresse> rdfs:label "Postboksadresse"@nb ;
 	a rdfs:Class .
 
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Dato> rdfs:label "Dato"@nb ;
-	a rdfs:Class .
-
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#skos-ap-no-begrep-without-relations-model> dcterms:title "Forenklet modell for SKOS-AP-NO-Begrep, uten begrepsrelasjoner"@nb, "Simplified model for SKOS-AP-NO-Begrep, without concept relations"@en ;
 	dcterms:description "Forenklet informasjonsmodell for \"Forvaltningsstandard for begrepsbeskrivelser (SKOS-AP-NO-Begrep)\", uten begrepsrelasjoner."@nb, "Simplified information model for \"Standard for concept descriptions (SKOS-AP-NO-Begrep)\", without concept relations."@en ;
 	<http://data.europa.eu/m8g/contactPoint> <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#digdir-contact-point> ;
@@ -185,7 +155,7 @@
 	owl:versionInfo "2.0" ;
 	a dcterms:Standard .
 
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#AdresseModell> dcterms:hasPart <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#OffisiellAdresse>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Matrikkeladresse>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Punkt>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Matrikkelnummer>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Kommunenummer>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Vegadresse>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Adressenummer>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Poststed>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#GeografiskAdresse>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Adresse>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Postboksadresse> ;
+<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#AdresseModell> dcterms:hasPart <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#OffisiellAdresse>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Matrikkeladresse>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#GeografiskAdresse>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Adresse>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Postboksadresse>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Vegadresse> ;
 	a dcterms:Standard ;
 	dcterms:title "Felles informasjonsmodell for Adresse"@nb ;
 	dcterms:description "Overordnet informasjonsmodell for Adresse. Formål: Felles forståelse av adressebegrep og standardiserte informasjonsstrukturer for konsistent bruk og representasjon av adresser."@nb ;
@@ -217,10 +187,7 @@
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Enhet> rdfs:label "Enhet"@nb ;
 	a rdfs:Class .
 
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Kjønn> rdfs:label "Kjønn"@nb ;
-	a rdfs:Class .
-
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#PersonOgEnhet> dcterms:hasPart <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Periode>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Identifikator>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Enhet>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Landkode>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Person>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Dato>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Aktør>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Kontaktinformasjon>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Personnavn>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Sivilstand>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Tekst>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#DatoKlokkeslett>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Kjønn> ;
+<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#PersonOgEnhet> dcterms:hasPart <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Identifikator>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Kontaktinformasjon>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Aktør>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Person>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Enhet> ;
 	a dcterms:Standard ;
 	dcterms:title "Felles informasjonsmodell for Person og Enhet"@nb ;
 	dcterms:description "Overordnet informasjonsmodell for Person og Enhet med knytning til Identifikasjon og Adresse. Adressedelen av modellen er beskrevet nærmere i Felles informasjonsmodell for Adresse."@nb ;
@@ -238,11 +205,5 @@
 	a rdfs:Class .
 
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Identifikator> rdfs:label "Identifikator"@nb ;
-	a rdfs:Class .
-
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Tekst> rdfs:label "Tekst"@nb ;
-	a rdfs:Class .
-
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#Matrikkelnummer> rdfs:label "Matrikkelnummer"@nb ;
 	a rdfs:Class .
 

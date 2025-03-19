@@ -33,9 +33,9 @@ CONSTRUCT {
   ?classURI rdfs:label ?classLabel .
   ?s adms:status ?statusURI .
   ?statusURI rdf:type skos:Concept .
-  ?s cv:contactPoint ?contactPoint .
-  ?contactPoint rdf:type cv:ContactPoint .
-  ?contactPoint cv:email ?emailTo .
+    ?s cv:contactPoint ?contactPoint .
+    ?contactPoint rdf:type cv:ContactPoint .
+    ?contactPoint cv:email ?emailTo .
 }
 WHERE {
   ?s rdf:type <https://data.norge.no/vocabulary/modelldcatno#InformationModel> .
@@ -70,7 +70,10 @@ WHERE {
   OPTIONAL {
      ?s modeldcatno:containsModelElement ?classURI .
      ?classURI dct:title ?classLabel .
+     ?classURI rdf:type ?classType .
+    FILTER(?classType = <https://data.norge.no/vocabulary/modelldcatno#ObjectType>)
   }
+
    OPTIONAL {
      ?s adms:status ?statusURI .
   }
