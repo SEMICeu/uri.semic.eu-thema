@@ -26,6 +26,7 @@ construct {
     ?languageURI rdf:type skos:Concept .
     ?s dcat:theme ?theme .
     ?theme rdf:type skos:Concept .
+    ?s dcat:keyword ?keyword2 .
     ?s adms:status ?statusURI2 .
     ?statusURI2 rdf:type skos:Concept .
     ?s dct:creator ?creator .
@@ -45,7 +46,7 @@ construct {
     ?distributionFormat rdf:type skos:Concept .
     ?distribution prof:hasRole <http://www.w3.org/ns/dx/prof/roles/vocabulary> .
     <http://www.w3.org/ns/dx/prof/roles/vocabulary> a skos:Concept .
-    ?distribution dcat:downloadURL ?downloadURLSTR .
+    ?distribution dcat:downloadURL ?downloadURLSTR .        
     ?s dct:hasPart ?classURI .
     ?classURI rdf:type rdfs:Class .
     ?classURI rdfs:label ?classLabel .
@@ -84,6 +85,12 @@ where {
     BIND(URI(STR(?language)) AS ?languageURI)
     
     ?s dcat:theme ?theme .
+    
+    OPTIONAL {
+        ?s dcat:keyword ?keyword .
+        BIND(IF(lang(?keyword)='', "it", lang(?keyword)) as ?langKeyword )
+        BIND( STRLANG(str(?keyword), ?langKeyword) AS ?keyword2 ) .
+    }
     
     OPTIONAL {
    		?s <https://w3id.org/italia/onto/ADMS/status> ?status .
@@ -125,4 +132,3 @@ where {
     	?classURI rdfs:label ?classLabel .
     }
 
-}

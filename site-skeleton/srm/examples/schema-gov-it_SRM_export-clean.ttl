@@ -27,6 +27,7 @@
   cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI>, <http://publications.europa.eu/resource/authority/data-theme/GOVE>;
+  dcat:keyword "Access Condition"@en, "Condizioni d'accesso"@it, "Orari di apertura"@it;
   adms:status <http://purl.org/adms/status/UnderDevelopment>;
   dct:creator <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
   dct:publisher <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
@@ -83,9 +84,9 @@
 
 <http://publications.europa.eu/resource/authority/file-type/JSON_LD> a skos:Concept .
 
-<http://publications.europa.eu/resource/authority/language/ENG> a skos:Concept .
-
 <http://publications.europa.eu/resource/authority/data-theme/GOVE> a skos:Concept .
+
+<http://publications.europa.eu/resource/authority/language/ENG> a skos:Concept .
 
 <https://w3id.org/italia/onto/l0> a dct:Standard;
   dct:description "Questa è l'ontologia che fornisce il livello fondazionale allo stack ontologico di OntoPiA. Il nome L0 sta per Level-0 ontology poiché essa fornisce le fondamenta concettuali elementari all'intero stack. Questa ontologia è  ispirata da DOLCE zero (http://www.ontologydesignpatterns.org/ont/d0.owl)"@it,
@@ -98,6 +99,7 @@
   cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE>, <http://publications.europa.eu/resource/authority/data-theme/TECH>;
+  dcat:keyword "Evento"@it, "Caratteristica"@it, "Oggetto"@it;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab>,
     <http://spcdata.digitpa.gov.it/Amministrazione/agid>;
@@ -164,6 +166,8 @@
   cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/TECH>;
+  dcat:keyword "anno"@it, "giorno"@it, "intervallo temporale"@it, "istante temporale"@it,
+    "mese"@it, "tempo"@it;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab>,
     <http://spcdata.digitpa.gov.it/Amministrazione/agid>;
@@ -213,6 +217,7 @@
   cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC>;
+  dcat:keyword "Strutture ricettive"@it, "Hotel"@it, "Ricettività"@it, "Strutture alberghiere"@it;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
   dct:publisher <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
@@ -266,6 +271,7 @@
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI>, <http://publications.europa.eu/resource/authority/data-theme/EDUC>,
     <http://publications.europa.eu/resource/authority/data-theme/TRAN>;
+  dcat:keyword "prezzi"@it, "biglietto"@it, "offerta"@it;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab>,
     <http://spcdata.digitpa.gov.it/Amministrazione/agid>;
@@ -318,6 +324,7 @@
   cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE>, <http://publications.europa.eu/resource/authority/data-theme/ECON>;
+  dcat:keyword "azienda"@it, "impresa"@it, "organizzazione"@it, "pubblica amministrazione"@it;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab>,
     <http://spcdata.digitpa.gov.it/Amministrazione/agid>;
@@ -341,13 +348,15 @@
   rdfs:label "Organization"@en, "Organizzazione"@it .
 
 <https://w3id.org/italia/onto/COV/PrivateOrganization> a rdfs:Class;
-  rdfs:label "Organizzazione Privata"@it, "Private Organization"@en .
+  rdfs:label "Associazione privata"@it, "Azienda"@it, "Company"@en, "Ditta"@it, "Impresa"@it,
+    "Organizzazione Privata"@it, "Private Organization"@en .
 
 <https://w3id.org/italia/onto/COV/PublicOrganization> a rdfs:Class;
-  rdfs:label "Public Organization"@en, "organizzazione pubblica"@it .
+  rdfs:label "Amministrazione pubblica"@it, "Public Organization"@en, "organizzazione pubblica"@it .
 
 <https://w3id.org/italia/onto/COV/SupportUnit> a rdfs:Class;
-  rdfs:label "Support Unit (Department)"@en, "Unità di supporto"@it .
+  rdfs:label "Department"@en, "Dipartimento"@it, "Divisione"@it, "Support Unit (Department)"@en,
+    "Unità di supporto"@it .
 
 <https://w3id.org/italia/data/distribution/COV-RDF-TURTLE> a prof:ResourceDescriptor;
   dct:title "Distribuzione RDF/Turtle ontologia COV-AP_IT"@it, "RDF/Turtle distribution of COV-AP_IT Ontology"@en;
@@ -374,6 +383,7 @@
   cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/REGI>;
+  dcat:keyword "luogo di interesse"@it, "punto di interesse"@it;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab>,
     <http://spcdata.digitpa.gov.it/Amministrazione/agid>;
@@ -426,6 +436,7 @@
   cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/TECH>;
+  dcat:keyword "punto di contatto"@it, "internet"@it, "post"@it, "recensioni"@it, "social media"@it;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>, <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab>;
   dct:publisher <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
@@ -482,6 +493,7 @@
   cv:isReusedBy "https://w3id.org/italia/data/resource/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/resource/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/TECH>;
+  dcat:keyword "asset semantici"@it, "metadati"@it, "ontologie"@it;
   adms:status <http://purl.org/adms/status/UnderDevelopment>;
   dct:creator <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>, <http://spcdata.digitpa.gov.it/UfficioProtocolloAOO/un_lsrm-D-010>;
   dct:publisher <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
@@ -541,6 +553,8 @@ admsapit:SemanticTerm a rdfs:Class;
   cv:isReusedBy "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI, "https://w3id.org/italia/data/project/datigovit"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE>;
+  dcat:keyword "dataset"@it, "catalogo dati"@it, "dati aperti"@it, "distribuzione dataset"@it,
+    "distribuzione"@it;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <https://w3id.org/italia/data/public-organization/agid>;
   dct:publisher <https://w3id.org/italia/data/public-organization/agid>;
@@ -588,6 +602,7 @@ admsapit:SemanticTerm a rdfs:Class;
     "https://w3id.org/italia/data/project/AtlanteCammini"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC>;
+  dcat:keyword "Atlante cammini"@it, "Cammino"@it, "Percorso"@it, "Tappa"@it, "Vie"@it;
   adms:status <http://purl.org/adms/status/UnderDevelopment>;
   dct:creator <http://spcdata.digitpa.gov.it/Amministrazione/m_bac>, <https://w3id.org/italia/data/support-unit/cnr-Z6HZEH/stlab>;
   dct:publisher <https://w3id.org/italia/data/support-unit/cnr-Z6HZEH/stlab>;
@@ -599,7 +614,8 @@ admsapit:SemanticTerm a rdfs:Class;
     <https://w3id.org/italia/onto/AtlasOfPaths/Pathway> .
 
 <http://spcdata.digitpa.gov.it/Amministrazione/m_bac> a foaf:Agent;
-  dct:title "Ministero dei Beni e delle Attivita' Culturali"@it, "Ministry of Cultural Heritage and Activities"@en .
+  dct:title "Ministero dei Beni e delle Attivita' Culturali"@it, "Ministero per i Beni e le Attività Culturali"@it,
+    "Ministry of Cultural Heritage and Activities"@en .
 
 <https://w3id.org/italia/data/support-unit/cnr-Z6HZEH/stlab> a foaf:Agent;
   dct:title "Institute of Cognitive Sciences and Technologies of the Italian Research Council (CNR) - Semantic Technology Laboratory (STLab)"@en,
@@ -609,7 +625,7 @@ admsapit:SemanticTerm a rdfs:Class;
   cv:email "dg-t@beniculturali.it" .
 
 <https://w3id.org/italia/data/distribution/AOPAPIT-JSON-LD> a prof:ResourceDescriptor;
-  dct:title "Distribuzione JSON-LD ontologia AtlasOfPaths-AP_IT"@it, "JSON-LD distribution of AtlasOfPaths-AP_IT Ontology"@en ;
+  dct:title "Distribuzione JSON-LD ontologia AtlasOfPaths-AP_IT"@it, "JSON-LD distribution of AtlasOfPaths-AP_IT Ontology"@en;
   dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD>;
   prof:hasRole <http://www.w3.org/ns/dx/prof/roles/vocabulary>;
   dcat:downloadURL "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/AtlasOfPaths/latest/AtlasOfPaths-AP_IT.jsonld"^^xsd:anyURI .
@@ -647,6 +663,7 @@ admsapit:SemanticTerm a rdfs:Class;
     "https://w3id.org/italia/data/project/AtlanteCammini"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC>, <http://publications.europa.eu/resource/authority/data-theme/TRAN>;
+  dcat:keyword "Percorso"@it, "Tappa"@it, "Pianificazione viaggio"@it;
   adms:status <http://purl.org/adms/status/UnderDevelopment>;
   dct:creator <http://spcdata.digitpa.gov.it/Amministrazione/m_bac>, <https://w3id.org/italia/data/support-unit/cnr-Z6HZEH/stlab>;
   dct:publisher <https://w3id.org/italia/data/support-unit/cnr-Z6HZEH/stlab>;
@@ -696,6 +713,9 @@ admsapit:SemanticTerm a rdfs:Class;
     "https://w3id.org/italia/data/project/ANNCSU"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/REGI>;
+  dcat:keyword "Accesso esterno"@it, "Accesso interno"@it, "Address"@en, "Area di circolazione"@it,
+    "Coordinata geografica"@it, "Feature"@en, "Geometria"@it, "Geometry"@en, "Indirizzo"@it,
+    "Location"@en, "Luogo"@it, "Numero Civico"@it, "Spatial Object"@en;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>, <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/ISTAT>,
     <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/age>;
@@ -721,10 +741,10 @@ admsapit:SemanticTerm a rdfs:Class;
   rdfs:label "Spatial Object"@en, "Oggetto Spaziale"@it .
 
 <https://w3id.org/italia/onto/CLV/Address> a rdfs:Class;
-  rdfs:label "Address"@en, "Indirizzo"@it .
+  rdfs:label "Address"@en, "Indirizzo"@it, "Accesso Esterno"@it .
 
 <https://w3id.org/italia/onto/CLV/CivicNumbering> a rdfs:Class;
-  rdfs:label "Numero Civico"@it, "Civic Numbering"@en .
+  rdfs:label "Numero Civico"@it, "Civic Numbering"@en, "Number of the Street"@en, "Numerazione Civica"@it .
 
 <https://w3id.org/italia/onto/CLV/Geometry> a rdfs:Class;
   rdfs:label "Geometria"@it, "Geometry"@en .
@@ -758,6 +778,7 @@ admsapit:SemanticTerm a rdfs:Class;
   cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/TECH>;
+  dcat:keyword "Unità di misura"@it;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
   dct:publisher <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
@@ -802,6 +823,7 @@ admsapit:SemanticTerm a rdfs:Class;
   cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI>;
+  dcat:keyword "ruolo"@it;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab>,
     <http://spcdata.digitpa.gov.it/Amministrazione/agid>;
@@ -834,26 +856,21 @@ admsapit:SemanticTerm a rdfs:Class;
   dcat:downloadURL "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/RO/latest/RO-AP_IT.rdf"^^xsd:anyURI .
 
 <https://w3id.org/italia/onto/CPEV> a dct:Standard;
-  dct:description "Questa è l'ontologia del profilo applicativo italiano sugli eventi pubblici. Essa si basa sul vocabolario europeo CPEV (Core Public Event Vocabulary - https://joinup.ec.europa.eu/solution/core-public-event-vocabulary) ed è utilizzata per descrivere qualsiasi tipo di evento al pubblico."@it,
-    "This is the ontology of the Italian application profile for Public Events"@en;
+  dct:description "Questa è l'ontologia del profilo applicativo italiano sugli eventi pubblici. Essa si basa sul vocabolario europeo CPEV (Core Public Event Vocabulary - https://joinup.ec.europa.eu/solution/core-public-event-vocabulary) ed è utilizzata per descrivere qualsiasi tipo di evento al pubblico."@it;
   dct:identifier "https://w3id.org/italia/onto/CPEV";
-  dct:title "Ontologia degli Eventi Pubblici"@it, "Public Events Ontology"@en;
+  dct:title "Ontologia degli Eventi Pubblici"@it;
   owl:versionInfo "https://w3id.org/italia/onto/CPEV/0.4";
   dct:issued "2017-12-06T00:00:00"^^xsd:dateTime;
   dct:modified "2019-04-23T00:00:00"^^xsd:dateTime;
-  cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI,
-    "https://w3id.org/italia/data/project/ComunWeb"^^xsd:anyURI;
-  dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
+  cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI;
+  dct:language <http://publications.europa.eu/resource/authority/language/ITA>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC>;
+  dcat:keyword "Event"@en;
   adms:status <http://purl.org/adms/status/completed>;
-  dct:creator <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>, <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/c_g273>,
-    <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/c_l483>, <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/p_TN>,
-    <https://w3id.org/italia/data/organization/private-organization/02190640223>, <https://w3id.org/italia/data/organization/public-organization/support-unit/cnr-ITD>;
+  dct:creator <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
   dct:publisher <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
   cv:contactPoint <https://w3id.org/italia/data/contact-point/onto-agid>;
-  dct:requires <https://w3id.org/italia/onto/AccessCondition>, <https://w3id.org/italia/onto/l0>,
-    <https://w3id.org/italia/onto/TI>, <https://w3id.org/italia/onto/POT>, <https://w3id.org/italia/onto/POI>,
-    <https://w3id.org/italia/onto/SM>, <https://w3id.org/italia/onto/RO>;
+  dct:requires <https://w3id.org/italia/onto/AccessCondition>;
   prof:hasResource <https://w3id.org/italia/data/distribution/CPEVAPIT-JSON-LD>, <https://w3id.org/italia/data/distribution/CPEVAPIT-RDF-TURTLE>,
     <https://w3id.org/italia/data/distribution/CPEVAPIT-RDF-XML>;
   dct:hasPart <https://w3id.org/italia/onto/CPEV/PublicEvent>, <https://w3id.org/italia/onto/CPEV/PublicEventTypology> .
@@ -882,6 +899,18 @@ admsapit:SemanticTerm a rdfs:Class;
   prof:hasRole <http://www.w3.org/ns/dx/prof/roles/vocabulary>;
   dcat:downloadURL "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/CPEV/latest/CPEV-AP_IT.rdf"^^xsd:anyURI .
 
+<https://w3id.org/italia/onto/CPEV> dct:requires <https://w3id.org/italia/onto/l0>,
+    <https://w3id.org/italia/onto/TI>, <https://w3id.org/italia/onto/POT>, <https://w3id.org/italia/onto/POI>,
+    <https://w3id.org/italia/onto/SM>, <https://w3id.org/italia/onto/RO>;
+  dct:creator <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/c_g273>, <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/c_l483>,
+    <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/p_TN>, <https://w3id.org/italia/data/organization/private-organization/02190640223>,
+    <https://w3id.org/italia/data/organization/public-organization/support-unit/cnr-ITD>;
+  dcat:keyword "Evento"@it, "Evento pubblico"@it, "Public Event"@en;
+  dct:language <http://publications.europa.eu/resource/authority/language/ENG>;
+  cv:isReusedBy "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI, "https://w3id.org/italia/data/project/ComunWeb"^^xsd:anyURI;
+  dct:title "Public Events Ontology"@en;
+  dct:description "This is the ontology of the Italian application profile for Public Events"@en .
+
 <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/c_g273> a foaf:Agent;
   dct:title "Comune di Palermo"@it .
 
@@ -898,23 +927,80 @@ admsapit:SemanticTerm a rdfs:Class;
   a foaf:Agent;
   dct:title "CNR - Istituto per le Tecnologie Didattiche"@it .
 
-<https://w3id.org/italia/onto/Language> a dct:Standard;
-  dct:description "Questa è l'ontologia per la modellazione delle lingue"@it;
-  dct:identifier "https://w3id.org/italia/onto/Language";
-  dct:title "Language Ontology"@en;
-  owl:versionInfo "https://w3id.org/italia/onto/Language/0.1";
-  dct:issued "2018-06-27T00:00:00"^^xsd:dateTime;
-  dct:modified "2018-06-27T00:00:00"^^xsd:dateTime;
-  cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI;
-  dct:language <http://publications.europa.eu/resource/authority/language/ITA>;
-  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/REGI>;
+<https://w3id.org/italia/onto/CPSV> a dct:Standard;
+  dct:description "Ontologia del profilo italiano per la descrizione dei servizi pubblici. Per servizio pubblico si intende qualsiasi atto obbligatorio o discrezionale espletato da una pubblica amministrazione (o per conto di una pubblica amministrazione) nei confronti di cittadini, imprese/professionisti."@it,
+    "This is the ontology of the Italian application profile for public services. With the term \"public service\" we mean any discretional or mandatory act carried out by a Public Administration (or on behalf of a Public Administration) for the advantage of citizens and enterprises."@en;
+  dct:identifier "https://w3id.org/italia/onto/CPSV";
+  dct:title "Ontologia dei Servizi Pubblici"@it, "Public Services Ontology"@en;
+  owl:versionInfo "https://w3id.org/italia/onto/CPSV/1.1";
+  dct:issued "2015-11-21T00:00:00"^^xsd:dateTime;
+  dct:modified "2020-09-30T00:00:00"^^xsd:dateTime;
+  cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI,
+    "https://w3id.org/italia/data/project/ITAServiceCatalogue"^^xsd:anyURI;
+  dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE>;
+  dcat:keyword "Canali di erogazione"@it, "Servizio"@it, "Servizio pubblico"@it;
   adms:status <http://purl.org/adms/status/UnderDevelopment>;
   dct:creator <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
   dct:publisher <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
   cv:contactPoint <https://w3id.org/italia/data/contact-point/onto-agid>;
-  dct:requires <https://w3id.org/italia/onto/l0>;
+  dct:requires <https://w3id.org/italia/onto/AccessCondition>, <https://w3id.org/italia/onto/l0>,
+    <https://w3id.org/italia/onto/TI>, <https://w3id.org/italia/onto/COV>, <https://w3id.org/italia/onto/SM>,
+    <https://w3id.org/italia/onto/CLV>, <https://w3id.org/italia/onto/MU>, <https://w3id.org/italia/onto/RO>,
+    <https://w3id.org/italia/onto/Language>;
+  prof:hasResource <https://w3id.org/italia/data/distribution/CPSVAPIT-JSON-LD>, <https://w3id.org/italia/data/distribution/CPSVAPIT-RDF-TURTLE>,
+    <https://w3id.org/italia/data/distribution/CPSVAPIT-RDF-XML>;
+  dct:hasPart <https://w3id.org/italia/onto/CPSV/Channel>, <https://w3id.org/italia/onto/CPSV/Input>,
+    <https://w3id.org/italia/onto/CPSV/Output>, <https://w3id.org/italia/onto/CPSV/PublicService> .
+
+<https://w3id.org/italia/data/distribution/CPSVAPIT-JSON-LD> a prof:ResourceDescriptor;
+  dct:title "Distribuzione JSON-LD ontologia CPSV-AP_IT"@it, "JSON-LD distribution of CPSV-AP_IT Ontology"@en;
+  dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD>;
+  prof:hasRole <http://www.w3.org/ns/dx/prof/roles/vocabulary>;
+  dcat:downloadURL "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/CPSV/latest/CPSV-AP_IT.jsonld"^^xsd:anyURI .
+
+<https://w3id.org/italia/onto/CPSV/Channel> a rdfs:Class;
+  rdfs:label "Canale di erogazione"@it, "Channel"@en .
+
+<https://w3id.org/italia/onto/CPSV/Input> a rdfs:Class;
+  rdfs:label "Input"@en, "Input Servizio"@it .
+
+<https://w3id.org/italia/onto/CPSV/Output> a rdfs:Class;
+  rdfs:label "Output"@en, "Output Servizio"@it .
+
+<https://w3id.org/italia/onto/CPSV/PublicService> a rdfs:Class;
+  rdfs:label "Public Service"@en, "Servizio Pubblico"@it .
+
+<https://w3id.org/italia/data/distribution/CPSVAPIT-RDF-TURTLE> a prof:ResourceDescriptor;
+  dct:title "Distribuzione RDF/Turtle ontologia CPSV-AP_IT"@it, "RDF/Turtle distribution of CPSV-AP_IT Ontology"@en;
+  dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>;
+  prof:hasRole <http://www.w3.org/ns/dx/prof/roles/vocabulary>;
+  dcat:downloadURL "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/CPSV/latest/CPSV-AP_IT.ttl"^^xsd:anyURI .
+
+<https://w3id.org/italia/data/distribution/CPSVAPIT-RDF-XML> a prof:ResourceDescriptor;
+  dct:title "Distribuzione RDF/XML ontologia CPSV-AP_IT"@it, "RDF/XML distribution of CPSV-AP_IT Ontology"@en;
+  dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML>;
+  prof:hasRole <http://www.w3.org/ns/dx/prof/roles/vocabulary>;
+  dcat:downloadURL "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/CPSV/latest/CPSV-AP_IT.rdf"^^xsd:anyURI .
+
+<https://w3id.org/italia/onto/Language> a dct:Standard;
+  dct:description "Questa è l'ontologia per la modellazione delle lingue"@it, "This is the ontology for modeling the languages"@en;
+  dct:identifier "https://w3id.org/italia/onto/Language";
+  dct:title "Language Ontology"@en, "Ontologia Lingue"@it;
+  owl:versionInfo "https://w3id.org/italia/onto/Language/0.1";
+  dct:issued "2018-06-27T00:00:00"^^xsd:dateTime;
+  dct:modified "2018-06-27T00:00:00"^^xsd:dateTime;
+  cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
+  dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/REGI>;
+  dcat:keyword "Lingua"@it, "Lingua straniera"@it, "Linguaggio"@it;
+  adms:status <http://purl.org/adms/status/UnderDevelopment>;
+  dct:creator <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
+  dct:publisher <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
+  cv:contactPoint <https://w3id.org/italia/data/contact-point/onto-agid>;
+  dct:requires <https://w3id.org/italia/onto/l0>, <https://w3id.org/italia/onto/CLV>;
   prof:hasResource <https://w3id.org/italia/data/distribution/LangAPIT-RDF-TURTLE>,
-    <https://w3id.org/italia/data/distribution/LangAPIT-RDF-XML>;
+    <https://w3id.org/italia/data/distribution/LangAPIT-RDF-XML>, <https://w3id.org/italia/data/distribution/LangAPIT-JSON-LD>;
   dct:hasPart <https://w3id.org/italia/onto/Language/Language> .
 
 <https://w3id.org/italia/data/distribution/LangAPIT-RDF-TURTLE> a prof:ResourceDescriptor;
@@ -927,18 +1013,10 @@ admsapit:SemanticTerm a rdfs:Class;
   rdfs:label "Lingua"@it, "Language"@en .
 
 <https://w3id.org/italia/data/distribution/LangAPIT-RDF-XML> a prof:ResourceDescriptor;
-  dct:title "Distribuzione RDF/XML ontologia Lang-AP_IT"@it;
+  dct:title "Distribuzione RDF/XML ontologia Lang-AP_IT"@it, "RDF/XML distribution of Lang-AP_IT Ontology"@en;
   dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML>;
   prof:hasRole <http://www.w3.org/ns/dx/prof/roles/vocabulary>;
-  dcat:downloadURL "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/Language/latest/Language-AP_IT.rdf"^^xsd:anyURI;
-  dct:title "RDF/XML distribution of Lang-AP_IT Ontology"@en .
-
-<https://w3id.org/italia/onto/Language> prof:hasResource <https://w3id.org/italia/data/distribution/LangAPIT-JSON-LD>;
-  dct:requires <https://w3id.org/italia/onto/CLV>;
-  cv:isReusedBy "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
-  dct:title "Ontologia Lingue"@it;
-  dct:description "This is the ontology for modeling the languages"@en;
-  dct:language <http://publications.europa.eu/resource/authority/language/ENG> .
+  dcat:downloadURL "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/Language/latest/Language-AP_IT.rdf"^^xsd:anyURI .
 
 <https://w3id.org/italia/data/distribution/LangAPIT-JSON-LD> a prof:ResourceDescriptor;
   dct:title "Distribuzione JSON-LD ontologia Lang-AP_IT"@it, "JSON-LD distribution of Lang-AP_IT Ontology"@en;
@@ -958,6 +1036,7 @@ admsapit:SemanticTerm a rdfs:Class;
   cv:isReusedBy "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI, "https://w3id.org/italia/data/project/NDC"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI>;
+  dcat:keyword "famiglia"@it, "persona"@it, "persone"@it;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <https://w3id.org/italia/data/public-organization/ISTAT>, <https://w3id.org/italia/data/public-organization/agid>;
   dct:publisher <https://w3id.org/italia/data/public-organization/PCM-1RSIZZ>;
@@ -1020,6 +1099,8 @@ admsapit:SemanticTerm a rdfs:Class;
   cv:isReusedBy "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI, "https://w3id.org/italia/data/project/toscana-open-research"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC>;
+  dcat:keyword "Peronale universitario"@it, "Progetti di ricerca"@it, "Public Research"@en,
+    "Research Projects"@en, "Ricerca pubblica"@it, "Student"@en, "Studenti"@it;
   adms:status <http://purl.org/adms/status/UnderDevelopment>;
   dct:creator <https://w3id.org/italia/data/public-organization/agid>, <https://w3id.org/italia/data/public-organization/r_toscan>;
   dct:publisher <https://w3id.org/italia/data/public-organization/agid>;
@@ -1061,6 +1142,8 @@ admsapit:SemanticTerm a rdfs:Class;
   cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/TECH>, <http://publications.europa.eu/resource/authority/data-theme/TRAN>;
+  dcat:keyword "Internet of Things"@it, "Misurazione"@it, "Osservazione"@it, "Sensore"@it,
+    "flusso di traffico"@it;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab>,
     <http://spcdata.digitpa.gov.it/Amministrazione/agid>;
@@ -1111,6 +1194,8 @@ admsapit:SemanticTerm a rdfs:Class;
   cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/TRAN>;
+  dcat:keyword "Car Sharing"@it, "Parcheggio di scambio"@it, "Posti parcheggio"@it,
+    "Parcheggio"@it;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
   dct:publisher <http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid>;
@@ -1157,6 +1242,8 @@ admsapit:SemanticTerm a rdfs:Class;
   cv:isReusedBy "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI, "https://w3id.org/italia/data/project/NDC"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE>;
+  dcat:keyword "Contratto Pubblico"@it, "Appalto"@it, "Gara"@it, "Procedura di realizzazione"@it,
+    "Bando di gara"@it;
   adms:status <http://purl.org/adms/status/UnderDevelopment>;
   dct:creator <https://w3id.org/italia/data/public-organization/agid>, <https://w3id.org/italia/data/private-organization/IT11491360019>,
     <https://w3id.org/italia/data/public-organization/csi_piem>, <https://w3id.org/italia/data/public-organization/cvtiap>;
@@ -1175,7 +1262,8 @@ admsapit:SemanticTerm a rdfs:Class;
   dcat:downloadURL "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/PublicContract/latest/PublicContract-AP_IT.ttl"^^xsd:anyURI .
 
 <https://w3id.org/italia/onto/PublicContract/Procedure> a rdfs:Class;
-  rdfs:label "Procedimento"@it, "Procedure"@en .
+  rdfs:label "Gara"@it, "Modalità di realizzazione"@it, "Procedimento"@it, "Procedura di affidamento"@it,
+    "Procedure"@en .
 
 <https://w3id.org/italia/onto/PublicContract/Lot> a rdfs:Class;
   rdfs:label "Lot"@en, "Lotto"@it .
@@ -1215,6 +1303,7 @@ admsapit:SemanticTerm a rdfs:Class;
   cv:isReusedBy "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE>, <http://publications.europa.eu/resource/authority/data-theme/TECH>;
+  dcat:keyword "cup"@it, "progetti"@it, "progetto"@it;
   adms:status <http://purl.org/adms/status/UnderDevelopment>;
   dct:creator <https://w3id.org/italia/data/public-organization/agid>;
   dct:publisher <https://w3id.org/italia/data/public-organization/agid>;
@@ -1235,7 +1324,7 @@ admsapit:SemanticTerm a rdfs:Class;
   rdfs:label "Progetto d'Investimento Pubblico"@it, "Public Investment Project"@en .
 
 <https://w3id.org/italia/onto/Project/UniqueProjectCode> a rdfs:Class;
-  rdfs:label "Codice Unico di Progetto"@it, "Unique Project Code"@en .
+  rdfs:label "CUP"@it, "Codice Unico di Progetto"@it, "Unique Project Code"@en .
 
 <https://w3id.org/italia/data/distribution/PROJECTAPIT-RDF-TURTLE> a prof:ResourceDescriptor;
   dct:title "Distribuzione RDF/Turtle ontologia PRJ-AP_IT"@it, "RDF/Turtle distribution of PRJ-AP_IT Ontology"@en;
@@ -1260,6 +1349,7 @@ admsapit:SemanticTerm a rdfs:Class;
   cv:isReusedBy "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/TECH>;
+  dcat:keyword "calcolo indicatore"@it, "indicatore"@it, "metrica"@it, "parametro"@it;
   adms:status <http://purl.org/adms/status/UnderDevelopment>;
   dct:creator <https://w3id.org/italia/data/public-organization/agid>, <https://w3id.org/italia/data/department/dtd>;
   dct:publisher <https://w3id.org/italia/data/public-organization/agid>;
@@ -1316,6 +1406,8 @@ admsapit:SemanticTerm a rdfs:Class;
   cv:isReusedBy "https://w3id.org/italia/data/project/DAF"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE>, <http://publications.europa.eu/resource/authority/data-theme/TECH>;
+  dcat:keyword "trasparenza"@it, "trasparenza pubblica amministrazione"@it, "trasparenza PA"@it,
+    "trasparenza pa"@it, "transparency"@en, "transparency for public administration"@en;
   adms:status <http://purl.org/adms/status/UnderDevelopment>;
   dct:creator <http://spcdata.digitpa.gov.it/Amministrazione/agid>, <https://w3id.org/italia/data/organization/private-organization/05481840964>;
   dct:publisher <http://spcdata.digitpa.gov.it/Amministrazione/agid>;
@@ -1359,6 +1451,8 @@ admsapit:SemanticTerm a rdfs:Class;
   cv:isReusedBy "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI, "https://w3id.org/italia/data/project/NDC"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC>;
+  dcat:keyword "AFAM"@it, "alta formazione"@it, "formazione"@it, "iscrizione"@it, "titolo di studio"@it,
+    "voto"@it;
   adms:status <http://purl.org/adms/status/UnderDevelopment>;
   dct:creator <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab>,
     <https://w3id.org/italia/data/public-organization/PCM-1RSIZZ>;
@@ -1419,6 +1513,7 @@ admsapit:SemanticTerm a rdfs:Class;
   cv:isReusedBy "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE>, <http://publications.europa.eu/resource/authority/data-theme/TECH>;
+  dcat:keyword "catalogo vocabolari"@it;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab>;
   dct:publisher <https://w3id.org/italia/data/organization/support-unit/pcm-AA1D3A2>;
@@ -1448,6 +1543,7 @@ admsapit:SemanticTerm a rdfs:Class;
   dct:modified "2024-06-10T00:00:00"^^xsd:dateTime;
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI>;
+  dcat:keyword "Anagrafe"@it, "Residente"@it;
   adms:status <http://purl.org/adms/status/completed>;
   dct:creator <https://w3id.org/italia/data/public-organization/ISTAT>, <https://w3id.org/italia/data/public-organization/m_it>;
   dct:publisher <https://w3id.org/italia/data/public-organization/PCM-1RSIZZ>;
