@@ -19,23 +19,29 @@
 <https://w3id.org/italia/data/public-organization/PCM-1RSIZZ> dct:title "Digital Transformation Department of the Presidency of the Council of Ministers"@en, "Dipartimento per la Trasformazione Digitale della Presidenza del Consiglio dei Ministri"@it ;
 	a foaf:Agent .
 
-<https://w3id.org/italia/onto/CPV> dct:creator <https://w3id.org/italia/data/public-organization/ISTAT>, <https://w3id.org/italia/data/public-organization/agid> ;
-	dct:publisher <https://w3id.org/italia/data/public-organization/PCM-1RSIZZ> ;
-	dct:description "This is the ontology of the Italian application profile on persons. The ontology models general information on natural persons such as first name, surname, date of birth, place of birth, tax code, residence, citizenship and relations between persons both generic of knowledge and generic of kinship relations but not as registered with the civil registry."@en, "Questa è l'ontologia del profilo applicativo italiano sulle persone. L'ontologia modella informazioni generali sulle persone fisiche come per esempio il nome, cognome, data di nascita, luogo di nascita, codice fiscale, residenza, cittadinanza e relazioni tra persone sia generiche di conoscenza sia di generiche relazioni di parentela ma non come registrate presso l'anagrafe."@it ;
-	dct:identifier "https://w3id.org/italia/onto/CPV" ;
-	dct:title "CPV-AP_IT - Core Person Vocabulary Italian Application Profile - Person Ontology"@en, "CPV-AP_IT: Core Person Vocabulary - profilo applicativo italiano - Ontologia delle persone"@it ;
-	owl:versionInfo "https://w3id.org/italia/onto/CPV/0.8" ;
-	dct:issued "2017-07-19T00:00:00"^^xsd:dateTime ;
-	dct:modified "2023-03-15T00:00:00"^^xsd:dateTime ;
-	dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG> ;
-	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
-	adms:status <http://purl.org/adms/status/completed> ;
-	cv:contactPoint <https://w3id.org/italia/data/contact-point/ISTAT-NDC> ;
-	cv:isReusedBy "https://w3id.org/italia/data/project/NDC"^^xsd:anyURI, "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI ;
-	prof:hasResource <https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD>, <https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE>, <https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML> ;
-	dct:requires <https://w3id.org/italia/onto/TI>, <https://w3id.org/italia/onto/l0>, <https://w3id.org/italia/onto/CLV> ;
-	dct:hasPart <https://w3id.org/italia/onto/CPV/EducationLevel>, <https://w3id.org/italia/onto/CPV/Person>, <https://w3id.org/italia/onto/CPV/Sex>, <https://w3id.org/italia/onto/CPV/ResidenceInTime> ;
-	a dct:Standard .
+<https://w3id.org/italia/onto/CPV> a dct:Standard;
+  dct:description "Questa è l'ontologia del profilo applicativo italiano sulle persone. L'ontologia modella informazioni generali sulle persone fisiche come per esempio il nome, cognome, data di nascita, luogo di nascita, codice fiscale, residenza, cittadinanza e relazioni tra persone sia generiche di conoscenza sia di generiche relazioni di parentela ma non come registrate presso l'anagrafe."@it,
+    "This is the ontology of the Italian application profile on persons. The ontology models general information on natural persons such as first name, surname, date of birth, place of birth, tax code, residence, citizenship and relations between persons both generic of knowledge and generic of kinship relations but not as registered with the civil registry."@en;
+  dct:identifier "https://w3id.org/italia/onto/CPV";
+  dct:title "CPV-AP_IT - Core Person Vocabulary Italian Application Profile - Person Ontology"@en,
+    "CPV-AP_IT: Core Person Vocabulary - profilo applicativo italiano - Ontologia delle persone"@it;
+  owl:versionInfo "https://w3id.org/italia/onto/CPV/0.8";
+  dct:issued "2017-07-19T00:00:00"^^xsd:dateTime;
+  dct:modified "2023-03-15T00:00:00"^^xsd:dateTime;
+  cv:isReusedBy "https://w3id.org/italia/data/project/OntoPiA"^^xsd:anyURI, "https://w3id.org/italia/data/project/NDC"^^xsd:anyURI;
+  dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI>;
+  dcat:keyword "famiglia"@it, "persona"@it, "persone"@it;
+  adms:status <http://purl.org/adms/status/completed>;
+  dct:creator <https://w3id.org/italia/data/public-organization/ISTAT>, <https://w3id.org/italia/data/public-organization/agid>;
+  dct:publisher <https://w3id.org/italia/data/public-organization/PCM-1RSIZZ>;
+  cv:contactPoint <https://w3id.org/italia/data/contact-point/ISTAT-NDC>;
+  dct:requires <https://w3id.org/italia/onto/l0>, <https://w3id.org/italia/onto/TI>,
+    <https://w3id.org/italia/onto/CLV>;
+  prof:hasResource <https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD>, <https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE>,
+    <https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML>;
+  dct:hasPart <https://w3id.org/italia/onto/CPV/EducationLevel>, <https://w3id.org/italia/onto/CPV/Person>,
+    <https://w3id.org/italia/onto/CPV/ResidenceInTime>, <https://w3id.org/italia/onto/CPV/Sex> .
 
 <https://w3id.org/italia/data/contact-point/ISTAT-NDC> cv:email "ndc-segr-tec@istat.it" ;
 	a cv:ContactPoint .
