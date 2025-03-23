@@ -14,6 +14,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 CONSTRUCT {
   ?s a dct:Standard .
   ?s dct:title ?title .
+  ?s dcat:keyword ?keyword .
   ?s dct:description ?description .
   ?s owl:versionInfo ?versionInfo .
   ?s dct:issued ?issuedDT .
@@ -33,9 +34,9 @@ CONSTRUCT {
   ?classURI rdfs:label ?classLabel .
   ?s adms:status ?statusURI .
   ?statusURI rdf:type skos:Concept .
-    ?s cv:contactPoint ?contactPoint .
-    ?contactPoint rdf:type cv:ContactPoint .
-    ?contactPoint cv:email ?emailTo .
+  ?s cv:contactPoint ?contactPoint .
+  ?contactPoint rdf:type cv:ContactPoint .
+  ?contactPoint cv:email ?emailTo .
 }
 WHERE {
   ?s rdf:type <https://data.norge.no/vocabulary/modelldcatno#InformationModel> .
@@ -43,6 +44,9 @@ WHERE {
   ?s dct:description ?description . 
   OPTIONAL {
     ?s  owl:versionInfo ?versionInfo
+  }
+  OPTIONAL {
+    ?s  dcat:keyword ?keyword .
   }
   OPTIONAL {
      ?s dct:issued ?issued .
