@@ -1,0 +1,385 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://www.sis.se/produkter/foretagsorganisation/kvalitet/allmant/sseniso191152005/> dcterms:title "Geographic information - Metadata (Standard)"@en, "Geografisk information - Metadata (Standard)"@sv ;
+	dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.sis.se/produkter/foretagsorganisation/kvalitet/allmant/sseniso191152005/" ;
+	dcterms:description "SS-EN ISO 19115: 2003"@sv ;
+	a dcterms:Standard .
+
+<https://dataportal.se/specifications/Utegym/1.0> <http://www.w3.org/ns/dx/prof/hasResource> <https://editera.dataportal.se/store/93/resource/5>, <https://editera.dataportal.se/store/93/resource/4>, <https://editera.dataportal.se/store/93/resource/3> ;
+	dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
+	dcterms:identifier "https://dataportal.se/specifications/Utegym/1.0" ;
+	dcterms:description "Datamängden ”utegym” (även kallat bland annat utomhusgym eller fitness station / outdoor gym på engelska) omfattar gym på allmän plats utomhus som är fri att användas för allmänheten, oftast året om och kostnadsfritt. Till utegym hör ofta enklare redskap och utrustning för styrketräning och konditionsträning."@sv ;
+	dcat:keyword "utegym"@sv ;
+	dcterms:title "Utegym"@sv ;
+	a dcterms:Standard .
+
+<https://gitlab.com/lankadedata/spec/utegym> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://gitlab.com/lankadedata/spec/grillplatser> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://community.dataportal.se/topic/682/v%C3%A4gledning-f%C3%B6r-att-publicera-%C3%B6ppna-data-om-lekplatser> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<http://publications.europa.eu/resource/authority/data-theme/ENVI> a skos:Concept .
+
+<http://www.opengis.net/def/crs/EPSG/0/32633> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/32633" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/32633"@sv ;
+	a dcterms:Standard .
+
+<https://gitlab.com/lankadedata/spec/badplatser> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<http://www.opengis.net/def/crs/EPSG/0/4619> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/4619" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/4619"@sv ;
+	a dcterms:Standard .
+
+<https://gitlab.com/lankadedata/spec/lekplatser/-/raw/main/lekplatser-data-distribution-example.csv?inline=false> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://www.sis.se/produkter/informationsteknik-kontorsutrustning/ittillampningar/it-tillampningar-inom-vetenskap/ss-en-iso-191312022/> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "https://www.sis.se/produkter/informationsteknik-kontorsutrustning/ittillampningar/it-tillampningar-inom-vetenskap/ss-en-iso-191312022/" ;
+	dcterms:description "SS-EN ISO 19131:2020"@en ;
+	dcterms:title "Geographic information — Data product specifications (Standard)"@en ;
+	a dcterms:Standard .
+
+<http://www.opengis.net/def/crs/EPSG/0/3018> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/3018" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/3018"@sv ;
+	a dcterms:Standard .
+
+<https://gitlab.com/lankadedata/spec/utegym/-/raw/master/dataset-example.ods> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://editera.dataportal.se/store/93/resource/3> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<http://www.opengis.net/def/crs/EPSG/0/3016> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/3016" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/3016"@sv ;
+	a dcterms:Standard .
+
+<http://www.opengis.net/def/crs/EPSG/0/3017> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/3017" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/3017"@sv ;
+	a dcterms:Standard .
+
+<http://www.opengis.net/def/crs/EPSG/0/3014> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/3014" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/3014"@sv ;
+	a dcterms:Standard .
+
+<https://lankadedata.se/spec/badplatser/schema.json> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<http://www.opengis.net/def/crs/EPSG/0/3015> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/3015" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/3015"@sv ;
+	a dcterms:Standard .
+
+<http://www.opengis.net/def/crs/EPSG/0/3012> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/3012" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/3012"@sv ;
+	a dcterms:Standard .
+
+<http://www.opengis.net/def/crs/EPSG/0/3013> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/3013" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/3013"@sv ;
+	a dcterms:Standard .
+
+<http://www.opengis.net/def/crs/EPSG/0/3010> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/3010" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/3010"@sv ;
+	a dcterms:Standard .
+
+<http://www.opengis.net/def/crs/EPSG/0/3011> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/3011" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/3011"@sv ;
+	a dcterms:Standard .
+
+<https://transportstyrelsen.entryscape.net/store/7/resource/313> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "https://transportstyrelsen.entryscape.net/store/7/resource/313" ;
+	dcterms:description "Dokument som beskriver leverans av öppna data avseende kalender, tariff och betalmetod av 2025"@sv ;
+	dcterms:title "Leveransspecifikation trängselskatt och infrastrukturavgift"@sv ;
+	a dcterms:Standard .
+
+<https://gitlab.com/lankadedata/spec/badplatser/-/raw/main/dataset-example.xlsx?inline=false> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://editera.dataportal.se/store/97/resource/10> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://lankadedata.se/spec/offentlig-konst> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "https://lankadedata.se/spec/offentlig-konst" ;
+	dcterms:description "Dokumentation av specifikationen för offentlig konst v 1.0"@sv ;
+	dcterms:title "Specifikation för offentlig konst - version 1.0"@sv ;
+	a dcterms:Standard .
+
+<https://lankadedata.se/spec/lekplatser> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://community.dataportal.se/topic/708/v%C3%A4gledning-f%C3%B6r-att-publicera-data-om-grillplatser/6> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<http://www.opengis.net/def/crs/EPSG/0/4936> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/4936" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/4936"@sv ;
+	a dcterms:Standard .
+
+<https://dataportal.se/specifications/prof-se/1.0> dcat:keyword "metadataprofil"@sv, "PROF"@sv, "specifikation"@sv ;
+	dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/dx/prof/hasResource> <https://lankadedata.se/spec/prof-se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "https://dataportal.se/specifications/prof-se/1.0" ;
+	dcterms:issued "2021-01-25T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:description """Denna metadataprofil är framtagen utifrån behoven på Sveriges Dataportal för att beskriva specifikationer.
+
+Metadataprofilen är i huvudsak baserad på W3Cs Profiles vocabulary (PROF) utvidgad med några element från Asset Description Metadata Schema (ADMS) och Data Catalog Vocabulary (DCAT)."""@sv ;
+	dcterms:title "Metadataprofil för specifikationer"@sv ;
+	a dcterms:Standard .
+
+<http://www.opengis.net/def/crs/EPSG/0/3009> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/3009" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/3009"@sv ;
+	a dcterms:Standard .
+
+<http://www.opengis.net/def/crs/EPSG/0/3007> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/3007" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/3007"@sv ;
+	a dcterms:Standard .
+
+<http://www.opengis.net/def/crs/EPSG/0/3008> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/3008" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/3008"@sv ;
+	a dcterms:Standard .
+
+<https://lankadedata.se/spec/skoldata/1.1/schema.json> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://lankadedata.se/spec/prof-se/> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://dataportal.se/specifications/ledigatomter/2.0> dcterms:title "Lediga tomter version 2.0"@sv, "Available plots of land version 2.0"@en ;
+	dcterms:description "This specification defines a simple tabular information model for vacant lots. The specification also includes a description of how the information is expressed in CSV and JSON formats. As a basis, CSV is assumed to be deliverable as it is a practical format and creates predictability for recipients of the information."@en, "Denna specifikation definierar en enkel tabulär informationsmodell för lediga tomter. Specifikationen innefattar också en beskrivning av hur informationen uttrycks i formaten CSV och JSON. Som grund förutsätts CSV kunna levereras då det är ett praktiskt format och skapar förutsägbarhet för mottagare av informationen."@sv ;
+	<http://www.w3.org/ns/dx/prof/hasResource> <https://lankadedata.se/spec/lediga-tomter/schema.json>, <https://lankadedata.se/spec/lediga-tomter/> ;
+	dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "https://dataportal.se/specifications/ledigatomter/2.0" ;
+	a dcterms:Standard .
+
+<http://www.opengis.net/def/crs/EPSG/0/3006> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/3006" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/3006"@sv ;
+	a dcterms:Standard .
+
+<https://www.dataportal.se/sv/specifications/leverantorsreskontra/latest#ref=?p=1&q=leverant%C3%B6rs&s=2&t=20&f=&rt=spec_standard%2524spec_profile&c=false> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "https://www.dataportal.se/sv/specifications/leverantorsreskontra/latest#ref=?p=1&q=leverant%C3%B6rs&s=2&t=20&f=&rt=spec_standard%2524spec_profile&c=false" ;
+	dcterms:title "Leverantörsreskontra"@sv ;
+	a dcterms:Standard .
+
+<http://www.opengis.net/def/crs/EPSG/0/4258> dcterms:title "ETRS89 - European Terrestrial Reference System 1989"@en, "http://www.opengis.net/def/crs/EPSG/0/4258"@sv ;
+	dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "urn:ogc:def:crs:EPSG::4258" ;
+	a dcterms:Standard .
+
+<https://editera.dataportal.se/store/130/resource/4> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://vgregion.entryscape.net/store/7/resource/84> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "https://vgregion.entryscape.net/store/7/resource/84" ;
+	dcterms:description "Turistrådet Västsveriges API dokumentation"@sv ;
+	dcterms:title "Turistrådet Västsveriges API dokumentation"@sv ;
+	a dcterms:Standard .
+
+<https://lankadedata.se/spec/lekplatser/schema.json> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://lankadedata.se/spec/utegym/schema.json> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://dataportal.se/specifications/grillplatser/1.0> dcat:keyword "grillplatser"@sv, "barbecue area"@en, "grillplats"@sv ;
+	<http://www.w3.org/ns/dx/prof/hasResource> <https://community.dataportal.se/topic/708/v%C3%A4gledning-f%C3%B6r-att-publicera-data-om-grillplatser/6>, <https://gitlab.com/lankadedata/spec/grillplatser>, <https://lankadedata.se/spec/grillplatser/schema.json>, <https://editera.dataportal.se/store/130/resource/4>, <https://lankadedata.se/spec/grillplatser/> ;
+	dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "https://dataportal.se/specifications/grillplatser/1.0" ;
+	dcterms:issued "2022-07-11T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:description """Med grillplats menas en särskilt anlagd eller skött allmän plats där man kan göra upp eld och/eller grilla i en särskilt anlagd härd.
+
+Denna specifikation definierar en enkel tabulär informationsmodell för grillplatser. Specifikationen innefattar också en beskrivning av hur informationen uttrycks i formatet CSV och JSON. Som grund förutsätts CSV kunna levereras då det är praktiskt format och skapar förutsägbarhet för mottagare av informationen. Det är också ett format som gör sammanställningen av datamängden enklare då den kan representeras i t.ex. ett kalkylblad."""@sv ;
+	dcterms:title "Grillplatser"@sv ;
+	a dcterms:Standard .
+
+<https://lankadedata.se/spec/skoldata/> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "https://lankadedata.se/spec/skoldata/" ;
+	dcterms:description "Information om skolor, förskolor och gymnasier 2018-12-11"@sv ;
+	dcterms:title "Specifikation för skoldata"@sv ;
+	a dcterms:Standard .
+
+<http://www.sis.se/produkter/foretagsorganisation/kvalitet/allmant/ss-en-iso-191572013/> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.sis.se/produkter/foretagsorganisation/kvalitet/allmant/ss-en-iso-191572013/" ;
+	dcterms:description "SS-EN ISO 19157:2013"@en ;
+	dcterms:title "Geographic information - Data quality (Standard)"@en ;
+	a dcterms:Standard .
+
+<http://purl.org/adms/status/UnderDevelopment> a skos:Concept .
+
+<https://lankadedata.se/spec/lediga-tomter/schema.json> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://www.dataportal.se/specifications/badplatser/1.0> dcterms:title "Specification public beaches"@en, "Specifikation badplatser"@sv, "https://www.dataportal.se/specifications/badplatser/1.0"@sv ;
+	dcterms:description "Specification that describes the dataset"@en, "Specifikation som beskriver datamängden"@sv ;
+	dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "https://www.dataportal.se/specifications/badplatser/1.0" ;
+	a dcterms:Standard .
+
+<https://gitlab.com/lankadedata/spec/badplatser/-/raw/master/dataset-example.ods> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://dataportal.se/specifications/utegym/1.0> dcterms:title "Träningsplatser utomhus (utomhusgym, utegym)"@sv, "Outdoor training sites (outdoor gym)"@en, "Utegym (Träningsplatser utomhus, utomhusgym)"@sv, "Outdoor gym (Outdoor training sites)"@en ;
+	dcat:keyword "motorikbana"@sv, "utomhusgym"@sv, "fitness station"@en, "outdoor gym"@en, "utegym"@sv, "gym"@sv ;
+	dcterms:description "Information about outdoor gyms, specially arranged outdoor training sites. This specification focuses on outdoor gyms that are open to the public all year round and also makes it possible to publish private outdoor gyms that are accessible to the public. Using this specification, you can link published outdoor gyms to Wikidata which increases search engine results. This increases the potential usage of published outdoor gyms. It also connects easier to OpenStreetMap for maps and training equipment."@en, "Information om utomhusgym, även kallat utegym, särskilt anordnade träningsplatser utomhus. Denna specifikation fokuserar på utegym som är öppna för allmänheten året om och möjliggör även att publicera privata utegym som är tillgängliga för allmänheten. Med hjälp av denna specifikation kan du koppla publicerade utegym till Wikidata som ökar sökbarheten i sökmotorer. Detta ökar den potentiella användningen av publicerade utegym. Det kopplas även enklare till OpenStreetMap för kartor och träningsredskap."@sv ;
+	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC>, <http://publications.europa.eu/resource/authority/data-theme/REGI> ;
+	a dcterms:Standard ;
+	dcterms:issued "2021-09-07T10:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:identifier "https://dataportal.se/specifications/utegym/1.0" ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/Completed>, <http://purl.org/adms/status/UnderDevelopment> ;
+	<http://www.w3.org/ns/dx/prof/hasResource> <https://lankadedata.se/spec/utegym/>, <https://gitlab.com/lankadedata/spec/utegym>, <https://lankadedata.se/spec/utegym/schema.json>, <https://gitlab.com/lankadedata/spec/utegym/-/raw/master/dataset-example.ods>, <https://gitlab.com/lankadedata/spec/utegym/-/raw/master/dataset-example.xlsx>, <https://editera.dataportal.se/store/97/resource/10> ;
+	dcterms:creator <https://digg.se/> .
+
+<https://www.dataportal.se/sv/specifications/matsvinn/1.0/> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "https://www.dataportal.se/sv/specifications/matsvinn/1.0/" ;
+	dcterms:title "Matsvinn specifikation"@sv ;
+	a dcterms:Standard .
+
+<https://digg.se/> dcterms:title "DIGG"@sv ;
+	a foaf:Agent .
+
+<http://purl.org/adms/status/Completed> a skos:Concept .
+
+<https://www.dataportal.se/en/specifications/lekplatser/1.0> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "https://www.dataportal.se/en/specifications/lekplatser/1.0" ;
+	dcterms:title "Dataspecifikation lekplatser"@sv ;
+	a dcterms:Standard .
+
+<https://lankadedata.se/spec/grillplatser/schema.json> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://gitlab.com/lankadedata/spec/utegym/-/raw/master/dataset-example.xlsx> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://dataportal.se/specifications/badplatser/1.0> dcat:keyword "swimming pool"@en, "swimming spot"@en, "swimming area"@en, "stränder"@sv, "bathing place"@en, "beach"@en, "strand"@sv, "beaches"@en, "swimming"@en, "bad"@sv, "badplatser"@sv ;
+	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ENVI>, <http://publications.europa.eu/resource/authority/data-theme/EDUC>, <http://publications.europa.eu/resource/authority/data-theme/REGI> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment>, <http://purl.org/adms/status/Completed> ;
+	<http://www.w3.org/ns/dx/prof/hasResource> <https://gitlab.com/lankadedata/spec/badplatser/-/raw/main/dataset-example.ods?inline=false>, <https://lankadedata.se/spec/badplatser>, <https://gitlab.com/lankadedata/spec/badplatser>, <https://lankadedata.se/spec/badplatser/schema.json>, <https://gitlab.com/lankadedata/spec/badplatser/-/raw/master/dataset-example.ods>, <https://gitlab.com/lankadedata/spec/badplatser/-/raw/master/dataset-example.xlsx>, <https://editera.dataportal.se/store/86/resource/9>, <https://gitlab.com/lankadedata/spec/badplatser/-/raw/main/dataset-example.xlsx?inline=false> ;
+	a dcterms:Standard ;
+	dcterms:title "Badplatser"@sv ;
+	dcterms:description "Information om badplatser, naturliga eller särskilt anordnade."@sv ;
+	dcterms:issued "2021-06-18T16:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:identifier "https://dataportal.se/specifications/badplatser/1.0" ;
+	dcterms:creator <https://digg.se/> .
+
+<http://www.opengis.net/def/crs/EPSG/0/3035> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/3035" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/3035"@sv ;
+	a dcterms:Standard .
+
+<https://gitlab.com/lankadedata/spec/badplatser/-/raw/master/dataset-example.xlsx> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://lankadedata.se/spec/utegym/> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://editera.dataportal.se/store/86/resource/9> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://gitlab.com/lankadedata/spec/lekplatser> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://lankadedata.se/spec/skoldata/1.1/> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://lankadedata.se/spec/badplatser> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<http://publications.europa.eu/resource/authority/data-theme/SOCI> a skos:Concept .
+
+<https://editera.dataportal.se/store/93/resource/4> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://editera.dataportal.se/store/93/resource/5> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://lankadedata.se/spec/lediga-tomter/> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://lankadedata.se/spec/matsvinn/> dcterms:title "Specification food waste 2024 and forwards"@en, "Specifikation matsvinn 2024 och framåt"@sv, "Specifikation för matsvinn"@sv ;
+	dcterms:description "Specification food waste 2024 and forwards"@en, "Specifikation matsvinn 2024 och framåt"@sv ;
+	dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "https://lankadedata.se/spec/matsvinn/" ;
+	a dcterms:Standard .
+
+<http://publications.europa.eu/resource/authority/data-theme/REGI> a skos:Concept .
+
+<http://www.sis.se/produkter/informationsteknik-kontorsutrustning/ittillampningar/it-tillampningar-inom-vetenskap/sis-ts-802018/> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.sis.se/produkter/informationsteknik-kontorsutrustning/ittillampningar/it-tillampningar-inom-vetenskap/sis-ts-802018/" ;
+	dcterms:description "SIS-TS 80:2018"@sv ;
+	dcterms:title "Geographic Information – Nationell metadataprofil för geografisk information (Standard)"@sv ;
+	a dcterms:Standard .
+
+<https://dataportal.se/specifications/skoldata/1.1> dcat:keyword "Skola"@sv, "Förskola"@sv ;
+	<http://www.w3.org/ns/dx/prof/hasResource> <https://lankadedata.se/spec/skoldata/1.1/schema.json>, <https://lankadedata.se/spec/skoldata/1.1/> ;
+	dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/Completed> ;
+	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
+	dcterms:identifier "https://dataportal.se/specifications/skoldata/1.1" ;
+	dcterms:modified "2018-12-10T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:issued "2016-10-20T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:description """Med skoldata menas kontakt- och platsinformation om förskolor, familjedaghem, grundskolor och gymnasier inom en kommun. I texten nedan används för enkelhets skull ordet “skola” för att benämna alla dessa former.
+
+Denna specifikation definierar en enkel tabulär datamodell för skoldata som passar utmärkt att leverera i formatet CSV, dvs kommaseparerade värden enligt RFC4180. Inget hindrar att ytterligare format stöds, t.ex. beskrivs också nedan hur JSON uttrycket ska se ut. Men som grund förutsätts CSV kunna levereras då det är praktiskt och skapar förutsägbarhet för mottagare av informationen."""@sv ;
+	dcterms:title "Specifikation för skoldata"@sv ;
+	a dcterms:Standard .
+
+<http://publications.europa.eu/resource/authority/data-theme/EDUC> a skos:Concept .
+
+<http://publications.europa.eu/resource/authority/data-theme/HEAL> a skos:Concept .
+
+<https://dataportal.se/specifications/lekplatser/1.0> dcterms:title "Playgrounds"@en, "Lekplatser"@sv ;
+	dcat:keyword "playgrounds"@en, "lekplatser"@sv, "playground"@en, "lekplats"@sv ;
+	dcterms:description """By playgrounds it is meant a specially landscaped public place where play and socializing can take place. In the text below, "playground" is used to denote this.
+
+This specification defines a simple table information model for playgrounds. The specification also includes a description of how the information is expressed in the format CSV and JSON. As a basis, CSV is assumed to be able to deliver as it is practically formatted and creates predictability for recipients of the information. It is also a format that makes the compilation of the data set easier as it can be represented in e.g. a spreadsheet."""@en, """Med lekplatser menas en särskilt anlagd allmän plats där lek och umgänge kan ske. I texten nedan används “lekplats” för att benämna detta.
+
+Denna specifikation definierar en enkel tabulär informationsmodell för lekplatser. Specifikationen innefattar också en beskrivning av hur informationen uttrycks i formatet CSV och JSON. Som grund förutsätts CSV kunna levereras då det är praktiskt format och skapar förutsägbarhet för mottagare av informationen. Det är också ett format som gör sammanställningen av datamängden enklare då den kan representeras i t.ex. ett kalkylblad."""@sv ;
+	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI>, <http://publications.europa.eu/resource/authority/data-theme/EDUC>, <http://publications.europa.eu/resource/authority/data-theme/REGI>, <http://publications.europa.eu/resource/authority/data-theme/HEAL> ;
+	a dcterms:Standard ;
+	dcterms:issued "2022-02-16T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:modified "2022-02-18T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:identifier "https://dataportal.se/specifications/lekplatser/1.0" ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	<http://www.w3.org/ns/dx/prof/hasResource> <https://lankadedata.se/spec/lekplatser/schema.json>, <https://gitlab.com/lankadedata/spec/lekplatser>, <https://lankadedata.se/spec/lekplatser>, <https://www.dataportal.se/terminology/lekplats>, <https://gitlab.com/lankadedata/spec/lekplatser/-/raw/main/lekplatser-data-distribution-example.csv?inline=false>, <https://community.dataportal.se/topic/682/v%C3%A4gledning-f%C3%B6r-att-publicera-%C3%B6ppna-data-om-lekplatser> ;
+	dcterms:creator <https://digg.se/> .
+
+<https://lankadedata.se/spec/grillplatser/> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://gitlab.com/lankadedata/spec/badplatser/-/raw/main/dataset-example.ods?inline=false> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<https://www.dataportal.se/terminology/lekplats> a <http://www.w3.org/ns/dx/prof/ResourceDescriptor> .
+
+<http://www.opengis.net/def/crs/EPSG/0/3021> dcterms:creator <https://digg.se/> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> ;
+	dcterms:identifier "http://www.opengis.net/def/crs/EPSG/0/3021" ;
+	dcterms:title "http://www.opengis.net/def/crs/EPSG/0/3021"@sv ;
+	a dcterms:Standard .
+

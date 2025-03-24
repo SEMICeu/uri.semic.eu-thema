@@ -69,11 +69,11 @@ where {
     BIND(str(?versionInfo) AS ?versionInfo2 ) .
     
     ?s dct:issued ?issued .
-    BIND(STRDT(concat(STR(?issued),"T00:00:00") , xsd:dateTime) AS ?issuedDT) .
+    BIND(STRDT(concat(STR(?issued),"T00:00:00Z") , xsd:dateTime) AS ?issuedDT) .
     
     OPTIONAL {
         ?s dct:modified ?modified .
-        BIND(STRDT(concat(STR(?modified),"T00:00:00") , xsd:dateTime) AS ?modifiedDT) .
+        BIND(STRDT(concat(STR(?modified),"T00:00:00Z") , xsd:dateTime) AS ?modifiedDT) .
     }
     
     OPTIONAL {
@@ -131,4 +131,4 @@ where {
     	?s <https://w3id.org/italia/onto/ADMS/hasKeyClass> ?classURI .
     	?classURI rdfs:label ?classLabel .
     }
-
+}
