@@ -37,6 +37,7 @@ CONSTRUCT {
   ?s cv:contactPoint ?contactPoint .
   ?contactPoint rdf:type cv:ContactPoint .
   ?contactPoint cv:email ?emailTo .
+  ?s dct:requires ?IncludedModel .
 }
 WHERE {
   ?s rdf:type <https://data.norge.no/vocabulary/modelldcatno#InformationModel> .
@@ -86,6 +87,9 @@ WHERE {
     ?s dcat:contactPoint ?contactPoint .
     ?contactPoint vcard:hasEmail ?email .
     BIND(STRAFTER(STR(?email),"mailto:") as ?emailTo) .
+  }
+  OPTIONAL {
+    ?s dct:hasPart ?IncludedModel .
   }
 }
 

@@ -38,17 +38,18 @@
 
 <http://publications.europa.eu/resource/authority/data-theme/GOVE> a skos:Concept .
 
-<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#skos-ap-no-begrep-model> dcterms:title "Simplified model for SKOS-AP-NO-Begrep"@en, "Forenklet modell for SKOS-AP-NO-Begrep"@nb ;
-	dcterms:description "Forenklet informasjonsmodell for \"Forvaltningsstandard for begrepsbeskrivelser (SKOS-AP-NO-Begrep)\"."@nb, "Simplified information model for \"Standard for concept descriptions (SKOS-AP-NO-Begrep)\"."@en ;
-	<http://data.europa.eu/m8g/contactPoint> <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#digdir-contact-point> ;
-	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/Completed> ;
-	dcterms:creator <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827> ;
-	dcterms:publisher <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827> ;
-	dcterms:identifier "https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#skos-ap-no-begrep-model" ;
-	dcterms:language <http://publications.europa.eu/resource/authority/language/NOB> ;
-	dcterms:issued "2022-12-09T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#skos-ap-no-begrep-model> a dcterms:Standard ;
+	dcterms:title "Forenklet modell for SKOS-AP-NO-Begrep"@nb, "Simplified model for SKOS-AP-NO-Begrep"@en ;
+	dcterms:description "Simplified information model for \"Standard for concept descriptions (SKOS-AP-NO-Begrep)\"."@en, "Forenklet informasjonsmodell for \"Forvaltningsstandard for begrepsbeskrivelser (SKOS-AP-NO-Begrep)\"."@nb ;
 	owl:versionInfo "2.0" ;
-	a dcterms:Standard .
+	dcterms:issued "2022-12-09T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	dcterms:language <http://publications.europa.eu/resource/authority/language/NOB> ;
+	dcterms:identifier "https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#skos-ap-no-begrep-model" ;
+	dcterms:publisher <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827> ;
+	dcterms:creator <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827> ;
+	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/Completed> ;
+	<http://data.europa.eu/m8g/contactPoint> <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#digdir-contact-point> ;
+	dcterms:requires <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#skos-ap-no-begrep-only-relations-model>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#skos-ap-no-begrep-only-mandatory-model>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#skos-ap-no-begrep-without-relations-model> .
 
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#xkos-ap-no-model> dcterms:title "Information model for XKOS-AP-NO"@en, "Informasjonsmodell for XKOS-AP-NO"@nb ;
 	dcterms:description "Informasjonsmodell for \"Spesifikasjon for klassifikasjonsbeskrivelser (XKOS-AP-NO)\"."@nb, "Information model for \"Specification for description of classifications (XKOS-AP-NO)\"."@en ;
