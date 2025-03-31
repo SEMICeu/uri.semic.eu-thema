@@ -2,7 +2,7 @@
 {
   "name": "iopa",
   "type": "ap",
-  "eap": "iopa.eap",
+  "eap": "IOPA2.eap",
   "diagram": "IOPA-AP",
   "template": "iopa_en.j2",
   "title": "Interoperability Assessment Vocabulary",
