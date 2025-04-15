@@ -146,8 +146,12 @@ function validate(model, version, content, format) {
 	if(version === undefined) {
 		console.log("This is undefined");
 	}
+	const encoder = new TextEncoder();
+	const bytes = encoder.encode(content);
+	// Convert Uint8Array to a binary string
+	const binaryString = String.fromCharCode(...bytes);
 	request = {
-	"contentToValidate": btoa(content),
+	"contentToValidate": binaryString,
     "contentSyntax": format,
    "embeddingMethod": "BASE64",
    "validationType": version,
