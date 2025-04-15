@@ -198,9 +198,13 @@ function validate(model, version, content, format) {
 				const bindings = await result.toArray();
 
 				bindings.forEach(binding => {
-					triplestring = "<tr><td>" + binding.get('node').value + "</td><td>" + binding.get('path').value + "</td><td>" + binding.get('message').value + "</td><td>" + binding.get('severity').value + "</td></tr>" ;
+					nodestring = binding.get('node').value ;
+					pathstring = binding.get('path').value ;
+					messagestring = binding.get('message').value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+					severitystring = binding.get('severity').value ;
+					triplestring = "<tr><td>" + nodestring + "</td><td>" + pathstring + "</td><td>" + messagestring + "</td><td>" + severitystring + "</td></tr>" ;
 					htmltable += triplestring;
-					console.log("Message:", binding.get('message').value);
+					//console.log("Message:", binding.get('message').value);
 					//console.log("Predicate:", binding.get('p').value);
 					//console.log("Object:", binding.get('o').value);
 				});
