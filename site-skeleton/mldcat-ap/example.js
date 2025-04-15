@@ -283,9 +283,8 @@ function validate(model, version, content, format) {
 
 function validateShacl(model, rule, content, format) {
 	request = {
-	"contentToValidate": btoa(content),
+	"contentToValidate": content,
     "contentSyntax": format,
-   "embeddingMethod": "BASE64",
    "externalRules" : [
 	{
 	   "ruleSet" : rule,
