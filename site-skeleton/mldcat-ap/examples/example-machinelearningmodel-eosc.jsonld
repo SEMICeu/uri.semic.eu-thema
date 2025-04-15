@@ -6,7 +6,7 @@
         "it6" : "http://data.europa.eu/it6/",
         "lpwc" : "https://linkedpaperswithcode.com/class/",
         "spdx" : "http://spdx.org/rdf/terms#",
-        "xsd" : "http://www.w3.org/2001/XMLSchema#",
+        "xsd" : "http://www.w3.org/2001/XMLSchema#"
       }
     ],
       "@graph": [
@@ -81,7 +81,7 @@
             "OutputFilePrediction.format": "http://example.com/format/pytorch",
             "OutputFilePrediction.id" : "TBBRDet pytorch",
             "OutputFilePrediction.title" : "TBBRDet pytorch format",
-            "OutputFilePrediction.url" : "https://github.com/ai4os-hub/thermal-bridges-rooftops-detector",
-        },
+            "OutputFilePrediction.url" : "https://github.com/ai4os-hub/thermal-bridges-rooftops-detector"
+        }
     ]
 }

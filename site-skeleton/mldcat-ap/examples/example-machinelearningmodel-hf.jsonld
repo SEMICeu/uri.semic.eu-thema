@@ -6,7 +6,7 @@
         "it6" : "http://data.europa.eu/it6/",
         "lpwc" : "https://linkedpaperswithcode.com/class/",
         "spdx" : "http://spdx.org/rdf/terms#",
-        "xsd" : "http://www.w3.org/2001/XMLSchema#",
+        "xsd" : "http://www.w3.org/2001/XMLSchema#"
       }
     ],
       "@graph": [
@@ -27,7 +27,7 @@
             "MachineLearningModel.name" : "bloomz-7b1",
             "MachineLearningModel.trainedOn" : ["https://huggingface.co/datasets/bigscience/xP3","https://huggingface.co/datasets/bigscience/xP3all"],
             "MachineLearningModel.version" : "1.0.0",
-            "MachineLearningModel.identifier" : "bigscience/bloomz-7b1",
+            "MachineLearningModel.identifier" : "bigscience/bloomz-7b1"
         },
         {
             "@id" : "https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors",
