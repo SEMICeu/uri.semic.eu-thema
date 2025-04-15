@@ -149,7 +149,7 @@ function validate(model, version, content, format) {
 	const encoder = new TextEncoder();
 	const bytes = encoder.encode(content);
 	// Convert Uint8Array to a binary string
-	const binaryString = String.fromCharCode(...bytes);
+	const binaryString = String.fromCharCode(bytes);
 	request = {
 	"contentToValidate": binaryString,
     "contentSyntax": format,
