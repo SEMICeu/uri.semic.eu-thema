@@ -200,7 +200,7 @@ function validate(model, version, content, format) {
 				bindings.forEach(binding => {
 					triplestring = "<tr><td>" + binding.get('node').value + "</td><td>" + binding.get('path').value + "</td><td>" + binding.get('message').value + "</td><td>" + binding.get('severity').value + "</td></tr>" ;
 					htmltable += triplestring;
-					//console.log("Subject:", binding.get('result').value);
+					console.log("Message:", binding.get('message').value);
 					//console.log("Predicate:", binding.get('p').value);
 					//console.log("Object:", binding.get('o').value);
 				});
