@@ -126,7 +126,7 @@ var dialog = $("<div>", {
   }).dialog({
     autoOpen: false,
     height: 400,
-    width: 740,
+    width: 770,
     modal: true,
 	show: { effect: "blind", duration: 400 }
   });
