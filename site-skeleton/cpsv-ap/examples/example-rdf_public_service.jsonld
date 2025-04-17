@@ -49,7 +49,7 @@
     },
     {
       "@id": "ex:publicOrganisation1",
-      "@type": "PublicOrganization",
+      "@type": "PublicOrganisation",
       "skos:prefLabel": [
         {
           "@language": "fr",
