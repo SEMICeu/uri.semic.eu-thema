@@ -78,11 +78,11 @@
 	};
 	var shaclfilepath = "shacl/{{metadata.filename}}-SHACL.ttl" ;
 	var folder = "./html/examples/";
-	var model = "mldcat-ap" ;
+	var model = "cpsv-ap" ;
 	var version_list = [
 		{
-		"type": "v2.1.0",
-		"description": "MLDCAT-AP 2.1.0"
+		"type": "v3.2.0",
+		"description": "CPSV-AP 2.1.0"
 		}
 	] ;
 	var linkinfo = "{{metadata.navigation.self}}" + "#validation" ;
@@ -262,7 +262,7 @@
     </h2>
     {% block introduction %}
         <p>
-            This document describes an <strong>Core Vocabulary</strong>, in this case <strong>{{ metadata.title }}</strong>. The Core Vocabulary specifies a semantic data model covering a set of usecases. The specification consists of terms with their constraints (cardinalities, codelists, usage guidelines).
+            This document describes an <strong>Application Profile</strong>, in this case <strong>{{ metadata.title }}</strong>. The Application Profile specifies a semantic data model covering a set of usecases. The specification consists of terms with their constraints (cardinalities, codelists, usage guidelines).
         </p>
     {% endblock %}
 </section>
@@ -315,12 +315,16 @@
         Terminology
     </h2>
         <p>
-            An Application Profile is a data specification aimed to facilitate the data exchange in a well-defined application context. It re-uses concepts from one or more semantic data specifications, while adding more specificity, by identifying mandatory, recommended, and optional elements, addressing particular application needs, and providing recommendations for controlled vocabularies to be used. 
+           An Application Profile (AP) is a specification that reuses terms from one or more base standards, adding more specificity by identifying mandatory,
+           recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used. 
+        </p>
+        <p>
+            A Core Vocabulary (CV) is a basic, reusable and extensible data specification that captures the fundamental characteristics of an entity in a context-neutral fashion. Its main objective is to provide terms to be reused in the broadest possible context.
             More information can be found on the <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification">SEMIC Style Guide</a>.
         </p>
     <h3>Used Prefixes</h3>
         {% block terminologyPrefixes %}
-    {% endblock %}
+        {% endblock %}
 </section>
 {% endblock %}
 
@@ -355,9 +359,9 @@
                 {% endif %}
     </div>
     <div>
-        <a href="./html/overview.jpg"
+        <a href="{{ metadata.documentconfig.editorDocumentroot if metadata.documentconfig.editorDocumentroot else documentroot }}/html/overview.jpg"
            target="_blank">
-            <img src="./html/overview.jpg"/>
+            <img src="{{ metadata.documentconfig.editorDocumentroot if metadata.documentconfig.editorDocumentroot else documentroot }}/html/overview.jpg"/>
         </a>
     </div>
 </section>
@@ -648,12 +652,11 @@ They are included in the Application Profile because they form the range of prop
 </section>
 
 
-
 {% block usages %}
 <section class="informative">
 	<h2>Usage Guidelines</h2>
-    {% include "MLDCAT-AP-implementation.j2" ignore missing %}
-    {% include "CV-governance.j2" ignore missing %}    
+    {% include "cpsv-ap-implementation.j2" ignore missing %}
+    {% include "CV-governance.j2" ignore missing %}
 </section>
 {% endblock %} 
 
@@ -730,7 +733,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 	<tbody>
 </table>
 
-
    {% block deprecation %}
    {% endblock %}
 
@@ -768,28 +770,38 @@ Past and current contributors are :
 
 
 	    var prefixes = [ 
+{'pref':'ad:', 'ns': 'http://inspire.ec.europa.eu/ont/ad#'},
 {'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
-{'pref':'biro:', 'ns': 'http://purl.org/spar/biro/'},
+{'pref':'atu:', 'ns': 'http://data.europa.eu/88u/dataset/'},
+{'pref':'cav:', 'ns': 'http://data.europa.eu/2sa/cav#'},
+{'pref':'cpsv:', 'ns': 'http://purl.org/vocab/cpsv#'},
 {'pref':'cv:', 'ns': 'http://data.europa.eu/m8g/'},
 {'pref':'dcat:', 'ns': 'http://www.w3.org/ns/dcat#'},
+{'pref':'dcatap:', 'ns': 'http://data.europa.eu/r5r/'},
 {'pref':'dct:', 'ns': 'http://purl.org/dc/terms/'},
-{'pref':'dpv:', 'ns': 'https://w3id.org/dpv#'},
-{'pref':'dqv:', 'ns': 'http://www.w3.org/ns/dqv#'},
+{'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
+{'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
+{'pref':'epo:', 'ns': 'http://data.europa.eu/a4g/ontology#'},
 {'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
-{'pref':'frapo:', 'ns': 'http://purl.org/cerif/frapo/'},
-{'pref':'it6:', 'ns': 'http://data.europa.eu/it6/'},
-{'pref':'lpwcc:', 'ns': 'https://linkedpaperswithcode.com/class/'},
-{'pref':'lpwc:', 'ns': 'https://linkedpaperswithcode.com/property/'},
-{'pref':'mls:', 'ns': 'http://www.w3.org/ns/mls#'},
-{'pref':'mlso:', 'ns': 'http://w3id.org/mlso/'},
+{'pref':'frbr:', 'ns': 'http://purl.org/vocab/frbr/core#'},
+{'pref':'geo:', 'ns': 'http://www.opengis.net/ont/geosparql#'},
+{'pref':'legal:', 'ns': 'http://www.w3.org/ns/legal#'},
+{'pref':'locn:', 'ns': 'http://www.w3.org/ns/locn#'},
 {'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},
+{'pref':'org:', 'ns': 'http://www.w3.org/ns/org#'},
 {'pref':'owl:', 'ns': 'http://www.w3.org/2002/07/owl#'},
-{'pref':'qb:', 'ns': 'http://purl.org/linked-data/cube#'},
+{'pref':'person:', 'ns': 'http://www.w3.org/ns/person#'},
+{'pref':'prof:', 'ns': 'http://www.w3.org/ns/dx/prof/'},
+{'pref':'prov:', 'ns': 'http://www.w3.org/ns/prov#'},
 {'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
 {'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
+{'pref':'schema:', 'ns': 'https://schema.org/'},
 {'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
 {'pref':'spdx:', 'ns': 'http://spdx.org/rdf/terms#'},
-{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'}
+{'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},
+{'pref':'vcard:', 'ns': 'http://www.w3.org/2006/vcard/ns#'},
+{'pref':'xhv:', 'ns': 'http://www.w3.org/1999/xhtml/vocab#'},
+{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'},
 
 				];
 
@@ -823,7 +835,6 @@ Past and current contributors are :
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/javascript/javascript.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/turtle/turtle.min.js" ></script>
     <script src="https://codemirror.net/5/mode/javascript/javascript.js" ></script>
-    <!--    <script src="https://semiceu.github.io/MLDCAT-AP/releases/1.0.0/example.js" ></script> -->
 	<script src="https://unpkg.com/n3@1.14.0/browser/n3.min.js"></script>
 	<script src="https://rdf.js.org/comunica-browser/versions/v4/engines/query-sparql/comunica-browser.js"></script>
     <script src="./html/example.js" ></script>
@@ -870,7 +881,7 @@ Past and current contributors are :
 			text-decoration: none;
 			float: right
 		}
-		.chooseVersion {
+	    .chooseVersion {
 			cursor: pointer;
 			margin-top: 10px;
 			margin-left: 10px;
@@ -908,6 +919,12 @@ Past and current contributors are :
 		li.ui-tabs-tab > a:hover {
 			background-color:dodgerblue;
 			color:white;
+		}
+		table.simple {
+			font-size: small;
+			border-spacing:0;
+			border-collapse:collapse;
+			border-bottom:3px solid #005a9c
 		}
 		.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
 		.simple th a{color:#fff;padding:3px 5px;text-align:left}
