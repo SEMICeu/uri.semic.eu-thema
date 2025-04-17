@@ -21,15 +21,17 @@ The JSON-LD context file downloadable <a href="./context/{{metadata.filename}}.j
 To verify if the data is (technically) conformant to the {{metadata.title}}, the exchanged data can be validated using the provided SHACL shapes. 
 SHACL is a W3C Recommendation to express constraints on an RDF knowledge graph. 
 <p/>
-To support the check whether or not a catalogue satisfies the expressed constraints in this Core Vocabulary, the constraints in this specification are expressed using SHACL [[shacl]].
+To support the check whether or not a catalogue satisfies the expressed constraints in this Application Profile, the constraints in this specification are expressed using SHACL [[shacl]].
 Each constraint in this specification that could be converted into a SHACL expression has been included.
-As such this collection of SHACL expressions that can be used to build a validation check for data. 
+As such this collection of SHACL expressions can be used to build a validation check for data. 
 <p/>
 It is up to the implementers to define the validation they expect.
 Each implementation happens within a context, and that context is beyond the SHACL expressions here.
 <p/>
 The shapes can be found <a href="./shacl/{{metadata.filename}}-SHACL.ttl">here</a>.
 
+The Interoperability Test Bed (ITB) provides a <a href="https://www.itb.ec.europa.eu/shacl/mldcat-ap/upload.">validation service for MLDCAT-AP</a> reusing the linked shapes.
+The examples in this specification can be validated via the <a href="https://www.itb.ec.europa.eu/shacl/swagger-ui/index.html">ITB REST API</a>.
 
 <h3>UML representation</h3>
 The UML representation from which the {{metadata.title}} has been build is available <a href="./uml">here</a>.
