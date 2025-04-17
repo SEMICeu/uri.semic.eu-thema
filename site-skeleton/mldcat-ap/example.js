@@ -152,8 +152,7 @@ function validate(model, version, content, format) {
    "validationType": version,
    "reportSyntax": "text/turtle"
 	};
-	var itbapi = "https://www.itb.ec.europa.eu/shacl/" + model + "/api/validate" ;
-	callITBandDisplay(request, itbapi) ;
+	callITBandDisplay(request, model) ;
 }
 
 function validateShacl(model, rule, content, format) {
@@ -169,11 +168,11 @@ function validateShacl(model, rule, content, format) {
 	],
    "reportSyntax": "text/turtle"
 	};
-	var itbapi = "https://www.itb.ec.europa.eu/shacl/" + model + "/api/validate" ;
-	callITBandDisplay(request, itbapi) ;
+	callITBandDisplay(request, model) ;
 }
 
-function callITBandDisplay(request, itbapi) {
+function callITBandDisplay(request, model) {
+	var itbapi = "https://www.itb.ec.europa.eu/shacl/" + model + "/api/validate" ;	
 	$.ajax({
 		type: "POST",
 		url: itbapi,
