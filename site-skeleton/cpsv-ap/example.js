@@ -494,7 +494,7 @@ $(document).ready(function () {
 			currentlocation = window.location.protocol + '//' + window.location.hostname + window.location.pathname ;
 			fullUrl = currentlocation + shaclfilepath ;
 			console.log("full location:" + fullUrl) ;
-			validateShacl(model, fullUrl, editors[index].CM0.getValue(), "text/turtle");
+			validateShacl(model, fullUrl, editors[index].CM1.getValue(), "application/ld+json);
 		}
 		else if (model == "zazuko") {
 			loadShape(shaclfilepath, editors[index].CM1.getValue(), "application%2Fld%2Bjson");
