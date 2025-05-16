@@ -460,7 +460,7 @@
                     <tbody class="supertype">
                         {% for prop in entity['properties'] | sort(attribute=sortattr) %}
                             <tr id="{{ (entity.label[language] ~ '.' ~ prop.label[language]) | replace(" ","") | urlencode }}"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="{{ prop.uri }}"
                                 class="class mandatory">
                                 <td>
