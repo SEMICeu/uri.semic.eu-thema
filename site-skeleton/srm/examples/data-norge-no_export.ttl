@@ -5,6 +5,43 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+
+<https://github.com/Informasjonsforvaltning/dqv-ap-no/blob/develop/ontology/dqvno.ttl> a prof:ResourceDescriptor;
+  dcat:downloadURL "https://github.com/Informasjonsforvaltning/dqv-ap-no/blob/develop/ontology/dqvno.ttl"^^xsd:anyURI;
+  dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>;
+  prof:hasRole <http://www.w3.org/ns/dx/prof/role/vocabulary>;
+  dct:title "RDF Turtle file of DQV NO"@en .
+  
+<https://github.com/Informasjonsforvaltning/skos-ap-no-begrep/blob/develop/ontology/skosno-v1.ttl> a prof:ResourceDescriptor;
+  dcat:downloadURL "https://github.com/Informasjonsforvaltning/skos-ap-no-begrep/blob/develop/ontology/skosno-v1.ttl"^^xsd:anyURI;
+  dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>;
+  prof:hasRole <http://www.w3.org/ns/dx/prof/role/vocabulary>;
+  dct:title "RDF Turtle file of SKOS NO"@en . 
+
+<https://github.com/Informasjonsforvaltning/cpsv-ap-no/blob/develop/ontology/cpsvno.ttl> a prof:ResourceDescriptor;
+  dcat:downloadURL "https://github.com/Informasjonsforvaltning/cpsv-ap-no/blob/develop/ontology/cpsvno.ttl"^^xsd:anyURI;
+  dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>;
+  prof:hasRole <http://www.w3.org/ns/dx/prof/role/vocabulary>;
+  dct:title "RDF Turtle file of CPSV NO"@en . 
+
+<https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/ontology/modelldcatno.ttl> a prof:ResourceDescriptor;
+  dcat:downloadURL "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/ontology/modelldcatno.ttl"^^xsd:anyURI;
+  dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>;
+  prof:hasRole <http://www.w3.org/ns/dx/prof/role/vocabulary>;
+  dct:title "RDF Turtle file of ModellDCAT NO"@en .
+  
+<https://github.com/Informasjonsforvaltning/dcat-ap-no/blob/develop/ontology/dcatno.ttl> a prof:ResourceDescriptor;
+  dcat:downloadURL "https://github.com/Informasjonsforvaltning/dcat-ap-no/blob/develop/ontology/dcatno.ttl"^^xsd:anyURI;
+  dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>;
+  prof:hasRole <http://www.w3.org/ns/dx/prof/role/vocabulary>;
+  dct:title "RDF Turtle file of DCAT NO"@en .
+  
+<https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl> a prof:ResourceDescriptor;
+  dcat:downloadURL "https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl"^^xsd:anyURI;
+  dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>;
+  prof:hasRole <http://www.w3.org/ns/dx/prof/role/vocabulary>;
+  dct:title "RDF Turtle file containing both Adresse Modell and Person Og Enhet"@en .
 
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#skos-ap-no-begrep-only-mandatory-model> dcterms:title "Forenklet modell for SKOS-AP-NO-Begrep, med kun obligatoriske klasser og deres obligatoriske egenskaper"@nb, "Simplified model for SKOS-AP-NO-Begrep, only with mandatory classes and their mandatory properties"@en ;
 	dcterms:description "Simplified information model for \"Standard for concept descriptions (SKOS-AP-NO-Begrep)\", only with mandatory classes and their mandatory properties."@en, "Forenklet informasjonsmodell for \"Forvaltningsstandard for begrepsbeskrivelser (SKOS-AP-NO-Begrep)\", men kun obligatoriske klasser og deres obligatoriske egenskaper."@nb ;
@@ -31,6 +68,7 @@
 	dcterms:language <http://publications.europa.eu/resource/authority/language/NOB> ;
 	dcterms:issued "2020-10-21T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
 	owl:versionInfo "1" ;
+	prof:hasResource <https://github.com/Informasjonsforvaltning/dqv-ap-no/blob/develop/ontology/dqvno.ttl>;
 	a dcterms:Standard .
 
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#KontaktOss> <http://data.europa.eu/m8g/email> "informasjonsforvaltning@digdir.no" ;
@@ -48,6 +86,7 @@
 	dcterms:publisher <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827> ;
 	dcterms:creator <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827> ;
 	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/Completed> ;
+	prof:hasResource <https://github.com/Informasjonsforvaltning/skos-ap-no-begrep/blob/develop/ontology/skosno-v1.ttl>;
 	<http://data.europa.eu/m8g/contactPoint> <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#digdir-contact-point> ;
 	dcterms:requires <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#skos-ap-no-begrep-only-relations-model>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#skos-ap-no-begrep-only-mandatory-model>, <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#skos-ap-no-begrep-without-relations-model> .
 
@@ -82,6 +121,7 @@
 	dcterms:modified "2024-10-07T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
 	dcterms:issued "2023-09-08T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
 	owl:versionInfo "1.1" ;
+	prof:hasResource <https://github.com/Informasjonsforvaltning/cpsv-ap-no/blob/develop/ontology/cpsvno.ttl>;
 	a dcterms:Standard .
 
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#modelldcat-ap-no-model> dcterms:title "Informasjonsmodell for ModellDCAT-AP-NO"@nb, "Information model for ModellDCAT-AP-NO"@en ;
@@ -95,6 +135,7 @@
 	dcterms:modified "2023-07-03T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
 	dcterms:issued "2023-07-03T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
 	owl:versionInfo "1.3" ;
+	prof:hasResource <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/ontology/modelldcatno.ttl>;
 	a dcterms:Standard .
 
 <http://publications.europa.eu/resource/authority/language/NOB> a skos:Concept .
@@ -109,6 +150,7 @@
 	dcterms:language <http://publications.europa.eu/resource/authority/language/NOB> ;
 	dcterms:issued "2024-11-26T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
 	owl:versionInfo "3.0" ;
+	prof:hasResource <https://github.com/Informasjonsforvaltning/dcat-ap-no/blob/develop/ontology/dcatno.ttl>;
 	a dcterms:Standard .
 
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#digdir-contact-point> <http://data.europa.eu/m8g/email> "informasjonsforvaltning@digdir.no" ;
@@ -167,6 +209,7 @@
 	dcterms:identifier "https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#AdresseModell" ;
 	dcterms:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
 	dcterms:creator <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> ;
+	prof:hasResource <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl>;
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
 	<http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/Completed> ;
 	<http://data.europa.eu/m8g/contactPoint> <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#KontaktOss> .
@@ -195,6 +238,7 @@
 	dcterms:title "Felles informasjonsmodell for Person og Enhet"@nb ;
 	dcterms:description "Overordnet informasjonsmodell for Person og Enhet med knytning til Identifikasjon og Adresse. Adressedelen av modellen er beskrevet nærmere i Felles informasjonsmodell for Adresse."@nb ;
 	owl:versionInfo "1.0" ;
+	prof:hasResource <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl>;
 	dcterms:issued "2016-11-02T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
 	dcterms:language <http://publications.europa.eu/resource/authority/language/NOB> ;
 	dcterms:identifier "https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#PersonOgEnhet" ;
