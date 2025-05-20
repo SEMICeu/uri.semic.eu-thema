@@ -6,33 +6,34 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix no: <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/catalog-of-models-for-specifications.ttl#> .
 
 <https://github.com/Informasjonsforvaltning/dqv-ap-no/blob/develop/ontology/dqvno.ttl> a prof:ResourceDescriptor;
-  dcat:downloadURL "https://github.com/Informasjonsforvaltning/dqv-ap-no/blob/develop/ontology/dqvno.ttl"^^xsd:anyURI;
+  dcat:downloadURL "https://raw.githubusercontent.com/SEMICeu/EU-wide-Registry-of-Semantic-Models/refs/heads/main/SR-dev/dqv-no.ttl"^^xsd:anyURI;
   dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>;
   prof:hasRole <http://www.w3.org/ns/dx/prof/role/vocabulary>;
   dct:title "RDF Turtle file of DQV NO"@en .
   
 <https://github.com/Informasjonsforvaltning/skos-ap-no-begrep/blob/develop/ontology/skosno-v1.ttl> a prof:ResourceDescriptor;
-  dcat:downloadURL "https://github.com/Informasjonsforvaltning/skos-ap-no-begrep/blob/develop/ontology/skosno-v1.ttl"^^xsd:anyURI;
+  dcat:downloadURL "https://raw.githubusercontent.com/Informasjonsforvaltning/skos-ap-no-begrep/refs/heads/develop/ontology/skosno-v1.ttl"^^xsd:anyURI;
   dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>;
   prof:hasRole <http://www.w3.org/ns/dx/prof/role/vocabulary>;
   dct:title "RDF Turtle file of SKOS NO"@en . 
 
 <https://github.com/Informasjonsforvaltning/cpsv-ap-no/blob/develop/ontology/cpsvno.ttl> a prof:ResourceDescriptor;
-  dcat:downloadURL "https://github.com/Informasjonsforvaltning/cpsv-ap-no/blob/develop/ontology/cpsvno.ttl"^^xsd:anyURI;
+  dcat:downloadURL "https://raw.githubusercontent.com/Informasjonsforvaltning/cpsv-ap-no/refs/heads/develop/ontology/cpsvno.ttl"^^xsd:anyURI;
   dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>;
   prof:hasRole <http://www.w3.org/ns/dx/prof/role/vocabulary>;
   dct:title "RDF Turtle file of CPSV NO"@en . 
 
 <https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/ontology/modelldcatno.ttl> a prof:ResourceDescriptor;
-  dcat:downloadURL "https://github.com/Informasjonsforvaltning/modelldcat-ap-no/blob/develop/ontology/modelldcatno.ttl"^^xsd:anyURI;
+  dcat:downloadURL "https://raw.githubusercontent.com/Informasjonsforvaltning/modelldcat-ap-no/refs/heads/develop/ontology/modelldcatno.ttl"^^xsd:anyURI;
   dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>;
   prof:hasRole <http://www.w3.org/ns/dx/prof/role/vocabulary>;
   dct:title "RDF Turtle file of ModellDCAT NO"@en .
   
 <https://github.com/Informasjonsforvaltning/dcat-ap-no/blob/develop/ontology/dcatno.ttl> a prof:ResourceDescriptor;
-  dcat:downloadURL "https://github.com/Informasjonsforvaltning/dcat-ap-no/blob/develop/ontology/dcatno.ttl"^^xsd:anyURI;
+  dcat:downloadURL "https://raw.githubusercontent.com/Informasjonsforvaltning/dcat-ap-no/refs/heads/develop/ontology/dcatno.ttl"^^xsd:anyURI;
   dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>;
   prof:hasRole <http://www.w3.org/ns/dx/prof/role/vocabulary>;
   dct:title "RDF Turtle file of DCAT NO"@en .
@@ -68,7 +69,7 @@
 	dcterms:language <http://publications.europa.eu/resource/authority/language/NOB> ;
 	dcterms:issued "2020-10-21T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
 	owl:versionInfo "1" ;
-	prof:hasResource <https://github.com/Informasjonsforvaltning/dqv-ap-no/blob/develop/ontology/dqvno.ttl>;
+	prof:hasResource <https://github.com/Informasjonsforvaltning/dqv-ap-no/blob/develop/ontology/dqvno.ttl> ;
 	a dcterms:Standard .
 
 <https://raw.githubusercontent.com/Informasjonsforvaltning/model-publisher/master/src/model/model-catalog.ttl#KontaktOss> <http://data.europa.eu/m8g/email> "informasjonsforvaltning@digdir.no" ;
