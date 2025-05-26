@@ -482,7 +482,7 @@
 {
   "name": "proofofbirthdemo",
   "type": "ap",
-  "eap": "OOTS_ProofOfBirthDemo.eap",
+  "eap": "OOTS_ProofOfBirthDemo1.eap",
   "diagram": "ProofOfBirthDemo",
   "template": "ProofOfBirthDemo_en.j2",
   "title": "Proof of birthDemo",
