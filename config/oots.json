@@ -485,13 +485,13 @@
   "eap": "OOTS_ProofOfBirthDEMO.eap",
   "diagram": "ProofOfBirthDEMO",
   "template": "ProofOfBirthDEMO_en.j2",
-  "title": "Proof of birth - DEMO",
+  "title": "Proof of birthDEMO",
   "publication-state": "Draft",
   "publication-date": "2024-08-29",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "OOTS",
-  "site": "site-skeleton/proofofbirth",
+  "site": "site-skeleton/proofofbirthDEMO",
   "repourl": "https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfBirthDEMO/tree/master/releases/0.0.1",
   "feedbackurl": "https://ec.europa.eu/digital-building-blocks/wikis/display/SDGOO/Discussion+Items+-+EM?src=contextnavpagetreemode",
   "versionurl": "https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfBirthDEMO/tree/master/releases/0.0.1",
@@ -500,7 +500,7 @@
       {
         "language":"en",
         "template":"ProofOfBirthDEMO_en.j2",
-        "title": "Proof of birth",
+        "title": "Proof of birthDEMO",
         "translationjson":"ProofOfBirthDEMO_en.json",
         "mergefile":"ProofOfBirthDEMO_en_merged.jsonld"
       }
