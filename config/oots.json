@@ -478,5 +478,38 @@
           "statuslabel" : "Draft",
           "editorDocumentroot" : "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/ProofOfCitizenshipOfParent/releases/0.0.1"
     }
+},
+{
+  "name": "proofofbirthdemo",
+  "type": "ap",
+  "eap": "OOTS_ProofOfBirthDEMO.eap",
+  "diagram": "ProofOfBirthDEMO",
+  "template": "ProofOfBirthDEMO_en.j2",
+  "title": "Proof of birth - DEMO",
+  "publication-state": "Draft",
+  "publication-date": "2024-08-29",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "contributors-file": "stakeholders.csv",
+  "contributors-column": "OOTS",
+  "site": "site-skeleton/proofofbirth",
+  "repourl": "https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfBirthDEMO/tree/master/releases/0.0.1",
+  "feedbackurl": "https://ec.europa.eu/digital-building-blocks/wikis/display/SDGOO/Discussion+Items+-+EM?src=contextnavpagetreemode",
+  "versionurl": "https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfBirthDEMO/tree/master/releases/0.0.1",
+  "standaardregisterurl" :"https://code.europa.eu/oots/tdd/data_models/Evidence/ProofOfBirthDEMO/tree/master/releases/0.0.1/Changelog.md",
+    "translation": [
+      {
+        "language":"en",
+        "template":"ProofOfBirthDEMO_en.j2",
+        "title": "Proof of birth",
+        "translationjson":"ProofOfBirthDEMO_en.json",
+        "mergefile":"ProofOfBirthDEMO_en_merged.jsonld"
+      }
+    ],
+    "toolchainversion" : "3",
+    "documentconfig": {
+          "statuslabel" : "Draft",
+          "editorDocumentroot" : "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/ProofOfBirthDEMO/releases/0.0.1"
+    }
 }
+
 ]
