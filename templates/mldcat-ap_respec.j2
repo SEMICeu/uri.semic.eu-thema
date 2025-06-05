@@ -74,7 +74,23 @@
 		]
 		
 	function quickreference() {
-		$('#table-quickoverview').DataTable();
+		$('#table-quickoverview').DataTable(
+			{
+			layout: {
+				topStart: {
+					buttons: [
+						'copy', 
+						'csv', 
+						'excel',
+						{
+							extend: 'pdfHtml5',
+							orientation: 'landscape'
+						}, 
+						'print']
+				}
+			}
+			}
+		);
 	};
 	var shaclfilepath = "shacl/{{metadata.filename}}-SHACL.ttl" ;
 	var folder = "./html/examples/";
