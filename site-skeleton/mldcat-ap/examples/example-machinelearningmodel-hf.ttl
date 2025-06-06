@@ -2,7 +2,7 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix it6: <http://data.europa.eu/it6/> .
-@prefix lpwc: <https://linkedpaperswithcode.com/class/> .
+@prefix lpwcc: <https://linkedpaperswithcode.com/class/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix spdx: <http://spdx.org/rdf/terms#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -50,7 +50,7 @@ Feel free to share your generations in the Community tab!""" ;
 
 <https://huggingface.co/bigscience/bloomz-7b1/tree/main> dct:title "Files" ;
 	it6:hasFile <https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors>, <https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin> ;
-	a lpwc:repository .
+	a lpwcc:repository .
 
 <http://example.com/BibliographicReference/1> dct:bibliographicCitation """@article{muennighoff2022crosslingual,
 title={Crosslingual generalization through multitask finetuning},
@@ -64,7 +64,7 @@ year={2022}}""" ;
 <https://arxiv.org/abs/2211.01786> dct:date "2023-05-29"^^xsd:date ;
 	it6:hasDocument <https://arxiv.org/pdf/2211.01786> ;
 	dct:title "Crosslingual Generalization through Multitask Finetuning" ;
-	a lpwc:paper .
+	a lpwcc:paper .
 
 <https://huggingface.co/Muennighoff> foaf:name "Niklas Muennighoff" ;
 	a foaf:Agent .
