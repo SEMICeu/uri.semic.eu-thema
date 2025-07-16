@@ -398,12 +398,12 @@
                 <dd>
                     {{ entity.description[language] }}
                 </dd>
-                {% if entity.rawTags['DCAT'] %}
+                {% if entity.rawTags['AI'] %}
 		<dt>
-		   Reference in DCAT
+		   Reference in AI Act or Code of Practice
 		</dt>
 		    <dd>
-		    <a href="{{ entity.rawTags['DCAT'] }}">Link</a>
+		    {{ entity.rawTags['DCAT'] }}
 		    </dd>
 		{% endif %}
                 {% if entity.usage[language] %}
