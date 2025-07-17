@@ -398,17 +398,24 @@
                 <dd>
                     {{ entity.description[language] }}
                 </dd>
-                {% if entity.rawTags['AI'] %}
+                {% if entity.rawTags['REF'] %}
 					<dt>
-						Reference in AI Act or Code of Practice
+						Reference
 					</dt>
 					<dd>
-						{% if entity.rawTags['AI'].split('-')[0] == "AIACT" %}
-							{% if '-' in entity.rawTags['AI'] %}
-								<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{entity.rawTags['AI'].split('-')[1]}}">AI Act</a>
+						{% set ai_type = entity.rawTags['REF'].split('-')[0] %}
+						{% if ai_type == "AIACT" %}
+							{% if '-' in entity.rawTags['REF'] %}
+								<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{entity.rawTags['REF'].split('-')[1]}}">AI Act</a>
 							{% else %}
 								<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>
 							{% endif %}
+						{% elif ai_type == "AICOP" %}
+							<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>
+						{% elif ai_type == "DCATAP" %}
+							<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>
+						{% elif ai_type == "DCAT" %}
+							<a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a>
 						{% else %}
 							<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>
 						{% endif %}
@@ -476,7 +483,7 @@
                             </th>
 				-->
                             <th class="data-table__header-title--sortable" style="width:5%">
-                                AI ACT/CoP
+                                REF
                             </th>
 			    
                         </tr>
@@ -527,13 +534,20 @@
                                 </td>
 				-->
                                 <td>
-								{% if prop.rawTags['AI'] %} 
-									{% if prop.rawTags['AI'].split('-')[0] == "AIACT" %}
-										{% if '-' in prop.rawTags['AI'] %}
-											<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{prop.rawTags['AI'].split('-')[1]}}">AI Act</a>
+								{% if prop.rawTags['REF'] %} 
+									{% set ai_type = prop.rawTags['REF'].split('-')[0] %}
+									{% if ai_type == "AIACT" %}
+										{% if '-' in prop.rawTags['REF'] %}
+											<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{prop.rawTags['REF'].split('-')[1]}}">AI Act</a>
 										{% else %}
 											<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>
 										{% endif %}
+									{% elif ai_type == "AICOP" %}
+										<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>
+									{% elif ai_type == "DCATAP" %}
+										<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>
+									{% elif ai_type == "DCAT" %}
+										<a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a>
 									{% else %}
 										<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>
 									{% endif %}
