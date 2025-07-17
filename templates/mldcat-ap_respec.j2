@@ -408,26 +408,26 @@
                             {% set ai_type = item.split('|')[0] %}
                             {% if ai_type == "AIACT" %}
                                 {% if '|' in item %}
-                                    {% set _ = links.append('<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{item.split('|')[1]}}">AI Act</a>') %}
+                                    {% set _ = links.append('<a href="' + 'https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#' + {{item.split('|')[1]}} + '">AI Act</a>') %}
                                 {% else %}
-                                    {% set _ = links.append('<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>') %}
+                                    {% set _ = links.append('<a href="' + 'https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689' + '">AI Act</a>') %}
                                 {% endif %}
                             {% elif ai_type == "AICOP" %}
-                                {% set _ = links.append('<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>') %}
+                                {% set _ = links.append('<a href="' + 'https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai' + '">AI CoP</a>') %}
                             {% elif ai_type == "DCATAP" %}
                                 {% if '|' in item %}
-                                    {% set _ = links.append('<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#{{item.split('|')[1]}}">DCAT-AP [{{item.split('|')[2]}}]</a>') %}
+                                    {% set _ = links.append('<a href="' + 'https://semiceu.github.io/DCAT-AP/releases/3.0.1/#' + {{item.split('|')[1]}} + '">DCAT-AP [' + {{item.split('|')[2]}} +']</a>') %}
                                 {% else %}  
-                                    {% set _ = links.append('<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>') %}
+                                    {% set _ = links.append('<a href="' + 'https://semiceu.github.io/DCAT-AP/releases/3.0.1/' + '">DCAT-AP</a>') %}
                                 {% endif %}
                             {% elif ai_type == "DCAT" %}
                                 {% if '|' in item %}
-                                    {% set _ = links.append('<a href="https://www.w3.org/TR/vocab-dcat-3/#{{item.split('|')[1]}}">DCAT [{{item.split('|')[2]}}]</a>') %}
+                                    {% set _ = links.append('<a href="' + 'https://www.w3.org/TR/vocab-dcat-3/#' + {{item.split('|')[1]}} +'">DCAT [' + {{item.split('|')[2]}} + ']</a>') %}
                                 {% else %} 
-                                    {% set _ = links.append('<a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a>') %}
+                                    {% set _ = links.append('<a href="' + 'https://www.w3.org/TR/vocab-dcat-3/"' + '>DCAT</a>') %}
                                 {% endif %}
                             {% else %}
-                                {% set _ = links.append('<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>') %}
+                                {% set _ = links.append('<a href="' + 'https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689"' + '>AI Act</a>') %}
                             {% endif %}
                         {% endfor %}
                         {{ links | join(', ') }}
@@ -552,26 +552,26 @@
                                         {% set ai_type = item.split('|')[0] %}
                                         {% if ai_type == "AIACT" %}
                                             {% if '|' in item %}
-                                                {% set _ = links.append('<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{item.split('|')[1]}}">AI Act</a>') %}
+                                                {% set _ = links.append('<a href="' + 'https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#' + {{item.split('|')[1]}} + '">AI Act</a>') %}
                                             {% else %}
-                                                {% set _ = links.append('<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>') %}
+                                                {% set _ = links.append('<a href="' + 'https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689' + '">AI Act</a>') %}
                                             {% endif %}
                                         {% elif ai_type == "AICOP" %}
-                                            {% set _ = links.append('<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>') %}
+                                            {% set _ = links.append('<a href="' + 'https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai' + '">AI CoP</a>') %}
                                         {% elif ai_type == "DCATAP" %}
                                             {% if '|' in item %}
-                                                {% set _ = links.append('<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#{{item.split('|')[1]}}">DCAT-AP [{{item.split('|')[2]}}]</a>') %}
+                                                {% set _ = links.append('<a href="' + 'https://semiceu.github.io/DCAT-AP/releases/3.0.1/#' + {{item.split('|')[1]}} + '">DCAT-AP [' + {{item.split('|')[2]}} +']</a>') %}
                                             {% else %}  
-                                                {% set _ = links.append('<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>') %}
+                                                {% set _ = links.append('<a href="' + 'https://semiceu.github.io/DCAT-AP/releases/3.0.1/' + '">DCAT-AP</a>') %}
                                             {% endif %}
                                         {% elif ai_type == "DCAT" %}
                                             {% if '|' in item %}
-                                                {% set _ = links.append('<a href="https://www.w3.org/TR/vocab-dcat-3/#{{item.split('|')[1]}}">DCAT [{{item.split('|')[2]}}]</a>') %}
+                                                {% set _ = links.append('<a href="' + 'https://www.w3.org/TR/vocab-dcat-3/#' + {{item.split('|')[1]}} +'">DCAT [' + {{item.split('|')[2]}} + ']</a>') %}
                                             {% else %} 
-                                                {% set _ = links.append('<a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a>') %}
+                                                {% set _ = links.append('<a href="' + 'https://www.w3.org/TR/vocab-dcat-3/"' + '>DCAT</a>') %}
                                             {% endif %}
                                         {% else %}
-                                            {% set _ = links.append('<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>') %}
+                                            {% set _ = links.append('<a href="' + 'https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689"' + '>AI Act</a>') %}
                                         {% endif %}
                                     {% endfor %}
                                     {{ links | join(', ') }}
