@@ -403,7 +403,13 @@
 						Reference in AI Act or Code of Practice
 					</dt>
 					<dd>
-						{{ entity.rawTags['AI'] }}
+						{% if prop.rawTags['AI'] %} 
+							% if {{ prop.rawTags['AI'].split('-')[0] }} == "AIACT" %}
+								<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{prop.rawTags['AI'].split('-')[1]}}">AI Act</a>
+							{% else %}
+								<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>
+							{% endif %}
+						{% endif %}
 					</dd>
 				{% endif %}
                 {% if entity.usage[language] %}
