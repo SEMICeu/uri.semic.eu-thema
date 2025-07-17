@@ -424,10 +424,10 @@
                                 {% if '|' in item %}
                                     {% set _ = links.append('<a href="' + 'https://www.w3.org/TR/vocab-dcat-3/#' + item.split('|')[1] +'">DCAT [' + item.split('|')[2] + ']</a>') %}
                                 {% else %} 
-                                    {% set _ = links.append('<a href="' + 'https://www.w3.org/TR/vocab-dcat-3/"' + '>DCAT</a>') %}
+                                    {% set _ = links.append('<a href="' + 'https://www.w3.org/TR/vocab-dcat-3/' + '">DCAT</a>') %}
                                 {% endif %}
                             {% else %}
-                                {% set _ = links.append('<a href="' + 'https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689"' + '>AI Act</a>') %}
+                                {% set _ = links.append('<a href="' + 'https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689' + '">AI Act</a>') %}
                             {% endif %}
                         {% endfor %}
                         {{ links | join(', ') }}
@@ -568,10 +568,10 @@
                                             {% if '|' in item %}
                                                 {% set _ = links.append('<a href="' + 'https://www.w3.org/TR/vocab-dcat-3/#' + item.split('|')[1] +'">DCAT [' + item.split('|')[2] + ']</a>') %}
                                             {% else %} 
-                                                {% set _ = links.append('<a href="' + 'https://www.w3.org/TR/vocab-dcat-3/"' + '>DCAT</a>') %}
+                                                {% set _ = links.append('<a href="' + 'https://www.w3.org/TR/vocab-dcat-3/' + '">DCAT</a>') %}
                                             {% endif %}
                                         {% else %}
-                                            {% set _ = links.append('<a href="' + 'https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689"' + '>AI Act</a>') %}
+                                            {% set _ = links.append('<a href="' + 'https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689' + '">AI Act</a>') %}
                                         {% endif %}
                                     {% endfor %}
                                     {{ links | join(', ') }}
