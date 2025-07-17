@@ -403,30 +403,34 @@
 						Reference
 					</dt>
 					<dd>
-						{% set ai_type = entity.rawTags['REF'].split('|')[0] %}
-						{% if ai_type == "AIACT" %}
-							{% if '|' in entity.rawTags['REF'] %}
-								<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{entity.rawTags['REF'].split('|')[1]}}">AI Act</a>
-							{% else %}
-								<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>
-							{% endif %}
-						{% elif ai_type == "AICOP" %}
-							<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>
-						{% elif ai_type == "DCATAP" %}
-                      		{% if '|' in entity.rawTags['REF'] %}
-								<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#{{entity.rawTags['REF'].split('|')[1]}}">DCAT-AP [{{entity.rawTags['REF'].split('|')[2]}}]</a>
-							{% else %}  
-							    <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>
+                        {% set links = [] %}
+                        {% for item in entity.rawTags['REF'].split(';') %}
+                            {% set ai_type = item.split('|')[0] %}
+                            {% if ai_type == "AIACT" %}
+                                {% if '|' in item %}
+                                    {% set _ = links.append('<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{item.split('|')[1]}}">AI Act</a>') %}
+                                {% else %}
+                                    {% set _ = links.append('<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>') %}
+                                {% endif %}
+                            {% elif ai_type == "AICOP" %}
+                                {% set _ = links.append('<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>') %}
+                            {% elif ai_type == "DCATAP" %}
+                                {% if '|' in item %}
+                                    {% set _ = links.append('<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#{{item.split('|')[1]}}">DCAT-AP [{{item.split('|')[2]}}]</a>') %}
+                                {% else %}  
+                                    {% set _ = links.append('<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>') %}
+                                {% endif %}
+                            {% elif ai_type == "DCAT" %}
+                                {% if '|' in item %}
+                                    {% set _ = links.append('<a href="https://www.w3.org/TR/vocab-dcat-3/#{{item.split('|')[1]}}">DCAT [{{item.split('|')[2]}}]</a>') %}
+                                {% else %} 
+                                    {% set _ = links.append('<a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a>') %}
+                                {% endif %}
+                            {% else %}
+                                {% set _ = links.append('<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>') %}
                             {% endif %}
-						{% elif ai_type == "DCAT" %}
-                            {% if '|' in entity.rawTags['REF'] %}
-                                <a href="https://www.w3.org/TR/vocab-dcat-3/#{{entity.rawTags['REF'].split('|')[1]}}">DCAT [{{entity.rawTags['REF'].split('|')[2]}}]</a>
-                            {% else %} 
-							    <a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a>
-                            {% endif %}
-						{% else %}
-							<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>
-						{% endif %}
+                        {% endfor %}
+                        {{ links | join(', ') }}
 					</dd>
 				{% endif %}
                 {% if entity.usage[language] %}
@@ -543,30 +547,34 @@
 				-->
                                 <td>
 								{% if prop.rawTags['REF'] %} 
-									{% set ai_type = prop.rawTags['REF'].split('|')[0] %}
-									{% if ai_type == "AIACT" %}
-										{% if '|' in prop.rawTags['REF'] %}
-											<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{prop.rawTags['REF'].split('|')[1]}}">AI Act</a>
-										{% else %}
-											<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>
-										{% endif %}
-									{% elif ai_type == "AICOP" %}
-										<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>
-									{% elif ai_type == "DCATAP" %}
-                      		            {% if '|' in prop.rawTags['REF'] %}
-								            <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#{{prop.rawTags['REF'].split('|')[1]}}">DCAT-AP [{{prop.rawTags['REF'].split('|')[2]}}]</a>
-							            {% else %}  
-							                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>
+                                    {% set links = [] %}
+                                    {% for item in prop.rawTags['REF'].split(';') %}
+                                        {% set ai_type = item.split('|')[0] %}
+                                        {% if ai_type == "AIACT" %}
+                                            {% if '|' in item %}
+                                                {% set _ = links.append('<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{item.split('|')[1]}}">AI Act</a>') %}
+                                            {% else %}
+                                                {% set _ = links.append('<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>') %}
+                                            {% endif %}
+                                        {% elif ai_type == "AICOP" %}
+                                            {% set _ = links.append('<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>') %}
+                                        {% elif ai_type == "DCATAP" %}
+                                            {% if '|' in item %}
+                                                {% set _ = links.append('<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#{{item.split('|')[1]}}">DCAT-AP [{{item.split('|')[2]}}]</a>') %}
+                                            {% else %}  
+                                                {% set _ = links.append('<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>') %}
+                                            {% endif %}
+                                        {% elif ai_type == "DCAT" %}
+                                            {% if '|' in item %}
+                                                {% set _ = links.append('<a href="https://www.w3.org/TR/vocab-dcat-3/#{{item.split('|')[1]}}">DCAT [{{item.split('|')[2]}}]</a>') %}
+                                            {% else %} 
+                                                {% set _ = links.append('<a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a>') %}
+                                            {% endif %}
+                                        {% else %}
+                                            {% set _ = links.append('<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>') %}
                                         {% endif %}
-						            {% elif ai_type == "DCAT" %}
-                                        {% if '|' in prop.rawTags['REF'] %}
-                                            <a href="https://www.w3.org/TR/vocab-dcat-3/#{{prop.rawTags['REF'].split('|')[1]}}">DCAT [{{prop.rawTags['REF'].split('|')[2]}}]</a>
-                                        {% else %} 
-							                <a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a>
-                                        {% endif %}
-						            {% else %}
-							            <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>
-						            {% endif %}
+                                    {% endfor %}
+                                    {{ links | join(', ') }}
                                 {% endif %}
                                 </td>
                             </tr>
