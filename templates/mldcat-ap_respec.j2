@@ -398,12 +398,12 @@
                 <dd>
                     {{ entity.description[language] }}
                 </dd>
-                {% if entity.rawTags['DCAT'] %}
+                {% if entity.rawTags['AI'] %}
 		<dt>
-		   Reference in DCAT
+		   Reference in AI Act or Code of Practice
 		</dt>
 		    <dd>
-		    <a href="{{ entity.rawTags['DCAT'] }}">Link</a>
+		    {{ entity.rawTags['AI'] }}
 		    </dd>
 		{% endif %}
                 {% if entity.usage[language] %}
@@ -466,10 +466,11 @@
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
+				-->
                             <th class="data-table__header-title--sortable" style="width:5%">
-                                DCAT
+                                AI ACT/CoP
                             </th>
-			    -->
+			    
                         </tr>
                     </thead>
                     <tbody class="supertype">
@@ -518,7 +519,7 @@
                                 </td>
 				-->
                                 <td>
-                                    {% if prop.rawTags['DCAT'] %}<a href="{{ prop.rawTags['DCAT'] }}">Link</a>{% endif %}
+                                    {% if prop.rawTags['AI'] %} {{ prop.rawTags['AI'] }} {% endif %}
                                 </td>
                             </tr>
                         {% endfor %}
