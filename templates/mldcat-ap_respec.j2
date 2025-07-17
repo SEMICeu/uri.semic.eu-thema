@@ -403,9 +403,9 @@
 						Reference in AI Act or Code of Practice
 					</dt>
 					<dd>
-						{% if prop.rawTags['AI'].split('-')[0] == "AIACT" %}
-							{% if '-' in prop.rawTags['AI'] %}
-								<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{prop.rawTags['AI'].split('-')[1]}}">AI Act</a>
+						{% if entity.rawTags['AI'].split('-')[0] == "AIACT" %}
+							{% if '-' in entity.rawTags['AI'] %}
+								<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{entity.rawTags['AI'].split('-')[1]}}">AI Act</a>
 							{% else %}
 								<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>
 							{% endif %}
