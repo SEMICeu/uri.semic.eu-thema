@@ -403,40 +403,40 @@
 						Reference
 					</dt>
 					<dd>
-                        {% set links = [] %}
-                        {% for item in entity.rawTags['REF'].split(';') if item %}
-                            {% set parts = item.split('|') %}
-                            {% set ai_type = parts[0] %}
+                        {% set links = '' %}
+                        {% if entity.rawTags['REF'] is defined and entity.rawTags['REF'] %}
+                            {% for item in entity.rawTags['REF'].split(';') %}
+                                {% set parts = item.split('|') %}
+                                {% set ai_type = parts[0] %}
 
-                            {% if ai_type == "AIACT" %}
-                                {% if parts|length > 1 %}
-                                    {% set links = (links.push('<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#' + parts[1] + '">AI Act</a>'), links) %}
+                                {% if ai_type == "AIACT" %}
+                                    {% if parts.length > 1 %}
+                                        {% set links = links + '<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#' + parts[1] + '">AI Act</a>, ' %}
+                                    {% else %}
+                                        {% set links = links + '<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>, ' %}
+                                    {% endif %}
+                                {% elif ai_type == "AICOP" %}
+                                    {% set links = links + '<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>, ' %}
+                                {% elif ai_type == "DCATAP" %}
+                                    {% if parts.length > 2 %}
+                                        {% set links = links + '<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#' + parts[1] + '">DCAT-AP [' + parts[2] + ']</a>, ' %}
+                                    {% else %}
+                                        {% set links = links + '<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>, ' %}
+                                    {% endif %}
+                                {% elif ai_type == "DCAT" %}
+                                    {% if parts.length > 2 %}
+                                        {% set links = links + '<a href="https://www.w3.org/TR/vocab-dcat-3/#' + parts[1] + '">DCAT [' + parts[2] + ']</a>, ' %}
+                                    {% else %}
+                                        {% set links = links + '<a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a>, ' %}
+                                    {% endif %}
                                 {% else %}
-                                    {% set links = (links.push('<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>'), links) %}
+                                    {% set links = links + '<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>, ' %}
                                 {% endif %}
-
-                            {% elif ai_type == "AICOP" %}
-                                {% set links = (links.push('<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>'), links) %}
-
-                            {% elif ai_type == "DCATAP" %}
-                                {% if parts|length > 2 %}
-                                    {% set links = (links.push('<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#' + parts[1] + '">DCAT-AP [' + parts[2] + ']</a>'), links) %}
-                                {% else %}
-                                    {% set links = (links.push('<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>'), links) %}
-                                {% endif %}
-
-                            {% elif ai_type == "DCAT" %}
-                                {% if parts|length > 2 %}
-                                    {% set links = (links.push('<a href="https://www.w3.org/TR/vocab-dcat-3/#' + parts[1] + '">DCAT [' + parts[2] + ']</a>'), links) %}
-                                {% else %}
-                                    {% set links = (links.push('<a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a>'), links) %}
-                                {% endif %}
-
-                            {% else %}
-                                {% set links = (links.push('<a href="#">Unknown Reference</a>'), links) %}
-                            {% endif %}
-                        {% endfor %}
-                        {{ links | join(', ') }}
+                            {% endfor %}
+                            {{ links[:-2] }} {# remove last comma and space #}
+                        {% else %}
+                            No references available.
+                        {% endif %}
 					</dd>
 				{% endif %}
                 {% if entity.usage[language] %}
