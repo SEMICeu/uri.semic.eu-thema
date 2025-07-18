@@ -412,26 +412,26 @@
 
                                 {% if ai_type == "AIACT" %}
                                     {% if parts.length > 1 %}
-                                        {% set links = links + '<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#' + parts[1] + '">AI Act</a>, ' %}
+                                        {% set link = '<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#' + parts[1] + '">AI Act</a>' %}
                                     {% else %}
-                                        {% set links = links + '<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>, ' %}
+                                        {% set link = '<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>' %}
                                     {% endif %}
                                 {% elif ai_type == "AICOP" %}
-                                    {% set links = links + '<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>, ' %}
+                                    {% set link = '<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>' %}
                                 {% elif ai_type == "DCATAP" %}
                                     {% if parts.length > 2 %}
-                                        {% set links = links + '<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#' + parts[1] + '">DCAT-AP [' + parts[2] + ']</a>, ' %}
+                                        {% set link = '<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#' + parts[1] + '">DCAT-AP [' + parts[2] + ']</a>' %}
                                     {% else %}
-                                        {% set links = links + '<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>, ' %}
+                                        {% set link = '<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>' %}
                                     {% endif %}
                                 {% elif ai_type == "DCAT" %}
                                     {% if parts.length > 2 %}
-                                        {% set links = links + '<a href="https://www.w3.org/TR/vocab-dcat-3/#' + parts[1] + '">DCAT [' + parts[2] + ']</a>, ' %}
+                                        {% set link = '<a href="https://www.w3.org/TR/vocab-dcat-3/#' + parts[1] + '">DCAT [' + parts[2] + ']</a>' %}
                                     {% else %}
-                                        {% set links = links + '<a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a>, ' %}
+                                        {% set link = '<a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a>' %}
                                     {% endif %}
                                 {% else %}
-                                    {% set links = links + '<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>, ' %}
+                                    {% set link = '<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>' %}
                                 {% endif %}
 
                                 {% set links = links + link %}
@@ -439,7 +439,7 @@
                                     {% set links = links + ', ' %}
                                 {% endif %}
                             {% endfor %}
-                           {{ links }}
+                            {{ links | safe }}
                         {% else %}
                             No references available.
                         {% endif %}
