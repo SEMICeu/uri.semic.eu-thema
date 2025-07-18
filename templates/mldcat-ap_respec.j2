@@ -405,7 +405,8 @@
 					<dd>
                         {% set links = '' %}
                         {% if entity.rawTags['REF'] is defined and entity.rawTags['REF'] %}
-                            {% for item in entity.rawTags['REF'].split(';') %}
+                            {% set items = entity.rawTags['REF'].split(';') %}
+                            {% for item in items %}
                                 {% set parts = item.split('|') %}
                                 {% set ai_type = parts[0] %}
 
@@ -432,8 +433,13 @@
                                 {% else %}
                                     {% set links = links + '<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>, ' %}
                                 {% endif %}
+
+                                {% set links = links + link %}
+                                {% if not loop.last %}
+                                    {% set links = links + ', ' %}
+                                {% endif %}
                             {% endfor %}
-                            {{ links[:-2] }} {# remove last comma and space #}
+                           {{ links }}
                         {% else %}
                             No references available.
                         {% endif %}
