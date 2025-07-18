@@ -419,7 +419,7 @@
                                 {% set ns.links = ns.links + ['<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>'] %}
 
                             {% elif ai_type == "DCATAP" %}
-                                {% if parts|length > 2 %}
+                                {% if parts|length >= 3 %}
                                     {% set ns.links = ns.links + ['<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#' ~ parts[1] ~ '">DCAT-AP [' ~ parts[2] ~ ']</a>'] %}
                                 {% else %}
                                     {% set ns.links = ns.links + ['<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>'] %}
@@ -569,7 +569,7 @@
                                             {% set ns.links = ns.links + ['<a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>'] %}
                                         
                                         {% elif ai_type == "DCATAP" %}
-                                            {% if parts|length > 2 %}
+                                            {% if parts|length >= 3 %}
                                                 {% set ns.links = ns.links + ['<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#' ~ parts[1] ~ '">DCAT-AP [' ~ parts[2] ~ ']</a>'] %}
                                             {% else %}
                                                 {% set ns.links = ns.links + ['<a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>'] %}
