@@ -398,7 +398,7 @@
                 <dd>
                     {{ entity.description[language] }}
                 </dd>
-                {% if entity.rawTags['REF'] %}
+                {% if entity is defined and entity.rawTags is defined and 'REF' in entity.rawTags and entity.rawTags['REF'] %}
 					<dt>
 						Reference
 					</dt>
