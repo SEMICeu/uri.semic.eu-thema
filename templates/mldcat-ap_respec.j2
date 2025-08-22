@@ -437,6 +437,18 @@
                                     {% else %}
                                         <a href="https://linkedpaperswithcode.com/resource/?uri=https%3A%2F%2Flinkedpaperswithcode.com%2Fontology%23">LPWC</a>
                                     {% endif %}
+                                {% elif ai_type == "MLS" %}
+                                    {% if parts|length > 2 %}
+                                        <a href="https://www.w3.org/ns/mls#{{ parts[1] }}">MLS [{{ parts[2] }}]</a>
+                                    {% else %}
+                                        <a href="https://www.w3.org/ns/mls#">MLS</a>
+                                    {% endif %}
+                                {% elif ai_type == "MLSO" %}
+                                    {% if parts|length > 2 %}
+                                        <a href="https://dtai-kg.github.io/MLSO/#/{{ parts[1] }}">MLSO [{{ parts[2] }}]</a>
+                                    {% else %}
+                                        <a href="https://dtai-kg.github.io/MLSO/#/">MLSO</a>
+                                    {% endif %}
                                 {% else %}
                                     <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>
                                 {% endif %}
@@ -595,6 +607,18 @@
                                                     <a href="https://linkedpaperswithcode.com/resource/?uri=https%3A%2F%2Flinkedpaperswithcode.com%2F{{ parts[1] }}%2F{{ parts[2] }}&ontology=https%3A%2F%2Flinkedpaperswithcode.com%2Fontology%23">LPWC [{{ parts[3] }}]</a>
                                                 {% else %}
                                                     <a href="https://linkedpaperswithcode.com/resource/?uri=https%3A%2F%2Flinkedpaperswithcode.com%2Fontology%23">LPWC</a>
+                                                {% endif %}
+                                            {% elif ai_type == "MLS" %}
+                                                {% if parts|length > 2 %}
+                                                    <a href="https://www.w3.org/ns/mls#{{ parts[1] }}">MLS [{{ parts[2] }}]</a>
+                                                {% else %}
+                                                    <a href="https://www.w3.org/ns/mls#">MLS</a>
+                                                {% endif %}
+                                            {% elif ai_type == "MLSO" %}
+                                                {% if parts|length > 2 %}
+                                                    <a href="https://dtai-kg.github.io/MLSO/#/{{ parts[1] }}">MLSO [{{ parts[2] }}]</a>
+                                                {% else %}
+                                                    <a href="https://dtai-kg.github.io/MLSO/#/">MLSO</a>
                                                 {% endif %}
                                             {% else %}
                                                 <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>
