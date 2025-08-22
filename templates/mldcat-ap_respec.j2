@@ -431,6 +431,12 @@
                                     {% else %}
                                         <a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a>
                                     {% endif %}
+                                {% elif ai_type == "LPWC" %}
+                                    {% if parts|length > 2 %}
+                                        <a href="https://linkedpaperswithcode.com/resource/?uri=https%3A%2F%2Flinkedpaperswithcode.com%2F{{ parts[1] }}%2F{{ parts[2] }}&ontology=https%3A%2F%2Flinkedpaperswithcode.com%2Fontology%23">LPWC [{{ parts[3] }}]</a>
+                                    {% else %}
+                                        <a href="https://linkedpaperswithcode.com/resource/?uri=https%3A%2F%2Flinkedpaperswithcode.com%2Fontology%23">LPWC</a>
+                                    {% endif %}
                                 {% else %}
                                     <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>
                                 {% endif %}
