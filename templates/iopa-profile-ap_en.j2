@@ -262,7 +262,7 @@
     </h2>
     {% block introduction %}
         <p>
-            This document describes an <strong>Application Profile</strong>, in this case <strong>{{ metadata.title }}</strong>. The Application Profile specifies a semantic data model covering a set of usecases. The specification consists of terms with their constraints (cardinalities, codelists, usage guidelines).
+            This document describes an <strong>Vocabulary</strong>, in this case <strong>{{ metadata.title }}</strong>. The Vocabulary specifies a semantic data model covering a set of usecases. The specification consists of terms with their constraints (cardinalities, codelists, usage guidelines).
         </p>
     {% endblock %}
 </section>
@@ -273,7 +273,7 @@
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Application Profile has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }} published on {{ metadata.issued }}.
+            This Vocabulary has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }} published on {{ metadata.issued }}.
         </p>
 <!--
         <p>
@@ -338,7 +338,7 @@
     <div id="overview">
                 {% if ( ( classes | length > 0)   ) %}
                         <p>
-                            This document describes the usage of the following main entities for a correct usage of the Application Profile:
+                            This document describes the usage of the following main entities for a correct usage of the Vocabulary:
                             <br />
                             | {%- for class in classes |sort(attribute=sortattr) %} 
 			      {%- if class.rawTags['class-usage-scope'] == "main" %}
@@ -531,7 +531,7 @@
 <h2>
    Main Entities
 </h2>
-The main entities are those that form the core of the Application Profile.
+The main entities are those that form the core of the Vocabulary.
 
 {% for entity in classes | sort(attribute=sortattr) %}
 {% if entity.rawTags['class-usage-scope'] == "main"   %}
@@ -544,8 +544,8 @@ The main entities are those that form the core of the Application Profile.
 <h2>
    Supportive Entities
 </h2>
-The supportive entities are supporting the main entities in the Application Profile. 
-They are included in the Application Profile because they form the range of properties.
+The supportive entities are supporting the main entities in the Vocabulary. 
+They are included in the Vocabulary because they form the range of properties.
 
 
 {% for entity in classes | sort(attribute=sortattr) %}
