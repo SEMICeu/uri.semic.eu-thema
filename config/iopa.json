@@ -7,15 +7,15 @@
   "template": "iopa_en.j2",
   "title": "Interoperability Assessment Vocabulary",
   "publication-state": "Draft",
-  "publication-date": "2025-03-24",
+  "publication-date": "2025-07-10",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "IOPA",
   "site": "site-skeleton/iopa",
-  "repourl": "https://github.com/SEMICeu/IOPA/tree/master/releases/0.0.1",
-  "versionurl": "https://github.com/SEMICeu/IOPA/tree/master/releases/0.0.1",
+  "repourl": "https://github.com/SEMICeu/IOPA/tree/master/releases/1.0.0",
+  "versionurl": "https://github.com/SEMICeu/IOPA/tree/master/releases/1.0.0",
   "feedbackurl": "https://github.com/SEMICeu/IOPA/issues",
-  "standaardregisterurl" :"https://github.com/SEMICeu/IOPA/blob/master/releases/0.0.1/Changelog.md",
+  "standaardregisterurl" :"https://github.com/SEMICeu/IOPA/blob/master/releases/1.0.0/Changelog.md",
     "translation": [
       {
         "language":"en",
@@ -28,7 +28,7 @@
     "toolchainversion" : "3",
     "documentconfig": {
           "statuslabel" : "Draft",
-          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/IOPA/releases/0.0.1"
+          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/IOPA/releases/1.0.0"
     }
 }
 ]
