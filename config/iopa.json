@@ -27,7 +27,7 @@
     ],
     "toolchainversion" : "3",
     "documentconfig": {
-          "statuslabel" : "Draft",
+          "statuslabel" : "Recommendation",
           "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/IOPA/releases/1.0.0"
     }
 }
