@@ -6,7 +6,7 @@
   "diagram": "IOPA-AP",
   "template": "iopa_en.j2",
   "title": "Interoperability Assessment Vocabulary",
-  "publication-state": "Draft",
+  "publication-state": "Recommendation",
   "publication-date": "2025-07-10",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
