@@ -7,7 +7,7 @@
   "template": "srm_en.j2",
   "title": "Semantic Registry Model",
   "publication-state": "Draft",
-  "publication-date": "2025-03-24",
+  "publication-date": "2025-09-16",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "SRM",
