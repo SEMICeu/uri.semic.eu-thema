@@ -94,12 +94,12 @@ where {
     
     OPTIONAL {
    		?s <https://w3id.org/italia/onto/ADMS/status> ?status .
-    	BIND(IF(?status = "published", URI("http://purl.org/adms/status/completed"), 
-         	   IF(?status =  "draft" || ?status = "initial draft" || ?status = "final draft", URI("http://purl.org/adms/status/UnderDevelopment"),
-            	    URI("http://purl.org/adms/status/Withdrawn"))) AS ?statusURI) .
+    	BIND(IF(?status = "published", URI("http://publications.europa.eu/resource/authority/distribution-status/COMPLETED"), 
+         	   IF(?status =  "draft" || ?status = "initial draft" || ?status = "final draft", URI("http://publications.europa.eu/resource/authority/distribution-status/DEVELOP"),
+            	    URI("http://publications.europa.eu/resource/authority/distribution-status/WITHDRAWN"))) AS ?statusURI) .
     }
-    BIND(if(bound(?status), ?statusURI, URI("http://purl.org/adms/status/completed")) AS ?statusURI2)
-    FILTER (?statusURI2 != <http://purl.org/adms/status/Withdrawn>) .
+    BIND(if(bound(?status), ?statusURI, URI("http://publications.europa.eu/resource/authority/distribution-status/COMPLETED")) AS ?statusURI2)
+    FILTER (?statusURI2 != <http://publications.europa.eu/resource/authority/distribution-status/WITHDRAWN>) .
     
     ?s dct:creator ?creator .
     ?creator foaf:name ?creatorName .

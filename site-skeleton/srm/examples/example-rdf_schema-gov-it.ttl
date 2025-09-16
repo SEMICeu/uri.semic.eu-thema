@@ -32,7 +32,7 @@
   dct:language <http://publications.europa.eu/resource/authority/language/ITA>, <http://publications.europa.eu/resource/authority/language/ENG>;
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI>;
   dcat:keyword "famiglia"@it, "persona"@it, "persone"@it;
-  adms:status <http://purl.org/adms/status/completed>;
+  adms:status <http://publications.europa.eu/resource/authority/distribution-status/COMPLETED>;
   dct:creator <https://w3id.org/italia/data/public-organization/ISTAT>, <https://w3id.org/italia/data/public-organization/agid>;
   dct:publisher <https://w3id.org/italia/data/public-organization/PCM-1RSIZZ>;
   cv:contactPoint <https://w3id.org/italia/data/contact-point/ISTAT-NDC>;
@@ -52,7 +52,7 @@
 
 <http://publications.europa.eu/resource/authority/data-theme/SOCI> a skos:Concept .
 
-<http://purl.org/adms/status/completed> a skos:Concept .
+<http://publications.europa.eu/resource/authority/distribution-status/COMPLETED> a skos:Concept .
 
 <https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD> dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
 	dct:title "JSON-LD distribution of CPV-AP_IT Ontology"@en, "Distribuzione JSON-LD ontologia CPV-AP_IT"@it ;

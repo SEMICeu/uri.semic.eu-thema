@@ -41,7 +41,7 @@
       "@type": "Code"
     },
     {
-      "@id": "http://purl.org/adms/status/completed",
+      "@id": "http://publications.europa.eu/resource/authority/distribution-status/COMPLETED",
       "@type": "Code"
     },
     {
@@ -275,7 +275,7 @@
       ],
       "owl:versionInfo": "https://w3id.org/italia/onto/CPV/0.8",
       "adms:status": {
-        "@id": "http://purl.org/adms/status/completed"
+        "@id": "http://publications.europa.eu/resource/authority/distribution-status/COMPLETED"
       },
       "dcat:keyword": [
         {
