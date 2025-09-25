@@ -32,19 +32,16 @@
 <https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD> dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
 	dct:title "JSON-LD distribution of CPV-AP_IT Ontology"@en, "Distribuzione JSON-LD ontologia CPV-AP_IT"@it ;
 	dcat:downloadURL "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/CPV/latest/CPV-AP_IT.jsonld"^^xsd:anyURI ;
-	prof:hasRole <http://www.w3.org/ns/dx/prof/roles/vocabulary> ;
 	a prof:ResourceDescriptor .
 
 <https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE> dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
 	dct:title "RDF/Turtle distribution of CPV-AP_IT Ontology"@en, "Distribuzione RDF/Turtle ontologia CPV-AP_IT"@it ;
 	dcat:downloadURL "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/CPV/latest/CPV-AP_IT.ttl"^^xsd:anyURI ;
-	prof:hasRole <http://www.w3.org/ns/dx/prof/roles/vocabulary> ;
 	a prof:ResourceDescriptor .
 
 <https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML> dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
 	dct:title "RDF/XML distribution of CPV-AP_IT Ontology"@en, "Distribuzione RDF/XML ontologia CPV-AP_IT"@it ;
 	dcat:downloadURL "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/CPV/latest/CPV-AP_IT.rdf"^^xsd:anyURI ;
-	prof:hasRole <http://www.w3.org/ns/dx/prof/roles/vocabulary> ;
 	a prof:ResourceDescriptor .
 
 <https://w3id.org/italia/data/public-organization/ISTAT> dct:title "Italian National Institute of Statistics - ISTAT"@en, "Istituto Nazionale di Statistica - ISTAT"@it ;

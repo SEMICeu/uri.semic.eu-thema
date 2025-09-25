@@ -72,9 +72,6 @@
       "dcat:downloadURL": {
         "@type": "URI",
         "@value": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/CPV/latest/CPV-AP_IT.jsonld"
-      },
-      "prof:hasRole": {
-        "@id": "prof:roles/vocabulary"
       }
     },
     {
@@ -96,9 +93,6 @@
       "dcat:downloadURL": {
         "@type": "URI",
         "@value": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/CPV/latest/CPV-AP_IT.ttl"
-      },
-      "prof:hasRole": {
-        "@id": "prof:roles/vocabulary"
       }
     },
     {
@@ -120,9 +114,6 @@
       "dcat:downloadURL": {
         "@type": "URI",
         "@value": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/CPV/latest/CPV-AP_IT.rdf"
-      },
-      "prof:hasRole": {
-        "@id": "prof:roles/vocabulary"
       }
     },
     {
