@@ -43,13 +43,11 @@ construct {
     ?distribution rdf:type prof:ResourceDescriptor .
     ?distribution dct:title ?distributionTitle .
     ?distribution dct:format ?distributionFormat .
-    ?distributionFormat rdf:type skos:Concept .
-    ?distribution prof:hasRole <http://www.w3.org/ns/dx/prof/roles/vocabulary> .
-    <http://www.w3.org/ns/dx/prof/roles/vocabulary> a skos:Concept .
+    ?distributionFormat rdf:type skos:Concept ..
     ?distribution dcat:downloadURL ?downloadURLSTR .        
-    ?s dct:hasPart ?classURI .
     ?classURI rdf:type rdfs:Class .
     ?classURI rdfs:label ?classLabel .
+    ?classURI rdfs:isDefinedBy ?distribution .
 }
 where {
     ?s rdf:type owl:Ontology .
