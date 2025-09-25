@@ -5,7 +5,7 @@
     "adms": "http://www.w3.org/ns/adms#",
     "cv": "http://data.europa.eu/m8g/",
     "dcat": "http://www.w3.org/ns/dcat#",
-    "dcterms": "http://purl.org/dc/terms/",
+    "dct": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "owl": "http://www.w3.org/2002/07/owl#",
     "prof": "http://www.w3.org/ns/dx/prof/",
@@ -56,10 +56,10 @@
     {
       "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD",
       "@type": "ResourceDescriptor",
-      "dcterms:format": {
+      "dct:format": {
         "@id": "http://publications.europa.eu/resource/authority/file-type/JSON_LD"
       },
-      "dcterms:title": [
+      "dct:title": [
         {
           "@language": "en",
           "@value": "JSON-LD distribution of CPV-AP_IT Ontology"
@@ -80,10 +80,10 @@
     {
       "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE",
       "@type": "ResourceDescriptor",
-      "dcterms:format": {
+      "dct:format": {
         "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"
       },
-      "dcterms:title": [
+      "dct:title": [
         {
           "@language": "en",
           "@value": "RDF/Turtle distribution of CPV-AP_IT Ontology"
@@ -104,10 +104,10 @@
     {
       "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML",
       "@type": "ResourceDescriptor",
-      "dcterms:format": {
+      "dct:format": {
         "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_XML"
       },
-      "dcterms:title": [
+      "dct:title": [
         {
           "@language": "en",
           "@value": "RDF/XML distribution of CPV-AP_IT Ontology"
@@ -128,7 +128,7 @@
     {
       "@id": "https://w3id.org/italia/data/public-organization/ISTAT",
       "@type": "Agent",
-      "dcterms:title": [
+      "dct:title": [
         {
           "@language": "en",
           "@value": "Italian National Institute of Statistics - ISTAT"
@@ -142,7 +142,7 @@
     {
       "@id": "https://w3id.org/italia/data/public-organization/PCM-1RSIZZ",
       "@type": "Agent",
-      "dcterms:title": [
+      "dct:title": [
         {
           "@language": "en",
           "@value": "Digital Transformation Department of the Presidency of the Council of Ministers"
@@ -156,7 +156,7 @@
     {
       "@id": "https://w3id.org/italia/data/public-organization/agid",
       "@type": "Agent",
-      "dcterms:title": [
+      "dct:title": [
         {
           "@language": "en",
           "@value": "Italian Digital Agency"
@@ -170,7 +170,7 @@
     {
       "@id": "https://w3id.org/italia/onto/CLV",
       "@type": "Standard",
-      "dcterms:creator": [
+      "dct:creator": [
         {
           "@id": "https://w3id.org/italia/data/public-organization/ISTAT"
         },
@@ -178,8 +178,8 @@
           "@id": "https://w3id.org/italia/data/public-organization/agid"
         }
       ],
-      "dcterms:identifier": "https://w3id.org/italia/onto/CLV",
-      "dcterms:title": {
+      "dct:identifier": "https://w3id.org/italia/onto/CLV",
+      "dct:title": {
         "@language": "en",
         "@value": "Address(Location) Ontology"
       }
@@ -200,7 +200,7 @@
           "@value": "https://w3id.org/italia/data/project/NDC"
         }
       ],
-      "dcterms:creator": [
+      "dct:creator": [
         {
           "@id": "https://w3id.org/italia/data/public-organization/ISTAT"
         },
@@ -208,7 +208,7 @@
           "@id": "https://w3id.org/italia/data/public-organization/agid"
         }
       ],
-      "dcterms:description": [
+      "dct:description": [
         {
           "@language": "it",
           "@value": "Questa è l'ontologia del profilo applicativo italiano sulle persone. L'ontologia modella informazioni generali sulle persone fisiche come per esempio il nome, cognome, data di nascita, luogo di nascita, codice fiscale, residenza, cittadinanza e relazioni tra persone sia generiche di conoscenza sia di generiche relazioni di parentela ma non come registrate presso l'anagrafe."
@@ -218,26 +218,12 @@
           "@value": "This is the ontology of the Italian application profile on persons. The ontology models general information on natural persons such as first name, surname, date of birth, place of birth, tax code, residence, citizenship and relations between persons both generic of knowledge and generic of kinship relations but not as registered with the civil registry."
         }
       ],
-      "dcterms:hasPart": [
-        {
-          "@id": "https://w3id.org/italia/onto/CPV/EducationLevel"
-        },
-        {
-          "@id": "https://w3id.org/italia/onto/CPV/Person"
-        },
-        {
-          "@id": "https://w3id.org/italia/onto/CPV/ResidenceInTime"
-        },
-        {
-          "@id": "https://w3id.org/italia/onto/CPV/Sex"
-        }
-      ],
-      "dcterms:identifier": "https://w3id.org/italia/onto/CPV",
-      "dcterms:issued": {
+      "dct:identifier": "https://w3id.org/italia/onto/CPV",
+      "dct:issued": {
         "@type": "DateTime",
         "@value": "2017-07-19T00:00:00"
       },
-      "dcterms:language": [
+      "dct:language": [
         {
           "@id": "http://publications.europa.eu/resource/authority/language/ITA"
         },
@@ -245,14 +231,14 @@
           "@id": "http://publications.europa.eu/resource/authority/language/ENG"
         }
       ],
-      "dcterms:modified": {
+      "dct:modified": {
         "@type": "DateTime",
         "@value": "2023-03-15T00:00:00"
       },
-      "dcterms:publisher": {
+      "dct:publisher": {
         "@id": "https://w3id.org/italia/data/public-organization/PCM-1RSIZZ"
       },
-      "dcterms:requires": [
+      "dct:requires": [
         {
           "@id": "https://w3id.org/italia/onto/l0"
         },
@@ -263,7 +249,7 @@
           "@id": "https://w3id.org/italia/onto/CLV"
         }
       ],
-      "dcterms:title": [
+      "dct:title": [
         {
           "@language": "en",
           "@value": "CPV-AP_IT - Core Person Vocabulary Italian Application Profile - Person Ontology"
@@ -318,6 +304,17 @@
           "@language": "it",
           "@value": "Grado di Istruzione"
         }
+      ],
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD"
+        },
+        {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE"
+        },
+        {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML"
+        }
       ]
     },
     {
@@ -331,6 +328,17 @@
         {
           "@language": "it",
           "@value": "Persona fisica"
+        }
+      ],
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD"
+        },
+        {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE"
+        },
+        {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML"
         }
       ]
     },
@@ -346,6 +354,17 @@
           "@language": "it",
           "@value": "Residenza nel tempo (storica)"
         }
+      ],
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD"
+        },
+        {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE"
+        },
+        {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML"
+        }
       ]
     },
     {
@@ -360,12 +379,23 @@
           "@language": "it",
           "@value": "Sesso"
         }
+      ],
+      "rdfs:isDefinedBy": [
+        {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD"
+        },
+        {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE"
+        },
+        {
+          "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML"
+        }
       ]
     },
     {
       "@id": "https://w3id.org/italia/onto/TI",
       "@type": "Standard",
-      "dcterms:creator": [
+      "dct:creator": [
         {
           "@id": "https://w3id.org/italia/data/public-organization/ISTAT"
         },
@@ -373,8 +403,8 @@
           "@id": "https://w3id.org/italia/data/public-organization/agid"
         }
       ],
-      "dcterms:identifier": "https://w3id.org/italia/onto/TI",
-      "dcterms:title": {
+      "dct:identifier": "https://w3id.org/italia/onto/TI",
+      "dct:title": {
         "@language": "en",
         "@value": "Italian Time ontology"
       }
@@ -382,7 +412,7 @@
     {
       "@id": "https://w3id.org/italia/onto/l0",
       "@type": "Standard",
-      "dcterms:creator": [
+      "dct:creator": [
         {
           "@id": "https://w3id.org/italia/data/public-organization/ISTAT"
         },
@@ -390,8 +420,8 @@
           "@id": "https://w3id.org/italia/data/public-organization/agid"
         }
       ],
-      "dcterms:identifier": "https://w3id.org/italia/onto/l0",
-      "dcterms:title": {
+      "dct:identifier": "https://w3id.org/italia/onto/l0",
+      "dct:title": {
         "@language": "en",
         "@value": "Top level ontology L0 - Level-0"
       }
