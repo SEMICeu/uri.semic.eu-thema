@@ -1,6 +1,6 @@
 {
     "@context": [
-     "https://semiceu.github.io/uri.semic.eu-generated/MLDCAT-AP/releases/2.1.0/context/mldcat-ap.jsonld",
+     "https://semiceu.github.io/uri.semic.eu-generated/MLDCAT-AP/releases/3.0.0/context/mldcat-ap.jsonld",
       {
         "biro" : "http://purl.org/spar/biro/",
         "it6" : "http://data.europa.eu/it6/",
@@ -28,7 +28,7 @@
             "MachineLearningModel.trainedOn" : "https://zenodo.org/records/6517768",
             "MachineLearningModel.version" : "1.0.0",
             "MachineLearningModel.keyword" : ["deep learning","object detection","instance segmentation","multispectral data"],
-            "MachineLearningModel.hasOutputFilePrediction" : "http://example.com/File/1",
+            "MachineLearningModel.hasFile" : "http://example.com/File/1",
             "MachineLearningModel.identifier" : "thermal-bridges-rooftops-detector"
         },
         {
@@ -77,11 +77,11 @@
         },
         {
             "@id" : "http://example.com/File/1",
-            "@type": "OutputFilePrediction",
-            "OutputFilePrediction.format": "http://example.com/format/pytorch",
-            "OutputFilePrediction.id" : "TBBRDet pytorch",
-            "OutputFilePrediction.title" : "TBBRDet pytorch format",
-            "OutputFilePrediction.url" : "https://github.com/ai4os-hub/thermal-bridges-rooftops-detector"
+            "@type": "File",
+            "File.format": "http://example.com/format/pytorch",
+            "File.id" : "TBBRDet pytorch",
+            "File.title" : "TBBRDet pytorch format",
+            "File.url" : "https://github.com/ai4os-hub/thermal-bridges-rooftops-detector"
         }
     ]
 }
