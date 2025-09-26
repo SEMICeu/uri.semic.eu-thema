@@ -16,8 +16,8 @@
 	it6:placedOnMarketDate "2025-09-02"^^xsd:date ;
 	it6:version "Apertus 1" ;
 	it6:modelArchitecture "Decoder-only transformer architecture with xIELU activations, QKNorms, Pre-Norm by RMSNorms, and rotary positional embeddings." ;
-	it6:hasInput ex:modality-input-1 ;
-	it6:hasOutput ex:modality-output-1 ;
+	it6:hasInputModality ex:modality-input-1 ;
+	it6:hasOutputModality ex:modality-output-1 ;
 	it6:totalNumberOfParameters "8000000000"^^xsd:nonNegativeInteger ;
 	it6:methodOfDistribution "Hugging Face" ;
 	dct:license <https://www.apache.org/licenses/LICENSE-2.0> ;

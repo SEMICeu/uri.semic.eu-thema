@@ -27,8 +27,8 @@
             },
             "MachineLearningModel.version" : "Apertus 1",
             "MachineLearningModel.modelArchitecture" : "Decoder-only transformer architecture with xIELU activations, QKNorms, Pre-Norm by RMSNorms, and rotary positional embeddings.",
-            "MachineLearningModel.hasInput" : "ex:modality-input-1",
-            "MachineLearningModel.hasOutput" : "ex:modality-output-1",
+            "MachineLearningModel.hasInputModality" : "ex:modality-input-1",
+            "MachineLearningModel.hasOutputModality" : "ex:modality-output-1",
             "MachineLearningModel.totalNumberOfParameters" : {
                 "@value": "8000000000",
                 "@type": "xsd:nonNegativeInteger"
