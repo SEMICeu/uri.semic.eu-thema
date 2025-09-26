@@ -1,5 +1,5 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -9,69 +9,48 @@
 @prefix spdx: <http://spdx.org/rdf/terms#> .
 @prefix ex: <http://example.org/> .
 
-<https://huggingface.co/swiss-ai/Apertus-8B-2509> dcterms:identifier "swiss-ai/Apertus-8B-2509" ;
-	dcterms:title "Apertus-8B-2509" ;
-	it6:hasProvider <https://ai.ethz.ch/>, <https://ai.epfl.ch/> ;
+<https://huggingface.co/swiss-ai/Apertus-70B-2509> dct:identifier "swiss-ai/Apertus-70B-2509" ;
+	dct:title "Apertus-70B-2509" ;
+	it6:hasProvider <https://www.swiss-ai.org/> ;
+	it6:releaseDate "2025-09-02"^^xsd:date ;
 	it6:placedOnMarketDate "2025-09-02"^^xsd:date ;
-	it6:releaseDate "2025-09-01"^^xsd:date ;
-	it6:version "v1" ;
+	it6:version "Apertus 1" ;
+	it6:modelArchitecture "Decoder-only transformer architecture with xIELU activations, QKNorms, Pre-Norm by RMSNorms, and rotary positional embeddings." ;
 	it6:hasInput ex:modality-input-1 ;
-	it6:hasRepository <https://huggingface.co/bigscience/bloomz-7b1/tree/main> ;
-	it6:hasBibliographicReference <http://example.com/BibliographicReference/1> ;
-	it6:hasUploader <https://huggingface.co/Muennighoff> ;
-	it6:intendedUse """We recommend using the model to perform tasks expressed in natural language. For example, given the prompt "Translate to English: Je t’aime.", the model will most likely answer "I love you.". Some prompt ideas from our paper:
-一个传奇的开端，一个不灭的神话，这不仅仅是一部电影，而是作为一个走进新时代的标签，永远彪炳史册。你认为这句话的立场是赞扬、中立还是批评?
-Suggest at least five related search terms to "Mạng neural nhân tạo".
-Write a fairy tale about a troll saving a princess from a dangerous dragon. The fairy tale is a masterpiece that has achieved praise worldwide and its moral is "Heroes Come in All Shapes and Sizes". Story (in Spanish):
-Explain in a sentence in Telugu what is backpropagation in neural networks.
-Feel free to share your generations in the Community tab!""" ;
-	dcterms:license <https://huggingface.co/spaces/bigscience/license> ;
-	it6:limitations "Prompt Engineering: The performance may vary depending on the prompt. For BLOOMZ models, we recommend making it very clear when the input stops to avoid the model trying to continue it. For example, the prompt \"Translate to English: Je t'aime\" without the full stop (.) at the end, may result in the model trying to continue the French sentence. Better prompts are e.g. \"Translate to English: Je t'aime.\", \"Translate to English: Je t'aime. Translation:\" \"What is \"Je t'aime.\" in English?\", where it is clear for the model when it should answer. Further, we recommend providing the model as much context as possible. For example, if you want it to answer in Telugu, then tell the model, e.g. \"Explain in a sentence in Telugu what is backpropagation in neural networks.\"." ;
-	it6:trainedOn <https://huggingface.co/datasets/bigscience/xP3>, <https://huggingface.co/datasets/bigscience/xP3all> ;
+	it6:hasOutput ex:modality-output-1 ;
+	it6:totalNumberOfParameters "8000000000"^^xsd:nonNegativeInteger ;
+	it6:methodOfDistribution "Hugging Face" ;
+	dct:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+	<http://www.w3.org/ns/odrl/2/hasPolicy> <https://huggingface.co/swiss-ai/Apertus-70B-2509/policy> ;
+	it6:intendedUse "General-purpose AI model" ;
+	it6:trainedOn <https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu>, <https://huggingface.co/datasets/epfml/FineWeb-HQ>, <https://huggingface.co/datasets/HuggingFaceTB/dclm-edu>, <https://huggingface.co/datasets/epfml/FineWeb2-HQ>, <https://huggingface.co/datasets/HuggingFaceFW/fineweb-2>, <https://huggingface.co/datasets/bigcode/the-stack-dedup>, <https://huggingface.co/datasets/common-pile/stackv2_edu_filtered>, <https://huggingface.co/datasets/HuggingFaceTB/finemath>, <https://huggingface.co/datasets/LLM360/MegaMath>, <https://huggingface.co/datasets/HuggingFaceTB/smoltalk2>, <https://huggingface.co/datasets/utter-project/EuroBlocks-SFTSynthetic-1124>, <https://huggingface.co/datasets/allenai/tulu-3-sft-olmo-2-mixture-0225>, <https://huggingface.co/datasets/DataProvenanceInitiative/CommercialFlan-Collection-Chain-Of-Thought> ;
+	it6:hasFile <https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/model-00001-of-00030.safetensors> ;
 	a it6:MachineLearningModel .
 
-<https://ai.ethz.ch/> foaf:name "ETH AI Center" ;
+<https://www.swiss-ai.org/> foaf:name "Swiss National AI Institute (SNAI)" ;
 	a foaf:Agent .
 
-<https://ai.epfl.ch/> foaf:name "EPFL AI Center" ;
-	a foaf:Agent .
-
-ex:modality-input-1 it6:classification ex:more-10-trillions-tokens ;
-	it6:size "15 trillion tokens" ;
+ex:modality-input-1 it6:classification ex:Text ;
+	it6:size "Native context length 64k tokens, extensible to 128k" ;
 	a it6:Modality .
 
-ex:more-10-trillions-tokens a skos:Concept .
+ex:Text a skos:Concept .
 
-<https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors> a <OutputFilePrediction> .
+ex:modality-output-1 it6:classification ex:Text ;
+	a it6:Modality .
 
-<http://example.com/Checksum/1> spdx:checksumValue "4e1e2bdcc97ec356cc92130d3802c81a324e9840b0ed417a9342ea728aa1d369"^^xsd:hexBinary ;
+<https://www.apache.org/licenses/LICENSE-2.0> a dct:LicenseDocument .
+
+<https://huggingface.co/swiss-ai/Apertus-70B-2509/policy> a <http://www.w3.org/ns/odrl/2/Policy> .
+
+<https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/model-00001-of-00030.safetensors> dct:format <http://example.com/format/safetensors> ;
+	dct:identifier "model-00001-of-00030.safetensors" ;
+	dct:title "Apertus-70B-2509 model-00001-of-00030 safetensors format" ;
+	it6:url <https://huggingface.co/swiss-ai/Apertus-70B-2509/resolve/main/model-00001-of-00030.safetensors> ;
+	spdx:checksum <http://example.com/Checksum/d9b30acaee5750f04a1b27ec056a20379e7c887ee61c308e80b0ca5deb76a4dd> ;
+	a it6:File .
+
+<http://example.com/Checksum/d9b30acaee5750f04a1b27ec056a20379e7c887ee61c308e80b0ca5deb76a4dd> spdx:checksumValue "d9b30acaee5750f04a1b27ec056a20379e7c887ee61c308e80b0ca5deb76a4dd"^^xsd:hexBinary ;
 	spdx:algorithm spdx:checksumAlgorithm_sha256 ;
 	a spdx:Checksum .
-
-<https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin> a <OutputFilePrediction> .
-
-<http://example.com/Checksum/2> spdx:checksumValue "d1f5d9fc449dd5fbe045f62c609e2b70f63d2e63faf74d7e0adb895dc294f28e"^^xsd:hexBinary ;
-	spdx:algorithm spdx:checksumAlgorithm_sha256 ;
-	a spdx:Checksum .
-
-<https://huggingface.co/bigscience/bloomz-7b1/tree/main> it6:hasFile <https://huggingface.co/bigscience/bloomz-7b1/blob/main/model.safetensors>, <https://huggingface.co/bigscience/bloomz-7b1/blob/main/pytorch_model.bin> ;
-	dcterms:title "Files" ;
-	a lpwcc:repository .
-
-<http://example.com/BibliographicReference/1> dcterms:bibliographicCitation """@article{muennighoff2022crosslingual,
-title={Crosslingual generalization through multitask finetuning},
-author={Muennighoff, Niklas and Wang, Thomas and Sutawika, Lintang and Roberts, Adam and Biderman, Stella and Scao, Teven Le and Bari, M Saiful and Shen, Sheng and Yong, Zheng-Xin and Schoelkopf, Hailey and others},
-journal={arXiv preprint arXiv:2211.01786},
-year={2022}}""" ;
-	dcterms:format "http://example.com/format/BibTeX" ;
-	dcterms:references <https://arxiv.org/abs/2211.01786> ;
-	a biro:BibliographicReference .
-
-<https://arxiv.org/abs/2211.01786> dcterms:date "2023-05-29"^^xsd:date ;
-	it6:hasDocument <https://arxiv.org/pdf/2211.01786> ;
-	dcterms:title "Crosslingual Generalization through Multitask Finetuning" ;
-	a lpwcc:paper .
-
-<https://huggingface.co/Muennighoff> foaf:name "Niklas Muennighoff" ;
-	a foaf:Agent .
 
