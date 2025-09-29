@@ -1,4 +1,3 @@
-@prefix : <file:///c%3A/Users/estani002/Documents/GitHub/uri.semic.eu-thema/site-skeleton/mldcat-ap/examples/example-machinelearningmodel-hf-apertus.ttl#> .
 @prefix biro: <http://purl.org/spar/biro/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
