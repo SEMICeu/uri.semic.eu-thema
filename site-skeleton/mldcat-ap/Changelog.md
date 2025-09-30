@@ -35,7 +35,7 @@ The table below gives an overview of the classes (and their definitions) within 
 | P | - | dcat:Dataset/it6:unsuitabilityMethod | addition of this property to be compliant with the AI CoP  | - |
 | P |  dcat:Dataset/owl:versionInfo | dcat:Dataset/dcat:version | changes applied following DCAT-AP 3.0.1  | - |
 | R |  dcat:Dataset/dct:MediaType | dcat:Dataset/dcat:mediaType | typo in the relation  | - |
-| P | dcat:Distribution/dpv:hasData | dcat:Distribution/dpv:hasData | changing hyperling to the code list in the usage note  | https://github.com/SEMICeu/MLDCAT-AP/issues/16 |
+| P | dcat:Distribution/dpv:hasData | dcat:Distribution/dpv:hasData | changing hyperling to the code list in the usage note  | https://github.com/SEMICeu/MLDCAT-AP/issues/25 |
 | P | - | it6:EnvironmentalImpact/it6:measurementMethodology  | addition of this property to be compliant with the AI CoP  | - |
 | P | it6:EstimationProcedure/it6:dataSplitsURL  | it6:EstimationProcedure/it6:hasSplit  | change property to relation to it6:Split  | https://github.com/SEMICeu/MLDCAT-AP/issues/16 |
 | P | - | it6:Hardware/dct:description  | addition of this property to be compliant with the AI CoP  | - |
@@ -56,6 +56,5 @@ The table below gives an overview of the classes (and their definitions) within 
 | R | it6:Run/it6:hasHyperParameter | it6:Run/it6:hasParameter | generalized relation to include different types of Parameter | - |
 | P | -| it6:Run/it6:trainingTime | addition of this property to be compliant with the AI CoP | - |
 | R | - | it6:Split/dct:type | added property to it6:Split  | https://github.com/SEMICeu/MLDCAT-AP/issues/16 |
-
-| R | it6:MachineLearningModel/it6:hasMachineLearningLibrary | - | removal of this property to have different relation | - |
-| R | it6:MachineLearningModel/it6:hasTaskType | - | removal of this property to have different relation | - |
+| R | it6:MachineLearningModel/it6:hasMachineLearningLibrary | - | removal of this property to model differently | - |
+| R | it6:MachineLearningModel/it6:hasTaskType | - | removal of this property to model differently | - |
