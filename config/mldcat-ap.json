@@ -18,7 +18,7 @@
   "documentconfig" : {
     "changelog" : "https://github.com/SEMICeu/MLDCAT-AP/master/releases/3.0.0/Changelog.md"
   },
-  "standaardregisterurl": "MLDCAT-AP",
+  "standaardregisterurl": "https://github.com/SEMICeu/MLDCAT-AP/blob/master/releases/3.0.0/html/Changelog.md",
     "translation": [
       {
         "language":"en",
