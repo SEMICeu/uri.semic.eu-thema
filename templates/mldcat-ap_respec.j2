@@ -1053,6 +1053,10 @@ Past and current contributors are :
 		body.darkmode section#references :target {
 			background: #04162d;
 		}
+        .CodeMirror-scroll {
+            -webkit-overflow-scrolling: touch; /* Enables momentum scrolling */
+            overflow-x: auto !important;       /* Ensure horizontal scrolling works */
+        }
 	</style>
 
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
