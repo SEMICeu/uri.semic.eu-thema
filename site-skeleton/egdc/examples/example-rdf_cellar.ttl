@@ -1,0 +1,18 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.europa.eu/2sa/cssv/rsc/e9bb09990f610bec081e4275f7a49d6a4cdf7df89e3903a5daff682135f02c35> a dct:Standard ;
+	dct:title "Core Person Vocabulary"@en ;
+	dct:description "The Core Person Vocabulary is a simplified, reusable and extensible data model that captures the fundamental characteristics of a person, e.g. the name, the gender, the date of birth, etc. This specification can be used as the foundation of a common export format for data in base registries."@en ;
+	owl:versionInfo "2.0.0" ;
+	dct:creator <http://data.europa.eu/2sa/cssv/rsc/8a01e22a41614a4a1b2a17aac3b6e9aa70f174640ac80ea8510d7b45772e121f> ;
+	dct:identifier "CPV" ;
+	foaf:homepage <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-person-vocabulary/release/200> .
+	
+<http://data.europa.eu/2sa/cssv/rsc/8a01e22a41614a4a1b2a17aac3b6e9aa70f174640ac80ea8510d7b45772e121f> a foaf:Agent ;
+	dct:title "European Commission"@en .
+
+<https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-person-vocabulary/release/200> a foaf:Document .

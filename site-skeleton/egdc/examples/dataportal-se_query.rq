@@ -1,0 +1,74 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX : <https://w3id.org/italia/onto/AccessCondition/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cv: <http://data.europa.eu/m8g/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX admsapit: <https://w3id.org/italia/onto/ADMS/>
+
+construct {
+  ?s rdf:type dct:Standard .
+  ?s dct:title ?title .
+  ?s dcat:keyword ?keyword2 .
+  ?s dct:description ?description .
+  ?s dct:issued ?issuedDT .
+  ?s dct:modified ?modifiedDT .
+  ?s dct:identifier ?identifierSTR .
+  ?s dcat:theme ?theme .
+  ?theme rdf:type skos:Concept .
+  ?s adms:status ?statusURI2 .
+  ?statusURI rdf:type skos:Concept .
+  ?s prof:hasResource ?resource.
+  ?resource rdf:type prof:ResourceDescriptor .
+  ?s dct:creator ?creator .
+  ?creator rdf:type foaf:Agent .
+  ?creator dct:title ?creatorName.
+}
+WHERE {
+  ?s rdf:type dct:Standard .
+  ?s dct:title ?title .
+  OPTIONAL {
+    ?s dcat:keyword ?keyword .
+    BIND(IF(lang(?keyword)='', "sv", lang(?keyword)) as ?langKeyword )
+    BIND( STRLANG(str(?keyword), ?langKeyword) AS ?keyword2 ) .
+  }
+  OPTIONAL {
+    ?s dct:description ?description .
+  }
+  OPTIONAL {
+    ?s dct:issued ?issued .
+    BIND(STRDT(STR(IF(contains(STR(?issued),"T"),?issued, concat(STR(?issued),"T00:00:00Z"))) , xsd:dateTime) as ?issuedDT) .
+  }
+  OPTIONAL {
+    ?s dct:modified ?modified .
+    BIND(IF(contains(STR(?modified),"T"),?modified, STRDT(concat(STR(?modified),"T00:00:00Z") , xsd:dateTime)) as ?modifiedDT) .
+  }
+  OPTIONAL {
+    ?s  dct:identifier ?identifierURI .
+    BIND(STR(?identifierURI) as ?identifier) .
+  }
+  BIND(if(bound(?identifier), ?identifier, STR(?s)) AS ?identifierSTR) .
+ 
+  OPTIONAL {
+    ?s  dcat:theme ?theme .
+  }
+   OPTIONAL {
+     ?s adms:status ?statusURI .
+  }
+  BIND(if(bound(?statusURI), ?statusURI, <http://purl.org/adms/status/UnderDevelopment>) AS ?statusURI2) .
+  FILTER (?statusURI2 != <http://purl.org/adms/status/Deprecated>) .
+  OPTIONAL {
+  	?s prof:hasResource ?resource.
+  }
+  BIND(<https://digg.se/> as ?creator) .
+  BIND("DIGG"@sv as ?creatorName) .
+}
