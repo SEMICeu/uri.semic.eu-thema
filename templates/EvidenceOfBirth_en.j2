@@ -110,7 +110,35 @@ This specification uses the following prefixes to shorten the URIs for readibili
 
 {% block xmlschema %}
 		<h3>XML schema representation</h3>
-		The XML schema representation from which the {{metadata.title}} has been build is available <a href="https://code.europa.eu/oots/tdd/data_models/-/tree/main/Evidence/EvidenceOfBirth/releases/0.0.1/xsd?ref_type=heads">here</a>
+		<p>The XML schema representation from which the {{metadata.title}} has been build is available <a href="https://code.europa.eu/oots/tdd/data_models/-/tree/main/Evidence/EvidenceOfBirth/releases/0.0.1/xsd?ref_type=heads">here</a>.</p>
+
+    <p>The XML schema is based on the OOTS requirements and it allows some flexibility to include fields that Member States can add in addition to those foreseen in the OOTS requirements.</p>
+
+    <p>The XML schema is based on 3 parts:
+    <ul>
+    <li>The subject part, to indicate the Person subject of the evidence</li>
+    <li>The event/status part, to indicate the data about the event related to the subject</li>
+    <li>Optional additional part, to add optional fields (attributes) for the evidence type, such as issuing date or issuing authority
+    </ul>
+    </p>
+
+    <p>All the parts with their respective attributes are optional (min cardinality set to 0).</p>
+
+    <p>The XML schema is based on the SEMIC <a href="https://github.com/SEMICeu/CCCEV">Core Criterion and Core Evidence (CCCEV)</a> specification, and on the <a href="https://github.com/SEMICeu/Core-Person-Vocabulary/">Core Person vocabulary</a>. 
+    In CCCEV, the Evidence <a href="https://semiceu.github.io/CCCEV/releases/2.1.0/#Evidence.isabout">is about</a> an Agent that is the subject in the provided Evidence; in the case of Evidence of Birth, the Agent is the Person.
+    An EvidenceOfBirthType is then an OOTSEvidenceType (based on CCCEV Evidence) by having the 3 parts:
+    <ul>
+    <li>cv:isAbout. Since the value of cv:isAbout is a generic AgentType, in SDG a PersonType is defined as an AgentType with cv:FamilyName, cv:GivenName, cv:Sex and sdg:AttributeSet, that it means that is possible to add additional fields to the subject.</li>
+    <li>sdg:Birth, defined by the OOTSBirthType, that includes cv:CountryOfBirth, cv:DateOfBirth, cv:PlaceOfBirth (as foreseen in OOTS requirements) and sdg:AttributeSet</li>
+    <li>sdg:AttributeSet, that can contains many attributes, where the name, language and type fields could be defined for each attribute</li>
+    </ul>
+    </p>
+
+    <p>The design of the XML schema is based on the <a href="https://www.oracle.com/technical-resources/articles/java/design-patterns.html">Garden Of Eden Pattern</a> where complex types and elements are defined globals so they can be reused.</p>
+    
+    <p>Restrictions on the presence of fields and on their values is delegated to schematron file, that can vary on the XML consumer and could be provided by XML providers, such as those on code list.
+    OOTS provides certain <a href="https://ec.europa.eu/digital-building-blocks/sites/spaces/TDD/pages/920061693/3.5+-+Code+Lists+v1.2.3+September+2025">code list</a> in Genericode format that can be used via schematron. Additional code list, such as the one of Sex in he current evidence, could be take from the the <a href="https://op.europa.eu/en/web/eu-vocabularies/authority-tables">Publications Office Authority Tables</a>.</p>
+
 {% endblock %} 
 
 {% block examples %}
