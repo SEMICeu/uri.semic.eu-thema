@@ -648,14 +648,7 @@
 The main entities are those that form the core of the Application Profile.
 The properties and their associated constraints that apply in the context of this profile are listed in a tabular form.
 Each row corresponds to one property. 
-In addition to the constraints also cross-references are provided to DCAT. To save space, the following abbreviations are used to indicate in short the difference with DCAT:
-<ul id="reuse-column">
-	<li>A: reused as-is defined and expressed in DCAT [[vocab-dcat-3]]</li>
-	<li>E: reused with additional usage notes or additional restrictions compared to DCAT [[vocab-dcat-3]]</li>
-	<li>P: DCAT-AP profile specific extension where DCAT had no requirements earlier on specified</li>
-</ul>
-This reuse qualification assessement is with respect to a specific version of DCAT. 
-Therefore it may vary over time when new versions of DCAT-AP are created.
+
 {% for entity in classes | sort(attribute=sortattr) %}
 {% if entity.rawTags['class-usage-scope'] == "main"   %}
    {{ renderentity(entity) }}
@@ -786,7 +779,7 @@ They are included in the Application Profile because they form the range of prop
 {% block usages %}
 <section class="informative">
 	<h2>Usage Guidelines</h2>
-    {% include "MLDCAT-AP-implementation.j2" ignore missing %}
+    {% include "EGDC-implementation.j2" ignore missing %}
     {% include "CV-governance.j2" ignore missing %}    
 </section>
 {% endblock %} 
