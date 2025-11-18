@@ -762,15 +762,24 @@ They are included in the Application Profile because they form the range of prop
     </div>
 </section>
 -->
+<section id="specintro">
+    <h2>
+        Introduction
+    </h2>
+    {% block introduction %}
+        <p>
+            This document describes an <strong>Core Vocabulary</strong>, in this case <strong>{{ metadata.title }}</strong>. The Core Vocabulary specifies a semantic data model covering a set of usecases. The specification consists of terms with their constraints (cardinalities, codelists, usage guidelines).
+        </p>
+    {% endblock %}
+</section>
+
 <section class="informative">
-    <h2 aria-level="1" role="heading" id="h2_sotd">
+    <h2 aria-level="1" role="heading" id="h2_codelist">
         Code List
-    </h2> 
-	<div class="region region--no-space-top" id="codelist">													   
-        {% block codelist %}
-	<p> No codelist defined </p>
-        {% endblock %}
-	</div>
+    </h2> 												   
+    {% block codelist %}
+	    <p> No codelist defined </p>
+    {% endblock %}
 </section>
 
 <section class="informative">
