@@ -14,7 +14,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX admsapit: <https://w3id.org/italia/onto/ADMS/>
 construct {
-    ?s rdf:type dct:Standard .
+    ?s rdf:type adms:Asset .
     ?s dct:description ?description .
     ?s dct:identifier ?identifierSTR2 .
     ?s dct:title ?title . 
@@ -31,19 +31,19 @@ construct {
     ?statusURI2 rdf:type skos:Concept .
     ?s dct:creator ?creator .
     ?creator rdf:type foaf:Agent .
-    ?creator dct:title ?creatorName2 .
+    ?creator foaf:name ?creatorName2 .
     ?s dct:publisher ?publisher .
     ?publisher rdf:type foaf:Agent .
     ?publisher dct:title ?publisherName .
     ?s cv:contactPoint ?contactPoint .
-    ?contactPoint rdf:type cv:ContactPoint .
+    ?contactPoint rdf:type vcard:Kind .
     ?contactPoint cv:email ?emailTo .
     ?s dct:requires ?vocabulary2 .
-    ?s prof:hasResource ?distribution .
-    ?distribution rdf:type prof:ResourceDescriptor .
+    ?s dcat:distribution ?distribution .
+    ?distribution rdf:type adms:AssetDistribution .
     ?distribution dct:title ?distributionTitle .
     ?distribution dct:format ?distributionFormat .
-    ?distributionFormat rdf:type skos:Concept ..
+    ?distributionFormat rdf:type skos:Concept .
     ?distribution dcat:downloadURL ?downloadURLSTR .        
     ?classURI rdf:type rdfs:Class .
     ?classURI rdfs:label ?classLabel .
