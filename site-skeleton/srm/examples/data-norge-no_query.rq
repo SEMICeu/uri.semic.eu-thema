@@ -36,7 +36,7 @@ CONSTRUCT {
   ?statusURI rdf:type skos:Concept .
   ?s cv:contactPoint ?contactPoint .
   ?contactPoint rdf:type vcard:Kind .
-  ?contactPoint cv:email ?emailTo .
+  ?contactPoint vcard:hasEmail ?email .
   ?s dct:requires ?IncludedModel .
 }
 WHERE {
@@ -86,7 +86,6 @@ WHERE {
   OPTIONAL {
     ?s dcat:contactPoint ?contactPoint .
     ?contactPoint vcard:hasEmail ?email .
-    BIND(STRAFTER(STR(?email),"mailto:") as ?emailTo) .
   }
   OPTIONAL {
     ?s dct:hasPart ?IncludedModel .
