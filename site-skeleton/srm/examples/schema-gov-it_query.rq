@@ -37,7 +37,7 @@ construct {
     ?publisher dct:title ?publisherName .
     ?s cv:contactPoint ?contactPoint .
     ?contactPoint rdf:type vcard:Kind .
-    ?contactPoint cv:email ?emailTo .
+    ?contactPoint vcard:hasEmail ?email .
     ?s dct:requires ?vocabulary2 .
     ?s dcat:distribution ?distribution .
     ?distribution rdf:type adms:AssetDistribution .
@@ -111,7 +111,6 @@ where {
     ?s dcat:contactPoint ?contactPoint .
     OPTIONAL {
     	?contactPoint vcard:hasEmail ?email .
-        BIND(STRAFTER(STR(?email),"mailto:") as ?emailTo) .
     }
     
     OPTIONAL {
