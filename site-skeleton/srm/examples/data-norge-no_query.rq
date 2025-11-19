@@ -12,7 +12,7 @@ PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 CONSTRUCT {
-  ?s a dct:Standard .
+  ?s a adms:Asset .
   ?s dct:title ?title .
   ?s dcat:keyword ?keyword .
   ?s dct:description ?description .
@@ -26,7 +26,7 @@ CONSTRUCT {
   ?s dct:publisher ?publisher .
   ?s dct:creator ?publisher .
   ?publisher rdf:type foaf:Agent .
-  ?publisher dct:title ?publisherName .
+  ?publisher foaf:name ?publisherName .
   ?s dcat:theme ?themeOP .
   ?themeOP rdf:type skos:Concept .
   ?s dct:hasPart ?classURI .
@@ -35,7 +35,7 @@ CONSTRUCT {
   ?s adms:status ?statusURI .
   ?statusURI rdf:type skos:Concept .
   ?s cv:contactPoint ?contactPoint .
-  ?contactPoint rdf:type cv:ContactPoint .
+  ?contactPoint rdf:type vcard:Kind .
   ?contactPoint cv:email ?emailTo .
   ?s dct:requires ?IncludedModel .
 }
