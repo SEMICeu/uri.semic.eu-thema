@@ -2,7 +2,7 @@
 {
   "name": "evidenceofbirth",
   "type": "ap",
-  "eap": "OOTS_EvidenceOfBirth1.eap",
+  "eap": "OOTS_EvidenceOfBirth.eap",
   "diagram": "EvidenceOfBirth",
   "template": "EvidenceOfBirth_en.j2",
   "title": "Evidence Of Birth",

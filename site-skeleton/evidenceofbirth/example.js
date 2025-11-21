@@ -129,7 +129,7 @@ $(document).ready(function () {
 
         var examples_id = ".examples";
 	var examples_class = ".h3";
-	var folder = "./html/examples/";
+	var folder = "./" + exampleid.toLowerCase() + "/examples/";
 	var $examples = $(examples_id);
 
 //	$examples.children(examples_class).each(function(index){
