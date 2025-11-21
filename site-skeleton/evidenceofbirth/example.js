@@ -2,29 +2,31 @@ function example_structure(exampleid){
 	structure=`
 	<div id="` + exampleid + `-tabs" exampleid="` + exampleid + `"  class="tabs tabsstyle">
 		<ul>
-			<li><a href="#` + exampleid + `-tabs-1">Turtle</a></li>
-			<li><a href="#` + exampleid + `-tabs-2">JSON-LD</a></li>
-			<li><a href="#` + exampleid + `-tabs-3">XML</a></li>
+			<li><a href="#` + exampleid + `-tabs-1">XML</a></li>
+			<li><a href="#` + exampleid + `-tabs-2">Turtle</a></li>
+			<li><a href="#` + exampleid + `-tabs-3">JSON-LD</a></li>
+			
 		</ul>
 		<div id="` + exampleid + `-tabs-1">
 			<textarea class="validationquery" id="` + exampleid + `-tab1validationquery" name="query" cols="80" rows="16"></textarea>
-			<button class="buttonsample copyturtletoclipboard" id="` + exampleid + `-tabs-1-button-1">Copy</button>
-			<button class="buttonsample openTurtleInConverter" id="` + exampleid + `-tabs-1-button-2">Open in Converter</button>
-	        <button class="buttonsample openTurtleInSHACLPlayground" id="` + exampleid + `-tabs-1-button-3">Validate</button>
+			<button class="buttonsample copyXMLtoclipboard" id="` + exampleid + `-tabs-1-button-1">Copy</button>
+			
 		</div>
 		<div id="` + exampleid + `-tabs-2">
 			<textarea class="validationquery" id="` + exampleid + `-tab2validationquery" name="query" cols="80" rows="16"></textarea>
-			<button class="buttonsample copyjsonldtoclipboard" id="` + exampleid + `-tabs-2-button-1">Copy</button>
-			<button class="buttonsample openinplayground" id="` + exampleid + `-tabs-2-button-2">Open in Playground</button>
-			<button class="buttonsample openJsonldInConverter" id="` + exampleid + `-tabs-2-button-3">Open in Converter</button>
-	        <button class="buttonsample openJsonldInSHACLPlayground" id="` + exampleid + `-tabs-2-button-4">Validate</button>
-
+			<button class="buttonsample copyturtletoclipboard" id="` + exampleid + `-tabs-2-button-1">Copy</button>
+			<button class="buttonsample openTurtleInConverter" id="` + exampleid + `-tabs-2-button-2">Open in Converter</button>
+	        <button class="buttonsample openTurtleInSHACLPlayground" id="` + exampleid + `-tabs-2-button-3">Validate</button>
 		</div>
 		<div id="` + exampleid + `-tabs-3">
 			<textarea class="validationquery" id="` + exampleid + `-tab3validationquery" name="query" cols="80" rows="16"></textarea>
-			<button class="buttonsample copyXMLtoclipboard" id="` + exampleid + `-tabs-3-button-1">Copy</button>
-			
+			<button class="buttonsample copyjsonldtoclipboard" id="` + exampleid + `-tabs-3-button-1">Copy</button>
+			<button class="buttonsample openinplayground" id="` + exampleid + `-tabs-3-button-2">Open in Playground</button>
+			<button class="buttonsample openJsonldInConverter" id="` + exampleid + `-tabs-3-button-3">Open in Converter</button>
+	        <button class="buttonsample openJsonldInSHACLPlayground" id="` + exampleid + `-tabs-3-button-4">Validate</button>
+
 		</div>
+		
 	</div>`;
 	return structure;
 }
@@ -137,9 +139,10 @@ $(document).ready(function () {
 		var text = example_structure(exampleid);
 		$(this).after(text);
 
-		var obj = {CM0: createTurtleEditorFrom(document.getElementById(exampleid + "-tab1validationquery")), 
-			       CM1: createJSONLDEditorFrom(document.getElementById(exampleid + "-tab2validationquery")), 
-				   CM2: createXMLEditorFrom(document.getElementById(exampleid + "-tab3validationquery"))};
+		var obj = {CM0: createXMLEditorFrom(document.getElementById(exampleid + "-tab1validationquery")),
+		           CM1: createTurtleEditorFrom(document.getElementById(exampleid + "-tab2validationquery")), 
+			       CM2: createJSONLDEditorFrom(document.getElementById(exampleid + "-tab3validationquery")), 
+				   };
 		editors[index] = obj;
 		//editors[index].push({CM: createTurtleEditorFrom(document.getElementById(exampleid + "-tab1validationquery")}, CM2: createJSONLDEditorFrom(document.getElementById(exampleid + "-tab2validationquery")});
 		//editors[index].push({CM: createJSONLDEditorFrom(document.getElementById(exampleid + "-tab2validationquery")});
@@ -155,9 +158,9 @@ $(document).ready(function () {
 		});
 
                 path_to_file = folder + exampleid;
-		loadFile(editors[index].CM0, path_to_file + ".ttl");
-		loadFile(editors[index].CM1, path_to_file + ".jsonld");
-		loadFile(editors[index].CM2, path_to_file + ".xml");
+		loadFile(editors[index].CM1, path_to_file + ".ttl");
+		loadFile(editors[index].CM2, path_to_file + ".jsonld");
+		loadFile(editors[index].CM0, path_to_file + ".xml");
 		
 	});
 
@@ -166,7 +169,7 @@ $(document).ready(function () {
 			var exampleid = $(this).parent().parent().attr("exampleid");
 			var indexValues = $examples.map(function() { return this.id; }) ;
 			var index = myIndexOf(indexValues, exampleid);
-			texttocopy = editors[index].CM0.getValue()
+			texttocopy = editors[index].CM1.getValue()
 			navigator.clipboard.writeText(texttocopy);
 			$(this).tooltip({ items: "#" + this.id, content: "Copied !"});
 			$(this).tooltip("open");
@@ -180,7 +183,7 @@ $(document).ready(function () {
 			var exampleid = $(this).parent().parent().attr("exampleid");
 			var indexValues = $examples.map(function() { return this.id; }) ;
 			var index = myIndexOf(indexValues, exampleid);
-			texttocopy = editors[index].CM1.getValue();
+			texttocopy = editors[index].CM2.getValue();
 			navigator.clipboard.writeText(texttocopy);
 			$(this).tooltip({ items: "#" + this.id, content: "Copied !"});
 			$(this).tooltip("open");
@@ -194,7 +197,7 @@ $(document).ready(function () {
 			var exampleid = $(this).parent().parent().attr("exampleid");
 			var indexValues = $examples.map(function() { return this.id; }) ;
 			var index = myIndexOf(indexValues, exampleid);
-			texttocopy = editors[index].CM2.getValue();
+			texttocopy = editors[index].CM0.getValue();
 			navigator.clipboard.writeText(texttocopy);
 			$(this).tooltip({ items: "#" + this.id, content: "Copied !"});
 			$(this).tooltip("open");
@@ -208,7 +211,7 @@ $(document).ready(function () {
 		var indexValues = $examples.map(function() { return this.id; }) ;
 		var index = myIndexOf(indexValues, exampleid);
 
-		newUrl = "https://json-ld.org/playground/#startTab=tab-expand&json-ld=" + encodeURIComponent(editors[index].CM1.getValue()); 
+		newUrl = "https://json-ld.org/playground/#startTab=tab-expand&json-ld=" + encodeURIComponent(editors[index].CM2.getValue()); 
 		window.open(newUrl, '_blank');
 		return false;
 	});
@@ -217,7 +220,7 @@ $(document).ready(function () {
 		var indexValues = $examples.map(function() { return this.id; }) ;
 		var index = myIndexOf(indexValues, exampleid);
 
-		newUrl = "https://converter.zazuko.com/#value=" + encodeURIComponent(editors[index].CM0.getValue()) + "&format=text%2Fturtle"; 
+		newUrl = "https://converter.zazuko.com/#value=" + encodeURIComponent(editors[index].CM1.getValue()) + "&format=text%2Fturtle"; 
 		window.open(newUrl, '_blank');
 		return false;
 	});
@@ -226,7 +229,7 @@ $(document).ready(function () {
 		var indexValues = $examples.map(function() { return this.id; }) ;
 		var index = myIndexOf(indexValues, exampleid);
 
-		newUrl = "https://converter.zazuko.com/#value=" + encodeURIComponent(editors[index].CM1.getValue()) + "&format=application%2Fld%2Bjson";
+		newUrl = "https://converter.zazuko.com/#value=" + encodeURIComponent(editors[index].CM2.getValue()) + "&format=application%2Fld%2Bjson";
 		window.open(newUrl, '_blank');
 		return false;
 	});
@@ -234,14 +237,14 @@ $(document).ready(function () {
 		var exampleid = $(this).parent().parent().attr("exampleid");
 		var indexValues = $examples.map(function() { return this.id; }) ;
 		var index = myIndexOf(indexValues, exampleid);
-		var shapes = loadShape(shaclfilepath, editors[index].CM0.getValue(), "text%2Fturtle");
+		var shapes = loadShape(shaclfilepath, editors[index].CM1.getValue(), "text%2Fturtle");
 		return false;
 	});
 	$("button.openJsonldInSHACLPlayground").on('click', function(e) {
 		var exampleid = $(this).parent().parent().attr("exampleid");
 		var indexValues = $examples.map(function() { return this.id; }) ;
 		var index = myIndexOf(indexValues, exampleid);
-		var shapes = loadShape(shaclfilepath, editors[index].CM1.getValue(), "application%2Fld%2Bjson");
+		var shapes = loadShape(shaclfilepath, editors[index].CM2.getValue(), "application%2Fld%2Bjson");
 		return false;
 	});
 	$("div.CodeMirror pre").on('click', function(e) {
