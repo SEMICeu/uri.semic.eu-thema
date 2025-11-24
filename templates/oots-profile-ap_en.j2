@@ -635,8 +635,14 @@ They are included in the Application Profile because they form the range of prop
 -->
 
 <section class="informative">
-    <h2> Examples </h2>
-    <div class="examples" id="{{ metadata.filename }}"></div>
+    <h2 aria-level="1" role="heading" id="h2_sotd">
+        Examples
+    </h2> 
+	<div class="region region--no-space-top" id="examples">													   
+        {% block examples %}
+	<p> No examples defined </p>
+        {% endblock %}
+	</div>
 </section>
 
 
