@@ -93,6 +93,7 @@ This specification uses the following prefixes to shorten the URIs for readabili
 		<tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>
 		<tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
 		<tr><td><code>egdc</code></td><td><code>https://www.greendigitalcoalition.eu/model/</code></td></tr>
+		<tr><td><code>egdc-cl</code></td><td><code>https://www.greendigitalcoalition.eu/codelist/</code></td></tr>
 		<tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
 		<tr><td><code>org</code></td><td><code>http://www.w3.org/ns/org#</code></td></tr>
 		<tr><td><code>owl</code></td><td><code>http://www.w3.org/2002/07/owl#</code></td></tr>
@@ -132,17 +133,23 @@ This specification uses the following prefixes to shorten the URIs for readabili
 
 <h3 id="cs-calculation">Case Study - Type of Calculation</h3> 
 <table id="table-cs-calculation" class="simple">
-	<thead><tr><th>Identifier</th><th>Label</th></tr></thead>
+	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th></tr></thead>
 	<tbody>
-		<tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>
+		<tr><td>egdc-cl:calculation/ex-ante</td><td><code>ex-ante</code></td><td><code>Ex Ante</code></td></tr>
+		<tr><td>egdc-cl:calculation/ex-post/td><td><code>ex-post</code></td><td><code>Ex Post</code></td></tr>
 	</tbody>
 </table>
 
 <h3 id="org-sector">Organization - Sector</h3> 
 <table id="table-org-sector" class="simple">
-	<thead><tr><th>Identifier</th><th>Label</th></tr></thead>
+	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th><th>Eurovoc Domain</th></tr></thead>
 	<tbody>
-		<tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>
+    <tr><td>egdc-cl:sector/agriculture</td><td><code>agriculture</code></td><td><code>Agriculture sector</code></td><td><a href="https://showvoc.op.europa.eu/#/datasets/OP_EuroVoc/data?resId=http:%2F%2Feurovoc.europa.eu%2F100156">56 AGRICULTURE, FORESTRY AND FISHERIES</a></td></tr>
+    <tr><td>egdc-cl:sector/construction</td><td><code>construction</code></td><td><code>Construction/building sector</code></td><td><a href="https://showvoc.op.europa.eu/#/datasets/OP_EuroVoc/data?resId=http:%2F%2Feurovoc.europa.eu%2F100160">68 INDUSTRY</a></td></tr>
+    <tr><td>egdc-cl:sector/energy</td><td><code>energy</code></td><td><code>Energy/Power sector</code></td><td><a href="https://showvoc.op.europa.eu/#/datasets/OP_EuroVoc/data?resId=http:%2F%2Feurovoc.europa.eu%2F100159">66 ENERGY</a></td></tr>
+    <tr><td>egdc-cl:sector/manufacturing</td><td><code>manufacturing</code></td><td><code>Manufacturing sector</code></td><td><a href="https://showvoc.op.europa.eu/#/datasets/OP_EuroVoc/data?resId=http:%2F%2Feurovoc.europa.eu%2F100158">64 PRODUCTION, TECHNOLOGY AND RESEARCH</a></td></tr>
+    <tr><td>egdc-cl:sector/smart-cities</td><td><code>smart-cities</code></td><td><code>Smart Cities sector</code></td><td><a href="https://showvoc.op.europa.eu/#/datasets/OP_EuroVoc/data?resId=http:%2F%2Feurovoc.europa.eu%2F100149">28 SOCIAL QUESTIONS</a></td></tr>
+    <tr><td>egdc-cl:sector/transport</td><td><code>transport</code></td><td><code>Transport sector</code></td><td><a href="https://showvoc.op.europa.eu/#/datasets/OP_EuroVoc/data?resId=http:%2F%2Feurovoc.europa.eu%2F100154">48 TRANSPORT</a></td></tr>
 	</tbody>
 </table>
 
