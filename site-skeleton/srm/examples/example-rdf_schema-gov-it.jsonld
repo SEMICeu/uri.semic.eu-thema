@@ -52,7 +52,7 @@
     {
       "@id": "https://w3id.org/italia/data/contact-point/ISTAT-NDC",
       "@type": "Kind",
-      "hasEmail": "ndc-segr-tec@istat.it"
+      "hasEmail": "mailto:ndc-segr-tec@istat.it"
     },
     {
       "@id": "https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD",

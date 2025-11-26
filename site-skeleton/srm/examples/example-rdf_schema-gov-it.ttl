@@ -27,7 +27,7 @@
 
 <http://www.w3.org/ns/dx/prof/roles/vocabulary> a skos:Concept .
 
-<https://w3id.org/italia/data/contact-point/ISTAT-NDC> vcard:hasEmail <ndc-segr-tec@istat.it> ;
+<https://w3id.org/italia/data/contact-point/ISTAT-NDC> vcard:hasEmail <mailto:ndc-segr-tec@istat.it> ;
 	a vcard:Kind .
 
 <https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD> dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
