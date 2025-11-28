@@ -11,7 +11,7 @@
   </cv:IsAbout>
   <sdg:Birth>
     <cv:CountryOfBirth xsi:type="sdg:LocationType">
-      <cv:GeographicName xml:lang="EN">Belgium</cv:GeographicName>
+      <cv:GeographicName>BE</cv:GeographicName>
     </cv:CountryOfBirth>
     <cv:DateOfBirth>1898-11-30</cv:DateOfBirth>
     <cv:PlaceOfBirth xsi:type="sdg:LocationType">

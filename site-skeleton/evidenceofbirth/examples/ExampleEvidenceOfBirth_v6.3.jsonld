@@ -53,10 +53,7 @@
    {
     "@id": "ex:location2",
     "@type": "Location",
-    "locn:geographicName" : {
-      "@language": "fr",
-      "@value": "Belgique"
-    }
+    "locn:geographicName" : "Belgique"
    }
  ]
 }

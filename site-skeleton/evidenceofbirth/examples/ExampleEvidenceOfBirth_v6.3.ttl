@@ -20,5 +20,5 @@ ex:person1 foaf:givenName "René François Ghislain"@fr ;
 ex:location1 locn:geographicName "Lessines"@fr ;
 	a dcterms:Location .
 
-ex:location2 locn:geographicName "Belgique"@fr ;
+ex:location2 locn:geographicName "BE" ;
 	a dcterms:Location .
