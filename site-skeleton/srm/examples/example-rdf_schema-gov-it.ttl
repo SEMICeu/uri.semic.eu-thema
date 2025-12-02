@@ -23,7 +23,7 @@
 
 <http://publications.europa.eu/resource/authority/language/ITA> a skos:Concept .
 
-<http://publications.europa.eu/resource/authority/distribution-status/COMPLETED> a skos:Concept .
+<http://purl.org/adms/status/Completed> a skos:Concept .
 
 <http://www.w3.org/ns/dx/prof/roles/vocabulary> a skos:Concept .
 
@@ -71,7 +71,7 @@
 	dct:requires <https://w3id.org/italia/onto/l0>, <https://w3id.org/italia/onto/TI>, <https://w3id.org/italia/onto/CLV> ;
 	dct:title "CPV-AP_IT - Core Person Vocabulary Italian Application Profile - Person Ontology"@en, "CPV-AP_IT: Core Person Vocabulary - profilo applicativo italiano - Ontologia delle persone"@it ;
 	owl:versionInfo "https://w3id.org/italia/onto/CPV/0.8" ;
-	adms:status <http://publications.europa.eu/resource/authority/distribution-status/COMPLETED> ;
+	adms:status <http://purl.org/adms/status/Completed> ;
 	dcat:keyword "famiglia"@it, "persona"@it, "persone"@it ;
 	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
 	dcat:distribution <https://w3id.org/italia/data/distribution/CPVAPIT-JSON-LD>, <https://w3id.org/italia/data/distribution/CPVAPIT-RDF-TURTLE>, <https://w3id.org/italia/data/distribution/CPVAPIT-RDF-XML> ;
