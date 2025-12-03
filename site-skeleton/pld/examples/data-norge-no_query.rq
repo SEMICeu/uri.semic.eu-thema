@@ -1,0 +1,94 @@
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX cv: <http://data.europa.eu/m8g/> 
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX modeldcatno: <https://data.norge.no/vocabulary/modelldcatno#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT {
+  ?s a adms:Asset .
+  ?s dct:title ?title .
+  ?s dcat:keyword ?keyword .
+  ?s dct:description ?description .
+  ?s owl:versionInfo ?versionInfo .
+  ?s dct:issued ?issuedDT .
+  ?s dct:modified ?modifiedDT .
+  ?s dct:modified ?modifiedDT . 
+  ?s dct:language ?languageURI .
+  ?languageURI rdf:type skos:Concept .
+  ?s dct:identifier ?identifier .
+  ?s dct:publisher ?publisher .
+  ?s dct:creator ?publisher .
+  ?publisher rdf:type foaf:Agent .
+  ?publisher foaf:name ?publisherName .
+  ?s dcat:theme ?themeOP .
+  ?themeOP rdf:type skos:Concept .
+  ?s dct:hasPart ?classURI .
+  ?classURI rdf:type rdfs:Class .
+  ?classURI rdfs:label ?classLabel .
+  ?s adms:status ?statusURI .
+  ?statusURI rdf:type skos:Concept .
+  ?s cv:contactPoint ?contactPoint .
+  ?contactPoint rdf:type vcard:Kind .
+  ?contactPoint vcard:hasEmail ?email .
+  ?s dct:requires ?IncludedModel .
+}
+WHERE {
+  ?s rdf:type <https://data.norge.no/vocabulary/modelldcatno#InformationModel> .
+  ?s dct:title ?title .
+  ?s dct:description ?description . 
+  OPTIONAL {
+    ?s  owl:versionInfo ?versionInfo
+  }
+  OPTIONAL {
+    ?s  dcat:keyword ?keyword .
+  }
+  OPTIONAL {
+     ?s dct:issued ?issued .
+    BIND(IF(contains(STR(?issued),"T"),?issued, STRDT(concat(STR(?issued),"T00:00:00+01:00") , xsd:dateTime)) as ?issuedDT) .
+  }
+    OPTIONAL {
+     ?s dct:modified ?modified.
+    BIND(IF(contains(STR(?modified),"T"),?modified, STRDT(concat(STR(?modified),"T00:00:00+01:00") , xsd:dateTime)) as ?modifiedDT) .
+  }
+    OPTIONAL {
+    ?s  dct:language ?languageURI .
+  }
+   OPTIONAL {
+    ?s  dct:identifier ?identifierURI .
+    BIND(STR(?identifierURI) as ?identifier) .
+  }
+    OPTIONAL {
+    ?s dct:publisher ?publisher .
+    ?publisher foaf:name ?publisherName .
+  }
+  OPTIONAL {
+    ?s dcat:theme ?theme
+    BIND(IF(?theme = <https://psi.norge.no/los/tema/eiendom> || ?theme = <https://psi.norge.no/los/tema/naringsliv> || ?theme = <https://psi.norge.no/los/tema/personopplysninger> ,    <http://publications.europa.eu/resource/authority/data-theme/GOVE> , <http://publications.europa.eu/resource/authority/data-theme/GOVE>) as ?themeOP) .
+  }
+  OPTIONAL {
+     ?s modeldcatno:containsModelElement ?classURI .
+     ?classURI dct:title ?classLabel .
+     ?classURI rdf:type ?classType .
+    FILTER(?classType = <https://data.norge.no/vocabulary/modelldcatno#ObjectType>)
+  }
+
+   OPTIONAL {
+     ?s adms:status ?statusURI .
+  }
+  FILTER (?statusURI != <http://purl.org/adms/status/Deprecated>) .
+  OPTIONAL {
+    ?s dcat:contactPoint ?contactPoint .
+    ?contactPoint vcard:hasEmail ?email .
+  }
+  OPTIONAL {
+    ?s dct:hasPart ?IncludedModel .
+  }
+}
+
