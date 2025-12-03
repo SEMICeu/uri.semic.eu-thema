@@ -19,7 +19,7 @@
     "translation": [
       {
         "language":"en",
-        "template":"PLD_en.j2",
+        "template":"pld_en.j2",
         "title": "Product Liability Directive Judgment",
         "translationjson":"pld_en.json",
         "mergefile":"pld_en_merged.jsonld"
