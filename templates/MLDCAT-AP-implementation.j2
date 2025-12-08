@@ -31,7 +31,17 @@ Each implementation happens within a context, and that context is beyond the SHA
 The shapes can be found <a href="./shacl/{{metadata.filename}}-SHACL.ttl">here</a>.
 
 <p>
-The Interoperability Test Bed (ITB) provides a <a href="https://www.itb.ec.europa.eu/shacl/mldcat-ap/upload">validation service for MLDCAT-AP</a> reusing the linked shapes.
+The Interoperability Test Bed (ITB) provides a <a href="https://www.itb.ec.europa.eu/shacl/semic-shacl/upload">SEMIC SHACL validation service</a> where it is possible to validate for MLDCAT-AP reusing the linked shapes.
+There are 4 types of validation for this version:
+<ul>
+<li><b>3.0.0</b>: to validate against the data model version 3.0.0</li>
+<li><b>3.0.0 for AI Office</b>: to validate against the data model + the <a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai#ecl-inpage-the-3-chapters-of-the-code">transparency requirements</a> for the AI Office coming for the AI Code Of Practice</li>
+<li><b>3.0.0 for Downstream Providers</b>: to validate against the data model + the <a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai#ecl-inpage-the-3-chapters-of-the-code">transparency requirements</a> for the Downstream providers coming for the AI Code Of Practice</li>
+<li><b>3.0.0 for National Competent Authority</b>: to validate against the data model + the <a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai#ecl-inpage-the-3-chapters-of-the-code">transparency requirements</a> for the National Competent Authorities coming for the AI Code Of Practice</li>
+</ul> 
+
+The additional shapes can be found in the <a href="https://github.com/SEMICeu/Semantic-Mappings/tree/main">Semantic Mappings</a> repository.
+
 The examples in this specification can be validated via the <a href="https://www.itb.ec.europa.eu/shacl/swagger-ui/index.html">ITB REST API</a>.
 </p>
 
