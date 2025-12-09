@@ -1,13 +1,16 @@
-@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix adms: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix ex: <http://example.org/shapes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix srm: <https://semiceu.github.io/SRM/releases/1.0.0/codelist/> .
 
 # Import external vocabularies
-<http://data.europa.eu/srm/codelist_imports>
-    rdf:type owl:Ontology ;
+srm:imports rdf:type owl:Ontology ;
     owl:imports <http://publications.europa.eu/resource/authority/language> ;
     owl:imports <http://publications.europa.eu/resource/authority/licence> ;
     owl:imports <https://github.com/SEMICeu/ADMS-AP/raw/master/purl.org/ADMS_SKOS_v1.00.rdf> ; 
@@ -17,15 +20,19 @@
     owl:imports <https://www.w3.org/ns/dx/prof/role/index.ttl> .
 
 # Shape for language validation
-ex:AssetLanguageShape 
+srm:AssetLanguageShape 
     a sh:NodeShape ;
     sh:targetClass adms:Asset ;
+    rdfs:label "Asset Language Shape"@en ;
+    rdfs:comment "The language must be in the EU Publications Office language authority table"@en ;
     sh:property [
         sh:path dct:language ;
         sh:class skos:Concept ;
         sh:nodeKind sh:IRI ;
         sh:node [
             sh:property [
+                sh:name "in scheme"@en ;
+                sh:description "verify the skos:inScheme property" ;
                 sh:path skos:inScheme ;
                 sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
                 sh:minCount 1 ;
@@ -34,7 +41,7 @@ ex:AssetLanguageShape
         sh:message "The language must be in the EU Publications Office language authority table" ;
     ] .
 
-ex:AssetLicenceShape
+srm:AssetLicenceShape
     a sh:NodeShape ;
     sh:targetClass adms:Asset ;
     sh:property [
@@ -51,7 +58,7 @@ ex:AssetLicenceShape
         sh:message "The licence must be in the EU Publications Office licence authority table" ;
     ] .
 
-ex:AssetStatusShape
+srm:AssetStatusShape
     a sh:NodeShape ;
     sh:targetClass adms:Asset ;
     sh:property [
@@ -68,7 +75,7 @@ ex:AssetStatusShape
         sh:message "The licence must be in the EU Publications Office licence authority table" ;
     ] .
 
-ex:AssetThemeShape
+srm:AssetThemeShape
     a sh:NodeShape ;
     sh:targetClass adms:Asset ;
     sh:property [
@@ -85,7 +92,7 @@ ex:AssetThemeShape
         sh:message "The licence must be in the EU Publications Office licence authority table" ;
     ] .
 
-ex:AgentTypeShape
+srm:AgentTypeShape
     a sh:NodeShape ;
     sh:targetClass foaf:Agent ;
     sh:property [
