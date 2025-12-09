@@ -1,0 +1,107 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.org/shapes#> .
+
+# Import external vocabularies
+<http://data.europa.eu/srm/codelist_imports>
+    rdf:type owl:Ontology ;
+    owl:imports <http://publications.europa.eu/resource/authority/language> ;
+    owl:imports <http://publications.europa.eu/resource/authority/licence> ;
+    owl:imports <https://github.com/SEMICeu/ADMS-AP/raw/master/purl.org/ADMS_SKOS_v1.00.rdf> ; 
+    owl:imports <http://publications.europa.eu/resource/authority/data-theme> ;
+    owl:imports <http://publications.europa.eu/resource/authority/organization-type> ; 
+    owl:imports <http://publications.europa.eu/resource/authority/corporate-body-classification> ;
+    owl:imports <https://www.w3.org/ns/dx/prof/role/index.ttl> .
+
+# Shape for language validation
+ex:AssetLanguageShape 
+    a sh:NodeShape ;
+    sh:targetClass adms:Asset ;
+    sh:property [
+        sh:path dct:language ;
+        sh:class skos:Concept ;
+        sh:nodeKind sh:IRI ;
+        sh:node [
+            sh:property [
+                sh:path skos:inScheme ;
+                sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
+                sh:minCount 1 ;
+            ]
+        ] ;
+        sh:message "The language must be in the EU Publications Office language authority table" ;
+    ] .
+
+ex:AssetLicenceShape
+    a sh:NodeShape ;
+    sh:targetClass adms:Asset ;
+    sh:property [
+        sh:path dct:license ;
+        sh:class skos:Concept ;
+        sh:nodeKind sh:IRI ;
+        sh:node [
+            sh:property [
+                sh:path skos:inScheme ;
+                sh:hasValue <http://publications.europa.eu/resource/authority/licence> ;
+                sh:minCount 1 ;
+            ]
+        ] ;
+        sh:message "The licence must be in the EU Publications Office licence authority table" ;
+    ] .
+
+ex:AssetStatusShape
+    a sh:NodeShape ;
+    sh:targetClass adms:Asset ;
+    sh:property [
+        sh:path adms:status ;
+        sh:class skos:Concept ;
+        sh:nodeKind sh:IRI ;
+        sh:node [
+            sh:property [
+                sh:path skos:inScheme ;
+                sh:hasValue <http://purl.org/adms/status/1.0> ;
+                sh:minCount 1 ;
+            ]
+        ] ;
+        sh:message "The licence must be in the EU Publications Office licence authority table" ;
+    ] .
+
+ex:AssetThemeShape
+    a sh:NodeShape ;
+    sh:targetClass adms:Asset ;
+    sh:property [
+        sh:path dcat:theme ;
+        sh:class skos:Concept ;
+        sh:nodeKind sh:IRI ;
+        sh:node [
+            sh:property [
+                sh:path skos:inScheme ;
+                sh:hasValue <http://publications.europa.eu/resource/authority/data-theme> ;
+                sh:minCount 1 ;
+            ]
+        ] ;
+        sh:message "The licence must be in the EU Publications Office licence authority table" ;
+    ] .
+
+ex:AgentTypeShape
+    a sh:NodeShape ;
+    sh:targetClass foaf:Agent ;
+    sh:property [
+        sh:path dct:type ;
+        sh:class skos:Concept ;
+        sh:nodeKind sh:IRI ;
+        sh:node [
+            sh:property [
+                sh:path skos:inScheme ;
+                sh:in (
+                  <http://publications.europa.eu/resource/authority/organization-type>
+                  <http://publications.europa.eu/resource/authority/corporate-body-classification>
+                  <http://purl.org/adms/publishertype/1.0>
+                ) ;
+                sh:minCount 1 ;
+            ]
+        ] ;
+        sh:message "The type must be in one of the authorized EU Publications Office authority tables (organization-type or corporate-body-classification)" ;
+    ] .
