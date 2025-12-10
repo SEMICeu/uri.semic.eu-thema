@@ -18,7 +18,8 @@ srm:imports rdf:type owl:Ontology ;
     owl:imports <http://publications.europa.eu/resource/authority/data-theme> ;
     owl:imports <http://publications.europa.eu/resource/authority/organization-type> ; 
     owl:imports <http://publications.europa.eu/resource/authority/corporate-body-classification> ;
-    owl:imports <https://www.w3.org/ns/dx/prof/role/index.ttl> .
+    owl:imports <https://www.w3.org/ns/dx/prof/role/index.ttl> ;
+	owl:imports <http://publications.europa.eu/resource/authority/file-type> .
 
 # Shape for language validation
 srm:AssetLanguageShape 
@@ -179,6 +180,29 @@ srm:AgentTypeShape
         sh:message "The type must be in one of the authorized EU Publications Office authority tables (organization-type or corporate-body-classification) or adms publisher type code list" ;
     ] .
 
+srm:DistributionFormatShape
+    a sh:NodeShape ;
+    sh:targetClass adms:AssetDistribution ;
+    rdfs:label "Distribution Format Shape"@en ;
+    rdfs:comment "The format must be in the EU Publications Office file type authority table"@en ;
+    sh:property [
+		sh:name "format"@en ;
+		sh:description "verify the dct:format property"@en ;
+        sh:path dct:format ;
+        sh:class dct:MediaTypeOrExtent ;
+        sh:nodeKind sh:IRI ;
+        sh:node [
+            sh:property [
+                sh:name "in scheme"@en ;
+                sh:description "verify the skos:inScheme property"@en ;
+                sh:path skos:inScheme ;
+				sh:hasValue <http://publications.europa.eu/resource/authority/file-type> ;
+                sh:minCount 1 ;
+            ]
+        ] ;
+        sh:message "The format must be in the EU Publications Office file type authority table" ;
+    ] .
+
 srm:DistributionRoleShape
     a sh:NodeShape ;
     sh:targetClass adms:AssetDistribution ;
@@ -192,7 +216,7 @@ srm:DistributionRoleShape
         sh:nodeKind sh:IRI ;
         sh:node [
             sh:property [
-                sh:name "top concept of "@en ;
+                sh:name "top concept of"@en ;
                 sh:description "verify the skos:topConceptOf property"@en ;
                 sh:path skos:topConceptOf ;
 				sh:hasValue <http://www.w3.org/ns/dx/prof/role/> ;
