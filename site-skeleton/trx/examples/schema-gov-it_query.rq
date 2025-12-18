@@ -1,0 +1,131 @@
+
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX : <https://w3id.org/italia/onto/AccessCondition/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cv: <http://data.europa.eu/m8g/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX admsapit: <https://w3id.org/italia/onto/ADMS/>
+construct {
+    ?s rdf:type adms:Asset .
+    ?s dct:description ?description .
+    ?s dct:identifier ?identifierSTR2 .
+    ?s dct:title ?title . 
+    ?s owl:versionInfo ?versionInfo2 .
+    ?s dct:issued ?issuedDT .
+    ?s dct:modified ?modifiedDT .
+    ?s cv:isReusedBy ?reusedByURI .
+    ?s dct:language ?languageURI .
+    ?languageURI rdf:type skos:Concept .
+    ?s dcat:theme ?theme .
+    ?theme rdf:type skos:Concept .
+    ?s dcat:keyword ?keyword2 .
+    ?s adms:status ?statusURI2 .
+    ?statusURI2 rdf:type skos:Concept .
+    ?s dct:creator ?creator .
+    ?creator rdf:type foaf:Agent .
+    ?creator foaf:name ?creatorName2 .
+    ?s dct:publisher ?publisher .
+    ?publisher rdf:type foaf:Agent .
+    ?publisher dct:title ?publisherName .
+    ?s cv:contactPoint ?contactPoint .
+    ?contactPoint rdf:type vcard:Kind .
+    ?contactPoint vcard:hasEmail ?email .
+    ?s dct:requires ?vocabulary2 .
+    ?s dcat:distribution ?distribution .
+    ?distribution rdf:type adms:AssetDistribution .
+    ?distribution dct:title ?distributionTitle .
+    ?distribution dct:format ?distributionFormat .
+    ?distributionFormat rdf:type skos:Concept .
+    ?distribution dcat:downloadURL ?downloadURLSTR .        
+    ?classURI rdf:type rdfs:Class .
+    ?classURI rdfs:label ?classLabel .
+    ?classURI rdfs:isDefinedBy ?distribution .
+}
+where {
+    ?s rdf:type owl:Ontology .
+    
+    ?s dct:description ?description .
+    FILTER(LANG(?description) = "it" || LANG(?description) = "en") .
+    
+    OPTIONAL{
+   		?s admsapit:officialURI ?identifier .
+    	BIND(str(?identifier) as ?identifierSTR) .
+    }
+    BIND(if(bound(?identifierSTR), ?identifierSTR, STR(?s)) AS ?identifierSTR2) .
+    
+    ?s rdfs:label ?title .
+    
+    ?s owl:versionIRI ?versionInfo .
+    BIND(str(?versionInfo) AS ?versionInfo2 ) .
+    
+    ?s dct:issued ?issued .
+    BIND(STRDT(concat(STR(?issued),"T00:00:00Z") , xsd:dateTime) AS ?issuedDT) .
+    
+    OPTIONAL {
+        ?s dct:modified ?modified .
+        BIND(STRDT(concat(STR(?modified),"T00:00:00Z") , xsd:dateTime) AS ?modifiedDT) .
+    }
+    
+    OPTIONAL {
+        ?s <https://w3id.org/italia/onto/ADMS/semanticAssetInUse> ?reusedBy .
+    	BIND(STRDT(STR(?reusedBy), xsd:anyURI) AS ?reusedByURI) .
+    }
+    
+    ?s dct:language ?language .
+    BIND(URI(STR(?language)) AS ?languageURI)
+    
+    ?s dcat:theme ?theme .
+    
+    OPTIONAL {
+        ?s dcat:keyword ?keyword .
+        BIND(IF(lang(?keyword)='', "it", lang(?keyword)) as ?langKeyword )
+        BIND( STRLANG(str(?keyword), ?langKeyword) AS ?keyword2 ) .
+    }
+    
+    OPTIONAL {
+   		?s <https://w3id.org/italia/onto/ADMS/status> ?status .
+    	BIND(IF(?status = "published", URI("http://publications.europa.eu/resource/authority/distribution-status/COMPLETED"), 
+         	   IF(?status =  "draft" || ?status = "initial draft" || ?status = "final draft", URI("http://publications.europa.eu/resource/authority/distribution-status/DEVELOP"),
+            	    URI("http://publications.europa.eu/resource/authority/distribution-status/WITHDRAWN"))) AS ?statusURI) .
+    }
+    BIND(if(bound(?status), ?statusURI, URI("http://publications.europa.eu/resource/authority/distribution-status/COMPLETED")) AS ?statusURI2)
+    FILTER (?statusURI2 != <http://publications.europa.eu/resource/authority/distribution-status/WITHDRAWN>) .
+    
+    ?s dct:creator ?creator .
+    ?creator foaf:name ?creatorName .
+    BIND(LANG(?creatorName) as ?creatorLang) .
+    BIND(If(?creatorLang = "", "it", ?creatorLang) as ?creatorLang2) .
+    BIND( STRLANG(str(?creatorName), ?creatorLang2) AS ?creatorName2 ) .
+    
+    ?s dct:publisher ?publisher .
+    ?publisher foaf:name ?publisherName .
+    
+    ?s dcat:contactPoint ?contactPoint .
+    OPTIONAL {
+    	?contactPoint vcard:hasEmail ?email .
+    }
+    
+    OPTIONAL {
+        ?s owl:imports ?vocabulary .
+        BIND(IF(?vocabulary = <http://dati.gov.it/onto/dcatapit#> || ?vocabulary =           <http://dati.gov.it/onto/dcatapit/2.0> , <http://dati.gov.it/onto/dcatapit> , ?vocabulary) as ?vocabulary2)
+    }
+    
+    ?s <https://w3id.org/italia/onto/ADMS/hasSemanticAssetDistribution> ?distribution .
+    ?distribution dct:title ?distributionTitle .
+    ?distribution dct:format ?distributionFormat .
+    ?distribution dcat:downloadURL ?downloadURL .
+    BIND(STRDT(STR(?downloadURL), xsd:anyURI) AS ?downloadURLSTR) .
+    
+    OPTIONAL {
+    	?s <https://w3id.org/italia/onto/ADMS/hasKeyClass> ?classURI .
+    	?classURI rdfs:label ?classLabel .
+    }
+}
