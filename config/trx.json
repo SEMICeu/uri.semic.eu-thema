@@ -11,7 +11,7 @@
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "SRM",
-  "site": "site-skeleton/srm",
+  "site": "site-skeleton/trx",
   "repourl": "https://github.com/SEMICeu/TRX/tree/master/releases/1.0.0",
   "versionurl": "https://github.com/SEMICeu/TRX/tree/master/releases/1.0.0",
   "feedbackurl": "https://github.com/SEMICeu/TRX/issues",
