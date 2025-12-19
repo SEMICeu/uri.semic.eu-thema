@@ -1,6 +1,6 @@
 [
 {
-  "name": "core-person-ap",
+  "name": "arachne",
   "type": "ap",
   "eap": "Arachne.EAP",
   "diagram": "Core_Person",
