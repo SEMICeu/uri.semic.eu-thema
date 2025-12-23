@@ -3,7 +3,7 @@
   "name": "arachne",
   "type": "ap",
   "eap": "Arachne.EAP",
-  "diagram": "Core_Person",
+  "diagram": "Arachne",
   "template": "arachne_en.j2",
   "title": "Arachne Data Model",
   "publication-state": "Semic Recommendation",
