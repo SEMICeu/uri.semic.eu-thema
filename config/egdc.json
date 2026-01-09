@@ -1,10 +1,10 @@
 [
 {
-  "name": "egdc",
+  "name": "egdc_casestudy",
   "type": "ap",
   "eap": "EGDC.eap",
-  "diagram": "EGDC",
-  "template": "egdc_en.j2",
+  "diagram": "CaseStudy",
+  "template": "egdc_casestudy_en.j2",
   "title": "EGDC Case Study",
   "publication-state": "Draft",
   "publication-date": "2025-12-12",
@@ -12,23 +12,55 @@
   "contributors-file": "stakeholders.csv",
   "contributors-column": "EGDC",
   "site": "site-skeleton/egdc",
-  "repourl": "https://github.com/SEMICeu/EGDC/tree/master/releases/1.0.0",
-  "versionurl": "https://github.com/SEMICeu/EGDC/tree/master/releases/1.0.0",
-  "feedbackurl": "https://github.com/SEMICeu/EGDC/issues",
-  "standaardregisterurl" :"https://github.com/SEMICeu/EGDC/blob/master/releases/1.0.0/Changelog.md",
+  "repourl": "https://github.com/SEMICeu/EGDC_CaseStudy/tree/master/releases/1.0.0",
+  "versionurl": "https://github.com/SEMICeu/EGDC_CaseStudy/tree/master/releases/1.0.0",
+  "feedbackurl": "https://github.com/SEMICeu/EGDC_CaseStudy/issues",
+  "standaardregisterurl" :"https://github.com/SEMICeu/EGDC_CaseStudy/blob/master/releases/1.0.0/Changelog.md",
     "translation": [
       {
         "language":"en",
-        "template":"egdc_en.j2",
+        "template":"egdc_casestudy_en.j2",
         "title": "EGDC Case Study",
-        "translationjson":"egdc_en.json",
-        "mergefile":"egdc_en_merged.jsonld"
+        "translationjson":"egdc_casestudy_en.json",
+        "mergefile":"egdc_casestudy_en_merged.jsonld"
       }
     ],
     "toolchainversion" : "3",
     "documentconfig": {
           "statuslabel" : "Draft",
-          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/EGDC/releases/1.0.0"
+          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/EGDC_CaseStudy/releases/1.0.0"
+    }
+},
+{
+  "name": "egdc_rule",
+  "type": "ap",
+  "eap": "EGDC.eap",
+  "diagram": "Rule",
+  "template": "egdc_rule_en.j2",
+  "title": "EGDC Rule",
+  "publication-state": "Draft",
+  "publication-date": "2025-12-12",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "contributors-file": "stakeholders.csv",
+  "contributors-column": "EGDC",
+  "site": "site-skeleton/egdc",
+  "repourl": "https://github.com/SEMICeu/EGDC_Rule/tree/master/releases/1.0.0",
+  "versionurl": "https://github.com/SEMICeu/EGDC_Rule/tree/master/releases/1.0.0",
+  "feedbackurl": "https://github.com/SEMICeu/EGDC_Rule/issues",
+  "standaardregisterurl" :"https://github.com/SEMICeu/EGDC_Rule/blob/master/releases/1.0.0/Changelog.md",
+    "translation": [
+      {
+        "language":"en",
+        "template":"egdc_rule_en.j2",
+        "title": "EGDC Rule",
+        "translationjson":"egdc_rule_en.json",
+        "mergefile":"egdc_rule_en_merged.jsonld"
+      }
+    ],
+    "toolchainversion" : "3",
+    "documentconfig": {
+          "statuslabel" : "Draft",
+          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/EGDC_Rule/releases/1.0.0"
     }
 }
 ]
