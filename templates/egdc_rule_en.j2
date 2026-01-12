@@ -1,0 +1,166 @@
+{% extends "egdc_respec.j2" %}
+
+{% block respecconfig %}
+
+    var respecConfig = {
+      postProcess: [quickreference],
+      edDraftURI: "{{metadata.navigation.self}}",
+      latestVersion: "{{metadata.navigation.prev}}",
+      specStatus: "base",
+      publishDate: "{{ metadata.issued }}",
+      editors: myeditors,
+      authors: myauthors,
+      github: "SEMICeu/EGDC",
+      shortName: "{{metadata.title}}",
+      xref: "web-platform",
+      doJsonLd: true,
+      logos: [{
+        src: "https://semiceu.github.io/CPOV/releases/2.1.0/html/semic-icon.png",
+        url: "https://semic.eu",
+        alt: "SEMIC",
+        width: 154,
+        height: 140,
+        id: "semic-logo",
+      },],
+      generatedSubtitle: "",
+      additionalCopyrightHolders: "",
+      localBiblio: {
+        "DXWG": {
+          "href" : "https://www.w3.org/2017/dxwg/wiki/Main_Page",
+          "title" : "Dataset Exchange Working Group",
+          "publisher" : "W3C"
+          },
+        "ISA":{
+           "href":"https://ec.europa.eu/isa/",
+           "title":"Interoperability Solutions for European Public Administrations (ISA)",
+           "publisher":"European Commission"
+          },
+        "ISA2":{
+          "href":"https://ec.europa.eu/isa2/",
+          "title":"Interoperability solutions for public administrations, businesses and citizens (ISA²)",
+          "publisher":"European Commission"
+        },
+        "SEMIC":{
+          "href":"https://joinup.ec.europa.eu/",
+          "title":"JoinUp welcomes Interoperable Europe",
+          "publisher":"European Commission"
+         },
+        "DEU" : {
+          "href":"https://data.europa.eu",
+          "title":"The official portal for European data",
+          "publisher":"European Commission"
+        }
+      }
+    };
+
+{% endblock %}
+
+
+{% block introduction %}
+	<p>
+The EGDC Case Study data model is an Application Profile to describe EGDC Case studies.
+
+</p>
+{% endblock %}
+
+{% block summary %}
+<section id="abstract">
+    <h2>Abstract</h2>
+    EGDC Case Study data model allows to described EGDC Case Studied together with the Organizations behind it, the attachments, etc.
+
+</section>
+{% endblock %}
+
+{% block examples %}
+{% endblock %}
+
+{% block mappings %}
+<section class="informative">
+	<h2>Mappings</h2>
+</section>
+{% endblock %}
+
+{% block terminologyPrefixes %}
+EGDC is a semantic specification, where each class and property has an URI.
+
+The prefixed form of the URI, can be found in part in the class diagram and in the quick reference table at the bottom, while, for ease of reading, full URI can be found in the hyperlink of each class and property.  
+
+This specification uses the following prefixes to shorten the URIs for readability:
+
+<table id="table-namespaces" class="simple">
+	<thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+	<tbody>
+		<tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>
+		<tr><td><code>dcat</code></td><td><code>http://www.w3.org/ns/dcat#</code></td></tr>
+		<tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
+		<tr><td><code>egdc</code></td><td><code>https://www.greendigitalcoalition.eu/model/</code></td></tr>
+		<tr><td><code>egdc-cl</code></td><td><code>https://www.greendigitalcoalition.eu/codelist/</code></td></tr>
+		<tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
+		<tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
+		<tr><td><code>org</code></td><td><code>http://www.w3.org/ns/org#</code></td></tr>
+		<tr><td><code>owl</code></td><td><code>http://www.w3.org/2002/07/owl#</code></td></tr>
+		<tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
+		<tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
+		<tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+		<tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
+	</tbody>
+</table>
+
+{% endblock %}
+
+{% block codelist %}
+<h3 id="cs-funding">Case Study - Funding</h3> 
+<table id="table-cs-funding" class="simple">
+	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th></tr></thead>
+	<tbody>
+		<tr><td></td><td><code></code></td><td><code></code></td></tr>
+	</tbody>
+</table>
+
+<h3 id="cs-technology">Case Study - Technology</h3> 
+<table id="table-cs-technology" class="simple">
+	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th></tr></thead>
+	<tbody>
+		<tr><td></td><td><code></code></td><td><code></code></td></tr>
+	</tbody>
+</table>
+
+<h3 id="cs-calculation">Case Study - Type of Calculation</h3> 
+<table id="table-cs-calculation" class="simple">
+	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th></tr></thead>
+	<tbody>
+		<tr><td>egdc-cl:calculation/ex-ante</td><td><code>ex-ante</code></td><td><code>Ex Ante</code></td></tr>
+		<tr><td>egdc-cl:calculation/ex-post</td><td><code>ex-post</code></td><td><code>Ex Post</code></td></tr>
+	</tbody>
+</table>
+
+<h3 id="org-sector">Organization - Sector</h3> 
+<table id="table-org-sector" class="simple">
+	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th><th>Eurovoc Domain</th></tr></thead>
+	<tbody>
+    <tr><td>egdc-cl:sector/agriculture</td><td><code>agriculture</code></td><td><code>Agriculture sector</code></td><td><a href="https://showvoc.op.europa.eu/#/datasets/OP_EuroVoc/data?resId=http:%2F%2Feurovoc.europa.eu%2F100156">56 AGRICULTURE, FORESTRY AND FISHERIES</a></td></tr>
+    <tr><td>egdc-cl:sector/construction</td><td><code>construction</code></td><td><code>Construction/building sector</code></td><td><a href="https://showvoc.op.europa.eu/#/datasets/OP_EuroVoc/data?resId=http:%2F%2Feurovoc.europa.eu%2F100160">68 INDUSTRY</a></td></tr>
+    <tr><td>egdc-cl:sector/energy</td><td><code>energy</code></td><td><code>Energy/Power sector</code></td><td><a href="https://showvoc.op.europa.eu/#/datasets/OP_EuroVoc/data?resId=http:%2F%2Feurovoc.europa.eu%2F100159">66 ENERGY</a></td></tr>
+    <tr><td>egdc-cl:sector/manufacturing</td><td><code>manufacturing</code></td><td><code>Manufacturing sector</code></td><td><a href="https://showvoc.op.europa.eu/#/datasets/OP_EuroVoc/data?resId=http:%2F%2Feurovoc.europa.eu%2F100158">64 PRODUCTION, TECHNOLOGY AND RESEARCH</a></td></tr>
+    <tr><td>egdc-cl:sector/smart-cities</td><td><code>smart-cities</code></td><td><code>Smart Cities sector</code></td><td><a href="https://showvoc.op.europa.eu/#/datasets/OP_EuroVoc/data?resId=http:%2F%2Feurovoc.europa.eu%2F100149">28 SOCIAL QUESTIONS</a></td></tr>
+    <tr><td>egdc-cl:sector/transport</td><td><code>transport</code></td><td><code>Transport sector</code></td><td><a href="https://showvoc.op.europa.eu/#/datasets/OP_EuroVoc/data?resId=http:%2F%2Feurovoc.europa.eu%2F100154">48 TRANSPORT</a></td></tr>
+	</tbody>
+</table>
+
+<h3 id="org-type">Organization - Type</h3> 
+<table id="table-org-type" class="simple">
+	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th></tr></thead>
+	<tbody>
+		<tr><td></td><td><code></code></td><td><code></code></td></tr>
+	</tbody>
+</table>
+
+<h3 id="be-unit">Benefit - Unit</h3> 
+<table id="table-doc-type" class="simple">
+	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th></tr></thead>
+	<tbody>
+		<tr><td></td><td><code></code></td><td><code></code></td></tr>
+	</tbody>
+</table>
+{% endblock %}
+

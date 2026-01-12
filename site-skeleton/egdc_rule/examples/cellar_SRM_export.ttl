@@ -1,0 +1,482 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms:	<http://purl.org/dc/terms/> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+@prefix ns4:	<http://data.europa.eu/2sa/cssv/rsc/> .
+@prefix ns5:	<https://op.europa.eu/en/web/eu-vocabularies/> .
+@prefix ns6:	<https://tools.ietf.org/html/> .
+@prefix ns7:	<https://joinup.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-assessment-vocabulary-cav/release/> .
+@prefix ns8:	<https://op.europa.eu/en-GB/web/eu-vocabularies/model/-/resource/dataset/> .
+@prefix ns9:	<https://joinup.ec.europa.eu/release/> .
+@prefix ns10:	<https://www.dublincore.org/specifications/dublin-core/> .
+@prefix ns11:	<https://www.hropenstandards.org/> .
+@prefix ns12:	<https://www.clarin.eu/content/> .
+@prefix ns13:	<https://github.com/CommonCoreOntology/> .
+@prefix ns14:	<https://github.com/EBISPOT/> .
+@prefix ns15:	<http://www.meta-share.org/ontologies/meta-share/meta-share-ontology.owl/documentation/index-en.html#> .
+@prefix ns16:	<http://w3id.org/meta-share/> .
+
+<http://data.europa.eu/2sa/cssv/rsc/249a50b70a47f517c5fbfbacd35fa8d509773ef16b58276fe4b50dc5c475604a>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"2.0.0" ;
+	dcterms:description	"OWL2 is an initiative that focuses its efforts on providing design patterns for the development of Ontologies."@en ;
+	dcterms:title	"Web Ontology Language (OWL2)"@en ;
+	dcterms:identifier	"OWL2" ;
+	foaf:homepage	<https://www.w3.org/TR/owl2-overview/> ;
+	dcterms:creator	ns4:f45f6c8ef56563dd5fe289d6817c3a398df2a29fc9fad70d5114d6a5a1fa3815 .
+<http://data.europa.eu/2sa/cssv/rsc/282fbf529fb851a9da3ed39f48d235c69fd1da93947dfd668889fb8191777920>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.0.0" ;
+	dcterms:description	"The European Legislation Identifier (ELI) aims to make legislation available online in a standardized format so that it can be accessed, exchanged, and reused across borders."@en ;
+	dcterms:title	"European Legislation Identifier (ELI)"@en ;
+	dcterms:identifier	"ELI" ;
+	foaf:homepage	ns5:eli ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/42881db41ff12ed3884076dad8f8783684d6c9d6ae7a2b45c7ce4fc95dd8856e> .
+<http://data.europa.eu/2sa/cssv/rsc/2ea8014113d1baad45397361a10c5b39e782ca8b5765b0f8144aea8615fa552b>
+	rdf:type	foaf:Agent ;
+	dcterms:title	"Organization for the Advancement of Structured Information Standards"@en .
+<http://data.europa.eu/2sa/cssv/rsc/83adcfe7fd6d09d1d78d43905709f9566f30e9378e845fa0e04c258537c153e4>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"2.0.0" ;
+	dcterms:description	"This ApplicationProfile is a specification for metadata records to meet the specific application needs of data portals in Europe while providing semantic interoperability with other applications on the basis of reuse of established controlled vocabularies (e.g. EuroVoc) and mappings to existing metadata vocabularies (e.g. Dublin Core, SDMX, INSPIRE metadata, etc.)."@en ;
+	dcterms:title	"DCAT-AP v2.0.0"@en ;
+	dcterms:identifier	"DCAT-AP" ;
+	foaf:homepage	<https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/200> ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/8a01e22a41614a4a1b2a17aac3b6e9aa70f174640ac80ea8510d7b45772e121f> .
+<http://data.europa.eu/2sa/cssv/rsc/888cf0b93c3579f6c2782f5252e66631753f4654323c600c5df8c573d796c37b>
+	rdf:type	foaf:Agent ;
+	dcterms:title	"Internet Engineering Task Force"@en .
+<http://data.europa.eu/2sa/cssv/rsc/925e55b370f9ffea12944d9c8101b4580966ac0c7400dbda721eee2eec544a4b>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"2.0.0" ;
+	dcterms:description	"DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. This document defines the schema and provides examples for its use."@en ;
+	dcterms:title	"Data Catalog Vocabulary (DCAT) - Version 2"@en ;
+	dcterms:identifier	"DCAT" ;
+	foaf:homepage	<https://www.w3.org/TR/vocab-dcat-2/> ;
+	dcterms:creator	ns4:f45f6c8ef56563dd5fe289d6817c3a398df2a29fc9fad70d5114d6a5a1fa3815 .
+ns4:a5e285ce592fea5c490319fb4731e4aac5db6c4430c8a3b8011b4dbc5121cda8
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.0.0" ;
+	dcterms:description	"The Core Location Vocabulary is a simplified, reusable and extensible data model that captures the fundamental characteristics of a location, represented as an address, a geographic name, or geometry. This specification can be used as the foundation of a common export format for data in base registries."@en ;
+	dcterms:title	"Core Location Vocabulary"@en ;
+	dcterms:identifier	"CLV" ;
+	foaf:homepage	<https://joinup.ec.europa.eu/release/core-location-vocabulary/100> ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/8a01e22a41614a4a1b2a17aac3b6e9aa70f174640ac80ea8510d7b45772e121f> .
+ns4:d5d426fadecd4bf723cb15532e2bb495aaaca594936ba8891258988920564c43
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.0.0" ;
+	dcterms:description	"The Registered Organization Vocabulary is a profile of the Organization Ontology for describing organizations that have gained legal entity status through a formal registration process, typically in a national or regional register."@en ;
+	dcterms:title	"Registered Organization Vocabulary"@en ;
+	dcterms:identifier	"RegOrg" ;
+	foaf:homepage	<https://www.w3.org/TR/vocab-regorg/> ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/8a01e22a41614a4a1b2a17aac3b6e9aa70f174640ac80ea8510d7b45772e121f> .
+ns4:e4940944a20f90dcd28ec5ccaa3bbd3cb74c15004568cc32968faeb0819a69a2
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.0.0" ;
+	dcterms:description	"The Asset Description Metadata Schema (ADMS) is a metadata vocabulary to describe interoperability assets."@en ;
+	dcterms:title	"Asset Description Metadata Schema (ADMS)"@en ;
+	dcterms:identifier	"ADMS" ;
+	foaf:homepage	<https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/asset-description-metadata-schema-adms/release/100> ;
+	dcterms:creator	ns4:f45f6c8ef56563dd5fe289d6817c3a398df2a29fc9fad70d5114d6a5a1fa3815 .
+ns4:f39e0c3fe498a946e23682510bb840044afdc3d4163eb44397f2606d4a166183
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"5.0.0" ;
+	dcterms:description	" Best practices for the publication of data on the web for common use."@en ;
+	dcterms:title	"UTF-8"@en ;
+	dcterms:identifier	"UTF-8" ;
+	foaf:homepage	ns6:rfc3629 ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/888cf0b93c3579f6c2782f5252e66631753f4654323c600c5df8c573d796c37b> .
+ns4:f4314f9cf9c8e1b1f57df755f3c11d9797e235f51e0f4bebf15035b1ac4a0074
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"2.2.0" ;
+	dcterms:description	"CPSV-AP is a reusable and extensible data model for harmonising the way public services are described in a machine-readable format. It captures fundamental characteristics of a public service, such as the name, description, competent public organisation, output, etc."@en ;
+	dcterms:title	"Core Public Service Vocabulary Application Profile 2.2"@en ;
+	dcterms:identifier	"CPSV-AP" ;
+	foaf:homepage	<https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-public-service-vocabulary-application-profile/release/22> ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/8a01e22a41614a4a1b2a17aac3b6e9aa70f174640ac80ea8510d7b45772e121f> .
+<https://www.w3.org/TR/vocab-dcat-2/>
+	rdf:type	foaf:Document .
+<http://data.europa.eu/2sa/cssv/rsc/0b4b029f1965046fe8688fef791e98f65a200be8dc9c99224672a4280b9df91e>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"3.34.0" ;
+	dcterms:description	"DOLCE-Ultralite, is a upper level ontology which purpose is to provide a set of concepts hat can be the basis for easier interoperability among many middle and lower level ontologies."@en ;
+	dcterms:title	"DOLCE-Ultralite"@en ;
+	dcterms:identifier	"None" ;
+	foaf:homepage	<http://ontologydesignpatterns.org/wiki/Ontology:DOLCE+DnS_Ultralite> ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/0c8f39b11936f6d48ad86897e2d3ecd9e62271931ed4c4c3ee7c97970dc7678a> .
+<http://data.europa.eu/2sa/cssv/rsc/4e317c4cabfaf03c9499e8d04c8df76425b374623b60542747b0e4857161f46a>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"4.0.0" ;
+	dcterms:description	"All representations of data that must be encoded for the need of interoperability"@en ;
+	dcterms:title	"UTF-16"@en ;
+	dcterms:identifier	"UTF-16" ;
+	foaf:homepage	ns6:rfc2781 ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/888cf0b93c3579f6c2782f5252e66631753f4654323c600c5df8c573d796c37b> .
+<http://data.europa.eu/2sa/cssv/rsc/6f13dfe5d3cbc63b902dc75f769c50c47ed27a460631585163f7a3ea723d11c1>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.1.0" ;
+	dcterms:description	"The Core Assessment Vocabulary represents and defines what an \u201CAssessment\u201D of \u201Cassets\u201D is and how to perform the assessment based on \u201CCriteria\u201D. It is a domain-agnostic vocabulary, meaning that it can be used to assess any type of assets."@en ;
+	dcterms:title	"Core Assessment Vocabulary (CAV)"@en ;
+	dcterms:identifier	"CAV" ;
+	foaf:homepage	ns7:v100 ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/8a01e22a41614a4a1b2a17aac3b6e9aa70f174640ac80ea8510d7b45772e121f> .
+<http://data.europa.eu/2sa/cssv/rsc/80fb06b108f63ce12ff7e7598aa735da166bd1b93882938f1c8879b4c895d434>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"4.7.7" ;
+	dcterms:description	"CDM is the Common Metadata Model of the resources published by the Publications Office of the European Union"@en ;
+	dcterms:title	"Common Data Model"@en ;
+	dcterms:identifier	"None" ;
+	foaf:homepage	ns8:cdm ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/42881db41ff12ed3884076dad8f8783684d6c9d6ae7a2b45c7ce4fc95dd8856e> .
+<http://data.europa.eu/2sa/cssv/rsc/976dff44a3a33c7015ccb3162c35d90f919fc1d7568f2b19e41d92e9086fb13a>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"2.0.0" ;
+	dcterms:description	"The Cross Industry Invoice Specification implements the Solution Building Block (SBB) \"e-Invoicing Semantic Data Model. This SBB implements the ABB \"Semantic Interoperability Agreement\""@en ;
+	dcterms:title	"Cross Industry Invoice (CII)"@en ;
+	dcterms:identifier	"CII" ;
+	foaf:homepage	<https://www.gs1.org/standards/gs1-un-cefact-xml-profiles/gs1-un-cefact-xml-cross-industry-invoice/2012> ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/2c4d759449b430b92a4443c6d6eb13703e3b9361a9bf87c244c9db3f01e0461e> .
+ns4:ad376c04e72257bbcaa5feaab45553b20d12ec18b29b7ae27eb32a65a7f2fd65
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.2.0" ;
+	dcterms:description	"The CSSV is the vocabulary used for the information exchange related to standards and specifications amongst software solutions, as well as, it is the key element for the development of the new release of the EIRA Library of Interoperability Specifications (ELIS)"@en ;
+	dcterms:title	"Core Standards and Specifications Vocabulary (CSSV)"@en ;
+	dcterms:identifier	"CSSV" ;
+	foaf:homepage	<https://joinup.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-standards-and-specifications-vocabulary-cssv/release/120> ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/8a01e22a41614a4a1b2a17aac3b6e9aa70f174640ac80ea8510d7b45772e121f> .
+ns4:e9bb09990f610bec081e4275f7a49d6a4cdf7df89e3903a5daff682135f02c35
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"2.0.0" ;
+	dcterms:description	"The Core Person Vocabulary is a simplified, reusable and extensible data model that captures the fundamental characteristics of a person, e.g. the name, the gender, the date of birth, etc. This specification can be used as the foundation of a common export format for data in base registries."@en ;
+	dcterms:title	"Core Person Vocabulary"@en ;
+	dcterms:identifier	"CPV" ;
+	foaf:homepage	<https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-person-vocabulary/release/200> ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/8a01e22a41614a4a1b2a17aac3b6e9aa70f174640ac80ea8510d7b45772e121f> .
+ns4:ac238409c453c2f386dcbc77523fa03f0cf621660f5742ffb78cc942f25f8d17
+	rdf:type	foaf:Agent ;
+	dcterms:title	"European Telecommunications Standards Institute"@en .
+ns4:f45f6c8ef56563dd5fe289d6817c3a398df2a29fc9fad70d5114d6a5a1fa3815
+	rdf:type	foaf:Agent ;
+	dcterms:title	"World Wide Web Consortium"@en .
+<http://data.europa.eu/2sa/cssv/rsc/1c5b519bba21709ee50868dfe8321b7fef971c069c41cf064e7bef8c8bf5c08b>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.17.0" ;
+	dcterms:description	"The XSD defining the types used to report step output"@en ;
+	dcterms:title	"GITB Test Reporting Language (TRL)"@en ;
+	dcterms:identifier	"TRL" ;
+	foaf:homepage	<https://www.itb.ec.europa.eu/docs/services/latest/introduction/index.html> ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/8a01e22a41614a4a1b2a17aac3b6e9aa70f174640ac80ea8510d7b45772e121f> .
+ns4:b0a05545c0048197990e8a61fabf6254252ca4be1fc0ac016900b29986329e94
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.0.0" ;
+	dcterms:description	"The FOAF ontology is an ontology to describe people and social relationships. Some FOAF's classes are used to be reused by other vocabularies or initiatives at the European level ensuring the interoperability and the alignment amongst them."@en ;
+	dcterms:title	"The Friend Of A Friend (FOAF) ontology"@en ;
+	dcterms:identifier	"FOAF" ;
+	foaf:homepage	<http://www.foaf-project.org/> ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/32e2971340a02294c036b1bf5b0f1b8ea63a3603e0d8208419ebc4220f8ef68e> .
+ns4:f7d12e782b52314ba773fa5744332db962524cd890e18af8a5238de654a68391
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"2.0.0" ;
+	dcterms:description	"The YAMATO ontology is an upper ontology that can help to the develpment of other ontologies in several domains."@en ;
+	dcterms:title	"YAMATO (Yet Another More Advanced Top Ontology)"@en ;
+	dcterms:identifier	"YAMATO" ;
+	foaf:homepage	<http://www.hozo.jp/onto_library/upperOnto.htm> ;
+	dcterms:creator	ns4:a430b709c40210e74afd4eb04f8ff2a4f3bf36f9d16d2650ce4319af991aeaea .
+ns4:b059e5051bb83f9abf3009b747716a429d552c29ffec38039c830dbe2f45a1b9
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"2.3.0" ;
+	dcterms:description	"Universal Business Language (UBL) is an open library of standard electronic XML business documents for procurement and transportation."@en ;
+	dcterms:title	"Universal Business Language (UBL)"@en ;
+	dcterms:identifier	"UBL" ;
+	foaf:homepage	<http://docs.oasis-open.org/ubl/os-UBL-2.3/UBL-2.3.html> ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/2ea8014113d1baad45397361a10c5b39e782ca8b5765b0f8144aea8615fa552b> .
+<http://data.europa.eu/2sa/cssv/rsc/32f0b4a6b0d75bb7ca172d51d442d67c5f2e39a6517d1c019b70cbfb4374b266>
+	rdf:type	foaf:Agent ;
+	dcterms:title	"Consultative Committee for Space Data Systems"@en .
+<http://data.europa.eu/2sa/cssv/rsc/53444b83d9a4120c1bcd932711de6ea4ca16a27fed8622597f987c96d3e7aef0>
+	rdf:type	foaf:Agent ;
+	dcterms:title	"Dublin Core Metadata Initiative"@en .
+ns4:a61e46d2918487a44fe12b59273afd2fd4326225041c92534ed339c600fc12ac
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.0.0" ;
+	dcterms:description	"The Core Criterion and Core Evidence Vocabulary (CCCEV) is designed to support the exchange of information between organisations defining criteria and organisations responding to these criteria by means of evidences."@en ;
+	dcterms:title	"Core Criterion and Core Evidence Vocabulary v1.0.0"@en ;
+	dcterms:identifier	"CCCEV" ;
+	foaf:homepage	ns9:core-criterion-and-core-evidence-vocabulary-v100 ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/8a01e22a41614a4a1b2a17aac3b6e9aa70f174640ac80ea8510d7b45772e121f> .
+ns4:e217431e05d8ebeb61d711d0f93574bd7482c7c2d00425dbbd4a43182cca7a6f
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"15.0.0" ;
+	dcterms:description	"The Dublin Core Ontology is vocabulary defined for the description of Metadata, semantics & ontologies, interoperability. It is a common used ontology (or at least part of it), that eases the interoperability of systems."@en ;
+	dcterms:title	"The Dublin Core Ontology"@en ;
+	dcterms:identifier	"DCMI" ;
+	foaf:homepage	ns10:dcmi-terms ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/53444b83d9a4120c1bcd932711de6ea4ca16a27fed8622597f987c96d3e7aef0> .
+ns4:f4e184ca98937f5afbd41c1eb28269fee518423fa7ef2a0da06997db8eb9ac8e
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.0.0" ;
+	dcterms:description	"The Data Privacy Vocabulary (DPV) allows to express machine-readable metadata on the use and processing of personal data based on legislative requirements, namely the European General Data Protection Regulation (GDPR). The specification also describes the DPV data model."@en ;
+	dcterms:title	"Data Privacy Vocabulary (DPV)"@en ;
+	dcterms:identifier	"DPV" ;
+	foaf:homepage	<https://www.w3.org/community/dpvcg/> ;
+	dcterms:creator	ns4:f45f6c8ef56563dd5fe289d6817c3a398df2a29fc9fad70d5114d6a5a1fa3815 .
+<http://data.europa.eu/2sa/cssv/rsc/0e12967520ef4b68bb5fb857177827c0094abca637175e68a0a09bd24130694c>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.0.0" ;
+	dcterms:description	"The Provenance (PROV) Family provides a publication and exchange schema for representing the provenance of information objects in information systems. The specification family provides definitions for accessing provenance information, mechanisms to validate it and to assesse its status. PROV is compatible with other schemas, such as Dublin Core."@en ;
+	dcterms:title	"PROV Family"@en ;
+	dcterms:identifier	"PROV" ;
+	foaf:homepage	<https://www.w3.org/TR/prov-overview/> ;
+	dcterms:creator	ns4:f45f6c8ef56563dd5fe289d6817c3a398df2a29fc9fad70d5114d6a5a1fa3815 .
+<http://data.europa.eu/2sa/cssv/rsc/835a37b6f8f926c2c1b50b623f2fcd833ecb87d7e6b85b3b1732b4766bbadf8f>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"2.0.0" ;
+	dcterms:description	"OAIS defines a model, a representation, of how a (digital) archival system preserves information and makes it available to a designated community. It defines the semantics for the internal and external interfaces encompassing archival functions, and identifies a set of high-level services at these interfaces, as well as best practices and recommendations."@en ;
+	dcterms:title	"Reference Model for an Open Archival Information System (OAIS)"@en ;
+	dcterms:identifier	"OAIS" ;
+	foaf:homepage	<http://www.oais.info/> ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/32f0b4a6b0d75bb7ca172d51d442d67c5f2e39a6517d1c019b70cbfb4374b266> .
+<http://data.europa.eu/2sa/cssv/rsc/25cf50e84cef565f4484814eee167c59fdcf92ed627c9602231781d1908cde45>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"0.8.0" ;
+	dcterms:description	"The Data Quality Vocabulary (DQV) is based on the Data on the Web Best Practices (DWBP) specification. The specification is an extension of the DCAT vocabulary that covers data quality and provides additional information such as how often the data is updated or whether the data accepts user corrections or not. The DQV is aligned with the daQ ontology to represent information (especially metrics) about the quality of linked open datasets."@en ;
+	dcterms:title	"Data Quality Vocabulary (DQV)"@en ;
+	dcterms:identifier	"DQV" ;
+	foaf:homepage	<https://www.w3.org/TR/vocab-dqv/> ;
+	dcterms:creator	ns4:f45f6c8ef56563dd5fe289d6817c3a398df2a29fc9fad70d5114d6a5a1fa3815 .
+<http://data.europa.eu/2sa/cssv/rsc/33ae66f6628ffb422986b7889cdaa2347d43ec0c43a2561947932287fb622d00>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"3.0.0" ;
+	dcterms:description	"The eProcurement Ontology provides the formal and semantic basis for the creation and reuse of linked open data in the field of public procurement in the EU."@en ;
+	dcterms:title	"eProcurement Ontology"@en ;
+	dcterms:identifier	"ePO" ;
+	foaf:homepage	<https://github.com/OP-TED/ePO/tree/v3.0.0> ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/8a01e22a41614a4a1b2a17aac3b6e9aa70f174640ac80ea8510d7b45772e121f> .
+<http://data.europa.eu/2sa/cssv/rsc/5f292fa8e0067a1dee4441423e6ee81e54497c284bf60e990c8dcbc9833d46bc>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"4.2.0" ;
+	dcterms:description	"The HR Open Standards provide a vocabulary based on XML and JSON (HR-XML and HR-JSON) in human resource management (i.e. assessments, benefits, compensation, interviewing, recruitment, selection, payroll) for global e-commerce and exchange of human resource management data."@en ;
+	dcterms:title	"Human Resources (HR) Open Standards"@en ;
+	dcterms:identifier	"None" ;
+	foaf:homepage	ns11:standards-downloads ;
+	dcterms:creator	ns4:b05ed647510b1d3b0c015d991aed949e05c63dd125aecb222dc0ef8a853e5577 .
+<http://data.europa.eu/2sa/cssv/rsc/98c3d13b18280a476e72ae2316b6df1036f7ef0791b2c975f3b867b39a034821>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.0.0" ;
+	dcterms:description	"The Basic Formal Ontology (BFO) is a higher-level ontology that was designed to support the retrieval, analysis and integration of information in scientific and other domains."@en ;
+	dcterms:title	"ISO/IEC 21838-2:2021 Information technology \u2014 Top-level ontologies (TLO) \u2014 Part 2: Basic Formal Ontology (BFO)"@en ;
+	dcterms:identifier	"BFO" ;
+	foaf:homepage	<https://www.iso.org/standard/74572.html> ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/39881f5ac63282ad9091ea49323024689001ad72f89bfb1ebc9f28ce1857da8b> .
+<http://data.europa.eu/2sa/cssv/rsc/39881f5ac63282ad9091ea49323024689001ad72f89bfb1ebc9f28ce1857da8b>
+	rdf:type	foaf:Agent ;
+	dcterms:title	"International Organization for Standardization"@en .
+<http://data.europa.eu/2sa/cssv/rsc/0355f6e1471acf5badd03f05f6dee5b61d49e22b10702ee6be7348846f81c5a6>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"3.1.1" ;
+	dcterms:description	"The Smart Applications REFerence (SAREF) ontology is a shared model of consensus that facilitates the matching of existing assets in the smart applications domain."@en ;
+	dcterms:title	"Smart Applications Reference Ontology (SAREF) (ETSI TS 103 673)"@en ;
+	dcterms:identifier	"SAREF" ;
+	foaf:homepage	<https://www.etsi.org/deliver/etsi_ts/103200_103299/103264/03.01.01_60/ts_103264v030101p.pdf> ;
+	dcterms:creator	ns4:ac238409c453c2f386dcbc77523fa03f0cf621660f5742ffb78cc942f25f8d17 .
+<http://data.europa.eu/2sa/cssv/rsc/0c8f39b11936f6d48ad86897e2d3ecd9e62271931ed4c4c3ee7c97970dc7678a>
+	rdf:type	foaf:Agent ;
+	dcterms:title	"ontologydesignpatterns.org"@en .
+<http://data.europa.eu/2sa/cssv/rsc/2c4d759449b430b92a4443c6d6eb13703e3b9361a9bf87c244c9db3f01e0461e>
+	rdf:type	foaf:Agent ;
+	dcterms:title	"United Nations Economic Commission for Europe"@en .
+<http://data.europa.eu/2sa/cssv/rsc/32e2971340a02294c036b1bf5b0f1b8ea63a3603e0d8208419ebc4220f8ef68e>
+	rdf:type	foaf:Agent ;
+	dcterms:title	"The FOAF Project"@en .
+<http://data.europa.eu/2sa/cssv/rsc/42881db41ff12ed3884076dad8f8783684d6c9d6ae7a2b45c7ce4fc95dd8856e>
+	rdf:type	foaf:Agent ;
+	dcterms:title	"Publications Office of the European Union"@en .
+<http://data.europa.eu/2sa/cssv/rsc/660e51b8105da3b41278152e1050aa45419708bdf5b48530d9e644a44ef8c7c0>
+	rdf:type	foaf:Agent ;
+	dcterms:title	"Open Geospatial Consortium"@en .
+<http://data.europa.eu/2sa/cssv/rsc/8a01e22a41614a4a1b2a17aac3b6e9aa70f174640ac80ea8510d7b45772e121f>
+	rdf:type	foaf:Agent ;
+	dcterms:title	"European Commission"@en .
+ns4:a430b709c40210e74afd4eb04f8ff2a4f3bf36f9d16d2650ce4319af991aeaea
+	rdf:type	foaf:Agent ;
+	dcterms:title	"Hozo"@en .
+ns4:b05ed647510b1d3b0c015d991aed949e05c63dd125aecb222dc0ef8a853e5577
+	rdf:type	foaf:Agent ;
+	dcterms:title	"HR Open Standards Consortium"@en .
+<http://data.europa.eu/2sa/cssv/rsc/028b7f6ed5d30af4e734c1386c0922731cc444fdab451fd6e8319860f8464371>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.0.0" ;
+	dcterms:description	"The CLARIN Concept Registry is a step in the direction of interoperability at the level of linguistic encoding (tag sets, metadata elements, etc.). The basic idea is to register all widely used concepts/terminology in CLARIN so that everyone can refer to them. The CLARIN Concept Registry is based on the W3C SKOS recommendation, which is a generic model not restricted to linguistics."@en ;
+	dcterms:title	"CLARIN Concept Registry (CCR)"@en ;
+	dcterms:identifier	"CCR" ;
+	foaf:homepage	ns12:clarin-concept-registry ;
+	dcterms:creator	ns4:d086f67d6f28d357c04966798c1c02fae3824f2b99a1eb304422d0a4f510f30f .
+<http://data.europa.eu/2sa/cssv/rsc/17ef121c79a2af9c2fda71b7c5e8cab758d80d11360ac9ab544d87e2be009f1c>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.0.0" ;
+	dcterms:description	"MDO provides a standardized extensible semantics for representing information about a person\u2019s profile."@en ;
+	dcterms:title	"My Data Ontology (MDO)"@en ;
+	dcterms:identifier	"MDO" ;
+	foaf:homepage	ns13:my-data-ontology ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/242e96ccd8d95b22dc45eb4d8c2e9891c9bad34ac20e932144382675b2117b6f> .
+<http://data.europa.eu/2sa/cssv/rsc/2703d04f985f18e711a774d3c6491024ec67d3465255c1c85d95132753e7ecf1>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.0.0" ;
+	dcterms:description	"Linked Data Platform (LDP) defines a set of rules for HTTP operations on web resources, some based on RDF, to provide an architecture for read-write Linked Data on the web."@en ;
+	dcterms:title	"Linked Data Platform (LDP)"@en ;
+	dcterms:identifier	"LDP" ;
+	foaf:homepage	<https://www.w3.org/TR/ldp/> ;
+	dcterms:creator	ns4:f45f6c8ef56563dd5fe289d6817c3a398df2a29fc9fad70d5114d6a5a1fa3815 .
+<http://data.europa.eu/2sa/cssv/rsc/37fbdab3d5a73a430a6bd0ca3c25e859b4bf83a01e6f81d224238d3bbede8315>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"3.0.0" ;
+	dcterms:description	"DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web."@en ;
+	dcterms:title	"Data Catalog Vocabulary (DCAT) - Version 3"@en ;
+	dcterms:identifier	"DCAT" ;
+	foaf:homepage	<https://www.w3.org/TR/vocab-dcat-3/> ;
+	dcterms:creator	ns4:f45f6c8ef56563dd5fe289d6817c3a398df2a29fc9fad70d5114d6a5a1fa3815 .
+<http://data.europa.eu/2sa/cssv/rsc/3ac90955aa96eedf7114693c57e1862f5dc359b7f26327a4878201bb0934a53b>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"3.3.0" ;
+	dcterms:description	"Geography Markup Language is an XML grammar written in XML Schema for the description of application schemas as well as the transport and storage of geographic information."@en ;
+	dcterms:title	"Geography Markup Language (GML)"@en ;
+	dcterms:identifier	"GML" ;
+	foaf:homepage	<https://www.ogc.org/standard/gml/> ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/660e51b8105da3b41278152e1050aa45419708bdf5b48530d9e644a44ef8c7c0> .
+<http://data.europa.eu/2sa/cssv/rsc/6c793fd1d17062d9fd8edd8d37932cd56cb00840ae3ef37568ad77404230f05b>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.0.0" ;
+	dcterms:description	"The (GA4GH) Data Use Ontology (DUO) includes terms describing data use conditions. DUO represents data use terms from three evolving efforts to standardize data use restrictions in the biomedical and genomics research domain: The NIH\u2019s dbGaP data use categories, Consent Codes and the The Automated Data Access Matrix (ADA-M)."@en ;
+	dcterms:title	"Data Use Ontology (DUO)"@en ;
+	dcterms:identifier	"DUO" ;
+	foaf:homepage	ns14:DUO ;
+	dcterms:creator	<http://data.europa.eu/2sa/cssv/rsc/567fa1d87d59feb3bd8fbd8de4903857aac9c30104878384f19bee4a3b4a4100> .
+ns4:be53f576f7ac020fcba25ce7c83e599514bd297caa7fc500316662997e68f9d5
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"2.0.0" ;
+	dcterms:description	"The META-SHARE Ontology (MS-OWL) specification is a framework designed to provide a comprehensive metadata schema for describing and managing language resources."@en ;
+	dcterms:title	"Meta-Share ontology (MS-OWL)"@en ;
+	dcterms:identifier	"MS-OWL" ;
+	foaf:homepage	ns15:desc ;
+	dcterms:creator	ns4:f45f6c8ef56563dd5fe289d6817c3a398df2a29fc9fad70d5114d6a5a1fa3815 .
+ns4:c9a3e46ac31f74d761f952aef8f0cfe601c53c2207a5538e8a10ded5825cec27
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"3.0.2" ;
+	dcterms:description	"OpenMinTeD SHARE is a set of metadata elements to describe text and data-mining (TDM) and natural language processing (NLP) resources."@en ;
+	dcterms:title	"OpenMinTeD Shared Infrastructure for Text and Data Mining (OMTD-SHARE)"@en ;
+	dcterms:identifier	"OMTD-SHARE" ;
+	foaf:homepage	ns16:omtd-share ;
+	dcterms:creator	ns4:f45f6c8ef56563dd5fe289d6817c3a398df2a29fc9fad70d5114d6a5a1fa3815 .
+ns4:dadbe2f16b6b94144792da2bcafa169599103b95f126d1125b1f385177537882
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.0.0" ;
+	dcterms:description	"Linked Data Notifications is a protocol that describes how servers (receivers) can have messages pushed to them by applications (senders), as well as how other applications (consumers) may retrieve those messages. Any resource can advertise a receiving endpoint (Inbox) for the messages. Messages are expressed in RDF, and can contain any data."@en ;
+	dcterms:title	"Linked Data Notifications (LDN)"@en ;
+	dcterms:identifier	"LDN" ;
+	foaf:homepage	<https://www.w3.org/TR/ldn/> ;
+	dcterms:creator	ns4:f45f6c8ef56563dd5fe289d6817c3a398df2a29fc9fad70d5114d6a5a1fa3815 .
+ns4:f4c3839a5bdff2f8a894f8a407e5ad3ab1e7a43e77b90497ddc7602079318556
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.0.0" ;
+	dcterms:description	"SKOS provides a model for expressing the basic structure and content of concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, folksonomies, and other similar types of controlled vocabulary."@en ;
+	dcterms:title	"Simple Knowledge Organisation system (SKOS)"@en ;
+	dcterms:identifier	"SKOS" ;
+	foaf:homepage	<https://www.w3.org/TR/skos-primer/> ;
+	dcterms:creator	ns4:f45f6c8ef56563dd5fe289d6817c3a398df2a29fc9fad70d5114d6a5a1fa3815 .
+<http://data.europa.eu/2sa/cssv/rsc/47e4996e13cda2e492f84c40ae7462f8ae1ae3595150ab5537d0a0a69eba659f>
+	rdf:type	dcterms:Standard ;
+	owl:versionInfo	"1.1.0" ;
+	dcterms:description	"This specification defines JSON-LD 1.1, a JSON-based format to serialize Linked Data. JSON is a useful data serialization and messaging format."@en ;
+	dcterms:title	"JSON-LD"@en ;
+	dcterms:identifier	"JSON-LD" ;
+	foaf:homepage	<https://www.w3.org/TR/json-ld/> ;
+	dcterms:creator	ns4:f45f6c8ef56563dd5fe289d6817c3a398df2a29fc9fad70d5114d6a5a1fa3815 .
+<http://data.europa.eu/2sa/cssv/rsc/242e96ccd8d95b22dc45eb4d8c2e9891c9bad34ac20e932144382675b2117b6f>
+	rdf:type	foaf:Agent ;
+	dcterms:title	"CUBRC"@en .
+<http://data.europa.eu/2sa/cssv/rsc/567fa1d87d59feb3bd8fbd8de4903857aac9c30104878384f19bee4a3b4a4100>
+	rdf:type	foaf:Agent ;
+	dcterms:title	"Global Alliance for Genomics & Health"@en .
+ns4:d086f67d6f28d357c04966798c1c02fae3824f2b99a1eb304422d0a4f510f30f
+	rdf:type	foaf:Agent ;
+	dcterms:title	"Common Language Resources and Technology Infrastructure"@en .
+<https://www.w3.org/TR/owl2-overview/>
+	rdf:type	foaf:Document .
+<https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/asset-description-metadata-schema-adms/release/100>
+	rdf:type	foaf:Document .
+ns5:eli
+	rdf:type	foaf:Document .
+ns7:v100
+	rdf:type	foaf:Document .
+ns8:cdm
+	rdf:type	foaf:Document .
+<http://ontologydesignpatterns.org/wiki/Ontology:DOLCE+DnS_Ultralite>
+	rdf:type	foaf:Document .
+<https://joinup.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-standards-and-specifications-vocabulary-cssv/release/120>
+	rdf:type	foaf:Document .
+ns6:rfc3629
+	rdf:type	foaf:Document .
+<https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-public-service-vocabulary-application-profile/release/22>
+	rdf:type	foaf:Document .
+<https://joinup.ec.europa.eu/release/core-location-vocabulary/100>
+	rdf:type	foaf:Document .
+<https://www.w3.org/TR/vocab-regorg/>
+	rdf:type	foaf:Document .
+<https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/200>
+	rdf:type	foaf:Document .
+ns6:rfc2781
+	rdf:type	foaf:Document .
+<https://www.gs1.org/standards/gs1-un-cefact-xml-profiles/gs1-un-cefact-xml-cross-industry-invoice/2012>
+	rdf:type	foaf:Document .
+<http://docs.oasis-open.org/ubl/os-UBL-2.3/UBL-2.3.html>
+	rdf:type	foaf:Document .
+<https://www.w3.org/community/dpvcg/>
+	rdf:type	foaf:Document .
+ns10:dcmi-terms
+	rdf:type	foaf:Document .
+<https://www.w3.org/TR/prov-overview/>
+	rdf:type	foaf:Document .
+<http://www.hozo.jp/onto_library/upperOnto.htm>
+	rdf:type	foaf:Document .
+<https://www.w3.org/TR/vocab-dqv/>
+	rdf:type	foaf:Document .
+<http://www.oais.info/>
+	rdf:type	foaf:Document .
+<http://www.foaf-project.org/>
+	rdf:type	foaf:Document .
+<https://github.com/OP-TED/ePO/tree/v3.0.0>
+	rdf:type	foaf:Document .
+ns9:core-criterion-and-core-evidence-vocabulary-v100
+	rdf:type	foaf:Document .
+ns11:standards-downloads
+	rdf:type	foaf:Document .
+<https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-person-vocabulary/release/200>
+	rdf:type	foaf:Document .
+<https://www.itb.ec.europa.eu/docs/services/latest/introduction/index.html>
+	rdf:type	foaf:Document .
+<https://www.iso.org/standard/74572.html>
+	rdf:type	foaf:Document .
+<https://www.etsi.org/deliver/etsi_ts/103200_103299/103264/03.01.01_60/ts_103264v030101p.pdf>
+	rdf:type	foaf:Document .
+ns13:my-data-ontology
+	rdf:type	foaf:Document .
+ns14:DUO
+	rdf:type	foaf:Document .
+ns12:clarin-concept-registry
+	rdf:type	foaf:Document .
+<https://www.ogc.org/standard/gml/>
+	rdf:type	foaf:Document .
+<https://www.w3.org/TR/vocab-dcat-3/>
+	rdf:type	foaf:Document .
+<https://www.w3.org/TR/ldp/>
+	rdf:type	foaf:Document .
+ns16:omtd-share
+	rdf:type	foaf:Document .
+<https://www.w3.org/TR/skos-primer/>
+	rdf:type	foaf:Document .
+<https://www.w3.org/TR/json-ld/>
+	rdf:type	foaf:Document .
+<https://www.w3.org/TR/ldn/>
+	rdf:type	foaf:Document .
+ns15:desc
+	rdf:type	foaf:Document .
