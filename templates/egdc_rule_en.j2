@@ -58,7 +58,7 @@
 
 {% block introduction %}
 	<p>
-The EGDC Rule data model is an Application Profile to describe EGDC Case studies.
+The EGDC Rule data model is an Application Profile to describe EGDC Rules.
 
 </p>
 {% endblock %}
@@ -66,7 +66,7 @@ The EGDC Rule data model is an Application Profile to describe EGDC Case studies
 {% block summary %}
 <section id="abstract">
     <h2>Abstract</h2>
-    EGDC Case Study data model allows to described EGDC Case Studied together with the Organizations behind it, the attachments, etc.
+    EGDC Rule data model allows to described EGDC Rules together with their InputParameter, Output, etc.
 
 </section>
 {% endblock %}
@@ -81,7 +81,7 @@ The EGDC Rule data model is an Application Profile to describe EGDC Case studies
 {% endblock %}
 
 {% block terminologyPrefixes %}
-EGDC is a semantic specification, where each class and property has an URI.
+EGDC Rule is a semantic specification, where each class and property has an URI.
 
 The prefixed form of the URI, can be found in part in the class diagram and in the quick reference table at the bottom, while, for ease of reading, full URI can be found in the hyperlink of each class and property.  
 
@@ -90,14 +90,12 @@ This specification uses the following prefixes to shorten the URIs for readabili
 <table id="table-namespaces" class="simple">
 	<thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
 	<tbody>
-		<tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>
+		<tr><td><code>adms</code></td><td><code>http://www.w3.org/ns/adms#</code></td></tr>
 		<tr><td><code>dcat</code></td><td><code>http://www.w3.org/ns/dcat#</code></td></tr>
 		<tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
 		<tr><td><code>egdc</code></td><td><code>https://www.greendigitalcoalition.eu/model/</code></td></tr>
 		<tr><td><code>egdc-cl</code></td><td><code>https://www.greendigitalcoalition.eu/codelist/</code></td></tr>
 		<tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
-		<tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
-		<tr><td><code>org</code></td><td><code>http://www.w3.org/ns/org#</code></td></tr>
 		<tr><td><code>owl</code></td><td><code>http://www.w3.org/2002/07/owl#</code></td></tr>
 		<tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
 		<tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
