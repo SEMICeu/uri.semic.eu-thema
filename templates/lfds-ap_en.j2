@@ -1,4 +1,4 @@
-{% extends "drpm-ap_en.j2" %}
+{% extends "drpm-ap-new_en.j2" %}
 
 {% block respecconfig %}
 
@@ -74,7 +74,7 @@
 {% block introduction %}
 <p>
 	The LFDS Vocabulary provides a minimal set of classes.
-  These are intended to support the Legislative Financial and Digital Statements within EU institutions and the Interoperability Assessments mandated by the Interoperable Europe Act.
+  These are intended to support the Legislative & Financial and Digital Statements within EU institutions and the Interoperability Assessments mandated by the Interoperable Europe Act.
 </p>
 {% endblock %}
 
@@ -82,8 +82,8 @@
 {% block summary %}
 <section id="abstract">
     <h2>Abstract</h2>
-The LFDS Vocabulary is a simplified, reusable and extensible data model that provides a minimum set of classes and properties for
-describing and assessment on the requirements of digital as described in the LFDS guidelines.
+The LFDS Vocabulary is
+a data model that provides a minimum set of classes and properties for describing and assessing digital requirements, as defined in the LFDS guidelines.
 </section>
 {% endblock %}
 
@@ -93,9 +93,13 @@ describing and assessment on the requirements of digital as described in the LFD
 {% block mappings %}
 {% endblock %}
 
-
-{% block terminologyPrefixes %}
-This specification uses the following prefixes to shorten the URIs for readibility.
+{% block terminology %}
+<section id="specterminology">
+    <h2>
+        Terminology
+    </h2>
+        <p>
+            This specification uses the following prefixes to shorten the URIs for readibility.
 
         <table id="table-namespaces" class="simple">
             <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
@@ -115,5 +119,24 @@ This specification uses the following prefixes to shorten the URIs for readibili
             <tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
             </tbody>
         </table>
+
+        </p>
+</section>
+{% endblock %}
+
+{% block conformance %}
+<section id="conformance" class="informative">
+    <h2>
+        Conformance
+    </h2>
+        <p>
+This data specification has not yet formalized any conformance requirements 
+besides the proper use of the terms according to the formal specification 
+in the sections Main Entities and Supporting Entities.
+
+</section>
+
+
+
 
 {% endblock %}
