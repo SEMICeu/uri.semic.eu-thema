@@ -20,7 +20,7 @@
       {
         "language":"en",
         "template":"lfds-ap_en.j2",
-        "title": "Legislative Financial Digital Statement Vocabulary",
+        "title": "Legislative Financial & Digital Statement Vocabulary",
         "translationjson":"lfds-ap_en.json",
         "mergefile":"lfds-ap_en_merged.jsonld"
       }
@@ -37,7 +37,7 @@
 "eap": "LFDS.eap",
 "diagram": "LFDS",
 "template": "lfds-ap_en.j2",
-"title": "Legislative Financial Digital Statement Vocabulary",
+"title": "Legislative & Digital Statement Vocabulary",
 "publication-state": "Draft",
 "publication-date": "2025-05-05",
 "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -52,7 +52,7 @@
     {
       "language":"en",
       "template":"lfds-ap_en.j2",
-      "title": "Legislative Financial Digital Statement Vocabulary",
+      "title": "Legislative Financial & Digital Statement Vocabulary",
       "translationjson":"lfds-ap_en.json",
       "mergefile":"lfds-ap_en_merged.jsonld"
     }

@@ -93,9 +93,13 @@ a data model that provides a minimum set of classes and properties for describin
 {% block mappings %}
 {% endblock %}
 
-
-{% block terminologyPrefixes %}
-This specification uses the following prefixes to shorten the URIs for readibility.
+{% block terminology %}
+<section id="specterminology">
+    <h2>
+        Terminology
+    </h2>
+        <p>
+            This specification uses the following prefixes to shorten the URIs for readibility.
 
         <table id="table-namespaces" class="simple">
             <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
@@ -115,5 +119,24 @@ This specification uses the following prefixes to shorten the URIs for readibili
             <tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
             </tbody>
         </table>
+
+        </p>
+</section>
+{% endblock %}
+
+{% block conformance %}
+<section id="conformance" class="informative">
+    <h2>
+        Conformance
+    </h2>
+        <p>
+This data specification has not yet formalized any conformance requirements 
+besides the proper use of the terms according to the formal specification 
+in the sections Main Entities and Supporting Entities.
+
+</section>
+
+
+
 
 {% endblock %}
