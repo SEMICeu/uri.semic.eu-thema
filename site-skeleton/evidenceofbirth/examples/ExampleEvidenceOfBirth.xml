@@ -16,9 +16,6 @@
     <cv:DateOfBirth>1898-11-30</cv:DateOfBirth>
     <cv:PlaceOfBirth xsi:type="sdg:LocationType">
       <cv:GeographicName xml:lang="NL">Brussel</cv:GeographicName>
-      <cv:GeographicName xml:lang="FR">Bruxelles</cv:GeographicName>
-      <cv:GeographicName xml:lang="DE">Brüssel</cv:GeographicName>
-      <cv:GeographicName xml:lang="EN">Brussels</cv:GeographicName>
     </cv:PlaceOfBirth>
     <sdg:AttributeSet>
       <sdg:Attribute name="TimeOfBirth" type="xs:time">09:00:00</sdg:Attribute>
