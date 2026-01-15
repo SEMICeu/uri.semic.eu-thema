@@ -1,24 +1,57 @@
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.com/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix cv: <http://data.europa.eu/m8g/> .
-@prefix ex: <http://example.com/> .
 @prefix person: <http://www.w3.org/ns/person#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdg: <http://data.europa.eu/p4s/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:proofofbirth1 dcterms:subject ex:person1 ;
-	a <http://data.europa.eu/p4s/ProofOfBirth> .
+ex:evidenceofbirth1 sdg:hasAttributeSet ex:attributeSet1 ;
+	dct:subject ex:person1 ;
+	sdg:hasBirth ex:birth1 ;
+	a sdg:EvidenceOfBirth .
+
+ex:attributeSet1 sdg:hasAttribute ex:attribute1, ex:attribute2 ;
+	a sdg:AttributeSet .
+
+ex:attribute1 rdfs:label "IssuingDate" ;
+	rdf:value "2025-07-15"^^xsd:date ;
+	a sdg:Attribute .
+
+ex:attribute2 rdfs:label "IssuingAuthority" ;
+	rdf:value "Département Affaires citoyennes de la Ville de Bruxelles"@fr ;
+	a sdg:Attribute .
 
 ex:person1 foaf:givenName "René François Ghislain"@fr ;
 	foaf:familyName "Magritte"@fr ;
-	cv:birthDate "1898-11-21"^^cv:genericDate ;
-	person:placeOfBirth ex:location1 ;
-	person:countryOfBirth ex:location2 ;
 	cv:sex <http://publications.europa.eu/resource/authority/human-sex/MALE> ;
 	a person:Person .
 
-ex:location1 locn:geographicName "Lessines"@fr ;
-	a dcterms:Location .
+<http://publications.europa.eu/resource/authority/human-sex/MALE> a skos:Concept .
 
-ex:location2 locn:geographicName "BE" ;
-	a dcterms:Location .
+ex:birth1 cv:birthDate "1898-11-21"^^cv:genericDate ;
+	person:placeOfBirth ex:location1 ;
+	person:countryOfBirth ex:location2 ;
+	sdg:hasAttributeSet ex:attributeSet2 ;
+	a sdg:Birth .
+
+ex:attributeSet2 sdg:hasAttribute ex:attribute3, ex:attribute4 ;
+	a sdg:AttributeSet .
+
+ex:attribute3 rdfs:label "TimeOfBirth" ;
+	rdf:value "09:00:00"^^xsd:time ;
+	a sdg:Attribute .
+
+ex:attribute4 rdfs:label "FamilyNameAtBirth" ;
+	rdf:value "Magritte"@fr ;
+	a sdg:Attribute .
+
+ex:location1 locn:geographicName "Brussel"@nl ;
+	a dct:Location .
+
+ex:location2 locn:geographicName "BE"@fr ;
+	a dct:Location .
