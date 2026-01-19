@@ -15,7 +15,7 @@ ex:project1 rdfs:label "Project name"@en ;
 	dbo:projectStartDate "2012-01-01"^^xsd:date ;
 	dbo:projectEndDate "2012-06-01"^^xsd:date ;
 	adms:status ex:status1 ;
-	ex:beneficiary ex:beneficiary1 ;
+	ex:hasBeneficiary ex:beneficiary1 ;
 	adms:identifier ex:identifier1 ;
 	a dbo:Project .
 

@@ -33,7 +33,7 @@
      "adms:status" : {
        "@id": "ex:status1"
      },
-     "adm:beneficiary" : {
+     "adm:hasBeneficiary" : {
        "@id": "ex:beneficiary1"     
      },
      "adms:identifier" : {
