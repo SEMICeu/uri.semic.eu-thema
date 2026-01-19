@@ -306,8 +306,8 @@
         Terminology
     </h2>
         <p>
-            A Core Vocabulary (CV) is a basic, reusable and extensible data specification that captures the fundamental characteristics of an entity in a context-neutral fashion. Its main objective is to provide terms to be reused in the broadest possible context.
-            More information can be found on the <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification">SEMIC Style Guide</a>.
+            The Arachne Data Model (ADM) is an Application Profile that reuses other specifications, i.e. core vocabularies.
+            More information can be found on the <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-an-ap-specification">SEMIC Style Guide</a>.
         </p>
     <h3>Used Prefixes</h3>
         {% block terminologyPrefixes %}
@@ -323,7 +323,7 @@
     <div id="overview">
                 {% if ( ( classes | length > 0)   ) %}
                         <p>
-                            This document describes the usage of the following main entities for a correct usage of the Core Vocabulary:
+                            This document describes the usage of the following main entities for a correct usage of the Application Profile :
                             <br />
                             | {%- for class in classes |sort(attribute=sortattr) %} 
 			      {%- if class.rawTags['class-usage-scope'] == "main" %}
@@ -515,7 +515,7 @@
 <h2>
    Main Entities
 </h2>
-The main entities are those that form the core of the Core Vocabulary.
+The main entities are those that form the core of the Application Profile.
 
 {% for entity in classes | sort(attribute=sortattr) %}
 {% if entity.rawTags['class-usage-scope'] == "main"   %}
@@ -528,8 +528,7 @@ The main entities are those that form the core of the Core Vocabulary.
 <h2>
    Supportive Entities
 </h2>
-The supportive entities are supporting the main entities in the Core Vocabulary. 
-They are included in the Core Vocabulary because they form the range of properties.
+The supportive entities are supporting the main entities in the Application Profile. 
 
 
 {% for entity in classes | sort(attribute=sortattr) %}
@@ -605,7 +604,7 @@ They are included in the Core Vocabulary because they form the range of properti
         #} (non normative)
         {% block jsonld %}
             <p>
-                A reusable JSON-LD context definition for this Core Vocabulary is retrievable at: <a href="{{ documentroot }}/context/{{ metadata.filename }}.jsonld"
+                A reusable JSON-LD context definition for this Application Profile is retrievable at: <a href="{{ documentroot }}/context/{{ metadata.filename }}.jsonld"
     target="_blank">{{ documentroot }}/context/{{ metadata.filename }}.jsonld</a>
             </p>
         {% endblock %}
@@ -760,16 +759,19 @@ Past and current contributors are :
 
 	    var prefixes = [ 
 {'pref':'ad:', 'ns': 'http://inspire.ec.europa.eu/ont/ad#'},
+{'pref':'adm:', 'ns': 'http://example.com/'},
 {'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
 {'pref':'atu:', 'ns': 'http://data.europa.eu/88u/dataset/'},
 {'pref':'cav:', 'ns': 'http://data.europa.eu/2sa/cav#'},
 {'pref':'cpsv:', 'ns': 'http://purl.org/vocab/cpsv#'},
 {'pref':'cv:', 'ns': 'http://data.europa.eu/m8g/'},
+{'pref':'dbo:', 'ns': 'http://dbpedia.org/ontology/'},
 {'pref':'dcat:', 'ns': 'http://www.w3.org/ns/dcat#'},
 {'pref':'dcatap:', 'ns': 'http://data.europa.eu/r5r/'},
 {'pref':'dct:', 'ns': 'http://purl.org/dc/terms/'},
 {'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
 {'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
+{'pref':'epo:', 'ns' : 'http://data.europa.eu/a4g/ontology#'},
 {'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
 {'pref':'frbr:', 'ns': 'http://iflastandards.info/ns/fr/frbr/frbroo/'},
 {'pref':'geosparql:', 'ns': 'http://www.opengis.net/ont/geosparql#'},

@@ -6,8 +6,8 @@
   "diagram": "Arachne",
   "template": "arachne_en.j2",
   "title": "Arachne Data Model",
-  "publication-state": "Semic Recommendation",
-  "publication-date": "2024-05-06",
+  "publication-state": "Draft",
+  "publication-date": "2026-01-19",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "ADM",
@@ -27,7 +27,7 @@
     ],
     "toolchainversion" : "3",
     "documentconfig": {
-          "statuslabel" : "SEMIC Recommendation",
+          "statuslabel" : "SEMIC Draft",
           "editorDocumentroot" : "https://semiceu.github.io/ADM/releases/1.0.0"
     }
 }

@@ -1,0 +1,32 @@
+@prefix adm: <http://example.com/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix ex: <http://example.com/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:project1 rdfs:label "Project name"@en ;
+	dbo:projectStartDate "2012-01-01"^^xsd:date ;
+	dbo:projectEndDate "2012-06-01"^^xsd:date ;
+	adms:status ex:status1 ;
+	ex:beneficiary ex:beneficiary1 ;
+	adms:identifier ex:identifier1 ;
+	a dbo:Project .
+
+ex:status1 skos:prefLabel "Open"@en ;
+	a skos:Concept .
+
+ex:beneficiary1 adms:identifier ex:identifier2 ;
+	a ex:Beneficiary .
+
+ex:identifier1 skos:notation "Project 0124" ;
+	a adms:Identifier .
+
+ex:identifier2 skos:notation "5800012" ;
+	a adms:Identifier .
