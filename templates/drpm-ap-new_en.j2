@@ -72,13 +72,24 @@
         {% endif %}
 	{% endfor %}
 		]
-		
-	function quickreference() {
-		$('#table-quickoverview').DataTable();
-	};
-	var shaclfilepath = "./shacl/{{metadata.filename}}-SHACL.ttl" ;
+    var myowners = [
+            
+            {
+                value: "SEMIC",
+		href: "https://joinup.ec.europa.eu/collection/semic-support-centre",
+            },
+	    { 
+                value: "Digital-Ready Policy-Making",
+		href: "https://interoperable-europe.ec.europa.eu/collection/digital-ready-policymaking"
+	    }
+		]
 
-   {% block respecconfig %}
+  function quickreference() {
+	$('#table-quickoverview').DataTable();
+		};
+
+
+{% block respecconfig %}
     var respecConfig = {
       postProcess: [quickreference],
       edDraftURI: "{{metadata.navigation.self}}",
@@ -87,11 +98,10 @@
       publishDate: "{{ metadata.issued }}",
       editors: myeditors,
       authors: myauthors,
-      github: "SEMICeu",
+      github: "SEMICeu/DCAT-AP",
       shortName: "{{metadata.title}}",
       xref: "web-platform",
       doJsonLd: true,
-      specStatus: "base",
       logos: [{
         src: "https://github.com/SEMICeu/Core-Person-Vocabulary/blob/v2.0.0/releases/2.00/html/semic-icon.png",
         url: "https://semic.eu",
@@ -123,11 +133,10 @@
           "title":"Guidelines on the management of identifiers",
           "publisher":"European Commission"
          }
-
       }
     };
 
-    {% endblock %}
+{% endblock %}
 
     </script>
     <style>
@@ -141,7 +150,7 @@
        Copyright must be specified otherwise Respec generates a value
      #} 
     <p class="copyright">
-        Copyright © 2026
+        Copyright © 2025
     </p>
     {# <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">SEMIC Editor's Draft</a><time class="dt-published" datetime="2022-11-07">07 November 2022</time></p> #}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -253,7 +262,7 @@
     </h2>
     {% block introduction %}
         <p>
-            This document describes an <strong>Core Vocabulary</strong>, in this case <strong>{{ metadata.title }}</strong>. The Core Vocabulary specifies a semantic data model covering a set of usecases. The specification consists of terms with their constraints (cardinalities, codelists, usage guidelines).
+            This document describes an <strong>application profile</strong>, in this case <strong>{{ metadata.title }}</strong>. The application profile specifies a semantic data model covering a set of usecases. The specification consists of terms with their constraints (cardinalities, codelists, usage guidelines).
         </p>
     {% endblock %}
 </section>
@@ -264,7 +273,10 @@
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Core Vocabulary has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }} published at {{ metadata.issued }}.
+<!-- readd when SEMIC has a codelist about it process 
+	This application profile has the status <a href="{{ metadata.status }}">{{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }}</a> published at {{ metadata.issued }}.
+-->
+	This application profile has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }} published at {{ metadata.issued }}.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="{{ metadata.standaardregisterurl }}">Changelog</a>.
@@ -288,17 +300,21 @@
 		  This specification </span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION </a> 
 	          is published under <a href="{{ metadata.license }}" rel="license">"CC0"</a>.
 	-->
-             Copyright © 2026 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
+             Copyright © 2025 European Union. All material in this repository is published under the license Creative Commons Attribution 4.0 International (CC BY 4.0), unless explicitly otherwise mentioned.
         </p>
     {% endblock %}
 </section>
 
-
 {% block conformance %}
-<section id="conformance" class="informative">
+<section>
+    <h2>
+        Conformance
+    </h2>
+        <p>
+            An implementation is conformant with this application profile if it satisfies <a href="/doc/conformance">these rules</a>.
+        </p>
 </section>
 {% endblock %}
-
 
 {% block terminology %}
 <section id="specterminology">
@@ -306,15 +322,10 @@
         Terminology
     </h2>
         <p>
-            The Arachne Data Model (ADM) is an Application Profile that reuses other specifications, i.e. core vocabularies.
-            More information can be found on the <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-an-ap-specification">SEMIC Style Guide</a>.
+            section on terminology usage
         </p>
-    <h3>Used Prefixes</h3>
-        {% block terminologyPrefixes %}
-    {% endblock %}
 </section>
 {% endblock %}
-
 
 <section id="specoverview">
     <h2>Overview</h2>
@@ -323,7 +334,7 @@
     <div id="overview">
                 {% if ( ( classes | length > 0)   ) %}
                         <p>
-                            This document describes the usage of the following main entities for a correct usage of the Application Profile :
+                            This document describes the usage of the following main entities for a correct usage of the Application Profile:
                             <br />
                             | {%- for class in classes |sort(attribute=sortattr) %} 
 			      {%- if class.rawTags['class-usage-scope'] == "main" %}
@@ -339,16 +350,16 @@
                 {% endif %}
                 {% if ( ( datatypes | length ) > 0 ) %}
                         <p>
-                            And supported by these datatypes:
+                            And supported by these data types:
                             <br />
                             | {%- for datatype in datatypes |sort(attribute=sortattr) %} <a href="#{{ datatype.label[language] | replace(" ","") | urlencode }}">{{ datatype.label[language] }}</a> | {%- endfor %}
                         </p>
                 {% endif %}
     </div>
     <div>
-        <a href="./html/overview.jpg"
+        <a href="{{ metadata.documentconfig.editorDocumentroot if metadata.documentconfig.editorDocumentroot else documentroot }}/html/overview.jpg"
            target="_blank">
-            <img src="./html/overview.jpg"/>
+            <img src="{{ metadata.documentconfig.editorDocumentroot if metadata.documentconfig.editorDocumentroot else documentroot }}/html/overview.jpg"/>
         </a>
     </div>
 </section>
@@ -377,14 +388,14 @@
                     Definition
                 </dt>
                 <dd>
-                    {{ entity.description[language] }}
+                    {{ entity.description[language] | safe }}
                 </dd>
-                {% if entity.rawTags['DCAT'] %}
+                {% if entity.rawTags['reuse-url'] %}
 		<dt>
-		   Reference in DCAT
+		   Reference in external vocabulary
 		</dt>
 		    <dd>
-		    <a href="{{ entity.rawTags['DCAT'] }}">Link</a>
+		    <a href="{{ entity.rawTags['reuse-url'] }}">Link</a>
 		    </dd>
 		{% endif %}
                 {% if entity.usage[language] %}
@@ -426,12 +437,14 @@
                 <table class="data-table simple" id="table-mandatory-classes">
                     <thead>
                         <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
+<!--
+                            <th class="data-table__header-title--sortable" style="width:5%">
                             </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+--->
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
                                 Property
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
+                            <th class="data-table__header-title--sortable" style="width:12%">
                                 Range
                             </th>
                             <th class="data-table__header-title--sortable" style="width:6%">
@@ -447,8 +460,15 @@
                             <th class="data-table__header-title--sortable" style="width:3%">
                                 Codelist
                             </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
                                 DCAT
+                            </th>
+			    -->
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Reuse
                             </th>
 			    -->
                         </tr>
@@ -456,15 +476,16 @@
                     <tbody class="supertype">
                         {% for prop in entity['properties'] | sort(attribute=sortattr) %}
                             <tr id="{{ (entity.label[language] ~ '.' ~ prop.label[language]) | replace(" ","") | urlencode }}"
-                                typeof="rdf:Property"
+                                typeof="rdfs:Property"
                                 resource="{{ prop.uri }}"
                                 class="class mandatory">
+<!--
                                 <td>
 				    <a href="{{ metadata.feedbackurl }}/new?title=Issue%20for%20{{ prop.label[language] }}%20in%20{{ entity.label[language]}}&body=Explain%20your%20issue%20for%20{{ metadata.navigation.self }}%23{{ (entity.label[language] ~ '.' ~ prop.label[language]) | replace(" ","") | urlencode }}" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
+--->
                                 <td>
                                         <a href="{{ prop.uri }}"
                                            data-toggle="tooltip"
@@ -488,7 +509,7 @@
                                     {{ prop.cardinality }}
                                 </td>
                                 <td property="rdfs:comment">
-                                    {{ prop.description[language] }}
+                                    {{ prop.description[language] | safe }}
                                 </td>
                                 <td property="skos:scopeNote">
                                     {{ prop.usage[language] | safe }}
@@ -498,15 +519,38 @@
                                     {% if prop['codelist_uri'] %}<a href="{{ prop['codelist_uri'] }}">Link</a>{% endif %}
                                 </td>
 				-->
+				<!--
                                 <td>
                                     {% if prop.rawTags['DCAT'] %}<a href="{{ prop.rawTags['DCAT'] }}">Link</a>{% endif %}
                                 </td>
+				-->
+				<!--
+                                <td>
+                                    {% if prop.rawTags['reuse-url'] %}
+				       {% if prop.rawTags['reuse'] == "asis"   %}
+				        <a href="{{ prop.rawTags['reuse-url'] }}">A</a>
+                                       {% else %}
+				        <a href="{{ prop.rawTags['reuse-url'] }}">E</a>
+				       {% endif %}
+                                    {% else %}
+				        P
+				    {% endif %}
+                                </td>
+				-->
                             </tr>
                         {% endfor %}
                     </tbody>
                 </table>
             </div>
         {% endif %}
+
+                   {% include "example." +  entity.label[language]| replace(" ","") |urlencode  + ".j2" ignore missing %}
+
+	{% if entity.rawTags['example'] %} 
+                   {% include "example." +  entity.label[language]| replace(" ","") |urlencode  + ".j2" ignore missing %}
+	{% endif %}  
+
+
     </div>
 </section>
 
@@ -515,7 +559,26 @@
 <h2>
    Main Entities
 </h2>
-The main entities are those that form the core of the Application Profile.
+<p>
+The main entities are those that form the core of the Application Profile. 
+The properties and their associated constraints that apply in the context of this profile are listed in a tabular form.
+Each row corresponds to one property. 
+</p><p>
+As this is the toplevel application profile for this usage context the reuse of the terms is indicated by their URIs.
+If an URI is used from another vocabulary than the namespace <code>2qy</code> it means that the information is inherited as expressed in 
+the data specification in which that URI is defined.
+</p>
+<!--
+In addition to the constraints also cross-references are provided to DCAT and DCAT-AP. For the last, to save space, the following abbreviations are used:
+<ul>
+	<li>A: reused as-is defined and expressed in DCAT-AP</li>
+	<li>E: reused with additional restrictions, additional usage notes or more specific usage expectations compared to DCAT-AP</li>
+	<li>P: profile specific extension where DCAT-AP had no requirements earlier on specified</li>
+</ul>
+This reuse qualification assessement is w.r.t. a specific version of DCAT-AP. 
+Therefore it may vary over time when new versions of DCAT-AP are created.
+-->
+
 
 {% for entity in classes | sort(attribute=sortattr) %}
 {% if entity.rawTags['class-usage-scope'] == "main"   %}
@@ -526,13 +589,37 @@ The main entities are those that form the core of the Application Profile.
 
 <section>
 <h2>
-   Supportive Entities
+   Supporting Entities
 </h2>
-The supportive entities are supporting the main entities in the Application Profile. 
+
+Supporting entities complement the main entities in the Application Profile. 
+The scope and objectives of the profile are fully covered by the main entities; supporting entities serve as property ranges or as subclasses used in specific use cases. 
+In this context, supporting entities are those defined in the same namespace as the main entities; imported entities are listed in a subsequent section.
 
 
 {% for entity in classes | sort(attribute=sortattr) %}
 {% if entity.rawTags['class-usage-scope'] != "main"   %}
+{% if entity.rawTags['class-usage-scope'] != "import"   %}
+   {{ renderentity(entity) }}
+{% endif %}
+{% endif %}
+{% endfor %}
+
+</section>
+
+<section>
+<h2>
+   Imported Supporting Entities
+</h2>
+The supporting entities are supporting the main entities in the Application Profile. 
+The scope and objectives of the Application profile is fully covered with the main entities.
+The listed entities are supporting because they form the range of properties 
+or are detailed subclasses exploring specific aspects of some use cases. 
+In this application profile, the supporting imported entities are those that are defined in a different namespace from the main entities.
+
+
+{% for entity in classes | sort(attribute=sortattr) %}
+{% if entity.rawTags['class-usage-scope'] == "import"   %}
    {{ renderentity(entity) }}
 {% endif %}
 {% endfor %}
@@ -541,16 +628,18 @@ The supportive entities are supporting the main entities in the Application Prof
 
     <section>
         <h2>
-            Datatypes
+            Data Types
         </h2>
 
-	The following datatypes are used within this specification.
+	The following data types are used within this specification.
 
 	<table class="data-table simple" id="table-mandatory-classes">
 	    <thead>
 		<tr class="data-table__header">
+			<!---
 		    <th class="data-table__header-title--sortable">
 		    </th>
+		    --->
 		    <th class="data-table__header-title--sortable data-table__header-title--sortable-active">
 			Class
 		    </th>
@@ -561,11 +650,14 @@ The supportive entities are supporting the main entities in the Application Prof
 	    </thead>
 	    <tbody class="supertype">
             {% for entity in datatypes | sort(attribute=sortattr)%}
+	    <!--
 		<tr><td>
                    <a href="{{ metadata.feedbackurl }}/new?title=Issue%20for%20{{ entity.name }}&body=Explain%20your%20issue"}}>
                      <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
 		   </a>
-		</td><td>
+		</td>
+		--->
+		<td>
                 {% if entity.scopeduri %}
                     <div id="{{ entity.label[language] | replace(" ","") | urlencode }}">
                         <a href="{{ entity.scopeduri }}"
@@ -582,7 +674,7 @@ The supportive entities are supporting the main entities in the Application Prof
                     </div>
                 {% endif %}
 		</td><td>
-                    {{ entity.description[language] }}
+                    {{ entity.description[language] | safe }}
 		</td></tr>
             {%- endfor %}
             </tbody>
@@ -604,7 +696,7 @@ The supportive entities are supporting the main entities in the Application Prof
         #} (non normative)
         {% block jsonld %}
             <p>
-                A reusable JSON-LD context definition for this Application Profile is retrievable at: <a href="{{ documentroot }}/context/{{ metadata.filename }}.jsonld"
+                A reusable JSON-LD context definition for this application profile is retrievable at: <a href="{{ documentroot }}/context/{{ metadata.filename }}.jsonld"
     target="_blank">{{ documentroot }}/context/{{ metadata.filename }}.jsonld</a>
             </p>
         {% endblock %}
@@ -622,43 +714,39 @@ The supportive entities are supporting the main entities in the Application Prof
         #} (non normative)
         {% block shacl %}
             <p>
-                A reusable SHACL template for this Core Vocabulary is retrievable at: <a href="{{ documentroot }}/shacl/{{ metadata.filename }}-SHACL.ttl"
+                A reusable SHACL template for this application profile is retrievable at: <a href="{{ documentroot }}/shacl/{{ metadata.filename }}-SHACL.ttl"
     target="_blank">{{ documentroot }}/shacl/{{ metadata.filename }}-SHACL.ttl</a>
             </p>
         {% endblock %}
     </div>
 </section>
--->
+
 
 <section class="informative">
-    <h2> Examples </h2>
+    <h2 aria-level="1" role="heading" id="h2_sotd">
+        Examples
+    </h2>
+    <div class="region region--no-space-top" id="examples">
         {% block examples %}
 	<p> No examples defined </p>
         {% endblock %}
+    </div>
 </section>
 
-
+-->
 
 {% block usages %}
 <section class="informative">
 	<h2>Usage Guidelines</h2>
-    {% include "CV-implementation.j2" ignore missing %}
-    {% include "CV-governance.j2" ignore missing %}    
 </section>
 {% endblock %} 
-
-{% block mappings %}
-
-{% endblock %} 
-
-
 
 <section id="quick-reference" class="appendix">
 
 <h2>Quick Reference of Classes and Properties</h2>
 
 This section provides a condensed tabular overview of the mentioned classes and properties in this specification.
-The properties are indicated as <it>mandatory, recommended, optional</it> and <it>deprecated</it>. These terms have the following meaning.
+The properties are grouped under headings <it>mandatory, recommended, optional</it> and <it>deprecated</it>. These terms have the following meaning.
 <ul>
 <li>Mandatory property: a receiver MUST be able to process the information for that property; a sender MUST provide the information for that property.</li>
 <li>Recommended property: a receiver MUST be able to process the information for that property; a sender SHOULD provide the information for that property if it is available.</li>
@@ -720,76 +808,32 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 	<tbody>
 </table>
 
-
-   {% block deprecation %}
-   {% endblock %}
-
-{#
 </section>
 
-<section class="appendix">
 
-<h2>Acknowledgments</h2>
-
-The editors gratefully acknowledge the contributions made to this document by all members of the working group.
-
-This work was elaborated by a Working Group under SEMIC by Interoperable Europe.
-Interoperable Europe of the European Commission was represented by Pavlina Fragkou and Seth Van Hooland.
-Natasa Sofou, Makx Dekkers and Bert Van Nuffelen were the editors of the specification.
-
-Past and current contributors are :
-{% for role, contributors in contributors | groupby("role") %}
-{% if role == "C" %}
-     {% set pure_contributors = contributors|sort(attribute='last_name') %}
-     {% if pure_contributors %}
-          {% for contributor in pure_contributors %} 
-	 	{{ contributor.first_name }} {{ contributor.last_name }}
-		{% if not loop.last %}, {% endif %}
-          {% endfor %}
-     {% endif %}
-{% endif %}
-{% endfor %}.
-</section>
-<!-- End page content -->
-</body>
-#}
 <!-- This must be at the end of the template, to ensure that the iterator properly works -->
     <script defer>
 
 
 	    var prefixes = [ 
-{'pref':'ad:', 'ns': 'http://inspire.ec.europa.eu/ont/ad#'},
-{'pref':'adm:', 'ns': 'http://example.com/'},
 {'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
-{'pref':'atu:', 'ns': 'http://data.europa.eu/88u/dataset/'},
-{'pref':'cav:', 'ns': 'http://data.europa.eu/2sa/cav#'},
-{'pref':'cpsv:', 'ns': 'http://purl.org/vocab/cpsv#'},
-{'pref':'cv:', 'ns': 'http://data.europa.eu/m8g/'},
-{'pref':'dbo:', 'ns': 'http://dbpedia.org/ontology/'},
 {'pref':'dcat:', 'ns': 'http://www.w3.org/ns/dcat#'},
 {'pref':'dcatap:', 'ns': 'http://data.europa.eu/r5r/'},
 {'pref':'dct:', 'ns': 'http://purl.org/dc/terms/'},
 {'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
-{'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
-{'pref':'epo:', 'ns' : 'http://data.europa.eu/a4g/ontology#'},
 {'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
-{'pref':'frbr:', 'ns': 'http://iflastandards.info/ns/fr/frbr/frbroo/'},
-{'pref':'geosparql:', 'ns': 'http://www.opengis.net/ont/geosparql#'},
-{'pref':'legal:', 'ns': 'http://www.w3.org/ns/legal#'},
 {'pref':'locn:', 'ns': 'http://www.w3.org/ns/locn#'},
 {'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},
-{'pref':'org:', 'ns': 'http://www.w3.org/ns/org#'},
 {'pref':'owl:', 'ns': 'http://www.w3.org/2002/07/owl#'},
-{'pref':'person:', 'ns': 'http://www.w3.org/ns/person#'},
 {'pref':'prov:', 'ns': 'http://www.w3.org/ns/prov#'},
 {'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
 {'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
-{'pref':'schema:', 'ns': 'https://schema.org/'},
+{'pref':'rrmv:', 'ns': 'http://data.europa.eu/2qy/rrmv#'},
 {'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
 {'pref':'spdx:', 'ns': 'http://spdx.org/rdf/terms#'},
 {'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},
 {'pref':'vcard:', 'ns': 'http://www.w3.org/2006/vcard/ns#'},
-{'pref':'xhv:', 'ns': 'http://www.w3.org/1999/xhtml/vocab#'},
+{'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
 {'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'}
 				];
 
@@ -877,29 +921,30 @@ Past and current contributors are :
 		background-color:dodgerblue;
 		color:white;
 	}
-    table.simple {                                                                      
-                  font-size: small;                                                           
-                          border-spacing:0;                                                   
-                          border-collapse:collapse;                                           
-                          border-bottom:3px solid #005a9c                                     
-        }                                                                                   
-        .simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}           
-        .simple th a{color:#fff;padding:3px 5px;text-align:left}                            
-        .simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}   
-        .simple td{padding:3px 10px;border-top:1px solid #ddd}                              
-        .simple tr:nth-child(even){background:#f0f6ff}
+	table.simple {
+		font-size: small;
+			border-spacing:0;
+			border-collapse:collapse;
+			border-bottom:3px solid #005a9c
+	}
+
     body.darkmode .simple th{background:#005a9c94;color:#ddd}
-    body.darkmode .simple th a{color:#ddd}
-    body.darkmode .simple tr:nth-child(even){background:#f0f6ff26}
+	body.darkmode .simple th a{color:#ddd}
+	body.darkmode .simple tr:nth-child(even){background:#f0f6ff26}
+
     body.darkmode :is(h4,h5,h6)+a.self-link::before {
         color: var(--heading-text);
     }
     body.darkmode img {
         background: none;
     }
-    body.darkmode section#references :target {
-        background: #04162d;
-    }
+    
+    .simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+	.simple th a{color:#fff;padding:3px 5px;text-align:left}
+	.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+	.simple td{padding:3px 10px;border-top:1px solid #ddd}
+	.simple tr:nth-child(even){background:#f0f6ff}
+    
   </style>
 
     	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">

@@ -73,29 +73,21 @@
 
 {% block introduction %}
 	<p>
-	The Core Person Vocabulary provides a minimum set of classes and properties for
-    describing a natural person, i.e. the individual as opposed to any role they may play in 
-    society or the relationships they have to other people, organisations and property; 
-    all of which contribute significantly to the broader concept of identity.
+	The Arachne Data Model (ADM) provides a minimum set of classes and properties for
+    describing a project with a contract. This model is being created by SEMIC to support the Arachne project by drafting a semantic model before writing technical artefacts.
 </p>
 {% endblock %}
 
 {% block summary %}
 <section id="abstract">
     <h2>Abstract</h2>
-The Core Person Vocabulary is a simplified, reusable and extensible data model that captures the fundamental characteristics of a Person.
+	The Arachne Data Model (ADM) provides a minimum set of classes and properties for
+    describing a project with a contract.
 </section>
 {% endblock %}
 
 {% block examples %}
-<h3 class="h3 examples" id="example-rdf_person">Example Person</h3>
-{% endblock %}
-
-{% block mappings %}
-<section class="informative">
-	<h2>Mappings</h2>
-    A mapping towards Schema.org can be found <a href="https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Person">here</a>
-</section>
+<h3 class="h3 examples" id="example-rdf_project">Example Project</h3>
 {% endblock %}
 
 {% block terminologyPrefixes %}
@@ -104,10 +96,14 @@ This specification uses the following prefixes to shorten the URIs for readibili
         <table id="table-namespaces" class="simple">
             <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
             <tbody>
+            <tr><td><code>adm</code></td><td><code>http://example.com/</code></td></tr>
             <tr><td><code>adms</code></td><td><code>http://www.w3.org/ns/adms#</code></td></tr>
-            <tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>           
+            <tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>
+            <tr><td><code>dbo</code></td><td><code>http://dbpedia.org/ontology/</code></td></tr>          
             <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
+            <tr><td><code>epo</code></td><td><code>http://data.europa.eu/a4g/ontology#</code></td></tr>
             <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
+            <tr><td><code>legal</code></td><td><code>http://www.w3.org/ns/legal#</code></td></tr>
             <tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
             <tr><td><code>person</code></td><td><code>http://www.w3.org/ns/person#</code></td></tr>
             <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
