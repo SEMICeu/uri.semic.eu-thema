@@ -11,12 +11,34 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:project1 rdfs:label "Project name"@en ;
+ex:project1 
+	adms:identifier ex:identifier1 ;
+	adms:status ex:status1 ;
+	rdfs:label "Project name"@en ;
+	ex:hasBeneficiary ex:beneficiary1 ;
 	dbo:projectStartDate "2012-01-01"^^xsd:date ;
 	dbo:projectEndDate "2012-06-01"^^xsd:date ;
-	adms:status ex:status1 ;
-	ex:hasBeneficiary ex:beneficiary1 ;
-	adms:identifier ex:identifier1 ;
+	adm:ECFinancialAssistance [
+		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR>;
+		adm:value "8733000"^^xsd:decimal ;
+		a adm:Amount .
+	];
+	adm:otherContributions [
+		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR>;
+		adm:value "4125000"^^xsd:decimal;
+		a adm:Amount .
+	];
+	adm:income [
+		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR>;
+		adm:value "12733.85"^^xsd:decimal;
+		a adm:Amount .
+	];	
+	adm:totalCost [
+		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR>;
+		adm:value "12870733.85"^^xsd:decimal;
+		a adm:Amount .
+	];
+	adm:thematicObjective <https://w3id.org/adm/codelist/thematicObjective/10>;
 	a dbo:Project .
 
 ex:status1 skos:prefLabel "Open"@en ;
