@@ -1,4 +1,4 @@
-@prefix adm: <http://example.com/> .
+@prefix adm: <https://w3id.org/adm/model/> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix cv: <http://data.europa.eu/m8g/> .
 @prefix dbo: <http://dbpedia.org/ontology/> .

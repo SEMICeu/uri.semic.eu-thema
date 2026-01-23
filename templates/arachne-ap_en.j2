@@ -631,13 +631,20 @@ The supportive entities are supporting the main entities in the Application Prof
 -->
 
 <section class="informative">
+    <h2 aria-level="1" role="heading" id="h2_codelist">
+        Code List
+    </h2> 												   
+    {% block codelist %}
+	    <p> No codelist defined </p>
+    {% endblock %}
+</section>
+
+<section class="informative">
     <h2> Examples </h2>
         {% block examples %}
 	<p> No examples defined </p>
         {% endblock %}
 </section>
-
-
 
 {% block usages %}
 <section class="informative">
@@ -759,7 +766,7 @@ Past and current contributors are :
 
 	    var prefixes = [ 
 {'pref':'ad:', 'ns': 'http://inspire.ec.europa.eu/ont/ad#'},
-{'pref':'adm:', 'ns': 'http://example.com/'},
+{'pref':'adm:', 'ns': 'https://w3id.org/adm/model/'},
 {'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
 {'pref':'atu:', 'ns': 'http://data.europa.eu/88u/dataset/'},
 {'pref':'cav:', 'ns': 'http://data.europa.eu/2sa/cav#'},
