@@ -2,7 +2,7 @@
   "@context": [
   "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/1.0.0/context/arachne.jsonld",
   {
-    "adm": "http://example.com/",
+    "adm": "https://w3id.org/adm/model/",
     "adms": "http://www.w3.org/ns/adms#",
     "dbo": "http://dbpedia.org/ontology/",
     "cv": "http://data.europa.eu/m8g/",
