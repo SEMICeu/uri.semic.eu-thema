@@ -16,58 +16,121 @@
   }],
   "@graph": [
     {
-     "@id": "ex:project1",
-     "@type": "Project",
-     "rdfs:label" : {
-       "@language": "en",
-       "@value": "Project name"
-     },
-      "dbo:projectStartDate" : {
-       "@type": "xsd:date",
-       "@value": "2012-01-01"
-     },
-     "dbo:projectEndDate" : {
-       "@type": "xsd:date",
-       "@value": "2012-06-01"
-     },
-     "adms:status" : {
-       "@id": "ex:status1"
-     },
-     "adm:hasBeneficiary" : {
-       "@id": "ex:beneficiary1"     
-     },
-     "adms:identifier" : {
-       "@id": "ex:identifier1"
-     }
-   },
+      "@id": "_:g0",
+      "@type": "adm:Amount",
+      "adm:currency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "adm:value": {
+        "@type": "xsd:decimal",
+        "@value": "8733000"
+      }
+    },
+    {
+      "@id": "_:g1",
+      "@type": "adm:Amount",
+      "adm:currency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "adm:value": {
+        "@type": "xsd:decimal",
+        "@value": "4125000"
+      }
+    },
+    {
+      "@id": "_:g2",
+      "@type": "adm:Amount",
+      "adm:currency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "adm:value": {
+        "@type": "xsd:decimal",
+        "@value": "12733.85"
+      }
+    },
+    {
+      "@id": "_:g3",
+      "@type": "adm:Amount",
+      "adm:currency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "adm:value": {
+        "@type": "xsd:decimal",
+        "@value": "12870733.85"
+      }
+    },
+    {
+      "@id": "ex:beneficiary1",
+      "@type": "adm:Beneficiary",
+      "adms:identifier": {
+        "@id": "ex:identifier2"
+      }
+    },
+    {
+      "@id": "ex:identifier1",
+      "@type": "adms:Identifier",
+      "skos:notation": "Project 0124"
+    },
+    {
+      "@id": "ex:identifier2",
+      "@type": "adms:Identifier",
+      "skos:notation": "5800012"
+    },
+    {
+      "@id": "ex:project1",
+      "@type": "dbo:Project",
+      "dbo:projectEndDate": {
+        "@type": "xsd:date",
+        "@value": "2012-06-01"
+      },
+      "dbo:projectStartDate": {
+        "@type": "xsd:date",
+        "@value": "2012-01-01"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Project name"
+      },
+      "adms:identifier": {
+        "@id": "ex:identifier1"
+      },
+      "adms:status": {
+        "@id": "ex:status1"
+      },
+      "adm:ECFinancialAssistance": {
+        "@id": "_:g0"
+      },
+      "adm:hasBeneficiary": {
+        "@id": "ex:beneficiary1"
+      },
+      "adm:income": {
+        "@id": "_:g2"
+      },
+      "adm:otherContributions": {
+        "@id": "_:g1"
+      },
+      "adm:thematicObjective": {
+        "@id": "https://w3id.org/adm/codelist/thematicObjective/10"
+      },
+      "adm:totalCost": {
+        "@id": "_:g3"
+      }
+    },
     {
       "@id": "ex:status1",
-      "@type": "Code",
-      "skos:prefLabel" : {
+      "@type": "skos:Concept",
+      "skos:prefLabel": {
         "@language": "en",
         "@value": "Open"
       }
     },
     {
-      "@id": "ex:beneficiary1",
-      "@type": "Beneficiary",
-      "adms:identifier" : {
-       "@id": "ex:identifier2"
-     }
+      "@id": "http://publications.europa.eu/resource/authority/currency/EUR",
+      "@type": "skos:Concept"
     },
     {
-      "@id": "ex:identifier1",
-      "@type": "Identifier",
-      "skos:notation" : {
-        "@value": "Project 0124"
-      }
-    },
-    {
-      "@id": "ex:identifier2",
-      "@type": "Identifier",
-      "skos:notation" : {
-        "@value": "5800012"
-      }
+      "@id": "https://w3id.org/adm/codelist/thematicObjective/10",
+      "@type": "skos:Concept"
     }
- ]
+  ]
 }

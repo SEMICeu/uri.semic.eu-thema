@@ -15,40 +15,43 @@ ex:project1
 	adms:identifier ex:identifier1 ;
 	adms:status ex:status1 ;
 	rdfs:label "Project name"@en ;
-	ex:hasBeneficiary ex:beneficiary1 ;
+	adm:hasBeneficiary ex:beneficiary1 ;
 	dbo:projectStartDate "2012-01-01"^^xsd:date ;
 	dbo:projectEndDate "2012-06-01"^^xsd:date ;
 	adm:ECFinancialAssistance [
-		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR>;
+		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR> ;
 		adm:value "8733000"^^xsd:decimal ;
-		a adm:Amount .
+		a adm:Amount
 	];
 	adm:otherContributions [
-		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR>;
-		adm:value "4125000"^^xsd:decimal;
-		a adm:Amount .
+		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR> ;
+		adm:value "4125000"^^xsd:decimal ;
+		a adm:Amount
 	];
 	adm:income [
-		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR>;
-		adm:value "12733.85"^^xsd:decimal;
-		a adm:Amount .
+		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR> ;
+		adm:value "12733.85"^^xsd:decimal ;
+		a adm:Amount
 	];	
 	adm:totalCost [
-		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR>;
-		adm:value "12870733.85"^^xsd:decimal;
-		a adm:Amount .
+		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR> ;
+		adm:value "12870733.85"^^xsd:decimal ;
+		a adm:Amount
 	];
-	adm:thematicObjective <https://w3id.org/adm/codelist/thematicObjective/10>;
+	adm:thematicObjective <https://w3id.org/adm/codelist/thematicObjective/10> ;
 	a dbo:Project .
 
 ex:status1 skos:prefLabel "Open"@en ;
 	a skos:Concept .
 
 ex:beneficiary1 adms:identifier ex:identifier2 ;
-	a ex:Beneficiary .
+	a adm:Beneficiary .
 
 ex:identifier1 skos:notation "Project 0124" ;
 	a adms:Identifier .
 
 ex:identifier2 skos:notation "5800012" ;
 	a adms:Identifier .
+
+<http://publications.europa.eu/resource/authority/currency/EUR> a skos:Concept .
+<https://w3id.org/adm/codelist/thematicObjective/10> a skos:Concept .
