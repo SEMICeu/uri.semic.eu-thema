@@ -4,8 +4,8 @@
   {
     "adm": "https://w3id.org/adm/model/",
     "adms": "http://www.w3.org/ns/adms#",
-    "dbo": "http://dbpedia.org/ontology/",
     "cv": "http://data.europa.eu/m8g/",
+    "dbo": "http://dbpedia.org/ontology/",
     "ex": "http://example.com/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "locn": "http://www.w3.org/ns/locn#",
@@ -15,6 +15,67 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   }],
   "@graph": [
+    {
+      "@id": "ex:project1",
+      "@type": "dbo:Project",
+      "dbo:projectEndDate": {
+        "@type": "xsd:date",
+        "@value": "2012-06-01"
+      },
+      "dbo:projectStartDate": {
+        "@type": "xsd:date",
+        "@value": "2012-01-01"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Project name"
+      },
+      "adms:identifier": {
+        "@id": "ex:identifier1"
+      },
+      "adms:status": {
+        "@id": "ex:status1"
+      },
+      "adm:ECFinancialAssistance": {
+        "@id": "_:g0"
+      },
+      "adm:hasBeneficiary": {
+        "@id": "ex:beneficiary1"
+      },
+      "adm:income": {
+        "@id": "_:g2"
+      },
+      "adm:otherContributions": {
+        "@id": "_:g1"
+      },
+      "adm:thematicObjective": {
+        "@id": "https://w3id.org/adm/codelist/thematicObjective/10"
+      },
+      "adm:totalCost": {
+        "@id": "_:g3"
+      },
+      "adm:hasBlock": {
+       	"@id": "ex:esf1"
+      }
+    },
+    {
+      "@id": "ex:esf1",
+      "@type": ["ESF","Block"],
+  	   "adm:dg": {
+        "@id": "http://publications.europa.eu/resource/authority/corporate-body/EMPL"
+       },
+       "adm:projectType": {
+        "@id": "https://w3id.org/adm/codelist/projectType/1"
+      },
+  	  "adm:peopleToTrain": {
+        "@value": "10",
+        "@type": "xsd:integer"
+      },
+       "adm:trainingHours": {
+        "@value": "160",
+        "@type": "xsd:integer"
+      }
+	},
     {
       "@id": "_:g0",
       "@type": "adm:MonetaryAmount",
@@ -89,53 +150,10 @@
       "@type": "adms:Identifier",
       "skos:notation": "5800012"
     },
-       {
+    {
       "@id": "ex:identifier3",
       "@type": "adms:Identifier",
       "skos:notation": "1457"
-    },
-    {
-      "@id": "ex:project1",
-      "@type": "dbo:Project",
-      "dbo:projectEndDate": {
-        "@type": "xsd:date",
-        "@value": "2012-06-01"
-      },
-      "dbo:projectStartDate": {
-        "@type": "xsd:date",
-        "@value": "2012-01-01"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Project name"
-      },
-      "adms:identifier": {
-        "@id": "ex:identifier1"
-      },
-      "adms:status": {
-        "@id": "ex:status1"
-      },
-      "adm:ECFinancialAssistance": {
-        "@id": "_:g0"
-      },
-      "adm:hasBeneficiary": {
-        "@id": "ex:beneficiary1"
-      },
-      "adm:income": {
-        "@id": "_:g2"
-      },
-      "adm:otherContributions": {
-        "@id": "_:g1"
-      },
-      "adm:thematicObjective": {
-        "@id": "https://w3id.org/adm/codelist/thematicObjective/10"
-      },
-      "adm:totalCost": {
-        "@id": "_:g3"
-      },
-      "adm:hasBlock": {
-       	"@id": "ex:esf1"
-      }
     },
     {
       "@id": "ex:status1",
@@ -154,22 +172,12 @@
       "@type": "skos:Concept"
     },
     {
-      "@id": "ex:esf1",
-      "@type": ["ESF","Block"],
-  	   "adm:dg": {
-        "@id": "http://publications.europa.eu/resource/authority/corporate-body/EMPL"
-       },
-       "adm:projectType": {
-        "@id": "https://w3id.org/adm/codelist/projectType/1"
-      },
-  	  "adm:peopleToTrain": {
-        "@value": "10",
-        "@type": "xsd:integer"
-      },
-       "adm:trainingHours": {
-        "@value": "160",
-        "@type": "xsd:integer"
-      }
-}
+      "@id": "https://w3id.org/adm/codelist/projectType/10",
+      "@type": "skos:Concept"
+    },
+    {
+      "@id": "http://publications.europa.eu/resource/authority/corporate-body/EMPL",
+      "@type": "skos:Concept"
+    }
   ]
 }

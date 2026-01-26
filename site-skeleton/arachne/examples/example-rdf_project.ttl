@@ -1,32 +1,15 @@
-@prefix dbo: <http://dbpedia.org/ontology/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix locn: <http://www.w3.org/ns/locn#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix adm: <https://w3id.org/adm/model/> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix ex: <http://example.com/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix person: <http://www.w3.org/ns/person#> .
-
-ex:beneficiary1 adms:identifier ex:identifier2 ;
-	adm:hasPartner ex:partner1 ;
-	a adm:Beneficiary .
-
-ex:partner1 adms:identifier ex:identifier3 ;
-	adm:hasPartner ex:partner1 ;
-	a adm:Partner .
-
-ex:identifier1 skos:notation "Project 0124" ;
-	a adms:Identifier .
-
-ex:identifier2 skos:notation "5800012" ;
-	a adms:Identifier .
-
-ex:identifier3 skos:notation "1457" ;
-	a adms:Identifier .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:project1 dbo:projectEndDate "2012-06-01"^^xsd:date ;
 	dbo:projectStartDate "2012-01-01"^^xsd:date ;
@@ -58,6 +41,29 @@ ex:project1 dbo:projectEndDate "2012-06-01"^^xsd:date ;
 	adm:hasBlock ex:esf1 ;
 	a dbo:Project .
 
+ex:esf1 adm:dg <http://publications.europa.eu/resource/authority/corporate-body/EMPL> ;
+	adm:projectType <https://w3id.org/adm/codelist/projectType/1> ;
+	adm:peopleToTrain 10 ;
+	adm:trainingHours 160 ;
+	a adm:ESF, adm:Block .
+
+ex:beneficiary1 adms:identifier ex:identifier2 ;
+	adm:hasPartner ex:partner1 ;
+	a adm:Beneficiary .
+
+ex:partner1 adms:identifier ex:identifier3 ;
+	adm:hasPartner ex:partner1 ;
+	a adm:Partner .
+
+ex:identifier1 skos:notation "Project 0124" ;
+	a adms:Identifier .
+
+ex:identifier2 skos:notation "5800012" ;
+	a adms:Identifier .
+
+ex:identifier3 skos:notation "1457" ;
+	a adms:Identifier .
+
 ex:status1 skos:prefLabel "Open"@en ;
 	a skos:Concept .
 
@@ -65,8 +71,6 @@ ex:status1 skos:prefLabel "Open"@en ;
 
 <https://w3id.org/adm/codelist/thematicObjective/10> a skos:Concept .
 
-ex:esf1 adm:dg <http://publications.europa.eu/resource/authority/corporate-body/EMPL> ;
-	adm:projectType <https://w3id.org/adm/codelist/projectType/1> ;
-	adm:peopleToTrain 10 ;
-	adm:trainingHours 160 ;
-	a adm:ESF, adm:Block . 
+<https://w3id.org/adm/codelist/projectType/10> a skos:Concept .
+
+<http://publications.europa.eu/resource/authority/corporate-body/EMPL> a skos:Concept .
