@@ -7,15 +7,15 @@
   "template": "egdc_casestudy_en.j2",
   "title": "EGDC Case Study",
   "publication-state": "Draft",
-  "publication-date": "2025-12-12",
+  "publication-date": "2026-01-25",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "EGDC",
   "site": "site-skeleton/egdc_casestudy",
-  "repourl": "https://github.com/SEMICeu/EGDC_CaseStudy/tree/master/releases/1.0.0",
-  "versionurl": "https://github.com/SEMICeu/EGDC_CaseStudy/tree/master/releases/1.0.0",
+  "repourl": "https://github.com/SEMICeu/EGDC_CaseStudy/tree/master/releases/1.0.1",
+  "versionurl": "https://github.com/SEMICeu/EGDC_CaseStudy/tree/master/releases/1.0.1",
   "feedbackurl": "https://github.com/SEMICeu/EGDC_CaseStudy/issues",
-  "standaardregisterurl" :"https://github.com/SEMICeu/EGDC_CaseStudy/blob/master/releases/1.0.0/Changelog.md",
+  "standaardregisterurl" :"https://github.com/SEMICeu/EGDC_CaseStudy/blob/master/releases/1.0.1/Changelog.md",
     "translation": [
       {
         "language":"en",
@@ -28,7 +28,7 @@
     "toolchainversion" : "3",
     "documentconfig": {
           "statuslabel" : "Draft",
-          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/EGDC_CaseStudy/releases/1.0.0"
+          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/EGDC_CaseStudy/releases/1.0.1"
     }
 },
 {
