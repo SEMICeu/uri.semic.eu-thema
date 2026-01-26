@@ -172,7 +172,7 @@
       "@type": "skos:Concept"
     },
     {
-      "@id": "https://w3id.org/adm/codelist/projectType/10",
+      "@id": "https://w3id.org/adm/codelist/projectType/1",
       "@type": "skos:Concept"
     },
     {

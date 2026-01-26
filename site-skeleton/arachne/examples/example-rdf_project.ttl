@@ -71,6 +71,6 @@ ex:status1 skos:prefLabel "Open"@en ;
 
 <https://w3id.org/adm/codelist/thematicObjective/10> a skos:Concept .
 
-<https://w3id.org/adm/codelist/projectType/10> a skos:Concept .
+<https://w3id.org/adm/codelist/projectType/1> a skos:Concept .
 
 <http://publications.europa.eu/resource/authority/corporate-body/EMPL> a skos:Concept .
