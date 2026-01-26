@@ -17,7 +17,7 @@
   "@graph": [
     {
       "@id": "_:g0",
-      "@type": "adm:Amount",
+      "@type": "adm:MonetaryAmount",
       "adm:currency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
@@ -28,7 +28,7 @@
     },
     {
       "@id": "_:g1",
-      "@type": "adm:Amount",
+      "@type": "adm:MonetaryAmount",
       "adm:currency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
@@ -39,7 +39,7 @@
     },
     {
       "@id": "_:g2",
-      "@type": "adm:Amount",
+      "@type": "adm:MonetaryAmount",
       "adm:currency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
@@ -50,7 +50,7 @@
     },
     {
       "@id": "_:g3",
-      "@type": "adm:Amount",
+      "@type": "adm:MonetaryAmount",
       "adm:currency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
@@ -64,6 +64,19 @@
       "@type": "adm:Beneficiary",
       "adms:identifier": {
         "@id": "ex:identifier2"
+      },
+      "adm:hasPartner": {
+        "@id": "ex:partner1"
+      }
+    },
+     {
+      "@id": "ex:partner1",
+      "@type": "adm:Partner",
+      "adms:identifier": {
+        "@id": "ex:identifier3"
+      },
+      "adm:hasPartner": {
+        "@id": "ex:partner1"
       }
     },
     {
@@ -75,6 +88,11 @@
       "@id": "ex:identifier2",
       "@type": "adms:Identifier",
       "skos:notation": "5800012"
+    },
+       {
+      "@id": "ex:identifier3",
+      "@type": "adms:Identifier",
+      "skos:notation": "1457"
     },
     {
       "@id": "ex:project1",
@@ -114,6 +132,9 @@
       },
       "adm:totalCost": {
         "@id": "_:g3"
+      },
+      "adm:hasBlock": {
+       	"@id": "ex:esf1"
       }
     },
     {
@@ -131,6 +152,24 @@
     {
       "@id": "https://w3id.org/adm/codelist/thematicObjective/10",
       "@type": "skos:Concept"
-    }
+    },
+    {
+      "@id": "ex:esf1",
+      "@type": ["ESF","Block"],
+  	   "adm:dg": {
+        "@id": "http://publications.europa.eu/resource/authority/corporate-body/EMPL"
+       },
+       "adm:projectType": {
+        "@id": "https://w3id.org/adm/codelist/projectType/1"
+      },
+  	  "adm:peopleToTrain": {
+        "@value": "10",
+        "@type": "xsd:integer"
+      },
+       "adm:trainingHours": {
+        "@value": "160",
+        "@type": "xsd:integer"
+      }
+}
   ]
 }
