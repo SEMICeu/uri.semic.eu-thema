@@ -1,6 +1,6 @@
 {
   "@context": [
-  "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/1.0.0/context/arachne.jsonld",
+  "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/0.0.1/context/arachne.jsonld",
   {
     "adm": "https://w3id.org/adm/model/",
     "adms": "http://www.w3.org/ns/adms#",
