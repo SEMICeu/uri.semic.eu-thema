@@ -17,26 +17,26 @@ ex:project1 dbo:projectEndDate "2012-06-01"^^xsd:date ;
 	adms:identifier ex:identifier1 ;
 	adms:status ex:status1 ;
 	adm:ECFinancialAssistance [
-		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR> ;
-		adm:value "8733000"^^xsd:decimal ;
-		rdf:type adm:MonetaryAmount ;
+		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
+		epo:hasAmountValue "8733000"^^xsd:decimal ;
+		rdf:type epo:MonetaryValue ;
 	] ;
 	adm:hasBeneficiary ex:beneficiary1 ;
 	adm:income [
-		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR> ;
-		adm:value 12733.85 ;
-		rdf:type adm:MonetaryAmount ;
+		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
+		epo:hasAmountValue 12733.85 ;
+		rdf:type epo:MonetaryValue ;
 	] ;
 	adm:otherContributions [
-		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR> ;
-		adm:value "4125000"^^xsd:decimal ;
-		rdf:type adm:MonetaryAmount ;
+		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
+		epo:hasAmountValue "4125000"^^xsd:decimal ;
+		rdf:type epo:MonetaryValue ;
 	] ;
 	adm:thematicObjective <https://w3id.org/adm/codelist/thematicObjective/10> ;
 	adm:totalCost [
-		adm:currency <http://publications.europa.eu/resource/authority/currency/EUR> ;
-		adm:value 12870733.85 ;
-		rdf:type adm:MonetaryAmount ;
+		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
+		epo:hasAmountValue 12870733.85 ;
+		rdf:type epo:MonetaryValue ;
 	] ;
 	adm:hasBlock ex:esf1 ;
 	a dbo:Project .

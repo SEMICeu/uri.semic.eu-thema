@@ -78,44 +78,44 @@
 	},
     {
       "@id": "_:g0",
-      "@type": "adm:MonetaryAmount",
-      "adm:currency": {
+      "@type": "epo:MonetaryValue",
+      "epo:hasCurrency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
-      "adm:value": {
+      "epo:hasAmountValue": {
         "@type": "xsd:decimal",
         "@value": "8733000"
       }
     },
     {
       "@id": "_:g1",
-      "@type": "adm:MonetaryAmount",
-      "adm:currency": {
+      "@type": "epo:MonetaryValue",
+      "epo:hasCurrency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
-      "adm:value": {
+      "epo:hasAmountValue": {
         "@type": "xsd:decimal",
         "@value": "4125000"
       }
     },
     {
       "@id": "_:g2",
-      "@type": "adm:MonetaryAmount",
-      "adm:currency": {
+      "@type": "epo:MonetaryValue",
+      "epo:hasCurrency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
-      "adm:value": {
+      "epo:hasAmountValue": {
         "@type": "xsd:decimal",
         "@value": "12733.85"
       }
     },
     {
       "@id": "_:g3",
-      "@type": "adm:MonetaryAmount",
-      "adm:currency": {
+      "@type": "epo:MonetaryValue",
+      "epo:hasCurrency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
-      "adm:value": {
+      "epo:hasAmountValue": {
         "@type": "xsd:decimal",
         "@value": "12870733.85"
       }
