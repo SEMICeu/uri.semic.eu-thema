@@ -6,6 +6,7 @@
     "adms": "http://www.w3.org/ns/adms#",
     "cv": "http://data.europa.eu/m8g/",
     "dbo": "http://dbpedia.org/ontology/",
+    "epo": "http://data.europa.eu/a4g/ontology#",
     "ex": "http://example.com/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "locn": "http://www.w3.org/ns/locn#",

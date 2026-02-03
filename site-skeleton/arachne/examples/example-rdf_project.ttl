@@ -2,6 +2,7 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix cv: <http://data.europa.eu/m8g/> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix epo: <http://data.europa.eu/a4g/ontology#> .
 @prefix ex: <http://example.com/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
