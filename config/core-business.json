@@ -35,7 +35,7 @@
   "name": "core-business-ap-draft",
   "type": "ap",
   "eap": "CoreVocabularies.EAP",
-  "diagram": "Core_Business",
+  "diagram": "Core_Business_draft",
   "template": "core-business-ap_en.j2",
   "title": "Core Business Vocabulary draft",
   "publication-state": "Semic Recommendation",
