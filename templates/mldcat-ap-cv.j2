@@ -1,0 +1,146 @@
+<section id="controlled-vocs" class="informative">
+  <h2>Controlled Vocabularies</h2>
+
+<h3>Requirements for controlled vocabularies</h3>
+The following is a list of requirements that were identified for the controlled vocabularies to be recommended in this Application Profile.
+Controlled vocabularies SHOULD:
+<ul>
+<li>Be published under an open licence.</li>
+<li>Be operated and/or maintained by an institution of the European Union, by a recognised standards organisation or another trusted organisation.</li>
+<li>Be properly documented.</li>
+<li>Have labels in multiple languages, ideally in all official languages of the European Union.</li>
+<li>Contain a relatively small number of terms (e.g. 10-25) that are general enough to enable a wide range of resources to be classified.</li>
+<li>Have terms that are identified by URIs with each URI resolving to documentation about the term.</li>
+<li>Have associated persistence and versioning policies.</li>
+</ul>
+These criteria do not intend to define a set of requirements for controlled vocabularies in general; they are only intended to be used for the selection of the controlled vocabularies that are proposed for this Application Profile.
+
+<h3>Expected usage of controlled vocabularies</h3>
+
+To increase the interoperability, the value spaces of properties can be further harmonised using shared controlled vocabularies.
+This kind of restriction may be subject to a varying interpretation on what the expected usage of a controlled vocabulary is.
+To ensure a common interpretation the following expectations are defined:
+
+<ul>
+<li id="cv-a"> The property MUST use as range values codes from {codelist} <br/>
+This expectation results in that the value space is closed under the codelist. 
+Validation systems SHOULD produce errors.
+All profiles in the ecosystem MUST avoid conflicts by creating subproperties.
+
+</li>
+<li id="cv-b"> The property MUST have at least one value from {codelist} <br/>
+This expectation makes the value space minimally constrained.
+Validation systems SHOULD produce warnings.
+All profiles in the ecosystem MUST adopt this interpretation in case they want to restrict the value space.
+Adopting the former expectation will lead to cross-profile interpretations challenges.
+
+</li>
+<li id="cv-c"> The property IS RECOMMENDED to use as range values codes from {codelist} <br/>
+The value space is closed under the codelist, but other values are tolerated. 
+Recommending means expressing a strong preference. 
+To make this stronger direction towards harmonisation visible in the data exchanges, validation systems SHOULD produce warnings.
+
+</li>
+<li id="cv-d">The property MAY use as range values codes from {codelist} <br/>
+The value space is closed under the codelist, but other values are accepted.
+This expectation is more a hint to be used. 
+As there is no obligation nor strongly suggestion expressed here, the use of other codelists is valid is all cases.
+Therefore validation systems MAY produce warnings but users are free to ignore them.
+No validation in this case is also acceptable.
+</li>
+</ul>
+
+<p>
+The first two (and preferably also the others) SHOULD only be used for requirements that can be verified by a machine.
+If the validation can only be realised with the involvement of humans, then a less strong requirement (RECOMMMENDED or MAY) is used, 
+even if the intention is to be very strict.
+This is to ensure that the provided SHACL representations correspond closely to all use cases possible. 
+Stronger enforcements are left for implementations as they have control on actual data exchange.
+</p>
+
+
+
+
+
+<h3>Controlled vocabularies to be used</h3>
+The tables below show the usage of the codelists with the expected qualification. 
+
+<h4>Properties with controlled vocabularies that MUST be used for the listed properties</h4>
+
+<table id="table-cv" class="simple">
+	<thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
+	<tbody>
+		<tr><td>dcat:mediaType</td><td><a href="#{{ "Distribution" | urlencode}}">Distribution</a></td><td><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA Media Types</a></td><td></td></tr>
+		<tr><td>dct:format</td><td><a href="#{{ "Distribution" | urlencode}}">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/file-type">EU Vocabularies File Type Named Authority List</a></td><td></td></tr>
+		<tr><td>dct:language</td><td><a href="#{{ "Dataset" | urlencode}}">Dataset</a>, <a href="#{{ "Distribution" | urlencode}}">Distribution</a></td><td><a href="http://publications.europa.eu/resource/authority/language">EU Vocabularies Languages Named Authority List</a></td><td></td></tr>
+		<tr><td>spdx:algorithm</td><td><a href="#{{ "Checksum" | urlencode}}">Checksum</a></td><td><a href="https://spdx.org/rdf/terms/#d4e2129">Checksum algorithm members</a></td><td>The members listed are considered a controlled vocabulary of supported checksum algorithms.</td></tr>          
+	</tbody>
+</table>
+<h4>Properties with AT LEAST 1 value from the controlled vocabularies</h4>
+
+<table id="table-cv" class="simple">
+	<thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
+	<tbody>
+		<tr><td>dcat:theme</td><td><a href="#{{ "Dataset" | urlencode}}">Dataset</a></td><td><a href="http://publications.europa.eu/resource/authority/data-theme">Dataset Theme Vocabulary</a></td><td>The values to be used for this property are the URIs of the concepts in the vocabulary.</td></tr>
+	</tbody>
+</table>
+
+<h4>Properties with a RECOMMENDED use of controlled vocabularies</h4>
+<table id="table-cv" class="simple">
+	<thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
+	<tbody>
+		<tr><td>dct:accessRights</td><td><a href="#{{ "Dataset" | urlencode}}">Dataset</a></td><td><a href="http://publications.europa.eu/resource/authority/access-right">Access Rights Named Authority List</td><td>Use one of the following values (:PUBLIC, :RESTRICTED, :NON_PUBLIC).</td></tr>
+	</tbody>
+</table>
+
+<h4>Properties with MAY use a controlled vocabularies</h4>
+<table id="table-cv" class="simple">
+	<thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
+	<tbody>
+    <tr>
+      <td>adms:status</td>
+      <td><a href="#{{ "Dataset" | urlencode}}">Dataset</a>, <a href="#{{ "Flow" | urlencode}}">Flow</a></td>
+      <td><a href="https://semiceu.github.io/MLDCAT-AP/releases/codelist/dataset-status.html">Dataset status</a>, <a href="https://semiceu.github.io/MLDCAT-AP/releases/codelist/flow-status.html">Flow status</a></td>
+      <td>This list of terms provide status of datasets and flows.</td>
+    </tr>
+		<tr>
+      <td>dct:publisher</td>
+      <td><a href="#{{ "Catalogue" | urlencode}}">Catalogue</a>, <a href="#{{ "Dataset" | urlencode}}">Dataset</a></td>
+      <td><a href="http://publications.europa.eu/resource/authority/corporate-body">EU Vocabularies Corporate bodies Named Authority List</a></td>
+      <td>The Corporate bodies NAL must be used for European institutions and a small set of international organisations. In case of other types of organisations, national, regional or local vocabularies should be used.</td>
+    </tr>
+    <tr>
+      <td>dct:type</td>
+      <td><a href="#{{ "Dataset" | urlencode}}">Dataset</a>, <a href="#{{ "EstimationProcedure" | urlencode}}">Estimation Procedure</a>, <a href="#{{ "Feature" | urlencode}}">Feature</a>, <a href="#{{ "FlowParameter" | urlencode}}">Flow Parameter</a>, <a href="#{{ "PredictionFeature" | urlencode}}">Prediction Feature</a></td>
+      <td><a href="http://publications.europa.eu/resource/authority/dataset-type">Dataset-type authority table</a>, <a href="https://semiceu.github.io/MLDCAT-AP/releases/codelist/estimationprocedure-type.html">Estimation Procedure type</a>, <a href="https://semiceu.github.io/MLDCAT-AP/releases/codelist/flowparameter-type.html">Flow Parameter type</a>, <a href="https://semiceu.github.io/MLDCAT-AP/releases/codelist/predictionfeature-type.html">Prediction Feature type</a></td>
+      <td>This list of terms provide types of datasets, estimation procedures, features, flow parameters, prediction features.</td>
+    </tr>
+    <tr>
+      <td>dpv:hasData</td>
+      <td><a href="#{{ "Distribution" | urlencode}}">Distribution</a></td>
+      <td><a href="https://w3id.org/dpv#vocab-personal-data">Distribution data categories</a></td>
+      <td>This list of terms provide types of data included in a distribution.</td>
+    </tr>
+    <tr>
+      <td>it6:hasTaskType</td>
+      <td><a href="#{{ "Task" | urlencode}}">Task</a></td>
+      <td><a href="https://semiceu.github.io/MLDCAT-AP/releases/codelist/task-type.html">Task type</a></td>
+      <td>This list of terms provide types of tasks.</td>
+    </tr>
+    <tr>
+      <td>it6:visibility</td>
+      <td><a href="#{{ "Dataset" | urlencode}}">Dataset</a>, <a href="#{{ "Collection" | urlencode}}">Collection</a></td>
+      <td><a href="https://semiceu.github.io/MLDCAT-AP/releases/codelist/dataset-visibility.html">Dataset visibility</a>, <a href="https://semiceu.github.io/MLDCAT-AP/releases/codelist/collection-visibility.html">Collection visibility</a></td>
+      <td>This list of terms provide visibility of datasets and collections.</td>
+    </tr>
+	</tbody>
+</table>
+
+
+
+
+
+<h3>Other controlled vocabularies</h3>
+In addition to the proposed common controlled vocabularies, which are mandatory to ensure minimal interoperability, implementers are encouraged to publish and to use further region or domain-specific vocabularies that are available online. While those may not be recognised by general implementations of the Application Profile, they may serve to increase interoperability across applications in the same region or domain. Examples are the full set of concepts in <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eurovoc">EuroVoc</a>, <a href="https://dspacecris.eurocris.org/">the CERIF standard vocabularies</a>, <a href="http://www.oclc.org/content/dam/oclc/dewey/versions/print/intro.pdf">the Dewey Decimal Classification</a> and numerous other schemes.
+
+</section>

@@ -1,11 +1,12 @@
 {
   "@context": [
-  "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/1.0.0/context/arachne.jsonld",
+  "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/0.0.1/context/arachne.jsonld",
   {
     "adm": "https://w3id.org/adm/model/",
     "adms": "http://www.w3.org/ns/adms#",
     "cv": "http://data.europa.eu/m8g/",
     "dbo": "http://dbpedia.org/ontology/",
+    "epo": "http://data.europa.eu/a4g/ontology#",
     "ex": "http://example.com/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "locn": "http://www.w3.org/ns/locn#",
@@ -78,44 +79,44 @@
 	},
     {
       "@id": "_:g0",
-      "@type": "adm:MonetaryAmount",
-      "adm:currency": {
+      "@type": "epo:MonetaryValue",
+      "epo:hasCurrency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
-      "adm:value": {
+      "epo:hasAmountValue": {
         "@type": "xsd:decimal",
         "@value": "8733000"
       }
     },
     {
       "@id": "_:g1",
-      "@type": "adm:MonetaryAmount",
-      "adm:currency": {
+      "@type": "epo:MonetaryValue",
+      "epo:hasCurrency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
-      "adm:value": {
+      "epo:hasAmountValue": {
         "@type": "xsd:decimal",
         "@value": "4125000"
       }
     },
     {
       "@id": "_:g2",
-      "@type": "adm:MonetaryAmount",
-      "adm:currency": {
+      "@type": "epo:MonetaryValue",
+      "epo:hasCurrency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
-      "adm:value": {
+      "epo:hasAmountValue": {
         "@type": "xsd:decimal",
         "@value": "12733.85"
       }
     },
     {
       "@id": "_:g3",
-      "@type": "adm:MonetaryAmount",
-      "adm:currency": {
+      "@type": "epo:MonetaryValue",
+      "epo:hasCurrency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
-      "adm:value": {
+      "epo:hasAmountValue": {
         "@type": "xsd:decimal",
         "@value": "12870733.85"
       }

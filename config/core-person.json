@@ -57,5 +57,37 @@
         "mergefile":"core-person-ap_en_merged.jsonld"
       }
     ]
+},
+{
+  "name": "core-person-ap-draft",
+  "type": "ap",
+  "eap": "CoreVocabularies.EAP",
+  "diagram": "Core_Person",
+  "template": "core-person-ap_en.j2",
+  "title": "Core Person Vocabulary - draft",
+  "publication-state": "Semic Recommendation",
+  "publication-date": "2026-02-09",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "contributors-file": "stakeholders.csv",
+  "contributors-column": "CoreVoc",
+  "site": "site-skeleton/core-person",
+  "repourl": "https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.1.1",
+  "versionurl": "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1",
+  "feedbackurl": "https://github.com/SEMICeu/Core-Person-Vocabulary/issues",
+  "standaardregisterurl" : "https://github.com/SEMICeu/Core-Person-Vocabulary/blob/master/releases/2.1.1/Changelog.md",
+    "translation": [
+      {
+        "language":"en",
+        "template":"core-person-ap_en.j2",
+        "title": "Core Person Vocabulary draft",
+        "translationjson":"core-person-ap_en.json",
+        "mergefile":"core-person-ap_en_merged.jsonld"
+      }
+    ],
+    "toolchainversion" : "3",
+    "documentconfig": {
+          "statuslabel" : "SEMIC Recommendation",
+          "editorDocumentroot" : "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1"
+    }
 }
 ]
