@@ -19,6 +19,7 @@
 	dct:issued "2014-04-06T23:21:47"^^xsd:dateTime ;
 	dcat:keyword "credit_scoring", "finance_problem", "mythbusting_1", "OpenML-CC18", "OpenML100", "study_1", "study_123", "study_14", "study_144", "study_15", "study_20", "study_218", "study_241", "study_34", "study_37", "study_41", "study_50", "study_52", "study_7", "study_70", "study_98", "study_99", "uci" ;
 	dcat:landingPage <https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)> ;
+	dct:creator <http://openml.org/openml/agent/1> ;
 	dct:publisher <http://openml.org/openml/agent/2> ;
 	adms:status <http://openml.org/openml/dataset-status#active> ;
 	dct:title "credit-g" ;

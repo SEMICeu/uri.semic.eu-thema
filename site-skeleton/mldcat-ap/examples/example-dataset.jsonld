@@ -30,6 +30,7 @@
             "study_218", "study_241", "study_34", "study_37", "study_41", "study_50",
             "study_52", "study_7", "study_70", "study_98", "study_99", "uci"],
             "Dataset.landingPage": "https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)",
+            "Dataset.creator": "http://openml.org/openml/agent/1",
             "Dataset.publisher": "http://openml.org/openml/agent/2",
             "Dataset.status": "http://openml.org/openml/dataset-status#active",
             "Dataset.title": "credit-g",
