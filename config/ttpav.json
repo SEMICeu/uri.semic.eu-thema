@@ -2,7 +2,7 @@
 {
   "name": "ttpav",
   "type": "ap",
-  "eap": "DGJUST.eap",
+  "eap": "TTPAV.eap",
   "diagram": "Political Advertisement",
   "template": "ttpav-ap_en.j2",
   "title": "Transparency and Targeting of Political Advertisement Vocabulary",
