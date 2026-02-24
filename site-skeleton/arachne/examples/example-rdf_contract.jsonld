@@ -1,0 +1,129 @@
+{
+  "@context": [
+  "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/0.0.1/context/arachne.jsonld",
+  {
+    "adm": "https://w3id.org/adm/model/",
+    "adms": "http://www.w3.org/ns/adms#",
+    "cv": "http://data.europa.eu/m8g/",
+    "dbo": "http://dbpedia.org/ontology/",
+    "dct": "http://purl.org/dc/terms/",
+    "epo": "http://data.europa.eu/a4g/ontology#",
+    "ex": "http://example.com/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "legal": "http://www.w3.org/ns/legal#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "person": "http://www.w3.org/ns/person#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }],
+  "@graph": [
+    {
+      "@id": "ex:contract1",
+      "@type": "adm:Contract",
+      "adms:identifier": {
+        "@id": "ex:identifier4"
+      },
+      "adm:belongsTo": {
+        "@id": "ex:project2"
+      },
+      "adm:hasContractor": {
+        "@id": "ex:legalEntity1"
+      },
+      "adm:contractType": {
+        "@id": "http://publications.europa.eu/resource/authority/contract-nature/works"
+      },
+      "adm:modified": true,
+      "epo:hasContractConclusionDate": {
+        "@type": "xsd:date",
+        "@value": "2015-12-20"
+      },
+      "adm:initialEndDate": {
+        "@type": "xsd:date",
+        "@value": "2017-03-312"
+      },
+      "dct:title": {
+        "@language": "en",
+        "@value": "Construction Management Services for the reconstruction of the Toga pass"
+      },
+      "epo:hasContractValue": {
+        "@id": "_:g4"
+      },
+      "adm:hasContractAddenda": {
+        "@id": "ex:addenda1"
+      },
+     
+
+    },
+    {
+      "@id": "ex:identifier4",
+      "@type": "adms:Identifier",
+      "skos:notation": "Cont-7812355/003"
+    },
+    {
+      "@id": "ex:project2",
+      "@type": "dbo:Project",
+      "adms:identifier": {
+        "@id": "ex:identifier5"
+      }
+    },
+     {
+      "@id": "ex:identifier5",
+      "@type": "adms:Identifier",
+      "skos:notation": "123456"
+    },
+    {
+      "@id": "ex:legalEntity1",
+      "@type": "legal:LegalEntity",
+      "adms:identifier": {
+        "@id": "ex:identifier6"
+      }
+    },
+     {
+      "@id": "ex:identifier6",
+      "@type": "adms:Identifier",
+      "skos:notation": "BE01287745"
+    },
+     {
+      "@id": "http://publications.europa.eu/resource/authority/contract-nature/works",
+      "@type": "skos:Concept",
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Works"
+      }
+     },
+     {
+      "@id": "_:g4",
+      "@type": "epo:MonetaryValue",
+      "epo:hasCurrency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "epo:hasAmountValue": {
+        "@type": "xsd:decimal",
+        "@value": "12500"
+      }
+    },
+    {
+      "@id": "ex:addenda1",
+      "@type": "adm:ContractAddenda",
+      "adm:amount": {
+        "@id": "_:g5"
+      },
+      "adm:count": {
+        "@type": "xsd:integer",
+        "@value": "4"
+      }
+    },
+    {
+      "@id": "_:g5",
+      "@type": "epo:MonetaryValue",
+      "epo:hasCurrency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "epo:hasAmountValue": {
+        "@type": "xsd:decimal",
+        "@value": "12000"
+      }
+    }
+  ]
+}
