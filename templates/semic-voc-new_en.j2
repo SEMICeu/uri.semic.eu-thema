@@ -274,9 +274,6 @@
 -->
 	This Vocabulary has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }} published at {{ metadata.issued }}.
         </p>
-        <p>
-            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="{{ metadata.standaardregisterurl }}">Changelog</a>.
-        </p>
 </section>
 {% endblock %}
 
@@ -590,28 +587,12 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
 
 Supporting entities complement the main entities in the Vocabulary. 
 The scope and objectives of the Vocabulary are fully covered by the main entities; supporting entities serve as property ranges or as subclasses used in specific use cases. 
-In this context, supporting entities are those defined in the same namespace as the main entities; imported entities are listed in a subsequent section.
-
 
 {% for entity in classes | sort(attribute=sortattr) %}
 {% if entity.rawTags['class-usage-scope'] != "main"   %}
 {% if entity.rawTags['class-usage-scope'] != "import"   %}
    {{ renderentity(entity) }}
 {% endif %}
-{% endif %}
-{% endfor %}
-
-</section>
-
-<section>
-<h2>
-   Imported Supporting Entities
-</h2>
-The supporting entities are supporting the main entities in the Vocabulary. 
-
-{% for entity in classes | sort(attribute=sortattr) %}
-{% if entity.rawTags['class-usage-scope'] == "import"   %}
-   {{ renderentity(entity) }}
 {% endif %}
 {% endfor %}
 
