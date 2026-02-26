@@ -1,0 +1,58 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix adm: <https://w3id.org/adm/model/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix epo: <http://data.europa.eu/a4g/ontology#> .
+@prefix ex: <http://example.com/> .
+@prefix legal: <http://www.w3.org/ns/legal#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+
+ex:contract1 adms:identifier ex:identifier4 ;
+	adm:belongsTo ex:project2 ;
+	adm:hasContractor ex:legalEntity1 ;
+	adm:contractType <http://publications.europa.eu/resource/authority/contract-nature/works> ;
+	adm:modified true ;
+	epo:hasContractConclusionDate "2015-12-20"^^xsd:date ;
+	adm:initialEndDate "2017-03-312"^^xsd:date ;
+	dcterms:title "Construction Management Services for the reconstruction of the Toga pass"@en ;
+	epo:hasContractValue [
+		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
+		epo:hasAmountValue "12500"^^xsd:decimal ;
+		rdf:type epo:MonetaryValue ;
+	] ;
+	adm:hasContractAddenda ex:addenda1 ;
+	a adm:Contract .
+
+ex:identifier4 skos:notation "Cont-7812355/003" ;
+	a adms:Identifier .
+
+ex:project2 adms:identifier ex:identifier5 ;
+	a dbo:Project .
+
+ex:identifier5 skos:notation "123456" ;
+	a adms:Identifier .
+
+ex:legalEntity1 adms:identifier ex:identifier6 ;
+	a legal:LegalEntity .
+
+ex:identifier6 skos:notation "BE01287745" ;
+	a adms:Identifier .
+
+<http://publications.europa.eu/resource/authority/contract-nature/works> skos:prefLabel "Works"@en ;
+	a skos:Concept .
+
+ex:addenda1 adm:amount [
+		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
+		epo:hasAmountValue "12000"^^xsd:decimal ;
+		rdf:type epo:MonetaryValue ;
+	] ;
+	adm:count 4 ;
+	a adm:ContractAddenda .
+

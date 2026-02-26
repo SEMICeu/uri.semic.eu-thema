@@ -1,0 +1,66 @@
+[
+{
+  "name": "ttpav",
+  "type": "ap",
+  "eap": "TTPAV.eap",
+  "diagram": "Political Advertisement",
+  "template": "ttpav-ap_en.j2",
+  "title": "Transparency and Targeting of Political Advertisement Vocabulary",
+  "publication-state": "Draft",
+  "publication-date": "2026-02-19",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "contributors-file": "stakeholders.csv",
+  "contributors-column": "TTPAV",
+  "site": "site-skeleton/ttpav",
+  "repourl": "https://github.com/SEMICeu/TTPAV/tree/master/releases/0.0.1",
+  "versionurl": "https://semiceu.github.io/TTPAV/releases/0.0.1",
+  "feedbackurl": "https://github.com/SEMICeu/TTPAV/issues",
+  "standaardregisterurl" :"https://github.com/SEMICeu/TTPAV/blob/master/releases/0.0.1/Changelog.md",
+    "translation": [
+      {
+        "language":"en",
+        "template":"ttpav-ap_en.j2",
+        "title": "Transparency and Targeting of Political Advertisement Vocabulary",
+        "translationjson":"ttpav-ap_en.json",
+        "mergefile":"ttpav-ap_en_merged.jsonld"
+      }
+    ],
+    "toolchainversion" : "3",
+    "documentconfig": {
+          "statuslabel" : "Draft",
+          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/TTPAV/releases/0.0.1"
+    }
+},
+{
+"name": "lfds-voc",
+"type": "voc",
+"eap": "LFDS.eap",
+"diagram": "LFDS",
+"template": "lfds-ap_en.j2",
+"title": "Legislative & Digital Statement Vocabulary",
+"publication-state": "Draft",
+"publication-date": "2025-05-05",
+"license": "https://creativecommons.org/licenses/by/4.0/",
+"contributors-file": "stakeholders.csv",
+"contributors-column": "LFDS",
+"site": "site-skeleton/lfds",
+"repourl": "https://github.com/SEMICeu/LFDS/tree/master/releases/0.1.0",
+"versionurl": "https://semiceu.github.io/LFDS/releases/0.1.0",
+"feedbackurl": "https://github.com/SEMICeu/LFDS/issues",
+"standaardregisterurl" :"https://github.com/SEMICeu/LFDS/blob/master/releases/0.1.0/Changelog.md",
+  "translation": [
+    {
+      "language":"en",
+      "template":"lfds-ap_en.j2",
+      "title": "Legislative Financial & Digital Statement Vocabulary",
+      "translationjson":"lfds-ap_en.json",
+      "mergefile":"lfds-ap_en_merged.jsonld"
+    }
+  ],
+  "toolchainversion" : "3",
+  "documentconfig": {
+        "statuslabel" : "Draft",
+        "editorDocumentroot" : "https://semiceu.github.io/LFDS/releases/0.1.0"
+  }
+}
+]
