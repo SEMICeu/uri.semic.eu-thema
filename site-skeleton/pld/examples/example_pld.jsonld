@@ -1,0 +1,97 @@
+{
+  "@context": [
+    "https://semiceu.github.io/uri.semic.eu-generated/PLD/releases/1.0.0/context/pld.jsonld",
+    {
+      "cdm": "http://publications.europa.eu/ontology/cdm#",
+      "pld": "http://example.com/ontology/pld#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "identifier": "@id",
+      "documentType": "@type",
+      "type": "@type",
+      "caseNumber": "internalIdentifier",
+      "courtName": {
+         "@id": "NationalCourt.name",
+         "@language": "fr"
+      },
+      "courtType": {
+        "@id": "NationalCourt.type",
+        "@type": "@id",
+        "@context": {
+          "@base": "http://publications.europa.eu/resource/authority/court-type/"
+        }
+      },
+      "decisionDate": "dateOfDocument",
+      "country": {
+        "@id": "spatial",
+        "@type": "@id",
+        "@context": {
+          "@base": "http://publications.europa.eu/resource/authority/country/"
+        }
+      },
+      "language": {
+        "@id": "languageOfProcedure",
+        "@type": "@id",
+        "@context": {
+          "@base": "http://publications.europa.eu/resource/authority/language/"
+        }
+      },
+      "publisher": "publishedInOfficialJournal",
+      "accessRights": {
+        "@id": "accessRestriction",
+        "@type": "@id",
+        "@context": {
+          "@base": "http://publications.europa.eu/resource/authority/access-right/"
+        }
+      },
+      "abstract": {
+        "@id": "summary",
+        "@container": "@set",
+        "@context": {
+        "value": "@value",
+        "language": "@language"
+      }
+      },
+      "descriptions": {
+        "@id": "description",
+        "@container": "@language"
+      }
+    }
+  ],
+  "@graph": [
+{
+  "identifier": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000049774997",
+  "documentType": "ProductLiabilityJudgment",
+  "ecli": "ECLI:FR:CCASS:2024:CR00903",
+  "caseNumber": "22-81.808",
+  "deliveredByCourtNational": {
+    "type": "NationalCourt",
+    "courtName": "Cour de cassation",
+    "courtType": "NAT_COURT_SUPREME",
+    "country": "FRA"
+  },
+  "decisionDate": "2024-06-19",
+  "language": "FRA",
+  "publisher": "Légifrance",
+  "accessRights": "PUBLIC",
+  "legalBasis": "Directive (EU) 2024/2853 of the European Parliament and of the Council of 23 October 2024 on liability for defective products and repealing Council Directive 85/374/EEC",
+  "abstract": [
+    {
+      "value": "Le seul manquement d'une banque aux obligations de vigilance, imposées par les articles L. 561-5 à L. 561-10-2 du code monétaire et financier, ne constitue pas un concours apporté à une opération de blanchiment du produit des infractions commises par son client.\nEn revanche, la mise à disposition par une banque d'un compte bancaire dans l'un de ses établissements et l'exécution d'ordres de virement des sommes y figurant vers des comptes à l'étranger caractérisent la participation de la banque à des opérations de blanchiment, lorsque cette dernière avait connaissance de l'origine illicite des fonds.\nN'encourt pas la censure la cour d'appel qui, pour condamner une banque du chef de blanchiment, statue par des motifs, relevant de son appréciation souveraine, dont il résulte d'une part, qu'un compte a été mis à la disposition des auteurs d'agissements frauduleux et des ordres de virements vers des comptes à l'étranger exécutés, d'autre part, qu'au regard des informations dont elle disposait concernant le fonctionnement de ce compte, la banque ne pouvait ignorer l'origine frauduleuse des fonds y figurant, enfin, que, malgré cette connaissance, la banque et ses représentants n'ont pas fait en temps et en heure les déclarations de soupçon exigées afin de bénéficier de la cause d'irresponsabilité pénale prévue par l'article L. 561-22, IV, du code monétaire et  financier, qui instaure une immunité pénale pour les personnes ayant fait de bonne foi la déclaration prévue à l'article L. 561-15 du même code",
+      "language": "fr"
+    }
+  ],
+  "subject": "Product liability",
+  "descriptions": {
+    "fr": "Cassation criminelle - BLANCHIMENT - Blanchiment par concours à une opération de placement, de dissimulation ou de conversion d'un produit d'un crime ou d'un délit - Caractérisation - Seul manquement à l'obligation de vigilance d'une banque (non) - Mise à disposition d'un compte bancaire et exécution d'ordres de virement à l'étranger en connaissance de l'origine illicite des fonds (oui) - Appréciation souveraine<br/>"
+  },
+  "contributedToByAgent": {
+    "type": "Agent",
+    "Agent.name": "Présidente: M. Bonnal; Avocats: SCP Boucard-Maman, Me Carbonnier"
+  },
+  "productType": ""
+}
+  ]
+}
