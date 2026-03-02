@@ -4,7 +4,7 @@
 
     var respecConfig = {
       postProcess: [quickreference],
-      edDraftURI: "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/EvidenceOfBirth/releases/0.0.1",
+      edDraftURI: "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/EvidenceOfCertificateAdmissionSecondaryEducation/releases/0.0.1",
       latestVersion: "{{metadata.navigation.prev}}",
       specStatus: "LD",
       editors: myeditors,
@@ -71,7 +71,7 @@
 
 {% block introduction %}
 <p>
-  This data model provides a minimum set of classes and properties for describing a evidence of birth. This data model has been designed to support the different requirements of the OOTS action. The different classes and properties defined in this document are based on the <a href="https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/data_dictionary.html">OOTS data dictionary</a>.
+  The evidence of certificate of admission to secondary education institution provides a minimum set of classes and properties for describing an evidence of certificate of admission to secondary education institution. This overview is designed to support the various requirements of the OOTS action. The classes and properties outlined here are mapped to the requirements in the ELM and ELMO (EMREX) data models. The different classes and properties defined in this document are based on the <a href="https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/data_dictionary.html">OOTS data dictionary</a>.
 </p>
 {% endblock %}
 
@@ -79,7 +79,7 @@
 {% block summary %}
 <section id="abstract">
     <h2>Abstract</h2>
-Evidence of birth is a simplified data model describing a request for evidence regarding the birth of the person (evidence subject). Draws upon the birth public document description of <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R1191&from=EN#d1e41-20-1">REGULATION (EU) 2016/119</a>.
+Evidence of certificate of admission to secondary education institution is describing an evidence proving the admission of the person (evidence subject) to a secondary education (EQF level 3) institution; note that although related to proof of enrolment it is not intrinsically equivalent to it.
 </section>
 {% endblock %}
 
@@ -105,12 +105,12 @@ This specification uses the following prefixes to shorten the URIs for readibili
 
 {% block umlrepresentation %}		
 		<h3>UML representation</h3>
-		The UML representation from which the {{metadata.title}} has been build is available <a href="./UML/OOTS_EvidenceOfBirth.eap">here</a>.
+		The UML representation from which the {{metadata.title}} has been build is available <a href="./UML/OOTS_EvidenceOfB.eap">here</a>.
 {% endblock %} 
 
 {% block xmlschema %}
 		<h3>XML schema representation</h3>
-		<p>The XML schema representation from which the {{metadata.title}} has been build is available <a href="https://code.europa.eu/oots/tdd/data_models/-/tree/main/Evidence/EvidenceOfBirth/releases/0.0.1/xsd/EvidenceOfBirth_v6.4?ref_type=heads">here</a>.</p>
+		<p>The XML schema representation from which the {{metadata.title}} has been build is available <a href="https://code.europa.eu/oots/tdd/data_models/-/tree/main/Evidence/EvidenceOfCertfiicateAdmissionSecondaryEducation/releases/0.0.1/xsd/EvidenceOfCertfiicateAdmissionSecondaryEducation_v6.4?ref_type=heads">here</a>.</p>
 
     <p>The XML schema is based on the OOTS requirements and it allows some flexibility to include fields that Member States can add in addition to those foreseen in the OOTS requirements.</p>
 
@@ -126,7 +126,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
 
     <p>The XML schema is based on the SEMIC <a href="https://github.com/SEMICeu/CCCEV">Core Criterion and Core Evidence (CCCEV)</a> specification, and on the <a href="https://github.com/SEMICeu/Core-Person-Vocabulary/">Core Person vocabulary</a>. 
     In CCCEV, the Evidence <a href="https://semiceu.github.io/CCCEV/releases/2.1.0/#Evidence.isabout">is about</a> an Agent that is the subject in the provided Evidence; in the case of Evidence of Birth, the Agent is the Person.
-    An EvidenceOfBirthType is then an OOTSEvidenceType (based on CCCEV Evidence) by having the 3 parts:
+    An EvidenceOfCertfiicateAdmissionSecondaryEducationType is then an OOTSEvidenceType (based on CCCEV Evidence) by having the 3 parts:
     <ul>
     <li>cv:isAbout. Since the value of cv:isAbout is a generic AgentType, in SDG a PersonType is defined as an AgentType with cv:FamilyName, cv:GivenName, cv:Sex and sdg:AttributeSet, that it means that is possible to add additional fields to the subject.</li>
     <li>sdg:Birth, defined by the OOTSBirthType, that includes cv:CountryOfBirth, cv:DateOfBirth, cv:PlaceOfBirth (as foreseen in OOTS requirements) and sdg:AttributeSet</li>
@@ -142,11 +142,11 @@ This specification uses the following prefixes to shorten the URIs for readibili
 {% endblock %} 
 
 {% block examples %}
-<div class="h3 examples" id="ExampleEvidenceOfBirth">Example Evidence of Birth</div>
+<div class="h3 examples" id="ExampleEvidenceOfCertfiicateAdmissionSecondaryEducation">Example Evidence of certificate of admission to secondary education institution</div>
 {% endblock %}
 
 {% block feedback %}
 	<p>
-		Please provide feedback on the <a href="https://ec.europa.eu/digital-building-blocks/wikis/display/SDGOO/Proof+of+Birth+-+SDM">discussion forum</a>
+		Please provide feedback on the <a href="https://ec.europa.eu/digital-building-blocks/wikis/x/3IF2LQ">discussion forum</a>
 	</p>
 {% endblock %}
