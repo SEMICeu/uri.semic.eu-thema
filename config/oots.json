@@ -52,7 +52,7 @@
       {
         "language":"en",
         "template":"EvidenceOfCertificateAdmissionSecondaryEducation_en.j2",
-        "title": "EvidenceOfCertificateAdmissionSecondaryEducation",
+        "title": "Evidence of certificate of admission to secondary education institution",
         "translationjson":"EvidenceOfCertificateAdmissionSecondaryEducation_en.json",
         "mergefile":"EvidenceOfCertificateAdmissionSecondaryEducation_en_merged.jsonld"
       }
