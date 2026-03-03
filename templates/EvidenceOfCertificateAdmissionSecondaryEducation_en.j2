@@ -149,8 +149,8 @@ This specification uses the following prefixes to shorten the URIs for readibili
 {% endblock %}
 
 {% block Mapping %}
-<h2>Quick Reference of Classes and Properties</h2>
-
+<h2>Mapping of Classes and Properties</h2>
+<p>
 This section offers a condensed tabular overview of the requirements, along with the corresponding classes and properties in ELM and ELMO. 
 
 <table id="table-quickoverview" class="simple" style="width:100%; table-layout: fixed; word-wrap:break-word;">
@@ -158,17 +158,14 @@ This section offers a condensed tabular overview of the requirements, along with
 		<tr><th>Information requirement</th><th>elm Class</th><th>elm Property</th><th>ELMO Class</th><th>ELMO property</th></tr>
 	</thead>
 	<tbody>
-						
+	
 							<tr>
 								<td>(official) duration of the pursued studies to which the admission refer (in years)</td>
                                 <td><a href="http://data.europa.eu/snb/model/elm/LearningOpportunity">LearningOpportunity</a></td>
 								<td><a href="http://data.europa.eu/snb/model/elm/duration">duration </a></td>
                                 <td>/ns:learningOpportunitySpecification[1]</td>
 								<td>/ns:extension[1]</td>
-							</tr>
-						
-					
-						
+							</tr>			
 							<tr>
 								<td>end date of academic year</td>
                                 <td><a href="http://data.europa.eu/snb/model/elm/LearningOpportunity">LearningOpportunity</a></td>
@@ -176,9 +173,6 @@ This section offers a condensed tabular overview of the requirements, along with
                                 <td>/ns:learningOpportunityInstance[1]</td>
 								<td>/ns:date[1]</td>
 							</tr>
-						
-					
-						
 							<tr>
 								<td>name of the study programme to which the admission refers</td>
                                 <td><a href="http://data.europa.eu/snb/model/elm/LearningOpportunity">LearningOpportunity</a></td>
@@ -186,9 +180,6 @@ This section offers a condensed tabular overview of the requirements, along with
                                 <td>/ns:issuer[1]</td>
 								<td>/ns:title[1]</td>
 							</tr>
-						
-					
-						
 							<tr>
 								<td>start date of the academic year</td>
                                 <td><a href="http://data.europa.eu/snb/model/elm/LearningOpportunity">LearningOpportunity</a></td>
@@ -196,10 +187,6 @@ This section offers a condensed tabular overview of the requirements, along with
 								<td>/ns:learningOpportunityInstance[1]</td>
 								<td>/ns:start[1]</td>
 							</tr>
-						
-		
-                            
-
 							<tr>
 								<td>family name</td>
                                 <td><a href="http://data.europa.eu/snb/model/elm/Person">Person</a></td>
@@ -207,9 +194,6 @@ This section offers a condensed tabular overview of the requirements, along with
                                 <td>/ns:learner[1]</td>
 								<td>/ns:familyName[1]</td>
 							</tr>
-						
-					
-						
 							<tr>
 								<td>given name</td>
                                 <td><a href="http://data.europa.eu/snb/model/elm/Person">Person</a></td>
@@ -217,19 +201,6 @@ This section offers a condensed tabular overview of the requirements, along with
                                 <td>/ns:learner[1]</td>
 								<td>/ns:givenNames[1]</td>
 							</tr>
-					
-				
-			</tr>
-		
-				
-					
-						
-					
-					
-						
-					
-					
-						
 							<tr>
 								<td>name of the secondary education institution</td>
                                 <td><a href="http://data.europa.eu/snb/model/elm/Organisation">Organisation</a></td>
@@ -237,13 +208,12 @@ This section offers a condensed tabular overview of the requirements, along with
                                 <td>/ns:issuer[1]/ns:title[1]</td>
 								<td>/ns:title[1]</td>
 							</tr>
-						
-					
-				
+			
 			</tr>
 		
 	<tbody>
 </table>
+</p>
 {% endblock %}
 
 {% block feedback %}
