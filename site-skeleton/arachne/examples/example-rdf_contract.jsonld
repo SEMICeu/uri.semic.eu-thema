@@ -52,8 +52,9 @@
       "adm:hasContractAddenda": {
         "@id": "ex:addenda1"
       },
-     
-
+      "adm:hasKeyexpert": {
+        "@id": "ex:keyExpert1"
+      }
     },
     {
       "@id": "ex:identifier4",
@@ -123,6 +124,20 @@
       "epo:hasAmountValue": {
         "@type": "xsd:decimal",
         "@value": "12000"
+      }
+    }
+    {
+      "@id": "ex:keyExpert1",
+      "@type": "adm:KeyExpert",
+      "foaf:givenName": {
+        "@id": "Jean"
+      },
+      "foaf:familyName": {
+        "@id": "Robocop"
+      },
+      "cv:dateOfBirth": {
+        "@type": "xsd:date",
+        "@value": "1975-05-05"
       }
     }
   ]
