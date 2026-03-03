@@ -71,7 +71,7 @@
 
 {% block introduction %}
 <p>
-  The evidence of certificate of admission to secondary education institution provides a minimum set of classes and properties for describing an evidence of certificate of admission to secondary education institution. This overview is designed to support the various requirements of the OOTS action. The classes and properties outlined here are mapped to the requirements in the ELM and ELMO (EMREX) data models. The different classes and properties defined in this document are based on the <a href="https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/data_dictionary.html">OOTS data dictionary</a>.
+  The evidence of roadworthiness data model provides a minimum set of classes and properties for describing an evidence of roadworthiness. This data model has been designed to support the different requirements of the OOTS action. The different classes and properties outlined here are mapped to the requirements in the EUCARIS data model.
 </p>
 {% endblock %}
 
@@ -79,7 +79,8 @@
 {% block summary %}
 <section id="abstract">
     <h2>Abstract</h2>
-Evidence of certificate of admission to secondary education institution is describing an evidence proving the admission of the person (evidence subject) to a secondary education (EQF level 3) institution; note that although related to proof of enrolment it is not intrinsically equivalent to it.
+Evidence of roadworthiness is a simplified data model describing an evidence regarding the vehicle's roadworthiness. Draws upon the <p>The XML schema representation from which the {{metadata.title}} has been build is available <a https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32014L0045">specifications of Annex II, of Council Directive 2014/45/EU.</a>.</p>
+
 </section>
 {% endblock %}
 
@@ -91,7 +92,6 @@ This specification uses the following prefixes to shorten the URIs for readibili
             <tbody>           
             <tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>           
             <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
-            <tr><td><code>elm</code></td><td><code>http://data.europa.eu/snb/model/version/3.2.0/elm/</code></td></tr>
             <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
             <tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
             <tr><td><code>person</code></td><td><code>http://www.w3.org/ns/person#/</code></td></tr>
@@ -99,7 +99,6 @@ This specification uses the following prefixes to shorten the URIs for readibili
             <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
             <tr><td><code>sdg</code></td><td><code>http://data.europa.eu/p4s/</code></td></tr>
             <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
-            <tr><td><code>TR</code></td><td><code>https://www.w3.org/TR/owl-time/</code></td></tr>
             <tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
 
             </tbody>
@@ -109,12 +108,12 @@ This specification uses the following prefixes to shorten the URIs for readibili
 
 {% block umlrepresentation %}		
 		<h3>UML representation</h3>
-		The UML representation from which the {{metadata.title}} has been build is available <a href="./UML/OOTS_EvidenceOfB.eap">here</a>.
+		The UML representation from which the {{metadata.title}} has been build is available <a href="./UML/OOTS_EvidenceOfRoadworthiness.eap">here</a>.
 {% endblock %} 
 
 {% block xmlschema %}
 		<h3>XML schema representation</h3>
-		<p>The XML schema representation from which the {{metadata.title}} has been build is available <a href="https://code.europa.eu/oots/tdd/data_models/-/tree/main/Evidence/EvidenceOfCertfiicateAdmissionSecondaryEducation/releases/0.0.1/xsd/EvidenceOfCertfiicateAdmissionSecondaryEducation_v6.4?ref_type=heads">here</a>.</p>
+		<p>The XML schema representation from which the {{metadata.title}} has been build is available <a href="https://code.europa.eu/oots/tdd/data_models/-/tree/main/Evidence/EvidenceOfRoadworthiness">here</a>.</p>
 
     <p>The XML schema is based on the OOTS requirements and it allows some flexibility to include fields that Member States can add in addition to those foreseen in the OOTS requirements.</p>
 
@@ -130,7 +129,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
 
     <p>The XML schema is based on the SEMIC <a href="https://github.com/SEMICeu/CCCEV">Core Criterion and Core Evidence (CCCEV)</a> specification, and on the <a href="https://github.com/SEMICeu/Core-Person-Vocabulary/">Core Person vocabulary</a>. 
     In CCCEV, the Evidence <a href="https://semiceu.github.io/CCCEV/releases/2.1.0/#Evidence.isabout">is about</a> an Agent that is the subject in the provided Evidence; in the case of Evidence of Birth, the Agent is the Person.
-    An EvidenceOfCertfiicateAdmissionSecondaryEducationType is then an OOTSEvidenceType (based on CCCEV Evidence) by having the 3 parts:
+    An EvidenceOfRoadworthiness is then an OOTSEvidenceType (based on CCCEV Evidence) by having the 3 parts:
     <ul>
     <li>cv:isAbout. Since the value of cv:isAbout is a generic AgentType, in SDG a PersonType is defined as an AgentType with cv:FamilyName, cv:GivenName, cv:Sex and sdg:AttributeSet, that it means that is possible to add additional fields to the subject.</li>
     <li>sdg:Birth, defined by the OOTSBirthType, that includes cv:CountryOfBirth, cv:DateOfBirth, cv:PlaceOfBirth (as foreseen in OOTS requirements) and sdg:AttributeSet</li>
@@ -146,75 +145,107 @@ This specification uses the following prefixes to shorten the URIs for readibili
 {% endblock %} 
 
 {% block examples %}
-<div class="h3 examples" id="ExampleEvidenceOfCertificateAdmissionSecondaryEducation">Example Evidence of certificate of admission to secondary education institution</div>
+<div class="h3 examples" id="ExampleEvidenceOfRoadworthiness">Example Evidence of roadworthiness</div>
 {% endblock %}
 
 {% block Mapping %}
 <p>
-This section offers a condensed tabular overview of the requirements, along with the corresponding classes and properties in ELM and ELMO. 
+This section offers a condensed tabular overview of the requirements mapping from OOTS to EUCARIS. 
 
 <table id="table-quickoverview" class="simple" style="width:100%; table-layout: fixed; word-wrap:break-word;">
 	<thead>
-		<tr><th>Information requirement</th><th>elm Class</th><th>elm Property</th><th>ELMO Class</th><th>ELMO property</th></tr>
+		<tr><th>Information requirement</th><th>EUCARIS Xpath</th><th>Note</th></tr>
 	</thead>
 	<tbody>
-	
+						
 							<tr>
-								<td>(official) duration of the pursued studies to which the admission refer (in years)</td>
-                                <td><a href="http://data.europa.eu/snb/model/elm/LearningOpportunity">LearningOpportunity</a></td>
-								<td><a href="http://data.europa.eu/snb/model/elm/duration">duration </a></td>
-                                <td>/ns:learningOpportunitySpecification[1]</td>
-								<td>/ns:extension[1]</td>
-							</tr>			
-							<tr>
-								<td>end date of academic year</td>
-                                <td><a href="http://data.europa.eu/snb/model/elm/LearningOpportunity">LearningOpportunity</a></td>
-								<td><a href="http://data.europa.eu/snb/model/elm/endDate">end date </a></td>
-                                <td>/ns:learningOpportunityInstance[1]</td>
-								<td>/ns:date[1]</td>
+								<td>Vehicle Identification Number (VIN number or chassis number)</td>
+                                <td>/xs:schema/xs:complexType[@name="AVIVehicleTechnicalDataType"]/xs:sequence[1]/xs:element[@name="VehicleIdentificationNumber"]</td>
+								<td></td>
+                                
 							</tr>
+						
 							<tr>
-								<td>name of the study programme to which the admission refers</td>
-                                <td><a href="http://data.europa.eu/snb/model/elm/LearningOpportunity">LearningOpportunity</a></td>
-								<td><a href="http://purl.org/dc/terms/title">name of study porgram </a></td>
-                                <td>/ns:issuer[1]</td>
-								<td>/ns:title[1]</td>
+								<td>registration plate number of the vehicle and country symbol of the State of registration</td>
+                                <td>/xs:schema/xs:complexType[@name="AVIVehicleRegistrationDataType"]/xs:sequence[1]/xs:element[@name="VehRegistrationNumber"]</td>
+								<td></td>
+                                
 							</tr>
+
 							<tr>
-								<td>start date of the academic year</td>
-                                <td><a href="http://data.europa.eu/snb/model/elm/LearningOpportunity">LearningOpportunity</a></td>
-								<td><a href="http://data.europa.eu/snb/model/elm/startDate">start date </a></td>
-								<td>/ns:learningOpportunityInstance[1]</td>
-								<td>/ns:start[1]</td>
+								<td>vehicle category (if available)</td>
+                                <td>/xs:schema/xs:complexType[@name="AVIVehicleTechnicalDataType"]/xs:sequence[1]/xs:element[@name="VehicleCategoryCode"]</td>
+								<td></td>
+                                
 							</tr>
+
 							<tr>
-								<td>family name</td>
-                                <td><a href="http://data.europa.eu/snb/model/elm/Person">Person</a></td>
-								<td><a href="http://xmlns.com/foaf/0.1/familyName">family name </a></td>
-                                <td>/ns:learner[1]</td>
-								<td>/ns:familyName[1]</td>
+								<td>Place of roadworthiness test</td>
+                                <td>/xs:schema/xs:complexType[@name="AVIVehicleMileageDataType"]/xs:sequence[1]/xs:element[@name="MileageRecordings"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="MileageRecording"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="MileageRecordingCountryCode"]</td>
+								<td></td>
+                                
 							</tr>
+
 							<tr>
-								<td>given name</td>
-                                <td><a href="http://data.europa.eu/snb/model/elm/Person">Person</a></td>
-								<td><a href="http://xmlns.com/foaf/0.1/givenName">given name </a></td>
-                                <td>/ns:learner[1]</td>
-								<td>/ns:givenNames[1]</td>
+								<td>Date of roadworthiness test</td>
+                                <td>/xs:schema/xs:complexType[@name="AVIVehicleRegistrationDataType"]/xs:sequence[1]/xs:element[@name="VehRoadworthiness"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="VehRoadworthinessTestDate"]</td>
+								<td></td>
+                                
 							</tr>
+
 							<tr>
-								<td>name of the secondary education institution</td>
-                                <td><a href="http://data.europa.eu/snb/model/elm/Organisation">Organisation</a></td>
-								<td><a href="https://www.w3.org/ns/regorg/legalname">legal name </a></td>
-                                <td>/ns:issuer[1]/ns:title[1]</td>
-								<td>/ns:title[1]</td>
+								<td>odometer reading at the time of the roadworthiness test (if available)</td>
+                                <td>/xs:schema/xs:complexType[@name="AVIVehicleMileageDataType"]/xs:sequence[1]/xs:element[@name="MileageRecordings"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="MileageRecording"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="Mileage"]</td>
+								<td></td>
+                                
 							</tr>
-	</tbody>
+
+							<tr>
+								<td>identified deficiencies and their level of severity</td>
+                                <td>/xs:schema/xs:complexType[@name="AVIVehicleRegistrationDataType"]/xs:sequence[1]/xs:element[@name="Remarks"]</td>
+								<td>Remarks could contain the information, but does not necessarily contain multiple string fields.</td>
+                                
+							</tr>
+							
+							<tr>
+								<td>result of the roadworthiness test</td>
+                                <td>NA</td>
+								<td>Not present in EUCARIS</td>
+                                
+							</tr>
+
+							<tr>
+								<td>date of the next roadworthiness test or date of expiry of the current roadworthiness certificate (if this information is not provided by other means)</td>
+                                <td>/xs:schema/xs:complexType[@name="AVIVehicleRegistrationDataType"]/xs:sequence[1]/xs:element[@name="VehRoadworthiness"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="VehRoadworthinessTestEndDate"]</td>
+								<td></td>
+                                
+							</tr>
+
+							<tr>
+								<td>name of roadworthiness testing organisation/centre</td>
+                                <td>/xs:schema/xs:complexType[@name="AVIVehicleMileageDataType"]/xs:sequence[1]/xs:element[@name="MileageRecordings"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="MileageRecording"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="MileageRecordingOrganisation"]</td>
+								<td></td>
+                                
+							</tr>
+
+							<tr>
+								<td>signature/ identification of the inspector responsible for the roadworthiness test</td>
+                                <td>/xs:schema/xs:complexType[@name="SigningAuthorityGroup"]/xs:sequence[1]/xs:element[@name="NameOfSigner"]</td>
+								<td></td>
+                                
+							</tr>
+						
+					
+				
+			</tr>
+		
+	<tbody>
 </table>
 </p>
 {% endblock %}
 
 {% block feedback %}
 	<p>
-		Please provide feedback on the <a href="https://ec.europa.eu/digital-building-blocks/wikis/x/3IF2LQ">discussion forum</a>
+		Please provide feedback on the <a href="https://ec.europa.eu/digital-building-blocks/wikis/x/ToRCLg">discussion forum</a>
 	</p>
 {% endblock %}
