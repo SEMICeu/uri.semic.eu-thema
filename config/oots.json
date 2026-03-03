@@ -43,7 +43,7 @@
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "OOTS",
-  "site": "site-skeleton/evidenceofbirth", 
+  "site": "site-skeleton/evidenceofcertificateadmissionsecondaryeducation", 
   "repourl": "https://code.europa.eu/oots/tdd/data_models/Evidence/EvidenceOfCertificateAdmissionSecondaryEducation/tree/master/releases/0.0.1",
   "feedbackurl": "https://ec.europa.eu/digital-building-blocks/wikis/display/SDGOO/Discussion+Items+-+EM?src=contextnavpagetreemode",
   "versionurl": "https://code.europa.eu/oots/tdd/data_models/Evidence/EvidenceOfCertificateAdmissionSecondaryEducation/tree/master/releases/0.0.1",
