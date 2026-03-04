@@ -2,7 +2,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix cdm: <http://publications.europa.eu/ontology/cdm#> .
 @prefix pld: <http://example.com/ontology/pld#> .
 @prefix caseNumber: <internalIdentifier> .
@@ -15,8 +14,8 @@
 		rdf:type cdm:court_national ;
 		cdm:court_national_name "Cour de cassation"@fr ;
 		cdm:court_national_has_type_concept_class_court_national <http://publications.europa.eu/resource/authority/court-type/NAT_COURT_SUPREME> ;
-		dcterms:spatial <http://publications.europa.eu/resource/authority/country/FRA> ;
 	] ;
+	cdm:case-law_originates_in_country <http://publications.europa.eu/resource/authority/country/FRA> ;
 	cdm:work_date_document "2024-06-19" ;
 	cdm:case-law_uses_procedure_language <http://publications.europa.eu/resource/authority/language/FRA> ;
 	cdm:resource_legal_published_in_official-journal "Légifrance" ;
