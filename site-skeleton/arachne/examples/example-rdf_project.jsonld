@@ -1,20 +1,22 @@
 {
   "@context": [
-  "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/0.0.2/context/arachne.jsonld",
-  {
-    "adm": "https://w3id.org/adm/model/",
-    "adms": "http://www.w3.org/ns/adms#",
-    "cv": "http://data.europa.eu/m8g/",
-    "dbo": "http://dbpedia.org/ontology/",
-    "epo": "http://data.europa.eu/a4g/ontology#",
-    "ex": "http://example.com/",
-    "foaf": "http://xmlns.com/foaf/0.1/",
-    "locn": "http://www.w3.org/ns/locn#",
-    "person": "http://www.w3.org/ns/person#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-  }],
+    "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/0.0.2/context/arachne.jsonld",
+    {
+      "adm": "https://w3id.org/adm/model/",
+      "adms": "http://www.w3.org/ns/adms#",
+      "cv": "http://data.europa.eu/m8g/",
+      "dbo": "http://dbpedia.org/ontology/",
+      "epo": "http://data.europa.eu/a4g/ontology#",
+      "ex": "http://example.com/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+	  "legal": "http://www.w3.org/ns/legal#",
+      "locn": "http://www.w3.org/ns/locn#",
+      "person": "http://www.w3.org/ns/person#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+  ],
   "@graph": [
     {
       "@id": "ex:project1",
@@ -56,27 +58,30 @@
         "@id": "_:g3"
       },
       "adm:hasBlock": {
-       	"@id": "ex:esf1"
+        "@id": "ex:esf1"
       }
     },
     {
       "@id": "ex:esf1",
-      "@type": ["ESF","Block"],
-  	   "adm:dg": {
+      "@type": [
+        "ESF",
+        "Block"
+      ],
+      "adm:dg": {
         "@id": "http://publications.europa.eu/resource/authority/corporate-body/EMPL"
-       },
-       "adm:projectType": {
+      },
+      "adm:projectType": {
         "@id": "https://w3id.org/adm/codelist/projectType/1"
       },
-  	  "adm:peopleToTrain": {
+      "adm:peopleToTrain": {
         "@value": "10",
         "@type": "xsd:integer"
       },
-       "adm:trainingHours": {
+      "adm:trainingHours": {
         "@value": "160",
         "@type": "xsd:integer"
       }
-	},
+    },
     {
       "@id": "_:g0",
       "@type": "epo:MonetaryValue",
@@ -124,21 +129,32 @@
     {
       "@id": "ex:beneficiary1",
       "@type": "adm:Beneficiary",
-      "adms:identifier": {
-        "@id": "ex:identifier2"
+      "epo:playedBy": {
+        "@id":"ex:entity1"
       },
       "adm:hasPartner": {
         "@id": "ex:partner1"
       }
     },
-     {
+    {
+      "@id": "ex:entity1",
+      "@type": "LegalEntity",
+      "adms:identifier": {
+        "@id": "ex:identifier2"
+      }
+    },
+    {
       "@id": "ex:partner1",
       "@type": "adm:Partner",
+      "epo:playedBy": {
+        "@id":"ex:entity2"
+      }
+    },
+    {
+      "@id": "ex:entity2",
+      "@type": "LegalEntity",
       "adms:identifier": {
         "@id": "ex:identifier3"
-      },
-      "adm:hasPartner": {
-        "@id": "ex:partner1"
       }
     },
     {

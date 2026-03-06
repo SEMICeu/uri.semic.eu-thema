@@ -5,12 +5,14 @@
 @prefix epo: <http://data.europa.eu/a4g/ontology#> .
 @prefix ex: <http://example.com/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix legal: <http://www.w3.org/ns/legal#> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix person: <http://www.w3.org/ns/person#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
 
 ex:project1 dbo:projectEndDate "2012-06-01"^^xsd:date ;
 	dbo:projectStartDate "2012-01-01"^^xsd:date ;
@@ -48,13 +50,18 @@ ex:esf1 adm:dg <http://publications.europa.eu/resource/authority/corporate-body/
 	adm:trainingHours 160 ;
 	a adm:ESF, adm:Block .
 
-ex:beneficiary1 adms:identifier ex:identifier2 ;
+ex:beneficiary1 epo:playedBy ex:entity1 ;
 	adm:hasPartner ex:partner1 ;
 	a adm:Beneficiary .
 
-ex:partner1 adms:identifier ex:identifier3 ;
-	adm:hasPartner ex:partner1 ;
+ex:entity1 adms:identifier ex:identifier2 ;
+	a legal:LegalEntity .
+
+ex:partner1 epo:playedBy ex:entity2 ;
 	a adm:Partner .
+
+ex:entity2 adms:identifier ex:identifier3 ;
+	a legal:LegalEntity .
 
 ex:identifier1 skos:notation "Project 0124" ;
 	a adms:Identifier .
@@ -75,3 +82,4 @@ ex:status1 skos:prefLabel "Open"@en ;
 <https://w3id.org/adm/codelist/projectType/1> a skos:Concept .
 
 <http://publications.europa.eu/resource/authority/corporate-body/EMPL> a skos:Concept .
+
