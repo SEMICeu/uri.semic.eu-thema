@@ -70,7 +70,8 @@
       "logo": {
          "@id": "ex:logo1"
       },
-      "hasBenefit": ["ex:benefit1","ex:benefit2", "ex:benefit3", "ex:benefit4"]
+      "hasEnvironmentalBenefit": ["ex:benefit1","ex:benefit2"], 
+      "hasBenefit": ["ex:benefit3", "ex:benefit4"]
     },
     {
       "@id": "ex:address1",
@@ -94,7 +95,7 @@
         "@type": "xsd:anyURI",
         "@value": "https://www.greendigitalcoalition.eu/assets/uploads/2024/04/EGDC-Case-Study-Meth-Nokia-Smart-Waste-Management.pdf"
       },
-      "Methodology.name": {
+      "name": {
         "@language": "en",
         "@value": "Smart City Nicosia Report"
       }
@@ -109,7 +110,7 @@
         "@type": "xsd:anyURI",
         "@value": "https://www.greendigitalcoalition.eu/assets/uploads/2024/03/EGDC-Case-Study-Calc.-Nokia-Smart-Waste-Management.xlsx"
       },
-      "Dataset.name": {
+      "name": {
         "@language": "en",
         "@value": "Smart City Nicosia Dataset"
       }
@@ -117,7 +118,7 @@
     {
       "@id": "ex:organization1",
       "@type": "Organization",
-      "Organization.name": {
+      "name": {
         "@language": "en",
         "@value": "Nokia"
       },
@@ -138,7 +139,7 @@
     {
       "@id": "ex:conctactpoint1",
       "@type": "ContactPoint",
-      "ContactPoint.name": {
+      "name": {
         "@language": "en",
         "@value": "Smart City Dept"
       },
@@ -155,7 +156,7 @@
     {
       "@id": "ex:benefit1",
       "@type": ["Benefit","EnvironmentalBenefit"],
-      "Benefit.name": {
+      "name": {
         "@language": "en",
         "@value": "Net Carbon Impact"
       },
@@ -170,7 +171,7 @@
     {
       "@id": "ex:benefit2",
       "@type": ["Benefit","EnvironmentalBenefit"],
-      "Benefit.name": {
+      "name": {
         "@language": "en",
         "@value": "Transport Emissions Reduction"
       },
@@ -185,7 +186,7 @@
     {
       "@id": "ex:benefit3",
       "@type": "Benefit",
-      "Benefit.name": {
+      "name": {
         "@language": "en",
         "@value": "Waste Management Cost Savings"
       },
@@ -200,7 +201,7 @@
     {
       "@id": "ex:benefit4",
       "@type": "Benefit",
-     "Benefit.name": {
+     "name": {
         "@language": "en",
         "@value": "Citizen Quality of Life Improvement "
       },
