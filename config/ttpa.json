@@ -2,7 +2,7 @@
 {
   "name": "ttpa",
   "type": "ap",
-  "eap": "TTPAV.eap",
+  "eap": "TTPA.eap",
   "diagram": "Political Advertisement",
   "template": "ttpa-ap_en.j2",
   "title": "Transparency and Targeting of Political Advertisement Vocabulary",
