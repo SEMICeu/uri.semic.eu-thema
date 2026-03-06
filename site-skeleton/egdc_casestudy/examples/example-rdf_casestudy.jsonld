@@ -1,0 +1,141 @@
+{
+  "@context": [
+  "https://semiceu.github.io/uri.semic.eu-generated/EGDC_CaseStudy/releases/1.0.1/context/egdc_casestudy.jsonld",
+   {
+     "adms":  "http://www.w3.org/ns/adms#",
+     "cv" :	  "http://data.europa.eu/m8g/",
+     "dcat" : "http://www.w3.org/ns/dcat#",
+     "dct" :  "http://purl.org/dc/terms/",
+     "egdc" : "https://www.greendigitalcoalition.eu/model/",
+     "egdc-cl" : "https://www.greendigitalcoalition.eu/codelist/",
+     "ex"   : "http://example.com/",
+     "foaf" : "http://xmlns.com/foaf/0.1/",
+     "locn"	: "http://www.w3.org/ns/locn#",
+     "org"	: "http://www.w3.org/ns/org#",
+     "owl"	: "http://www.w3.org/2002/07/owl#",
+     "rdf"	: "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+     "rdfs"	: "http://www.w3.org/2000/01/rdf-schema#",
+     "skos"	: "http://www.w3.org/2004/02/skos/core#",
+     "xsd"	: "http://www.w3.org/2001/XMLSchema#"
+   }
+  ],
+  "@graph": [
+    {
+      "@id": "https://egdc-frontend.vercel.app/case-studies/10",
+      "@type": "CaseStudy",
+      "CaseStudy.name": {
+        "@language": "en",
+        "@value": "Integrated Operations Center (IOC) for Nicosia"
+      },
+      "description": {
+        "@language": "en",
+        "@value": "The Integrated Operations Center platform is a digital enablement platform that increases productivity, efficiency and growth through agile introduction and largely automated utilization of digital operational technology assets and capabilities."
+      },
+      "address": {
+        "@id": "ex:address1"
+      },
+      "problemSolved": {
+        "@language": "en",
+        "@value": "Inefficient management of urban environment (waste, traffic) in Nicosia."
+      },
+      "technology": {
+        "@id": "egdc-cl:technology/iot"
+      },
+      "typeOfCalculation" : {
+        "@id": "egdc-cl:calculation/ex-post"
+      },
+      "fundingType" : {
+        "@id": "egdc-cl:funding/public"
+      },
+      "fundingProgrammeUrl": {
+        "@type": "xsd:anyURI",
+        "@value": "https://ec.europa.eu/regional_policy/"
+      },
+      "created": {
+        "@type": "xsd:date",
+        "@value": "2026-01-12"
+      },
+      "status": {
+         "@id": "egdc-cl:status/published"
+      },
+      "hasMethodology": {
+         "@id": "ex:methodology1"
+      },
+      "hasDataset": {
+         "@id": "ex:dataset1"
+      },
+      "isProvidedBy": {
+         "@id": "ex:organization1"
+      }
+    },
+    {
+      "@id": "ex:address1",
+      "@type": "Address",
+      "adminUnitL1": {
+        "@language": "en",
+        "@value": "Cyprus"
+      },
+      "postName": {
+        "@language": "en",
+        "@value": "Nicosia"
+      }
+    },
+    {
+      "@id": "ex:methodology1",
+      "@type": "Methodology",
+      "language": {
+         "@id": "http://publications.europa.eu/resource/authority/language/ENG"
+      },
+      "url": {
+        "@type": "xsd:anyURI",
+        "@value": "https://www.greendigitalcoalition.eu/assets/uploads/2024/04/EGDC-Case-Study-Meth-Nokia-Smart-Waste-Management.pdf"
+      },
+      "Methodology.name": {
+        "@language": "en",
+        "@value": "Smart City Nicosia Report"
+      }
+    },
+    {
+      "@id": "ex:dataset1",
+      "@type": "Dataset",
+      "language": {
+         "@id": "http://publications.europa.eu/resource/authority/language/ENG"
+      },
+      "url": {
+        "@type": "xsd:anyURI",
+        "@value": "https://www.greendigitalcoalition.eu/assets/uploads/2024/03/EGDC-Case-Study-Calc.-Nokia-Smart-Waste-Management.xlsx"
+      },
+      "Dataset.name": {
+        "@language": "en",
+        "@value": "Smart City Nicosia Dataset"
+      }
+    },
+    {
+      "@id": "ex:organization1",
+      "@type": "Organization",
+      "Organization.name": {
+        "@language": "en",
+        "@value": "Nokia"
+      },
+      "sector": {
+         "@id": "egdc-cl:sector/smart-cities"
+      },
+      "url": {
+        "@type": "xsd:anyURI",
+        "@value": "https://nokia.com"
+      },
+      "contactPoint": {
+         "@id": "ex:conctactpoint1"
+      }
+    },
+    {
+      "@id": "ex:conctactpoint1",
+      "@type": "ContactPoint",
+      "ContactPoint.name": {
+        "@language": "en",
+        "@value": "Smart City Dept"
+      },
+      "hasEmail": "smartcity@nokia.com"
+    }
+  ]
+}

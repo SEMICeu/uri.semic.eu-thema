@@ -1,0 +1,54 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix egdc: <https://www.greendigitalcoalition.eu/model/> .
+@prefix egdc-cl: <https://www.greendigitalcoalition.eu/codelist/> .
+@prefix ex: <http://example.com/> .
+
+<https://egdc-frontend.vercel.app/case-studies/10> dcterms:title "Integrated Operations Center (IOC) for Nicosia"@en ;
+	dcterms:description "The Integrated Operations Center platform is a digital enablement platform that increases productivity, efficiency and growth through agile introduction and largely automated utilization of digital operational technology assets and capabilities."@en ;
+	locn:address ex:address1 ;
+	egdc:problemSolved "Inefficient management of urban environment (waste, traffic) in Nicosia."@en ;
+	egdc:technology <https://www.greendigitalcoalition.eu/codelist/technology/iot> ;
+	egdc:typeOfCalculation <https://www.greendigitalcoalition.eu/codelist/calculation/ex-post> ;
+	egdc:fundingType <https://www.greendigitalcoalition.eu/codelist/funding/public> ;
+	egdc:fundingProgrammeUrl "https://ec.europa.eu/regional_policy/"^^xsd:anyURI ;
+	dcterms:created "2026-01-12"^^xsd:date ;
+	adms:status <https://www.greendigitalcoalition.eu/codelist/status/published> ;
+	egdc:hasMethodology ex:methodology1 ;
+	egdc:hasDataset ex:dataset1 ;
+	dcterms:creator ex:organization1 ;
+	a egdc:CaseStudy .
+
+ex:address1 locn:adminUnitL1 "Cyprus"@en ;
+	locn:postName "Nicosia"@en ;
+	a locn:Address .
+
+ex:methodology1 dcterms:language <http://publications.europa.eu/resource/authority/language/ENG> ;
+	egdc:url "https://www.greendigitalcoalition.eu/assets/uploads/2024/04/EGDC-Case-Study-Meth-Nokia-Smart-Waste-Management.pdf"^^xsd:anyURI ;
+	dcterms:title "Smart City Nicosia Report"@en ;
+	a egdc:Methodology .
+
+ex:dataset1 dcterms:language <http://publications.europa.eu/resource/authority/language/ENG> ;
+	egdc:url "https://www.greendigitalcoalition.eu/assets/uploads/2024/03/EGDC-Case-Study-Calc.-Nokia-Smart-Waste-Management.xlsx"^^xsd:anyURI ;
+	dcterms:title "Smart City Nicosia Dataset"@en ;
+	a dcat:Dataset .
+
+ex:organization1 dcterms:title "Nokia"@en ;
+	egdc:sector <https://www.greendigitalcoalition.eu/codelist/sector/smart-cities> ;
+	egdc:url "https://nokia.com"^^xsd:anyURI ;
+	cv:contactPoint ex:conctactpoint1 ;
+	a org:Organization .
+
+ex:conctactpoint1 dcterms:title "Smart City Dept"@en ;
+	cv:email "smartcity@nokia.com" ;
+	a cv:ContactPoint .
