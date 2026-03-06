@@ -1,23 +1,23 @@
 {
   "@context": [
-  "https://semiceu.github.io/uri.semic.eu-generated/EGDC_CaseStudy/releases/1.0.1/context/egdc_casestudy.jsonld",
-   {
-     "adms":  "http://www.w3.org/ns/adms#",
-     "cv" :	  "http://data.europa.eu/m8g/",
-     "dcat" : "http://www.w3.org/ns/dcat#",
-     "dct" :  "http://purl.org/dc/terms/",
-     "egdc" : "https://www.greendigitalcoalition.eu/model/",
-     "egdc-cl" : "https://www.greendigitalcoalition.eu/codelist/",
-     "ex"   : "http://example.com/",
-     "foaf" : "http://xmlns.com/foaf/0.1/",
-     "locn"	: "http://www.w3.org/ns/locn#",
-     "org"	: "http://www.w3.org/ns/org#",
-     "owl"	: "http://www.w3.org/2002/07/owl#",
-     "rdf"	: "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-     "rdfs"	: "http://www.w3.org/2000/01/rdf-schema#",
-     "skos"	: "http://www.w3.org/2004/02/skos/core#",
-     "xsd"	: "http://www.w3.org/2001/XMLSchema#"
-   }
+    "https://semiceu.github.io/uri.semic.eu-generated/EGDC_CaseStudy/releases/1.0.1/context/egdc_casestudy.jsonld",
+    {
+      "adms": "http://www.w3.org/ns/adms#",
+      "cv": "http://data.europa.eu/m8g/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "dct": "http://purl.org/dc/terms/",
+      "egdc": "https://www.greendigitalcoalition.eu/model/",
+      "egdc-cl": "https://www.greendigitalcoalition.eu/codelist/",
+      "ex": "http://example.com/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "locn": "http://www.w3.org/ns/locn#",
+      "org": "http://www.w3.org/ns/org#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
   ],
   "@graph": [
     {
@@ -41,10 +41,10 @@
       "technology": {
         "@id": "egdc-cl:technology/iot"
       },
-      "typeOfCalculation" : {
+      "typeOfCalculation": {
         "@id": "egdc-cl:calculation/ex-post"
       },
-      "fundingType" : {
+      "fundingType": {
         "@id": "egdc-cl:funding/public"
       },
       "fundingProgrammeUrl": {
@@ -56,17 +56,21 @@
         "@value": "2026-01-12"
       },
       "status": {
-         "@id": "egdc-cl:status/published"
+        "@id": "egdc-cl:status/published"
       },
       "hasMethodology": {
-         "@id": "ex:methodology1"
+        "@id": "ex:methodology1"
       },
       "hasDataset": {
-         "@id": "ex:dataset1"
+        "@id": "ex:dataset1"
       },
       "isProvidedBy": {
-         "@id": "ex:organization1"
-      }
+        "@id": "ex:organization1"
+      },
+      "logo": {
+         "@id": "ex:logo1"
+      },
+      "hasBenefit": ["ex:benefit1","ex:benefit2", "ex:benefit3", "ex:benefit4"]
     },
     {
       "@id": "ex:address1",
@@ -84,7 +88,7 @@
       "@id": "ex:methodology1",
       "@type": "Methodology",
       "language": {
-         "@id": "http://publications.europa.eu/resource/authority/language/ENG"
+        "@id": "http://publications.europa.eu/resource/authority/language/ENG"
       },
       "url": {
         "@type": "xsd:anyURI",
@@ -99,7 +103,7 @@
       "@id": "ex:dataset1",
       "@type": "Dataset",
       "language": {
-         "@id": "http://publications.europa.eu/resource/authority/language/ENG"
+        "@id": "http://publications.europa.eu/resource/authority/language/ENG"
       },
       "url": {
         "@type": "xsd:anyURI",
@@ -118,14 +122,17 @@
         "@value": "Nokia"
       },
       "sector": {
-         "@id": "egdc-cl:sector/smart-cities"
+        "@id": "egdc-cl:sector/smart-cities"
       },
       "url": {
         "@type": "xsd:anyURI",
         "@value": "https://nokia.com"
       },
       "contactPoint": {
-         "@id": "ex:conctactpoint1"
+        "@id": "ex:conctactpoint1"
+      },
+      "type": {
+        "@id": "egdc-cl:org-type/company"
       }
     },
     {
@@ -136,6 +143,74 @@
         "@value": "Smart City Dept"
       },
       "hasEmail": "smartcity@nokia.com"
+    },
+    {
+      "@id": "ex:logo1",
+      "@type": "ImageObject",
+      "url":  {
+        "@type": "xsd:anyURI",
+        "@value": "https://www.nokia.com/themes/custom/onenokia_reskin/logo.svg"
+      }
+    },
+    {
+      "@id": "ex:benefit1",
+      "@type": ["Benefit","EnvironmentalBenefit"],
+      "Benefit.name": {
+        "@language": "en",
+        "@value": "Net Carbon Impact"
+      },
+      "type": {
+        "@id": "egdc-cl:benefit-type/environmental"
+      },
+      "unit": {
+        "@id": "egdc-cl:unit/tco2e"
+      },
+      "value": "180"
+    },
+    {
+      "@id": "ex:benefit2",
+      "@type": ["Benefit","EnvironmentalBenefit"],
+      "Benefit.name": {
+        "@language": "en",
+        "@value": "Transport Emissions Reduction"
+      },
+      "type": {
+        "@id": "egdc-cl:benefit-type/environmental"
+      },
+      "unit": {
+        "@id": "egdc-cl:unit/percent"
+      },
+      "value": "20"
+    },
+    {
+      "@id": "ex:benefit3",
+      "@type": "Benefit",
+      "Benefit.name": {
+        "@language": "en",
+        "@value": "Waste Management Cost Savings"
+      },
+      "type": {
+        "@id": "egdc-cl:benefit-type/economic"
+      },
+      "unit": {
+        "@id": "egdc-cl:unit/percent"
+      },
+      "value": "15"
+    },
+    {
+      "@id": "ex:benefit4",
+      "@type": "Benefit",
+     "Benefit.name": {
+        "@language": "en",
+        "@value": "Citizen Quality of Life Improvement "
+      },
+      "type": {
+        "@id": "egdc-cl:benefit-type/social"
+      },
+      "unit": {
+        "@id": "egdc-cl:unit/percent"
+      },
+      "value": "10"
     }
   ]
 }
