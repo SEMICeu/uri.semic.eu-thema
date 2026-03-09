@@ -16,7 +16,7 @@
 
 ex:contract1 adms:identifier ex:identifier4 ;
 	adm:belongsTo ex:project2 ;
-	adm:hasContractor ex:legalEntity1 ;
+	adm:hasContractor ex:contractor1 ;
 	adm:contractType <http://publications.europa.eu/resource/authority/contract-nature/works> ;
 	adm:modified true ;
 	epo:hasContractConclusionDate "2015-12-20"^^xsd:date ;
@@ -28,6 +28,9 @@ ex:contract1 adms:identifier ex:identifier4 ;
 		rdf:type epo:MonetaryValue ;
 	] ;
 	adm:hasContractAddenda ex:addenda1 ;
+	adm:hasKeyExpert ex:keyExpert1 ;
+	adm:hasServiceProvider ex:provider1, ex:provider2 ;
+	adm:hasProcurementInfo ex:procurement1 ;
 	a adm:Contract .
 
 ex:identifier4 skos:notation "Cont-7812355/003" ;
@@ -38,6 +41,9 @@ ex:project2 adms:identifier ex:identifier5 ;
 
 ex:identifier5 skos:notation "123456" ;
 	a adms:Identifier .
+
+ex:contractor1 epo:playedBy ex:legalEntity1 ;
+	a epo:Contractor .
 
 ex:legalEntity1 adms:identifier ex:identifier6 ;
 	a legal:LegalEntity .
@@ -55,4 +61,43 @@ ex:addenda1 adm:amount [
 	] ;
 	adm:count 4 ;
 	a adm:ContractAddenda .
+
+ex:keyExpert1 epo:playedBy ex:person1 ;
+	a adm:KeyExpert .
+
+ex:person1 foaf:givenName "Jean"@en ;
+	foaf:familyName "Robocop"@en ;
+	cv:dateOfBirth "1975-05-05"^^xsd:date ;
+	a person:Person .
+
+ex:provider1 epo:playedBy ex:legalentity2 ;
+	a adm:ServiceProvider .
+
+ex:legalEntity2 adms:identifier ex:identifier7 ;
+	a legal:LegalEntity .
+
+ex:identifier7 skos:notation "0015877" ;
+	a adms:Identifier .
+
+ex:provider2 epo:playedBy ex:legalentity3 ;
+	a adm:ServiceProvider .
+
+ex:legalEntity3 adms:identifier ex:identifier8 ;
+	a legal:LegalEntity .
+
+ex:identifier8 skos:notation "GF-458/125465" ;
+	a adms:Identifier .
+
+ex:procurement1 adm:excludedTenders 5 ;
+	adm:validTenders 12 ;
+	adm:totalTenders 17 ;
+	adm:refersToNotice ex:notice1 ;
+	a adm:ProcurementInfo .
+
+ex:notice1 epo:hasESenderDispatchDate "2016-04-06T00:00:00"^^xsd:dateTime ;
+	epo:refersToProcedure ex:procedure1 ;
+	a epo:Notice .
+
+ex:procedure1 epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/open> ;
+	a epo:Procedure .
 
