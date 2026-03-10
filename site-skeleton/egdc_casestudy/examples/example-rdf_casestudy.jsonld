@@ -166,6 +166,7 @@
       "unit": {
         "@id": "egdc-cl:unit/tco2e"
       },
+      "functionalUnit": "municipality annually",
       "value": "180"
     },
     {
@@ -181,6 +182,7 @@
       "unit": {
         "@id": "egdc-cl:unit/percent"
       },
+      "functionalUnit": "traffic zone",
       "value": "20"
     },
     {
@@ -196,6 +198,7 @@
       "unit": {
         "@id": "egdc-cl:unit/percent"
       },
+      "functionalUnit": "municipality annually",
       "value": "15"
     },
     {
@@ -211,6 +214,7 @@
       "unit": {
         "@id": "egdc-cl:unit/percent"
       },
+      "functionalUnit": "citizen",
       "value": "10"
     }
   ]

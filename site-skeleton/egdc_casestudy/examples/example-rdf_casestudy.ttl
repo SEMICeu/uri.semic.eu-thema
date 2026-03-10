@@ -62,24 +62,28 @@ ex:logo1 egdc:url "https://www.nokia.com/themes/custom/onenokia_reskin/logo.svg"
 ex:benefit1 dcterms:title "Net Carbon Impact"@en ;
 	dcterms:type <https://www.greendigitalcoalition.eu/codelist/benefit-type/environmental> ;
 	egdc:unit <https://www.greendigitalcoalition.eu/codelist/unit/tco2e> ;
+	egdc:functionalUnit "municipality annually" ;
 	egdc:value 180 ;
 	a egdc:Benefit, egdc:EnvironmentalBenefit .
 
 ex:benefit2 dcterms:title "Transport Emissions Reduction"@en ;
 	dcterms:type <https://www.greendigitalcoalition.eu/codelist/benefit-type/environmental> ;
 	egdc:unit <https://www.greendigitalcoalition.eu/codelist/unit/percent> ;
+	egdc:functionalUnit "traffic zone" ;
 	egdc:value 20 ;
 	a egdc:Benefit, egdc:EnvironmentalBenefit .
 
 ex:benefit3 dcterms:title "Waste Management Cost Savings"@en ;
 	dcterms:type <https://www.greendigitalcoalition.eu/codelist/benefit-type/economic> ;
 	egdc:unit <https://www.greendigitalcoalition.eu/codelist/unit/percent> ;
+	egdc:functionalUnit "municipality annually" ;
 	egdc:value 15 ;
 	a egdc:Benefit .
 
 ex:benefit4 dcterms:title "Citizen Quality of Life Improvement "@en ;
 	dcterms:type <https://www.greendigitalcoalition.eu/codelist/benefit-type/social> ;
 	egdc:unit <https://www.greendigitalcoalition.eu/codelist/unit/percent> ;
+	egdc:functionalUnit "citizen" ;
 	egdc:value 10 ;
 	a egdc:Benefit .
 
