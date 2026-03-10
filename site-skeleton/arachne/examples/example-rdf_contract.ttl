@@ -1,84 +1,102 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frapo: "http://purl.org/cerif/frapo/ .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix adm: <https://w3id.org/adm/model/> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix cv: <http://data.europa.eu/m8g/> .
 @prefix epo: <http://data.europa.eu/a4g/ontology#> .
 @prefix ex: <http://example.com/> .
-@prefix frapo: <http://purl.org/cerif/frapo/> .
 @prefix legal: <http://www.w3.org/ns/legal#> .
 @prefix person: <http://www.w3.org/ns/person#> .
 
-ex:project1 frapo:hasEndDate "2012-06-01"^^xsd:date ;
-	frapo:hasStartDate "2012-01-01"^^xsd:date ;
-	rdfs:label "Project name"@en ;
-	adms:identifier ex:identifier1 ;
-	adms:status ex:status1 ;
-	adm:ECFinancialAssistance [
+ex:contract1 adms:identifier ex:identifier4 ;
+	adm:belongsTo ex:project2 ;
+	adm:hasContractor ex:contractor1 ;
+	adm:contractType <http://publications.europa.eu/resource/authority/contract-nature/works> ;
+	adm:modified true ;
+	epo:hasContractConclusionDate "2015-12-20"^^xsd:date ;
+	adm:initialEndDate "2017-03-312"^^xsd:date ;
+	dcterms:title "Construction Management Services for the reconstruction of the Toga pass"@en ;
+	epo:hasContractValue [
 		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
-		epo:hasAmountValue "8733000"^^xsd:decimal ;
+		epo:hasAmountValue "12500"^^xsd:decimal ;
 		rdf:type epo:MonetaryValue ;
 	] ;
-	adm:hasBeneficiary ex:beneficiary1 ;
-	adm:income [
-		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
-		epo:hasAmountValue 12733.85 ;
-		rdf:type epo:MonetaryValue ;
-	] ;
-	adm:otherContributions [
-		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
-		epo:hasAmountValue "4125000"^^xsd:decimal ;
-		rdf:type epo:MonetaryValue ;
-	] ;
-	adm:thematicObjective <https://w3id.org/adm/codelist/thematicObjective/10> ;
-	adm:totalCost [
-		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
-		epo:hasAmountValue 12870733.85 ;
-		rdf:type epo:MonetaryValue ;
-	] ;
-	adm:hasBlock ex:esf1 ;
+	adm:hasContractAddenda ex:addenda1 ;
+	adm:hasKeyExpert ex:keyExpert1 ;
+	adm:hasServiceProvider ex:provider1, ex:provider2 ;
+	adm:hasProcurementInfo ex:procurement1 ;
+	a adm:Contract .
+
+ex:identifier4 skos:notation "Cont-7812355/003" ;
+	a adms:Identifier .
+
+ex:project2 adms:identifier ex:identifier5 ;
 	a foaf:Project .
 
-ex:esf1 adm:dg <http://publications.europa.eu/resource/authority/corporate-body/EMPL> ;
-	adm:projectType <https://w3id.org/adm/codelist/projectType/1> ;
-	adm:peopleToTrain 10 ;
-	adm:trainingHours 160 ;
-	a adm:ESF, adm:Block .
+ex:identifier5 skos:notation "123456" ;
+	a adms:Identifier .
 
-ex:beneficiary1 epo:playedBy ex:entity1 ;
-	adm:hasPartner ex:partner1 ;
-	a adm:Beneficiary .
+ex:contractor1 epo:playedBy ex:legalEntity1 ;
+	a epo:Contractor .
 
-ex:entity1 adms:identifier ex:identifier2 ;
+ex:legalEntity1 adms:identifier ex:identifier6 ;
 	a legal:LegalEntity .
 
-ex:partner1 epo:playedBy ex:entity2 ;
-	a adm:Partner .
-
-ex:entity2 adms:identifier ex:identifier3 ;
-	a legal:LegalEntity .
-
-ex:identifier1 skos:notation "Project 0124" ;
+ex:identifier6 skos:notation "BE01287745" ;
 	a adms:Identifier .
 
-ex:identifier2 skos:notation "5800012" ;
-	a adms:Identifier .
-
-ex:identifier3 skos:notation "1457" ;
-	a adms:Identifier .
-
-ex:status1 skos:prefLabel "Open"@en ;
+<http://publications.europa.eu/resource/authority/contract-nature/works> skos:prefLabel "Works"@en ;
 	a skos:Concept .
 
-<http://publications.europa.eu/resource/authority/currency/EUR> a skos:Concept .
+ex:addenda1 adm:amount [
+		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
+		epo:hasAmountValue "12000"^^xsd:decimal ;
+		rdf:type epo:MonetaryValue ;
+	] ;
+	adm:count 4 ;
+	a adm:ContractAddenda .
 
-<https://w3id.org/adm/codelist/thematicObjective/10> a skos:Concept .
+ex:keyExpert1 epo:playedBy ex:person1 ;
+	a adm:KeyExpert .
 
-<https://w3id.org/adm/codelist/projectType/1> a skos:Concept .
+ex:person1 foaf:givenName "Jean"@en ;
+	foaf:familyName "Robocop"@en ;
+	cv:dateOfBirth "1975-05-05"^^xsd:date ;
+	a person:Person .
 
-<http://publications.europa.eu/resource/authority/corporate-body/EMPL> a skos:Concept .
+ex:provider1 epo:playedBy ex:legalentity2 ;
+	a adm:ServiceProvider .
 
+ex:legalEntity2 adms:identifier ex:identifier7 ;
+	a legal:LegalEntity .
+
+ex:identifier7 skos:notation "0015877" ;
+	a adms:Identifier .
+
+ex:provider2 epo:playedBy ex:legalentity3 ;
+	a adm:ServiceProvider .
+
+ex:legalEntity3 adms:identifier ex:identifier8 ;
+	a legal:LegalEntity .
+
+ex:identifier8 skos:notation "GF-458/125465" ;
+	a adms:Identifier .
+
+ex:procurement1 adm:excludedTenders 5 ;
+	adm:validTenders 12 ;
+	adm:totalTenders 17 ;
+	adm:refersToNotice ex:notice1 ;
+	a adm:ProcurementInfo .
+
+ex:notice1 epo:hasESenderDispatchDate "2016-04-06T00:00:00"^^xsd:dateTime ;
+	epo:refersToProcedure ex:procedure1 ;
+	a epo:Notice .
+
+ex:procedure1 epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/open> ;
+	a epo:Procedure .
