@@ -7,7 +7,7 @@
   "template": "arachne_en.j2",
   "title": "Arachne Data Model",
   "publication-state": "Draft",
-  "publication-date": "2026-01-26",
+  "publication-date": "2026-03-10",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "ADM",
