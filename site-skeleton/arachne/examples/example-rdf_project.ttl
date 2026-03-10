@@ -26,7 +26,7 @@ ex:project1 frapo:hasEndDate "2012-06-01"^^xsd:date ;
 	adm:hasBeneficiary ex:beneficiary1 ;
 	adm:income [
 		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
-		epo:hasAmountValue 12733.85 ;
+		epo:hasAmountValue "12733.85^xsd:decimal ;
 		rdf:type epo:MonetaryValue ;
 	] ;
 	adm:otherContributions [
@@ -37,7 +37,7 @@ ex:project1 frapo:hasEndDate "2012-06-01"^^xsd:date ;
 	adm:thematicObjective <https://w3id.org/adm/codelist/thematicObjective/10> ;
 	adm:totalCost [
 		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
-		epo:hasAmountValue 12870733.85 ;
+		epo:hasAmountValue "12870733.85^xsd:decimal ;
 		rdf:type epo:MonetaryValue ;
 	] ;
 	adm:hasBlock ex:esf1 ;
