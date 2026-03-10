@@ -1,242 +1,200 @@
 {
   "@context": [
-  "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/0.0.2/context/arachne.jsonld",
-  {
-    "adm": "https://w3id.org/adm/model/",
-    "adms": "http://www.w3.org/ns/adms#",
-    "cv": "http://data.europa.eu/m8g/",
-    "dbo": "http://dbpedia.org/ontology/",
-    "dct": "http://purl.org/dc/terms/",
-    "epo": "http://data.europa.eu/a4g/ontology#",
-    "ex": "http://example.com/",
-    "foaf": "http://xmlns.com/foaf/0.1/",
-    "legal": "http://www.w3.org/ns/legal#",
-    "locn": "http://www.w3.org/ns/locn#",
-    "person": "http://www.w3.org/ns/person#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-  }],
+    "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/0.0.2/context/arachne.jsonld",
+    {
+      "adm": "https://w3id.org/adm/model/",
+      "adms": "http://www.w3.org/ns/adms#",
+      "cv": "http://data.europa.eu/m8g/",
+      "epo": "http://data.europa.eu/a4g/ontology#",
+      "ex": "http://example.com/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "frapo": "http://purl.org/cerif/frapo/",
+	  "legal": "http://www.w3.org/ns/legal#",
+      "locn": "http://www.w3.org/ns/locn#",
+      "person": "http://www.w3.org/ns/person#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+  ],
   "@graph": [
     {
-      "@id": "ex:contract1",
-      "@type": "adm:Contract",
-      "adms:identifier": {
-        "@id": "ex:identifier4"
-      },
-      "adm:belongsTo": {
-        "@id": "ex:project2"
-      },
-      "adm:hasContractor": {
-        "@id": "ex:contractor1"
-      },
-      "adm:contractType": {
-        "@id": "http://publications.europa.eu/resource/authority/contract-nature/works"
-      },
-      "adm:modified": true,
-      "epo:hasContractConclusionDate": {
+      "@id": "ex:project1",
+      "@type": "Project",
+      "frapo:hasEndDate": {
         "@type": "xsd:date",
-        "@value": "2015-12-20"
+        "@value": "2012-06-01"
       },
-      "adm:initialEndDate": {
+      "frapo:hasStartDate": {
         "@type": "xsd:date",
-        "@value": "2017-03-312"
+        "@value": "2012-01-01"
       },
-      "dct:title": {
+      "rdfs:label": {
         "@language": "en",
-        "@value": "Construction Management Services for the reconstruction of the Toga pass"
+        "@value": "Project name"
       },
-      "epo:hasContractValue": {
-        "@id": "_:g4"
+      "adms:identifier": {
+        "@id": "ex:identifier1"
       },
-      "adm:hasContractAddenda": {
-        "@id": "ex:addenda1"
+      "adms:status": {
+        "@id": "ex:status1"
       },
-      "adm:hasKeyExpert": {
-        "@id": "ex:keyExpert1"
+      "adm:ECFinancialAssistance": {
+        "@id": "_:g0"
       },
-      "adm:hasServiceProvider" : [
-        {"@id" : "ex:provider1"}, 
-        {"@id" : "ex:provider2"}
+      "adm:hasBeneficiary": {
+        "@id": "ex:beneficiary1"
+      },
+      "adm:income": {
+        "@id": "_:g2"
+      },
+      "adm:otherContributions": {
+        "@id": "_:g1"
+      },
+      "adm:thematicObjective": {
+        "@id": "https://w3id.org/adm/codelist/thematicObjective/10"
+      },
+      "adm:totalCost": {
+        "@id": "_:g3"
+      },
+      "adm:hasBlock": {
+        "@id": "ex:esf1"
+      }
+    },
+    {
+      "@id": "ex:esf1",
+      "@type": [
+        "ESF",
+        "Block"
       ],
-      "adm:hasProcurementInfo" : {
-        "@id" : "ex:procurement1"
+      "adm:dg": {
+        "@id": "http://publications.europa.eu/resource/authority/corporate-body/EMPL"
+      },
+      "adm:projectType": {
+        "@id": "https://w3id.org/adm/codelist/projectType/1"
+      },
+      "adm:peopleToTrain": {
+        "@value": "10",
+        "@type": "xsd:integer"
+      },
+      "adm:trainingHours": {
+        "@value": "160",
+        "@type": "xsd:integer"
       }
     },
     {
-      "@id": "ex:identifier4",
-      "@type": "adms:Identifier",
-      "skos:notation": "Cont-7812355/003"
+      "@id": "_:g0",
+      "@type": "MonetaryValue",
+      "epo:hasCurrency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "epo:hasAmountValue": {
+        "@type": "xsd:decimal",
+        "@value": "8733000"
+      }
     },
     {
-      "@id": "ex:project2",
-      "@type": "dbo:Project",
+      "@id": "_:g1",
+      "@type": "MonetaryValue",
+      "epo:hasCurrency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "epo:hasAmountValue": {
+        "@type": "xsd:decimal",
+        "@value": "4125000"
+      }
+    },
+    {
+      "@id": "_:g2",
+      "@type": "MonetaryValue",
+      "epo:hasCurrency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "epo:hasAmountValue": {
+        "@type": "xsd:decimal",
+        "@value": "12733.85"
+      }
+    },
+    {
+      "@id": "_:g3",
+      "@type": "MonetaryValue",
+      "epo:hasCurrency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "epo:hasAmountValue": {
+        "@type": "xsd:decimal",
+        "@value": "12870733.85"
+      }
+    },
+    {
+      "@id": "ex:beneficiary1",
+      "@type": "Beneficiary",
+      "epo:playedBy": {
+        "@id":"ex:entity1"
+      },
+      "adm:hasPartner": {
+        "@id": "ex:partner1"
+      }
+    },
+    {
+      "@id": "ex:entity1",
+      "@type": "LegalEntity",
       "adms:identifier": {
-        "@id": "ex:identifier5"
-      }
-    },
-     {
-      "@id": "ex:identifier5",
-      "@type": "adms:Identifier",
-      "skos:notation": "123456"
-    },
-    {
-      "@id": "ex:contractor1",
-      "@type": "epo:Contractor",
-      "epo:playedBy" : {
-        "@id" : "ex:legalEntity1"
+        "@id": "ex:identifier2"
       }
     },
     {
-      "@id": "ex:legalEntity1",
-      "@type": "legal:LegalEntity",
+      "@id": "ex:partner1",
+      "@type": "Partner",
+      "epo:playedBy": {
+        "@id":"ex:entity2"
+      }
+    },
+    {
+      "@id": "ex:entity2",
+      "@type": "LegalEntity",
       "adms:identifier": {
-        "@id": "ex:identifier6"
+        "@id": "ex:identifier3"
       }
     },
-     {
-      "@id": "ex:identifier6",
-      "@type": "adms:Identifier",
-      "skos:notation": "BE01287745"
+    {
+      "@id": "ex:identifier1",
+      "@type": "Identifier",
+      "skos:notation": "Project 0124"
     },
-     {
-      "@id": "http://publications.europa.eu/resource/authority/contract-nature/works",
-      "@type": "skos:Concept",
+    {
+      "@id": "ex:identifier2",
+      "@type": "Identifier",
+      "skos:notation": "5800012"
+    },
+    {
+      "@id": "ex:identifier3",
+      "@type": "Identifier",
+      "skos:notation": "1457"
+    },
+    {
+      "@id": "ex:status1",
+      "@type": "Code",
       "skos:prefLabel": {
         "@language": "en",
-        "@value": "Works"
-      }
-     },
-     {
-      "@id": "_:g4",
-      "@type": "epo:MonetaryValue",
-      "epo:hasCurrency": {
-        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
-      },
-      "epo:hasAmountValue": {
-        "@type": "xsd:decimal",
-        "@value": "12500"
+        "@value": "Open"
       }
     },
     {
-      "@id": "ex:addenda1",
-      "@type": "adm:ContractAddenda",
-      "adm:amount": {
-        "@id": "_:g5"
-      },
-      "adm:count": {
-        "@type": "xsd:integer",
-        "@value": "4"
-      }
+      "@id": "http://publications.europa.eu/resource/authority/currency/EUR",
+      "@type": "Code"
     },
     {
-      "@id": "_:g5",
-      "@type": "epo:MonetaryValue",
-      "epo:hasCurrency": {
-        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
-      },
-      "epo:hasAmountValue": {
-        "@type": "xsd:decimal",
-        "@value": "12000"
-      }
+      "@id": "https://w3id.org/adm/codelist/thematicObjective/10",
+      "@type": "Code"
     },
     {
-      "@id": "ex:keyExpert1",
-      "@type": "adm:KeyExpert",
-      "epo:playedBy" : {
-        "@id" : "ex:person1"
-      }
+      "@id": "https://w3id.org/adm/codelist/projectType/1",
+      "@type": "Code"
     },
     {
-      "@id": "ex:person1",
-      "@type": "person:Person",
-      "foaf:givenName": {
-        "@language": "en",
-        "@value": "Jean"
-      },
-      "foaf:familyName": {
-        "@language": "en",
-        "@value": "Robocop"
-      },
-      "cv:dateOfBirth": {
-        "@type": "xsd:date",
-        "@value": "1975-05-05"
-      }
-    },
-    {
-      "@id": "ex:provider1",
-      "@type": "adm:ServiceProvider",
-      "epo:playedBy" : {
-        "@id" : "ex:legalentity2"
-      }
-    },
-     {
-      "@id": "ex:legalEntity2",
-      "@type": "legal:LegalEntity",
-      "adms:identifier": {
-        "@id": "ex:identifier7"
-      }
-    },
-     {
-      "@id": "ex:identifier7",
-      "@type": "adms:Identifier",
-      "skos:notation": "0015877"
-    },
-{
-      "@id": "ex:provider2",
-      "@type": "adm:ServiceProvider",
-      "epo:playedBy" : {
-        "@id" : "ex:legalentity3"
-       }
-    },
-     {
-      "@id": "ex:legalEntity3",
-      "@type": "legal:LegalEntity",
-      "adms:identifier": {
-        "@id": "ex:identifier8"
-      }
-    },
-    {
-      "@id": "ex:identifier8",
-      "@type": "adms:Identifier",
-      "skos:notation": "GF-458/125465"
-    },
-    {
-      "@id": "ex:procurement1",
-      "@type": "adm:ProcurementInfo",
-      "adm:excludedTenders": {
-        "@value" :"5",
-        "@type" : "xsd:integer"
-      },
-      "adm:validTenders" : {
-        "@value": "12",
-        "@type" : "xsd:integer"
-      },
-      "adm:totalTenders" : {
-        "@value" : "17",
-        "@type" : "xsd:integer"
-      },
-      "adm:refersToNotice" : {
-        "@id" : "ex:notice1"
-      }
-    },
-    {
-      "@id": "ex:notice1",
-      "@type": "epo:Notice",
-      "epo:hasESenderDispatchDate": {
-        "@value": "2016-04-06T00:00:00",
-        "@type" : "xsd:dateTime"
-      },
-      "epo:refersToProcedure" : {
-        "@id" : "ex:procedure1"
-      }
-    },  
-   {
-      "@id": "ex:procedure1",
-      "@type": "epo:Procedure",
-      "epo:hasProcedureType" : {
-        "@id" : "http://publications.europa.eu/resource/authority/procurement-procedure-type/open"
-      }
-    } 
+      "@id": "http://publications.europa.eu/resource/authority/corporate-body/EMPL",
+      "@type": "Code"
+    }
   ]
 }

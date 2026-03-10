@@ -5,10 +5,10 @@
       "adm": "https://w3id.org/adm/model/",
       "adms": "http://www.w3.org/ns/adms#",
       "cv": "http://data.europa.eu/m8g/",
-      "dbo": "http://dbpedia.org/ontology/",
       "epo": "http://data.europa.eu/a4g/ontology#",
       "ex": "http://example.com/",
       "foaf": "http://xmlns.com/foaf/0.1/",
+      "frapo": "http://purl.org/cerif/frapo/",
 	  "legal": "http://www.w3.org/ns/legal#",
       "locn": "http://www.w3.org/ns/locn#",
       "person": "http://www.w3.org/ns/person#",
@@ -20,12 +20,12 @@
   "@graph": [
     {
       "@id": "ex:project1",
-      "@type": "dbo:Project",
-      "dbo:projectEndDate": {
+      "@type": "Project",
+      "frapo:hasEndDate": {
         "@type": "xsd:date",
         "@value": "2012-06-01"
       },
-      "dbo:projectStartDate": {
+      "frapo:hasStartDate": {
         "@type": "xsd:date",
         "@value": "2012-01-01"
       },
@@ -84,7 +84,7 @@
     },
     {
       "@id": "_:g0",
-      "@type": "epo:MonetaryValue",
+      "@type": "MonetaryValue",
       "epo:hasCurrency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
@@ -95,7 +95,7 @@
     },
     {
       "@id": "_:g1",
-      "@type": "epo:MonetaryValue",
+      "@type": "MonetaryValue",
       "epo:hasCurrency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
@@ -106,7 +106,7 @@
     },
     {
       "@id": "_:g2",
-      "@type": "epo:MonetaryValue",
+      "@type": "MonetaryValue",
       "epo:hasCurrency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
@@ -117,7 +117,7 @@
     },
     {
       "@id": "_:g3",
-      "@type": "epo:MonetaryValue",
+      "@type": "MonetaryValue",
       "epo:hasCurrency": {
         "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
       },
@@ -128,7 +128,7 @@
     },
     {
       "@id": "ex:beneficiary1",
-      "@type": "adm:Beneficiary",
+      "@type": "Beneficiary",
       "epo:playedBy": {
         "@id":"ex:entity1"
       },
@@ -145,7 +145,7 @@
     },
     {
       "@id": "ex:partner1",
-      "@type": "adm:Partner",
+      "@type": "Partner",
       "epo:playedBy": {
         "@id":"ex:entity2"
       }
@@ -159,22 +159,22 @@
     },
     {
       "@id": "ex:identifier1",
-      "@type": "adms:Identifier",
+      "@type": "Identifier",
       "skos:notation": "Project 0124"
     },
     {
       "@id": "ex:identifier2",
-      "@type": "adms:Identifier",
+      "@type": "Identifier",
       "skos:notation": "5800012"
     },
     {
       "@id": "ex:identifier3",
-      "@type": "adms:Identifier",
+      "@type": "Identifier",
       "skos:notation": "1457"
     },
     {
       "@id": "ex:status1",
-      "@type": "skos:Concept",
+      "@type": "Concept",
       "skos:prefLabel": {
         "@language": "en",
         "@value": "Open"
@@ -182,19 +182,19 @@
     },
     {
       "@id": "http://publications.europa.eu/resource/authority/currency/EUR",
-      "@type": "skos:Concept"
+      "@type": "Concept"
     },
     {
       "@id": "https://w3id.org/adm/codelist/thematicObjective/10",
-      "@type": "skos:Concept"
+      "@type": "Concept"
     },
     {
       "@id": "https://w3id.org/adm/codelist/projectType/1",
-      "@type": "skos:Concept"
+      "@type": "Concept"
     },
     {
       "@id": "http://publications.europa.eu/resource/authority/corporate-body/EMPL",
-      "@type": "skos:Concept"
+      "@type": "Concept"
     }
   ]
 }
