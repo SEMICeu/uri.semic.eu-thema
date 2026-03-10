@@ -1,5 +1,5 @@
-@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frapo: "http://purl.org/cerif/frapo/ .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -37,7 +37,7 @@ ex:identifier4 skos:notation "Cont-7812355/003" ;
 	a adms:Identifier .
 
 ex:project2 adms:identifier ex:identifier5 ;
-	a dbo:Project .
+	a foaf:Project .
 
 ex:identifier5 skos:notation "123456" ;
 	a adms:Identifier .

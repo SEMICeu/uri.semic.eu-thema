@@ -1,4 +1,3 @@
-@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -11,93 +10,29 @@
 @prefix cv: <http://data.europa.eu/m8g/> .
 @prefix epo: <http://data.europa.eu/a4g/ontology#> .
 @prefix ex: <http://example.com/> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
 @prefix legal: <http://www.w3.org/ns/legal#> .
 @prefix person: <http://www.w3.org/ns/person#> .
 
-ex:contract1 adms:identifier ex:identifier4 ;
-	adm:belongsTo ex:project2 ;
-	adm:hasContractor ex:contractor1 ;
-	adm:contractType <http://publications.europa.eu/resource/authority/contract-nature/works> ;
-	adm:modified true ;
-	epo:hasContractConclusionDate "2015-12-20"^^xsd:date ;
-	adm:initialEndDate "2017-03-312"^^xsd:date ;
-	dcterms:title "Construction Management Services for the reconstruction of the Toga pass"@en ;
-	epo:hasContractValue [
+ex:subcontract1 adms:identifier ex:identifier9 ;
+	dcterms:isPartOf ex:contract1 ;
+	adm:hasSubcontractor ex:subcontractor1 ;
+	adm:amount [
 		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
-		epo:hasAmountValue "12500"^^xsd:decimal ;
+		epo:hasAmountValue 12789.26 ;
 		rdf:type epo:MonetaryValue ;
 	] ;
-	adm:hasContractAddenda ex:addenda1 ;
-	adm:hasKeyExpert ex:keyExpert1 ;
-	adm:hasServiceProvider ex:provider1, ex:provider2 ;
-	adm:hasProcurementInfo ex:procurement1 ;
-	a adm:Contract .
+	a adm:Subcontract .
 
-ex:identifier4 skos:notation "Cont-7812355/003" ;
+ex:identifier9 skos:notation "SC-001" ;
 	a adms:Identifier .
 
-ex:project2 adms:identifier ex:identifier5 ;
-	a dbo:Project .
+ex:subcontractor1 epo:playedBy ex:legalEntity2 ;
+	a adm:Subcontractor .
 
-ex:identifier5 skos:notation "123456" ;
-	a adms:Identifier .
-
-ex:contractor1 epo:playedBy ex:legalEntity1 ;
-	a epo:Contractor .
-
-ex:legalEntity1 adms:identifier ex:identifier6 ;
+ex:legalEntity2 adms:identifier ex:identifier10 ;
 	a legal:LegalEntity .
 
-ex:identifier6 skos:notation "BE01287745" ;
+ex:identifier10 skos:notation "VE-124-88" ;
 	a adms:Identifier .
-
-<http://publications.europa.eu/resource/authority/contract-nature/works> skos:prefLabel "Works"@en ;
-	a skos:Concept .
-
-ex:addenda1 adm:amount [
-		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
-		epo:hasAmountValue "12000"^^xsd:decimal ;
-		rdf:type epo:MonetaryValue ;
-	] ;
-	adm:count 4 ;
-	a adm:ContractAddenda .
-
-ex:keyExpert1 epo:playedBy ex:person1 ;
-	a adm:KeyExpert .
-
-ex:person1 foaf:givenName "Jean"@en ;
-	foaf:familyName "Robocop"@en ;
-	cv:dateOfBirth "1975-05-05"^^xsd:date ;
-	a person:Person .
-
-ex:provider1 epo:playedBy ex:legalentity2 ;
-	a adm:ServiceProvider .
-
-ex:legalEntity2 adms:identifier ex:identifier7 ;
-	a legal:LegalEntity .
-
-ex:identifier7 skos:notation "0015877" ;
-	a adms:Identifier .
-
-ex:provider2 epo:playedBy ex:legalentity3 ;
-	a adm:ServiceProvider .
-
-ex:legalEntity3 adms:identifier ex:identifier8 ;
-	a legal:LegalEntity .
-
-ex:identifier8 skos:notation "GF-458/125465" ;
-	a adms:Identifier .
-
-ex:procurement1 adm:excludedTenders 5 ;
-	adm:validTenders 12 ;
-	adm:totalTenders 17 ;
-	adm:refersToNotice ex:notice1 ;
-	a adm:ProcurementInfo .
-
-ex:notice1 epo:hasESenderDispatchDate "2016-04-06T00:00:00"^^xsd:dateTime ;
-	epo:refersToProcedure ex:procedure1 ;
-	a epo:Notice .
-
-ex:procedure1 epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/open> ;
-	a epo:Procedure .
 
