@@ -41,7 +41,7 @@
     },
     {
       "@id": "ex:subcontractor1",
-      "@type": "adm:Subcontractor",
+      "@type": "epo:Subcontractor",
       "epo:playedBy" : {
         "@id" : "ex:legalEntity2"
       }

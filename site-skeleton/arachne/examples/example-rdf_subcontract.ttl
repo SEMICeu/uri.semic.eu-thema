@@ -28,7 +28,7 @@ ex:identifier9 skos:notation "SC-001" ;
 	a adms:Identifier .
 
 ex:subcontractor1 epo:playedBy ex:legalEntity2 ;
-	a adm:Subcontractor .
+	a epo:Subcontractor .
 
 ex:legalEntity2 adms:identifier ex:identifier10 ;
 	a legal:LegalEntity .
