@@ -10,80 +10,80 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix cv: <http://data.europa.eu/m8g/> .
-@prefix egdc: <https://www.greendigitalcoalition.eu/model/> .
-@prefix egdc-cl: <https://www.greendigitalcoalition.eu/codelist/> .
+@prefix egdc-cs: <https://w3id.org/egdc/casestudy/> .
+@prefix egdc-cl: <https://w3id.org/egdc/codelist/> .
+@prefix egdc-ru: <https://w3id.org/egdc/rule/> .
 @prefix ex: <http://example.com/> .
 
 <https://egdc-frontend.vercel.app/case-studies/10> dcterms:description "The Integrated Operations Center platform is a digital enablement platform that increases productivity, efficiency and growth through agile introduction and largely automated utilization of digital operational technology assets and capabilities."@en ;
 	locn:address ex:address1 ;
-	egdc:problemSolved "Inefficient management of urban environment (waste, traffic) in Nicosia."@en ;
-	egdc:technology <https://www.greendigitalcoalition.eu/codelist/technology/iot> ;
-	egdc:typeOfCalculation <https://www.greendigitalcoalition.eu/codelist/calculation/ex-post> ;
-	egdc:fundingType <https://www.greendigitalcoalition.eu/codelist/funding/public> ;
-	egdc:fundingProgrammeUrl "https://ec.europa.eu/regional_policy/"^^xsd:anyURI ;
+	<https://www.greendigitalcoalition.eu/model/problemSolved> "Inefficient management of urban environment (waste, traffic) in Nicosia."@en ;
+	<https://www.greendigitalcoalition.eu/model/technology> <https://w3id.org/egdc/codelist/technology/iot> ;
+	<https://www.greendigitalcoalition.eu/model/typeOfCalculation> <https://w3id.org/egdc/codelist/calculation/ex-post> ;
+	<https://www.greendigitalcoalition.eu/model/fundingType> <https://w3id.org/egdc/codelist/funding/public> ;
+	egdc-cs:fundingProgrammeUrl "https://ec.europa.eu/regional_policy/"^^xsd:anyURI ;
 	dcterms:created "2026-01-12"^^xsd:date ;
-	adms:status <https://www.greendigitalcoalition.eu/codelist/status/published> ;
-	egdc:hasMethodology ex:methodology1 ;
-	egdc:hasDataset ex:dataset1 ;
-	egdc:isProvidedBy ex:organization1 ;
+	adms:status <https://w3id.org/egdc/codelist/status/published> ;
+	egdc-cs:hasMethodology ex:methodology1 ;
+	egdc-cs:hasDataset ex:dataset1 ;
+	egdc-cs:isProvidedBy ex:organization1 ;
 	cv:logo ex:logo1 ;
-	egdc:hasEnvironmentalBenefit ex:benefit1, ex:benefit2 ;
-	egdc:hasBenefit ex:benefit3, ex:benefit4 ;
-	a egdc:CaseStudy .
+	egdc-cs:hasEnvironmentalBenefit ex:benefit1, ex:benefit2 ;
+	egdc-cs:hasBenefit ex:benefit3, ex:benefit4 ;
+	a egdc-cs:CaseStudy .
 
 ex:address1 locn:adminUnitL1 "Cyprus"@en ;
 	locn:postName "Nicosia"@en ;
 	a locn:Address .
 
 ex:methodology1 dcterms:language <http://publications.europa.eu/resource/authority/language/ENG> ;
-	egdc:url "https://www.greendigitalcoalition.eu/assets/uploads/2024/04/EGDC-Case-Study-Meth-Nokia-Smart-Waste-Management.pdf"^^xsd:anyURI ;
+	egdc-cs:url "https://www.greendigitalcoalition.eu/assets/uploads/2024/04/EGDC-Case-Study-Meth-Nokia-Smart-Waste-Management.pdf"^^xsd:anyURI ;
 	dcterms:title "Smart City Nicosia Report"@en ;
-	a egdc:Methodology .
+	a egdc-cs:Methodology .
 
 ex:dataset1 dcterms:language <http://publications.europa.eu/resource/authority/language/ENG> ;
-	egdc:url "https://www.greendigitalcoalition.eu/assets/uploads/2024/03/EGDC-Case-Study-Calc.-Nokia-Smart-Waste-Management.xlsx"^^xsd:anyURI ;
+	egdc-cs:url "https://www.greendigitalcoalition.eu/assets/uploads/2024/03/EGDC-Case-Study-Calc.-Nokia-Smart-Waste-Management.xlsx"^^xsd:anyURI ;
 	dcterms:title "Smart City Nicosia Dataset"@en ;
 	a dcat:Dataset .
 
 ex:organization1 dcterms:title "Nokia"@en ;
-	egdc:sector <https://www.greendigitalcoalition.eu/codelist/sector/smart-cities> ;
-	egdc:url "https://nokia.com"^^xsd:anyURI ;
+	egdc-cs:sector <https://w3id.org/egdc/codelist/sector/smart-cities> ;
+	egdc-cs:url "https://nokia.com"^^xsd:anyURI ;
 	cv:contactPoint ex:conctactpoint1 ;
-	dcterms:type <https://www.greendigitalcoalition.eu/codelist/org-type/company> ;
+	dcterms:type <https://w3id.org/egdc/codelist/org-type/company> ;
 	a org:Organization .
 
 ex:conctactpoint1 dcterms:title "Smart City Dept"@en ;
 	cv:email "smartcity@nokia.com" ;
 	a cv:ContactPoint .
 
-ex:logo1 egdc:url "https://www.nokia.com/themes/custom/onenokia_reskin/logo.svg"^^xsd:anyURI ;
+ex:logo1 egdc-cs:url "https://www.nokia.com/themes/custom/onenokia_reskin/logo.svg"^^xsd:anyURI ;
 	a cv:ImageObject .
 
 ex:benefit1 dcterms:title "Net Carbon Impact"@en ;
-	dcterms:type <https://www.greendigitalcoalition.eu/codelist/benefit-type/environmental> ;
-	egdc:unit <https://www.greendigitalcoalition.eu/codelist/unit/tco2e> ;
-	egdc:functionalUnit "municipality annually" ;
-	egdc:value 180 ;
-	a egdc:Benefit, egdc:EnvironmentalBenefit .
+	dcterms:type <https://w3id.org/egdc/codelist/benefit-type/environmental> ;
+	egdc-cs:unit <https://w3id.org/egdc/codelist/unit/tco2e> ;
+	egdc-cs:functionalUnit "municipality annually" ;
+	egdc-cs:value 180 ;
+	a egdc-cs:Benefit, egdc-cs:EnvironmentalBenefit .
 
 ex:benefit2 dcterms:title "Transport Emissions Reduction"@en ;
-	dcterms:type <https://www.greendigitalcoalition.eu/codelist/benefit-type/environmental> ;
-	egdc:unit <https://www.greendigitalcoalition.eu/codelist/unit/percent> ;
-	egdc:functionalUnit "traffic zone" ;
-	egdc:value 20 ;
-	a egdc:Benefit, egdc:EnvironmentalBenefit .
+	dcterms:type <https://w3id.org/egdc/codelist/benefit-type/environmental> ;
+	egdc-cs:unit <https://w3id.org/egdc/codelist/unit/percent> ;
+	egdc-cs:functionalUnit "traffic zone" ;
+	egdc-cs:value 20 ;
+	a egdc-cs:Benefit, egdc-cs:EnvironmentalBenefit .
 
 ex:benefit3 dcterms:title "Waste Management Cost Savings"@en ;
-	dcterms:type <https://www.greendigitalcoalition.eu/codelist/benefit-type/economic> ;
-	egdc:unit <https://www.greendigitalcoalition.eu/codelist/unit/percent> ;
-	egdc:functionalUnit "municipality annually" ;
-	egdc:value 15 ;
-	a egdc:Benefit .
+	dcterms:type <https://w3id.org/egdc/codelist/benefit-type/economic> ;
+	egdc-cs:unit <https://w3id.org/egdc/codelist/unit/percent> ;
+	egdc-cs:functionalUnit "municipality annually" ;
+	egdc-cs:value 15 ;
+	a egdc-cs:Benefit .
 
 ex:benefit4 dcterms:title "Citizen Quality of Life Improvement "@en ;
-	dcterms:type <https://www.greendigitalcoalition.eu/codelist/benefit-type/social> ;
-	egdc:unit <https://www.greendigitalcoalition.eu/codelist/unit/percent> ;
-	egdc:functionalUnit "citizen" ;
-	egdc:value 10 ;
-	a egdc:Benefit .
-
+	dcterms:type <https://w3id.org/egdc/codelist/benefit-type/social> ;
+	egdc-cs:unit <https://w3id.org/egdc/codelist/unit/percent> ;
+	egdc-cs:functionalUnit "citizen" ;
+	egdc-cs:value 10 ;
+	a egdc-cs:Benefit .
