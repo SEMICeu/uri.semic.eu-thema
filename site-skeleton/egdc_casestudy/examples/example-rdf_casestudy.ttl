@@ -17,10 +17,10 @@
 
 <https://egdc-frontend.vercel.app/case-studies/10> dcterms:description "The Integrated Operations Center platform is a digital enablement platform that increases productivity, efficiency and growth through agile introduction and largely automated utilization of digital operational technology assets and capabilities."@en ;
 	locn:address ex:address1 ;
-	<https://www.greendigitalcoalition.eu/model/problemSolved> "Inefficient management of urban environment (waste, traffic) in Nicosia."@en ;
-	<https://www.greendigitalcoalition.eu/model/technology> <https://w3id.org/egdc/codelist/technology/iot> ;
-	<https://www.greendigitalcoalition.eu/model/typeOfCalculation> <https://w3id.org/egdc/codelist/calculation/ex-post> ;
-	<https://www.greendigitalcoalition.eu/model/fundingType> <https://w3id.org/egdc/codelist/funding/public> ;
+	egdc-cs:problemSolved "Inefficient management of urban environment (waste, traffic) in Nicosia."@en ;
+	egdc-cs:technology <https://w3id.org/egdc/codelist/technology/iot> ;
+	egdc-cs:typeOfCalculation <https://w3id.org/egdc/codelist/calculation/ex-post> ;
+	egdc-cs:fundingType <https://w3id.org/egdc/codelist/funding/public> ;
 	egdc-cs:fundingProgrammeUrl "https://ec.europa.eu/regional_policy/"^^xsd:anyURI ;
 	dcterms:created "2026-01-12"^^xsd:date ;
 	adms:status <https://w3id.org/egdc/codelist/status/published> ;
@@ -87,3 +87,4 @@ ex:benefit4 dcterms:title "Citizen Quality of Life Improvement "@en ;
 	egdc-cs:functionalUnit "citizen" ;
 	egdc-cs:value 10 ;
 	a egdc-cs:Benefit .
+
