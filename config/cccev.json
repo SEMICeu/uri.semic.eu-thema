@@ -43,9 +43,9 @@
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "CCCEV",
-  "site": "site-skeleton/cccev",
-  "repourl": "https://github.com/SEMICeu/CCCEV/tree/master/releases/2.1.0",
-  "versionurl": "https://semiceu.github.io/CCCEV/releases/2.1.0",
+  "site": "site-skeleton/cccev-draft",
+  "repourl": "https://github.com/SEMICeu/uri.semic.eu-generated/tree/draft/CCCEV/releases/2.1.1",
+  "versionurl": "https://semiceu.github.io/uri.semic.eu-generated/CCCEV/releases/2.1.1/",
   "feedbackurl": "https://github.com/SEMICeu/CCCEV/issues",
   "standaardregisterurl": "https://github.com/SEMICeu/CCCEV/blob/master/releases/2.1.0/Changelog.md",
     "translation": [
