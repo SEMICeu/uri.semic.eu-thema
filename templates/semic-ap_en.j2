@@ -75,8 +75,17 @@
 		
 	function quickreference() {
 		$('#table-quickoverview').DataTable();
-	};
-	var shaclfilepath = "./shacl/{{metadata.filename}}-SHACL.ttl" ;
+    };
+	var shaclfilepath = "shacl/{{metadata.filename}}-SHACL.ttl" ;
+	var folder = "./html/examples/";
+	var model = "any" ;
+	var version_list = [
+		{
+		"type": "Core Vocabularies",
+		"description": "Core Vocabularies"
+		},
+	] ;
+	var linkinfo = "{{metadata.navigation.self}}" + "#validation" ;
 
    {% block respecconfig %}
     var respecConfig = {
