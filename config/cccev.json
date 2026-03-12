@@ -39,7 +39,7 @@
   "template": "cccev-ap_en.j2",
   "title": "Core Criterion and Core Evidence Vocabulary (CCCEV) draft",
   "publication-state": "Semic Recommendation",
-  "publication-date": "2026-02-10",
+  "publication-date": "2026-03-12",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "CCCEV",
@@ -60,7 +60,7 @@
     "toolchainversion" : "3",
     "documentconfig": {
           "statuslabel" : "SEMIC Candidate Recommendation",
-          "editorDocumentroot" : "https://semiceu.github.io/CCCEV/releases/2.1.0"
+          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/CCCEV/releases/2.1.1/"
     }
 },
 {
