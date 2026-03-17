@@ -18,10 +18,7 @@
     {
       "@id": "ex:ir",
       "@type": "InformationRequirement",
-      "dct:description" : {
-        "@language": "en",
-        "@value": "Request to provide certificate about childcare costs"
-      },
+      "dct:description" : "Request to provide certificate about childcare costs",
       "dct:type" : {
         "@id" : "ex:federalreduction"
       },
@@ -88,10 +85,7 @@
     {
       "@id": "ex:evidence",
       "@type": "Evidence",
-      "dct:description" : {
-        "@language": "fr",
-        "@value": "Attestation en matière de frais de garde d'enfants"
-      },
+      "dct:description" : "Attestation en matière de frais de garde d'enfants",
       "dct:creator" : {
         "@id" : "ex:creche"
       },
