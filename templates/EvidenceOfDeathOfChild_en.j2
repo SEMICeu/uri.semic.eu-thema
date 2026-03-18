@@ -1,0 +1,152 @@
+{% extends "oots-profile-ap_en.j2" %}
+
+{% block respecconfig %}
+
+    var respecConfig = {
+      postProcess: [quickreference],
+      edDraftURI: "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/EvidenceOfDeathOfChild/releases/0.0.1",
+      latestVersion: "{{metadata.navigation.prev}}",
+      specStatus: "LD",
+      editors: myeditors,
+      authors: myauthors,
+      shortName: "{{metadata.title}}",
+      xref: "web-platform",
+      doJsonLd: true,
+      logos: [{
+        src: "./html/logo-once-only-hub.png",
+        url: "https://ec.europa.eu/digital-building-blocks/sites/display/OOTS/OOTSHUB+Home",
+        alt: "OOTS",
+        width: 100,
+        height: 53,
+        id: "oots-logo",
+      },],
+      generatedSubtitle: "",
+      additionalCopyrightHolders: "",
+      localBiblio: {
+        "DXWG": {
+          "href" : "https://www.w3.org/2017/dxwg/wiki/Main_Page",
+          "title" : "Dataset Exchange Working Group",
+          "publisher" : "W3C"
+          },
+        "ISA":{
+           "href":"https://ec.europa.eu/isa/",
+           "title":"Interoperability Solutions for European Public Administrations (ISA)",
+           "publisher":"European Commission"
+          },
+        "ISA2":{
+          "href":"https://ec.europa.eu/isa2/",
+          "title":"Interoperability solutions for public administrations, businesses and citizens (ISA²)",
+          "publisher":"European Commission"
+        },
+        "SEMIC":{
+          "href":"https://joinup.ec.europa.eu/",
+          "title":"JoinUp welcomes Interoperable Europe",
+          "publisher":"European Commission"
+         },
+        "DEU" : {
+          "href":"https://data.europa.eu",
+          "title":"The official portal for European data",
+          "publisher":"European Commission"
+        },
+		"HVD" : {
+		  "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138",
+		  "title":"Implementing Regulation for High Value Datasets",
+		  "publisher":"European Union"
+		},
+		"DCAT-AP-HVD" : {
+		  "href":"https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/",
+		  "title":"Usage Guidelines of DCAT-AP for High-Value Datasets",
+		  "publisher":"European Commission"
+		},
+                "PSI" : {
+                  "href": "https://eur-lex.europa.eu/eli/dir/2019/1024/oj",
+                  "title" :  "Directive on open data and the re-use of public sector information (recast)",
+                  "publisher" : "European Union"
+                }
+      }
+    };
+
+{% endblock %}
+
+
+{% block introduction %}
+<p>
+  This data model provides a minimum set of classes and properties for describing a evidence of death of child. This data model has been designed to support the different requirements of the OOTS action. The different classes and properties defined in this document are based on the <a href="https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/data_dictionary.html">OOTS data dictionary</a>.
+</p>
+{% endblock %}
+
+
+{% block summary %}
+<section id="abstract">
+    <h2>Abstract</h2>
+Evidence of death of child is a simplified data model describing a request for evidence related to the death of the person's (evidence subject) child.
+</section>
+{% endblock %}
+
+{% block terminologyPrefixes %}
+This specification uses the following prefixes to shorten the URIs for readibility.
+
+        <table id="table-namespaces" class="simple">
+            <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+            <tbody>           
+            <tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>           
+            <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
+            <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
+            <tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
+            <tr><td><code>person</code></td><td><code>http://www.w3.org/ns/person#/</code></td></tr>
+            <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
+            <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
+            <tr><td><code>sdg</code></td><td><code>http://data.europa.eu/p4s/</code></td></tr>
+            <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+            </tbody>
+        </table>
+
+{% endblock %}
+
+{% block umlrepresentation %}		
+		<h3>UML representation</h3>
+		The UML representation from which the {{metadata.title}} has been build is available <a href="./UML/OOTS_EvidenceOfDeathOfChild.eap">here</a>.
+{% endblock %} 
+
+{% block xmlschema %}
+		<h3>XML schema representation</h3>
+		<p>The XML schema representation from which the {{metadata.title}} has been build is available <a href="https://code.europa.eu/oots/tdd/data_models/-/tree/main/Evidence/EvidenceOfDeathOfChild/releases/0.0.1/xsd/EvidenceOfDeathOfChild_v6.4?ref_type=heads">here</a>.</p>
+
+    <p>The XML schema is based on the OOTS requirements and it allows some flexibility to include fields that Member States can add in addition to those foreseen in the OOTS requirements.</p>
+
+    <p>The XML schema is based on 3 parts:
+    <ul>
+    <li>The subject part, to indicate the Person subject of the evidence</li>
+    <li>The event/status part, to indicate the data about the event related to the subject</li>
+    <li>Optional additional part, to add optional fields (attributes) for the evidence type, such as issuing date or issuing authority
+    </ul>
+    </p>
+
+    <p>All the parts with their respective attributes are optional (min cardinality set to 0).</p>
+
+    <p>The XML schema is based on the SEMIC <a href="https://github.com/SEMICeu/CCCEV">Core Criterion and Core Evidence (CCCEV)</a> specification, and on the <a href="https://github.com/SEMICeu/Core-Person-Vocabulary/">Core Person vocabulary</a>. 
+    In CCCEV, the Evidence <a href="https://semiceu.github.io/CCCEV/releases/2.1.0/#Evidence.isabout">is about</a> an Agent that is the subject in the provided Evidence; in the case of Evidence of Birth, the Agent is the Person.
+    An EvidenceOfDeathOfChildType is then an OOTSEvidenceType (based on CCCEV Evidence) by having the 3 parts:
+    <ul>
+    <li>cv:isAbout. Since the value of cv:isAbout is a generic AgentType, in SDG a PersonType is defined as an AgentType with cv:FamilyName, cv:GivenName, cv:Sex and sdg:AttributeSet, that it means that is possible to add additional fields to the subject.</li>
+    <li>sdg:Birth, defined by the OOTSBirthType, that includes cv:CountryOfBirth, cv:DateOfBirth, cv:PlaceOfBirth (as foreseen in OOTS requirements) and sdg:AttributeSet</li>
+    <li>sdg:AttributeSet, that can contains many attributes, where the name, language and type fields could be defined for each attribute</li>
+    </ul>
+    </p>
+
+    <p>The design of the XML schema is based on the <a href="https://www.oracle.com/technical-resources/articles/java/design-patterns.html">Garden Of Eden Pattern</a> where complex types and elements are defined globals so they can be reused.</p>
+    
+    <p>Restrictions on the presence of fields and on their values is delegated to schematron file, that can vary on the XML consumer and could be provided by XML providers, such as those on code list.
+    OOTS provides certain <a href="https://ec.europa.eu/digital-building-blocks/sites/spaces/TDD/pages/920061693/3.5+-+Code+Lists+v1.2.3+September+2025">code list</a> in Genericode format that can be used via schematron. Additional code list, such as the one of Sex in he current evidence, could be take from the the <a href="https://op.europa.eu/en/web/eu-vocabularies/authority-tables">Publications Office Authority Tables</a>.</p>
+
+{% endblock %} 
+
+{% block examples %}
+<div class="h3 examples" id="ExampleEvidenceOfDeathOfChild">Example Evidence of DeathOfChild</div>
+{% endblock %}
+
+{% block feedback %}
+	<p>
+		Please provide feedback on the <a href="https://ec.europa.eu/digital-building-blocks/wikis/display/SDGOO/Evidence+of+DeathOfChild+-+SDM">discussion forum</a>
+	</p>
+{% endblock %}
