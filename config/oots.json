@@ -148,7 +148,7 @@
       {
         "language":"en",
         "template":"EvidenceOfDeathOfChild_en.j2",
-        "title": "Evidence Of DeathOfChild",
+        "title": "Evidence Of Death Of Child",
         "translationjson":"EvidenceOfDeathOfChild_en.json",
         "mergefile":"EvidenceOfDeathOfChild_en_merged.jsonld"
       }
