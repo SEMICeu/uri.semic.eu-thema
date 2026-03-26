@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/0.0.2/context/arachne.jsonld",
+    "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/0.0.3/context/arachne.jsonld",
     {
       "adm": "https://w3id.org/adm/model/",
       "adms": "http://www.w3.org/ns/adms#",
@@ -65,7 +65,7 @@
       "@id": "ex:esf1",
       "@type": [
         "ESF",
-        "Block"
+        "ProjectType"
       ],
       "adm:dg": {
         "@id": "http://publications.europa.eu/resource/authority/corporate-body/EMPL"
@@ -174,7 +174,7 @@
     },
     {
       "@id": "ex:status1",
-      "@type": "Concept",
+      "@type": "Code",
       "skos:prefLabel": {
         "@language": "en",
         "@value": "Open"
@@ -182,19 +182,19 @@
     },
     {
       "@id": "http://publications.europa.eu/resource/authority/currency/EUR",
-      "@type": "Concept"
+      "@type": "Code"
     },
     {
       "@id": "https://w3id.org/adm/codelist/thematicObjective/10",
-      "@type": "Concept"
+      "@type": "Code"
     },
     {
       "@id": "https://w3id.org/adm/codelist/projectType/1",
-      "@type": "Concept"
+      "@type": "Code"
     },
     {
       "@id": "http://publications.europa.eu/resource/authority/corporate-body/EMPL",
-      "@type": "Concept"
+      "@type": "Code"
     }
   ]
 }

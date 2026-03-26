@@ -1,18 +1,18 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix frapo: <http://purl.org/cerif/frapo/> .
-@prefix locn: <http://www.w3.org/ns/locn#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix adm: <https://w3id.org/adm/model/> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix epo: <http://data.europa.eu/a4g/ontology#> .
 @prefix ex: <http://example.com/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
 @prefix legal: <http://www.w3.org/ns/legal#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix person: <http://www.w3.org/ns/person#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:contract1 adms:identifier ex:identifier4 ;
 	adm:belongsTo ex:project2 ;
@@ -21,7 +21,7 @@ ex:contract1 adms:identifier ex:identifier4 ;
 	adm:modified true ;
 	epo:hasContractConclusionDate "2015-12-20"^^xsd:date ;
 	adm:initialEndDate "2017-03-312"^^xsd:date ;
-	dcterms:title "Construction Management Services for the reconstruction of the Toga pass"@en ;
+	dct:title "Construction Management Services for the reconstruction of the Toga pass"@en ;
 	epo:hasContractValue [
 		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
 		epo:hasAmountValue "12500"^^xsd:decimal ;
@@ -54,7 +54,7 @@ ex:identifier6 skos:notation "BE01287745" ;
 <http://publications.europa.eu/resource/authority/contract-nature/works> skos:prefLabel "Works"@en ;
 	a skos:Concept .
 
-ex:addenda1 adm:amount [
+ex:addenda1 adm:contractAddendaAmount [
 		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
 		epo:hasAmountValue "12000"^^xsd:decimal ;
 		rdf:type epo:MonetaryValue ;
@@ -100,3 +100,4 @@ ex:notice1 epo:hasESenderDispatchDate "2016-04-06T00:00:00"^^xsd:dateTime ;
 
 ex:procedure1 epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/open> ;
 	a epo:Procedure .
+
