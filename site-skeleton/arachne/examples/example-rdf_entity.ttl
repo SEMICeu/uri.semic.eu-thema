@@ -1,0 +1,52 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix adm: <https://w3id.org/adm/model/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix epo: <http://data.europa.eu/a4g/ontology#> .
+@prefix ex: <http://example.com/> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
+@prefix legal: <http://www.w3.org/ns/legal#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+
+ex:entity1 adms:identifier ex:identifier1 ;
+	legal:legalName "Computer company International"@en ;
+	adm:VATNumber ex:identifier2 ;
+	adm:entityType <https://w3id.org/adm/codelist/agentType/3> ;
+	adm:corrProcurementProcedure false ;
+	adm:turnover [
+		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
+		epo:hasAmountValue "5000000"^^xsd:decimal ;
+		rdf:type epo:MonetaryValue ;
+	] ;
+	cv:registeredAddress ex:address1 ;
+	adm:hasFinalBeneficialOwner ex:beneficialOwner1 ;
+	a legal:LegalEntity .
+
+ex:identifier1 skos:notation "VE-124-88" ;
+	a adms:Identifier .
+
+ex:identifier2 skos:notation "BE0123456789" ;
+	a adms:Identifier .
+
+ex:address1 locn:thoroughfare "Nieuwstraat"@nl ;
+	locn:locatorDesignator "101" ;
+	locn:locatorName "City2 Complex"@en ;
+	locn:postCode "1000" ;
+	locn:postName "Brussel"@nl ;
+	locn:adminUnitL1 "België"@nl ;
+	a locn:Address .
+
+ex:beneficialOwner1 epo:isPlayedBy ex:entity2 ;
+	a adm:FinalBeneficialOwner .
+
+ex:entity2 foaf:familyName "Staaldraad"@nl ;
+	foaf:givenName "Maria Sofia"@nl ;
+	cv:birthDate "1995-01-17"^^xsd:date ;
+	a person:Person .
+

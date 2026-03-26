@@ -1,7 +1,7 @@
 @prefix adm: <https://w3id.org/adm/model/> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix cv: <http://data.europa.eu/m8g/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix epo: <http://data.europa.eu/a4g/ontology#> .
 @prefix ex: <http://example.com/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -9,13 +9,13 @@
 @prefix legal: <http://www.w3.org/ns/legal#> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix person: <http://www.w3.org/ns/person#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 ex:subcontract1 adms:identifier ex:identifier9 ;
-	dcterms:isPartOf ex:contract1 ;
+	dct:isPartOf ex:contract1 ;
 	adm:hasSubcontractor ex:subcontractor1 ;
 	adm:amount [
 		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
@@ -23,6 +23,12 @@ ex:subcontract1 adms:identifier ex:identifier9 ;
 		rdf:type epo:MonetaryValue ;
 	] ;
 	a adm:Subcontract .
+
+ex:contract1 adms:identifier ex:identifier11 ;
+	a epo:Contract .
+
+ex:identifier11 skos:notation "Cont-ABC123" ;
+	a adms:Identifier .
 
 ex:identifier9 skos:notation "SC-001" ;
 	a adms:Identifier .
@@ -35,3 +41,4 @@ ex:legalEntity2 adms:identifier ex:identifier10 ;
 
 ex:identifier10 skos:notation "VE-124-88" ;
 	a adms:Identifier .
+

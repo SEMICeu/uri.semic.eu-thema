@@ -1,0 +1,118 @@
+{
+  "@context": [
+  "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/0.0.3/context/arachne.jsonld",
+  {
+    "adm": "https://w3id.org/adm/model/",
+    "adms": "http://www.w3.org/ns/adms#",
+    "cv": "http://data.europa.eu/m8g/",
+    "dct": "http://purl.org/dc/terms/",
+    "epo": "http://data.europa.eu/a4g/ontology#",
+    "ex": "http://example.com/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "frapo": "http://purl.org/cerif/frapo/",
+    "legal": "http://www.w3.org/ns/legal#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "person": "http://www.w3.org/ns/person#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }],
+  "@graph": [
+    {
+      "@id": "ex:entity1",
+      "@type": "legal:LegalEntity",
+      "adms:identifier": {
+        "@id": "ex:identifier1"
+      },
+	  "legal:legalName" : {
+        "@language": "en",
+        "@value": "Computer company International"
+      },
+	  "adm:VATNumber" :  {
+        "@id": "ex:identifier2"
+      },
+	  "adm:entityType" : {
+        "@id": "https://w3id.org/adm/codelist/agentType/3"
+      },
+	  "adm:corrProcurementProcedure" : {
+        "@type": "xsd:boolean",
+        "@value": "false"
+      },
+	  "adm:turnover" : {
+        "@id": "_:g1"
+      },
+	  "cv:registeredAddress" : {
+        "@id": "ex:address1"
+      },
+	  "model:hasFinalBeneficialOwner" : {
+        "@id": "ex:beneficialOwner1"
+      }
+    },
+    {
+      "@id": "ex:identifier1",
+      "@type": "adms:Identifier",
+      "skos:notation": "VE-124-88"
+    },
+	{
+      "@id": "ex:identifier2",
+      "@type": "adms:Identifier",
+      "skos:notation": "BE0123456789"
+    },
+	{
+      "@id": "_:g1",
+      "@type": "epo:MonetaryValue",
+      "epo:hasCurrency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "epo:hasAmountValue": {
+        "@type": "xsd:decimal",
+        "@value": "5000000"
+      }
+    },
+	{
+      "@id": "ex:address1",
+      "@type": "locn:Address",
+      "locn:thoroughfare": {
+        "@language": "nl",
+        "@value": "Nieuwstraat"
+      },
+     "locn:locatorDesignator": "101",
+	 "locn:locatorName": {
+        "@language": "en",
+        "@value": "City2 Complex"
+      },
+	 "locn:postCode" : "1000",
+	 "locn:postName": {
+        "@language": "nl",
+        "@value": "Brussel"
+      },
+	 "locn:adminUnitL1" : {
+        "@language": "nl",
+        "@value": "België"
+      }
+    },
+	{
+      "@id": "ex:beneficialOwner1",
+      "@type": "adm:FinalBeneficialOwner",
+      "epo:isPlayedBy": {
+        "@id": "ex:entity2"
+      }
+    },
+	{
+	  "@id": "ex:entity2",
+      "@type": "person:Person",
+      "foaf:familyName": {
+       "@language": "nl",
+       "@value": "Staaldraad"
+     },
+      "foaf:givenName" : {
+       "@language": "nl",
+       "@value": "Maria Sofia"
+     },
+	  "cv:birthDate" : {
+       "@type": "xsd:date",
+       "@value": "1995-01-17"
+     }
+    }
+  ]
+}
