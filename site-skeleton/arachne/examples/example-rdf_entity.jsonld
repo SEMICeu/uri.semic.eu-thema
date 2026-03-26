@@ -184,6 +184,6 @@
       "@id": "ex:identifier6",
       "@type": "adms:Identifier",
       "skos:notation": "PE-246"
-    },
+    }
   ]
 }
