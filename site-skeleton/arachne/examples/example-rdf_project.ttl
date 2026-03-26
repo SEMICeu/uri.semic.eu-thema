@@ -40,11 +40,11 @@ ex:project1 frapo:hasEndDate "2012-06-01"^^xsd:date ;
 		epo:hasAmountValue 12870733.85 ;
 		rdf:type epo:MonetaryValue ;
 	] ;
-	adm:hasBlock ex:esf1 ;
+	adm:hasProjectType ex:esf1 ;
 	a epo:Project .
 
 ex:esf1 adm:dg <http://publications.europa.eu/resource/authority/corporate-body/EMPL> ;
-	adm:projectType <https://w3id.org/adm/codelist/projectType/1> ;
+	adm:projectTypeType <https://w3id.org/adm/codelist/projectType/1> ;
 	adm:peopleToTrain 10 ;
 	adm:trainingHours 160 ;
 	a adm:ESF, adm:ProjectType .
