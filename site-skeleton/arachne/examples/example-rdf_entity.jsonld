@@ -94,13 +94,21 @@
 	{
       "@id": "ex:beneficialOwner1",
       "@type": "adm:FinalBeneficialOwner",
-      "epo:isPlayedBy": {
-        "@id": "ex:entity2"
-      }
+      "epo:isPlayedBy": [
+		  {
+			"@id": "ex:entity2"
+		  },
+		  {
+			"@id": "ex:entity3"
+		  }
+		]
     },
 	{
 	  "@id": "ex:entity2",
       "@type": "person:Person",
+	  "adms:identifier": {
+        "@id": "ex:identifier3"
+      },
       "foaf:familyName": {
        "@language": "nl",
        "@value": "Staaldraad"
@@ -113,6 +121,69 @@
        "@type": "xsd:date",
        "@value": "1995-01-17"
      }
-    }
+    },
+    {
+      "@id": "ex:identifier3",
+      "@type": "adms:Identifier",
+      "skos:notation": "PE-123"
+    },
+	{
+      "@id": "ex:entity3",
+      "@type": "legal:LegalEntity",
+      "adms:identifier": {
+        "@id": "ex:identifier4"
+      },
+	  "legal:legalName": {
+        "@language": "en",
+        "@value": "Van de Koperdraad"
+      },
+	  "adm:VATNumber": {
+        "@id": "ex:identifier5"
+      },
+	  "adm:hasLegalRepresentative": {
+        "@id": "ex:legalrepresentative1"
+      }
+    },
+    {
+      "@id": "ex:identifier4",
+      "@type": "adms:Identifier",
+      "skos:notation": "BE-345"
+    },
+    {
+      "@id": "ex:identifier5",
+      "@type": "adms:Identifier",
+      "skos:notation": "BE0123456789"
+    },
+	{
+      "@id": "ex:legalrepresentative1",
+      "@type": "epo:LegalRepresenative",
+      "epo:isPlayedBy": {
+		"@id": "ex:entity4"
+		}
+    },
+	{
+	  "@id": "ex:entity4",
+      "@type": "person:Person",
+	  "adms:identifier": {
+        "@id": "ex:identifier6"
+      },
+      "foaf:familyName": {
+       "@language": "nl",
+       "@value": "Van de Koperdraad"
+     },
+      "foaf:givenName" : {
+       "@language": "nl",
+       "@value": "Eddy Andre"
+     },
+	  "cv:birthDate" : {
+       "@type": "xsd:date",
+       "@value": "1981-04-25"
+     }
+    },
+    {
+      "@id": "ex:identifier6",
+      "@type": "adms:Identifier",
+      "skos:notation": "PE-246"
+    },
   ]
 }
