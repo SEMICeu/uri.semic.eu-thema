@@ -9,10 +9,10 @@
 @prefix legal: <http://www.w3.org/ns/legal#> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix person: <http://www.w3.org/ns/person#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 ex:entity1 adms:identifier ex:identifier1 ;
 	legal:legalName "Computer company International"@en ;
@@ -42,11 +42,38 @@ ex:address1 locn:thoroughfare "Nieuwstraat"@nl ;
 	locn:adminUnitL1 "België"@nl ;
 	a locn:Address .
 
-ex:beneficialOwner1 epo:isPlayedBy ex:entity2 ;
+ex:beneficialOwner1 epo:isPlayedBy ex:entity2, ex:entity3 ;
 	a adm:FinalBeneficialOwner .
 
-ex:entity2 foaf:familyName "Staaldraad"@nl ;
+ex:entity2 adms:identifier ex:identifier3 ;
+	foaf:familyName "Staaldraad"@nl ;
 	foaf:givenName "Maria Sofia"@nl ;
 	cv:birthDate "1995-01-17"^^xsd:date ;
 	a person:Person .
 
+ex:identifier3 skos:notation "PE-123" ;
+	a adms:Identifier .
+
+ex:entity3 adms:identifier ex:identifier4 ;
+	legal:legalName "Van de Koperdraad"@en ;
+	adm:VATNumber ex:identifier5 ;
+	adm:hasLegalRepresentative ex:legalrepresentative1 ;
+	a legal:LegalEntity .
+
+ex:identifier4 skos:notation "BE-345" ;
+	a adms:Identifier .
+
+ex:identifier5 skos:notation "BE0123456789" ;
+	a adms:Identifier .
+
+ex:legalrepresentative1 epo:isPlayedBy ex:entity4 ;
+	a epo:LegalRepresentative .
+
+ex:entity4 adms:identifier ex:identifier6 ;
+	foaf:familyName "Van de Koperdraad"@nl ;
+	foaf:givenName "Eddy Andre"@nl ;
+	cv:birthDate "1981-04-25"^^xsd:date ;
+	a person:Person .
+
+ex:identifier6 skos:notation "PE-246" ;
+	a adms:Identifier .

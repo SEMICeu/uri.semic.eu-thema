@@ -44,7 +44,7 @@
 	  "cv:registeredAddress" : {
         "@id": "ex:address1"
       },
-	  "model:hasFinalBeneficialOwner" : {
+	  "adm:hasFinalBeneficialOwner" : {
         "@id": "ex:beneficialOwner1"
       }
     },
@@ -156,7 +156,7 @@
     },
 	{
       "@id": "ex:legalrepresentative1",
-      "@type": "epo:LegalRepresenative",
+      "@type": "epo:LegalRepresentative",
       "epo:isPlayedBy": {
 		"@id": "ex:entity4"
 		}
