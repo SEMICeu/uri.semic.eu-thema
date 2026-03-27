@@ -89,6 +89,7 @@
 <h3 class="h3 examples" id="example-rdf_project">Example Project</h3>
 <h3 class="h3 examples" id="example-rdf_contract">Example Contract</h3>
 <h3 class="h3 examples" id="example-rdf_subcontract">Example Subcontract</h3>
+<h3 class="h3 examples" id="example-rdf_entity">Example Entity</h3>
 {% endblock %}
 
 {% block terminologyPrefixes %}
@@ -121,9 +122,113 @@ This specification uses the following prefixes to shorten the URIs for readabili
 
 {% block codelist %}
 
+<h3 id="list-agent-type">Agent - Type</h3>
+<table id="table-agent-type" class="simple">
+  <thead>
+    <tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr id="table-agent-type-0">
+      <td>https://w3id.org/adm/codelist/agentType/0</td>
+      <td>0</td>
+      <td>Unknown</td>
+      <td>The agent type is unknown.</td>
+    </tr>
+    <tr id="table-agent-type-1">
+      <td>https://w3id.org/adm/codelist/agentType/1</td>
+      <td>1</td>
+      <td>Insurance companies</td>
+      <td>An agent that is classified as an insurance company.</td>
+    </tr>
+    <tr id="table-agent-type-2">
+      <td>https://w3id.org/adm/codelist/agentType/2</td>
+      <td>2</td>
+      <td>Banks</td>
+      <td>An agent that is classified as a bank or banking institution.</td>
+    </tr>
+    <tr id="table-agent-type-3">
+      <td>https://w3id.org/adm/codelist/agentType/3</td>
+      <td>3</td>
+      <td>Industrial companies</td>
+      <td>An agent that is classified as an industrial company.</td>
+    </tr>
+    <tr id="table-agent-type-4">
+      <td>https://w3id.org/adm/codelist/agentType/4</td>
+      <td>4</td>
+      <td>Unnamed private shareholders, aggregated</td>
+      <td>An agent representing unnamed private shareholders reported in aggregate.</td>
+    </tr>
+    <tr id="table-agent-type-5">
+      <td>https://w3id.org/adm/codelist/agentType/5</td>
+      <td>5</td>
+      <td>Mutual &amp; pension funds / nominees / trusts / trustees</td>
+      <td>An agent classified as a mutual fund, pension fund, nominee, trust, or trustee.</td>
+    </tr>
+    <tr id="table-agent-type-6">
+      <td>https://w3id.org/adm/codelist/agentType/6</td>
+      <td>6</td>
+      <td>Financial companies</td>
+      <td>An agent that is classified as a financial company, excluding banks and insurance companies.</td>
+    </tr>
+    <tr id="table-agent-type-7">
+      <td>https://w3id.org/adm/codelist/agentType/7</td>
+      <td>7</td>
+      <td>Self-owned</td>
+      <td>An agent that holds shares in itself, i.e. treasury shares held by the company.</td>
+    </tr>
+    <tr id="table-agent-type-8">
+      <td>https://w3id.org/adm/codelist/agentType/8</td>
+      <td>8</td>
+      <td>One or more named individuals or families</td>
+      <td>An agent representing one or more named individuals or family shareholders.</td>
+    </tr>
+    <tr id="table-agent-type-9">
+      <td>https://w3id.org/adm/codelist/agentType/9</td>
+      <td>9</td>
+      <td>Foundations / research institutes</td>
+      <td>An agent classified as a foundation or research institute.</td>
+    </tr>
+    <tr id="table-agent-type-10">
+      <td>https://w3id.org/adm/codelist/agentType/10</td>
+      <td>10</td>
+      <td>Other unnamed shareholders, aggregated</td>
+      <td>An agent representing other unnamed shareholders reported in aggregate.</td>
+    </tr>
+    <tr id="table-agent-type-11">
+      <td>https://w3id.org/adm/codelist/agentType/11</td>
+      <td>11</td>
+      <td>Employees / managers / directors</td>
+      <td>An agent representing employees, managers, or directors of the company.</td>
+    </tr>
+    <tr id="table-agent-type-12">
+      <td>https://w3id.org/adm/codelist/agentType/12</td>
+      <td>12</td>
+      <td>Public authorities / states / governments</td>
+      <td>An agent classified as a public authority, state, or government body.</td>
+    </tr>
+    <tr id="table-agent-type-13">
+      <td>https://w3id.org/adm/codelist/agentType/13</td>
+      <td>13</td>
+      <td>Public (publicly listed companies)</td>
+      <td>An agent classified as a publicly listed company or free-float shareholder.</td>
+    </tr>
+    <tr id="table-agent-type-14">
+      <td>https://w3id.org/adm/codelist/agentType/14</td>
+      <td>14</td>
+      <td>Private Equity</td>
+      <td>An agent classified as a private equity firm or fund.</td>
+    </tr>
+    <tr id="table-agent-type-15">
+      <td>https://w3id.org/adm/codelist/agentType/15</td>
+      <td>15</td>
+      <td>Branches</td>
+      <td>An agent representing a branch of a parent company.</td>
+    </tr>
+  </tbody>
+</table>
 
-<h3 id="list-block-projectType">Block - Project Type</h3> 
-<table id="table-block-projectType" class="simple">
+<h3 id="list-projecttype-projectType">ProjectType - Project Type</h3> 
+<table id="table-projecttype-projectType" class="simple">
 	 <thead><tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr></thead>
     <tbody>
         <tr>

@@ -1,6 +1,6 @@
 {
   "@context": [
-  "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/0.0.2/context/arachne.jsonld",
+  "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/0.0.3/context/arachne.jsonld",
   {
     "adm": "https://w3id.org/adm/model/",
     "adms": "http://www.w3.org/ns/adms#",
@@ -32,7 +32,19 @@
       },
       "adm:amount": {
         "@id": "_:g4"
-      },
+      }
+    },
+    {
+      "@id": "ex:contract1",
+      "@type": "epo:Contract",
+      "adms:identifier": {
+        "@id": "ex:identifier11"
+      }
+    },
+    {
+      "@id": "ex:identifier11",
+      "@type": "adms:Identifier",
+      "skos:notation": "Cont-ABC123"
     },
     {
       "@id": "ex:identifier9",
