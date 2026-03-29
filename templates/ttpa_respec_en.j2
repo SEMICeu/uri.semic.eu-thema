@@ -383,14 +383,45 @@
                 <dd>
                     {{ entity.description[language] | safe }}
                 </dd>
-                {% if entity.rawTags['reuse-url'] %}
-		<dt>
-		   Reference in external Vocabulary
-		</dt>
-		    <dd>
-		    <a href="{{ entity.rawTags['reuse-url'] }}">Link</a>
-		    </dd>
-		{% endif %}
+                {% if entity is defined and entity.rawTags is defined and 'REF' in entity.rawTags and entity.rawTags['REF'] %}
+					<dt>
+					   Reference
+					</dt>
+					<dd>
+						{% set links = '' %}
+						{% if entity.rawTags['REF'] is defined and entity.rawTags['REF'] %}
+							{% set items = entity.rawTags['REF'].split(';') %}
+							{% for item in items %}
+								{% set parts = item.split('|') %}
+								{% set ai_type = parts[0] %}
+
+								{% if ai_type == "2024/900" %}
+									{% if parts|length > 1 %}
+										{% set test_var = parts[1] %}
+										{% if test_var == "11" %}
+											<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202400900#d1e1654-1-1">Reg. 2024/900, Art. {{ test_var }}</a>
+										{% else %}
+											<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202400900#d1e1723-1-1">Reg. 2024/900, Art. {{ test_var }}</a>
+									{% else %}
+										<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202400900">Reg. 2024/900</a>
+									{% endif %}
+								{% elif ai_type == "2025/1410" %}
+									{% if parts|length > 1 %}
+										<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202501410#{{ parts[1] }}">Impl. Reg. 2025/1410 [{{ parts[2] }}]</a>
+									{% else %}
+										<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202501410">Impl. Reg. 2025/1410</a>
+									{% endif %}
+								{% else %}
+								{% endif %}
+
+								{% if not loop.last %}, {% endif %}
+							{% endfor %}
+							{{ links | safe }}
+						{% else %}
+							No references available.
+						{% endif %}
+					</dd>
+				{% endif %}
                 {% if entity.usage[language] %}
                     <dt>
                         Usage Note
@@ -459,11 +490,10 @@
                                 DCAT
                             </th>
 			    -->
-			    <!--
-                            <th class="data-table__header-title--sortable" style="width:3%">
-                                Reuse
+
+                            <th class="data-table__header-title--sortable" style="width:10%">
+                                REF
                             </th>
-			    -->
                         </tr>
                     </thead>
                     <tbody class="supertype">
