@@ -410,8 +410,14 @@
 										{% set test_var = parts[1] %}
 										{% if test_var == "11" %}
 											<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202400900#d1e1654-1-1">Reg. 2024/900, Art. {{ test_var }}</a>
-										{% else %}
+										{% eliif test_var == "12" %}
 											<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202400900#d1e1723-1-1">Reg. 2024/900, Art. {{ test_var }}</a>
+										{% elif test_var == "18" %}
+											<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202400900#d1e2193-1-1">Reg. 2024/900, Art. {{ test_var }}</a>
+										{% elif test_var == "19" %}
+											<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202400900#d1e2256-1-1">Reg. 2024/900, Art. {{ test_var }}</a>
+										{% else %}
+											<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202400900">Reg. 2024/900</a>
 										{% endif %}
 									{% else %}
 										<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202400900">Reg. 2024/900</a>
