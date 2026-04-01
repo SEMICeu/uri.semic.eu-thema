@@ -12,10 +12,10 @@
   "contributors-file": "stakeholders.csv",
   "contributors-column": "TTPA",
   "site": "site-skeleton/ttpa",
-  "repourl": "https://github.com/SEMICeu/TTPA/tree/master/releases/0.0.1",
-  "versionurl": "https://semiceu.github.io/TTPA/releases/0.0.1",
+  "repourl": "https://github.com/SEMICeu/TTPA/tree/master/releases/0.0.2",
+  "versionurl": "https://semiceu.github.io/TTPA/releases/0.0.2",
   "feedbackurl": "https://github.com/SEMICeu/TTPA/issues",
-  "standaardregisterurl" :"https://github.com/SEMICeu/TTPA/blob/master/releases/0.0.1/Changelog.md",
+  "standaardregisterurl" :"https://github.com/SEMICeu/TTPA/blob/master/releases/0.0.2/Changelog.md",
     "translation": [
       {
         "language":"en",
@@ -28,7 +28,7 @@
     "toolchainversion" : "3",
     "documentconfig": {
           "statuslabel" : "Draft",
-          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/TTPA/releases/0.0.1"
+          "editorDocumentroot" : "https://semiceu.github.io/uri.semic.eu-generated/TTPA/releases/0.0.2"
     }
 },
 {
