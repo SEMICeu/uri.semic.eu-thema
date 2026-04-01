@@ -1,139 +1,150 @@
 {
   "@context": [
-  "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfBirth/releases/0.0.1/context/evidenceofbirth.jsonld",
-  {
-    "cv": "http://data.europa.eu/m8g/",
-    "dct": "http://purl.org/dc/terms/",
-    "ex" : "http://example.com/",
-    "foaf": "http://xmlns.com/foaf/0.1/",
-    "locn": "http://www.w3.org/ns/locn#",
-    "person": "http://www.w3.org/ns/person#",
-    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
-    "sdg": "http://data.europa.eu/p4s/",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "xsd" : "http://www.w3.org/2001/XMLSchema#"
-  }],
+    "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfDisability/releases/0.0.1/context/evidenceofdisability.jsonld",
+    {
+      "cv": "http://data.europa.eu/m8g/",
+      "dct": "http://purl.org/dc/terms/",
+      "ex": "http://example.com/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "locn": "http://www.w3.org/ns/locn#",
+      "person": "http://www.w3.org/ns/person#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "sdg": "http://data.europa.eu/p4s/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+  ],
   "@graph": [
     {
-     "@id": "ex:evidenceofbirth1",
-     "@type" : "EvidenceOfBirth",
-     "sdg:hasAttributeSet" : {
-	   "@id": "ex:attributeSet1"
-	 },
-     "dct:subject" : {
-	   "@id": "ex:person1"
-	 },
-     "sdg:hasBirth" : {
-	   "@id": "ex:birth1"
-	 }
-	},
-    {
-     "@id": "ex:attributeSet1",
-     "@type": "AttributeSet",
-     "sdg:hasAttribute" : [
-       {
-       "@id": "ex:attribute1"
-       },
-       {
-       "@id": "ex:attribute2"
-       }]                          
+      "@id": "ex:evidenceofdisability1",
+      "@type": "EvidenceOfDisability",
+      "sdg:hasAttributeSet": {
+        "@id": "ex:attributeSet1"
+      },
+      "dct:subject": {
+        "@id": "ex:person1"
+      },
+      "sdg:hasDisability": {
+        "@id": "ex:disability1"
+      }
     },
     {
-     "@id": "ex:attribute1",
-     "@type": "Attribute",
-     "rdfs:label": "IssuingDate",
-     "rdf:value" : {
-       "@value" : "2025-07-15",
-       "@type": "xsd:date"
-     }
+      "@id": "ex:attributeSet1",
+      "@type": "AttributeSet",
+      "sdg:hasAttribute": [
+        {
+          "@id": "ex:attribute1"
+        },
+        {
+          "@id": "ex:attribute2"
+        }
+      ]
     },
     {
-     "@id": "ex:attribute2",
-     "@type": "Attribute",
-     "rdfs:label": "IssuingAuthority",
-     "rdf:value" : {
-       "@language" : "fr",
-       "@value" : "Département Affaires citoyennes de la Ville de Bruxelles"
-     }
+      "@id": "ex:attribute1",
+      "@type": "Attribute",
+      "rdfs:label": "IssuingDate",
+      "rdf:value": {
+        "@value": "2025-01-10",
+        "@type": "xsd:date"
+      }
     },
     {
-     "@id": "ex:person1",
-     "@type": "Person",
-     "foaf:givenName" : {
-       "@language": "fr",
-       "@value": "René François Ghislain"
-     },
-     "foaf:familyName" : {
-       "@language": "fr",
-       "@value": "Magritte"     
-     },
-     "cv:sex" : {
-       "@id" : "http://publications.europa.eu/resource/authority/human-sex/MALE",
-       "@type" : "skos:Concept"
-     }
-   },
-    {
-     "@id": "ex:birth1",
-     "@type": "Birth",
-     "cv:birthDate" : {
-       "@type": "cv:genericDate",
-       "@value": "1898-11-21"
-     },
-     "person:placeOfBirth" : {
-       "@id": "ex:location1"
-     },
-     "person:countryOfBirth" : {
-       "@id": "ex:location2"
-     },
-     "sdg:hasAttributeSet" : {
-	   "@id": "ex:attributeSet2"
-	 }
+      "@id": "ex:attribute2",
+      "@type": "Attribute",
+      "rdfs:label": "IssuingAuthority",
+      "rdf:value": {
+        "@language": "es",
+        "@value": "Instituto de Mayores y Servicios Sociales de Madrid"
+      }
     },
     {
-     "@id": "ex:attributeSet2",
-     "@type": "AttributeSet",
-     "sdg:hasAttribute" : [
-       {
-       "@id": "ex:attribute3"
-       },
-       {
-       "@id": "ex:attribute4"
-       }]                          
+      "@id": "ex:person1",
+      "@type": "Person",
+      "foaf:givenName": {
+        "@language": "es",
+        "@value": "Alejandro"
+      },
+      "foaf:familyName": {
+        "@language": "es",
+        "@value": "García López"
+      }
     },
     {
-     "@id": "ex:attribute3",
-     "@type": "Attribute",
-     "rdfs:label": "TimeOfBirth",
-     "rdf:value" : {
-       "@value" : "09:00:00",
-       "@type": "xsd:time"
-     }
+      "@id": "ex:disability1",
+      "@type": "Disability",
+      "sdg:dateOfIssueOfDisabilityStatus": [
+        {
+          "@type": "cv:genericDate",
+          "@value": "2023-06-15"
+        }
+      ],
+      "sdg:dateOfExipryOfDisabilityStatus": [
+        {
+          "@type": "cv:genericDate",
+          "@value": "2028-06-15"
+        }
+      ],
+      "sdg:typeOfDisability": [
+        {
+          "@id": "ex:disabilityType1"
+        }
+      ],
+      "sdg:disabilityDegree": [
+        {
+          "@id": "ex:disabilityDegree1"
+        }
+      ],
+      "sdg:hasAttributeSet": {
+        "@id": "ex:attributeSet2"
+      }
     },
     {
-     "@id": "ex:attribute4",
-     "@type": "Attribute",
-     "rdfs:label": "FamilyNameAtBirth",
-     "rdf:value" : {
-       "@language" : "fr",
-       "@value" : "Magritte"
-     }
+      "@id": "ex:disabilityType1",
+      "@type": "Code",
+      "skos:prefLabel": {
+        "@language": "es",
+        "@value": "Discapacidad física"
+      }
     },
-   {
-    "@id": "ex:location1",
-    "@type": "Location",
-    "locn:geographicName" : {
-      "@language": "nl",
-      "@value": "Brussel"
+    {
+      "@id": "ex:disabilityDegree1",
+      "@type": "Code",
+      "skos:prefLabel": {
+        "@language": "es",
+        "@value": "65%"
+      }
+    },
+    {
+      "@id": "ex:attributeSet2",
+      "@type": "AttributeSet",
+      "sdg:hasAttribute": [
+        {
+          "@id": "ex:attribute3"
+        },
+        {
+          "@id": "ex:attribute4"
+        }
+      ]
+    },
+    {
+      "@id": "ex:attribute3",
+      "@type": "Attribute",
+      "rdfs:label": "AssessmentDate",
+      "rdf:value": {
+        "@value": "2023-05-20",
+        "@type": "xsd:date"
+      }
+    },
+    {
+      "@id": "ex:attribute4",
+      "@type": "Attribute",
+      "rdfs:label": "AssessmentAuthority",
+      "rdf:value": {
+        "@language": "es",
+        "@value": "Centro de Valoración y Orientación de Madrid"
+      }
     }
-   },
-   {
-    "@id": "ex:location2",
-    "@type": "Location",
-    "locn:geographicName" : {
-      "@language": "fr",
-      "@value": "BE"
-    }
-   }
- ]
+  ]
 }

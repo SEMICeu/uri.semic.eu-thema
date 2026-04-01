@@ -10,48 +10,51 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:evidenceofbirth1 sdg:hasAttributeSet ex:attributeSet1 ;
+ex:evidenceofdeathofparent1 sdg:hasAttributeSet ex:attributeSet1 ;
 	dct:subject ex:person1 ;
-	sdg:hasBirth ex:birth1 ;
-	a sdg:EvidenceOfBirth .
+	sdg:hasDeath ex:death1 ;
+	sdg:hasParent ex:person2 ;
+	a sdg:EvidenceOfDeathOfParent .
 
 ex:attributeSet1 sdg:hasAttribute ex:attribute1, ex:attribute2 ;
 	a sdg:AttributeSet .
 
 ex:attribute1 rdfs:label "IssuingDate" ;
-	rdf:value "2025-07-15"^^xsd:date ;
+	rdf:value "2025-03-20"^^xsd:date ;
 	a sdg:Attribute .
 
 ex:attribute2 rdfs:label "IssuingAuthority" ;
-	rdf:value "Département Affaires citoyennes de la Ville de Bruxelles"@fr ;
+	rdf:value "Comune di Roma - Ufficio di Stato Civile"@it ;
 	a sdg:Attribute .
 
-ex:person1 foaf:givenName "René François Ghislain"@fr ;
-	foaf:familyName "Magritte"@fr ;
-	cv:sex <http://publications.europa.eu/resource/authority/human-sex/MALE> ;
+ex:person1 foaf:givenName "Marco"@it ;
+	foaf:familyName "Bianchi"@it ;
 	a person:Person .
 
-<http://publications.europa.eu/resource/authority/human-sex/MALE> a skos:Concept .
+ex:person2 foaf:givenName "Giuseppe"@it ;
+	foaf:familyName "Bianchi"@it ;
+	cv:birthDate "1952-08-14"^^cv:genericDate ;
+	a person:Person .
 
-ex:birth1 cv:birthDate "1898-11-21"^^cv:genericDate ;
-	person:placeOfBirth ex:location1 ;
-	person:countryOfBirth ex:location2 ;
+ex:death1 cv:deathDate "2025-01-07"^^cv:genericDate ;
+	person:placeOfDeath ex:location1 ;
+	person:countryOfDeath ex:location2 ;
 	sdg:hasAttributeSet ex:attributeSet2 ;
-	a sdg:Birth .
+	a sdg:Death .
 
 ex:attributeSet2 sdg:hasAttribute ex:attribute3, ex:attribute4 ;
 	a sdg:AttributeSet .
 
-ex:attribute3 rdfs:label "TimeOfBirth" ;
-	rdf:value "09:00:00"^^xsd:time ;
+ex:attribute3 rdfs:label "TimeOfDeath" ;
+	rdf:value "06:45:00"^^xsd:time ;
 	a sdg:Attribute .
 
-ex:attribute4 rdfs:label "FamilyNameAtBirth" ;
-	rdf:value "Magritte"@fr ;
+ex:attribute4 rdfs:label "CauseOfDeath" ;
+	rdf:value "Insufficienza cardiaca"@it ;
 	a sdg:Attribute .
 
-ex:location1 locn:geographicName "Brussel"@nl ;
+ex:location1 locn:geographicName "Roma"@it ;
 	a dct:Location .
 
-ex:location2 locn:geographicName "BE"@fr ;
+ex:location2 locn:geographicName "IT"@it ;
 	a dct:Location .

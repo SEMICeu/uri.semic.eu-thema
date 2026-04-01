@@ -10,48 +10,46 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:evidenceofbirth1 sdg:hasAttributeSet ex:attributeSet1 ;
+ex:evidenceofdisability1 sdg:hasAttributeSet ex:attributeSet1 ;
 	dct:subject ex:person1 ;
-	sdg:hasBirth ex:birth1 ;
-	a sdg:EvidenceOfBirth .
+	sdg:hasDisability ex:disability1 ;
+	a sdg:EvidenceOfDisability .
 
 ex:attributeSet1 sdg:hasAttribute ex:attribute1, ex:attribute2 ;
 	a sdg:AttributeSet .
 
 ex:attribute1 rdfs:label "IssuingDate" ;
-	rdf:value "2025-07-15"^^xsd:date ;
+	rdf:value "2025-01-10"^^xsd:date ;
 	a sdg:Attribute .
 
 ex:attribute2 rdfs:label "IssuingAuthority" ;
-	rdf:value "Département Affaires citoyennes de la Ville de Bruxelles"@fr ;
+	rdf:value "Instituto de Mayores y Servicios Sociales de Madrid"@es ;
 	a sdg:Attribute .
 
-ex:person1 foaf:givenName "René François Ghislain"@fr ;
-	foaf:familyName "Magritte"@fr ;
-	cv:sex <http://publications.europa.eu/resource/authority/human-sex/MALE> ;
+ex:person1 foaf:givenName "Alejandro"@es ;
+	foaf:familyName "García López"@es ;
 	a person:Person .
 
-<http://publications.europa.eu/resource/authority/human-sex/MALE> a skos:Concept .
-
-ex:birth1 cv:birthDate "1898-11-21"^^cv:genericDate ;
-	person:placeOfBirth ex:location1 ;
-	person:countryOfBirth ex:location2 ;
+ex:disability1 sdg:dateOfIssueOfDisabilityStatus "2023-06-15"^^cv:genericDate ;
+	sdg:dateOfExipryOfDisabilityStatus "2028-06-15"^^cv:genericDate ;
+	sdg:typeOfDisability ex:disabilityType1 ;
+	sdg:disabilityDegree ex:disabilityDegree1 ;
 	sdg:hasAttributeSet ex:attributeSet2 ;
-	a sdg:Birth .
+	a sdg:Disability .
+
+ex:disabilityType1 skos:prefLabel "Discapacidad física"@es ;
+	a skos:Concept .
+
+ex:disabilityDegree1 skos:prefLabel "65%"@es ;
+	a skos:Concept .
 
 ex:attributeSet2 sdg:hasAttribute ex:attribute3, ex:attribute4 ;
 	a sdg:AttributeSet .
 
-ex:attribute3 rdfs:label "TimeOfBirth" ;
-	rdf:value "09:00:00"^^xsd:time ;
+ex:attribute3 rdfs:label "AssessmentDate" ;
+	rdf:value "2023-05-20"^^xsd:date ;
 	a sdg:Attribute .
 
-ex:attribute4 rdfs:label "FamilyNameAtBirth" ;
-	rdf:value "Magritte"@fr ;
+ex:attribute4 rdfs:label "AssessmentAuthority" ;
+	rdf:value "Centro de Valoración y Orientación de Madrid"@es ;
 	a sdg:Attribute .
-
-ex:location1 locn:geographicName "Brussel"@nl ;
-	a dct:Location .
-
-ex:location2 locn:geographicName "BE"@fr ;
-	a dct:Location .
