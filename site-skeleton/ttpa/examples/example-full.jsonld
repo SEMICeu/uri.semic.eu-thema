@@ -6,25 +6,27 @@
         "dcat" : "http://www.w3.org/ns/dcat#",
         "dct"  : "http://purl.org/dc/terms/",
         "dpv"  : "http://w3id.org/dpv/",
+        "ex"   : "http://example.com/",
         "foaf" : "http://xmlns.com/foaf/0.1/",
         "owl"  : "http://www.w3.org/2002/07/owl#",
         "rdf"  : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
         "skos" : "http://www.w3.org/2004/02/skos/core#",
         "time" : "http://www.w3.org/2006/time#",
+        "ttpa" : "http://example.org/",
         "xsd"  : "http://www.w3.org/2001/XMLSchema#"
       }            
     ],
    "@graph" : [
 	{
-		"@id": "http://example.org/polads/1",
+		"@id": "http://example.com/polads/1",
 		"@type": "PoliticalAdvertisement", 
-		"subject": "http://example.org/subject/environment",
+		"subject": "http://example.com/subject/environment",
 		"description": {
 			"@language" : "en",
 			"@value": "This advertisement promotes sustainable energy initiatives across Europe."
 		},
-		"type" : "http://example.org/theme/video",
+		"type" : "http://example.com/theme/video",
 		"language" : "http://publications.europa.eu/resource/authority/language/ENG",
 		"created" : "2025-01-10",
 		"hasBeginning" : {
@@ -41,8 +43,17 @@
 		},
 		"intendedStartPublicationDate" : "2025-02-01",
 		"intendedEndPublicationDate" : "2025-02-28",
-		"hasInitiative" :"http://example.org/initiative/1",
-		"hasElection" : "http://example.org/election/1" 
-	}
+		"hasInitiative" :"http://example.com/initiative/1",
+		"hasElection" : "http://example.com/election/1" 
+	},
+     {
+       "@id" : "http://example.com/initiative/1",
+       "@type": "Initiative",
+       "title" : {
+			"@language" : "en",
+			"@value": "European Green Deal Implementation"
+		},
+       "type" : "http://example.com/initiativetype/legislative"
+     }
     ]
 }

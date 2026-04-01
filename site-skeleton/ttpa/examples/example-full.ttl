@@ -1,29 +1,36 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix cv: <http://data.europa.eu/m8g/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix dpv: <http://www.w3.org/ns/dpv#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.com/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
+@prefix ttpa: <http://example.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/polads/1> dcterms:subject <http://example.org/subject/environment> ;
-	dcterms:description "This advertisement promotes sustainable energy initiatives across Europe."@en ;
-	dcterms:type <http://example.org/theme/video> ;
-	dcterms:language <http://publications.europa.eu/resource/authority/language/ENG> ;
-	dcterms:created "2025-01-10"^^xsd:date ;
+<http://example.com/polads/1> dct:subject <http://example.com/subject/environment> ;
+	dct:description "This advertisement promotes sustainable energy initiatives across Europe."@en ;
+	dct:type <http://example.com/theme/video> ;
+	dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
+	dct:created "2025-01-10"^^xsd:date ;
 	time:hasBeginning [
 		time:inXSDDate "2025-02-01"^^xsd:date ;
 	] ;
 	time:hasEnd [
 		time:inXSDDate "2025-02-28"^^xsd:date ;
 	] ;
-	<http://example.org/intendedStartPublicationDate> "2025-02-01"^^xsd:date ;
-	<http://example.org/intendedEndPublicationDate> "2025-02-28"^^xsd:date ;
-	<http://example.org/hasInitiative> <http://example.org/initiative/1> ;
-	<http://example.org/hasElection> <http://example.org/election/1> ;
-	a <http://example.org/PoliticalAdvertisement> .
+	ttpa:intendedStartPublicationDate "2025-02-01"^^xsd:date ;
+	ttpa:intendedEndPublicationDate "2025-02-28"^^xsd:date ;
+	ttpa:hasInitiative <http://example.com/initiative/1> ;
+	ttpa:hasElection <http://example.com/election/1> ;
+	a ttpa:PoliticalAdvertisement .
+
+<http://example.com/initiative/1> dct:title "European Green Deal Implementation"@en ;
+	dct:type <http://example.com/initiativetype/legislative> ;
+	a ttpa:Initiative .
+
