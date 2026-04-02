@@ -1,23 +1,23 @@
-@prefix adms: <http://www.w3.org/ns/adms#> .
-@prefix cv: <http://data.europa.eu/m8g/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix dpv: <http://www.w3.org/ns/dpv#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix ex: <http://example.com/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
-@prefix ttpa: <http://example.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix ex: <http://example.com/> .
+@prefix ttpa: <http://example.org/> .
 
-<http://example.com/polads/1> dct:subject <http://example.com/subject/environment> ;
-	dct:description "This advertisement promotes sustainable energy initiatives across Europe."@en ;
-	dct:type <http://example.com/theme/video> ;
-	dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
-	dct:created "2025-01-10"^^xsd:date ;
+<http://example.com/polads/1> dcterms:subject <http://example.com/subject/environment> ;
+	dcterms:description "This advertisement promotes sustainable energy initiatives across Europe."@en ;
+	dcterms:type <http://example.com/theme/video> ;
+	dcterms:language <http://publications.europa.eu/resource/authority/language/ENG> ;
+	dcterms:created "2025-01-10"^^xsd:date ;
 	time:hasBeginning [
 		time:inXSDDate "2025-02-01"^^xsd:date ;
 	] ;
@@ -28,9 +28,28 @@
 	ttpa:intendedEndPublicationDate "2025-02-28"^^xsd:date ;
 	ttpa:hasInitiative <http://example.com/initiative/1> ;
 	ttpa:hasElection <http://example.com/election/1> ;
+	ttpa:hasTargeting <http://example.com/technique/1> ;
 	a ttpa:PoliticalAdvertisement .
 
-<http://example.com/initiative/1> dct:title "European Green Deal Implementation"@en ;
-	dct:type <http://example.com/initiativetype/legislative> ;
+<http://example.com/initiative/1> dcterms:title "European Green Deal Implementation"@en ;
+	dcterms:type <http://example.com/initiativetype/legislative> ;
 	a ttpa:Initiative .
+
+<http://example.com/technique/1> ttpa:targetingParameters <http://example.com/parameters/1> ;
+	<https://w3id.org/dpv#hasPersonalData> <http://example.com/personaldata/email>, <http://example.com/personaldata/location> ;
+	ttpa:targetingGoals "Increase awareness and engagement for sustainable energy initiatives."@en ;
+	<https://w3id.org/dpv#hasPolicy> "https://www.sponsor.org/policy"^^xsd:anyURI ;
+	ttpa:otherRelevantInformation "Includes A/B testing of different creative formats."@en ;
+	time:hasBeginning [
+		time:inXSDDate "2025-02-01"^^xsd:date ;
+	] ;
+	time:hasEnd [
+		rdf:type time:Instant ;
+		time:inXSDDate "2025-02-28"^^xsd:date ;
+	] ;
+	ttpa:numberOfViews 200000 ;
+	ttpa:numberOfLikes 3500 ;
+	ttpa:consentNotice "https://www.sponsor.org/consent"^^xsd:anyURI ;
+	ttpa:userRightsSupportUrl "https://www.sponsor.org/support"^^xsd:anyURI ;
+	a ttpa:Technique, ttpa:TargetingTechniques .
 

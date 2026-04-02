@@ -44,7 +44,8 @@
 		"intendedStartPublicationDate" : "2025-02-01",
 		"intendedEndPublicationDate" : "2025-02-28",
 		"hasInitiative" :"http://example.com/initiative/1",
-		"hasElection" : "http://example.com/election/1" 
+		"hasElection" : "http://example.com/election/1",
+        "hasTargeting" : "http://example.com/technique/1"
 	},
      {
        "@id" : "http://example.com/initiative/1",
@@ -54,6 +55,53 @@
 			"@value": "European Green Deal Implementation"
 		},
        "type" : "http://example.com/initiativetype/legislative"
-     }
+     },
+        {
+       "@id" : "http://example.com/technique/1",
+       "@type": ["Technique", "TargetingTechnique"],
+       "targetingParameters" : "http://example.com/parameters/1",
+       "hasPersonalData" : ["http://example.com/personaldata/email", "http://example.com/personaldata/location"],
+       "targetingGoals" : {
+            "@language" : "en",
+            "@value": "Increase awareness and engagement for sustainable energy initiatives."
+       },
+        "hasPolicy" : {
+			"@value":"https://www.sponsor.org/policy",
+			"@type": "xsd:anyURI"
+		},
+       "otherRelevantInformation" : {
+            "@language" : "en",
+            "@value": "Includes A/B testing of different creative formats."
+       },
+       "hasBeginning" : {
+		     "time:inXSDDate" : {
+			     "@value":"2025-02-01",
+			     "@type": "xsd:date"
+		     }
+	   },
+       "hasEnd" : {
+             "@type" : "Instant",
+		     "time:inXSDDate" : {
+			     "@value":"2025-02-28",
+			     "@type": "xsd:date"
+		     }
+		},
+        "numberOfViews": {
+			     "@value":"200000",
+			     "@type": "xsd:integer"
+		},
+        "numberOfLikes": {
+			     "@value":"3500",
+			     "@type": "xsd:integer"
+		},
+        "consentNotice" :  {
+			"@value":"https://www.sponsor.org/consent",
+			"@type": "xsd:anyURI"
+		},
+          "userRightsSupportUrl" : {
+			"@value":"https://www.sponsor.org/support",
+			"@type": "xsd:anyURI"
+		}
+     }  
     ]
 }
