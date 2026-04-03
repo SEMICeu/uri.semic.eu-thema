@@ -33,21 +33,22 @@
 		"time:inXSDDate" : {
 			"@value":"2025-02-01",
 			"@type": "xsd:date"
-		}
+			}
 		},
 		"hasEnd" : {
 		"time:inXSDDate" : {
 			"@value":"2025-02-28",
 			"@type": "xsd:date"
-		}
+			}
 		},
 		"intendedStartPublicationDate" : "2025-02-01",
 		"intendedEndPublicationDate" : "2025-02-28",
 		"hasInitiative" :"http://example.com/initiative/1",
 		"hasElection" : "http://example.com/election/1",
-        "hasTargeting" : "http://example.com/technique/1"
+        "hasTargeting" : "http://example.com/technique/1",
+		"hasFunding" : "http://example.com/funding/1",
 	},
-     {
+    {
        "@id" : "http://example.com/initiative/1",
        "@type": "Initiative",
        "title" : {
@@ -55,8 +56,8 @@
 			"@value": "European Green Deal Implementation"
 		},
        "type" : "http://example.com/initiativetype/legislative"
-     },
-        {
+    },
+    {
        "@id" : "http://example.com/technique/1",
        "@type": ["Technique", "TargetingTechnique"],
        "targetingParameters" : "http://example.com/parameters/1",
@@ -98,10 +99,20 @@
 			"@value":"https://www.sponsor.org/consent",
 			"@type": "xsd:anyURI"
 		},
-          "userRightsSupportUrl" : {
+        "userRightsSupportUrl" : {
 			"@value":"https://www.sponsor.org/support",
 			"@type": "xsd:anyURI"
 		}
-     }  
+    },
+	{
+		"@id" : "http://example.com/funding/1",
+		"@type": "Funding",
+		"calculationMethodology": {
+            "@language" : "en",
+            "@value": "Aggregated from invoices and declared contributions over the campaign period."
+       },
+
+	   
+	}
     ]
 }
