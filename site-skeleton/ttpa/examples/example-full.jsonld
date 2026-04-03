@@ -111,8 +111,7 @@
             "@language" : "en",
             "@value": "Aggregated from invoices and declared contributions over the campaign period."
        },
-
+		"currency" : "http://publications.europa.eu/resource/authority/currency/EUR",
+		"
 	   
 	}
-    ]
-}
