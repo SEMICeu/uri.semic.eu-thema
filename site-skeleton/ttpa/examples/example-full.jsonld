@@ -1,117 +1,179 @@
 {
-    "@context": ["https://semiceu.github.io/uri.semic.eu-generated/TTPA/releases/0.0.2/context/ttpa.jsonld",
-      {
-        "adms" : "http://www.w3.org/ns/adms#",
-        "cv"   : "http://data.europa.eu/m8g/",
-        "dcat" : "http://www.w3.org/ns/dcat#",
-        "dct"  : "http://purl.org/dc/terms/",
-        "dpv"  : "http://w3id.org/dpv/",
-        "ex"   : "http://example.com/",
-        "foaf" : "http://xmlns.com/foaf/0.1/",
-        "owl"  : "http://www.w3.org/2002/07/owl#",
-        "rdf"  : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
-        "skos" : "http://www.w3.org/2004/02/skos/core#",
-        "time" : "http://www.w3.org/2006/time#",
-        "ttpa" : "http://example.org/",
-        "xsd"  : "http://www.w3.org/2001/XMLSchema#"
-      }            
-    ],
-   "@graph" : [
-	{
-		"@id": "http://example.com/polads/1",
-		"@type": "PoliticalAdvertisement", 
-		"subject": "http://example.com/subject/environment",
-		"description": {
-			"@language" : "en",
-			"@value": "This advertisement promotes sustainable energy initiatives across Europe."
-		},
-		"type" : "http://example.com/theme/video",
-		"language" : "http://publications.europa.eu/resource/authority/language/ENG",
-		"created" : "2025-01-10",
-		"hasBeginning" : {
-		"time:inXSDDate" : {
-			"@value":"2025-02-01",
-			"@type": "xsd:date"
-			}
-		},
-		"hasEnd" : {
-		"time:inXSDDate" : {
-			"@value":"2025-02-28",
-			"@type": "xsd:date"
-			}
-		},
-		"intendedStartPublicationDate" : "2025-02-01",
-		"intendedEndPublicationDate" : "2025-02-28",
-		"hasInitiative" :"http://example.com/initiative/1",
-		"hasElection" : "http://example.com/election/1",
-        "hasTargeting" : "http://example.com/technique/1",
-		"hasFunding" : "http://example.com/funding/1",
-	},
+  "@context": [
+    "https://semiceu.github.io/uri.semic.eu-generated/TTPA/releases/0.0.2/context/ttpa.jsonld",
     {
-       "@id" : "http://example.com/initiative/1",
-       "@type": "Initiative",
-       "title" : {
-			"@language" : "en",
-			"@value": "European Green Deal Implementation"
-		},
-       "type" : "http://example.com/initiativetype/legislative"
+      "adms": "http://www.w3.org/ns/adms#",
+      "cv": "http://data.europa.eu/m8g/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "dct": "http://purl.org/dc/terms/",
+      "dpv": "https://w3id.org/dpv#",
+      "ex": "http://example.com/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "time": "http://www.w3.org/2006/time#",
+      "ttpa": "http://example.org/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "http://example.com/transparencyNotice/1",
+      "@type": "TransparencyNotice",
+      "hasSponsor": "http://example.com/entity/1",
+      "hasFunding": "http://example.com/funding/1"
     },
     {
-       "@id" : "http://example.com/technique/1",
-       "@type": ["Technique", "TargetingTechnique"],
-       "targetingParameters" : "http://example.com/parameters/1",
-       "hasPersonalData" : ["http://example.com/personaldata/email", "http://example.com/personaldata/location"],
-       "targetingGoals" : {
-            "@language" : "en",
-            "@value": "Increase awareness and engagement for sustainable energy initiatives."
-       },
-        "hasPolicy" : {
-			"@value":"https://www.sponsor.org/policy",
-			"@type": "xsd:anyURI"
-		},
-       "otherRelevantInformation" : {
-            "@language" : "en",
-            "@value": "Includes A/B testing of different creative formats."
-       },
-       "hasBeginning" : {
-		     "time:inXSDDate" : {
-			     "@value":"2025-02-01",
-			     "@type": "xsd:date"
-		     }
-	   },
-       "hasEnd" : {
-             "@type" : "Instant",
-		     "time:inXSDDate" : {
-			     "@value":"2025-02-28",
-			     "@type": "xsd:date"
-		     }
-		},
-        "numberOfViews": {
-			     "@value":"200000",
-			     "@type": "xsd:integer"
-		},
-        "numberOfLikes": {
-			     "@value":"3500",
-			     "@type": "xsd:integer"
-		},
-        "consentNotice" :  {
-			"@value":"https://www.sponsor.org/consent",
-			"@type": "xsd:anyURI"
-		},
-        "userRightsSupportUrl" : {
-			"@value":"https://www.sponsor.org/support",
-			"@type": "xsd:anyURI"
-		}
+      "@id": "http://example.com/entity/1",
+      "@type": "LegalEntity",
+      "legalName": {
+        "@language": "en",
+        "@value": "Green Future Association Ltd."
+      },
+      "hasEmail": "contact@sponsor.org",
+      "registeredAddress": "http://example.com/address/1",
+      "address": "http://example.com/address/2",
+      "isPostalAddressDifferentThanEstablishment": {
+        "@value": "true",
+        "@type": "xsd:boolean"
+      }
     },
-	{
-		"@id" : "http://example.com/funding/1",
-		"@type": "Funding",
-		"calculationMethodology": {
-            "@language" : "en",
-            "@value": "Aggregated from invoices and declared contributions over the campaign period."
-       },
-		"currency" : "http://publications.europa.eu/resource/authority/currency/EUR",
-		"
-	   
-	}
+    {
+      "@id": "http://example.com/address/1",
+      "@type": "Address"
+    },
+    {
+      "@id": "http://example.com/address/2",
+      "@type": "Address"
+    },
+    {
+      "@id": "http://example.com/funding/1",
+      "@type": "Funding",
+      "calculationMethodology": {
+        "@language": "en",
+        "@value": "Aggregated from invoices and declared contributions over the campaign period."
+      },
+      "currency": "http://publications.europa.eu/resource/authority/currency/EUR",
+      "hasValue": {
+        "@value": "15000.00",
+        "@type": "xsd:decimal"
+      },
+      "nature": "http://example.com/natureFunding/PUBLIC_AND_PRIVATE",
+      "origin": "http://example.com/originFunding/EU_AND_NON_EU",
+      "hasPoliticalAdvertisement": "http://example.com/politicalAdvertisement/1"
+    },
+    {
+      "@id": "http://example.com/politicalAdvertisement/1",
+      "@type": "PoliticalAdvertisement",
+      "subject": "http://example.com/subject/environment",
+      "description": {
+        "@language": "en",
+        "@value": "This advertisement promotes sustainable energy initiatives across Europe."
+      },
+      "type": "http://example.com/theme/video",
+      "language": "http://publications.europa.eu/resource/authority/language/ENG",
+      "created": "2025-01-10",
+      "hasBeginning": {
+        "time:inXSDDate": {
+          "@value": "2025-02-01",
+          "@type": "xsd:date"
+        }
+      },
+      "hasEnd": {
+        "time:inXSDDate": {
+          "@value": "2025-02-28",
+          "@type": "xsd:date"
+        }
+      },
+      "intendedStartPublicationDate": "2025-02-01",
+      "intendedEndPublicationDate": "2025-02-28",
+      "hasInitiative": "http://example.com/initiative/1",
+      "hasElection": "http://example.com/election/1",
+      "hasTargeting": "http://example.com/technique/1",
+      "hasFunding": "http://example.com/funding/1"
+    },
+    {
+      "@id": "http://example.com/initiative/1",
+      "@type": "Initiative",
+      "title": {
+        "@language": "en",
+        "@value": "European Green Deal Implementation"
+      },
+      "type": "http://example.com/initiativetype/legislative"
+    },
+    {
+      "@id": "http://example.com/election/1",
+      "@type": "ElectionEvent",
+      "title": {
+        "@language": "en",
+        "@value": "European Climate Election 2025"
+      },
+      "homepage": "https://www.example.org/votes/european-climate-2025"
+    },
+    {
+      "@id": "http://example.com/technique/1",
+      "@type": [
+        "Technique",
+        "TargetingTechnique"
+      ],
+      "targetingParameters": "http://example.com/parameters/1",
+      "hasPersonalData": [
+        "http://example.com/personaldata/email",
+        "http://example.com/personaldata/location"
+      ],
+      "hasControllingEntity": "http://example.com/entity/1",
+      "targetingGoals": {
+        "@language": "en",
+        "@value": "Increase awareness and engagement for sustainable energy initiatives."
+      },
+      "hasPolicy": {
+        "@value": "https://www.sponsor.org/policy",
+        "@type": "xsd:anyURI"
+      },
+      "otherRelevantInformation": {
+        "@language": "en",
+        "@value": "Includes A/B testing of different creative formats."
+      },
+      "hasBeginning": {
+        "time:inXSDDate": {
+          "@value": "2025-02-01",
+          "@type": "xsd:date"
+        }
+      },
+      "hasEnd": {
+        "@type": "Instant",
+        "time:inXSDDate": {
+          "@value": "2025-02-28",
+          "@type": "xsd:date"
+        }
+      },
+      "numberOfViews": {
+        "@value": "200000",
+        "@type": "xsd:integer"
+      },
+      "numberOfLikes": {
+        "@value": "3500",
+        "@type": "xsd:integer"
+      },
+      "consentNotice": {
+        "@value": "https://www.sponsor.org/consent",
+        "@type": "xsd:anyURI"
+      },
+      "userRightsSupportUrl": {
+        "@value": "https://www.sponsor.org/support",
+        "@type": "xsd:anyURI"
+      }
+    },
+    {
+      "@id": "http://example.com/entity/2",
+      "@type": "LegalEntity",
+      "legalName": {
+        "@language": "en",
+        "@value": "AdTech Solutions Ltd."
+      },
+      "hasEmail": "control@adtech.com"
+    }
+  ]
+}

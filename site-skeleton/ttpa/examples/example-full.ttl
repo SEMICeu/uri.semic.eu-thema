@@ -1,5 +1,5 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dpv: <http://www.w3.org/ns/dpv#> .
+@prefix dpv: <https://w3id.org/dpv#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,48 +8,68 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix cv: <http://data.europa.eu/m8g/> .
 @prefix ex: <http://example.com/> .
 @prefix ttpa: <http://example.org/> .
 
-<http://example.com/polads/1> dcterms:subject <http://example.com/subject/environment> ;
+<http://example.com/transparencyNotice/1> ttpa:hasSponsor <http://example.com/entity/1> ;
+	ttpa:hasFunding <http://example.com/funding/1> ;
+	a ttpa:TransparencyNotice .
+
+<http://example.com/entity/1> <http://www.w3.org/ns/legal#legalName> "Green Future Association Ltd."@en ;
+	cv:email "contact@sponsor.org" ;
+	cv:registeredAddress <http://example.com/address/1> ;
+	locn:address <http://example.com/address/2> ;
+	ttpa:isPostalAddressDifferentThanEstablishment true ;
+	a <http://www.w3.org/ns/legal#LegalEntity> .
+
+<http://example.com/address/1> a locn:Address .
+
+<http://example.com/address/2> a locn:Address .
+
+<http://example.com/funding/1> ttpa:calculationMethodology "Aggregated from invoices and declared contributions over the campaign period."@en ;
+	cv:currency <http://publications.europa.eu/resource/authority/currency/EUR> ;
+	cv:hasValue "15000.00"^^xsd:decimal ;
+	ttpa:nature <http://example.com/natureFunding/PUBLIC_AND_PRIVATE> ;
+	ttpa:fundingOrigin <http://example.com/originFunding/EU_AND_NON_EU> ;
+	ttpa:hasPoliticalAdvertisement <http://example.com/politicalAdvertisement/1> ;
+	a <http://purl.org/cerif/frapo/Funding> .
+
+<http://example.com/politicalAdvertisement/1> dcterms:subject <http://example.com/subject/environment> ;
 	dcterms:description "This advertisement promotes sustainable energy initiatives across Europe."@en ;
 	dcterms:type <http://example.com/theme/video> ;
 	dcterms:language <http://publications.europa.eu/resource/authority/language/ENG> ;
 	dcterms:created "2025-01-10"^^xsd:date ;
-	time:hasBeginning [
-		time:inXSDDate "2025-02-01"^^xsd:date ;
-	] ;
-	time:hasEnd [
-		time:inXSDDate "2025-02-28"^^xsd:date ;
-	] ;
 	ttpa:intendedStartPublicationDate "2025-02-01"^^xsd:date ;
 	ttpa:intendedEndPublicationDate "2025-02-28"^^xsd:date ;
 	ttpa:hasInitiative <http://example.com/initiative/1> ;
 	ttpa:hasElection <http://example.com/election/1> ;
-	ttpa:hasTargeting <http://example.com/technique/1> ;
+	ttpa:hasFunding <http://example.com/funding/1> ;
 	a ttpa:PoliticalAdvertisement .
 
 <http://example.com/initiative/1> dcterms:title "European Green Deal Implementation"@en ;
 	dcterms:type <http://example.com/initiativetype/legislative> ;
 	a ttpa:Initiative .
 
+<http://example.com/election/1> dcterms:title "European Climate Election 2025"@en ;
+	foaf:homepage <https://www.example.org/votes/european-climate-2025> ;
+	a ttpa:ElectionEvent .
+
 <http://example.com/technique/1> ttpa:targetingParameters <http://example.com/parameters/1> ;
 	<https://w3id.org/dpv#hasPersonalData> <http://example.com/personaldata/email>, <http://example.com/personaldata/location> ;
+	ttpa:hasControllingEntity <http://example.com/entity/1> ;
 	ttpa:targetingGoals "Increase awareness and engagement for sustainable energy initiatives."@en ;
 	<https://w3id.org/dpv#hasPolicy> "https://www.sponsor.org/policy"^^xsd:anyURI ;
 	ttpa:otherRelevantInformation "Includes A/B testing of different creative formats."@en ;
-	time:hasBeginning [
-		time:inXSDDate "2025-02-01"^^xsd:date ;
-	] ;
-	time:hasEnd [
-		rdf:type time:Instant ;
-		time:inXSDDate "2025-02-28"^^xsd:date ;
-	] ;
 	ttpa:numberOfViews 200000 ;
 	ttpa:numberOfLikes 3500 ;
 	ttpa:consentNotice "https://www.sponsor.org/consent"^^xsd:anyURI ;
 	ttpa:userRightsSupportUrl "https://www.sponsor.org/support"^^xsd:anyURI ;
 	a ttpa:Technique, ttpa:TargetingTechniques .
+
+<http://example.com/entity/2> <http://www.w3.org/ns/legal#legalName> "AdTech Solutions Ltd."@en ;
+	cv:email "control@adtech.com" ;
+	a <http://www.w3.org/ns/legal#LegalEntity> .
 
