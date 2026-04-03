@@ -1,159 +1,143 @@
 {
   "@context": [
-    "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfDeathOfChild/releases/0.0.1/context/evidenceofdeathofchild.jsonld",
-    {
-      "cv": "http://data.europa.eu/m8g/",
-      "dct": "http://purl.org/dc/terms/",
-      "ex": "http://example.com/",
-      "foaf": "http://xmlns.com/foaf/0.1/",
-      "locn": "http://www.w3.org/ns/locn#",
-      "person": "http://www.w3.org/ns/person#",
-      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-      "sdg": "http://data.europa.eu/p4s/",
-      "skos": "http://www.w3.org/2004/02/skos/core#",
-      "xsd": "http://www.w3.org/2001/XMLSchema#"
-    }
-  ],
+  "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfDeathOfChild/releases/0.0.1/context/evidenceofdeathofchild.jsonld",
+  {
+    "cv": "http://data.europa.eu/m8g/",
+    "dct": "http://purl.org/dc/terms/",
+    "ex" : "http://example.com/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "locn": "http://www.w3.org/ns/locn#",
+    "person": "http://www.w3.org/ns/person#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "sdg": "http://data.europa.eu/p4s/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#"
+  }],
   "@graph": [
     {
-      "@id": "ex:evidenceofdeathofchild1",
-      "@type": "EvidenceOfDeathOfChild",
-      "sdg:hasAttributeSet": {
-        "@id": "ex:attributeSet1"
-      },
-      "dct:subject": {
-        "@id": "ex:person1"
-      },
-      "sdg:hasDeath": {
-        "@id": "ex:death1"
-      },
-      "sdg:hasChild": [
-        {
-          "@id": "ex:person2"
-        }
-      ]
+     "@id": "ex:evidenceofdeathofchild1",
+     "@type" : "EvidenceOfDeathOfChild",
+     "hasAttributeSet" : {
+       "@id": "ex:attributeSet1"
+     },
+     "isAbout" : {
+       "@id": "ex:person1"
+     },
+     "hasDeath" : {
+       "@id": "ex:death1"
+     }
     },
     {
-      "@id": "ex:attributeSet1",
-      "@type": "AttributeSet",
-      "sdg:hasAttribute": [
-        {
-          "@id": "ex:attribute1"
-        },
-        {
-          "@id": "ex:attribute2"
-        }
-      ]
+     "@id": "ex:attributeSet1",
+     "@type": "AttributeSet",
+     "hasAttribute" : [
+       {
+       "@id": "ex:attribute1"
+       },
+       {
+       "@id": "ex:attribute2"
+       }]
     },
     {
-      "@id": "ex:attribute1",
-      "@type": "Attribute",
-      "rdfs:label": "IssuingDate",
-      "rdf:value": {
-        "@value": "2024-12-03",
-        "@type": "xsd:date"
-      }
+     "@id": "ex:attribute1",
+     "@type": "Attribute",
+     "rdfs:label": "IssuingDate",
+     "rdf:value" : {
+       "@value" : "2025-07-15",
+       "@type": "xsd:date"
+     }
     },
     {
-      "@id": "ex:attribute2",
-      "@type": "Attribute",
-      "rdfs:label": "IssuingAuthority",
-      "rdf:value": {
-        "@language": "de",
-        "@value": "Standesamt der Stadt Wien"
-      }
+     "@id": "ex:attribute2",
+     "@type": "Attribute",
+     "rdfs:label": "IssuingAuthority",
+     "rdf:value" : {
+       "@language" : "fr",
+       "@value" : "Département Affaires citoyennes de la Ville de Bruxelles"
+     }
     },
     {
-      "@id": "ex:person1",
-      "@type": "Person",
-      "foaf:givenName": {
-        "@language": "de",
-        "@value": "Katharina"
-      },
-      "foaf:familyName": {
-        "@language": "de",
-        "@value": "Schindler"
-      }
+     "@id": "ex:person1",
+     "@type": "Person",
+     "givenName" : {
+       "@language": "fr",
+       "@value": "René François Ghislain"
+     },
+     "familyName" : {
+       "@language": "fr",
+       "@value": "Magritte"
+     },
+     "dateOfBirth" : {
+       "@type": "cv:genericDate",
+       "@value": "1898-11-30"
+     },
+     "hasChild" : [
+       {
+       "@id": "ex:person2"
+       }]
     },
     {
-      "@id": "ex:person2",
-      "@type": "Person",
-      "foaf:givenName": {
-        "@language": "de",
-        "@value": "Lukas"
-      },
-      "foaf:familyName": {
-        "@language": "de",
-        "@value": "Schindler"
-      },
-      "cv:birthDate": {
-        "@type": "cv:genericDate",
-        "@value": "2016-04-18"
-      }
+     "@id": "ex:person2",
+     "@type": "Person",
+     "givenName" : {
+       "@language": "fr",
+       "@value": "Serge"
+     },
+     "familyName" : {
+       "@language": "fr",
+       "@value": "Magritte"
+     },
+     "dateOfBirth" : {
+       "@type": "cv:genericDate",
+       "@value": "1927-11-30"
+     }
     },
     {
-      "@id": "ex:death1",
-      "@type": "Death",
-      "cv:deathDate": {
-        "@type": "cv:genericDate",
-        "@value": "2024-11-15"
-      },
-      "person:placeOfDeath": {
-        "@id": "ex:location1"
-      },
-      "person:countryOfDeath": {
-        "@id": "ex:location2"
-      },
-      "sdg:hasAttributeSet": {
-        "@id": "ex:attributeSet2"
-      }
+     "@id": "ex:death1",
+     "@type": "Death",
+     "countryOfDeath" : {
+       "@id": "ex:location1"
+     },
+     "placeOfDeath" : {
+       "@id": "ex:location2"
+     },
+     "hasAttributeSet" : {
+       "@id": "ex:attributeSet2"
+     }
     },
     {
-      "@id": "ex:attributeSet2",
-      "@type": "AttributeSet",
-      "sdg:hasAttribute": [
-        {
-          "@id": "ex:attribute3"
-        },
-        {
-          "@id": "ex:attribute4"
-        }
-      ]
+     "@id": "ex:attributeSet2",
+     "@type": "AttributeSet",
+     "hasAttribute" : [
+       {
+       "@id": "ex:attribute3"
+       }]
     },
     {
-      "@id": "ex:attribute3",
-      "@type": "Attribute",
-      "rdfs:label": "TimeOfDeath",
-      "rdf:value": {
-        "@value": "14:30:00",
-        "@type": "xsd:time"
-      }
+     "@id": "ex:attribute3",
+     "@type": "Attribute",
+     "rdfs:label": "TimeOfDeath",
+     "rdf:value" : {
+       "@value" : "09:00:00",
+       "@type": "xsd:time"
+     }
     },
     {
-      "@id": "ex:attribute4",
-      "@type": "Attribute",
-      "rdfs:label": "CauseOfDeath",
-      "rdf:value": {
-        "@language": "de",
-        "@value": "Verkehrsunfall"
-      }
+     "@id": "ex:location1",
+     "@type": "Location",
+     "geographicName" : {
+       "@language": "fr",
+       "@value": "BE"
+     }
     },
     {
-      "@id": "ex:location1",
-      "@type": "Location",
-      "locn:geographicName": {
-        "@language": "de",
-        "@value": "Wien"
-      }
-    },
-    {
-      "@id": "ex:location2",
-      "@type": "Location",
-      "locn:geographicName": {
-        "@language": "de",
-        "@value": "AT"
-      }
+     "@id": "ex:location2",
+     "@type": "Location",
+     "geographicName" : {
+       "@language": "nl",
+       "@value": "Brussel"
+     }
     }
   ]
 }

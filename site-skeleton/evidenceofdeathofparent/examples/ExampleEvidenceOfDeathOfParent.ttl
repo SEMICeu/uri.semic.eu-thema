@@ -13,48 +13,44 @@
 ex:evidenceofdeathofparent1 sdg:hasAttributeSet ex:attributeSet1 ;
 	dct:subject ex:person1 ;
 	sdg:hasDeath ex:death1 ;
-	sdg:hasParent ex:person2 ;
 	a sdg:EvidenceOfDeathOfParent .
 
 ex:attributeSet1 sdg:hasAttribute ex:attribute1, ex:attribute2 ;
 	a sdg:AttributeSet .
 
 ex:attribute1 rdfs:label "IssuingDate" ;
-	rdf:value "2025-03-20"^^xsd:date ;
+	rdf:value "2025-07-15"^^xsd:date ;
 	a sdg:Attribute .
 
 ex:attribute2 rdfs:label "IssuingAuthority" ;
-	rdf:value "Comune di Roma - Ufficio di Stato Civile"@it ;
+	rdf:value "Département Affaires citoyennes de la Ville de Bruxelles"@fr ;
 	a sdg:Attribute .
 
-ex:person1 foaf:givenName "Marco"@it ;
-	foaf:familyName "Bianchi"@it ;
+ex:person1 foaf:givenName "René François Ghislain"@fr ;
+	foaf:familyName "Magritte"@fr ;
+	cv:birthDate "1898-11-30"^^cv:genericDate ;
+	sdg:hasParent ex:person2 ;
 	a person:Person .
 
-ex:person2 foaf:givenName "Giuseppe"@it ;
-	foaf:familyName "Bianchi"@it ;
-	cv:birthDate "1952-08-14"^^cv:genericDate ;
+ex:person2 foaf:givenName "Serge"@fr ;
+	foaf:familyName "Magritte"@fr ;
+	cv:birthDate "1927-11-30"^^cv:genericDate ;
 	a person:Person .
 
-ex:death1 cv:deathDate "2025-01-07"^^cv:genericDate ;
-	person:placeOfDeath ex:location1 ;
-	person:countryOfDeath ex:location2 ;
+ex:death1 person:countryOfDeath ex:location1 ;
+	person:placeOfDeath ex:location2 ;
 	sdg:hasAttributeSet ex:attributeSet2 ;
 	a sdg:Death .
 
-ex:attributeSet2 sdg:hasAttribute ex:attribute3, ex:attribute4 ;
+ex:attributeSet2 sdg:hasAttribute ex:attribute3 ;
 	a sdg:AttributeSet .
 
 ex:attribute3 rdfs:label "TimeOfDeath" ;
-	rdf:value "06:45:00"^^xsd:time ;
+	rdf:value "09:00:00"^^xsd:time ;
 	a sdg:Attribute .
 
-ex:attribute4 rdfs:label "CauseOfDeath" ;
-	rdf:value "Insufficienza cardiaca"@it ;
-	a sdg:Attribute .
-
-ex:location1 locn:geographicName "Roma"@it ;
+ex:location1 locn:geographicName "BE"@fr ;
 	a dct:Location .
 
-ex:location2 locn:geographicName "IT"@it ;
+ex:location2 locn:geographicName "Brussel"@nl ;
 	a dct:Location .

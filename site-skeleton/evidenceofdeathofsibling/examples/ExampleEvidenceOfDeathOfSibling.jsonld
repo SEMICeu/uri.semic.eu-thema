@@ -1,6 +1,6 @@
 {
   "@context": [
-  "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfBirth/releases/0.0.1/context/evidenceofbirth.jsonld",
+  "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfDeathOfSibling/releases/0.0.1/context/evidenceofdeathofsibling.jsonld",
   {
     "cv": "http://data.europa.eu/m8g/",
     "dct": "http://purl.org/dc/terms/",
@@ -16,28 +16,28 @@
   }],
   "@graph": [
     {
-     "@id": "ex:evidenceofbirth1",
-     "@type" : "EvidenceOfBirth",
-     "sdg:hasAttributeSet" : {
-	   "@id": "ex:attributeSet1"
-	 },
-     "dct:subject" : {
-	   "@id": "ex:person1"
-	 },
-     "sdg:hasBirth" : {
-	   "@id": "ex:birth1"
-	 }
-	},
+     "@id": "ex:evidenceofdeathofsibling1",
+     "@type" : "EvidenceOfDeathOfSibling",
+     "hasAttributeSet" : {
+       "@id": "ex:attributeSet1"
+     },
+     "isAbout" : {
+       "@id": "ex:person1"
+     },
+     "hasDeath" : {
+       "@id": "ex:death1"
+     }
+    },
     {
      "@id": "ex:attributeSet1",
      "@type": "AttributeSet",
-     "sdg:hasAttribute" : [
+     "hasAttribute" : [
        {
        "@id": "ex:attribute1"
        },
        {
        "@id": "ex:attribute2"
-       }]                          
+       }]
     },
     {
      "@id": "ex:attribute1",
@@ -60,80 +60,84 @@
     {
      "@id": "ex:person1",
      "@type": "Person",
-     "foaf:givenName" : {
+     "givenName" : {
        "@language": "fr",
        "@value": "René François Ghislain"
      },
-     "foaf:familyName" : {
+     "familyName" : {
        "@language": "fr",
-       "@value": "Magritte"     
+       "@value": "Magritte"
      },
-     "cv:sex" : {
-       "@id" : "http://publications.europa.eu/resource/authority/human-sex/MALE",
-       "@type" : "skos:Concept"
-     }
-   },
-    {
-     "@id": "ex:birth1",
-     "@type": "Birth",
-     "cv:birthDate" : {
+     "dateOfBirth" : {
        "@type": "cv:genericDate",
-       "@value": "1898-11-21"
+       "@value": "1898-11-30"
      },
-     "person:placeOfBirth" : {
+     "hasSibling" : [
+       {
+       "@id": "ex:person2"
+       }]
+    },
+    {
+     "@id": "ex:person2",
+     "@type": "Person",
+     "givenName" : {
+       "@language": "fr",
+       "@value": "Serge"
+     },
+     "familyName" : {
+       "@language": "fr",
+       "@value": "Magritte"
+     },
+     "dateOfBirth" : {
+       "@type": "cv:genericDate",
+       "@value": "1927-11-30"
+     }
+    },
+    {
+     "@id": "ex:death1",
+     "@type": "Death",
+     "countryOfDeath" : {
        "@id": "ex:location1"
      },
-     "person:countryOfBirth" : {
+     "placeOfDeath" : {
        "@id": "ex:location2"
      },
-     "sdg:hasAttributeSet" : {
-	   "@id": "ex:attributeSet2"
-	 }
+     "hasAttributeSet" : {
+       "@id": "ex:attributeSet2"
+     }
     },
     {
      "@id": "ex:attributeSet2",
      "@type": "AttributeSet",
-     "sdg:hasAttribute" : [
+     "hasAttribute" : [
        {
        "@id": "ex:attribute3"
-       },
-       {
-       "@id": "ex:attribute4"
-       }]                          
+       }]
     },
     {
      "@id": "ex:attribute3",
      "@type": "Attribute",
-     "rdfs:label": "TimeOfBirth",
+     "rdfs:label": "TimeOfDeath",
      "rdf:value" : {
        "@value" : "09:00:00",
        "@type": "xsd:time"
      }
     },
     {
-     "@id": "ex:attribute4",
-     "@type": "Attribute",
-     "rdfs:label": "FamilyNameAtBirth",
-     "rdf:value" : {
-       "@language" : "fr",
-       "@value" : "Magritte"
+     "@id": "ex:location1",
+     "@type": "Location",
+     "geographicName" : {
+       "@language": "fr",
+       "@value": "BE"
      }
     },
-   {
-    "@id": "ex:location1",
-    "@type": "Location",
-    "locn:geographicName" : {
-      "@language": "nl",
-      "@value": "Brussel"
+    {
+     "@id": "ex:location2",
+     "@type": "Location",
+     "geographicName" : {
+       "@language": "nl",
+       "@value": "Brussel"
+     }
     }
-   },
-   {
-    "@id": "ex:location2",
-    "@type": "Location",
-    "locn:geographicName" : {
-      "@language": "fr",
-      "@value": "BE"
-    }
-   }
- ]
+  ]
 }
