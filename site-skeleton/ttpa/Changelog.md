@@ -16,45 +16,61 @@ The table below gives an overview of the classes (and their definitions) within 
 
 **D** stands for changes in data types
 
-| Nr | MLDCAT-AP v2.1.0 | MLDCAT-AP v3.0.0 | Rationale | GitHub / Change |
-| --- | --- | --- | --- | --- |
-| - | - | Version 3.0.0 follow major version of DCAT-AP 3.X | - | - |
-| C | it6:Risk | it6:HarmRisk | its own definition defines it more as an harm risk  | https://github.com/SEMICeu/MLDCAT-AP/issues/29 |
-| C | - | it6:Modality | addition of this class to be compliant with the AI ACT and AI CoP | - |
-| C | it6:Parameter | it6:Parameter | there were 2 classes Parameters, now simplified in one  | - |
-| C | - | dct:Location | this class has been added to for the geographical coverage of the Dataset | - |
-| C | it6:OutputFilePrediction | it6:File | this class has been renamed to include different files released   | - |
-| R | - | dcat:DataService / it6:servesModel | addition of this relation to be compliant with the AI CoP | - |
-| P | - | dcat:Dataset / it6:biasMethod | addition of this property to be compliant with the AI CoP  | - |
-| P | - | dcat:Dataset / it6:curationMethod | addition of this property to be compliant with the AI CoP  | - |
-| P | - | dcat:Dataset / it6:dataProvenance | addition of this property to be compliant with the AI CoP  | - |
-| R | - | dcat:Dataset / dct:spatial | addition of this relation to be compliant with the AI CoP  | - |
-| R | - | dcat:Dataset / dct:language | addition of this relation to be compliant with the AI CoP  | - |
-| R | - | dcat:Dataset / dcat:theme | addition of this relation to be compliant with the AI CoP  | - |
-| R | - | dcat:Dataset / dct:type| addition of this relation to be compliant with the AI CoP  | - |
-| P | - | dcat:Dataset / it6:unsuitabilityMethod | addition of this property to be compliant with the AI CoP  | - |
-| P |  dcat:Dataset / owl:versionInfo | dcat:Dataset / dcat:version | changes applied following DCAT-AP 3.0.1  | - |
-| R |  dcat:Dataset / dct:MediaType | dcat:Dataset / dcat:mediaType | typo in the relation  | - |
-| P | dcat:Distribution / dpv:hasData | dcat:Distribution / dpv:hasData | changing hyperlink to the code list in the usage note  | https://github.com/SEMICeu/MLDCAT-AP/issues/25 |
-| P | - | it6:EnvironmentalImpact / it6:measurementMethodology  | addition of this property to be compliant with the AI CoP  | - |
-| P | it6:EstimationProcedure / it6:dataSplitsURL  | it6:EstimationProcedure / it6:hasSplit  | change property to relation to it6:Split  | https://github.com/SEMICeu/MLDCAT-AP/issues/16 |
-| P | - | it6:Hardware / dct:description  | addition of this property to be compliant with the AI CoP  | - |
-| P | - | it6:Library / dct:description  | addition of this property to be compliant with the AI CoP  | - |
-| R | - | it6:Library / dct:isExecutedBy | to create a better relation with the File belonging to a Machine Learning Model  | - |
-| P | - | it6:MachineLearningModel / it6:designSpecifications | addition of this property to be compliant with the AI CoP  | - |
-| R | - | it6:MachineLearningModel / it6:hasInputModality | addition of this property to be compliant with the AI CoP and AI Act  | - |
-| R | - | it6:MachineLearningModel / it6:hasOutputModality | addition of this property to be compliant with the AI CoP and AI Act  | - |
-| R | it6:MachineLearningModel / it6:haRegisteredUser | it6:MachineLearningModel / it6:hasRegisteredUser  | typo in the relation | - |
-| R | - | it6:MachineLearningModel / it6:methodOfDistribution | addition of this property to be compliant with the AI CoP and AI Act  | - |
-| R | - | it6:MachineLearningModel / it6:modelArchitecture | addition of this property to be compliant with the AI CoP and AI Act  | - |
-| P | - | it6:MachineLearningModel / it6:placedOnMarketDate | addition of this property to be compliant with the AI CoP  | - |
-| P | - | it6:MachineLearningModel / it6:totalNumberOfParameters | addition of this property to be compliant with the AI CoP and AI Act | - |
-| R | - | it6:Modality / it6:classification | addition of this property to be compliant with the AI CoP and AI Act | - |
-| R | - | it6:Modality / it6:size | addition of this property to be compliant with the AI CoP | - |
-| R | it6:Run / it6:hasEnvironmentalImpact | it6:Run / it6:hasInferencingImpact | specialized relation to be compliant with the AI CoP | - |
-| R | it6:Run / it6:hasEnvironmentalImpact | it6:Run / it6:hasTrainingImpact | specialized relation to be compliant with the AI CoP and AI Act | - |
-| R | it6:Run / it6:hasHyperParameter | it6:Run / it6:hasParameter | generalized relation to include different types of Parameter | - |
-| P | -| it6:Run / it6:trainingTime | addition of this property to be compliant with the AI CoP | - |
-| R | - | it6:Split / dct:type | added property to it6:Split  | https://github.com/SEMICeu/MLDCAT-AP/issues/16 |
-| R | it6:MachineLearningModel / it6:hasMachineLearningLibrary | - | removal of this property to model differently | - |
-| R | it6:MachineLearningModel/ it6:hasTaskType | - | removal of this property to model differently | - |
+# TTPA Changelog
+
+| Nr | TTPA v0.0.1 | TTPA v0.0.2 | Rationale |
+| --- | --- | --- | --- | 
+| C | Targeting | Targeting Technique | renamed and restructured as subclass of Technique to separate targeting from ad delivery |
+| C | - | Technique | addition of this generic superclass for Targeting Technique and Ad Delivery Technique |
+| C | - | Ad Delivery Technique | addition of this class as subclass of Technique to model ad delivery separately from targeting |
+| C | - | Identifier | addition of this class to provide structured identification references for agents |
+| C | Campaign Financial Information | - | removal of this class; financial information now consolidated under Funding |
+| C | Political Advertisement Information | - | removal of this class; financial information now consolidated under Funding |
+| C | Funding | Funding | definition changed from "Financial support provided for a project..." to "An amount of money available to finance some project or activity"; addition of Reference field |
+| R | Funding / has campaign financial info | - | removal following consolidation of Campaign Financial Information into Funding |
+| R | Funding / has political advertisement financial info | - | removal following consolidation of Political Advertisement Information into Funding |
+| P | - | Funding / currency | addition of this property, moved from Campaign Financial Information and Political Advertisement Information |
+| P | - | Funding / has value | addition of this property with range Decimal, moved from Campaign Financial Information and Political Advertisement Information |
+| R | - | Funding / has paying entity | addition of this relation, moved from Transparency Notice (paying entity) |
+| R | - | Funding / has political advertisement | addition of this relation to link funding directly to the political advertisement |
+| P | Political Advertisement / hasEnd | Political Advertisement / has end | property renamed for consistent naming convention |
+| R | Political Advertisement / has Initiative | Political Advertisement / has initiative | relation renamed for consistent casing convention |
+| R | - | Political Advertisement / has technique | addition of this relation to link the political advertisement to its targeting and ad-delivery techniques |
+| P | - | Political Advertisement / identifier | addition of this property to provide a persistent unique identifier for the political advertisement |
+| R | - | Political Advertisement / is funded by | addition of this relation to link the political advertisement to its funding |
+| P | Political Advertisement / is linked to election | - | removal of this boolean property; linkage now expressed via has election relation |
+| P | Political Advertisement / is linked to legislative process | - | removal of this boolean property; linkage now expressed via has initiative relation |
+| P | Political Advertisement / previous non-compliance exists | - | removal of this property; non-compliance now covered by status property |
+| P | Political Advertisement / has beginning (def: "The beginning of a period or interval") | Political Advertisement / has beginning (def: "The start of the period") | definition simplified |
+| P | - | Targeting Technique / use targeting techniques | addition of this property for a description of the targeting technique(s) used |
+| P | Targeting / ad delivery technique description | Ad Delivery Technique / use ad delivery techniques | property moved and renamed following separation of ad delivery from targeting |
+| P | Targeting / usage of AI systems | Ad Delivery Technique / use of AI systems | property moved following separation of ad delivery from targeting |
+| P | Targeting / analytics | - | removal of this property |
+| P | Targeting / consent notice | Technique / consent notice | property moved to Technique superclass |
+| P | Targeting / has personal data | Technique / has personal data | property moved to Technique superclass |
+| P | Targeting / hasBeginning | Technique / has beginning | property renamed and moved to Technique superclass for consistent naming convention |
+| R | Targeting / hasController | Technique / has controlling entity | relation renamed and moved to Technique superclass |
+| P | Targeting / hasEnd | Technique / has end | property renamed and moved to Technique superclass for consistent naming convention |
+| P | Targeting / hasPolicy | Technique / has policy | property renamed and moved to Technique superclass for consistent naming convention |
+| P | Targeting / internal policy URL | - | removal of this property; now covered by Technique / has policy |
+| P | Targeting / number of clicks, likes, or comments | Technique / number of comments | property split into separate properties for comments and likes |
+| P | Targeting / number of clicks, likes, or comments | Technique / number of likes | property split into separate properties for comments and likes |
+| P | Targeting / number of views | Technique / number of views | property moved to Technique superclass |
+| P | Targeting / other relevant information | Technique / other relevant information | property moved to Technique superclass |
+| P | Targeting / use ad delivery techniques based on personal data | - | removal of this boolean property; ad delivery now modelled as separate class |
+| P | Targeting / user rights support URL | Technique / user rights support URL | property moved to Technique superclass |
+| R | Transparency Notice / has political advertisement | - | removal of this relation; link now expressed via Political Advertisement / is funded by and Funding / has political advertisement |
+| R | Transparency Notice / has targeting | - | removal of this relation; targeting now linked from Political Advertisement / has technique |
+| R | Transparency Notice / paying entity | - | removal of this relation; paying entity now modelled under Funding / has paying entity |
+| R | Transparency Notice / sponsor | Transparency Notice / has sponsor | relation renamed for consistent naming convention |
+| P | Transparency Notice / modified (range: Literal) | Transparency Notice / modified (range: Date) | range changed from Literal to Date for type consistency |
+| P | Transparency Notice / retention deadline (range: unspecified) | Transparency Notice / retention deadline (range: Date) | range specified as Date |
+| P | - | Address / full address | addition of this property to provide the complete address as a single text string |
+| P | Person / has email, Legal Entity / has email | Agent / has email | property moved to Agent superclass to avoid duplication |
+| R | - | Agent / identifier (range: Identifier) | addition of this relation to link an agent to a structured Identifier |
+| P | Legal Entity / alternativeTitle | Legal Entity / alternative title | property renamed for consistent naming convention |
+| P | Legal Entity / has email | - | removal from Legal Entity; property moved to Agent superclass |
+| P | Legal Entity / is postal address different than establishment | - | removal from Legal Entity; property already exists on Agent superclass |
+| P | Legal Entity / notation | - | removal from Legal Entity; notation now modelled under the new Identifier class |
+| P | Person / has email | - | removal from Person; property moved to Agent superclass |
+| P | - | Identifier / notation | addition of this property, moved from Legal Entity to the new Identifier class |
