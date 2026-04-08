@@ -20,7 +20,7 @@
   ],
   "@graph": [
     {
-      "@id": "http://example.com/transparencyNotice/1",
+      "@id": "https://polads.eu/en/A94HT",
       "@type": "TransparencyNotice",
       "identifier" : "A94HT",
       "hasSponsor": "http://example.com/entity/1",

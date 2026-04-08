@@ -14,7 +14,7 @@
 @prefix ttpa: <http://example.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.com/transparencyNotice/1> dct::identifier "A94HT" ;
+<https://polads.eu/en/A94HT> dct::identifier "A94HT" ;
 	ttpa:hasSponsor <http://example.com/entity/1> ;
 	ttpa:hasFunding <http://example.com/funding/1> ;
 	a ttpa:TransparencyNotice .
