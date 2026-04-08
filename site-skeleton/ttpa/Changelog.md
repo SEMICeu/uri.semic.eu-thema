@@ -25,13 +25,10 @@ The table below gives an overview of the classes (and their definitions) within 
 | C | - | Ad Delivery Technique | addition of this class as subclass of Technique to model ad delivery separately from targeting |
 | C | - | Identifier | addition of this class to provide structured identification references for agents |
 | C | Campaign Financial Information | - | removal of this class; financial information now consolidated under Funding |
-| C | Political Advertisement Information | - | removal of this class; financial information now consolidated under Funding |
 | C | Funding | Funding | definition changed from "Financial support provided for a project..." to "An amount of money available to finance some project or activity"; addition of Reference field |
 | R | Funding / has campaign financial info | - | removal following consolidation of Campaign Financial Information into Funding |
-| R | Funding / has political advertisement financial info | - | removal following consolidation of Political Advertisement Information into Funding |
 | P | - | Funding / currency | addition of this property, moved from Campaign Financial Information and Political Advertisement Information |
 | P | - | Funding / has value | addition of this property with range Decimal, moved from Campaign Financial Information and Political Advertisement Information |
-| R | - | Funding / has paying entity | addition of this relation, moved from Transparency Notice (paying entity) |
 | R | - | Funding / has political advertisement | addition of this relation to link funding directly to the political advertisement |
 | P | Political Advertisement / hasEnd | Political Advertisement / has end | property renamed for consistent naming convention |
 | R | Political Advertisement / has Initiative | Political Advertisement / has initiative | relation renamed for consistent casing convention |
@@ -64,7 +61,6 @@ The table below gives an overview of the classes (and their definitions) within 
 | R | Transparency Notice / paying entity | - | removal of this relation; paying entity now modelled under Funding / has paying entity |
 | R | Transparency Notice / sponsor | Transparency Notice / has sponsor | relation renamed for consistent naming convention |
 | P | Transparency Notice / modified (range: Literal) | Transparency Notice / modified (range: Date) | range changed from Literal to Date for type consistency |
-| P | Transparency Notice / retention deadline (range: unspecified) | Transparency Notice / retention deadline (range: Date) | range specified as Date |
 | P | - | Address / full address | addition of this property to provide the complete address as a single text string |
 | P | Person / has email, Legal Entity / has email | Agent / has email | property moved to Agent superclass to avoid duplication |
 | R | - | Agent / identifier (range: Identifier) | addition of this relation to link an agent to a structured Identifier |
