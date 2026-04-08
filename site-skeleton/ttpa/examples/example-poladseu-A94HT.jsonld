@@ -1,0 +1,73 @@
+{
+  "@context": [
+    "https://semiceu.github.io/uri.semic.eu-generated/TTPA/releases/0.0.2/context/ttpa.jsonld",
+    {
+      "adms": "http://www.w3.org/ns/adms#",
+      "cv": "http://data.europa.eu/m8g/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "dct": "http://purl.org/dc/terms/",
+      "dpv": "https://w3id.org/dpv#",
+      "ex": "http://example.com/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "time": "http://www.w3.org/2006/time#",
+      "ttpa": "http://example.org/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "http://example.com/transparencyNotice/1",
+      "@type": "TransparencyNotice",
+      "identifier" : "A94HT",
+      "hasSponsor": "http://example.com/entity/1",
+      "hasFunding": "http://example.com/funding/1"
+    },
+    {
+      "@id": "http://example.com/entity/1",
+      "@type": "LegalEntity",
+      "legalName": {
+        "@language": "en",
+        "@value": "Danmarksdemokraterne"
+      },
+      "registeredAddress": "http://example.com/address/1"
+    },
+    {
+      "@id": "http://example.com/address/1",
+      "@type": "Address",
+      "adminUnitL1": {
+        "@language": "en",
+        "@value": "Denmark"
+      },
+      "postName" : {
+        "@language": "da",
+        "@value": "København k"
+      }
+    },
+    {
+      "@id": "http://example.com/funding/1",
+      "@type": "Funding",
+      "currency": "http://publications.europa.eu/resource/authority/currency/DKK",
+      "hasValue": {
+        "@value": "20000.00",
+        "@type": "xsd:decimal"
+      },
+      "nature": "http://example.com/natureFunding/PRIVATE",
+      "hasPoliticalAdvertisement": "http://example.com/politicalAdvertisement/1"
+    },
+    {
+      "@id": "http://example.com/politicalAdvertisement/1",
+      "@type": "PoliticalAdvertisement",
+      "description": {
+        "@language": "da",
+        "@value": "Folketingsvalg 2026, Peter Skaarup, Digita"
+      },
+      "created": "2026-02-19",
+      "endDate": "2026-11-01",
+      "startDate": "2026-02-19"
+    }
+  ]
+}
