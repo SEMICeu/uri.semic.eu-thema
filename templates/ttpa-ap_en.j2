@@ -73,7 +73,7 @@
 
 {% block introduction %}
 <p>
-	The TTPA Application Profile provides a minimal set of classes.
+	The TTPA model provides a minimal set of classes.
   These are intended to support <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202400900#cpt_II">Chapter II to the Regulation (EU) 2024/900 of the European Parliament and of the Council and </a> <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202501410#anx_I">annex to the Regulation (EU) 2025/1410 of the European Parliament and of the Council</a>. 
 </p>
 {% endblock %}
@@ -82,13 +82,14 @@
 {% block summary %}
 <section id="abstract">
     <h2>Abstract</h2>
-The TTPA Application Profile is
+The TTPA model is
 a data model that provides a minimum set of classes and properties for the European repository for online political advertisements.
 </section>
 {% endblock %}
 
 {% block examples %}
-<h3 class="h3 examples" id="example-poladseu-EPH58">Example <a href="https://polads.eu/en/EPH58?ref=search&q=EPH58">EPH58</a> Radio & Podcast Political Advertisement Transparency Notice</h3>
+<h3 class="h3 examples" id="example-full">Example Full</h3>
+<h3 class="h3 examples" id="example-poladseu-A94HT">Example <a href="https://polads.eu/en/A94HT?ref=search&q=A94HT">A94HT</a> Radio & Podcast Political Advertisement Transparency Notice</h3>
 {% endblock %}
 
 {% block mappings %}
@@ -100,7 +101,7 @@ a data model that provides a minimum set of classes and properties for the Europ
         Terminology
     </h2>
         <p>
-            This specification uses the following prefixes to shorten the URIs for readability.
+            This model uses the following prefixes to shorten the URIs for readability.
 
         <table id="table-namespaces" class="simple">
             <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
@@ -110,6 +111,7 @@ a data model that provides a minimum set of classes and properties for the Europ
             <tr><td><code>dpv</code></td><td><code>https://w3id.org/dpv#</code></td></tr>
 			<tr><td><code>ex</code></td><td><code>http://example.org/</code></td></tr>
             <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
+			<tr><td><code>frapo</code></td><td><code>http://purl.org/cerif/frapo/</code></td></tr>
             <tr><td><code>legal</code></td><td><code>http://www.w3.org/ns/legal#</code></td></tr>
 			<tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
 			<tr><td><code>person</code></td><td><code>http://www.w3.org/ns/person#</code></td></tr>
@@ -117,6 +119,7 @@ a data model that provides a minimum set of classes and properties for the Europ
             <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
             <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
 			<tr><td><code>time</code></td><td><code>http://www.w3.org/2006/time#</code></td></tr>
+			<tr><td><code>ttpa</code></td><td><code>http://example.org/</code></td></tr>
             <tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
             </tbody>
         </table>
