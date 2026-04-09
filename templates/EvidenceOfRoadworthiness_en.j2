@@ -81,7 +81,6 @@
     <h2>Abstract</h2>
 Evidence of roadworthiness is a simplified data model describing an evidence regarding the vehicle's roadworthiness. Draws upon the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32014L0045">specifications of Annex II, of Council Directive 2014/45/EU.</a>.
 
-
 </section>
 {% endblock %}
 
@@ -118,25 +117,23 @@ This specification uses the following prefixes to shorten the URIs for readibili
 
     <p>The XML schema is based on the OOTS requirements and it allows some flexibility to include fields that Member States can add in addition to those foreseen in the OOTS requirements.</p>
 
-    <p>The XML schema is based on 3 parts:
+    <p>The XML schema is based on 3 parts:</p>
     <ul>
     <li>The subject part, to indicate the Person subject of the evidence</li>
     <li>The event/status part, to indicate the data about the event related to the subject</li>
-    <li>Optional additional part, to add optional fields (attributes) for the evidence type, such as issuing date or issuing authority
+    <li>Optional additional part, to add optional fields (attributes) for the evidence type, such as issuing date or issuing authority</li>
     </ul>
-    </p>
 
     <p>All the parts with their respective attributes are optional (min cardinality set to 0).</p>
 
     <p>The XML schema is based on the SEMIC <a href="https://github.com/SEMICeu/CCCEV">Core Criterion and Core Evidence (CCCEV)</a> specification, and on the <a href="https://github.com/SEMICeu/Core-Person-Vocabulary/">Core Person vocabulary</a>. 
     In CCCEV, the Evidence <a href="https://semiceu.github.io/CCCEV/releases/2.1.0/#Evidence.isabout">is about</a> an Agent that is the subject in the provided Evidence; in the case of Evidence of Birth, the Agent is the Person.
-    An EvidenceOfRoadworthiness is then an OOTSEvidenceType (based on CCCEV Evidence) by having the 3 parts:
+    An EvidenceOfRoadworthiness is then an OOTSEvidenceType (based on CCCEV Evidence) by having the 3 parts:</p>
     <ul>
     <li>cv:isAbout. Since the value of cv:isAbout is a generic AgentType, in SDG a PersonType is defined as an AgentType with cv:FamilyName, cv:GivenName, cv:Sex and sdg:AttributeSet, that it means that is possible to add additional fields to the subject.</li>
     <li>sdg:Birth, defined by the OOTSBirthType, that includes cv:CountryOfBirth, cv:DateOfBirth, cv:PlaceOfBirth (as foreseen in OOTS requirements) and sdg:AttributeSet</li>
     <li>sdg:AttributeSet, that can contains many attributes, where the name, language and type fields could be defined for each attribute</li>
     </ul>
-    </p>
 
     <p>The design of the XML schema is based on the <a href="https://www.oracle.com/technical-resources/articles/java/design-patterns.html">Garden Of Eden Pattern</a> where complex types and elements are defined globals so they can be reused.</p>
     
@@ -153,7 +150,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
 <div>
 This section offers a condensed tabular overview of the requirements mapping from OOTS to EUCARIS. 
 
-<table id="table-quickoverview" class="simple" style="width:100%; table-layout: fixed; word-wrap:break-word;">
+<table id="table-mapping" class="simple" style="width:100%; table-layout: fixed; word-wrap:break-word;">
 	<thead>
 		<tr><th>Information requirement</th><th>EUCARIS Xpath</th><th>Note</th></tr>
 	</thead>
@@ -163,77 +160,66 @@ This section offers a condensed tabular overview of the requirements mapping fro
 								<td>Vehicle Identification Number (VIN number or chassis number)</td>
                                 <td>/xs:schema/xs:complexType[@name="AVIVehicleTechnicalDataType"]/xs:sequence[1]/xs:element[@name="VehicleIdentificationNumber"]</td>
 								<td></td>
-                                
 							</tr>
 						
 							<tr>
 								<td>registration plate number of the vehicle and country symbol of the State of registration</td>
                                 <td>/xs:schema/xs:complexType[@name="AVIVehicleRegistrationDataType"]/xs:sequence[1]/xs:element[@name="VehRegistrationNumber"]</td>
 								<td></td>
-                                
 							</tr>
 
 							<tr>
 								<td>vehicle category (if available)</td>
                                 <td>/xs:schema/xs:complexType[@name="AVIVehicleTechnicalDataType"]/xs:sequence[1]/xs:element[@name="VehicleCategoryCode"]</td>
 								<td></td>
-                                
 							</tr>
 
 							<tr>
 								<td>Place of roadworthiness test</td>
                                 <td>/xs:schema/xs:complexType[@name="AVIVehicleMileageDataType"]/xs:sequence[1]/xs:element[@name="MileageRecordings"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="MileageRecording"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="MileageRecordingCountryCode"]</td>
 								<td></td>
-                                
 							</tr>
 
 							<tr>
 								<td>Date of roadworthiness test</td>
                                 <td>/xs:schema/xs:complexType[@name="AVIVehicleRegistrationDataType"]/xs:sequence[1]/xs:element[@name="VehRoadworthiness"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="VehRoadworthinessTestDate"]</td>
 								<td></td>
-                                
 							</tr>
 
 							<tr>
 								<td>odometer reading at the time of the roadworthiness test (if available)</td>
                                 <td>/xs:schema/xs:complexType[@name="AVIVehicleMileageDataType"]/xs:sequence[1]/xs:element[@name="MileageRecordings"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="MileageRecording"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="Mileage"]</td>
 								<td></td>
-                                
 							</tr>
 
 							<tr>
 								<td>identified deficiencies and their level of severity</td>
                                 <td>/xs:schema/xs:complexType[@name="AVIVehicleRegistrationDataType"]/xs:sequence[1]/xs:element[@name="Remarks"]</td>
 								<td>Remarks could contain the information, but does not necessarily contain multiple string fields.</td>
-                                
 							</tr>
 							
 							<tr>
 								<td>result of the roadworthiness test</td>
                                 <td>NA</td>
 								<td>Not present in EUCARIS</td>
-                                
 							</tr>
 
 							<tr>
 								<td>date of the next roadworthiness test or date of expiry of the current roadworthiness certificate (if this information is not provided by other means)</td>
                                 <td>/xs:schema/xs:complexType[@name="AVIVehicleRegistrationDataType"]/xs:sequence[1]/xs:element[@name="VehRoadworthiness"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="VehRoadworthinessTestEndDate"]</td>
 								<td></td>
-                                
 							</tr>
 
 							<tr>
 								<td>name of roadworthiness testing organisation/centre</td>
                                 <td>/xs:schema/xs:complexType[@name="AVIVehicleMileageDataType"]/xs:sequence[1]/xs:element[@name="MileageRecordings"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="MileageRecording"]/xs:complexType[1]/xs:sequence[1]/xs:element[@name="MileageRecordingOrganisation"]</td>
 								<td></td>
-                                
 							</tr>
 
 							<tr>
 								<td>signature/ identification of the inspector responsible for the roadworthiness test</td>
                                 <td>/xs:schema/xs:complexType[@name="SigningAuthorityGroup"]/xs:sequence[1]/xs:element[@name="NameOfSigner"]</td>
 								<td></td>
-                                
 							</tr>
 						
 	</tbody>
