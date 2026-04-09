@@ -268,7 +268,7 @@
     </h2>
     {% block introduction %}
         <p>
-            This document describes a <strong>Vocabulary</strong>, in this case <strong>{{ metadata.title }}</strong>. The Vocabulary specifies a semantic data model covering a topic. The specification consists of terms with their constraints (cardinalities, codelists, usage guidelines).
+            This document describes a <strong>model</strong>, in this case <strong>{{ metadata.title }}</strong>. The model specifies a semantic data model covering a topic. The model consists of terms with their constraints (cardinalities, codelists, usage guidelines).
         </p>
     {% endblock %}
 </section>
@@ -280,9 +280,9 @@
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="{{ metadata.status }}">{{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }}</a> published at {{ metadata.issued }}.
+	This model has the status <a href="{{ metadata.status }}">{{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }}</a> published at {{ metadata.issued }}.
 -->
-	This Vocabulary has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }} published at {{ metadata.issued }}.
+	This model has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }} published at {{ metadata.issued }}.
         </p>
 </section>
 {% endblock %}
@@ -300,7 +300,7 @@
                   property="dct:title"
                   href="http://purl.org/dc/dcmitype/Text"
                   xmlns:dct="http://purl.org/dc/terms/">
-		  This specification </span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION </a> 
+		  This model </span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION </a> 
 	          is published under <a href="{{ metadata.license }}" rel="license">"CC0"</a>.
 	-->
              Copyright © 2026 European Union. All material in this repository is published under the license Creative Commons Attribution 4.0 International (CC BY 4.0), unless explicitly otherwise mentioned.
@@ -314,7 +314,7 @@
         Conformance
     </h2>
         <p>
-            An implementation is conformant with this Vocabulary if it satisfies <a href="/doc/conformance">these rules</a>.
+            An implementation is conformant with this model if it satisfies <a href="/doc/conformance">these rules</a>.
         </p>
 </section>
 {% endblock %}
@@ -337,7 +337,7 @@
     <div id="overview">
                 {% if ( ( classes | length > 0)   ) %}
                         <p>
-                            This document describes the usage of the following main entities for a correct usage of the Vocabulary:
+                            This document describes the usage of the following main entities for a correct usage of the model:
                             <br />
                             | {%- for class in classes |sort(attribute=sortattr) %} 
 			      {%- if class.rawTags['class-usage-scope'] == "main" %}
@@ -470,7 +470,7 @@
                     </dd>
                 {% else %}
                     <dd>
-                        This specification does not impose any additional requirements to properties for this entity.
+                        This model does not impose any additional requirements to properties for this entity.
                     </dd>
                 {% endif %}
             </dl>
@@ -643,13 +643,13 @@
    Main Entities
 </h2>
 <p>
-The main entities are those that form the core of the Vocabulary. 
-The properties and their associated constraints that apply in the context of this Vocabulary are listed in a tabular form.
+The main entities are those that form the core of the model. 
+The properties and their associated constraints that apply in the context of this model are listed in a tabular form.
 Each row corresponds to one property. 
 </p><p>
-As this is the toplevel Vocabulary for this usage context the reuse of the terms is indicated by their URIs.
-If an URI is used from another Vocabulary than this namespace it means that the information is inherited as expressed in 
-the data specification in which that URI is defined.
+As this is the toplevel model for this usage context the reuse of the terms is indicated by their URIs.
+If an URI is used from another model than this namespace it means that the information is inherited as expressed in 
+the data model in which that URI is defined.
 </p>
 <!--
 In addition to the constraints also cross-references are provided to DCAT and DCAT-AP. For the last, to save space, the following abbreviations are used:
@@ -675,8 +675,8 @@ Therefore it may vary over time when new versions of DCAT-AP are created.
    Supporting Entities
 </h2>
 
-Supporting entities complement the main entities in the Vocabulary. 
-The scope and objectives of the Vocabulary are fully covered by the main entities; supporting entities serve as property ranges or as subclasses used in specific use cases. 
+Supporting entities complement the main entities in the model. 
+The scope and objectives of the model are fully covered by the main entities; supporting entities serve as property ranges or as subclasses used in specific use cases. 
 
 {% for entity in classes | sort(attribute=sortattr) %}
 {% if entity.rawTags['class-usage-scope'] != "main"   %}
@@ -693,7 +693,7 @@ The scope and objectives of the Vocabulary are fully covered by the main entitie
             Data Types
         </h2>
 
-	The following data types are used within this specification.
+	The following data types are used within this model.
 
 	<table class="data-table simple" id="table-mandatory-classes">
 	    <thead>
@@ -758,7 +758,7 @@ The scope and objectives of the Vocabulary are fully covered by the main entitie
         #} (non normative)
         {% block jsonld %}
             <p>
-                A reusable JSON-LD context definition for this application profile is retrievable at: <a href="{{ documentroot }}/context/{{ metadata.filename }}.jsonld"
+                A reusable JSON-LD context definition for this model is retrievable at: <a href="{{ documentroot }}/context/{{ metadata.filename }}.jsonld"
     target="_blank">{{ documentroot }}/context/{{ metadata.filename }}.jsonld</a>
             </p>
         {% endblock %}
@@ -776,7 +776,7 @@ The scope and objectives of the Vocabulary are fully covered by the main entitie
         #} (non normative)
         {% block shacl %}
             <p>
-                A reusable SHACL template for this application profile is retrievable at: <a href="{{ documentroot }}/shacl/{{ metadata.filename }}-SHACL.ttl"
+                A reusable SHACL template for this model is retrievable at: <a href="{{ documentroot }}/shacl/{{ metadata.filename }}-SHACL.ttl"
     target="_blank">{{ documentroot }}/shacl/{{ metadata.filename }}-SHACL.ttl</a>
             </p>
         {% endblock %}
@@ -809,7 +809,7 @@ The scope and objectives of the Vocabulary are fully covered by the main entitie
 
 <h2>Quick Reference of Classes and Properties</h2>
 
-This section provides a condensed tabular overview of the mentioned classes and properties in this specification.
+This section provides a condensed tabular overview of the mentioned classes and properties in this model.
 The properties are grouped under headings <it>mandatory, recommended, optional</it> and <it>deprecated</it>. These terms have the following meaning.
 <ul>
 <li>Mandatory property: a receiver MUST be able to process the information for that property; a sender MUST provide the information for that property.</li>
