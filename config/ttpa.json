@@ -7,7 +7,7 @@
   "template": "ttpa-ap_en.j2",
   "title": "Transparency and Targeting of Political Advertisement Vocabulary",
   "publication-state": "Draft",
-  "publication-date": "2026-04-09",
+  "publication-date": "2026-04-17",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "TTPA",
@@ -20,7 +20,7 @@
       {
         "language":"en",
         "template":"ttpa-ap_en.j2",
-        "title": "Transparency and Targeting of Political Advertisement Vocabulary",
+        "title": "Transparency and Targeting of Political Advertisement",
         "translationjson":"ttpa-ap_en.json",
         "mergefile":"ttpa-ap_en_merged.jsonld"
       }

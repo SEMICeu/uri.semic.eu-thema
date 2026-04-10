@@ -9,6 +9,8 @@
       "dpv": "https://w3id.org/dpv#",
       "ex": "http://example.com/",
       "foaf": "http://xmlns.com/foaf/0.1/",
+	  "frapo": "http://purl.org/cerif/frapo/",
+      "legal": "http://www.w3.org/ns/legal#",
       "owl": "http://www.w3.org/2002/07/owl#",
       "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -75,18 +77,8 @@
       "type": "http://example.com/theme/video",
       "language": "http://publications.europa.eu/resource/authority/language/ENG",
       "created": "2025-01-10",
-      "hasBeginning": {
-        "time:inXSDDate": {
-          "@value": "2025-02-01",
-          "@type": "xsd:date"
-        }
-      },
-      "hasEnd": {
-        "time:inXSDDate": {
-          "@value": "2025-02-28",
-          "@type": "xsd:date"
-        }
-      },
+      "startDate": "2025-02-01",
+      "endDate": "2025-02-28",
       "intendedStartPublicationDate": "2025-02-01",
       "intendedEndPublicationDate": "2025-02-28",
       "hasInitiative": "http://example.com/initiative/1",
