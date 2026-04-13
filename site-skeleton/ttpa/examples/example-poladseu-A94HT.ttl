@@ -34,8 +34,8 @@
 	ttpa:hasPoliticalAdvertisement <http://example.com/politicalAdvertisement/1> ;
 	a frapo:Funding .
 
-<http://example.com/politicalAdvertisement/1> dcterms:description "Folketingsvalg 2026, Peter Skaarup, Digita"@da ;
-	dcterms:created "2026-02-19"^^xsd:date ;
+<http://example.com/politicalAdvertisement/1> dct:description "Folketingsvalg 2026, Peter Skaarup, Digita"@da ;
+	dct:created "2026-02-19"^^xsd:date ;
 	dcat:endDate "2026-11-01"^^xsd:date ;
 	dcat:startDate "2026-02-19"^^xsd:date ;
 	a ttpa:PoliticalAdvertisement .
