@@ -5,6 +5,8 @@
 @prefix dpv: <http://www.w3.org/ns/dpv#> .
 @prefix ex: <http://example.com/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
+@prefix legal: <http://www.w3.org/ns/legal#> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -14,14 +16,13 @@
 @prefix ttpa: <http://example.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://polads.eu/en/A94HT> dct::identifier "A94HT" ;
-	ttpa:hasSponsor <http://example.com/entity/1> ;
+<https://polads.eu/en/A94HT> ttpa:hasSponsor <http://example.com/entity/1> ;
 	ttpa:hasFunding <http://example.com/funding/1> ;
 	a ttpa:TransparencyNotice .
 
-<http://example.com/entity/1> <http://www.w3.org/ns/legal#legalName> "Danmarksdemokraterne"@en ;
+<http://example.com/entity/1> legal:legalName "Danmarksdemokraterne"@en ;
 	cv:registeredAddress <http://example.com/address/1> ;
-	a <http://www.w3.org/ns/legal#LegalEntity> .
+	a legal:LegalEntity, foaf:Agent .
 
 <http://example.com/address/1> locn:adminUnitL1 "Denmark"@en ;
 	locn:postName "København k"@da ;
@@ -31,11 +32,10 @@
 	cv:hasValue "20000.00"^^xsd:decimal ;
 	ttpa:nature <http://example.com/natureFunding/PRIVATE> ;
 	ttpa:hasPoliticalAdvertisement <http://example.com/politicalAdvertisement/1> ;
-	a <http://purl.org/cerif/frapo/Funding> .
+	a frapo:Funding .
 
-<http://example.com/politicalAdvertisement/1> dct::description "Folketingsvalg 2026, Peter Skaarup, Digita"@da ;
-	dct::created "2026-02-19"^^xsd:date ;
+<http://example.com/politicalAdvertisement/1> dcterms:description "Folketingsvalg 2026, Peter Skaarup, Digita"@da ;
+	dcterms:created "2026-02-19"^^xsd:date ;
 	dcat:endDate "2026-11-01"^^xsd:date ;
 	dcat:startDate "2026-02-19"^^xsd:date ;
 	a ttpa:PoliticalAdvertisement .
-

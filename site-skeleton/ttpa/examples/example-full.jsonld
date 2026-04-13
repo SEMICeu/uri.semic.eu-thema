@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://semiceu.github.io/uri.semic.eu-generated/TTPA/releases/0.0.2/context/ttpa.jsonld",
+    "https://semiceu.github.io/uri.semic.eu-generated/TTPA/releases/0.0.3/context/ttpa.jsonld",
     {
       "adms": "http://www.w3.org/ns/adms#",
       "cv": "http://data.europa.eu/m8g/",
@@ -29,7 +29,7 @@
     },
     {
       "@id": "http://example.com/entity/1",
-      "@type": "LegalEntity",
+      "@type": ["LegalEntity","Agent"],
       "legalName": {
         "@language": "en",
         "@value": "Green Future Association Ltd."

@@ -25,7 +25,7 @@
 	cv:registeredAddress <http://example.com/address/1> ;
 	locn:address <http://example.com/address/2> ;
 	ttpa:isPostalAddressDifferentThanEstablishment true ;
-	a legal:LegalEntity .
+	a legal:LegalEntity, foaf:Agent .
 
 <http://example.com/address/1> a locn:Address .
 
@@ -76,4 +76,3 @@
 <http://example.com/entity/2> legal:legalName "AdTech Solutions Ltd."@en ;
 	cv:email "control@adtech.com" ;
 	a legal:LegalEntity .
-
