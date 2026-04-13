@@ -254,5 +254,37 @@
           "statuslabel" : "Draft",
           "editorDocumentroot" : "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/EvidenceOfDisability/releases/0.0.1"
     }
+},
+{
+  "name": "evidenceofnationality",
+  "type": "ap",
+  "eap": "OOTS_EvidenceOfNationality.eap",
+  "diagram": "EvidenceOfNationality",
+  "template": "EvidenceOfNationality_en.j2",
+  "title": "Evidence Of Nationality",
+  "publication-state": "Draft",
+  "publication-date": "2026-04-13",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "contributors-file": "stakeholders.csv",
+  "contributors-column": "OOTS",
+  "site": "site-skeleton/evidenceofnationality", 
+  "repourl": "https://code.europa.eu/oots/tdd/data_models/Evidence/EvidenceOfNationality/tree/master/releases/0.0.1",
+  "feedbackurl": "https://ec.europa.eu/digital-building-blocks/wikis/display/SDGOO/Discussion+Items+-+EM?src=contextnavpagetreemode",
+  "versionurl": "https://code.europa.eu/oots/tdd/data_models/Evidence/EvidenceOfNationality/tree/master/releases/0.0.1",
+  "standaardregisterurl" :"https://code.europa.eu/oots/tdd/data_models/Evidence/EvidenceOfNationality/tree/master/releases/0.0.1/Changelog.md",
+    "translation": [
+      {
+        "language":"en",
+        "template":"EvidenceOfNationality_en.j2",
+        "title": "Evidence Of Nationality",
+        "translationjson":"EvidenceOfNationality_en.json",
+        "mergefile":"EvidenceOfNationality_en_merged.jsonld"
+      }
+    ],
+    "toolchainversion" : "3",
+    "documentconfig": {
+          "statuslabel" : "Draft",
+          "editorDocumentroot" : "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/EvidenceOfNationality/releases/0.0.1"
+    }
 }
 ]

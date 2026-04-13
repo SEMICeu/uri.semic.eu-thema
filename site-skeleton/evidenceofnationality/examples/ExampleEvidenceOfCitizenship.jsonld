@@ -1,0 +1,133 @@
+{
+  "@context": [
+    "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfCitizenship/releases/0.0.1/context/evidenceofcitizenship.jsonld",
+    {
+      "cv": "http://data.europa.eu/m8g/",
+      "dct": "http://purl.org/dc/terms/",
+      "ex": "http://example.com/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "locn": "http://www.w3.org/ns/locn#",
+      "person": "http://www.w3.org/ns/person#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "sdg": "http://data.europa.eu/p4s/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ex:evidenceofcitizenship1",
+      "@type": "EvidenceOfCitizenship",
+      "sdg:hasAttributeSet": {
+        "@id": "ex:attributeSet1"
+      },
+      "dct:subject": {
+        "@id": "ex:person1"
+      },
+      "sdg:hasCitizenship": {
+        "@id": "ex:citizenship1"
+      }
+    },
+    {
+      "@id": "ex:attributeSet1",
+      "@type": "AttributeSet",
+      "sdg:hasAttribute": [
+        {
+          "@id": "ex:attribute1"
+        },
+        {
+          "@id": "ex:attribute2"
+        }
+      ]
+    },
+    {
+      "@id": "ex:attribute1",
+      "@type": "Attribute",
+      "rdfs:label": "IssuingDate",
+      "rdf:value": {
+        "@value": "2025-04-12",
+        "@type": "xsd:date"
+      }
+    },
+    {
+      "@id": "ex:attribute2",
+      "@type": "Attribute",
+      "rdfs:label": "IssuingAuthority",
+      "rdf:value": {
+        "@language": "nl",
+        "@value": "Dienst Burgerzaken van de Gemeente Amsterdam"
+      }
+    },
+    {
+      "@id": "ex:person1",
+      "@type": "Person",
+      "foaf:givenName": {
+        "@language": "nl",
+        "@value": "Pieter"
+      },
+      "foaf:familyName": {
+        "@language": "nl",
+        "@value": "De Vries"
+      },
+      "cv:birthDate": {
+        "@type": "cv:genericDate",
+        "@value": "1985-09-23"
+      }
+    },
+    {
+      "@id": "ex:citizenship1",
+      "@type": "Citizenship",
+      "dct:issued": {
+        "@type": "cv:genericDate",
+        "@value": "2010-03-01"
+      },
+      "person:citizenship": [
+        {
+          "@id": "ex:jurisdiction1"
+        }
+      ],
+      "sdg:hasAttributeSet": {
+        "@id": "ex:attributeSet2"
+      }
+    },
+    {
+      "@id": "ex:jurisdiction1",
+      "@type": "Jurisdiction",
+      "rdfs:label": {
+        "@language": "nl",
+        "@value": "Koninkrijk der Nederlanden"
+      }
+    },
+    {
+      "@id": "ex:attributeSet2",
+      "@type": "AttributeSet",
+      "sdg:hasAttribute": [
+        {
+          "@id": "ex:attribute3"
+        },
+        {
+          "@id": "ex:attribute4"
+        }
+      ]
+    },
+    {
+      "@id": "ex:attribute3",
+      "@type": "Attribute",
+      "rdfs:label": "CitizenshipStatus",
+      "rdf:value": {
+        "@language": "nl",
+        "@value": "Actief"
+      }
+    },
+    {
+      "@id": "ex:attribute4",
+      "@type": "Attribute",
+      "rdfs:label": "AcquisitionMode",
+      "rdf:value": {
+        "@language": "nl",
+        "@value": "Naturalisatie"
+      }
+    }
+  ]
+}
