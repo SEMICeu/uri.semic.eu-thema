@@ -7,15 +7,15 @@
     "template": "core-public-organisation-ap_en.j2",
     "title": "Core Public Organisation Vocabulary",
     "publication-state": "Semic Recommendation",
-    "publication-date": "2024-05-06",
+    "publication-date": "2026-05-05",
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "contributors-file": "stakeholders.csv",
     "contributors-column": "CoreVoc",
     "site": "site-skeleton/core-public-organisation",
-    "repourl": "https://github.com/SEMICeu/CPOV/tree/master/releases/2.1.1",
-    "versionurl": "https://semiceu.github.io/CPOV/releases/2.1.1",
+    "repourl": "https://github.com/SEMICeu/CPOV/tree/master/releases/2.1.2",
+    "versionurl": "https://semiceu.github.io/CPOV/releases/2.1.2",
     "feedbackurl": "https://github.com/SEMICeu/CPOV/issues",
-    "standaardregisterurl" :"https://github.com/SEMICeu/CPOV/blob/master/releases/2.1.1/Changelog.md",
+    "standaardregisterurl" :"https://github.com/SEMICeu/CPOV/blob/master/releases/2.1.2/Changelog.md",
       "translation": [
         {
           "language":"en",
@@ -28,7 +28,7 @@
       "toolchainversion" : "3",
       "documentconfig": {
             "statuslabel" : "SEMIC Recommendation",
-            "editorDocumentroot" : "https://semiceu.github.io/CPOV/releases/2.1.1"
+            "editorDocumentroot" : "https://semiceu.github.io/CPOV/releases/2.1.2"
       }
   }
   ]
