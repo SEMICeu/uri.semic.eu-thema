@@ -157,6 +157,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="msapplication-TileColor" content="#7ED956" />
+    {% block analytics %}
+    {% endblock %}
 </head>
 <body>
     {# <div style="min-height:44px;" id="logo">
@@ -660,10 +662,6 @@ They are included in the Core Vocabulary because they form the range of properti
 {% block mappings %}
 
 {% endblock %} 
-
-{% block analytics %}
-<!-- Override in child template to add Matomo/analytics tracker -->
-{% endblock %}
 
 
 <section id="quick-reference" class="appendix">
