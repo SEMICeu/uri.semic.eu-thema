@@ -7,15 +7,15 @@
   "template": "ttpa-ap_en.j2",
   "title": "Transparency and Targeting of Political Advertisement Vocabulary",
   "publication-state": "Draft",
-  "publication-date": "2026-04-17",
+  "publication-date": "2026-05-06",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "TTPA",
   "site": "site-skeleton/ttpa",
-  "repourl": "https://code.europa.eu/ttpa/model/-/tree/main/model/releases/0.0.2",
+  "repourl": "https://code.europa.eu/ttpa/model/-/tree/main/model/releases/0.0.3",
   "versionurl": "https://model-001a02.pages.code.europa.eu/model/",
   "feedbackurl": "https://code.europa.eu/ttpa/model/-/issues",
-  "standaardregisterurl" :"https://code.europa.eu/ttpa/model/-/tree/main/model/releases/0.0.2/Changelog.md",
+  "standaardregisterurl" :"https://code.europa.eu/ttpa/model/-/tree/main/model/releases/0.0.3/Changelog.md",
     "translation": [
       {
         "language":"en",
