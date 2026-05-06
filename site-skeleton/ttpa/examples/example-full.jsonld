@@ -24,7 +24,6 @@
     {
       "@id": "http://example.com/transparencyNotice/1",
       "@type": "TransparencyNotice",
-      "hasSponsor": "http://example.com/entity/1",
       "hasFunding": "http://example.com/funding/1"
     },
     {
@@ -83,6 +82,7 @@
       "intendedEndPublicationDate": "2025-02-28",
       "hasInitiative": "http://example.com/initiative/1",
       "hasElection": "http://example.com/election/1",
+      "hasSponsor": "http://example.com/entity/1",
       "hasTargeting": "http://example.com/technique/1",
       "hasFunding": "http://example.com/funding/1"
     },
