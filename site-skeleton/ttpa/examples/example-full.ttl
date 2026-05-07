@@ -3,6 +3,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dpv: <https://w3id.org/dpv#> .
+@prefix epo: <http://data.europa.eu/a4g/ontology#> .
 @prefix ex: <http://example.com/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix frapo: <http://purl.org/cerif/frapo/> .
@@ -23,7 +24,6 @@
 	cv:email "contact@sponsor.org" ;
 	cv:registeredAddress <http://example.com/address/1> ;
 	locn:address <http://example.com/address/2> ;
-	ttpa:isPostalAddressDifferentThanEstablishment true ;
 	a legal:LegalEntity, foaf:Agent .
 
 <http://example.com/address/1> a locn:Address .
@@ -31,9 +31,11 @@
 <http://example.com/address/2> a locn:Address .
 
 <http://example.com/funding/1> ttpa:calculationMethodology "Aggregated from invoices and declared contributions over the campaign period."@en ;
-	cv:currency <http://publications.europa.eu/resource/authority/currency/EUR> ;
-	cv:hasValue "15000.00"^^xsd:decimal ;
-	ttpa:nature <http://example.com/natureFunding/PUBLIC_AND_PRIVATE> ;
+	ttpa:totalAmount [
+		rdf:type epo:MonetaryValue ;
+		epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> ;
+		epo:hasAmountValue "15000.00"^^xsd:decimal ;
+	] ;
 	ttpa:fundingOrigin <http://example.com/originFunding/EU_AND_NON_EU> ;
 	ttpa:hasPoliticalAdvertisement <http://example.com/politicalAdvertisement/1> ;
 	a frapo:Funding .
@@ -49,8 +51,8 @@
 	ttpa:intendedEndPublicationDate "2025-02-28"^^xsd:date ;
 	ttpa:hasInitiative <http://example.com/initiative/1> ;
 	ttpa:hasElection <http://example.com/election/1> ;
-	ttpa:hasFunding <http://example.com/funding/1> ;
 	ttpa:hasSponsor <http://example.com/entity/1> ;
+	ttpa:hasFunding <http://example.com/funding/1> ;
 	a ttpa:PoliticalAdvertisement .
 
 <http://example.com/initiative/1> dct:title "European Green Deal Implementation"@en ;
@@ -65,7 +67,7 @@
 	dpv:hasPersonalData <http://example.com/personaldata/email>, <http://example.com/personaldata/location> ;
 	ttpa:hasControllingEntity <http://example.com/entity/1> ;
 	ttpa:targetingGoals "Increase awareness and engagement for sustainable energy initiatives."@en ;
-	dpv:hasPolicy "https://www.sponsor.org/policy"^^xsd:anyURI ;
+	dpv:hasPolicy> "https://www.sponsor.org/policy"^^xsd:anyURI ;
 	ttpa:otherRelevantInformation "Includes A/B testing of different creative formats."@en ;
 	ttpa:numberOfViews 200000 ;
 	ttpa:numberOfLikes 3500 ;
@@ -76,3 +78,4 @@
 <http://example.com/entity/2> legal:legalName "AdTech Solutions Ltd."@en ;
 	cv:email "control@adtech.com" ;
 	a legal:LegalEntity .
+

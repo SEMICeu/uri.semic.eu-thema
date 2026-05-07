@@ -7,6 +7,7 @@
       "dcat": "http://www.w3.org/ns/dcat#",
       "dct": "http://purl.org/dc/terms/",
       "dpv": "https://w3id.org/dpv#",
+	  "epo": "http://data.europa.eu/a4g/ontology#",
       "ex": "http://example.com/",
       "foaf": "http://xmlns.com/foaf/0.1/",
 	  "frapo": "http://purl.org/cerif/frapo/",
@@ -56,11 +57,14 @@
         "@language": "en",
         "@value": "Aggregated from invoices and declared contributions over the campaign period."
       },
-      "currency": "http://publications.europa.eu/resource/authority/currency/EUR",
-      "hasValue": {
-        "@value": "15000.00",
-        "@type": "xsd:decimal"
-      },
+	  "totalAmount": {
+	        "hasCurrency": "http://publications.europa.eu/resource/authority/currency/EUR",
+			"hasAmountValue": {
+				"@value": "15000.00",
+				"@type": "xsd:decimal"
+			},
+            "@type": "MonetaryValue"
+	  },
       "nature": "http://example.com/natureFunding/PUBLIC_AND_PRIVATE",
       "origin": "http://example.com/originFunding/EU_AND_NON_EU",
       "hasPoliticalAdvertisement": "http://example.com/politicalAdvertisement/1"

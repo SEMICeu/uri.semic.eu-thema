@@ -8,6 +8,7 @@
       "dct": "http://purl.org/dc/terms/",
       "dpv": "https://w3id.org/dpv#",
       "ex": "http://example.com/",
+	  "epo": "http://data.europa.eu/a4g/ontology#",
       "foaf": "http://xmlns.com/foaf/0.1/",
 	  "frapo": "http://purl.org/cerif/frapo/",
       "legal": "http://www.w3.org/ns/legal#",
@@ -42,10 +43,13 @@
     {
       "@id": "http://example.com/funding/1",
       "@type": "Funding",
-      "currency": "http://publications.europa.eu/resource/authority/currency/DKK",
-      "hasValue": {
-        "@value": "20000.00",
-        "@type": "xsd:decimal"
+      "totalAmount" : {
+         "hasCurrency": "http://publications.europa.eu/resource/authority/currency/DKK",
+         "hasAmountValue": {
+           "@value": "20000.00",
+           "@type": "xsd:decimal"
+         },
+        "@type": "MonetaryValue"
       },
       "nature": "http://example.com/natureFunding/PRIVATE",
       "hasPoliticalAdvertisement": "http://example.com/politicalAdvertisement/1"
@@ -60,7 +64,7 @@
       "created": "2026-02-19",
       "endDate": "2026-11-01",
       "startDate": "2026-02-19",
-	  "hasSponsor": "http://example.com/entity/1",
+	  "hasSponsor": "http://example.com/entity/1"
     },
     {
       "@id": "http://example.com/entity/1",
@@ -70,6 +74,6 @@
         "@value": "Danmarksdemokraterne"
       },
       "registeredAddress": "http://example.com/address/1"
-    },
+    }
   ]
 }
