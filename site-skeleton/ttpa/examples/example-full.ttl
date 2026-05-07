@@ -67,7 +67,7 @@
 	dpv:hasPersonalData <http://example.com/personaldata/email>, <http://example.com/personaldata/location> ;
 	ttpa:hasControllingEntity <http://example.com/entity/1> ;
 	ttpa:targetingGoals "Increase awareness and engagement for sustainable energy initiatives."@en ;
-	dpv:hasPolicy> "https://www.sponsor.org/policy"^^xsd:anyURI ;
+	dpv:hasPolicy "https://www.sponsor.org/policy"^^xsd:anyURI ;
 	ttpa:otherRelevantInformation "Includes A/B testing of different creative formats."@en ;
 	ttpa:numberOfViews 200000 ;
 	ttpa:numberOfLikes 3500 ;
