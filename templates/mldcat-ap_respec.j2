@@ -424,11 +424,15 @@
 
                                 {% if ai_type == "AIACT" %}
                                     {% if parts|length > 1 %}
-                                        {% set test_var = parts[1] %}
-                                        <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{ parts[1] }}">AI Act {{ test_var }}</a>
-                                    {% else %}
-                                        <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>
-                                    {% endif %}
+										{% set test_var = parts[1] %}
+										{% if test_var == "Art54" %}
+											<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#d1e5680-1-1">AI Act Art. 54</a>
+										{% else %}
+											<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{ test_var }}">AI Act {{ test_var }}</a>
+										{% endif %}
+									{% else %}
+										<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>
+									{% endif %}
                                 {% elif ai_type == "AICOP" %}
                                     <a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>
                                 {% elif ai_type == "DCATAP" %}
@@ -596,7 +600,11 @@
                                             {% if ai_type == "AIACT" %}
                                                 {% if parts|length > 1 %}
                                                     {% set test_var = parts[1] %}
-                                                    <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{ parts[1] }}">AI Act {{ test_var }}</a>
+													{% if test_var == "Art54" %}
+														<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#d1e5680-1-1">AI Act Art. 54</a>
+													{% else %}
+														<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#{{ test_var }}">AI Act {{ test_var }}</a>
+													{% endif %}
                                                 {% else %}
                                                     <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>
                                                 {% endif %}
@@ -933,6 +941,7 @@ Past and current contributors are :
 {'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},
 {'pref':'owl:', 'ns': 'http://www.w3.org/2002/07/owl#'},
 {'pref':'qb:', 'ns': 'http://purl.org/linked-data/cube#'},
+{'pref':'prov:', 'ns': 'http://www.w3.org/ns/prov#'},
 {'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
 {'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
 {'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
