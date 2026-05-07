@@ -16,8 +16,7 @@
 @prefix ttpa: <http://example.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.com/transparencyNotice/1> ttpa:hasSponsor <http://example.com/entity/1> ;
-	ttpa:hasFunding <http://example.com/funding/1> ;
+<http://example.com/transparencyNotice/1> ttpa:hasFunding <http://example.com/funding/1> ;
 	a ttpa:TransparencyNotice .
 
 <http://example.com/entity/1> legal:legalName "Green Future Association Ltd."@en ;
@@ -51,6 +50,7 @@
 	ttpa:hasInitiative <http://example.com/initiative/1> ;
 	ttpa:hasElection <http://example.com/election/1> ;
 	ttpa:hasFunding <http://example.com/funding/1> ;
+	ttpa:hasSponsor <http://example.com/entity/1> ;
 	a ttpa:PoliticalAdvertisement .
 
 <http://example.com/initiative/1> dct:title "European Green Deal Implementation"@en ;

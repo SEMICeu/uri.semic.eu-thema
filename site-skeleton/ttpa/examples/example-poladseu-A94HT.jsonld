@@ -25,17 +25,7 @@
       "@id": "https://polads.eu/en/A94HT",
       "@type": "TransparencyNotice",
       "identifier" : "A94HT",
-      "hasSponsor": "http://example.com/entity/1",
       "hasFunding": "http://example.com/funding/1"
-    },
-    {
-      "@id": "http://example.com/entity/1",
-      "@type": ["LegalEntity","Agent"],
-      "legalName": {
-        "@language": "en",
-        "@value": "Danmarksdemokraterne"
-      },
-      "registeredAddress": "http://example.com/address/1"
     },
     {
       "@id": "http://example.com/address/1",
@@ -69,7 +59,17 @@
       },
       "created": "2026-02-19",
       "endDate": "2026-11-01",
-      "startDate": "2026-02-19"
-    }
+      "startDate": "2026-02-19",
+	  "hasSponsor": "http://example.com/entity/1",
+    },
+    {
+      "@id": "http://example.com/entity/1",
+      "@type": ["LegalEntity","Agent"],
+      "legalName": {
+        "@language": "en",
+        "@value": "Danmarksdemokraterne"
+      },
+      "registeredAddress": "http://example.com/address/1"
+    },
   ]
 }
