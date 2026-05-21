@@ -2,8 +2,8 @@
 {
   "name": "it6",
   "type": "voc",
-  "eap": "it6.eap",
-  "diagram": "it6",
+  "eap": "MLDCAT-AP.eap",
+  "diagram": "MLDCAT-AP",
   "template": "mldcat-ap_en.j2",
   "title": "MLDCAT-AP",
   "publication-state": "Working Draft",
