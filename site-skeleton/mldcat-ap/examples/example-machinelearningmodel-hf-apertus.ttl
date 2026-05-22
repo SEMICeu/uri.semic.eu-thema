@@ -5,6 +5,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix it6: <http://data.europa.eu/it6/> .
 @prefix lpwcc: <https://linkedpaperswithcode.com/class/> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix spdx: <http://spdx.org/rdf/terms#> .
@@ -23,7 +24,7 @@
 	it6:totalNumberOfParameters "70000000000"^^xsd:nonNegativeInteger ;
 	it6:methodOfDistribution "Hugging Face" ;
 	dct:license <https://www.apache.org/licenses/LICENSE-2.0> ;
-	<http://www.w3.org/ns/odrl/2/hasPolicy> <https://huggingface.co/swiss-ai/Apertus-70B-2509/policy> ;
+	odrl:hasPolicy <https://huggingface.co/swiss-ai/Apertus-70B-2509/policy> ;
 	it6:intendedUse "General-purpose AI model" ;
 	it6:trainedOn <https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu>, <https://huggingface.co/datasets/epfml/FineWeb-HQ>, <https://huggingface.co/datasets/HuggingFaceTB/dclm-edu>, <https://huggingface.co/datasets/epfml/FineWeb2-HQ>, <https://huggingface.co/datasets/HuggingFaceFW/fineweb-2>, <https://huggingface.co/datasets/bigcode/the-stack-dedup>, <https://huggingface.co/datasets/common-pile/stackv2_edu_filtered>, <https://huggingface.co/datasets/HuggingFaceTB/finemath>, <https://huggingface.co/datasets/LLM360/MegaMath>, <https://huggingface.co/datasets/HuggingFaceTB/smoltalk2>, <https://huggingface.co/datasets/utter-project/EuroBlocks-SFT-Synthetic-1124>, <https://huggingface.co/datasets/allenai/tulu-3-sft-olmo-2-mixture-0225>, <https://huggingface.co/datasets/DataProvenanceInitiative/Commercial-Flan-Collection-Chain-Of-Thought> ;
 	it6:hasFile <https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/model-00001-of-00030.safetensors> ;
@@ -41,9 +42,9 @@ ex:Text a skos:Concept .
 ex:modality-output-1 it6:classification ex:Text ;
 	a it6:Modality .
 
-<https://www.apache.org/licenses/LICENSE-2.0> a <LicenseDocument>, dct:LicenseDocument .
+<https://www.apache.org/licenses/LICENSE-2.0> a dct:LicenseDocument .
 
-<https://huggingface.co/swiss-ai/Apertus-70B-2509/policy> a <http://www.w3.org/ns/odrl/2/Policy> .
+<https://huggingface.co/swiss-ai/Apertus-70B-2509/policy> a odrl:Policy .
 
 <https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/model-00001-of-00030.safetensors> dct:format <http://example.com/format/safetensors> ;
 	dct:identifier "model-00001-of-00030.safetensors" ;
@@ -128,4 +129,3 @@ spdx:checksumAlgorithm_sha256 a spdx:ChecksumAlgorithm .
 <https://huggingface.co/swiss-ai/Apertus-70B-2509/resolve/main/model-00001-of-00030.safetensors> a dcat:Resource .
 
 <http://example.com/format/safetensors> a skos:Concept .
-

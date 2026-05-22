@@ -5,6 +5,7 @@
             "biro" : "http://purl.org/spar/biro/",
             "it6" : "http://data.europa.eu/it6/",
             "lpwcc" : "https://linkedpaperswithcode.com/class/",
+			"odrl" : "http://www.w3.org/ns/odrl/2/",
             "spdx" : "http://spdx.org/rdf/terms#",
             "xsd" : "http://www.w3.org/2001/XMLSchema#",
             "ex" : "http://example.org/"
@@ -78,7 +79,7 @@
             },
             {
                 "@id" : "https://www.apache.org/licenses/LICENSE-2.0",
-                "@type": "LicenseDocument"
+                "@type": "LicenceDocument"
             }, 
             {
                 "@id" : "https://huggingface.co/swiss-ai/Apertus-70B-2509/policy",
@@ -235,10 +236,6 @@
                     "@type": "xsd:date"
                 }
             },
-           {
-                "@id": "https://www.apache.org/licenses/LICENSE-2.0",
-                "@type": "LicenceDocument"
-           },
            {
             "@id": "https://huggingface.co/swiss-ai/Apertus-70B-2509/resolve/main/model-00001-of-00030.safetensors",
             "@type": "CataloguedResource"
