@@ -1,5 +1,37 @@
 [
 {
+  "name": "ootsap",
+  "type": "ap",
+  "eap": "OOTS-AP.eap",
+  "diagram": "OOTS-AP",
+  "template": "OOTS-AP_en.j2",
+  "title": "OOTS-AP",
+  "publication-state": "Draft",
+  "publication-date": "2025-11-21",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "contributors-file": "stakeholders.csv",
+  "contributors-column": "OOTS",
+  "site": "site-skeleton/ootsap", 
+  "repourl": "https://code.europa.eu/oots/tdd/data_models/Evidence/OOTS-AP/tree/master/releases/0.0.1",
+  "feedbackurl": "https://ec.europa.eu/digital-building-blocks/wikis/display/SDGOO/Discussion+Items+-+EM?src=contextnavpagetreemode",
+  "versionurl": "https://code.europa.eu/oots/tdd/data_models/Evidence/OOTS-AP/tree/master/releases/0.0.1",
+  "standaardregisterurl" :"https://code.europa.eu/oots/tdd/data_models/Evidence/OOTS-AP/tree/master/releases/0.0.1/Changelog.md",
+    "translation": [
+      {
+        "language":"en",
+        "template":"OOTS-AP_en.j2",
+        "title": "OOTS-AP",
+        "translationjson":"OOTS_AP_en.json",
+        "mergefile":"OOTS_AP_en_merged.jsonld"
+      }
+    ],
+    "toolchainversion" : "3",
+    "documentconfig": {
+          "statuslabel" : "Draft",
+          "editorDocumentroot" : "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/OOTS-AP/releases/0.0.1"
+    }
+},
+{
   "name": "evidenceofbirth",
   "type": "ap",
   "eap": "OOTS_EvidenceOfBirth.eap",
