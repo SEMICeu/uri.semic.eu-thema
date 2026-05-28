@@ -3,7 +3,7 @@
   "name": "ootsap",
   "type": "ap",
   "eap": "OOTS-AP.eap",
-  "diagram": "OOTS-AP",
+  "diagram": "OOTSAP",
   "template": "OOTS-AP_en.j2",
   "title": "OOTS-AP",
   "publication-state": "Draft",
