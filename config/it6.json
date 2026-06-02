@@ -6,7 +6,7 @@
   "diagram": "MLDCAT-AP",
   "template": "it6.j2",
   "title": "MLDCAT-AP",
-  "publication-state": "Working Draft",
+  "publication-state": "https://www.w3.org/2021/Process-20211102/#RecsWD",
   "publication-date": "2026-06-02",
   "license": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic",
   "contributors-file": "stakeholders.csv",
