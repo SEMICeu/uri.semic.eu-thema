@@ -4,7 +4,7 @@
   "type": "voc",
   "eap": "MLDCAT-AP.eap",
   "diagram": "MLDCAT-AP",
-  "template": "mldcat-ap_en.j2",
+  "template": "it6.j2",
   "title": "MLDCAT-AP",
   "publication-state": "Working Draft",
   "publication-date": "2023-01-13",
@@ -23,9 +23,9 @@
     "translation": [
       {
         "language":"en",
-        "template":"mldcat-ap_en.j2",
+        "template":"it6.j2",
         "title": "MLDCAT-AP",
-        "translationjson":"mldcat-ap_en.json",
+        "translationjson":"it6.json",
         "mergefile":"mldcat-ap_en_merged.jsonld"
       }
     ]

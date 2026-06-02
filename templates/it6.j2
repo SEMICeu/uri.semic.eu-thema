@@ -1,0 +1,101 @@
+{% extends "semic-voc_en.j2" %}
+
+{% block respecconfig %}
+
+    var respecConfig = {
+      edDraftURI: "{{metadata.navigation.self}}",
+      latestVersion: "{{metadata.navigation.prev}}",
+      specStatus: "base",
+      publishDate: "{{ metadata.issued }}",
+      editors: myeditors,
+      authors: myauthors,
+      github: "SEMICeu/StatDCAT-AP",
+      shortName: "{{metadata.title}}",
+      xref: "web-platform",
+      doJsonLd: true,
+      historyURI: null,
+      logos: [{
+        src: "https://semiceu.github.io/CPOV/releases/2.1.0/html/semic-icon.png",
+        url: "https://semic.eu",
+        alt: "SEMIC",
+        width: 154,
+        height: 140,
+        id: "semic-logo",
+      },],
+      generatedSubtitle: "",
+      additionalCopyrightHolders: "",
+      otherLinks: [{
+          key: "Owners:",
+          data: myowners
+        },{
+          key: "Links",
+          data: [
+            {
+              value: "StatDCAT-AP Application Profile",
+              href: "../../../drafts/3.0.0/"
+            }
+          ]
+      }],
+      localBiblio: {
+        "DCAT-AP" : {
+          "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.1/",
+          "title":"DCAT-AP, a DCAT profile for European data portals",
+          "publisher":"European Commission"
+        }
+      }
+    };
+
+{% endblock %}
+
+{% block introduction %}
+<h3>Context</h3>
+    <p>
+        This vocabulary is <strong>supporting</strong> StatDCAT-AP, a specialisation of the DCAT application profile for European data portals [[DCAT-AP]] for statistical data. 
+        The terms defined in this namespace are defined as broad as possible for wider reuse but are scoped to the needs of StatDCAT-AP. 
+        All terms in this vocabulary have therefore a strong connection with StatDCAT-AP.
+    </p>
+
+<h3>Revision history</h3>
+    <p>
+        This namespace document was created during the process of aligning the StatDCAT-AP profile with DCAT-AP 3.x and the SEMIC style guide in 2026.
+    </p>
+
+{% endblock %}
+
+{% block summary %}
+<section id="abstract">
+    <h2>Abstract</h2>
+The StatDCAT-AP vocabulary supports the <a href="https://semiceu.github.io/StatDCAT-AP/releases/">StatDCAT-AP profile</a>.
+The namespace for this vocabulary is <code>http://data.europa.eu/s1n/</code> .
+It is under maintenance by the SEMIC action, Interoperable Europe.
+</section>
+{% endblock %}
+
+{% block terminology %}
+<section id="specterminology">
+    <h2>Terminology</h2>
+
+    The namespace for this vocabulary is <code>http://data.europa.eu/it6/</code> . 
+    <p>
+
+<h3>Used Prefixes</h3>
+
+        <table id="table-namespaces" class="simple">
+            <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+            <tbody>
+            <tr><td><code>dcat</code></td><td><code>http://www.w3.org/ns/dcat#</code></td></tr>
+            <tr><td><code>qb</code></td><td><code>http://purl.org/linked-data/cube#</code></td></tr>
+            <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+            <tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
+            </tbody>
+        </table>
+
+</section>
+{% endblock %}
+
+{% block conformance %}
+  {% include "it6-conformance.j2" ignore missing %}
+{% endblock %}
+
+{% block usages %}
+{% endblock %}
