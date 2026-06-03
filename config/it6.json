@@ -16,7 +16,8 @@
   "versionurl": "https://semiceu.github.io/MLDCAT-AP/releases/1.0.0",
   "feedbackurl": "https://github.com/SEMICeu/MLDCAT-AP/issues",
   "documentconfig" : {
-    "changelog" : "https://github.com/SEMICeu/MLDCAT-AP/master/releases/1.01/Changelog.md"
+    "changelog" : "https://github.com/SEMICeu/MLDCAT-AP/master/releases/1.01/Changelog.md",
+    "statuslabel" : "Working Draft"
   },
   "toolchainversion" : "3",
   "standaardregisterurl": "MLDCAT-AP",
