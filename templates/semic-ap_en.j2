@@ -72,27 +72,8 @@
         {% endif %}
 	{% endfor %}
 		]
-		
-	var myowners = [
-	{% for role, contributors in contributors | groupby("role") %}
-	{% if role == "O" %}
-	    {% set editors = contributors|sort(attribute='last_name') %}
-	    {% if editors %}
-		{% for editor in editors %}
-		   {
-		    value: "{{ editor.first_name }} {{ editor.last_name}} {{ editor.affiliation.name }}",
-		      {% if editor.affiliation.website %}
-		    href: "{{ editor.affiliation.website }}",
-		      {% endif %}
-		    }
-		{% if not loop.last %}, {% endif %}
-		{% endfor %}
-             {% endif %}
-        {% endif %}
-	{% endfor %}
-		]
-	
-    /*var myowners = [
+			
+    var myowners = [
             {
                 value: "SEMIC",
                 href: "https://joinup.ec.europa.eu/collection/semic-support-centre",
@@ -101,7 +82,7 @@
                 value: "Georges Lobo (DIGIT)",
             }
 		]
-	*/	
+	
 	function quickreference() {
 		$('#table-quickoverview').DataTable();
     };
