@@ -1,29 +1,30 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix locn: <http://www.w3.org/ns/locn#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix auto-vc: <https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/> .
 @prefix cv: <http://data.europa.eu/m8g/> .
-@prefix elm: <http://data.europa.eu/snb/model/elm/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix ex: <http://example.com/> .
 @prefix legal: <http://www.w3.org/ns/legal#> .
-@prefix person: <http://www.w3.org/ns/person#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdg: <http://data.europa.eu/p4s/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:evidenceof1 sdg:hasAttributeSet ex:attributeSet1 ;
-	dcterms:subject ex:person1 ;
-	dcterms:requires ex:admission1 ;
-	a sdg:EvidenceOfCertificateAdmissionSecondaryEducation .
+	dct:subject ex:roadvehicle1 ;
+	dct:requires ex:check1 ;
+	a sdg:EvidenceOfRoadworthiness .
 
-ex:person1 foaf:givenName "René François Ghislain"@fr ;
-	foaf:familyName "Magritte"@fr ;
-	a person:Person .
+ex:roadvehicle1 sdg:registrationPlateNumber "XYZ-AA-XYZ" ;
+	sdg:vehicleCategory ex:C1 ;
+	auto-vc:vehicleIdentificationNumber "1234567890" ;
+	a auto-vc:RoadVehicle .
 
-ex:admission1 elm:duration "P5Y"^^xsd:duration ;
-	elm:endDate "2026-03-05T09:00:00"^^xsd:dateTime ;
-	elm:startDate "2021-03-05T09:00:00"^^xsd:dateTime ;
-	legal:legalName "OOTS University"@en ;
-	elm:LearningOpportunity "OOTS Master Class"@en ;
-	a sdg:Admission .
+ex:check1 auto-vc:validFrom "2026-03-05T09:00:00"^^xsd:dateTime ;
+	auto-vc:validThrough "2028-03-05T09:00:00"^^xsd:dateTime ;
+	sdg:odometerReading "15000.0"^^xsd:decimal ;
+	sdg:placeRoadWorthinessTest <http://publications.europa.eu/resource/authority/country/ITA> ;
+	dct:publisher ex:publisher1 ;
+	a auto-vc:Check .
+
+ex:publisher1 legal:legalName "OOTS Garage"@en ;
+	a legal:LegalEntity .
