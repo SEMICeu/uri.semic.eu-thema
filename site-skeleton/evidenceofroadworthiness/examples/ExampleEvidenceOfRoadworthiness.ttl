@@ -14,6 +14,17 @@ ex:evidenceof1 sdg:hasAttributeSet ex:attributeSet1 ;
 	dct:requires ex:check1 ;
 	a sdg:EvidenceOfRoadworthiness .
 
+ex:attributeSet1 sdg:hasAttribute ex:attribute1, ex:attribute2 ;
+	a sdg:AttributeSet .
+
+ex:attribute1 rdfs:label "IssuingDate" ;
+	rdf:value "2026-03-18"^^xsd:date ;
+	a sdg:Attribute .
+
+ex:attribute2 rdfs:label "IssuingAuthority" ;
+	rdf:value "Departement of Transport"@en ;
+	a sdg:Attribute .
+
 ex:roadvehicle1 sdg:registrationPlateNumber "XYZ-AA-XYZ" ;
 	sdg:vehicleCategory ex:C1 ;
 	auto-vc:vehicleIdentificationNumber "1234567890" ;

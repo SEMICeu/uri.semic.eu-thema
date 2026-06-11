@@ -29,6 +29,35 @@
       }
     },
     {
+     "@id": "ex:attributeSet1",
+     "@type": "AttributeSet",
+     "sdg:hasAttribute" : [
+       {
+       "@id": "ex:attribute1"
+       },
+       {
+       "@id": "ex:attribute2"
+       }]                          
+    },
+    {
+     "@id": "ex:attribute1",
+     "@type": "Attribute",
+     "rdfs:label": "IssuingDate",
+     "rdf:value" : {
+       "@value" : "2025-07-15",
+       "@type": "xsd:date"
+     }
+    },
+    {
+     "@id": "ex:attribute2",
+     "@type": "Attribute",
+     "rdfs:label": "IssuingAuthority",
+     "rdf:value" : {
+       "@language" : "fr",
+       "@value" : "Département Affaires citoyennes de la Ville de Bruxelles"
+     }
+    },
+    {
       "@id": "ex:roadvehicle1",
       "@type": "RoadVehicle",
       "sdg:registrationPlateNumber": "XYZ-AA-XYZ",
