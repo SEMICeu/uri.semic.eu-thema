@@ -7,7 +7,7 @@
           $('#table-quickoverview').DataTable();
           $('#table-mapping').DataTable();
       }],
-      edDraftURI: "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/EvidenceOfCertificateAdmissionSecondaryEducation/releases/0.0.1",
+      edDraftURI: "https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/Evidence/EvidenceOfRoadworthiness/releases/0.0.2",
       latestVersion: "{{metadata.navigation.prev}}",
       specStatus: "LD",
       editors: myeditors,
@@ -82,13 +82,13 @@
 {% block summary %}
 <section id="abstract">
     <h2>Abstract</h2>
-Evidence of roadworthiness is a simplified data model describing an evidence regarding the vehicle's roadworthiness. Draws upon the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32014L0045">specifications of Annex II, of Council Directive 2014/45/EU.</a>.
+Evidence of roadworthiness is a simplified data model describing an evidence regarding the vehicle's roadworthiness. It draws upon the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32014L0045">specifications of Annex II, of Council Directive 2014/45/EU</a>.
 
 </section>
 {% endblock %}
 
 {% block terminologyPrefixes %}
-This specification uses the following prefixes to shorten the URIs for readibility.
+This specification uses the following prefixes to shorten the URIs for readability.
 
         <table id="table-namespaces" class="simple">
             <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
@@ -108,7 +108,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
 
 {% block umlrepresentation %}		
 		<h3>UML representation</h3>
-		The UML representation from which the {{metadata.title}} has been build is available <a href="./UML/OOTS_EvidenceOfRoadworthiness.eap">here</a>.
+		The UML representation from which the {{metadata.title}} has been built is available <a href="./UML/OOTS_EvidenceOfRoadworthiness.eap">here</a>.
 {% endblock %} 
 
 {% block xmlschema %}
@@ -131,14 +131,14 @@ This specification uses the following prefixes to shorten the URIs for readibili
     An EvidenceOfRoadworthiness is then an OOTSEvidenceType (based on CCCEV Evidence) by having the 3 parts:</p>
     <ul>
     <li>cv:isAbout. Since the value of cv:isAbout is a generic AgentType, in SDG a PersonType is defined as an AgentType with cv:FamilyName, cv:GivenName, cv:Sex and sdg:AttributeSet, that it means that is possible to add additional fields to the subject.</li>
-    <li>sdg:Birth, defined by the OOTSBirthType, that includes cv:CountryOfBirth, cv:DateOfBirth, cv:PlaceOfBirth (as foreseen in OOTS requirements) and sdg:AttributeSet</li>
-    <li>sdg:AttributeSet, that can contains many attributes, where the name, language and type fields could be defined for each attribute</li>
+    <li>sdg:Check, defined by the OOTSCheckType including different properties as foreseen in OOTS requirements) and sdg:AttributeSet</li>
+    <li>sdg:AttributeSet, that can contain many attributes, where the name, language and type fields could be defined for each attribute</li>
     </ul>
 
     <p>The design of the XML schema is based on the <a href="https://www.oracle.com/technical-resources/articles/java/design-patterns.html">Garden Of Eden Pattern</a> where complex types and elements are defined globals so they can be reused.</p>
     
-    <p>Restrictions on the presence of fields and on their values is delegated to schematron file, that can vary on the XML consumer and could be provided by XML providers, such as those on code list.
-    OOTS provides certain <a href="https://ec.europa.eu/digital-building-blocks/sites/spaces/TDD/pages/920061693/3.5+-+Code+Lists+v1.2.3+September+2025">code list</a> in Genericode format that can be used via schematron. Additional code list, such as the one of Sex in he current evidence, could be take from the the <a href="https://op.europa.eu/en/web/eu-vocabularies/authority-tables">Publications Office Authority Tables</a>.</p>
+    <p>Restrictions on the presence of fields and on their values are delegated to schematron file, that can vary per XML consumer and could be provided by XML providers, such as those on code list.
+    OOTS provides certain <a href="https://ec.europa.eu/digital-building-blocks/sites/spaces/TDD/pages/920061693/3.5+-+Code+Lists+v1.2.3+September+2025">code list</a> in Genericode format that can be used via schematron. Additional code lists, such as the one of Sex in the current evidence, could be taken from the <a href="https://op.europa.eu/en/web/eu-vocabularies/authority-tables">Publications Office Authority Tables</a>.</p>
 
 {% endblock %} 
 
@@ -197,7 +197,7 @@ This section offers a condensed tabular overview of the requirements mapping fro
 							<tr>
 								<td>identified deficiencies and their level of severity</td>
                                 <td>/xs:schema/xs:complexType[@name="AVIVehicleRegistrationDataType"]/xs:sequence[1]/xs:element[@name="Remarks"]</td>
-								<td>Remarks could contain the information, but does not necessarily contain multiple string fields.</td>
+								<td>"Remarks" could contain the information, but does not necessarily contain multiple string fields.</td>
 							</tr>
 							
 							<tr>
