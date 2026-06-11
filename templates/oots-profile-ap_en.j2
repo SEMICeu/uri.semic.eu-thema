@@ -172,7 +172,7 @@
                             <a href="{{ metadata.status }}">{{ metadata.status }}</a>
                         </dd>
                         <dt>
-                            Published at
+                            Published on
                         </dt>
                         <dd>
                             {{ metadata.issued }}
@@ -264,7 +264,7 @@
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Application Profile has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }} published at {{ metadata.issued }}.
+            This Application Profile has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }} published on {{ metadata.issued }}.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="{{ metadata.standaardregisterurl }}">Changelog</a>.
@@ -824,6 +824,7 @@ Past and current contributors are :
 {'pref':'ad:', 'ns': 'http://inspire.ec.europa.eu/ont/ad#'},
 {'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
 {'pref':'atu:', 'ns': 'http://data.europa.eu/88u/dataset/'},
+{'pref':'auto-vc:', 'ns': 'https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/'},
 {'pref':'cpsv:', 'ns': 'http://purl.org/vocab/cpsv#'},
 {'pref':'cv:', 'ns': 'http://data.europa.eu/m8g/'},
 {'pref':'dcat:', 'ns': 'http://www.w3.org/ns/dcat#'},
