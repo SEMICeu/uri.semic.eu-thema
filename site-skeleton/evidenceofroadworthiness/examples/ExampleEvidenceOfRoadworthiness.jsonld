@@ -60,6 +60,9 @@
     {
       "@id": "ex:roadvehicle1",
       "@type": "RoadVehicle",
+      "sdg:countrySymbolStateRegistration": {
+        "@id": "ex:I"
+      },
       "sdg:registrationPlateNumber": "XY-AAA-XY",
       "sdg:vehicleCategory": {
         "@id": "ex:N2"
