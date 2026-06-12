@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Evidence xsi:type="sdg:EvidenceOfBirthType" xmlns="http://data.europa.eu/p4s/" xmlns:sdg="http://data.europa.eu/p4s/" xmlns:cv="http://data.europa.eu/m8g/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://data.europa.eu/p4s/ EvidenceOfBirth_v6.3.xsd ">
+<Evidence xsi:type="sdg:EvidenceOfRoadworthinessType" xmlns="http://data.europa.eu/p4s/" xmlns:sdg="http://data.europa.eu/p4s/" xmlns:cv="http://data.europa.eu/m8g/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://data.europa.eu/p4s/ EvidenceOfRoadworthiness_v0.1.xsd ">
   <sdg:AttributeSet>
-    <sdg:Attribute name="IssuingDate" type="xs:date">2025-07-15</sdg:Attribute>
-    <sdg:Attribute name="IssuingAuthority" xml:lang="FR" type="xs:string">Département Affaires citoyennes de la Ville de Bruxelles</sdg:Attribute>
+    <sdg:Attribute name="IssuingDate" type="xs:date">2026-03-18</sdg:Attribute>
+    <sdg:Attribute name="IssuingAuthority" xml:lang="EN" type="xs:string">Department of Transport</sdg:Attribute>
   </sdg:AttributeSet>
-  <cv:IsAbout xsi:type="sdg:PersonType">
-    <cv:FamilyName>Magritte</cv:FamilyName>
-    <cv:GivenName>René François Ghislain</cv:GivenName>
-    <cv:Sex>MALE</cv:Sex>
+  <cv:IsAbout xsi:type="sdg:RoadVehicleType">
+    <sdg:RegistrationPlateNumber>XY-AAA-XY</sdg:RegistrationPlateNumber>
+    <sdg:VehicleCategory>C1</sdg:VehicleCategory>
+    <sdg:VehicleIdentificationNumber>1GB4WLE72NF599922</sdg:VehicleIdentificationNumber>
   </cv:IsAbout>
-  <sdg:Birth>
-    <cv:CountryOfBirth xsi:type="sdg:LocationType">
-      <cv:GeographicName>BE</cv:GeographicName>
-    </cv:CountryOfBirth>
-    <cv:DateOfBirth>1898-11-30</cv:DateOfBirth>
-    <cv:PlaceOfBirth xsi:type="sdg:LocationType">
-      <cv:GeographicName xml:lang="NL">Brussel</cv:GeographicName>
-    </cv:PlaceOfBirth>
-    <sdg:AttributeSet>
-      <sdg:Attribute name="TimeOfBirth" type="xs:time">09:00:00</sdg:Attribute>
-      <sdg:Attribute name="FamilyNameAtBirth" xml:lang="FR" type="xs:string">Magritte</sdg:Attribute>
-    </sdg:AttributeSet>
-  </sdg:Birth>
+  <sdg:Check>
+    <sdg:DateOfExpiryRoadworthinessTest>2028-03-05T09:00:00</sdg:DateOfExpiryRoadworthinessTest>
+    <sdg:DateRoadworthinessTest>2026-03-05T09:00:00</sdg:DateRoadworthinessTest>
+    <sdg:OdometerReadingAtTimeOfTheCheck>15000</sdg:OdometerReadingAtTimeOfTheCheck>
+    <sdg:Publisher>
+      <cv:LegalName>OOTS Garage</cv:LegalName>
+    </sdg:Publisher>
+  </sdg:Check>
 </Evidence>
+
