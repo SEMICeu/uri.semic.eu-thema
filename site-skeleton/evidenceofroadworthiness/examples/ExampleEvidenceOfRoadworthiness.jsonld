@@ -60,11 +60,11 @@
     {
       "@id": "ex:roadvehicle1",
       "@type": "RoadVehicle",
-      "sdg:registrationPlateNumber": "XYZ-AA-XYZ",
+      "sdg:registrationPlateNumber": "XY-AAA-XY",
       "sdg:vehicleCategory": {
         "@id": "ex:C1"
       },
-      "auto-vc:vehicleIdentificationNumber": "1234567890"
+      "auto-vc:vehicleIdentificationNumber": "1GB4WLE72NF599922"
     },
     {
       "@id": "ex:check1",
@@ -78,8 +78,8 @@
         "@value": "2028-03-05T09:00:00"
       },
       "sdg:odometerReading": {
-        "@type": "xsd:decimal",
-        "@value": "15000.0"
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "15000"
       },
       "sdg:placeRoadWorthinessTest": {
         "@id": "http://publications.europa.eu/resource/authority/country/ITA"

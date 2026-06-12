@@ -25,14 +25,14 @@ ex:attribute2 rdfs:label "IssuingAuthority" ;
 	rdf:value "Departement of Transport"@en ;
 	a sdg:Attribute .
 
-ex:roadvehicle1 sdg:registrationPlateNumber "XYZ-AA-XYZ" ;
+ex:roadvehicle1 sdg:registrationPlateNumber "XY-AAA-XY" ;
 	sdg:vehicleCategory ex:C1 ;
-	auto-vc:vehicleIdentificationNumber "1234567890" ;
+	auto-vc:vehicleIdentificationNumber "1GB4WLE72NF599922" ;
 	a auto-vc:RoadVehicle .
 
 ex:check1 auto-vc:validFrom "2026-03-05T09:00:00"^^xsd:dateTime ;
 	auto-vc:validThrough "2028-03-05T09:00:00"^^xsd:dateTime ;
-	sdg:odometerReading "15000.0"^^xsd:decimal ;
+	sdg:odometerReading "15000"^^xsd:nonNegativeInteger ;
 	sdg:placeRoadWorthinessTest <http://publications.europa.eu/resource/authority/country/ITA> ;
 	dct:publisher ex:publisher1 ;
 	a auto-vc:Check .
