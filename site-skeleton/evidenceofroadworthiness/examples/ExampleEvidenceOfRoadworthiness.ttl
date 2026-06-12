@@ -26,7 +26,7 @@ ex:attribute2 rdfs:label "IssuingAuthority" ;
 	a sdg:Attribute .
 
 ex:roadvehicle1 sdg:registrationPlateNumber "XY-AAA-XY" ;
-	sdg:vehicleCategory ex:C1 ;
+	sdg:vehicleCategory ex:N2 ;
 	auto-vc:vehicleIdentificationNumber "1GB4WLE72NF599922" ;
 	a auto-vc:RoadVehicle .
 

@@ -62,7 +62,7 @@
       "@type": "RoadVehicle",
       "sdg:registrationPlateNumber": "XY-AAA-XY",
       "sdg:vehicleCategory": {
-        "@id": "ex:C1"
+        "@id": "ex:N2"
       },
       "auto-vc:vehicleIdentificationNumber": "1GB4WLE72NF599922"
     },

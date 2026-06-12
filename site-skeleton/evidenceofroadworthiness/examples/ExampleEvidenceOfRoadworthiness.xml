@@ -6,7 +6,7 @@
   </sdg:AttributeSet>
   <cv:IsAbout xsi:type="sdg:RoadVehicleType">
     <sdg:RegistrationPlateNumber>XY-AAA-XY</sdg:RegistrationPlateNumber>
-    <sdg:VehicleCategory>C1</sdg:VehicleCategory>
+    <sdg:VehicleCategory>N2</sdg:VehicleCategory>
     <sdg:VehicleIdentificationNumber>1GB4WLE72NF599922</sdg:VehicleIdentificationNumber>
   </cv:IsAbout>
   <sdg:Check>
