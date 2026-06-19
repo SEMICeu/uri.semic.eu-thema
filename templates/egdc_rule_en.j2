@@ -107,6 +107,41 @@ This specification uses the following prefixes to shorten the URIs for readabili
 {% endblock %}
 
 {% block codelist %}
+<h3 id="ip-datatype">InputParameter - Datatype</h3> 
+<table id="table-so-sector" class="simple">
+	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th></tr></thead>
+	<tbody>
+    <tr><td>egdc-cl:datatype/dropdown</td><td><code>dropdown</code></td><td><code>Dropdown</code></td></tr>
+		<tr><td>egdc-cl:datatype/numeric</td><td><code>numeric</code></td><td><code>Numeric</code></td></tr>
+	</tbody>
+</table>
+
+<h3 id="ip-option">InputParameter - Option</h3> 
+<table id="table-ip-option" class="simple">
+	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th></tr></thead>
+	<tbody>
+		<tr><td></td><td><code></code></td><td><code></code></td></tr>
+	</tbody>
+</table>
+
+<h3 id="ip-unit">InputParameter - Unit / Output - Unit</h3> 
+<table id="table-ip-unit" class="simple">
+	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th><th>OP Measurement Unit</th><th>QUDT Unit</th></tr></thead>
+	<tbody>
+		<tr><td>egdc-cl:unit/hdd</td><td><code>hdd</code></td><td><code>HDD</code></td><td></td><td></td></tr>
+		<tr><td>egdc-cl:unit/kgco2e</td><td><code>kgco2e</code></td><td><code>Kg CO2e</code></td><td></td><td></td></tr>
+		<tr><td>egdc-cl:unit/kgn</td><td><code>kgn</code></td><td><code>Kg N</code></td><td>Kg of N used in fertilizers, shouldn't be a unit</td><td></td></tr>
+		<tr><td>egdc-cl:unit/km</td><td><code>km</code></td><td><code>Km</code></td><td><a href="https://op.europa.eu/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/measurement-unit/KTM">KTM</a></td><td></td></tr>
+		<tr><td>egdc-cl:unit/kwh</td><td><code>kwh</code></td><td><code>KWh</code></td><td><a href="https://op.europa.eu/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/measurement-unit/KWH">KWH</a></td><td></td></tr>
+		<tr><td>egdc-cl:unit/m2</td><td><code>m2</code></td><td><code>m2</code></td><td><a href="https://op.europa.eu/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/measurement-unit/MTK">MTK</a></td><td></td></tr>
+		<tr><td>egdc-cl:unit/nautical-miles</td><td><code>nautical-miles</code></td><td><code>Nautical miles</code></td><td></td><td></td></tr>
+		<tr><td>egdc-cl:unit/percent</td><td><code>percentage</code></td><td><code>%</code></td><td></td><td></td><td><a href="http://qudt.org/vocab/unit/PERCENT">PERCENT</a></td></tr>
+		<tr><td>egdc-cl:unit/teu</td><td><code>teu</code></td><td><code>TEU</code></td><td></td><td></td></tr>
+		<tr><td>egdc-cl:unit/tonnes</td><td><code>tonnes</code></td><td><code>Tonnes</code></td><td><a href="https://op.europa.eu/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/measurement-unit/TNE">TNE</a></td><td></td></tr>
+	</tbody>
+</table>
+
+
 <h3 id="ru-category">Rule - Category</h3> 
 <table id="table-ru-category" class="simple">
 	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th></tr></thead>
@@ -122,6 +157,16 @@ This specification uses the following prefixes to shorten the URIs for readabili
 		<tr><td>egdc-cl:complexity/simple</td><td><code>simple</code></td><td><code>Simple (minimal inputs)</code></td></tr>
 		<tr><td>egdc-cl:complexity/medium</td><td><code>medium</code></td><td><code>Medium</code></td></tr>
 		<tr><td>egdc-cl:complexity/complex</td><td><code>complex</code></td><td><code>Complex (many input/calculations)</code></td></tr>
+	</tbody>
+</table>
+
+<h3 id="ru-effectorder">Rule - Effect Order</h3> 
+<table id="table-ru-effectorder" class="simple">
+	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th></tr></thead>
+	<tbody>
+		<tr><td>egdc-cl:effectorder/1st</td><td><code>1st</code></td><td><code>1st Order effect</code></td></tr>
+		<tr><td>egdc-cl:effectorder/2nd</td><td><code>2nd</code></td><td><code>2nd Order effect</td></tr>
+		<tr><td>egdc-cl:effectorder/high</td><td><code>higher</code></td><td><code>Higher Order effect</code></td></tr>
 	</tbody>
 </table>
 
@@ -182,40 +227,6 @@ This specification uses the following prefixes to shorten the URIs for readabili
     <tr><td>egdc-cl:sector/retail</td><td><code>retail</code></td><td><code>Retail</code></td><td><a href="https://showvoc.op.europa.eu/#/datasets/OP_EuroVoc/data?resId=http:%2F%2Feurovoc.europa.eu%2F100147">20 TRADE</td></tr>
     <tr><td>egdc-cl:sector/services</td><td><code>services</code></td><td><code>Services</code></td><td><a href="https://showvoc.op.europa.eu/#/datasets/OP_EuroVoc/data?resId=http:%2F%2Feurovoc.europa.eu%2F100147">20 TRADE</td></tr>
     <tr><td>egdc-cl:sector/transport</td><td><code>transport</code></td><td><code>Transport</code></td><td><a href="https://showvoc.op.europa.eu/#/datasets/OP_EuroVoc/data?resId=http:%2F%2Feurovoc.europa.eu%2F100154">48 TRANSPORT</a></td></tr>
-	</tbody>
-</table>
-
-<h3 id="ip-datatype">InputParameter - Datatype</h3> 
-<table id="table-so-sector" class="simple">
-	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th></tr></thead>
-	<tbody>
-    <tr><td>egdc-cl:datatype/dropdown</td><td><code>dropdown</code></td><td><code>Dropdown</code></td></tr>
-		<tr><td>egdc-cl:datatype/numeric</td><td><code>numeric</code></td><td><code>Numeric</code></td></tr>
-	</tbody>
-</table>
-
-<h3 id="ip-option">InputParameter - Option</h3> 
-<table id="table-ip-option" class="simple">
-	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th></tr></thead>
-	<tbody>
-		<tr><td></td><td><code></code></td><td><code></code></td></tr>
-	</tbody>
-</table>
-
-<h3 id="ip-unit">InputParameter - Unit / Output - Unit</h3> 
-<table id="table-ip-unit" class="simple">
-	<thead><tr><th>URI</th><th>Identifier</th><th>Label</th><th>OP Measurement Unit</th><th>QUDT Unit</th></tr></thead>
-	<tbody>
-		<tr><td>egdc-cl:unit/hdd</td><td><code>hdd</code></td><td><code>HDD</code></td><td></td><td></td></tr>
-		<tr><td>egdc-cl:unit/kgco2e</td><td><code>kgco2e</code></td><td><code>Kg CO2e</code></td><td></td><td></td></tr>
-		<tr><td>egdc-cl:unit/kgn</td><td><code>kgn</code></td><td><code>Kg N</code></td><td>Kg of N used in fertilizers, shouldn't be a unit</td><td></td></tr>
-		<tr><td>egdc-cl:unit/km</td><td><code>km</code></td><td><code>Km</code></td><td><a href="https://op.europa.eu/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/measurement-unit/KTM">KTM</a></td><td></td></tr>
-		<tr><td>egdc-cl:unit/kwh</td><td><code>kwh</code></td><td><code>KWh</code></td><td><a href="https://op.europa.eu/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/measurement-unit/KWH">KWH</a></td><td></td></tr>
-		<tr><td>egdc-cl:unit/m2</td><td><code>m2</code></td><td><code>m2</code></td><td><a href="https://op.europa.eu/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/measurement-unit/MTK">MTK</a></td><td></td></tr>
-		<tr><td>egdc-cl:unit/nautical-miles</td><td><code>nautical-miles</code></td><td><code>Nautical miles</code></td><td></td><td></td></tr>
-		<tr><td>egdc-cl:unit/percent</td><td><code>percentage</code></td><td><code>%</code></td><td></td><td></td><td><a href="http://qudt.org/vocab/unit/PERCENT">PERCENT</a></td></tr>
-		<tr><td>egdc-cl:unit/teu</td><td><code>teu</code></td><td><code>TEU</code></td><td></td><td></td></tr>
-		<tr><td>egdc-cl:unit/tonnes</td><td><code>tonnes</code></td><td><code>Tonnes</code></td><td><a href="https://op.europa.eu/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/measurement-unit/TNE">TNE</a></td><td></td></tr>
 	</tbody>
 </table>
 
