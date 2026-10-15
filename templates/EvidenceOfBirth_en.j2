@@ -128,9 +128,9 @@ This specification uses the following prefixes to shorten the URIs for readabili
     In CCCEV, the Evidence <a href="https://semiceu.github.io/CCCEV/releases/2.1.0/#Evidence.isabout">is about</a> an Agent that is the subject in the provided Evidence; in the case of Evidence of Birth, the Agent is the Person.
     An EvidenceOfBirthType is then an OOTSEvidenceType (based on CCCEV Evidence) by having the 3 parts:
     <ul>
-    <li>cv:isAbout. Since the value of cv:isAbout is a generic AgentType, in SDG a PersonType is defined as an AgentType with cv:FamilyName, cv:GivenName, cv:Sex and sdg:AttributeSet, that it means that is possible to add additional fields to the subject.</li>
-    <li>sdg:Birth, defined by the OOTSBirthType, that includes cv:CountryOfBirth, cv:DateOfBirth, cv:PlaceOfBirth (as foreseen in OOTS requirements) and sdg:AttributeSet</li>
-    <li>sdg:AttributeSet, that can contains many attributes, where the name, language and type fields could be defined for each attribute</li>
+    <li>isAbout. Since the value of isAbout is a generic AgentType, in SDG a PersonType is defined as an AgentType with FamilyName, GivenName, DateOfBirth and an AttributeSet, that it means that is possible to add additional fields to the subject.</li>
+    <li>Birth, defined by the OOTSBirthType, that includes Sex, CountryOfBirth, PlaceOfBirth (as foreseen in OOTS requirements) and an AttributeSet</li>
+    <li>AttributeSet, that can contains many attributes, where the name, language and type fields could be defined for each attribute</li>
     </ul>
     </p>
 
