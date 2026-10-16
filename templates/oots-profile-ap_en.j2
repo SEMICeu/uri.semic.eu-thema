@@ -463,7 +463,7 @@
                                 resource="{{ prop.uri }}"
                                 class="class mandatory">
                                 <td>
-				    <a href="{{ metadata.feedbackurl }}/new?title=Issue%20for%20{{ prop.label[language] }}%20in%20{{ entity.label[language]}}&body=Explain%20your%20issue%20for%20{{ metadata.navigation.self }}%23{{ (entity.label[language] ~ '.' ~ prop.label[language]) | replace(" ","") | urlencode }}" target="_blank" rel="noopener noreferrer" >
+				    <a href="{{ metadata.feedbackurl }}" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -566,7 +566,7 @@ They are included in the Application Profile because they form the range of prop
 	    <tbody class="supertype">
             {% for entity in datatypes | sort(attribute=sortattr)%}
 		<tr><td>
-                   <a href="{{ metadata.feedbackurl }}/new?title=Issue%20for%20{{ entity.name }}&body=Explain%20your%20issue"}}>
+                   <a href="{{ metadata.feedbackurl }}"}}>
                      <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
 		   </a>
 		</td><td>
