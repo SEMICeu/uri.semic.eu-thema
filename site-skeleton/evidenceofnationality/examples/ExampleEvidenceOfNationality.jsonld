@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfCitizenship/releases/0.0.1/context/evidenceofcitizenship.jsonld",
+    "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfNationality/releases/0.0.1/context/evidenceofnationality.jsonld",
     {
       "cv": "http://data.europa.eu/m8g/",
       "dct": "http://purl.org/dc/terms/",
@@ -17,8 +17,8 @@
   ],
   "@graph": [
     {
-      "@id": "ex:evidenceofcitizenship1",
-      "@type": "EvidenceOfCitizenship",
+      "@id": "ex:evidenceofnationality1",
+      "@type": "EvidenceOfNationality",
       "sdg:hasAttributeSet": {
         "@id": "ex:attributeSet1"
       },

@@ -10,10 +10,10 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:evidenceofcitizenship1 sdg:hasAttributeSet ex:attributeSet1 ;
+ex:evidenceofnationality1 sdg:hasAttributeSet ex:attributeSet1 ;
 	dct:subject ex:person1 ;
 	sdg:hasCitizenship ex:citizenship1 ;
-	a sdg:EvidenceOfCitizenship .
+	a sdg:EvidenceOfNationality .
 
 ex:attributeSet1 sdg:hasAttribute ex:attribute1, ex:attribute2 ;
 	a sdg:AttributeSet .

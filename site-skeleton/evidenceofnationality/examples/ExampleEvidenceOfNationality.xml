@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Evidence xsi:type="sdg:EvidenceOfCitizenshipType" xmlns="http://data.europa.eu/p4s/" xmlns:sdg="http://data.europa.eu/p4s/" xmlns:cv="http://data.europa.eu/m8g/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://data.europa.eu/p4s/ EvidenceOfCitizenship_v6.3.xsd ">
+<Evidence xsi:type="sdg:EvidenceOfNationalityType" xmlns="http://data.europa.eu/p4s/" xmlns:sdg="http://data.europa.eu/p4s/" xmlns:cv="http://data.europa.eu/m8g/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://data.europa.eu/p4s/ EvidenceOfNationality_v0.1.xsd ">
   <sdg:AttributeSet>
     <sdg:Attribute name="IssuingDate" type="xs:date">2025-04-12</sdg:Attribute>
     <sdg:Attribute name="IssuingAuthority" xml:lang="NL" type="xs:string">Dienst Burgerzaken van de Gemeente Amsterdam</sdg:Attribute>
