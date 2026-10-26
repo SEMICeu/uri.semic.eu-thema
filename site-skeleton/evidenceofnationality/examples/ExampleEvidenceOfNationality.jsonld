@@ -6,7 +6,6 @@
       "dct": "http://purl.org/dc/terms/",
       "ex": "http://example.com/",
       "foaf": "http://xmlns.com/foaf/0.1/",
-      "locn": "http://www.w3.org/ns/locn#",
       "person": "http://www.w3.org/ns/person#",
       "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -25,8 +24,8 @@
       "dct:subject": {
         "@id": "ex:person1"
       },
-      "sdg:hasCitizenship": {
-        "@id": "ex:citizenship1"
+      "sdg:hasNationality": {
+        "@id": "ex:nationality1"
       }
     },
     {
@@ -76,20 +75,13 @@
       }
     },
     {
-      "@id": "ex:citizenship1",
-      "@type": "Citizenship",
-      "dct:issued": {
-        "@type": "cv:genericDate",
-        "@value": "2010-03-01"
-      },
-      "person:citizenship": [
+      "@id": "ex:nationality1",
+      "@type": "Nationality",
+      "sdg:hasJurisdiction": [
         {
           "@id": "ex:jurisdiction1"
         }
-      ],
-      "sdg:hasAttributeSet": {
-        "@id": "ex:attributeSet2"
-      }
+      ]
     },
     {
       "@id": "ex:jurisdiction1",
@@ -97,36 +89,6 @@
       "rdfs:label": {
         "@language": "nl",
         "@value": "Koninkrijk der Nederlanden"
-      }
-    },
-    {
-      "@id": "ex:attributeSet2",
-      "@type": "AttributeSet",
-      "sdg:hasAttribute": [
-        {
-          "@id": "ex:attribute3"
-        },
-        {
-          "@id": "ex:attribute4"
-        }
-      ]
-    },
-    {
-      "@id": "ex:attribute3",
-      "@type": "Attribute",
-      "rdfs:label": "CitizenshipStatus",
-      "rdf:value": {
-        "@language": "nl",
-        "@value": "Actief"
-      }
-    },
-    {
-      "@id": "ex:attribute4",
-      "@type": "Attribute",
-      "rdfs:label": "AcquisitionMode",
-      "rdf:value": {
-        "@language": "nl",
-        "@value": "Naturalisatie"
       }
     }
   ]
