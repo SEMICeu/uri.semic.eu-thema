@@ -1,0 +1,112 @@
+{
+  "@context": [
+  "https://emidiostani.github.io/data4wallonia-generated/D4WTA-AP/releases/1.0.0/context/d4wta-ap.jsonld",
+   {
+    "d4wta": "http://data4wallonia.com/resource/taxonomy/",
+    "dct": "http://purl.org/dc/terms/",
+	"euvoc": "http://publications.europa.eu/ontology/euvoc#",
+	"status" : "http://publications.europa.eu/resource/authority/concept-status/",
+	"owl": "http://www.w3.org/2002/07/owl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+   }
+  ],
+  "@graph": [
+    {
+      "@id": "d4wta:acces-au-wifi",
+      "@type": "skos:Concept",
+      "euvoc:status": {
+        "@id": "status:CURRENT"
+      },
+      "dct:identifier": "6tO7kpywpnel6H2Z7BHqUf",
+      "owl:versionInfo": "0.0.1",
+      "skos:broader": {
+        "@id": "d4wta:accompagnement-citoyen"
+      },
+      "skos:definition": {
+        "@language": "fr",
+        "@value": "Avoir accès à une connection Internet."
+      },
+      "skos:inScheme": {
+        "@id": "d4wta:digital-wallonia"
+      },
+      "skos:prefLabel": {
+        "@language": "fr",
+        "@value": "Accéder à du WiFi"
+      }
+    },
+    {
+      "@id": "d4wta:accompagnement-citoyen",
+      "@type": "skos:Concept",
+      "euvoc:status": {
+        "@id": "status:CURRENT"
+      },
+      "dct:identifier": "5q6qx1SKaGMlPJeyGpe1zJ",
+      "owl:versionInfo": "0.0.1",
+      "skos:broader": {
+        "@id": "d4wta:services"
+      },
+      "skos:definition": {
+        "@language": "fr",
+        "@value": "Ensemble des accompagnements disponibles et mis à disposition du citoyen."
+      },
+      "skos:inScheme": {
+        "@id": "d4wta:digital-wallonia"
+      },
+      "skos:prefLabel": {
+        "@language": "fr",
+        "@value": "Accompagnement citoyen"
+      }
+    },
+    {
+      "@id": "d4wta:digital-wallonia",
+      "@type": "skos:ConceptScheme",
+      "dct:created": {
+        "@type": "xsd:date",
+        "@value": "2024-12-25"
+      },
+      "dct:identifier": "26RIxUDYmtJFHKzU2eywzv",
+      "dct:title": {
+        "@language": "fr",
+        "@value": "Data 4 Wallonia"
+      },
+      "owl:versionInfo": "0.0.1",
+      "skos:hasTopConcept": {
+        "@id": "d4wta:services"
+      },
+      "skos:prefLabel": {
+        "@language": "fr",
+        "@value": "Data 4 Wallonia"
+      }
+    },
+    {
+      "@id": "d4wta:services",
+      "@type": "skos:Concept",
+      "euvoc:status": {
+        "@id": "status:CURRENT"
+      },
+      "dct:identifier": "zXkMnqPr4EjRdbKMuVqKK",
+      "owl:versionInfo": "0.0.1",
+      "skos:definition": {
+        "@language": "fr",
+        "@value": "Ensemble des prestations et autres caractéristiques des lieux de services et soutien au citoyen et entreprises."
+      },
+      "skos:inScheme": {
+        "@id": "d4wta:digital-wallonia"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Services"
+        },
+        {
+          "@language": "fr",
+          "@value": "Services"
+        }
+      ],
+      "skos:topConceptOf": {
+        "@id": "d4wta:digital-wallonia"
+      }
+    }
+  ]
+}

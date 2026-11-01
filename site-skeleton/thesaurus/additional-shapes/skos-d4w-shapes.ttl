@@ -1,0 +1,98 @@
+@prefix : <https://www.data4wallonia.be/shapes/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix status: <http://publications.europa.eu/resource/authority/concept-status/> .
+
+:D4W-Labels a sh:NodeShape ;
+  sh:targetClass skos:Concept, skos:ConceptScheme ;
+  rdfs:label "Checks on labels"@en ;
+  rdfs:comment "A list of checks on the taxonomy labels"@en ;
+  sh:property :D4W-LabelsInFrenchOrEnglish, :D4W-LabelsAtLeastInFrench, 
+              :D4W-LabelsDoNotContainCharacters, :D4W-LabelsStartCapital ,
+			  :D4W-versionInfo , :D4W-LabelsDoNotContainCharacter- , :D4W-LabelsDoNotContainCharactersParenthesis .
+
+:D4W-LabelsInFrenchOrEnglish a sh:PropertyShape ;
+    sh:name "Labels in French or English"@en ;
+	sh:description "Labels should support multilingualism"@en ;
+    sh:severity sh:Violation ;
+    sh:message "[D4W.TA.R1] - Labels should have French or English tag." ;
+    sh:path skos:prefLabel ;
+    sh:datatype rdf:langString ;
+    sh:languageIn ("fr" "en") .
+  
+:D4W-LabelsAtLeastInFrench a sh:PropertyShape ;
+	sh:name "Labels at least in French"@en ;
+	sh:description "Labels should be at least in French"@en ;
+	sh:severity sh:Violation ;
+	sh:message "[D4W.TA.R2] - Labels should have at least a French tag." ;
+	sh:path skos:prefLabel ;
+	sh:qualifiedMinCount 1;
+	sh:qualifiedValueShape [
+	sh:datatype rdf:langString ;
+	sh:languageIn ( "fr" ) ;
+	] .
+
+:D4W-LabelsDoNotContainCharacters a sh:PropertyShape ;
+	sh:name "Labels do not contains special characters"@en ;
+	sh:description "Labels should avoid special characters to facilitate automated translation"@en ;
+	sh:severity sh:Warning ;
+	sh:path skos:prefLabel ;
+	sh:message "[D4W.TA.R3] - Labels should not contain special characters: & ( ) \\ or /" ;
+	sh:not [sh:pattern "^.*[&\\\\/]+.*$"] .
+
+:D4W-LabelsStartCapital a sh:PropertyShape ;
+	sh:name "Labels should start with capital letters or digit"@en ;
+	sh:description "Labels should start with capital letters or a digit for consistency"@en ;
+	sh:severity sh:Warning ;
+	sh:path skos:prefLabel ;
+	sh:message "[D4W.TA.R4] - Labels should start with capital letter or digit." ;
+	sh:pattern "^[A-Z0-9]+.*$" .
+
+:D4W-versionInfo a sh:PropertyShape ;
+    sh:name "versionInfo should be in Semantic versioning format"@en ;
+	sh:description "versionInfo enables versioning of the taxonomy terms that should be according to Semantic Versioning"@en ;
+	sh:severity sh:Violation ;
+	sh:message "[D4W.TA.R5] - The versionInfo's value should be according to Semantic Versioning." ;
+	sh:path owl:versionInfo ;
+	sh:pattern "(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$" .
+
+:D4W-StatusConcept a sh:NodeShape ;
+    sh:targetClass skos:Concept ;
+	rdfs:label "Checks on status"@en ;
+	rdfs:comment "A list of checks on the status code list"@en ;
+    sh:property :D4W-StatusCodeList .
+	
+:D4W-StatusCodeList a sh:PropertyShape ;
+    sh:name "the status of the concept should follow code list"@en ;
+	sh:description "the status of a concept should be restricted to the Publications Office code list"@en ;
+	sh:severity sh:Violation ;
+	sh:message "[D4W.TA.R6] - A skos:Concept should have the status's value according to the Concept Status code list." ;
+	sh:path euvoc:status ;
+	sh:in ( status:CANDIDATE status:CANDIDATE_DEPRECATED 
+		  status:CURRENT status:DEPRECATED 
+		  status:DRAFT status:DRAFT_DEPRECATED 
+		  status:PLANNED status:RETIRED 
+		  status:REVISED status:REVISED_DEPRECATED 
+		  status:WAITING status:WAITING_DEPRECATED ) .
+
+:D4W-LabelsDoNotContainCharacter- a sh:PropertyShape ;
+	sh:name "Labels do not contains the special character - "@en ;
+	sh:description "Labels should avoid special characters to facilitate automated translation"@en ;
+	sh:severity sh:Warning ;
+	sh:path skos:prefLabel ;
+	sh:message "[D4W.TA.R7] - Labels should not contain the special character - " ;
+	sh:not [sh:pattern "^.*[\\-]+.*$"] ;
+	sh:deactivated true. 
+
+:D4W-LabelsDoNotContainCharactersParenthesis a sh:PropertyShape ;
+	sh:name "Labels do not contains special characters"@en ;
+	sh:description "Labels should avoid special characters to facilitate automated translation"@en ;
+	sh:severity sh:Warning ;
+	sh:path skos:prefLabel ;
+	sh:message "[D4W.TA.R8] - Labels should not contain special characters: ( )" ;
+	sh:not [sh:pattern "^.*[()]+.*$"] ;
+	sh:deactivated true. 

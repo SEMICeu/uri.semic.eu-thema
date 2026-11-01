@@ -1,0 +1,174 @@
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix ex: <http://example.com/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix status: <http://publications.europa.eu/resource/authority/concept-status/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:concept1 a skos:Concept ;
+  skos:prefLabel "Test11"@en, "Test12"@fr .
+
+ex:concept2 a skos:Concept ;
+  skos:prefLabel "Test2"@en .
+
+ex:concept3 a skos:Concept ;
+  skos:inScheme ex:conceptscheme1 ;
+  skos:prefLabel "Test3"@fr .
+
+ex:concept4 a skos:Concept ;
+  skos:prefLabel "Test41"@fr, "Test42"@it .
+
+ex:concept5 a skos:Concept ;
+  skos:prefLabel "Test51"@fr, "Test52"@fr-FR .
+  
+ex:concept6 a skos:Concept ;
+  skos:prefLabel ""@fr .
+ 
+ex:concept7 a skos:Concept ;
+  skos:inScheme ex:conceptscheme1 ;
+  skos:prefLabel "Test3"@fr .
+
+ex:concept8 a skos:Concept ;
+  skos:prefLabel "Test2"@en .
+
+ex:concept9 a skos:Concept ;
+  skos:topConceptOf ex:conceptscheme2 ;
+  skos:broader ex:concept8 ;
+  skos:prefLabel "Test9"@fr .
+  
+ex:concept10 a skos:Concept ;
+  skos:prefLabel "Test101"@fr, "Test102"@fr .
+
+ex:concept11 a skos:Concept ;
+  skos:prefLabel "Test111"@fr ; 
+  skos:broader ex:concept111 ;
+  skos:altLabel "Test111"@fr .
+  
+ex:concept12 a skos:Concept ;
+  skos:prefLabel "Test12" . 
+
+ex:concept13 a skos:Concept ;
+  skos:prefLabel "test13"@fr ;
+  euvoc:status status:INPROGRESS .
+
+ex:concept14 a skos:Concept ;
+  skos:prefLabel "Accompagnement & développement"@fr .
+  
+ex:concept15 a skos:Concept ;
+  skos:prefLabel "Anti Virus\\\\/Worm\\\\/Malware"@fr .
+  
+ex:concept16 a skos:Concept ;
+  skos:prefLabel "Backup \\\\/ Storage Security"@fr .
+  
+ex:concept17 a skos:Concept ;
+  skos:prefLabel "Chanvre - Chanvre \\\\/ lin"@fr .
+  
+ex:concept18 a skos:Concept ;
+  skos:prefLabel "Intelligence artificielle (IA\\\\/AI)"@fr .
+  
+ex:concept19 a skos:Concept ;
+  skos:prefLabel "Chanvre - Feutre (acoustique)"@fr .
+  
+ex:concept20 a skos:Concept ;
+  skos:prefLabel "Mouton - Feutre acoustique"@fr .
+  
+ex:concept21 a skos:Concept ;
+  skos:prefLabel "Calcul haute performance (HPC)"@fr .
+
+ex:concept22 a skos:Concept ;
+  skos:prefLabel "Test22"@fr . 
+
+ex:concept23 a skos:Concept;
+  skos:prefLabel "Test23"@fr ;
+  owl:versionInfo "AAA" .
+  
+ex:concept24 a skos:Concept ;
+  skos:prefLabel "Test24"@fr ; 
+  skos:hiddenLabel "Test24"@fr .
+
+ex:concept25 a skos:Concept ;
+  skos:prefLabel "Test25"@fr ; 
+  skos:related ex:concept24 ;
+  skos:broader ex:concept24 .
+  
+ex:concept26 a skos:Concept ;
+  skos:prefLabel "Test261"@fr ;
+  skos:altLabel "Test262" .
+
+ex:concept27 a skos:Concept ;
+  skos:prefLabel "Test271"@fr ;
+  skos:hiddenLabel "Test272" .
+
+ex:concept28 a skos:Concept ;
+  skos:prefLabel "Test281"@fr ;
+  skos:definition "Test282" .
+
+ex:concept29 a skos:Concept ;
+  skos:prefLabel "Test291"@fr ;
+  skos:scopeNote "Test292" .
+  
+ex:concept30 a skos:Concept ;
+  skos:prefLabel "Test301"@fr ;
+  skos:note "Test302" .
+
+ex:concept31 a skos:Concept ;
+  skos:prefLabel "Test311"@fr ;
+  skos:notation "31"^^xsd:integer .
+
+ex:concept32 a skos:Concept ;
+  skos:prefLabel "Test321"@fr ;
+  skos:example "Test322" .
+  
+ex:concept33 a skos:Concept ;
+  skos:prefLabel "Test33"@fr ;
+  skos:narrower ex:concept331 .
+
+ex:concept34 a skos:Concept ;
+  skos:prefLabel "Test34"@fr ;
+  skos:narrowerTransitive ex:concept341 .
+  
+ex:concept35 a skos:Concept ;
+  skos:prefLabel "Test35"@fr ;
+  skos:narrowMatch "Test24" .
+
+ex:concept36 a skos:Concept ;
+  skos:prefLabel "Test36"@fr ;
+  skos:broader ex:concept361 .
+  
+ex:concept37 a skos:Concept ;
+  skos:prefLabel "Test37"@fr ;
+  skos:broaderTransitive ex:concept371 .
+
+ex:concept38 a skos:Concept ;
+  skos:prefLabel "Test38"@fr ;
+  skos:broadMatch "Test28" .
+
+ex:concept39 a skos:Concept ;
+  skos:prefLabel "Test39"@fr ;
+  skos:related ex:concept391 .
+  
+ex:concept40 a skos:Concept ;
+  skos:prefLabel "Test40"@fr ;
+  skos:relatedMatch "Test40" .
+
+ex:concept41 a skos:Concept ;
+  skos:prefLabel "Test41"@fr ;
+  skos:closeMatch "Test41" .
+  
+ex:concept42 a skos:Concept ;
+  skos:prefLabel "Test42"@fr ;
+  skos:exactMatch "Test42" .
+
+ex:concept43 a skos:Concept ;
+  skos:prefLabel "Test43"@fr ;
+  skos:inScheme ex:conceptscheme431 .
+  
+ex:concept44 a skos:Concept ;
+  skos:prefLabel "Test44"@fr ;
+  skos:topConceptOf ex:concept441 .
+
+ex:conceptscheme1 a skos:ConceptScheme .
+ex:conceptscheme2 a skos:ConceptScheme, skos:Concept .
+
+ex:conceptscheme3 a skos:ConceptScheme ;
+   skos:hasTopConcept ex:concepts3 .
