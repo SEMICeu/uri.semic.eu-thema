@@ -2,7 +2,7 @@
 {
   "name": "thesaurus",
   "type": "ap",
-  "eap": "thesaurs.eap",
+  "eap": "thesaurus.eap",
   "diagram": "Taxonomy",
   "template": "thesaurus_en.j2",
   "title": "Semantic Thesaurus",
