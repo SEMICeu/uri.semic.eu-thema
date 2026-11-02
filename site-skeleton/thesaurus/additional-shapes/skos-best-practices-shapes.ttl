@@ -1,0 +1,109 @@
+@prefix : <https://www.data4wallonia.be/shapes/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# declare the skos prefix to use it in later SPARQL-based constraints
+skos:
+  a owl:Ontology ;
+  sh:declare [
+    sh:prefix "skos" ;
+    sh:namespace "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ;
+  ] , [
+    sh:prefix "sh" ;
+    sh:namespace "https://www.w3.org/ns/shacl#"^^xsd:anyURI ;
+  ] .
+
+:D4W-SKOS-BestPractices a sh:NodeShape ;
+  sh:targetClass skos:Concept ;
+  rdfs:label "Checks on SKOS concepts best practices"@en ;
+  rdfs:comment "A list of checks on skos:concept"@en ;
+  sh:property :D4W-SKOS-EmptyLabels, :D4W-SKOS-OverlappingLabels,
+              :D4W-SKOS-OverlappingLabelsInSameConceptScheme, :D4W-SKOS-TopConceptsHavingBroader .
+
+:D4W-SKOS-EmptyLabels a sh:PropertyShape ;
+  sh:name "Labels should not be empty"@en ;
+  sh:description "Labels also need to contain textual information to be useful, thus we find all SKOS labels with length 0 (after removing whitespaces)."@en ;
+  sh:severity sh:Warning ;
+  sh:path skos:prefLabel ;
+  sh:message "[SKOS-BP.R1] - Label with an empty value detected." ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:prefixes skos: ;
+    sh:select """
+    SELECT $this ?path (?lab as ?value) (lang(?lab) as ?lang)
+    WHERE {
+      $this a skos:Concept .
+      {
+      SELECT $this ?path ?lab 
+      WHERE{
+        $this skos:prefLabel | skos:altLabel | skos:hiddenLabel ?lab .
+        $this ?path ?lab .
+        bind ( strlen(?lab) as ?q)
+        FILTER ( ?q=0 )
+        }
+      }
+    }""" ;
+  ] .
+
+:D4W-SKOS-OverlappingLabels a sh:PropertyShape ;
+  sh:name "Labels should not overlap"@en ;
+  sh:description "Labels should be unique"@en ;
+  sh:severity sh:Warning ;
+  sh:path skos:prefLabel ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:prefixes skos: ;
+    rdfs:comment "Overlapping Labels (concepts with the same label, independent of concept scheme )"@en ;
+    sh:description "This is a generalization of a recommendation in the SKOS primer, that “no two concepts have the same preferred lexical label in a given language when they belong to the same concept scheme”. This could indicate missing disambiguation information and thus lead to problems in autocompletion application."@en ;
+    sh:message "[SKOS-BP.R2] - Overlapping Labels (there is concept '{$this}' with the same pref label in language '{$lang}' for concept '{$value}') ." ;
+    sh:select """
+    SELECT $this (skos:prefLabel AS ?path) (?other as ?value) (lang(?pl) as ?lang)
+    WHERE {
+      ?this  skos:prefLabel ?pl .
+      ?other skos:prefLabel ?opl .
+      ?other a skos:Concept .
+      FILTER ($this != ?other && ?pl = ?opl)
+    }""" ;
+  ] .
+
+:D4W-SKOS-OverlappingLabelsInSameConceptScheme a sh:PropertyShape ;
+  sh:name "Labels should not overlap within the same concept scheme"@en ;
+  sh:description "Labels should be unique within the same concept scheme"@en ;
+  sh:severity sh:Warning ;
+  sh:path skos:prefLabel ;
+  sh:sparql [
+    sh:prefixes skos: ;
+    rdfs:comment "Overlapping Labels in the same Concept Scheme (concepts with the same label in the same concept scheme)"@en ;
+    sh:message "[SKOS-BP.R3] - Overlapping Labels in the same Concept Scheme (there is concept '{$this}' with the same pref label in language '{$lang}' for concept '{$value}'). Label: '{$pl}' ."@en ;
+    sh:select """
+    SELECT $this (skos:prefLabel AS ?path) (?other as ?value) (lang(?pl) as ?lang) $pl
+    WHERE {
+      ?this  skos:prefLabel ?pl .
+      ?other skos:prefLabel ?opl .
+      ?other a skos:Concept .
+      ?this skos:inScheme | skos:topConceptOf ?cs .
+      ?other skos:inScheme | skos:topConceptOf ?cs .
+      FILTER ($this != ?other && ?pl = ?opl)
+    }""" ;
+  ] .
+
+:D4W-SKOS-TopConceptsHavingBroader a sh:PropertyShape ;
+  sh:name "Top concept should not have a broader concept"@en ;
+  sh:description "Top concept should not have a broader concept"@en ;
+  sh:severity sh:Violation ;
+  sh:path skos:topConceptOf ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:prefixes skos: ;
+    rdfs:comment "Top Concept Having Broader Concept"@en ;
+    sh:message "[SKOS-BP.R4] - The top concept '{$this}' has a broader concept '{$other}' ."@en ;
+    sh:select """
+    SELECT DISTINCT $this ?other
+    WHERE {
+      $this skos:broader | skos:broaderTransitive ?other .
+      ?this skos:topConceptOf ?cs .
+    }""" ;
+  ] .

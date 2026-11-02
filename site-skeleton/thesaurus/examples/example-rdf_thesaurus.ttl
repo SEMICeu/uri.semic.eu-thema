@@ -1,0 +1,43 @@
+@prefix d4wta: <http://data4wallonia.com/resource/taxonomy/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix status: <http://publications.europa.eu/resource/authority/concept-status/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+d4wta:acces-au-wifi euvoc:status status:CURRENT ;
+	dct:identifier "6tO7kpywpnel6H2Z7BHqUf" ;
+	owl:versionInfo "0.0.1" ;
+	skos:broader d4wta:accompagnement-citoyen ;
+	skos:definition "Avoir accès à une connection Internet."@fr ;
+	skos:inScheme d4wta:digital-wallonia ;
+	skos:prefLabel "Accéder à du WiFi"@fr ;
+	a skos:Concept .
+
+d4wta:accompagnement-citoyen euvoc:status status:CURRENT ;
+	dct:identifier "5q6qx1SKaGMlPJeyGpe1zJ" ;
+	owl:versionInfo "0.0.1" ;
+	skos:broader d4wta:services ;
+	skos:definition "Ensemble des accompagnements disponibles et mis à disposition du citoyen."@fr ;
+	skos:inScheme d4wta:digital-wallonia ;
+	skos:prefLabel "Accompagnement citoyen"@fr ;
+	a skos:Concept .
+
+d4wta:digital-wallonia dct:created "2024-12-25"^^xsd:date ;
+	dct:identifier "26RIxUDYmtJFHKzU2eywzv" ;
+	dct:title "Data 4 Wallonia"@fr ;
+	owl:versionInfo "0.0.1" ;
+	skos:hasTopConcept d4wta:services ;
+	skos:prefLabel "Data 4 Wallonia"@fr ;
+	a skos:ConceptScheme .
+
+d4wta:services euvoc:status status:CURRENT ;
+	dct:identifier "zXkMnqPr4EjRdbKMuVqKK" ;
+	owl:versionInfo "0.0.1" ;
+	skos:definition "Ensemble des prestations et autres caractéristiques des lieux de services et soutien au citoyen et entreprises."@fr ;
+	skos:inScheme d4wta:digital-wallonia ;
+	skos:prefLabel "Services"@en, "Services"@fr ;
+	skos:topConceptOf d4wta:digital-wallonia ;
+	a skos:Concept .
