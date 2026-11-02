@@ -10,7 +10,7 @@
   "publication-date": "2026-11-02",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
-  "contributors-column": "SRM",
+  "contributors-column": "THES",
   "site": "site-skeleton/thesaurus",
   "repourl": "https://github.com/SEMICeu/Thesaurus/tree/master/releases/1.0.1",
   "versionurl": "https://github.com/SEMICeu/Thesaurus/tree/master/releases/1.0.1",
