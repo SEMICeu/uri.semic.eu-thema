@@ -73,7 +73,7 @@
        "@id" : "http://publications.europa.eu/resource/authority/human-sex/MALE",
        "@type" : "skos:Concept"
      },
-     "dct:identifier" : {
+     "adms:identifier" : {
        "@id" : "ex:identifier1"
      }
    },
