@@ -2,6 +2,7 @@
   "@context": [
     "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfNationality/releases/0.0.2/context/evidenceofnationality.jsonld",
     {
+	  "adms": "http://www.w3.org/ns/adms#",
       "cv": "http://data.europa.eu/m8g/",
       "dct": "http://purl.org/dc/terms/",
       "ex": "http://example.com/",
