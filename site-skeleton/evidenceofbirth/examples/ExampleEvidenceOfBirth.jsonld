@@ -147,7 +147,7 @@
        "@type": "xsd:date"
      },
 	"skos:notation" : "1234567",
-	"adms:schemeAgency" : "Agency ID"
+	"adms:schemaAgency" : "Agency ID"
    }  
  ]
 }
