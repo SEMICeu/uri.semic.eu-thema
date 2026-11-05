@@ -5,6 +5,11 @@
     <sdg:Attribute name="IssuingAuthority" xml:lang="FR" type="xs:string">Département Affaires citoyennes de la Ville de Bruxelles</sdg:Attribute>
   </sdg:AttributeSet>
   <cv:IsAbout xsi:type="sdg:PersonWithDateOfBirthType">
+    <cv:IdentifierPerson xsi:type="sdg:IdentifierType">
+      <cv:DateOfIssue>2025-05-18</cv:DateOfIssue>
+      <cv:Notation>1234567</cv:Notation>
+      <cv:SchemaAgency>Agency ID</cv:SchemaAgency>
+    </cv:IdentifierPerson>
     <cv:FamilyName>Magritte</cv:FamilyName>
     <cv:GivenName>René François Ghislain</cv:GivenName>
     <cv:DateOfBirth>1898-11-30</cv:DateOfBirth>
