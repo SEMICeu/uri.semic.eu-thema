@@ -88,7 +88,8 @@ This specification uses the following prefixes to shorten the URIs for readabili
 
         <table id="table-namespaces" class="simple">
             <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
-            <tbody>           
+            <tbody>      
+			<tr><td><code>adms</code></td><td><code>http://www.w3.org/ns/adms#</code></td></tr>			
             <tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>           
             <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
             <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
@@ -110,7 +111,7 @@ This specification uses the following prefixes to shorten the URIs for readabili
             This Application Profile has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }} published on {{ metadata.issued }}.
         </p>
         <p>
-            Information about the process and the decisions involved in the creation of this specification can be consulted in the <a href="https://code.europa.eu/oots/tdd/data_models/-/blob/main/Evidence/EvidenceOfNationality/releases/0.0.1/Changelog.md?ref_type=heads">Changelog</a>.
+            Information about the process and the decisions involved in the creation of this specification can be consulted in the <a href="https://code.europa.eu/oots/tdd/data_models/-/blob/main/Evidence/EvidenceOfNationality/releases/0.0.2/Changelog.md?ref_type=heads">Changelog</a>.
         </p>
 </section>
 {% endblock %}
@@ -122,7 +123,7 @@ This specification uses the following prefixes to shorten the URIs for readabili
 
 {% block xmlschema %}
 		<h3>XML schema representation</h3>
-		<p>The XML schema representation from which the {{metadata.title}} has been build is available <a href="https://code.europa.eu/oots/tdd/data_models/-/tree/main/Evidence/EvidenceOfNationality/releases/0.0.1/xsd/EvidenceOfNationality_v6.4?ref_type=heads">here</a>.</p>
+		<p>The XML schema representation from which the {{metadata.title}} has been build is available <a href="https://code.europa.eu/oots/tdd/data_models/-/tree/main/Evidence/EvidenceOfNationality/releases/0.0.2/xsd/EvidenceOfNationality_v1.0?ref_type=heads">here</a>.</p>
 
     <p>The XML schema is based on the OOTS requirements and it allows some flexibility to include fields that Member States can add in addition to those foreseen in the OOTS requirements.</p>
 

@@ -1,7 +1,8 @@
 {
   "@context": [
-    "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfNationality/releases/0.0.1/context/evidenceofnationality.jsonld",
+    "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfNationality/releases/0.0.2/context/evidenceofnationality.jsonld",
     {
+	  "adms": "http://www.w3.org/ns/adms#",
       "cv": "http://data.europa.eu/m8g/",
       "dct": "http://purl.org/dc/terms/",
       "ex": "http://example.com/",
@@ -72,6 +73,9 @@
       "cv:birthDate": {
         "@type": "cv:genericDate",
         "@value": "1985-09-23"
+      },
+      "adms:identifier": {
+        "@id": "ex:identifier1"
       }
     },
     {
@@ -90,6 +94,16 @@
         "@language": "nl",
         "@value": "Koninkrijk der Nederlanden"
       }
-    }
+    },
+   {
+    "@id": "ex:identifier1",
+    "@type": "Identifier",
+    "dct:issued" : {
+       "@value" : "2025-05-18",
+       "@type": "xsd:date"
+     },
+	"skos:notation" : "1234567",
+	"adms:schemaAgency" : "Agency ID"
+   } 
   ]
 }

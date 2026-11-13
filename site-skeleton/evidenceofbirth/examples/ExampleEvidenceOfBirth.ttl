@@ -1,3 +1,4 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix cv: <http://data.europa.eu/m8g/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ex: <http://example.com/> .
@@ -29,6 +30,7 @@ ex:attribute2 rdfs:label "IssuingAuthority" ;
 ex:person1 foaf:givenName "René François Ghislain"@fr ;
 	foaf:familyName "Magritte"@fr ;
 	cv:sex <http://publications.europa.eu/resource/authority/human-sex/MALE> ;
+	adms:identifier ex:identifier1 ;
 	a person:Person .
 
 <http://publications.europa.eu/resource/authority/human-sex/MALE> a skos:Concept .
@@ -55,3 +57,9 @@ ex:location1 locn:geographicName "Brussel"@nl ;
 
 ex:location2 locn:geographicName "BE"@fr ;
 	a dct:Location .
+
+ex:identifier1 dct:issued "2025-05-18"^^xsd:date ;
+	skos:notation "1234567" ;
+	adms:schemaAgency "Agency ID" ;
+	a adms:Identifier .
+
