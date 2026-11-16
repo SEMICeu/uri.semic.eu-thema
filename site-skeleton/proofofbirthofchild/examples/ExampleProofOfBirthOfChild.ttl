@@ -8,12 +8,13 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdg: <http://data.europa.eu/p4s/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:evidenceofbirth1 sdg:hasAttributeSet ex:attributeSet1 ;
+ex:proofofbirth1 sdg:hasAttributeSet ex:attributeSet1 ;
 	dct:subject ex:person1 ;
 	sdg:hasBirth ex:birth1 ;
-	a sdg:EvidenceOfBirth .
+	a sdg:ProofOfBirthOfChild .
 
 ex:attributeSet1 sdg:hasAttribute ex:attribute1, ex:attribute2 ;
 	a sdg:AttributeSet .
@@ -28,14 +29,15 @@ ex:attribute2 rdfs:label "IssuingAuthority" ;
 
 ex:person1 foaf:givenName "René François Ghislain"@fr ;
 	foaf:familyName "Magritte"@fr ;
-	cv:sex <http://publications.europa.eu/resource/authority/human-sex/MALE> ;
 	a person:Person .
 
 <http://publications.europa.eu/resource/authority/human-sex/MALE> a skos:Concept .
 
 ex:birth1 cv:birthDate "1898-11-21"^^cv:genericDate ;
 	person:placeOfBirth ex:location1 ;
-	person:countryOfBirth ex:location2 ;
+	sdg:provinceOfBirth ex:location2 ;
+	person:countryOfBirth ex:location3 ;
+	sdg:assignedSex <http://publications.europa.eu/resource/authority/human-sex/MALE> ;
 	sdg:hasAttributeSet ex:attributeSet2 ;
 	a sdg:Birth .
 
@@ -53,5 +55,8 @@ ex:attribute4 rdfs:label "FamilyNameAtBirth" ;
 ex:location1 locn:geographicName "Brussel"@nl ;
 	a dct:Location .
 
-ex:location2 locn:geographicName "BE"@fr ;
+ex:location2 locn:geographicName "Brussels Hoofdstedelijk Gewest"@nl ;
+	a dct:Location .
+
+ex:location3 locn:geographicName "BE"@fr ;
 	a dct:Location .

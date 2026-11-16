@@ -79,7 +79,7 @@
 {% block summary %}
 <section id="abstract">
     <h2>Abstract</h2>
-Proof of birth of a Child is a simplified data model describing a request for proof regarding the birth of the person (evidence subject). Draws upon the birth public document description of <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R1191&from=EN#d1e41-20-1">REGULATION (EU) 2016/1191</a>.
+Proof of birth of a child is a simplified data model describing a request for proof regarding the birth of the person (evidence subject). It draws upon the birth public document description of <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R1191&from=EN#d1e41-20-1">REGULATION (EU) 2016/1191</a>.
 </section>
 {% endblock %}
 
@@ -99,6 +99,9 @@ This specification uses the following prefixes to shorten the URIs for readabili
             <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
             <tr><td><code>sdg</code></td><td><code>http://data.europa.eu/p4s/</code></td></tr>
             <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+            
+<tr><td><code>time</code></td><td><code>http://www.w3.org/2006/time#</code></td></tr>            
+
             </tbody>
         </table>
 
@@ -112,7 +115,7 @@ This specification uses the following prefixes to shorten the URIs for readabili
             This Application Profile has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }} published on {{ metadata.issued }}.
         </p>
         <p>
-            Information about the process and the decisions involved in the creation of this specification can be consulted in the <a href="https://code.europa.eu/oots/tdd/data_models/-/blob/main/Proof/ProofOfBirthOfChild/releases/0.0.2/Changelog.md?ref_type=heads">Changelog</a>.
+            Information about the process and the decisions involved in the creation of this specification can be consulted in the <a href="https://code.europa.eu/oots/tdd/data_models/-/blob/main/Proof/ProofOfBirthOfChild/releases/0.0.1/Changelog.md?ref_type=heads">Changelog</a>.
         </p>
 </section>
 {% endblock %}
@@ -124,7 +127,7 @@ This specification uses the following prefixes to shorten the URIs for readabili
 
 {% block xmlschema %}
 		<h3>XML schema representation</h3>
-		<p> TO UPDATE THIS SENTENCE The XML schema representation from which the {{metadata.title}} has been build is available <a href="https://code.europa.eu/oots/tdd/data_models/-/tree/main/Evidence/EvidenceOfBirth/releases/0.0.2/xsd/EvidenceOfBirth_v6.7?ref_type=heads">here</a>.</p>
+		<p>The XML schema representation derived from {{metadata.title}} is available <a href="https://code.europa.eu/oots/tdd/data_models/-/tree/main/Proof/ProofOfBirthOfChild/releases/0.0.1/xsd/ProofOfBirthOfChild_v0.0.1?ref_type=heads">here</a> (TBA).</p> 
 
     <p>The XML schema is based on the OOTS requirements and it allows some flexibility to include fields that Member States can add in addition to those foreseen in the OOTS requirements.</p>
 
@@ -139,8 +142,8 @@ This specification uses the following prefixes to shorten the URIs for readabili
     <p>All the parts with their respective attributes are optional (min cardinality set to 0).</p>
 
     <p>The XML schema is based on the SEMIC <a href="https://github.com/SEMICeu/CCCEV">Core Criterion and Core Evidence (CCCEV)</a> specification, and on the <a href="https://github.com/SEMICeu/Core-Person-Vocabulary/">Core Person vocabulary</a>. 
-    In CCCEV, the Evidence <a href="https://semiceu.github.io/CCCEV/releases/2.1.0/#Evidence.isabout">is about</a> an Agent that is the subject in the provided Evidence; in the case of Evidence of Birth, the Agent is the Person.
-    An EvidenceOfBirthType is then an OOTSEvidenceType (based on CCCEV Evidence) by having the 3 parts:
+    In CCCEV, the Evidence <a href="https://semiceu.github.io/CCCEV/releases/2.1.0/#Evidence.isabout">is about</a> an Agent that is the subject in the provided Evidence; in the case of Proof of Birth, the Agent is the Person.
+    A ProofOfBirthType is then an OOTSEvidenceType (based on CCCEV Evidence) by having the 3 parts:
     <ul>
     <li>isAbout. Since the value of isAbout is a generic AgentType, in SDG a PersonType is defined as an AgentType with FamilyName, GivenName, DateOfBirth and an AttributeSet, which means that is possible to add additional fields to the subject.</li>
     <li>Birth, defined by the OOTSBirthType, that includes Sex, CountryOfBirth, PlaceOfBirth, and ProvinceOfBirth (as foreseen in OOTS requirements) and an AttributeSet</li>

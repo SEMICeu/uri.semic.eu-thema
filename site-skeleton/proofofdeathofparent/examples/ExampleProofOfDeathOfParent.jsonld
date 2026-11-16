@@ -1,6 +1,6 @@
 {
   "@context": [
-  "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfBirth/releases/0.0.1/context/evidenceofbirth.jsonld",
+  "https://semiceu.github.io/uri.semic.eu-generated/OOTS/ProofOfDeathOfParent/releases/0.0.1/context/proofofdeathofparent.jsonld",
   {
     "cv": "http://data.europa.eu/m8g/",
     "dct": "http://purl.org/dc/terms/",
@@ -12,18 +12,22 @@
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "sdg": "http://data.europa.eu/p4s/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
+	"time": "http://www.w3.org/2006/time#",    
     "xsd" : "http://www.w3.org/2001/XMLSchema#"
   }],
   "@graph": [
     {
-     "@id": "ex:evidenceofbirth1",
-     "@type" : "EvidenceOfBirth",
+     "@id": "ex:proofofdeathofparent1",
+     "@type" : "ProofOfDeathOfParent",
      "sdg:hasAttributeSet" : {
 	   "@id": "ex:attributeSet1"
 	 },
      "dct:subject" : {
 	   "@id": "ex:person1"
 	 },
+     "dct:subject" : {
+	   "@id": "ex:personwithparent1"
+	 },	 	 
      "sdg:hasBirth" : {
 	   "@id": "ex:birth1"
 	 }
@@ -67,24 +71,30 @@
      "foaf:familyName" : {
        "@language": "fr",
        "@value": "Magritte"     
-     },
-     "cv:sex" : {
-       "@id" : "http://publications.europa.eu/resource/authority/human-sex/MALE",
-       "@type" : "skos:Concept"
      }
    },
     {
-     "@id": "ex:birth1",
-     "@type": "Birth",
-     "cv:birthDate" : {
+     "@id": "ex:personwithparent1",
+     "@type": "Person",
+     "foaf:givenName" : {
+       "@language": "fr",
+       "@value": "Jean-Pierre"
+     }},
+    {
+     "@id": "ex:death1",
+     "@type": "Death",
+     "cv:deathDate" : {
        "@type": "cv:genericDate",
        "@value": "1898-11-21"
      },
-     "person:placeOfBirth" : {
+     "person:placeOfDeath" : {
        "@id": "ex:location1"
      },
-     "person:countryOfBirth" : {
+     "sdg:provinceOfDeath" : {
        "@id": "ex:location2"
+     },
+     "person:countryOfDeath" : {
+       "@id": "ex:location3"
      },
      "sdg:hasAttributeSet" : {
 	   "@id": "ex:attributeSet2"
@@ -104,7 +114,7 @@
     {
      "@id": "ex:attribute3",
      "@type": "Attribute",
-     "rdfs:label": "TimeOfBirth",
+     "rdfs:label": "TimeOfDeath",
      "rdf:value" : {
        "@value" : "09:00:00",
        "@type": "xsd:time"
@@ -129,6 +139,14 @@
    },
    {
     "@id": "ex:location2",
+    "@type": "Location",
+    "locn:geographicName" : {
+      "@language": "nl",
+      "@value": "Brussels Hoofdstedelijk Gewest"
+    }
+   },   
+   {
+    "@id": "ex:location3",
     "@type": "Location",
     "locn:geographicName" : {
       "@language": "fr",

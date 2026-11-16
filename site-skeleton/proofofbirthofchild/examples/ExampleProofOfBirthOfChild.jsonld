@@ -1,6 +1,6 @@
 {
   "@context": [
-  "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfBirth/releases/0.0.1/context/evidenceofbirth.jsonld",
+  "https://semiceu.github.io/uri.semic.eu-generated/OOTS/ProofOfBirthOfChild/releases/0.0.1/context/proofofbirthofchild.jsonld",
   {
     "cv": "http://data.europa.eu/m8g/",
     "dct": "http://purl.org/dc/terms/",
@@ -12,12 +12,13 @@
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "sdg": "http://data.europa.eu/p4s/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
+    "time": "http://www.w3.org/2006/time#",
     "xsd" : "http://www.w3.org/2001/XMLSchema#"
   }],
   "@graph": [
     {
-     "@id": "ex:evidenceofbirth1",
-     "@type" : "EvidenceOfBirth",
+     "@id": "ex:proofofbirthofchild1",
+     "@type" : "ProofOfBirthOfChild",
      "sdg:hasAttributeSet" : {
 	   "@id": "ex:attributeSet1"
 	 },
@@ -67,10 +68,6 @@
      "foaf:familyName" : {
        "@language": "fr",
        "@value": "Magritte"     
-     },
-     "cv:sex" : {
-       "@id" : "http://publications.europa.eu/resource/authority/human-sex/MALE",
-       "@type" : "skos:Concept"
      }
    },
     {
@@ -83,8 +80,15 @@
      "person:placeOfBirth" : {
        "@id": "ex:location1"
      },
-     "person:countryOfBirth" : {
+     "person:provinceOfBirth" : {
        "@id": "ex:location2"
+     },
+     "person:countryOfBirth" : {
+       "@id": "ex:location3"
+     },
+     "sdg:assignedSex" : {
+       "@id" : "http://publications.europa.eu/resource/authority/human-sex/MALE",
+       "@type" : "skos:Concept"
      },
      "sdg:hasAttributeSet" : {
 	   "@id": "ex:attributeSet2"
@@ -129,6 +133,14 @@
    },
    {
     "@id": "ex:location2",
+    "@type": "Location",
+    "locn:geographicName" : {
+      "@language": "nl",
+      "@value": "Brussels Hoofdstedelijk Gewest"
+    }
+   },
+   {
+    "@id": "ex:location3",
     "@type": "Location",
     "locn:geographicName" : {
       "@language": "fr",
