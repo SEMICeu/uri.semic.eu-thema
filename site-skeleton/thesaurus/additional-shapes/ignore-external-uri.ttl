@@ -1,0 +1,7 @@
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+
+<https://semiceu.github.io/Thesaurus/releases/1.0.0#ConceptShape/c40dd30f34bb212aabc30f957167fa16cd5f2726> shacl:deactivated true .
+
+<https://semiceu.github.io/Thesaurus/releases/1.0.0#ConceptSchemeShape/b3ec0655204c62a2531244aaeab12f1a2c5e5b5d> shacl:deactivated true .
+
+<https://semiceu.github.io/Thesaurus/releases/1.0.0#ConceptSchemeShape/44e0945e932b142aa37108f9c7baac138213357d> shacl:deactivated true .
