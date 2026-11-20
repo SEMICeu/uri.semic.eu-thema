@@ -1,0 +1,395 @@
+{% extends "mldcat-ap_respec.j2" %}
+
+{% block respecconfig %}
+
+    var respecConfig = {
+      postProcess: [quickreference],
+      edDraftURI: "{{metadata.navigation.self}}",
+      latestVersion: "{{metadata.navigation.prev}}",
+      specStatus: "base",
+      publishDate: "{{ metadata.issued }}",
+      editors: myeditors,
+      authors: myauthors,
+	  otherLinks: [
+        {
+          key: "Links",
+          data: [
+            {
+              value: "it6 vocabulary",
+              href: "../../it6/releases/3.1.0/"
+            }
+          ]
+      }],
+      github: "SEMICeu/AIDCAT-AP",
+      shortName: "{{metadata.title}}",
+      xref: "web-platform",
+      doJsonLd: true,
+      logos: [{
+        src: "https://semiceu.github.io/CPOV/releases/2.1.0/html/semic-icon.png",
+        url: "https://semic.eu",
+        alt: "SEMIC",
+        width: 154,
+        height: 140,
+        id: "semic-logo",
+      },],
+      generatedSubtitle: "",
+      additionalCopyrightHolders: "",
+      localBiblio: {
+        "DXWG": {
+          "href" : "https://www.w3.org/2017/dxwg/wiki/Main_Page",
+          "title" : "Dataset Exchange Working Group",
+          "publisher" : "W3C"
+          },
+        "ISA":{
+           "href":"https://ec.europa.eu/isa/",
+           "title":"Interoperability Solutions for European Public Administrations (ISA)",
+           "publisher":"European Commission"
+          },
+        "ISA2":{
+          "href":"https://ec.europa.eu/isa2/",
+          "title":"Interoperability solutions for public administrations, businesses and citizens (ISA²)",
+          "publisher":"European Commission"
+        },
+        "SEMIC":{
+          "href":"https://joinup.ec.europa.eu/",
+          "title":"JoinUp welcomes Interoperable Europe",
+          "publisher":"European Commission"
+         },
+        "DEU" : {
+          "href":"https://data.europa.eu",
+          "title":"The official portal for European data",
+          "publisher":"European Commission"
+        }
+      }
+    };
+
+{% endblock %}
+
+
+{% block introduction %}
+	<p>
+AIDCAT-AP (AI DCAT-AP) is an Application Profile that extends MLDCAT-AP to describe AI systems and AI agents, together with their roles, interfaces, skills, capabilities and the software they use.
+
+</p>
+{% endblock %}
+
+{% block summary %}
+<section id="abstract">
+    <h2>Abstract</h2>
+AIDCAT-AP aims to describe AI systems and AI agents so that they can be discovered and compared in catalogues. It builds on the machine learning models, datasets and infrastructure of MLDCAT-AP.
+
+Concepts coming from the AI Act, the Cloud and AI Development Act (CADA) and from agent descriptions such as A2A, MCP and OASF have been included, and a reference to them has been added for each class or property where needed, including those references to existing data models.
+
+</section>
+{% endblock %}
+
+{# Only one example is kept for now; the examples for AIDCAT-AP are to be added later. #}
+{% block examples %}
+<h3 class="h3 examples" id="example-machinelearningmodel-hf-bloom">Example <a href="https://huggingface.co/bigscience/bloomz-7b1">Bloom-7b1</a> Machine Learning Model on HuggingFace</h3>
+{% endblock %}
+
+{# The mappings section of MLDCAT-AP is removed on purpose. #}
+{% block mappings %}{% endblock %}
+
+{% block terminologyPrefixes %}
+AIDCAT-AP is a semantic specification, where each class and property has an URI.
+
+The prefixed form of the URI, can be found in part in the class diagram and in the quick reference table at the bottom, while, for ease of reading, full URI can be found in the hyperlink of each class and property.  
+
+This specification uses the following prefixes to shorten the URIs for readability:
+
+<table id="table-namespaces" class="simple">
+	<thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+	<tbody>
+		<tr><td><code>adms</code></td><td><code>http://www.w3.org/ns/adms#</code></td></tr>
+		<tr><td><code>biro</code></td><td><code>http://purl.org/spar/biro/</code></td></tr>
+		<tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>
+		<tr><td><code>dcat</code></td><td><code>http://www.w3.org/ns/dcat#</code></td></tr>
+		<tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
+		<tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
+		<tr><td><code>frapo</code></td><td><code>http://purl.org/cerif/frapo/</code></td></tr>
+		<tr><td><code>it6</code></td><td><code>http://data.europa.eu/it6/</code></td></tr>
+		<tr><td><code>lpwcc</code></td><td><code>https://linkedpaperswithcode.com/class/</code></td></tr>
+		<tr><td><code>odrl</code></td><td><code>http://www.w3.org/ns/odrl/2/</code></td></tr>
+		<tr><td><code>prov</code></td><td><code>http://www.w3.org/ns/prov#</code></td></tr>
+		<tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
+		<tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
+		<tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+		<tr><td><code>spdx</code></td><td><code>http://spdx.org/rdf/terms#</code></td></tr>
+		<tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
+	</tbody>
+</table>
+
+{% endblock %}
+
+{% block codelist %}
+
+{# Code lists defined by AIDCAT-AP. The URIs are proposals under the it6 namespace.
+   Not listed here: accessRights (existing authority table of DCAT-AP), theme of AI system and skill
+   (external vocabularies such as the OASF domains and skills), format and media types (existing authority tables). #}
+
+<h3 id="list-aisystem-autonomylevel">AI System - Autonomy Level</h3>
+<table id="table-aisystem-autonomylevel" class="simple">
+  <thead>
+    <tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr id="table-aisystem-autonomylevel-operator">
+      <td>http://data.europa.eu/it6/codelist/autonomyLevel/operator</td>
+      <td>operator</td>
+      <td>Operator</td>
+      <td>The user directs the AI system at every step and the system carries out the instructions.</td>
+    </tr>
+    <tr id="table-aisystem-autonomylevel-collaborator">
+      <td>http://data.europa.eu/it6/codelist/autonomyLevel/collaborator</td>
+      <td>collaborator</td>
+      <td>Collaborator</td>
+      <td>The user and the AI system plan and carry out the work together, and either can take the lead.</td>
+    </tr>
+    <tr id="table-aisystem-autonomylevel-consultant">
+      <td>http://data.europa.eu/it6/codelist/autonomyLevel/consultant</td>
+      <td>consultant</td>
+      <td>Consultant</td>
+      <td>The AI system leads and asks the user for input where it needs expertise or preferences.</td>
+    </tr>
+    <tr id="table-aisystem-autonomylevel-approver">
+      <td>http://data.europa.eu/it6/codelist/autonomyLevel/approver</td>
+      <td>approver</td>
+      <td>Approver</td>
+      <td>The AI system acts on its own and asks the user for approval before risky or irreversible actions.</td>
+    </tr>
+    <tr id="table-aisystem-autonomylevel-observer">
+      <td>http://data.europa.eu/it6/codelist/autonomyLevel/observer</td>
+      <td>observer</td>
+      <td>Observer</td>
+      <td>The AI system acts on its own and the user only monitors it and can step in or stop it.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="list-agentinterface-protocolbinding">Agent Interface - Protocol Binding</h3>
+<table id="table-agentinterface-protocolbinding" class="simple">
+  <thead>
+    <tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr id="table-agentinterface-protocolbinding-JSONRPC">
+      <td>http://data.europa.eu/it6/codelist/protocolBinding/JSONRPC</td>
+      <td>JSONRPC</td>
+      <td>JSON-RPC</td>
+      <td>The interface is called with JSON-RPC over HTTP.</td>
+    </tr>
+    <tr id="table-agentinterface-protocolbinding-GRPC">
+      <td>http://data.europa.eu/it6/codelist/protocolBinding/GRPC</td>
+      <td>GRPC</td>
+      <td>gRPC</td>
+      <td>The interface is called with gRPC.</td>
+    </tr>
+    <tr id="table-agentinterface-protocolbinding-HTTP-JSON">
+      <td>http://data.europa.eu/it6/codelist/protocolBinding/HTTP-JSON</td>
+      <td>HTTP+JSON</td>
+      <td>HTTP+JSON</td>
+      <td>The interface is called with a REST-style HTTP and JSON binding.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="list-mcpserver-transport">MCP Server - Transport</h3>
+<table id="table-mcpserver-transport" class="simple">
+  <thead>
+    <tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr id="table-mcpserver-transport-streamable-http">
+      <td>http://data.europa.eu/it6/codelist/transport/streamable-http</td>
+      <td>streamable-http</td>
+      <td>Streamable HTTP</td>
+      <td>The MCP server is reached over HTTP with streamed responses, as defined in the MCP specification.</td>
+    </tr>
+    <tr id="table-mcpserver-transport-sse">
+      <td>http://data.europa.eu/it6/codelist/transport/sse</td>
+      <td>sse</td>
+      <td>HTTP with Server-Sent Events</td>
+      <td>The MCP server is reached over HTTP with Server-Sent Events. This transport is deprecated in the MCP specification.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="list-mcpserver-supportedfeature">MCP Server - Supported Feature</h3>
+<table id="table-mcpserver-supportedfeature" class="simple">
+  <thead>
+    <tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr id="table-mcpserver-supportedfeature-tools">
+      <td>http://data.europa.eu/it6/codelist/supportedFeature/tools</td>
+      <td>tools</td>
+      <td>Tools</td>
+      <td>The MCP server exposes tools that an AI agent can call.</td>
+    </tr>
+    <tr id="table-mcpserver-supportedfeature-resources">
+      <td>http://data.europa.eu/it6/codelist/supportedFeature/resources</td>
+      <td>resources</td>
+      <td>Resources</td>
+      <td>The MCP server exposes resources, such as files or records, that an AI agent can read.</td>
+    </tr>
+    <tr id="table-mcpserver-supportedfeature-prompts">
+      <td>http://data.europa.eu/it6/codelist/supportedFeature/prompts</td>
+      <td>prompts</td>
+      <td>Prompts</td>
+      <td>The MCP server exposes prompt templates that an AI agent or a user can select.</td>
+    </tr>
+    <tr id="table-mcpserver-supportedfeature-logging">
+      <td>http://data.europa.eu/it6/codelist/supportedFeature/logging</td>
+      <td>logging</td>
+      <td>Logging</td>
+      <td>The MCP server sends log messages to the client.</td>
+    </tr>
+    <tr id="table-mcpserver-supportedfeature-completions">
+      <td>http://data.europa.eu/it6/codelist/supportedFeature/completions</td>
+      <td>completions</td>
+      <td>Completions</td>
+      <td>The MCP server offers argument completion suggestions for prompts and resources.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="list-dataservice-securityscheme">Data Service - Security Scheme</h3>
+<table id="table-dataservice-securityscheme" class="simple">
+  <thead>
+    <tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr id="table-dataservice-securityscheme-apiKey">
+      <td>http://data.europa.eu/it6/codelist/securityScheme/apiKey</td>
+      <td>apiKey</td>
+      <td>API key</td>
+      <td>The caller presents a key in a header, a query parameter or a cookie.</td>
+    </tr>
+    <tr id="table-dataservice-securityscheme-http">
+      <td>http://data.europa.eu/it6/codelist/securityScheme/http</td>
+      <td>http</td>
+      <td>HTTP authentication</td>
+      <td>The caller uses an HTTP authentication scheme, such as bearer or basic.</td>
+    </tr>
+    <tr id="table-dataservice-securityscheme-oauth2">
+      <td>http://data.europa.eu/it6/codelist/securityScheme/oauth2</td>
+      <td>oauth2</td>
+      <td>OAuth 2.0</td>
+      <td>The caller obtains an access token through an OAuth 2.0 flow.</td>
+    </tr>
+    <tr id="table-dataservice-securityscheme-openIdConnect">
+      <td>http://data.europa.eu/it6/codelist/securityScheme/openIdConnect</td>
+      <td>openIdConnect</td>
+      <td>OpenID Connect</td>
+      <td>The caller obtains a token through OpenID Connect, using a discovery document.</td>
+    </tr>
+    <tr id="table-dataservice-securityscheme-mutualTLS">
+      <td>http://data.europa.eu/it6/codelist/securityScheme/mutualTLS</td>
+      <td>mutualTLS</td>
+      <td>Mutual TLS</td>
+      <td>The caller and the service authenticate each other with TLS client certificates.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="list-dataservice-assurancelevel">Data Service - Assurance Level</h3>
+<table id="table-dataservice-assurancelevel" class="simple">
+  <thead>
+    <tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr id="table-dataservice-assurancelevel-1">
+      <td>http://data.europa.eu/it6/codelist/assuranceLevel/1</td>
+      <td>1</td>
+      <td>Union assurance level 1</td>
+      <td>Baseline level for cloud providers serving the public sector, including the location of infrastructure, assets and customer data in the Union.</td>
+    </tr>
+    <tr id="table-dataservice-assurancelevel-2">
+      <td>http://data.europa.eu/it6/codelist/assuranceLevel/2</td>
+      <td>2</td>
+      <td>Union assurance level 2</td>
+      <td>Level 1 plus the operation of the service with personnel, infrastructure and assets in the Union, and certification under the Union cloud certification scheme.</td>
+    </tr>
+    <tr id="table-dataservice-assurancelevel-3">
+      <td>http://data.europa.eu/it6/codelist/assuranceLevel/3</td>
+      <td>3</td>
+      <td>Union assurance level 3</td>
+      <td>Level 2 plus ownership and control of the provider in the Union, with an exception for third countries recognised by the Commission.</td>
+    </tr>
+    <tr id="table-dataservice-assurancelevel-4">
+      <td>http://data.europa.eu/it6/codelist/assuranceLevel/4</td>
+      <td>4</td>
+      <td>Union assurance level 4</td>
+      <td>The strictest level: no control of the provider or of its software components from a third country, and a high-level European cybersecurity certificate for cloud services.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="list-disclosure-channel">Disclosure - Channel</h3>
+<table id="table-disclosure-channel" class="simple">
+  <thead>
+    <tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr id="table-disclosure-channel-text">
+      <td>http://data.europa.eu/it6/codelist/channel/text</td>
+      <td>text</td>
+      <td>Text</td>
+      <td>The disclosure is given in written form.</td>
+    </tr>
+    <tr id="table-disclosure-channel-audio">
+      <td>http://data.europa.eu/it6/codelist/channel/audio</td>
+      <td>audio</td>
+      <td>Audio</td>
+      <td>The disclosure is spoken or given as a sound.</td>
+    </tr>
+    <tr id="table-disclosure-channel-visual">
+      <td>http://data.europa.eu/it6/codelist/channel/visual</td>
+      <td>visual</td>
+      <td>Visual</td>
+      <td>The disclosure is given as an image, symbol or label.</td>
+    </tr>
+    <tr id="table-disclosure-channel-multimodal">
+      <td>http://data.europa.eu/it6/codelist/channel/multimodal</td>
+      <td>multimodal</td>
+      <td>Multimodal</td>
+      <td>The disclosure combines more than one of text, audio and visual.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="list-disclosure-timing">Disclosure - Timing</h3>
+<table id="table-disclosure-timing" class="simple">
+  <thead>
+    <tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr id="table-disclosure-timing-first-interaction">
+      <td>http://data.europa.eu/it6/codelist/timing/first-interaction</td>
+      <td>first-interaction</td>
+      <td>First interaction</td>
+      <td>The disclosure is given at the first interaction with the AI system.</td>
+    </tr>
+    <tr id="table-disclosure-timing-session-start">
+      <td>http://data.europa.eu/it6/codelist/timing/session-start</td>
+      <td>session-start</td>
+      <td>Session start</td>
+      <td>The disclosure is given at the start of each session.</td>
+    </tr>
+    <tr id="table-disclosure-timing-periodic">
+      <td>http://data.europa.eu/it6/codelist/timing/periodic</td>
+      <td>periodic</td>
+      <td>Periodic</td>
+      <td>The disclosure is repeated at regular intervals during the interaction.</td>
+    </tr>
+    <tr id="table-disclosure-timing-on-request">
+      <td>http://data.europa.eu/it6/codelist/timing/on-request</td>
+      <td>on-request</td>
+      <td>On request</td>
+      <td>The disclosure is given when the person asks.</td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}
