@@ -172,7 +172,7 @@
        Copyright must be specified otherwise Respec generates a value
      #} 
     <p class="copyright">
-        Copyright © 2026
+        {% block copyright %}Copyright © 2024{% endblock %}
     </p>
     {# <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">SEMIC Editor's Draft</a><time class="dt-published" datetime="2022-11-07">07 November 2022</time></p> #}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -319,7 +319,7 @@
 		  This specification </span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION </a> 
 	          is published under <a href="{{ metadata.license }}" rel="license">"CC0"</a>.
 	-->
-             Copyright © 2026 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
+             Copyright © 2024 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
         </p>
     {% endblock %}
 </section>
@@ -434,7 +434,7 @@
 										<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>
 									{% endif %}
                                 {% elif ai_type == "CADA" %}
-                                    <a href="https://ec.europa.eu/newsroom/dae/redirection/document/129111">CADA</a>
+                                    <a href="https://digital-strategy.ec.europa.eu/en/library/proposal-cloud-and-ai-development-act-cada">CADA</a>
                                 {% elif ai_type == "AICOP" %}
                                     <a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>
                                 {% elif ai_type == "DCATAP" %}
@@ -611,7 +611,7 @@
                                                     <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689">AI Act</a>
                                                 {% endif %}
                                             {% elif ai_type == "CADA" %}
-                                                <a href="https://ec.europa.eu/newsroom/dae/redirection/document/129111">CADA</a>
+                                                <a href="https://digital-strategy.ec.europa.eu/en/library/proposal-cloud-and-ai-development-act-cada">CADA</a>
                                             {% elif ai_type == "AICOP" %}
                                                 <a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai">AI CoP</a>
                                             {% elif ai_type == "DCATAP" %}
