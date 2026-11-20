@@ -10,7 +10,7 @@
   "publication-date": "2026-11-20",
   "license": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic",
   "contributors-file": "stakeholders.csv",
-  "contributors-column": "MLDCAT-AP",
+  "contributors-column": "AIDCAT-AP",
   "site": "site-skeleton/aidcat-ap",
   "repourl": "https://github.com/SEMICeu/AIDCAT-AP/tree/main/releases/3.0.0",
   "versionurl": "https://semiceu.github.io/AIDCAT-AP/releases/3.0.0",
