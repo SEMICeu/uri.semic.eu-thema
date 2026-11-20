@@ -10,6 +10,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+#to be done properly still
+
 ex:evidenceofdeathofsibling1 sdg:hasAttributeSet ex:attributeSet1 ;
 	dct:subject ex:person1 ;
 	sdg:hasDeath ex:death1 ;

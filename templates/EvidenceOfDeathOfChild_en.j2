@@ -88,7 +88,8 @@ This specification uses the following prefixes to shorten the URIs for readabili
 
         <table id="table-namespaces" class="simple">
             <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
-            <tbody>           
+            <tbody>   
+			<tr><td><code>adms</code></td><td><code>http://www.w3.org/ns/adms#</code></td></tr>                     
             <tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>           
             <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
             <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
@@ -98,9 +99,23 @@ This specification uses the following prefixes to shorten the URIs for readabili
             <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
             <tr><td><code>sdg</code></td><td><code>http://data.europa.eu/p4s/</code></td></tr>
             <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+            <tr><td><code>time</code></td><td><code>http://www.w3.org/2006/time#</code></td></tr>               
             </tbody>
         </table>
 
+{% endblock %}
+
+{% block status %}
+<!--  should support https://www.w3.org/2021/Process-20211102/, mostly like https://www.w3.org/2021/Process-20211102/#maturity-levels -->
+<section id="specstatus">
+    <h2>Status</h2>
+        <p>
+            This Application Profile has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }} published on {{ metadata.issued }}.
+        </p>
+        <p>
+            Information about the process and the decisions involved in the creation of this specification can be consulted in the <a href="https://code.europa.eu/oots/tdd/data_models/-/blob/main/Proof/ProofOfDeathOfChild/releases/0.0.1/Changelog.md?ref_type=heads">Changelog</a>.
+        </p>
+</section>
 {% endblock %}
 
 {% block umlrepresentation %}		
@@ -142,11 +157,11 @@ This specification uses the following prefixes to shorten the URIs for readabili
 {% endblock %} 
 
 {% block examples %}
-<div class="h3 examples" id="ExampleEvidenceOfDeathOfChild">Example Evidence of Death Of Child</div>
+<div class="h3 examples" id="ExampleEvidenceOfDeathOfChild">Example Evidence of Death Of Child, with instances in JSON-LD, Turtle (RDF), and XML.</div>
 {% endblock %}
 
 {% block feedback %}
 	<p>
-		Please provide feedback on the <a href="https://ec.europa.eu/digital-building-blocks/wikis/spaces/SDGOO/pages/847348062/Evidence+of+death+of+child+-+SDM">discussion forum</a>
+		Please provide feedback on the <a href="https://ec.europa.eu/digital-building-blocks/wikis/spaces/SDGOO/pages/847348062/Evidence+of+death+of+child+-+SDM">discussion forum</a>.
 	</p>
 {% endblock %}

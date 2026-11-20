@@ -1,6 +1,6 @@
 {
   "@context": [
-  "https://semiceu.github.io/uri.semic.eu-generated/OOTS/ProofOfBirthOfSibling/releases/0.0.1/context/proofofbirthofsibling.jsonld",
+  "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfBirthOfChild/releases/0.0.1/context/evidenceofbirthofchild.jsonld",
   {
     "cv": "http://data.europa.eu/m8g/",
     "dct": "http://purl.org/dc/terms/",
@@ -12,13 +12,13 @@
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "sdg": "http://data.europa.eu/p4s/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-	"time": "http://www.w3.org/2006/time#",
+    "time": "http://www.w3.org/2006/time#",
     "xsd" : "http://www.w3.org/2001/XMLSchema#"
   }],
   "@graph": [
     {
-     "@id": "ex:proofofbirthofsibling1",
-     "@type" : "ProofOfBirthOfSibling",
+     "@id": "ex:evidenceofbirthofchild1",
+     "@type" : "EvidenceOfBirthOfChild",
      "sdg:hasAttributeSet" : {
 	   "@id": "ex:attributeSet1"
 	 },
@@ -26,10 +26,10 @@
 	   "@id": "ex:person1"
 	 },
      "dct:subject" : {
-	   "@id": "ex:person1s"
+	   "@id": "ex:child1ofperson1"
 	 },	 
-     "sdg:hasDeath" : {
-	   "@id": "ex:death1"
+     "sdg:hasBirth" : {
+	   "@id": "ex:birth1"
 	 }
 	},
     {
@@ -71,15 +71,22 @@
      "foaf:familyName" : {
        "@language": "fr",
        "@value": "Magritte"     
-     }
+     },
+     "sdg:hasChild" : "ex:child1ofperson1"
    },
-	{
-     "@id": "ex:person1s",
+    {
+     "@id": "ex:child1ofperson1",
      "@type": "Person",
      "foaf:givenName" : {
        "@language": "fr",
-       "@value": "Amelie"
-     }},
+       "@value": "Jean-Pierre"
+     },
+     "foaf:familyName" : {
+       "@language": "fr",
+       "@value": "Magritte"     
+     },
+     "sdg:bornDuring" : "birth1"
+   },   
     {
      "@id": "ex:birth1",
      "@type": "Birth",
@@ -92,14 +99,14 @@
      },
      "person:provinceOfBirth" : {
        "@id": "ex:location2"
-     },     
+     },
      "person:countryOfBirth" : {
        "@id": "ex:location3"
      },
      "sdg:assignedSex" : {
        "@id" : "http://publications.europa.eu/resource/authority/human-sex/MALE",
        "@type" : "skos:Concept"
-     },     
+     },
      "sdg:hasAttributeSet" : {
 	   "@id": "ex:attributeSet2"
 	 }
@@ -149,7 +156,7 @@
       "@value": "Brussels Hoofdstedelijk Gewest"
     }
    },
-	{
+   {
     "@id": "ex:location3",
     "@type": "Location",
     "locn:geographicName" : {

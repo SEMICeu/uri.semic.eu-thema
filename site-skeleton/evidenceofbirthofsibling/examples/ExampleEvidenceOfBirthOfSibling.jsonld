@@ -1,6 +1,6 @@
 {
   "@context": [
-  "https://semiceu.github.io/uri.semic.eu-generated/OOTS/ProofOfDeathOfChild/releases/0.0.1/context/proofofdeathofchild.jsonld",
+  "https://semiceu.github.io/uri.semic.eu-generated/OOTS/EvidenceOfBirthOfSibling/releases/0.0.1/context/evidenceofbirthofsibling.jsonld",
   {
     "cv": "http://data.europa.eu/m8g/",
     "dct": "http://purl.org/dc/terms/",
@@ -12,13 +12,13 @@
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "sdg": "http://data.europa.eu/p4s/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "time": "http://www.w3.org/2006/time#",    
+	"time": "http://www.w3.org/2006/time#",
     "xsd" : "http://www.w3.org/2001/XMLSchema#"
   }],
   "@graph": [
     {
-     "@id": "ex:proofofdeathofchild1",
-     "@type" : "ProofOfDeathOfChild",
+     "@id": "ex:evidenceofbirthofsibling1",
+     "@type" : "EvidenceOfBirthOfSibling",
      "sdg:hasAttributeSet" : {
 	   "@id": "ex:attributeSet1"
 	 },
@@ -26,17 +26,11 @@
 	   "@id": "ex:person1"
 	 },
      "dct:subject" : {
-	   "@id": "ex:personwithchild1"
-	 },
-     "dct:subject" : {
-	   "@id": "ex:personwithchild2"
-	 },	 	 	 	 
-     "sdg:hasDeath" : {
-	   "@id": "ex:death1"
-	 },
-     "sdg:hasDeath" : {
-	   "@id": "ex:death2"
-	 }	 
+	   "@id": "ex:person1s"
+	 },	 
+     "sdg:hasBirth" : {
+	   "@id": "ex:birth1"
+	 }
 	},
     {
      "@id": "ex:attributeSet1",
@@ -72,66 +66,47 @@
      "@type": "Person",
      "foaf:givenName" : {
        "@language": "fr",
-       "@value": "René François Ghislain"},
+       "@value": "René François Ghislain"
+     },
      "foaf:familyName" : {
        "@language": "fr",
-       "@value": "Magritte"},
-    "sdg:hasChild": "ex:childofperson1",
-    "sdg:hasChild": "ex:childofperson2"
+       "@value": "Magritte"     
+     },
+     "sdg:hasSibling" : "ex:person1s"     
    },
-   {
-     "@id": "ex:childofperson1",
+	{
+     "@id": "ex:person1s",
      "@type": "Person",
      "foaf:givenName" : {
        "@language": "fr",
-       "@value": "Jean-Pierre"
+       "@value": "Amelie"
      },
-     "sdg:died": "ex:death1"
+     "foaf:familyName" : {
+     "@language": "fr",
+       "@value": "Magritte"     
      },
-   {
-     "@id": "ex:childofperson2",
-     "@type": "Person",
-     "foaf:givenName" : {
-       "@language": "fr",
-       "@value": "Marie"
-     },
-     "sdg:died": "ex:death2"
+     "sdg:bornDuring" : "birth1"
      },
     {
-     "@id": "ex:death1",
-     "@type": "Death",
-     "cv:deathDate" : {
-       "@type": "cv:genericDate",
-       "@value": "1898-11-21"},
-     "person:placeOfDeath" : {
-       "@id": "ex:location1"
-     },
-     "sdg:provinceOfDeath" : {
-       "@id": "ex:location2"
-     },
-     "person:countryOfDeath" : {
-       "@id": "ex:location3"
-     },
-     "sdg:hasAttributeSet" : {
-	   "@id": "ex:attributeSet2"
-	 }
-    },
-  {
-     "@id": "ex:death2",
-     "@type": "Death",
-     "cv:deathDate" : {
+     "@id": "ex:birth1",
+     "@type": "Birth",
+     "cv:birthDate" : {
        "@type": "cv:genericDate",
        "@value": "1898-11-21"
      },
-     "person:placeOfDeath" : {
+     "person:placeOfBirth" : {
        "@id": "ex:location1"
      },
-     "sdg:provinceOfDeath" : {
+     "sdg:provinceOfBirth" : {
        "@id": "ex:location2"
-     },
-     "person:countryOfDeath" : {
+     },     
+     "person:countryOfBirth" : {
        "@id": "ex:location3"
      },
+     "sdg:assignedSex" : {
+       "@id" : "http://publications.europa.eu/resource/authority/human-sex/MALE",
+       "@type" : "skos:Concept"
+     },     
      "sdg:hasAttributeSet" : {
 	   "@id": "ex:attributeSet2"
 	 }
@@ -150,7 +125,7 @@
     {
      "@id": "ex:attribute3",
      "@type": "Attribute",
-     "rdfs:label": "TimeOfDeath",
+     "rdfs:label": "TimeOfBirth",
      "rdf:value" : {
        "@value" : "09:00:00",
        "@type": "xsd:time"
@@ -180,8 +155,8 @@
       "@language": "nl",
       "@value": "Brussels Hoofdstedelijk Gewest"
     }
-   },   
-   {
+   },
+	{
     "@id": "ex:location3",
     "@type": "Location",
     "locn:geographicName" : {

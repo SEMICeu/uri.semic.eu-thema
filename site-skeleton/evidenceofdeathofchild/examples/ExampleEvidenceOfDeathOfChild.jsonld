@@ -12,26 +12,27 @@
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "sdg": "http://data.europa.eu/p4s/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
+    "time": "http://www.w3.org/2006/time#",    
     "xsd" : "http://www.w3.org/2001/XMLSchema#"
   }],
   "@graph": [
     {
      "@id": "ex:evidenceofdeathofchild1",
      "@type" : "EvidenceOfDeathOfChild",
-     "hasAttributeSet" : {
+     "sdg:hasAttributeSet" : {
        "@id": "ex:attributeSet1"
      },
-     "isAbout" : {
+     "dct:subject" : {
        "@id": "ex:person1"
      },
-     "hasDeath" : {
+     "sdg:hasDeath" : {
        "@id": "ex:death1"
      }
     },
     {
      "@id": "ex:attributeSet1",
      "@type": "AttributeSet",
-     "hasAttribute" : [
+     "sdg:hasAttribute" : [
        {
        "@id": "ex:attribute1"
        },
@@ -42,20 +43,12 @@
     {
      "@id": "ex:attribute1",
      "@type": "Attribute",
-     "rdfs:label": "IssuingDate",
-     "rdf:value" : {
-       "@value" : "2025-07-15",
-       "@type": "xsd:date"
-     }
+     "sdg:issuingDate": {"@type": "xsd:date", "@value": "2025-07-15"} 
     },
     {
      "@id": "ex:attribute2",
      "@type": "Attribute",
-     "rdfs:label": "IssuingAuthority",
-     "rdf:value" : {
-       "@language" : "fr",
-       "@value" : "Département Affaires citoyennes de la Ville de Bruxelles"
-     }
+     "sdg:issuingAuthority" : {"@value": "Département Affaires citoyennes de la Ville de Bruxelles", "@language": "fr"}
     },
     {
      "@id": "ex:person1",

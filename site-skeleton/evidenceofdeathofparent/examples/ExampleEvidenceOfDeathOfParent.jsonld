@@ -12,26 +12,27 @@
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "sdg": "http://data.europa.eu/p4s/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
+    	"time": "http://www.w3.org/2006/time#",
     "xsd" : "http://www.w3.org/2001/XMLSchema#"
   }],
   "@graph": [
     {
      "@id": "ex:evidenceofdeathofparent1",
      "@type" : "EvidenceOfDeathOfParent",
-     "hasAttributeSet" : {
+     "sdg:hasAttributeSet" : {
        "@id": "ex:attributeSet1"
      },
-     "isAbout" : {
+     "dct:subject" : {
        "@id": "ex:person1"
      },
-     "hasDeath" : {
+     "sdg:hasDeath" : {
        "@id": "ex:death1"
      }
     },
     {
      "@id": "ex:attributeSet1",
      "@type": "AttributeSet",
-     "hasAttribute" : [
+     "sdg:hasAttribute" : [
        {
        "@id": "ex:attribute1"
        },
@@ -60,19 +61,19 @@
     {
      "@id": "ex:person1",
      "@type": "Person",
-     "givenName" : {
+     "foaf:givenName" : {
        "@language": "fr",
        "@value": "René François Ghislain"
      },
-     "familyName" : {
+     "foaf:familyName" : {
        "@language": "fr",
        "@value": "Magritte"
      },
-     "dateOfBirth" : {
+     "cv:dateOfBirth" : {
        "@type": "cv:genericDate",
        "@value": "1898-11-30"
      },
-     "hasParent" : [
+     "sdg:hasParent" : [
        {
        "@id": "ex:person2"
        }]
@@ -80,15 +81,15 @@
     {
      "@id": "ex:person2",
      "@type": "Person",
-     "givenName" : {
+     "foaf:givenName" : {
        "@language": "fr",
        "@value": "Serge"
      },
-     "familyName" : {
+     "foaf:familyName" : {
        "@language": "fr",
        "@value": "Magritte"
      },
-     "dateOfBirth" : {
+     "person:dateOfBirth" : {
        "@type": "cv:genericDate",
        "@value": "1927-11-30"
      }
@@ -96,20 +97,27 @@
     {
      "@id": "ex:death1",
      "@type": "Death",
-     "countryOfDeath" : {
+    "cv:deathDate" : {
+       "@type": "cv:genericDate",
+       "@value": "1998-11-21"
+     },
+     "person:placeOfDeath" : {
        "@id": "ex:location1"
      },
-     "placeOfDeath" : {
+     "sdg:provinceOfDeath" : {
        "@id": "ex:location2"
      },
-     "hasAttributeSet" : {
+    "person:countryOfDeath" : {
+       "@id": "ex:location3"
+     },     
+     "sdg:hasAttributeSet" : {
        "@id": "ex:attributeSet2"
      }
     },
     {
      "@id": "ex:attributeSet2",
      "@type": "AttributeSet",
-     "hasAttribute" : [
+     "sdg:hasAttribute" : [
        {
        "@id": "ex:attribute3"
        }]
@@ -123,20 +131,28 @@
        "@type": "xsd:time"
      }
     },
-    {
-     "@id": "ex:location1",
-     "@type": "Location",
-     "geographicName" : {
-       "@language": "fr",
-       "@value": "BE"
-     }
-    },
-    {
-     "@id": "ex:location2",
-     "@type": "Location",
-     "geographicName" : {
-       "@language": "nl",
-       "@value": "Brussel"
+   {
+    "@id": "ex:location1",
+    "@type": "Location",
+    "locn:geographicName" : {
+      "@language": "nl",
+      "@value": "Brussel"
+    }
+   },
+   {
+    "@id": "ex:location2",
+    "@type": "Location",
+    "locn:geographicName" : {
+      "@language": "nl",
+      "@value": "Brussels Hoofdstedelijk Gewest"
+    }
+   },
+	{
+    "@id": "ex:location3",
+    "@type": "Location",
+    "locn:geographicName" : {
+      "@language": "fr",
+      "@value": "BE"
      }
     }
   ]

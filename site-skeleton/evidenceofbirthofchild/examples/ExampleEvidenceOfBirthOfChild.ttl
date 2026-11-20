@@ -11,12 +11,12 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# to be updated/generated after the json context is online
+# to generate after generating the json-ld context
 
-ex:proofofdeathofc1 sdg:hasAttributeSet ex:attributeSet1 ;
+ex:proofofbirth1 sdg:hasAttributeSet ex:attributeSet1 ;
 	dct:subject ex:person1 ;
-	sdg:hasDeath ex:Death1 ;
-	a sdg:ProofOfDeathOfChild .
+	sdg:hasBirth ex:birth1 ;
+	a sdg:ProofOfBirthOfChild .
 
 ex:attributeSet1 sdg:hasAttribute ex:attribute1, ex:attribute2 ;
 	a sdg:AttributeSet .
@@ -33,22 +33,20 @@ ex:person1 foaf:givenName "René François Ghislain"@fr ;
 	foaf:familyName "Magritte"@fr ;
 	a person:Person .
 
-ex:personwithparent1 foaf:givenName "Jean-Pierre"@fr ;
-	foaf:familyName "Magritte"@fr ;
-	a person:Person .
+<http://publications.europa.eu/resource/authority/human-sex/MALE> a skos:Concept .
 
-
-ex:death1 cv:deathDate "1898-11-21"^^cv:genericDate ;
-	person:placeOfDeath ex:location1 ;
-	sdg:provinceOfDeath ex:location2 ;
-	person:countryOfDeath ex:location3 ;
+ex:birth1 cv:birthDate "1898-11-21"^^cv:genericDate ;
+	person:placeOfBirth ex:location1 ;
+	sdg:provinceOfBirth ex:location2 ;
+	person:countryOfBirth ex:location3 ;
+	sdg:assignedSex <http://publications.europa.eu/resource/authority/human-sex/MALE> ;
 	sdg:hasAttributeSet ex:attributeSet2 ;
-	a sdg:Death .
+	a sdg:Birth .
 
 ex:attributeSet2 sdg:hasAttribute ex:attribute3, ex:attribute4 ;
 	a sdg:AttributeSet .
 
-ex:attribute3 rdfs:label "TimeOfDeath" ;
+ex:attribute3 rdfs:label "TimeOfBirth" ;
 	rdf:value "09:00:00"^^xsd:time ;
 	a sdg:Attribute .
 

@@ -71,7 +71,7 @@
 
 {% block introduction %}
 <p>
-  This data model provides a minimum set of classes and properties for describing a evidence of death of parent. This data model has been designed to support the different requirements of the OOTS action. The different classes and properties defined in this document are based on the <a href="https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/data_dictionary.html">OOTS data dictionary</a>.
+  This data model provides a minimum set of classes and properties for describing an evidence of death of parent. This data model has been designed to support the different requirements of the OOTS action. The different classes and properties defined in this document are based on the <a href="https://data-models-oots-tdd-8b6791fd33fcb1f29c7d6ad9c6173ba55d28c0a5f9.pages.code.europa.eu/data_dictionary.html">OOTS data dictionary</a>.
 </p>
 {% endblock %}
 
@@ -79,7 +79,7 @@
 {% block summary %}
 <section id="abstract">
     <h2>Abstract</h2>
-Evidence of death of parent is a simplified data model describing a requestfor evidence related to the death of the person's (evidence subject) parent.
+Evidence of death of parent is a simplified data model describing a request for evidence related to the death of the person's (evidence subject) parent.
 </section>
 {% endblock %}
 
@@ -98,9 +98,24 @@ This specification uses the following prefixes to shorten the URIs for readibili
             <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
             <tr><td><code>sdg</code></td><td><code>http://data.europa.eu/p4s/</code></td></tr>
             <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+<tr><td><code>time</code></td><td><code>http://www.w3.org/2006/time#</code></td></tr>            
+            
             </tbody>
         </table>
 
+{% endblock %}
+
+{% block status %}
+<!--  should support https://www.w3.org/2021/Process-20211102/, mostly like https://www.w3.org/2021/Process-20211102/#maturity-levels -->
+<section id="specstatus">
+    <h2>Status</h2>
+        <p>
+            This Application Profile has the status {{ metadata.documentconfig.statuslabel if metadata.documentconfig.statuslabel else metadata.statuslabel }} published on {{ metadata.issued }}.
+        </p>
+        <p>
+            Information about the process and the decisions involved in the creation of this specification can be consulted in the <a href="https://code.europa.eu/oots/tdd/data_models/-/blob/main/Proof/ProofOfDeathOfParent/releases/0.0.1/Changelog.md?ref_type=heads">Changelog</a>.
+        </p>
+</section>
 {% endblock %}
 
 {% block umlrepresentation %}		
@@ -129,7 +144,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
     An EvidenceOfDeathOfParentType is then an OOTSEvidenceType (based on CCCEV Evidence) by having the 3 parts:
     <ul>
     <li>cv:isAbout. Since the value of cv:isAbout is a generic AgentType, in SDG a PersonType is defined as an AgentType with cv:FamilyName, cv:GivenName, cv:Sex and sdg:AttributeSet, that it means that is possible to add additional fields to the subject.</li>
-    <li>sdg:Birth, defined by the OOTSBirthType, that includes cv:CountryOfBirth, cv:DateOfBirth, cv:PlaceOfBirth (as foreseen in OOTS requirements) and sdg:AttributeSet</li>
+    <li>Death, defined by the OOTSDeathType, that includes CountryOfDeath, PlaceOfDeath, and ProvinceOfDeath (as foreseen in OOTS requirements) and an AttributeSet</li>
     <li>sdg:AttributeSet, that can contains many attributes, where the name, language and type fields could be defined for each attribute</li>
     </ul>
     </p>
@@ -142,11 +157,11 @@ This specification uses the following prefixes to shorten the URIs for readibili
 {% endblock %} 
 
 {% block examples %}
-<div class="h3 examples" id="ExampleEvidenceOfDeathOfParent">Example: Evidence of Death Of Parent</div>
+<div class="h3 examples" id="ExampleEvidenceOfDeathOfParent">Example: Evidence of Death Of Parent, , with instances in JSON-LD, Turtle (RDF), and XML.</div>
 {% endblock %}
 
 {% block feedback %}
 	<p>
-		Please provide feedback on the <a href="https://ec.europa.eu/digital-building-blocks/wikis/spaces/SDGOO/pages/847348067/Evidence+of+death+of+parent+-+SDM">discussion forum</a>
+		Please provide feedback on the <a href="https://ec.europa.eu/digital-building-blocks/wikis/spaces/SDGOO/pages/847348067/Evidence+of+death+of+parent+-+SDM">discussion forum</a>.
 	</p>
 {% endblock %}
