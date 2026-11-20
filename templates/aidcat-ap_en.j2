@@ -122,7 +122,7 @@ This specification uses the following prefixes to shorten the URIs for readabili
 
 {% endblock %}
 
-{% block codelist %}
+{% block controlledvocabularies %}
 
 {# Code lists defined by AIDCAT-AP. The URIs are proposals under the it6 namespace.
    Not listed here: accessRights (existing authority table of DCAT-AP), theme of AI system and skill
@@ -393,3 +393,7 @@ This specification uses the following prefixes to shorten the URIs for readabili
 </table>
 
 {% endblock %}
+
+{# Usage guidelines: do not include the MLDCAT-AP implementation text #}
+{% block usages %}{% endblock %}
+
