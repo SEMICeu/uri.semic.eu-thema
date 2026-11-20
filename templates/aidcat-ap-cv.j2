@@ -17,7 +17,7 @@ The code lists defined by this Application Profile follow the tables, in alphabe
 <table class="simple">
   <thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
   <tbody>
-    <tr><td>dct:accessRights</td><td><a href="#{{ "DataService" | urlencode}}">Data Service</a></td><td><a href="http://publications.europa.eu/resource/authority/access-right">Access Rights Named Authority List</a></td><td>Use one of the values http://publications.europa.eu/resource/authority/access-right/PUBLIC, RESTRICTED or NON_PUBLIC.</td></tr>
+    <tr><td>dct:accessRights</td><td><a href="#{{ "DataService" | urlencode}}">Data Service</a></td><td><a href="http://publications.europa.eu/resource/authority/access-right">Access Rights Named Authority List</a></td><td>Use one of the values PUBLIC, RESTRICTED or NON_PUBLIC of the authority table.</td></tr>
   </tbody>
 </table>
 
@@ -25,12 +25,12 @@ The code lists defined by this Application Profile follow the tables, in alphabe
 <table class="simple">
   <thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
   <tbody>
-    <tr><td>it6:autonomyLevel</td><td><a href="#{{ "AISystem" | urlencode}}">AI System</a></td><td><a href="#list-aisystem-autonomylevel">Autonomy Level</a></td><td>The levels follow the levels of autonomy for AI agents described by Feng et al.</td></tr>
     <tr><td>it6:assuranceLevel</td><td><a href="#{{ "DataService" | urlencode}}">Data Service</a></td><td><a href="#list-dataservice-assurancelevel">Assurance Level</a></td><td>The levels are provisional until the Cloud and AI Development Act is adopted.</td></tr>
+    <tr><td>it6:autonomyLevel</td><td><a href="#{{ "AISystem" | urlencode}}">AI System</a></td><td><a href="#list-aisystem-autonomylevel">Autonomy Level</a></td><td>The levels follow the levels of autonomy for AI agents described by Feng et al.</td></tr>
     <tr><td>it6:channel</td><td><a href="#{{ "Disclosure" | urlencode}}">Disclosure</a></td><td><a href="#list-disclosure-channel">Channel</a></td><td></td></tr>
     <tr><td>it6:protocolBinding</td><td><a href="#{{ "AgentInterface" | urlencode}}">Agent Interface</a></td><td><a href="#list-agentinterface-protocolbinding">Protocol Binding</a></td><td></td></tr>
     <tr><td>it6:securityScheme</td><td><a href="#{{ "DataService" | urlencode}}">Data Service</a></td><td><a href="#list-dataservice-securityscheme">Security Scheme</a></td><td></td></tr>
-    <tr><td>it6:supportedFeature</td><td><a href="#{{ "MCPServer" | urlencode}}">MCP Server</a></td><td><a href="#list-mcpserver-supportedfeature">Supported Feature</a></td><td>Verify against the MCP specification.</td></tr>
+    <tr><td>it6:supportedFeature</td><td><a href="#{{ "MCPServer" | urlencode}}">MCP Server</a></td><td><a href="#list-mcpserver-supportedfeature">Supported Feature</a></td><td></td></tr>
     <tr><td>it6:timing</td><td><a href="#{{ "Disclosure" | urlencode}}">Disclosure</a></td><td><a href="#list-disclosure-timing">Timing</a></td><td></td></tr>
     <tr><td>it6:transport</td><td><a href="#{{ "MCPServer" | urlencode}}">MCP Server</a></td><td><a href="#list-mcpserver-transport">Transport</a></td><td></td></tr>
   </tbody>

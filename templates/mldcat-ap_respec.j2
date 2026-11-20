@@ -484,7 +484,7 @@
                         Usage Note
                     </dt>
                     <dd>
-                        {{ entity.usage[language] | safe }}
+                        {{ entity.usage[language] | replace('NOTE$ea_notes=','') | safe }}
                     </dd>
                 {% endif %}
                 {% if ((entity.parents | length) > 0 ) %}
@@ -584,7 +584,7 @@
                                     {{ prop.description[language] }}
                                 </td>
                                 <td property="skos:scopeNote">
-                                    {{ prop.usage[language] | safe }}
+                                    {{ prop.usage[language] | replace('NOTE$ea_notes=','') | safe }}
                                 </td>
 				<!--
                                 <td>
@@ -746,7 +746,7 @@ They are included in the Application Profile because they form the range of prop
                     </div>
                 {% endif %}
 		</td><td>
-                    {{ entity.description[language] }}
+                    {{ entity.description[language] | replace('NOTE$ea_notes=','') }}
 		</td></tr>
             {%- endfor %}
             </tbody>
