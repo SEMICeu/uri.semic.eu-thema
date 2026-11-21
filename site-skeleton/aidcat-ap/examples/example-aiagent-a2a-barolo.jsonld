@@ -1,0 +1,150 @@
+{
+  "@context": [
+    "https://semiceu.github.io/uri.semic.eu-generated/AIDCAT-AP/releases/3.0.0/context/aidcat-ap.jsonld",
+    {
+      "it6": "http://data.europa.eu/it6/",
+      "spdx": "http://spdx.org/rdf/terms#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "https://agents.slim.outshift.io/agentcon/barolo-supplier",
+      "@type": "AiAgent",
+      "AiSystem.identifier": "urn:air:org.agntcy:cid:baeareicwyjiylqv2jgxu2m3h53gk73nswbscsmimfcwvtr7rc66vez3y6q",
+      "AiSystem.title": "AgentCon Demo Wine Supplier",
+      "AiSystem.description": "Wine supplier of 2019 Barolo: Copilot-mediated natural-language quotes and orders; deterministic v1 RFQ/order profiles. Delivery throughout the US and Canada.",
+      "AiSystem.version": "0.1.0",
+      "AiSystem.theme": [
+        "http://example.com/oasf/1.0.0/domains/retail_and_ecommerce/inventory_management",
+        "http://example.com/oasf/1.0.0/domains/retail_and_ecommerce/online_retail",
+        "http://example.com/oasf/1.0.0/domains/retail_and_ecommerce/order_fulfillment"
+      ],
+      "AiSystem.hasProvider": "http://example.com/Agent/agentcon-demo",
+      "AiSystem.hasDeployer": "http://example.com/Agent/agentcon-demo",
+      "AiSystem.intendedUse": "Demonstration of agent-to-agent commerce: natural-language or typed quotes and simulated orders for 2019 Barolo wine, with OID4VP age verification for purchases. Demo only: no payment or fulfilment.",
+      "AiSystem.putIntoServiceDate": {
+        "@value": "2026-10-19",
+        "@type": "xsd:date"
+      },
+      "AiSystem.autonomyLevel": "http://data.europa.eu/it6/codelist/autonomyLevel/consultant",
+      "AiSystem.hasDisclosure": "http://example.com/Disclosure/1",
+      "AiSystem.hasRepository": "https://github.com/darrelmiller/AgentCon/tree/main/SupplierAgent",
+      "AiAgent.goal": "Sell 2019 Barolo wine by answering requests for quotation and purchase orders.",
+      "AiAgent.hasInterface": [
+        "http://example.com/AgentInterface/barolo-jsonrpc",
+        "http://example.com/AgentInterface/barolo-slimrpc"
+      ],
+      "AiAgent.hasNativeDescription": "http://example.com/File/barolo-agent-card",
+      "AiAgent.hasCapability": [
+        "http://example.com/Capability/streaming",
+        "http://example.com/Capability/oid4vp-auth",
+        "http://example.com/Capability/structured-schemas"
+      ],
+      "AiAgent.hasSkill": "http://example.com/Skill/demo-wine",
+      "AiAgent.hasInputModality": "http://example.com/Modality/text",
+      "AiAgent.hasOutputModality": "http://example.com/Modality/text"
+    },
+    {
+      "@id": "http://example.com/Agent/agentcon-demo",
+      "@type": "Agent",
+      "Agent.name": "AgentCon demo"
+    },
+    {
+      "@id": "http://example.com/Disclosure/1",
+      "@type": "Disclosure",
+      "Disclosure.channel": "http://data.europa.eu/it6/codelist/channel/text",
+      "Disclosure.notice": {
+        "@value": "You are talking to an AI agent, the AgentCon demo wine supplier.",
+        "@language": "en"
+      },
+      "Disclosure.timing": "http://data.europa.eu/it6/codelist/timing/first-interaction"
+    },
+    {
+      "@id": "https://github.com/darrelmiller/AgentCon/tree/main/SupplierAgent",
+      "@type": "Repository",
+      "Repository.name": "SupplierAgent"
+    },
+    {
+      "@id": "http://example.com/AgentInterface/barolo-jsonrpc",
+      "@type": "AgentInterface",
+      "DataService.title": "Barolo supplier A2A JSON-RPC interface",
+      "DataService.endpointUrl": "https://agents.slim.outshift.io/agentcon/barolo-supplier/a2a",
+      "DataService.conformsTo": "https://a2a-protocol.org/latest/specification/",
+      "DataService.accessRights": "http://publications.europa.eu/resource/authority/access-right/RESTRICTED",
+      "DataService.securityScheme": "http://data.europa.eu/it6/codelist/securityScheme/openIdConnect",
+      "AgentInterface.protocolBinding": "http://data.europa.eu/it6/codelist/protocolBinding/JSONRPC"
+    },
+    {
+      "@id": "http://example.com/AgentInterface/barolo-slimrpc",
+      "@type": "AgentInterface",
+      "DataService.title": "Barolo supplier SLIMRPC interface",
+      "DataService.endpointUrl": "slim://agntcy/agentcon/barolo-supplier",
+      "AgentInterface.protocolBinding": "http://example.com/protocolBinding/SLIMRPC"
+    },
+    {
+      "@id": "http://example.com/File/barolo-agent-card",
+      "@type": "File",
+      "File.id": "barolo-supplier-agent-card",
+      "File.title": "A2A Agent Card of the AgentCon demo wine supplier",
+      "File.format": "http://example.com/format/a2a-agent-card+json",
+      "File.url": "https://agents.slim.outshift.io/agentcon/barolo-supplier/.well-known/agent-card.json"
+    },
+    {
+      "@id": "http://example.com/Capability/streaming",
+      "@type": "Capability",
+      "Capability.title": "Streaming"
+    },
+    {
+      "@id": "http://example.com/Capability/oid4vp-auth",
+      "@type": "Capability",
+      "Capability.identifier": "https://github.com/a2aproject/experimental-ext-oid4vp-auth/tree/main/v1",
+      "Capability.title": "Task-bound credential presentation (OID4VP)",
+      "Capability.description": "Purchase tasks require a task-bound presentation of the issuer's demo over_21 credential."
+    },
+    {
+      "@id": "http://example.com/Capability/structured-schemas",
+      "@type": "Capability",
+      "Capability.identifier": "urn:agentcon:extension:structured-schemas:v1",
+      "Capability.title": "Structured schemas",
+      "Capability.description": "Demo-only schema discovery: media type to JSON Schema URL and local definition."
+    },
+    {
+      "@id": "http://example.com/Skill/demo-wine",
+      "@type": "Skill",
+      "Skill.identifier": "demo-wine",
+      "Skill.title": "Demo wine quote and order",
+      "Skill.description": "2019 Barolo, 1-48 cases, delivery anywhere in the US or Canada. Natural language invokes Copilot; typed requests for quotation and purchase orders are processed deterministically.",
+      "Skill.keyword": [
+        "wine",
+        "supplier",
+        "demo"
+      ]
+    },
+    {
+      "@id": "http://example.com/Modality/text",
+      "@type": "Modality",
+      "Modality.classification": "https://www.iana.org/assignments/media-types/text/plain"
+    },
+    {
+      "@id": "http://example.com/protocolBinding/SLIMRPC",
+      "@type": "Concept"
+    },
+    {
+      "@id": "http://example.com/oasf/1.0.0/domains/retail_and_ecommerce/online_retail",
+      "@type": "Concept"
+    },
+    {
+      "@id": "http://example.com/oasf/1.0.0/domains/retail_and_ecommerce/order_fulfillment",
+      "@type": "Concept"
+    },
+    {
+      "@id": "http://example.com/format/a2a-agent-card+json",
+      "@type": "Concept"
+    },
+    {
+      "@id": "http://example.com/oasf/1.0.0/domains/retail_and_ecommerce/inventory_management",
+      "@type": "Concept"
+    }
+  ]
+}
