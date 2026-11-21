@@ -1,0 +1,91 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix it6: <http://data.europa.eu/it6/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://agents.slim.outshift.io/agentcon/barolo-supplier> dct:identifier "urn:air:org.agntcy:cid:baeareicwyjiylqv2jgxu2m3h53gk73nswbscsmimfcwvtr7rc66vez3y6q" ;
+	dct:title "AgentCon Demo Wine Supplier" ;
+	dct:description "Wine supplier of 2019 Barolo: Copilot-mediated natural-language quotes and orders; deterministic v1 RFQ/order profiles. Delivery throughout the US and Canada." ;
+	dcat:version "0.1.0" ;
+	dcat:theme <http://example.com/oasf/1.0.0/domains/retail_and_ecommerce/inventory_management>, <http://example.com/oasf/1.0.0/domains/retail_and_ecommerce/online_retail>, <http://example.com/oasf/1.0.0/domains/retail_and_ecommerce/order_fulfillment> ;
+	it6:hasProvider <http://example.com/Agent/agentcon-demo> ;
+	it6:hasDeployer <http://example.com/Agent/agentcon-demo> ;
+	it6:intendedUse "Demonstration of agent-to-agent commerce: natural-language or typed quotes and simulated orders for 2019 Barolo wine, with OID4VP age verification for purchases. Demo only: no payment or fulfilment." ;
+	it6:putIntoServiceDate "2026-10-19"^^xsd:date ;
+	it6:autonomyLevel <http://data.europa.eu/it6/codelist/autonomyLevel/consultant> ;
+	it6:hasDisclosure <http://example.com/Disclosure/1> ;
+	it6:hasRepository <https://github.com/darrelmiller/AgentCon/tree/main/SupplierAgent> ;
+	it6:goal "Sell 2019 Barolo wine by answering requests for quotation and purchase orders." ;
+	it6:hasInterface <http://example.com/AgentInterface/barolo-jsonrpc>, <http://example.com/AgentInterface/barolo-slimrpc> ;
+	it6:hasNativeDescription <http://example.com/File/barolo-agent-card> ;
+	it6:hasCapability <http://example.com/Capability/streaming>, <http://example.com/Capability/oid4vp-auth>, <http://example.com/Capability/structured-schemas> ;
+	it6:hasSkill <http://example.com/Skill/demo-wine> ;
+	it6:hasInputModality <http://example.com/Modality/text> ;
+	it6:hasOutputModality <http://example.com/Modality/text> ;
+	a it6:AIAgent .
+
+<http://example.com/Agent/agentcon-demo> foaf:name "AgentCon demo" ;
+	a foaf:Agent .
+
+<http://example.com/Disclosure/1> it6:channel <http://data.europa.eu/it6/codelist/channel/text> ;
+	it6:notice "You are talking to an AI agent, the AgentCon demo wine supplier."@en ;
+	it6:timing <http://data.europa.eu/it6/codelist/timing/first-interaction> ;
+	a it6:Disclosure .
+
+<https://github.com/darrelmiller/AgentCon/tree/main/SupplierAgent> dct:title "SupplierAgent" ;
+	a <https://linkedpaperswithcode.com/class/repository> .
+
+<http://example.com/AgentInterface/barolo-jsonrpc> dct:title "Barolo supplier A2A JSON-RPC interface" ;
+	dcat:endpointURL <https://agents.slim.outshift.io/agentcon/barolo-supplier/a2a> ;
+	dct:conformsTo <https://a2a-protocol.org/latest/specification/> ;
+	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/RESTRICTED> ;
+	it6:securityScheme <http://data.europa.eu/it6/codelist/securityScheme/openIdConnect> ;
+	it6:protocolBinding <http://data.europa.eu/it6/codelist/protocolBinding/JSONRPC> ;
+	a it6:AgentInterface .
+
+<http://example.com/AgentInterface/barolo-slimrpc> dct:title "Barolo supplier SLIMRPC interface" ;
+	dcat:endpointURL <slim://agntcy/agentcon/barolo-supplier> ;
+	it6:protocolBinding <http://example.com/protocolBinding/SLIMRPC> ;
+	a it6:AgentInterface .
+
+<http://example.com/File/barolo-agent-card> dct:identifier "barolo-supplier-agent-card" ;
+	dct:title "A2A Agent Card of the AgentCon demo wine supplier" ;
+	dct:format <http://example.com/format/a2a-agent-card+json> ;
+	it6:url <https://agents.slim.outshift.io/agentcon/barolo-supplier/.well-known/agent-card.json> ;
+	a it6:File .
+
+<http://example.com/Capability/streaming> dct:title "Streaming" ;
+	a it6:Capability .
+
+<http://example.com/Capability/oid4vp-auth> dct:identifier "https://github.com/a2aproject/experimental-ext-oid4vp-auth/tree/main/v1" ;
+	dct:title "Task-bound credential presentation (OID4VP)" ;
+	dct:description "Purchase tasks require a task-bound presentation of the issuer's demo over_21 credential." ;
+	a it6:Capability .
+
+<http://example.com/Capability/structured-schemas> dct:identifier "urn:agentcon:extension:structured-schemas:v1" ;
+	dct:title "Structured schemas" ;
+	dct:description "Demo-only schema discovery: media type to JSON Schema URL and local definition." ;
+	a it6:Capability .
+
+<http://example.com/Skill/demo-wine> dct:identifier "demo-wine" ;
+	dct:title "Demo wine quote and order" ;
+	dct:description "2019 Barolo, 1-48 cases, delivery anywhere in the US or Canada. Natural language invokes Copilot; typed requests for quotation and purchase orders are processed deterministically." ;
+	dcat:keyword "wine", "supplier", "demo" ;
+	a it6:Skill .
+
+<http://example.com/Modality/text> it6:classification <https://www.iana.org/assignments/media-types/text/plain> ;
+	a it6:Modality .
+
+<http://example.com/protocolBinding/SLIMRPC> a skos:Concept .
+
+<http://example.com/oasf/1.0.0/domains/retail_and_ecommerce/online_retail> a skos:Concept .
+
+<http://example.com/oasf/1.0.0/domains/retail_and_ecommerce/order_fulfillment> a skos:Concept .
+
+<http://example.com/format/a2a-agent-card+json> a skos:Concept .
+
+<http://example.com/oasf/1.0.0/domains/retail_and_ecommerce/inventory_management> a skos:Concept .

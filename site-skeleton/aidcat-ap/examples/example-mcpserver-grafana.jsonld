@@ -9,7 +9,7 @@
   ],
   "@graph": [
     {
-      "@id": "urn:air:org.agntcy:cid:baeareialkfuizll2bi3vkf7q2oj5aa5fucu7qsnhjkrd6m3crgvnvwbli4",
+      "@id": "http://example.com/AIAgent/mcp-grafana",
       "@type": "McpServer",
       "DataService.title": "io.github.grafana/mcp-grafana",
       "DataService.endpointUrl": "https://mcp.grafana.com/mcp",
