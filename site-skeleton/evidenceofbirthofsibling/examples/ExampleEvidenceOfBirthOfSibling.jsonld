@@ -46,8 +46,7 @@
     {
      "@id": "ex:attribute1",
      "@type": "Attribute",
-     "rdfs:label": "IssuingDate",
-     "rdf:value" : {
+     "sdg:issuingDate" : {
        "@value" : "2025-07-15",
        "@type": "xsd:date"
      }
@@ -55,8 +54,7 @@
     {
      "@id": "ex:attribute2",
      "@type": "Attribute",
-     "rdfs:label": "IssuingAuthority",
-     "rdf:value" : {
+     "sdg:issuingAuthority" : {
        "@language" : "fr",
        "@value" : "Département Affaires citoyennes de la Ville de Bruxelles"
      }
@@ -72,7 +70,9 @@
        "@language": "fr",
        "@value": "Magritte"     
      },
-     "sdg:hasSibling" : "ex:person1s"     
+     "sdg:hasSibling" : "ex:person1s",
+     "adms:identifier" : {
+       "@id" : "ex:identifier1"     
    },
 	{
      "@id": "ex:person1s",
@@ -85,7 +85,9 @@
      "@language": "fr",
        "@value": "Magritte"     
      },
-     "sdg:bornDuring" : "birth1"
+     "sdg:bornDuring" : "birth1",
+     "adms:identifier" : {
+       "@id" : "ex:identifier1"
      },
     {
      "@id": "ex:birth1",
@@ -94,6 +96,7 @@
        "@type": "cv:genericDate",
        "@value": "1898-11-21"
      },
+     "sdg:timeOfBirth" : "14:00:00",
      "person:placeOfBirth" : {
        "@id": "ex:location1"
      },
@@ -163,6 +166,16 @@
       "@language": "fr",
       "@value": "BE"
     }
-   }
+   },
+   {
+    "@id": "ex:identifier1",
+    "@type": "Identifier",
+    "dct:issued" : {
+       "@value" : "2025-05-18",
+       "@type": "xsd:date"
+     },
+	"skos:notation" : "1234567",
+	"adms:schemaAgency" : "Agency ID"
+   }     
  ]
 }
