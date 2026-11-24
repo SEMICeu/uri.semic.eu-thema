@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://semiceu.github.io/uri.semic.eu-generated/AIDCAT-AP/releases/3.0.0/context/aidcat-ap.jsonld",
+    {
+      "it6": "http://data.europa.eu/it6/",
+      "spdx": "http://spdx.org/rdf/terms#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "http://example.com/MCPServer/server-filesystem",
+      "@type": "McpServer",
+      "Software.title": "@modelcontextprotocol/server-filesystem",
+      "Software.version": "2.3.0",
+      "Software.description": "An MCP server for filesystem access, launched locally with npx over stdio.",
+      "Software.hasRepository": "https://github.com/modelcontextprotocol/servers",
+      "Software.hasManufacturer": "http://example.com/Agent/model-context-protocol",
+      "Software.licence": "https://spdx.org/licenses/MIT.html",
+      "McpServer.transport": "http://data.europa.eu/it6/codelist/transport/stdio",
+      "McpServer.supportedFeature": [
+        "http://data.europa.eu/it6/codelist/supportedFeature/tools",
+        "http://data.europa.eu/it6/codelist/supportedFeature/resources"
+      ]
+    },
+    {
+      "@id": "https://github.com/modelcontextprotocol/servers",
+      "@type": "Repository",
+      "Repository.name": "servers"
+    },
+    {
+      "@id": "http://example.com/Agent/model-context-protocol",
+      "@type": "Agent",
+      "Agent.name": "Model Context Protocol"
+    },
+    {
+      "@id": "https://spdx.org/licenses/MIT.html",
+      "@type": "LicenceDocument"
+    }
+  ]
+}

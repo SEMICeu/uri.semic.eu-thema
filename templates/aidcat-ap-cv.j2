@@ -32,7 +32,7 @@ The code lists defined by this Application Profile follow the tables, in alphabe
     <tr><td>it6:securityScheme</td><td><a href="#{{ "DataService" | urlencode}}">Data Service</a></td><td><a href="#list-dataservice-securityscheme">Security Scheme</a></td><td></td></tr>
     <tr><td>it6:supportedFeature</td><td><a href="#{{ "MCPServer" | urlencode}}">MCP Server</a></td><td><a href="#list-mcpserver-supportedfeature">Supported Feature</a></td><td></td></tr>
     <tr><td>it6:timing</td><td><a href="#{{ "Disclosure" | urlencode}}">Disclosure</a></td><td><a href="#list-disclosure-timing">Timing</a></td><td></td></tr>
-    <tr><td>it6:transport</td><td><a href="#{{ "MCPServer" | urlencode}}">MCP Server</a></td><td><a href="#list-mcpserver-transport">Transport</a></td><td></td></tr>
+    <tr><td>it6:transport</td><td><a href="#{{ "MCPServer" | urlencode}}">MCP Server</a></td><td><a href="#list-mcpserver-transport">Transport</a></td><td>Use stdio for a server launched locally, which has no data service.</td></tr>
   </tbody>
 </table>
 
@@ -297,6 +297,12 @@ The code lists defined by this Application Profile follow the tables, in alphabe
       <td>sse</td>
       <td>HTTP with Server-Sent Events</td>
       <td>The MCP server is reached over HTTP with Server-Sent Events. This transport is deprecated in the MCP specification.</td>
+    </tr>
+    <tr id="table-mcpserver-transport-stdio">
+      <td>http://data.europa.eu/it6/codelist/transport/stdio</td>
+      <td>stdio</td>
+      <td>Standard input and output</td>
+      <td>The MCP server is launched as a local process of the client and exchanges messages over standard input and output.</td>
     </tr>
   </tbody>
 </table>

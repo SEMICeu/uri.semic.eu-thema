@@ -9,26 +9,26 @@
   ],
   "@graph": [
     {
-      "@id": "http://example.com/AIAgent/mcp-grafana",
+      "@id": "http://example.com/MCPServer/mcp-grafana",
       "@type": "McpServer",
-      "DataService.title": "io.github.grafana/mcp-grafana",
-      "DataService.endpointUrl": "https://mcp.grafana.com/mcp",
-      "DataService.conformsTo": "https://modelcontextprotocol.io/specification",
-      "DataService.accessRights": "http://publications.europa.eu/resource/authority/access-right/RESTRICTED",
-      "DataService.securityScheme": "http://data.europa.eu/it6/codelist/securityScheme/http",
-      "DataService.isImplementedBy": "http://example.com/Software/mcp-grafana",
-      "McpServer.transport": "http://data.europa.eu/it6/codelist/transport/streamable-http",
-      "McpServer.supportedFeature": "http://data.europa.eu/it6/codelist/supportedFeature/tools"
-    },
-    {
-      "@id": "http://example.com/Software/mcp-grafana",
-      "@type": "Software",
-      "Software.title": "mcp-grafana",
+      "Software.title": "io.github.grafana/mcp-grafana",
       "Software.version": "2.0.0",
       "Software.description": "An MCP server giving access to Grafana dashboards, data and more.",
       "Software.hasRepository": "https://github.com/grafana/mcp-grafana",
       "Software.hasManufacturer": "http://example.com/Agent/grafana-labs",
-      "Software.licence": "https://spdx.org/licenses/Apache-2.0.html"
+      "Software.licence": "https://spdx.org/licenses/Apache-2.0.html",
+      "McpServer.transport": "http://data.europa.eu/it6/codelist/transport/streamable-http",
+      "McpServer.supportedFeature": "http://data.europa.eu/it6/codelist/supportedFeature/tools"
+    },
+    {
+      "@id": "http://example.com/DataService/mcp-grafana",
+      "@type": "DataService",
+      "DataService.title": "Grafana MCP endpoint",
+      "DataService.endpointUrl": "https://mcp.grafana.com/mcp",
+      "DataService.conformsTo": "https://modelcontextprotocol.io/specification",
+      "DataService.accessRights": "http://publications.europa.eu/resource/authority/access-right/RESTRICTED",
+      "DataService.securityScheme": "http://data.europa.eu/it6/codelist/securityScheme/http",
+      "DataService.isImplementedBy": "http://example.com/MCPServer/mcp-grafana"
     },
     {
       "@id": "https://github.com/grafana/mcp-grafana",

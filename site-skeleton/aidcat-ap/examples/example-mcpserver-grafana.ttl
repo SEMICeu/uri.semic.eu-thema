@@ -6,23 +6,23 @@
 @prefix spdx: <http://spdx.org/rdf/terms#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.com/AIAgent/mcp-grafana> dct:title "io.github.grafana/mcp-grafana" ;
-	dcat:endpointURL <https://mcp.grafana.com/mcp> ;
-	dct:conformsTo <https://modelcontextprotocol.io/specification> ;
-	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/RESTRICTED> ;
-	it6:securityScheme <http://data.europa.eu/it6/codelist/securityScheme/http> ;
-	it6:isImplementedBy <http://example.com/Software/mcp-grafana> ;
-	it6:transport <http://data.europa.eu/it6/codelist/transport/streamable-http> ;
-	it6:supportedFeature <http://data.europa.eu/it6/codelist/supportedFeature/tools> ;
-	a it6:MCPServer .
-
-<http://example.com/Software/mcp-grafana> dct:title "mcp-grafana" ;
+<http://example.com/MCPServer/mcp-grafana> dct:title "io.github.grafana/mcp-grafana" ;
 	dcat:version "2.0.0" ;
 	dct:description "An MCP server giving access to Grafana dashboards, data and more." ;
 	it6:hasRepository <https://github.com/grafana/mcp-grafana> ;
 	it6:hasManufacturer <http://example.com/Agent/grafana-labs> ;
 	dct:license <https://spdx.org/licenses/Apache-2.0.html> ;
-	a it6:Software .
+	it6:transport <http://data.europa.eu/it6/codelist/transport/streamable-http> ;
+	it6:supportedFeature <http://data.europa.eu/it6/codelist/supportedFeature/tools> ;
+	a it6:MCPServer .
+
+<http://example.com/DataService/mcp-grafana> dct:title "Grafana MCP endpoint" ;
+	dcat:endpointURL <https://mcp.grafana.com/mcp> ;
+	dct:conformsTo <https://modelcontextprotocol.io/specification> ;
+	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/RESTRICTED> ;
+	it6:securityScheme <http://data.europa.eu/it6/codelist/securityScheme/http> ;
+	it6:isImplementedBy <http://example.com/MCPServer/mcp-grafana> ;
+	a dcat:DataService .
 
 <https://github.com/grafana/mcp-grafana> dct:title "mcp-grafana" ;
 	a <https://linkedpaperswithcode.com/class/repository> .

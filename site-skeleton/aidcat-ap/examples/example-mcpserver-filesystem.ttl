@@ -1,0 +1,25 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix it6: <http://data.europa.eu/it6/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.com/MCPServer/server-filesystem> dct:title "@modelcontextprotocol/server-filesystem" ;
+	dcat:version "2.3.0" ;
+	dct:description "An MCP server for filesystem access, launched locally with npx over stdio." ;
+	it6:hasRepository <https://github.com/modelcontextprotocol/servers> ;
+	it6:hasManufacturer <http://example.com/Agent/model-context-protocol> ;
+	dct:license <https://spdx.org/licenses/MIT.html> ;
+	it6:transport <http://data.europa.eu/it6/codelist/transport/stdio> ;
+	it6:supportedFeature <http://data.europa.eu/it6/codelist/supportedFeature/resources>, <http://data.europa.eu/it6/codelist/supportedFeature/tools> ;
+	a it6:MCPServer .
+
+<https://github.com/modelcontextprotocol/servers> dct:title "servers" ;
+	a <https://linkedpaperswithcode.com/class/repository> .
+
+<http://example.com/Agent/model-context-protocol> foaf:name "Model Context Protocol" ;
+	a foaf:Agent .
+
+<https://spdx.org/licenses/MIT.html> a dct:LicenseDocument .
