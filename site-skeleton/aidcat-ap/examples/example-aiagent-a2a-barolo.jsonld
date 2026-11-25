@@ -9,7 +9,7 @@
   ],
   "@graph": [
     {
-      "@id": "https://agents.slim.outshift.io/agentcon/barolo-supplier",
+      "@id": "urn:air:org.agntcy:cid:baeareicwyjiylqv2jgxu2m3h53gk73nswbscsmimfcwvtr7rc66vez3y6q",
       "@type": "AiAgent",
       "AiSystem.identifier": "urn:air:org.agntcy:cid:baeareicwyjiylqv2jgxu2m3h53gk73nswbscsmimfcwvtr7rc66vez3y6q",
       "AiSystem.title": "AgentCon Demo Wine Supplier",
@@ -80,7 +80,7 @@
       "@type": "AgentInterface",
       "DataService.title": "Barolo supplier SLIMRPC interface",
       "DataService.endpointUrl": "slim://agntcy/agentcon/barolo-supplier",
-      "AgentInterface.protocolBinding": "http://example.com/protocolBinding/SLIMRPC"
+      "AgentInterface.protocolBinding": "http://data.europa.eu/it6/codelist/protocolBinding/SLIMRPC"
     },
     {
       "@id": "http://example.com/File/barolo-agent-card",
@@ -125,10 +125,6 @@
       "@id": "http://example.com/Modality/text",
       "@type": "Modality",
       "Modality.classification": "https://www.iana.org/assignments/media-types/text/plain"
-    },
-    {
-      "@id": "http://example.com/protocolBinding/SLIMRPC",
-      "@type": "Concept"
     },
     {
       "@id": "http://example.com/oasf/1.0.0/domains/retail_and_ecommerce/online_retail",

@@ -49,7 +49,7 @@
 
 <http://example.com/AgentInterface/barolo-slimrpc> dct:title "Barolo supplier SLIMRPC interface" ;
 	dcat:endpointURL <slim://agntcy/agentcon/barolo-supplier> ;
-	it6:protocolBinding <http://example.com/protocolBinding/SLIMRPC> ;
+	it6:protocolBinding <http://data.europa.eu/it6/codelist/protocolBinding/SLIMRPC> ;
 	a it6:AgentInterface .
 
 <http://example.com/File/barolo-agent-card> dct:identifier "barolo-supplier-agent-card" ;
@@ -79,8 +79,6 @@
 
 <http://example.com/Modality/text> it6:classification <https://www.iana.org/assignments/media-types/text/plain> ;
 	a it6:Modality .
-
-<http://example.com/protocolBinding/SLIMRPC> a skos:Concept .
 
 <http://example.com/oasf/1.0.0/domains/retail_and_ecommerce/online_retail> a skos:Concept .
 

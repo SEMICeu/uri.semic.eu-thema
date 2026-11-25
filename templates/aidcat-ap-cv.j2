@@ -49,21 +49,28 @@ The Source column of each code list gives the specification in which the value i
       <td>GRPC</td>
       <td>gRPC</td>
       <td>The interface is called with gRPC.</td>
-      <td><a href="https://a2a-protocol.org/" title="A2A Protocol">A2A</a></td>
+      <td><a href="https://a2a-protocol.org/latest/topics/custom-protocol-bindings/" title="A2A Protocol: protocol bindings">A2A</a></td>
     </tr>
     <tr id="table-agentinterface-protocolbinding-HTTP-JSON">
       <td>http://data.europa.eu/it6/codelist/protocolBinding/HTTP-JSON</td>
       <td>HTTP+JSON</td>
       <td>HTTP+JSON</td>
       <td>The interface is called with a REST-style HTTP and JSON binding.</td>
-      <td><a href="https://a2a-protocol.org/" title="A2A Protocol">A2A</a></td>
+      <td><a href="https://a2a-protocol.org/latest/topics/custom-protocol-bindings/" title="A2A Protocol: protocol bindings">A2A</a></td>
     </tr>
     <tr id="table-agentinterface-protocolbinding-JSONRPC">
       <td>http://data.europa.eu/it6/codelist/protocolBinding/JSONRPC</td>
       <td>JSONRPC</td>
       <td>JSON-RPC</td>
       <td>The interface is called with JSON-RPC over HTTP.</td>
-      <td><a href="https://a2a-protocol.org/" title="A2A Protocol">A2A</a></td>
+      <td><a href="https://a2a-protocol.org/latest/topics/custom-protocol-bindings/" title="A2A Protocol: protocol bindings">A2A</a></td>
+    </tr>
+    <tr id="table-agentinterface-protocolbinding-SLIMRPC">
+      <td>http://data.europa.eu/it6/codelist/protocolBinding/SLIMRPC</td>
+      <td>SLIMRPC</td>
+      <td>SLIMRPC</td>
+      <td>The interface is called with SLIMRPC, a Protocol Buffers RPC layer over SLIM sessions. The binding is experimental.</td>
+      <td><a href="https://github.com/a2aproject/experimental-cpb-slimrpc" title="A2A experimental SLIMRPC custom protocol binding">A2A (experimental)</a></td>
     </tr>
   </tbody>
 </table>
@@ -160,35 +167,35 @@ The Source column of each code list gives the specification in which the value i
       <td>apiKey</td>
       <td>API key</td>
       <td>The caller presents a key in a header, a query parameter or a cookie.</td>
-      <td><a href="https://spec.openapis.org/oas/latest.html" title="OpenAPI Specification, Security Scheme Object">OpenAPI</a></td>
+      <td><a href="https://spec.openapis.org/oas/latest.html#security-scheme-object" title="OpenAPI Specification, Security Scheme Object">OpenAPI</a></td>
     </tr>
     <tr id="table-dataservice-securityscheme-http">
       <td>http://data.europa.eu/it6/codelist/securityScheme/http</td>
       <td>http</td>
       <td>HTTP authentication</td>
       <td>The caller uses an HTTP authentication scheme, such as bearer or basic.</td>
-      <td><a href="https://spec.openapis.org/oas/latest.html" title="OpenAPI Specification, Security Scheme Object">OpenAPI</a></td>
+      <td><a href="https://spec.openapis.org/oas/latest.html#security-scheme-object" title="OpenAPI Specification, Security Scheme Object">OpenAPI</a></td>
     </tr>
     <tr id="table-dataservice-securityscheme-mutualTLS">
       <td>http://data.europa.eu/it6/codelist/securityScheme/mutualTLS</td>
       <td>mutualTLS</td>
       <td>Mutual TLS</td>
       <td>The caller and the service authenticate each other with TLS client certificates.</td>
-      <td><a href="https://spec.openapis.org/oas/latest.html" title="OpenAPI Specification, Security Scheme Object">OpenAPI</a></td>
+      <td><a href="https://spec.openapis.org/oas/latest.html#security-scheme-object" title="OpenAPI Specification, Security Scheme Object">OpenAPI</a></td>
     </tr>
     <tr id="table-dataservice-securityscheme-oauth2">
       <td>http://data.europa.eu/it6/codelist/securityScheme/oauth2</td>
       <td>oauth2</td>
       <td>OAuth 2.0</td>
       <td>The caller obtains an access token through an OAuth 2.0 flow.</td>
-      <td><a href="https://spec.openapis.org/oas/latest.html" title="OpenAPI Specification, Security Scheme Object">OpenAPI</a></td>
+      <td><a href="https://spec.openapis.org/oas/latest.html#security-scheme-object" title="OpenAPI Specification, Security Scheme Object">OpenAPI</a></td>
     </tr>
     <tr id="table-dataservice-securityscheme-openIdConnect">
       <td>http://data.europa.eu/it6/codelist/securityScheme/openIdConnect</td>
       <td>openIdConnect</td>
       <td>OpenID Connect</td>
       <td>The caller obtains a token through OpenID Connect, using a discovery document.</td>
-      <td><a href="https://spec.openapis.org/oas/latest.html" title="OpenAPI Specification, Security Scheme Object">OpenAPI</a></td>
+      <td><a href="https://spec.openapis.org/oas/latest.html#security-scheme-object" title="OpenAPI Specification, Security Scheme Object">OpenAPI</a></td>
     </tr>
   </tbody>
 </table>
@@ -278,35 +285,28 @@ The Source column of each code list gives the specification in which the value i
       <td>completions</td>
       <td>Completions</td>
       <td>The MCP server offers argument completion suggestions for prompts and resources.</td>
-      <td><a href="https://modelcontextprotocol.io/specification" title="Model Context Protocol specification">MCP</a></td>
-    </tr>
-    <tr id="table-mcpserver-supportedfeature-logging">
-      <td>http://data.europa.eu/it6/codelist/supportedFeature/logging</td>
-      <td>logging</td>
-      <td>Logging</td>
-      <td>The MCP server sends log messages to the client.</td>
-      <td><a href="https://modelcontextprotocol.io/specification" title="Model Context Protocol specification">MCP</a></td>
+      <td><a href="https://modelcontextprotocol.io/specification/2026-07-28/server" title="Model Context Protocol specification, server features">MCP</a></td>
     </tr>
     <tr id="table-mcpserver-supportedfeature-prompts">
       <td>http://data.europa.eu/it6/codelist/supportedFeature/prompts</td>
       <td>prompts</td>
       <td>Prompts</td>
       <td>The MCP server exposes prompt templates that an AI agent or a user can select.</td>
-      <td><a href="https://modelcontextprotocol.io/specification" title="Model Context Protocol specification">MCP</a></td>
+      <td><a href="https://modelcontextprotocol.io/specification/2026-07-28/server" title="Model Context Protocol specification, server features">MCP</a></td>
     </tr>
     <tr id="table-mcpserver-supportedfeature-resources">
       <td>http://data.europa.eu/it6/codelist/supportedFeature/resources</td>
       <td>resources</td>
       <td>Resources</td>
       <td>The MCP server exposes resources, such as files or records, that an AI agent can read.</td>
-      <td><a href="https://modelcontextprotocol.io/specification" title="Model Context Protocol specification">MCP</a></td>
+      <td><a href="https://modelcontextprotocol.io/specification/2026-07-28/server" title="Model Context Protocol specification, server features">MCP</a></td>
     </tr>
     <tr id="table-mcpserver-supportedfeature-tools">
       <td>http://data.europa.eu/it6/codelist/supportedFeature/tools</td>
       <td>tools</td>
       <td>Tools</td>
       <td>The MCP server exposes tools that an AI agent can call.</td>
-      <td><a href="https://modelcontextprotocol.io/specification" title="Model Context Protocol specification">MCP</a></td>
+      <td><a href="https://modelcontextprotocol.io/specification/2026-07-28/server" title="Model Context Protocol specification, server features">MCP</a></td>
     </tr>
   </tbody>
 </table>
@@ -321,22 +321,22 @@ The Source column of each code list gives the specification in which the value i
       <td>http://data.europa.eu/it6/codelist/transport/sse</td>
       <td>sse</td>
       <td>HTTP with Server-Sent Events</td>
-      <td>The MCP server is reached over HTTP with Server-Sent Events. This transport is deprecated in the MCP specification.</td>
-      <td><a href="https://modelcontextprotocol.io/specification" title="Model Context Protocol specification">MCP</a></td>
+      <td>The MCP server is reached over HTTP with Server-Sent Events. This transport is deprecated in the MCP specification in favour of Streamable HTTP and is kept for compatibility with older servers.</td>
+      <td><a href="https://modelcontextprotocol.io/specification/2024-11-05/basic/transports.md#http-with-sse" title="Model Context Protocol specification 2024-11-05, HTTP with SSE">MCP 2024-11-05</a></td>
     </tr>
     <tr id="table-mcpserver-transport-stdio">
       <td>http://data.europa.eu/it6/codelist/transport/stdio</td>
       <td>stdio</td>
       <td>Standard input and output</td>
       <td>The MCP server is launched as a local process of the client and exchanges messages over standard input and output.</td>
-      <td><a href="https://modelcontextprotocol.io/specification" title="Model Context Protocol specification">MCP</a></td>
+      <td><a href="https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/index" title="Model Context Protocol specification, transports">MCP</a></td>
     </tr>
     <tr id="table-mcpserver-transport-streamable-http">
       <td>http://data.europa.eu/it6/codelist/transport/streamable-http</td>
       <td>streamable-http</td>
       <td>Streamable HTTP</td>
       <td>The MCP server is reached over HTTP with streamed responses, as defined in the MCP specification.</td>
-      <td><a href="https://modelcontextprotocol.io/specification" title="Model Context Protocol specification">MCP</a></td>
+      <td><a href="https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/index" title="Model Context Protocol specification, transports">MCP</a></td>
     </tr>
   </tbody>
 </table>
