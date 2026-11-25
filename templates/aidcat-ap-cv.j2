@@ -43,12 +43,6 @@ The code lists defined by this Application Profile follow the tables, in alphabe
     <tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr>
   </thead>
   <tbody>
-    <tr id="table-agentinterface-protocolbinding-JSONRPC">
-      <td>http://data.europa.eu/it6/codelist/protocolBinding/JSONRPC</td>
-      <td>JSONRPC</td>
-      <td>JSON-RPC</td>
-      <td>The interface is called with JSON-RPC over HTTP.</td>
-    </tr>
     <tr id="table-agentinterface-protocolbinding-GRPC">
       <td>http://data.europa.eu/it6/codelist/protocolBinding/GRPC</td>
       <td>GRPC</td>
@@ -61,6 +55,12 @@ The code lists defined by this Application Profile follow the tables, in alphabe
       <td>HTTP+JSON</td>
       <td>The interface is called with a REST-style HTTP and JSON binding.</td>
     </tr>
+    <tr id="table-agentinterface-protocolbinding-JSONRPC">
+      <td>http://data.europa.eu/it6/codelist/protocolBinding/JSONRPC</td>
+      <td>JSONRPC</td>
+      <td>JSON-RPC</td>
+      <td>The interface is called with JSON-RPC over HTTP.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -70,11 +70,11 @@ The code lists defined by this Application Profile follow the tables, in alphabe
     <tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr>
   </thead>
   <tbody>
-    <tr id="table-aisystem-autonomylevel-operator">
-      <td>http://data.europa.eu/it6/codelist/autonomyLevel/operator</td>
-      <td>operator</td>
-      <td>Operator</td>
-      <td>The user directs the AI system at every step and the system carries out the instructions.</td>
+    <tr id="table-aisystem-autonomylevel-approver">
+      <td>http://data.europa.eu/it6/codelist/autonomyLevel/approver</td>
+      <td>approver</td>
+      <td>Approver</td>
+      <td>The AI system acts on its own and asks the user for approval before risky or irreversible actions.</td>
     </tr>
     <tr id="table-aisystem-autonomylevel-collaborator">
       <td>http://data.europa.eu/it6/codelist/autonomyLevel/collaborator</td>
@@ -88,17 +88,17 @@ The code lists defined by this Application Profile follow the tables, in alphabe
       <td>Consultant</td>
       <td>The AI system leads and asks the user for input where it needs expertise or preferences.</td>
     </tr>
-    <tr id="table-aisystem-autonomylevel-approver">
-      <td>http://data.europa.eu/it6/codelist/autonomyLevel/approver</td>
-      <td>approver</td>
-      <td>Approver</td>
-      <td>The AI system acts on its own and asks the user for approval before risky or irreversible actions.</td>
-    </tr>
     <tr id="table-aisystem-autonomylevel-observer">
       <td>http://data.europa.eu/it6/codelist/autonomyLevel/observer</td>
       <td>observer</td>
       <td>Observer</td>
       <td>The AI system acts on its own and the user only monitors it and can step in or stop it.</td>
+    </tr>
+    <tr id="table-aisystem-autonomylevel-operator">
+      <td>http://data.europa.eu/it6/codelist/autonomyLevel/operator</td>
+      <td>operator</td>
+      <td>Operator</td>
+      <td>The user directs the AI system at every step and the system carries out the instructions.</td>
     </tr>
   </tbody>
 </table>
@@ -154,6 +154,12 @@ The code lists defined by this Application Profile follow the tables, in alphabe
       <td>HTTP authentication</td>
       <td>The caller uses an HTTP authentication scheme, such as bearer or basic.</td>
     </tr>
+    <tr id="table-dataservice-securityscheme-mutualTLS">
+      <td>http://data.europa.eu/it6/codelist/securityScheme/mutualTLS</td>
+      <td>mutualTLS</td>
+      <td>Mutual TLS</td>
+      <td>The caller and the service authenticate each other with TLS client certificates.</td>
+    </tr>
     <tr id="table-dataservice-securityscheme-oauth2">
       <td>http://data.europa.eu/it6/codelist/securityScheme/oauth2</td>
       <td>oauth2</td>
@@ -166,12 +172,6 @@ The code lists defined by this Application Profile follow the tables, in alphabe
       <td>OpenID Connect</td>
       <td>The caller obtains a token through OpenID Connect, using a discovery document.</td>
     </tr>
-    <tr id="table-dataservice-securityscheme-mutualTLS">
-      <td>http://data.europa.eu/it6/codelist/securityScheme/mutualTLS</td>
-      <td>mutualTLS</td>
-      <td>Mutual TLS</td>
-      <td>The caller and the service authenticate each other with TLS client certificates.</td>
-    </tr>
   </tbody>
 </table>
 
@@ -181,29 +181,29 @@ The code lists defined by this Application Profile follow the tables, in alphabe
     <tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr>
   </thead>
   <tbody>
-    <tr id="table-disclosure-channel-text">
-      <td>http://data.europa.eu/it6/codelist/channel/text</td>
-      <td>text</td>
-      <td>Text</td>
-      <td>The disclosure is given in written form.</td>
-    </tr>
     <tr id="table-disclosure-channel-audio">
       <td>http://data.europa.eu/it6/codelist/channel/audio</td>
       <td>audio</td>
       <td>Audio</td>
       <td>The disclosure is spoken or given as a sound.</td>
     </tr>
-    <tr id="table-disclosure-channel-visual">
-      <td>http://data.europa.eu/it6/codelist/channel/visual</td>
-      <td>visual</td>
-      <td>Visual</td>
-      <td>The disclosure is given as an image, symbol or label.</td>
-    </tr>
     <tr id="table-disclosure-channel-multimodal">
       <td>http://data.europa.eu/it6/codelist/channel/multimodal</td>
       <td>multimodal</td>
       <td>Multimodal</td>
       <td>The disclosure combines more than one of text, audio and visual.</td>
+    </tr>
+    <tr id="table-disclosure-channel-text">
+      <td>http://data.europa.eu/it6/codelist/channel/text</td>
+      <td>text</td>
+      <td>Text</td>
+      <td>The disclosure is given in written form.</td>
+    </tr>
+    <tr id="table-disclosure-channel-visual">
+      <td>http://data.europa.eu/it6/codelist/channel/visual</td>
+      <td>visual</td>
+      <td>Visual</td>
+      <td>The disclosure is given as an image, symbol or label.</td>
     </tr>
   </tbody>
 </table>
@@ -220,11 +220,11 @@ The code lists defined by this Application Profile follow the tables, in alphabe
       <td>First interaction</td>
       <td>The disclosure is given at the first interaction with the AI system.</td>
     </tr>
-    <tr id="table-disclosure-timing-session-start">
-      <td>http://data.europa.eu/it6/codelist/timing/session-start</td>
-      <td>session-start</td>
-      <td>Session start</td>
-      <td>The disclosure is given at the start of each session.</td>
+    <tr id="table-disclosure-timing-on-request">
+      <td>http://data.europa.eu/it6/codelist/timing/on-request</td>
+      <td>on-request</td>
+      <td>On request</td>
+      <td>The disclosure is given when the person asks.</td>
     </tr>
     <tr id="table-disclosure-timing-periodic">
       <td>http://data.europa.eu/it6/codelist/timing/periodic</td>
@@ -232,11 +232,11 @@ The code lists defined by this Application Profile follow the tables, in alphabe
       <td>Periodic</td>
       <td>The disclosure is repeated at regular intervals during the interaction.</td>
     </tr>
-    <tr id="table-disclosure-timing-on-request">
-      <td>http://data.europa.eu/it6/codelist/timing/on-request</td>
-      <td>on-request</td>
-      <td>On request</td>
-      <td>The disclosure is given when the person asks.</td>
+    <tr id="table-disclosure-timing-session-start">
+      <td>http://data.europa.eu/it6/codelist/timing/session-start</td>
+      <td>session-start</td>
+      <td>Session start</td>
+      <td>The disclosure is given at the start of each session.</td>
     </tr>
   </tbody>
 </table>
@@ -247,23 +247,11 @@ The code lists defined by this Application Profile follow the tables, in alphabe
     <tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr>
   </thead>
   <tbody>
-    <tr id="table-mcpserver-supportedfeature-tools">
-      <td>http://data.europa.eu/it6/codelist/supportedFeature/tools</td>
-      <td>tools</td>
-      <td>Tools</td>
-      <td>The MCP server exposes tools that an AI agent can call.</td>
-    </tr>
-    <tr id="table-mcpserver-supportedfeature-resources">
-      <td>http://data.europa.eu/it6/codelist/supportedFeature/resources</td>
-      <td>resources</td>
-      <td>Resources</td>
-      <td>The MCP server exposes resources, such as files or records, that an AI agent can read.</td>
-    </tr>
-    <tr id="table-mcpserver-supportedfeature-prompts">
-      <td>http://data.europa.eu/it6/codelist/supportedFeature/prompts</td>
-      <td>prompts</td>
-      <td>Prompts</td>
-      <td>The MCP server exposes prompt templates that an AI agent or a user can select.</td>
+    <tr id="table-mcpserver-supportedfeature-completions">
+      <td>http://data.europa.eu/it6/codelist/supportedFeature/completions</td>
+      <td>completions</td>
+      <td>Completions</td>
+      <td>The MCP server offers argument completion suggestions for prompts and resources.</td>
     </tr>
     <tr id="table-mcpserver-supportedfeature-logging">
       <td>http://data.europa.eu/it6/codelist/supportedFeature/logging</td>
@@ -271,11 +259,23 @@ The code lists defined by this Application Profile follow the tables, in alphabe
       <td>Logging</td>
       <td>The MCP server sends log messages to the client.</td>
     </tr>
-    <tr id="table-mcpserver-supportedfeature-completions">
-      <td>http://data.europa.eu/it6/codelist/supportedFeature/completions</td>
-      <td>completions</td>
-      <td>Completions</td>
-      <td>The MCP server offers argument completion suggestions for prompts and resources.</td>
+    <tr id="table-mcpserver-supportedfeature-prompts">
+      <td>http://data.europa.eu/it6/codelist/supportedFeature/prompts</td>
+      <td>prompts</td>
+      <td>Prompts</td>
+      <td>The MCP server exposes prompt templates that an AI agent or a user can select.</td>
+    </tr>
+    <tr id="table-mcpserver-supportedfeature-resources">
+      <td>http://data.europa.eu/it6/codelist/supportedFeature/resources</td>
+      <td>resources</td>
+      <td>Resources</td>
+      <td>The MCP server exposes resources, such as files or records, that an AI agent can read.</td>
+    </tr>
+    <tr id="table-mcpserver-supportedfeature-tools">
+      <td>http://data.europa.eu/it6/codelist/supportedFeature/tools</td>
+      <td>tools</td>
+      <td>Tools</td>
+      <td>The MCP server exposes tools that an AI agent can call.</td>
     </tr>
   </tbody>
 </table>
@@ -286,12 +286,6 @@ The code lists defined by this Application Profile follow the tables, in alphabe
     <tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr>
   </thead>
   <tbody>
-    <tr id="table-mcpserver-transport-streamable-http">
-      <td>http://data.europa.eu/it6/codelist/transport/streamable-http</td>
-      <td>streamable-http</td>
-      <td>Streamable HTTP</td>
-      <td>The MCP server is reached over HTTP with streamed responses, as defined in the MCP specification.</td>
-    </tr>
     <tr id="table-mcpserver-transport-sse">
       <td>http://data.europa.eu/it6/codelist/transport/sse</td>
       <td>sse</td>
@@ -303,6 +297,12 @@ The code lists defined by this Application Profile follow the tables, in alphabe
       <td>stdio</td>
       <td>Standard input and output</td>
       <td>The MCP server is launched as a local process of the client and exchanges messages over standard input and output.</td>
+    </tr>
+    <tr id="table-mcpserver-transport-streamable-http">
+      <td>http://data.europa.eu/it6/codelist/transport/streamable-http</td>
+      <td>streamable-http</td>
+      <td>Streamable HTTP</td>
+      <td>The MCP server is reached over HTTP with streamed responses, as defined in the MCP specification.</td>
     </tr>
   </tbody>
 </table>
