@@ -19,6 +19,7 @@ The Source column of each code list gives the specification in which the value i
   <thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
   <tbody>
     <tr><td>dct:accessRights</td><td><a href="#{{ "DataService" | urlencode}}">Data Service</a></td><td><a href="http://publications.europa.eu/resource/authority/access-right">Access Rights Named Authority List</a></td><td>Use one of the values PUBLIC, RESTRICTED or NON_PUBLIC of the authority table.</td></tr>
+    <tr><td>dct:spatial</td><td><a href="#{{ "AISystem" | urlencode}}">AI System</a></td><td><a href="http://publications.europa.eu/resource/authority/country">Countries Named Authority List</a></td><td>Use the Member States to state where the AI system is available.</td></tr>
   </tbody>
 </table>
 
@@ -26,6 +27,7 @@ The Source column of each code list gives the specification in which the value i
 <table class="simple">
   <thead><tr><th>Property URI</th><th>Used for Class</th><th>Vocabulary name</th><th>Usage note</th></tr></thead>
   <tbody>
+    <tr><td>adms:status</td><td><a href="#{{ "AISystem" | urlencode}}">AI System</a></td><td><a href="#list-aisystem-status">Status</a></td><td>The values follow the status listed for the registration of high-risk AI systems (AI Act, Annex VIII, Section A).</td></tr>
     <tr><td>it6:assuranceLevel</td><td><a href="#{{ "DataService" | urlencode}}">Data Service</a></td><td><a href="#list-dataservice-assurancelevel">Assurance Level</a></td><td>The levels are provisional until the Cloud and AI Development Act is adopted.</td></tr>
     <tr><td>it6:autonomyLevel</td><td><a href="#{{ "AISystem" | urlencode}}">AI System</a></td><td><a href="#list-aisystem-autonomylevel">Autonomy Level</a></td><td>The levels follow the levels of autonomy for AI agents described in <a href="https://arxiv.org/abs/2506.12469">Levels of Autonomy for AI Agents</a> (Feng et al., 2025).</td></tr>
     <tr><td>it6:channel</td><td><a href="#{{ "Disclosure" | urlencode}}">Disclosure</a></td><td><a href="#list-disclosure-channel">Channel</a></td><td></td></tr>
@@ -115,6 +117,43 @@ The Source column of each code list gives the specification in which the value i
       <td>Operator</td>
       <td>The user directs the AI system at every step and the system carries out the instructions.</td>
       <td><a href="https://arxiv.org/abs/2506.12469" title="Levels of Autonomy for AI Agents">Feng et al.</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="list-aisystem-status">AI System - Status</h4>
+<table id="table-aisystem-status" class="simple">
+  <thead>
+    <tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th><th>Source</th></tr>
+  </thead>
+  <tbody>
+    <tr id="table-aisystem-status-in-service">
+      <td>http://data.europa.eu/it6/codelist/status/in-service</td>
+      <td>in-service</td>
+      <td>In service</td>
+      <td>The AI system has been put into service.</td>
+      <td><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#anx_VIII" title="AI Act, Annex VIII">AI Act Annex VIII</a></td>
+    </tr>
+    <tr id="table-aisystem-status-no-longer-available">
+      <td>http://data.europa.eu/it6/codelist/status/no-longer-available</td>
+      <td>no-longer-available</td>
+      <td>No longer available</td>
+      <td>The AI system is no longer placed on the market or in service.</td>
+      <td><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#anx_VIII" title="AI Act, Annex VIII">AI Act Annex VIII</a></td>
+    </tr>
+    <tr id="table-aisystem-status-on-the-market">
+      <td>http://data.europa.eu/it6/codelist/status/on-the-market</td>
+      <td>on-the-market</td>
+      <td>On the market</td>
+      <td>The AI system has been placed on the market.</td>
+      <td><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#anx_VIII" title="AI Act, Annex VIII">AI Act Annex VIII</a></td>
+    </tr>
+    <tr id="table-aisystem-status-recalled">
+      <td>http://data.europa.eu/it6/codelist/status/recalled</td>
+      <td>recalled</td>
+      <td>Recalled</td>
+      <td>The AI system has been recalled.</td>
+      <td><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#anx_VIII" title="AI Act, Annex VIII">AI Act Annex VIII</a></td>
     </tr>
   </tbody>
 </table>

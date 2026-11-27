@@ -435,6 +435,12 @@
                                     {% else %}
                                         <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>
                                     {% endif %}
+                                {% elif ai_type == "GEODCATAP" %}
+                                    {% if parts|length > 2 %}
+                                        <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.1.0/#{{ parts[1] }}">GeoDCAT-AP [{{ parts[2] }}]</a>
+                                    {% else %}
+                                        <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.1.0/">GeoDCAT-AP</a>
+                                    {% endif %}
                                 {% elif ai_type == "DCAT" %}
                                     {% if parts|length > 2 %}
                                         <a href="https://www.w3.org/TR/vocab-dcat-3/#{{ parts[1] }}">DCAT [{{ parts[2] }}]</a>
@@ -615,6 +621,12 @@
                                                     <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#{{ parts[1] }}">DCAT-AP [{{ parts[2] }}]</a>
                                                 {% else %}
                                                     <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>
+                                                {% endif %}
+                                            {% elif ai_type == "GEODCATAP" %}
+                                                {% if parts|length > 2 %}
+                                                    <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.1.0/#{{ parts[1] }}">GeoDCAT-AP [{{ parts[2] }}]</a>
+                                                {% else %}
+                                                    <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.1.0/">GeoDCAT-AP</a>
                                                 {% endif %}
                                             {% elif ai_type == "DCAT" %}
                                                 {% if parts|length > 2 %}
